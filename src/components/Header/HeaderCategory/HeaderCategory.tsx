@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './HeaderCategory.module.scss';
-import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faWarehouse, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories } from '@/app/data/Categorywise/GroceryCategories';
@@ -23,6 +23,10 @@ import AllCategoryRound from '@/components/HomePage/AllCategoryRound/AllCategory
 import { GroceryData1, GroceryData2 } from '@/app/data/GroceryPageData/GroceryData';
 import { CandiesGumsData, ColdDrinksJuicesData, DairyBreadEggsData, HookahData, MouthFreshenersData, RollingPapersData, SnacksMunchiesData } from '@/app/data/GroceryPageData/GroceryProductData';
 import GroceryProductList from '@/components/Grocery/GroceryProductList/GroceryProductList';
+import { WholesaleCategories } from '@/app/data/Categorywise/WholesaleCategories';
+import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
+import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
+
 
 interface CategoryItem {
   id: string;
@@ -40,8 +44,8 @@ const HeaderCategory: React.FC = () => {
     { id: 'flower', name: 'Flower Delivery', icon: faSeedling },
     // { id: 'cab', name: 'cabs', icon: faCab },
     { id: 'care', name: 'Care Services', icon: faHandsHelping },
-    { id: 'pharma', name: 'Pharma', icon: faNotesMedical }
-    // { id: 'pharma', name: 'Pharma', icon: faPills }
+    { id: 'pharma', name: 'Pharma', icon: faNotesMedical },
+    { id: 'wholesale', name: 'Wholesale', icon: faHandshake  }
   ];
 
   //  const handleViewAllGroceryTabwise = () => {
@@ -78,18 +82,16 @@ const HeaderCategory: React.FC = () => {
 
         {activeTab === "food" && (
           <div className={styles.allCategory}>
-            <AllCategory categories={FoodsCategories} />
             {/* <AllCategory categories={GroceryCategories} /> */}
             <HeroBannerAll banners={FoodHeroBannerData} />
-
-
+            <AllCategory categories={FoodsCategories} />
           </div>
         )}
         {activeTab === "grocery" && (
           <div className={styles.allCategory}>
-            <AllCategory categories={GroceryCategories} />
             {/* <AllCategory categories={GroceryCategories} /> */}
             <HeroBannerAll banners={GroceryHeroBannerData} />
+            <AllCategory categories={GroceryCategories} />
             <AllCategoryRound categories={GroceryData1} />
             <AllCategoryRound categories={GroceryData2} />
             <div className={styles.GroceryProductCategory}>
@@ -105,9 +107,9 @@ const HeaderCategory: React.FC = () => {
         )}
         {activeTab === "shopping" && (
           <div className={styles.allCategory}>
-            <AllCategoryOne categories={ShopingCategories} />
             {/* <AllCategory categories={GroceryCategories} /> */}
             <HeroBannerAll banners={ShopingHeroBannerData} />
+            <AllCategoryOne categories={ShopingCategories} />
             <ShoppingSlides1
               title="Today's Top Smartphone Deals"
               deals={ShopingSlide1SmartPhoneDeals}
@@ -118,25 +120,36 @@ const HeaderCategory: React.FC = () => {
         )}
         {activeTab === "flower" && (
           <div className={styles.allCategory}>
-            <AllCategory categories={FlowersCategories} />
             {/* <AllCategory categories={GroceryCategories} /> */}
             <HeroBannerAll banners={FlowerHeroBannerData} />
+            <AllCategory categories={FlowersCategories} />
 
           </div>
         )}
         {activeTab === "care" && (
           <div className={styles.allCategory}>
-            <AllCategory categories={CareCategories} />
             {/* <AllCategory categories={GroceryCategories} /> */}
             <HeroBannerAll banners={CareHeroBannerData} />
+            <AllCategory categories={CareCategories} />
 
           </div>
         )}
         {activeTab === "pharma" && (
           <div className={styles.allCategory}>
-            <AllCategoryOne categories={PharmaCategories} />
             {/* <AllCategory categories={GroceryCategories} /> */}
             <HeroBannerAll banners={PharmaHeroBannerData} />
+            <AllCategoryOne categories={PharmaCategories} />
+          </div>
+        )}
+        {activeTab === "wholesale" && (
+          <div className={styles.allCategory}>
+            {/* <AllCategory categories={GroceryCategories} /> */}
+            <HeroBannerAll banners={WholesaleHeroBannerData} />
+            <AllCategoryGrid
+              title="Wholesale Categories"
+              categories={WholesaleCategories}
+            />
+            {/* <AllCategoryOne categories={WholesaleCategories} /> */}
           </div>
         )}
       </div>
