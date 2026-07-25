@@ -1,0 +1,137 @@
+@use "../../../styles/variables.scss" as *;
+.subHeader {
+   width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  .secondaryNav {
+    max-width: 1325px;
+    // max-width: $max-width;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+  }
+
+  .navMenuWrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .navMenu {
+    display: inline-flex;
+    gap: 1rem;
+    padding: 0.25rem 0;
+    margin: 0 1.5rem;
+  }
+
+  .navItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $black;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $green;
+      background-color: $green-hover-bg;
+      border-radius: 4px;
+    }
+  }
+
+  .active {
+    color: $green;
+    font-weight: 600;
+    background-color: $green-hover-bg;
+    border-radius: 4px;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .name {
+    @media (max-width: 480px) {
+      font-size: 0.75rem;
+    }
+  }
+
+  .moreButton {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $primary-color;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: 0.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .navButton {
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+    background: white;
+    border: 2px solid $gray;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    transition: all 0.2s ease;
+    z-index: 1;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+
+    &:first-of-type {
+      left: 15px;
+    }
+
+    &:last-of-type {
+      right: 15px;
+    }
+
+    &:hover:not(.disabled) {
+      background-color: $primary-color;
+      color: $white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    .navButton {
+      display: none;
+    }
+  }
+}

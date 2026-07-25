@@ -1,3 +1,5 @@
+import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+
 export const PharmaCategories = [
   {
     name: "Medicine",
@@ -153,4 +155,73 @@ export const PharmaCategories = [
     imageUrl: "/products/Teleconsultation.png",
      url: "/",
   },
+];
+
+export const pharmaCategoriesSubHeader: SubHeaderItem[] = [
+  { name: "All" },
+  { name: "Best Sellers" },
+  { name: "Offers" },
+  { name: "New Arrivals" },
+
+  // Medicines
+  { name: "Prescription Medicines" },
+  { name: "OTC Medicines" },
+  { name: "Generic Medicines" },
+  { name: "Ayurvedic Medicines" },
+  { name: "Homeopathy" },
+
+  // Health Conditions
+  { name: "Diabetes Care" },
+  { name: "Heart Care" },
+  { name: "Blood Pressure" },
+  { name: "Digestive Care" },
+  { name: "Cold & Flu" },
+  { name: "Pain Relief" },
+  { name: "Allergy Care" },
+  { name: "Skin Care" },
+  { name: "Eye Care" },
+  { name: "Ear & Nose Care" },
+
+  // Vitamins & Supplements
+  { name: "Vitamins" },
+  { name: "Calcium" },
+  { name: "Protein Supplements" },
+  { name: "Immunity Boosters" },
+  { name: "Nutrition Drinks" },
+
+  // Personal Care
+  { name: "Hair Care" },
+  { name: "Oral Care" },
+  { name: "Bath & Body" },
+  { name: "Men's Grooming" },
+  { name: "Women's Care" },
+
+  // Baby Care
+  { name: "Baby Food" },
+  { name: "Baby Care" },
+  { name: "Diapers & Wipes" },
+
+  // Medical Devices
+  { name: "Blood Pressure Monitors" },
+  { name: "Glucometers" },
+  { name: "Thermometers" },
+  { name: "Pulse Oximeters" },
+  { name: "Nebulizers" },
+  { name: "First Aid" },
+
+  // Wellness
+  { name: "Fitness" },
+  { name: "Weight Management" },
+  { name: "Sexual Wellness" },
+  { name: "Mental Wellness" },
+
+  // Healthcare Services
+  { name: "Lab Tests" },
+  { name: "Doctor Consultation" },
+  { name: "Health Packages" },
+
+  // Healthcare Essentials
+  { name: "Masks" },
+  { name: "Sanitizers" },
+  { name: "Medical Supplies" },
 ];

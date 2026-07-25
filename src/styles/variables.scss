@@ -29,18 +29,23 @@
   $light-gray: #f5f5f5;
   $gray: #cccccc;
   $dark-gray: #555555;
+  $active-gray: #e8f5e9;
   $red: #ff0000;
   $green: #0a8a13;
   $green-dark: #066d0f;
+  $green-hover-bg: #e8f5e9;
   $blue: #0000ff;
   $yellow: #ffff00;
   $purple: #800080;
+  
 
   // Border
   $border-color: #dee2e6;
   $border-light: #e9ecef;
   $border-dark: #ced4da;
   $border-focus: #b5b5b5;
+  $border-very-light: #e0e0e0;
+  $border-very-dark: 2px solid #808080;
   $border: 1px solid $border-color;
 
   // Status Colors
@@ -49,7 +54,14 @@
   $error-color: #dc3545;
   $info-color: #17a2b8;
 
+  //Link Colors
+  $link: #0000ff;
+  $link-hover: #007bff;
+
+
   // Shadow
+  
+  $subheader-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   $box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
   $box-shadow-light-1: 0 2px 4px rgba(0, 0, 0, 0.1);
   $box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);

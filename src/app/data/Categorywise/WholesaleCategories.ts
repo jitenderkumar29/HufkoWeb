@@ -1,3 +1,5 @@
+import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+
 export const WholesaleCategories = [
   {
     id: "menu-addons",
@@ -130,5 +132,72 @@ export const WholesaleCategories = [
     name: "Imported Foods",
     imageUrl: "/products/imported-foods.png",
     url: "/in/canned-imported-items",
-  },
+  }
+];
+
+export const wholesaleCategoriesSubHeader: SubHeaderItem[] = [
+  { name: "All" },
+  { name: "Featured" },
+  { name: "Best Sellers" },
+  { name: "New Arrivals" },
+  { name: "Bulk Deals" },
+
+  // FMCG
+  { name: "Food & Beverages" },
+  { name: "Groceries" },
+  { name: "Spices & Masalas" },
+  { name: "Dry Fruits & Nuts" },
+  { name: "Snacks & Confectionery" },
+  { name: "Dairy Products" },
+
+  // Agriculture
+  { name: "Agriculture" },
+  { name: "Seeds & Plants" },
+  { name: "Fertilizers" },
+  { name: "Animal Feed" },
+
+  // Apparel
+  { name: "Apparel & Fashion" },
+  { name: "Footwear" },
+  { name: "Bags & Luggage" },
+  { name: "Textiles & Fabrics" },
+
+  // Electronics
+  { name: "Electronics" },
+  { name: "Mobile Accessories" },
+  { name: "Computers & Laptops" },
+  { name: "Electrical Supplies" },
+
+  // Home & Office
+  { name: "Home & Kitchen" },
+  { name: "Furniture" },
+  { name: "Office Supplies" },
+  { name: "Stationery" },
+
+  // Health
+  { name: "Pharma & Medical" },
+  { name: "Personal Care" },
+  { name: "Beauty Products" },
+
+  // Industrial
+  { name: "Industrial Supplies" },
+  { name: "Machinery" },
+  { name: "Tools & Hardware" },
+  { name: "Construction Materials" },
+  { name: "Safety Equipment" },
+
+  // Packaging
+  { name: "Packaging Materials" },
+
+  // Automotive
+  { name: "Automotive Parts" },
+  { name: "Tyres & Accessories" },
+
+  // Hospitality
+  { name: "Hotel & Restaurant Supplies" },
+
+  // Business Essentials
+  { name: "Cleaning Supplies" },
+  { name: "Disposable Products" },
+  { name: "Gift & Promotional Items" },
 ];
