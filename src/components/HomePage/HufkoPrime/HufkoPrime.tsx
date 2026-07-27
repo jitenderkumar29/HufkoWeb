@@ -58,7 +58,7 @@ const HufkoPrime = () => {
             {/* Floating Coins */}
             <div className={`${styles.coin} ${styles.coinLeft}`}>
                 <Image
-                    src="/products/coin_left.png"
+                    src="/icons/coin_left.png"
                     alt="Prime Coin"
                     fill
                     sizes="110px"
@@ -68,7 +68,7 @@ const HufkoPrime = () => {
 
             <div className={`${styles.coin} ${styles.coinRight}`}>
                 <Image
-                    src="/products/coin_right.png"
+                    src="/icons/coin_right.png"
                     alt="Prime Coin"
                     fill
                     sizes="130px"
@@ -78,7 +78,7 @@ const HufkoPrime = () => {
 
             <div className={`${styles.coin} ${styles.coinBottom}`}>
                 <Image
-                    src="/products/coin_bottom.png"
+                    src="/icons/coin_bottom.png"
                     alt="Prime Coin"
                     fill
                     sizes="70px"
