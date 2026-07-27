@@ -37,7 +37,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Chole Bhature",
+    name: "Chole Bhat",
     imageUrl: "/products/chole_bhature_food.png",
     url: "/"
   },
@@ -102,7 +102,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Gulab Jamun",
+    name: "Gulab Jam.",
     imageUrl: "/products/gulab_jamun_food.png",
     url: "/"
   },
@@ -232,7 +232,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Chilli Chicken",
+    name: "Chilli Chick.",
     imageUrl: "/products/chilli_chicken_food.png",
     url: "/"
   },
@@ -247,7 +247,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Masala Maggi",
+    name: "Masala Mag.",
     imageUrl: "/products/masala_maggi_food.png",
     url: "/"
   },
@@ -272,12 +272,12 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Non Veg Meal",
+    name: "Non Veg",
     imageUrl: "/products/non_veg_meal_food.png",
     url: "/"
   },
   {
-    name: "Bread Pakoda",
+    name: "Bread Pak.",
     imageUrl: "/products/bread_pakoda_food.png",
     url: "/"
   },
@@ -297,7 +297,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Chur Chur Naan",
+    name: "Chur Naan",
     imageUrl: "/products/chur_chur_naan_food.png",
     url: "/"
   },
@@ -372,7 +372,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Butter Chicken",
+    name: "Butter Chic.",
     imageUrl: "/products/butter_chicken_food.png",
     url: "/"
   },
@@ -422,7 +422,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Chicken Handi",
+    name: "Chicken Ha.",
     imageUrl: "/products/chicken_handi_food.png",
     url: "/"
   },
@@ -447,12 +447,12 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Chicken Chap",
+    name: "Chicken Ch.",
     imageUrl: "/products/chicken_cha_food.png",
     url: "/"
   },
   {
-    name: "Paneer Kulche",
+    name: "Paneer Kul.",
     imageUrl: "/products/paneer_kulche_food.png",
     url: "/"
   },
@@ -572,7 +572,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Pyaaj Kachori",
+    name: "Pyaaj Kach.",
     imageUrl: "/products/pyaaj_kachori_food.png",
     url: "/"
   },
@@ -592,7 +592,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Paneer Pakoda",
+    name: "Paneer Pak",
     imageUrl: "/products/paneer_pakoda_food.png",
     url: "/"
   },
@@ -622,12 +622,12 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Aloo Kachori",
+    name: "Aloo Kach.",
     imageUrl: "/products/aloo_kachori_food.png",
     url: "/"
   },
   {
-    name: "Chole Kulche",
+    name: "Chole Kul.",
     imageUrl: "/products/chole_kulche_food.png",
     url: "/"
   },
@@ -652,7 +652,7 @@ export const FoodsCategories = [
     url: "/"
   },
   {
-    name: "Khasta Kachori",
+    name: "Khasta Kac.",
     imageUrl: "/products/khasta_kachori_food.png",
     url: "/"
   },

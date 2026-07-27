@@ -1,0 +1,351 @@
+@use "../../../styles/variables.scss" as *;
+.hufkoPrime {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  padding: 9rem 1rem;
+  isolation: isolate;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Curves
+========================= */
+
+.topCurve,
+.bottomCurve {
+  position: absolute;
+  left: 50%;
+  width: 240%;
+  height: 220px;
+  background: white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.topCurve {
+  top: -170px;
+}
+
+.bottomCurve {
+  bottom: -170px;
+}
+
+/* =========================
+   Content
+========================= */
+
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logoWrapper {
+  margin-bottom: 3rem;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.goldTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+
+  background: linear-gradient(
+    135deg,
+    #8c6115 0%,
+    #e9c789 50%,
+    #996f25 100%
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.crownCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #fef3e0,
+    #f4d59f,
+    #e9c789
+  );
+
+  color: #000;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+
+  background: linear-gradient(
+    135deg,
+    #8c6115,
+    #e9c789,
+    #996f25
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* =========================
+   Heading
+========================= */
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin-bottom: 4rem;
+
+  letter-spacing: 5px;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+/* =========================
+   Benefits
+========================= */
+
+.benefits {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.benefitCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  min-width: 320px;
+  max-width: 460px;
+
+  text-align: left;
+}
+
+.iconBox {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #1d1d1d,
+    #111
+  );
+
+  color: #f4d59f;
+  border: 1px solid rgba(255, 221, 160, 0.15);
+
+  flex-shrink: 0;
+}
+
+.benefitCard h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #fff,
+    #fef3e0
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.benefitCard p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+
+  background: linear-gradient(
+    135deg,
+    #8c6115,
+    #e9c789,
+    #996f25
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* =========================
+   Coins
+========================= */
+.coin {
+  position: absolute;
+  z-index: 10;
+  animation: floating 5s ease-in-out infinite;
+  transition: transform .35s ease;
+  cursor: pointer;
+
+  img {
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: translateY(-10px) scale(1.08) rotate(8deg);
+  }
+}
+
+.coinLeft {
+  width: 120px;
+  height: 120px;
+
+  top: 3%;
+  left: 1.5%;
+}
+
+.coinRight {
+  width: 170px;
+  height: 170px;
+
+  top: 0%;
+  right: 2%;
+}
+
+.coinBottom {
+  width: 98px;
+  height: 98px;
+
+  bottom: 3%;
+  right: 20%;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* =========================
+   Decorative Patterns
+========================= */
+
+.patternLeft,
+.patternRight {
+  position: absolute;
+  bottom: 0;
+  width: 280px;
+  height: 220px;
+  opacity: 0.08;
+  z-index: 2;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      #d5a649 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      #d5a649 25%,
+      transparent 25%
+    );
+
+  background-size: 60px 60px;
+}
+
+.patternLeft {
+  left: 0;
+}
+
+.patternRight {
+  right: 0;
+}
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 992px) {
+  .coinLeft {
+    width: 58px;
+    height: 58px;
+  }
+
+  .coinRight {
+    width: 96px;
+    height: 96px;
+  }
+
+  .coinBottom {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coinLeft {
+    width: 46px;
+    height: 46px;
+    left: 0.5rem;
+  }
+
+  .coinRight {
+    width: 72px;
+    height: 72px;
+    right: 0.5rem;
+  }
+
+  .coinBottom {
+    width: 42px;
+    height: 42px;
+    right: 18%;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefitCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefitCard div:last-child {
+    text-align: center;
+  }
+}

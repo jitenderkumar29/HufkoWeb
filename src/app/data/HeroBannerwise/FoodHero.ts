@@ -1,4 +1,32 @@
 export const FoodHeroBannerData = [
+  
+  {
+    id: "5",
+    title: "Up to 70% Off",
+    subtitle: "Beds, Sofas & more",
+    category: "Furniture",
+    discount: "15%",
+    imgUrl: "/products/FoodHeroBanner5.jpg",
+    href: "/",
+  },
+   {
+    id: "3",
+    title: "Up to 70% Off",
+    subtitle: "Beds, Sofas & more",
+    category: "Furniture",
+    discount: "15%",
+    imgUrl: "/products/FoodHeroBanner3.jpg",
+    href: "/",
+  },
+  {
+    id: "4",
+    title: "Up to 70% Off",
+    subtitle: "Beds, Sofas & more",
+    category: "Furniture",
+    discount: "15%",
+    imgUrl: "/products/FoodHeroBanner4.jpg",
+    href: "/",
+  },
   {
     id: "1",
     title: "Up to 85% Off",
@@ -17,6 +45,7 @@ export const FoodHeroBannerData = [
     imgUrl: "/products/FoodHeroBanner2.jpg",
     href: "/",
   },
+ 
   // {
   //   id: "3",
   //   title: "Up to 70% Off",
