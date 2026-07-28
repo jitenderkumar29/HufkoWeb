@@ -128,7 +128,7 @@ const HeaderCategory: React.FC = () => {
           <div className={styles.homeContent}>
             <WelcomeHufko />
             <PoweringSlides />
-            {/* <HufkoGSTInfo /> */}
+            <HufkoGSTInfo />
           </div>
         )}
         
