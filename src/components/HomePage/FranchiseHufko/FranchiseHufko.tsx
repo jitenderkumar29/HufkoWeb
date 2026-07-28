@@ -31,8 +31,8 @@ const FranchiseHufko: React.FC<FranchiseHufkoProps> = ({ onApplyClick }) => {
   }, []);
 
   const stats = [
-    { value: '150+', label: 'Franchise Partners', icon: Users },
-    { value: '₹13L', label: 'Min. Investment', icon: IndianRupee },
+    { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+    { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
     { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
   ];
 
@@ -53,24 +53,26 @@ const FranchiseHufko: React.FC<FranchiseHufkoProps> = ({ onApplyClick }) => {
           <div className={`${styles.content} ${styles.animateOnScroll}`}>
             <div className={styles.badge}>
               <span className={styles.badgeDot}></span>
-              India's Fastest-Growing Supermarket Franchise
+              World's Largest Instant Delivery App Platform
             </div>
 
             <h1 className={styles.heading}>
-              Own a <span className={styles.highlight}>Supermarket Franchise</span>
-              <span> in</span>
-              <br />
-              India - Start with HUFKO
+              World's Largest #1
+              <span className={styles.highlight}> AI Powered </span>
+              Premium <br />Food Delivery Technology Platform
             </h1>
 
             <p className={styles.description}>
-              When you open a HUFKO store, you get the brand, the supply chain, the technology,
-              and a team that stays with you after day one.
+              Enjoy Premium Food and Dining at Premium Restaurants Fast and Easy Online Ordering on the HUFKO App
             </p>
 
+            {/* Buttons in one row */}
             <div className={styles.actions}>
               <button onClick={onApplyClick} className={styles.applyButton}>
-                Apply Now <ArrowRight size={20} />
+                Order Now <ArrowRight size={20} />
+              </button>
+              <button onClick={onApplyClick} className={`${styles.applyButton} ${styles.applyButtonSecondary}`}>
+                More <ArrowRight size={20} />
               </button>
             </div>
 

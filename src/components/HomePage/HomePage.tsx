@@ -11,9 +11,7 @@ const HomePage = () => {
     <div>
       <Header />
       <HeaderCategory />
-      <HufkoPrime />
-      <DownloadApp />
-      <FranchiseHufko />
+      
       <Footer />
     </div>
   )

@@ -246,6 +246,7 @@
   }
 }
 
+// Actions - Buttons in one row
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -256,11 +257,18 @@
     gap: 0.75rem;
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
 }
 
 .applyButton {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background: #f5a623;
   color: #1a1a1a;
@@ -272,6 +280,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 20px rgba(245, 166, 35, 0.5);
+  min-width: 140px;
+  font-family: inherit;
 
   &:hover {
     background: #e09610;
@@ -286,11 +296,29 @@
   @media (max-width: 768px) {
     padding: 0.625rem 1.5rem;
     font-size: 0.9rem;
+    min-width: 120px;
   }
 
   @media (max-width: 480px) {
     width: 100%;
+    min-width: unset;
+    padding: 0.75rem 1.5rem;
     justify-content: center;
+  }
+}
+
+// Secondary Button
+.applyButtonSecondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 }
 

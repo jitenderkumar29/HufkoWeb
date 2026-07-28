@@ -1,0 +1,448 @@
+// src/components/HomePage/PoweringSlides/PoweringSlides.module.scss
+@use "../../../styles/variables.scss" as *;
+
+.poweringSlides {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 2rem 0 0rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0 2rem;
+  }
+}
+
+// Logo Styles
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+
+  .eternalLogo {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+
+    @media (max-width: 1024px) {
+      width: 25%;
+    }
+
+    @media (max-width: 768px) {
+      width: 35%;
+    }
+
+    @media (max-width: 480px) {
+      width: 45%;
+    }
+  }
+}
+
+// Divider Styles
+.dividerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+
+  .dividerLine {
+    flex: 1;
+    max-width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #d2d2d2);
+
+    &:last-child {
+      background: linear-gradient(to left, transparent, #d2d2d2);
+    }
+
+    @media (max-width: 768px) {
+      max-width: 60px;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 40px;
+    }
+  }
+
+  .dividerText {
+    text-align: center;
+    text-transform: uppercase;
+    color: #6b7280;
+    font-size: clamp(1.5rem, 1.2vw, 0.85rem);
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+
+    @media (max-width: 480px) {
+      font-size: 0.55rem;
+      letter-spacing: 1px;
+      white-space: normal;
+      line-height: 1.3;
+    }
+  }
+}
+
+// Brands Grid
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: $max-width;
+  padding: 1rem 0rem;
+  margin-top: 1rem;
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    padding: 1rem 0rem;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.75rem;
+  }
+}
+
+// Brand Card with Zoom Effect on Hover
+.brandCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  border-radius: 32px;
+  border: 3px solid rgba(239, 79, 95, 0.2);
+  text-decoration: none;
+  overflow: hidden;
+  min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  will-change: transform;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  // Zoom Effect on Hover
+  &:hover {
+    transform: scale(1.08) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    border-color: rgba(239, 79, 95, 0.5);
+
+    // Scale up the blur background on hover
+    .blurBackground {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+
+    // Scale up the logo slightly
+    .brandLogoWrapper .brandLogo {
+    //   transform: scale(1.05);
+    }
+
+    // Enhance the action icon animation
+    .brandAction .actionIcon {
+      transform: translateX(6px);
+    }
+  }
+
+  // Individual brand styling
+  &:nth-child(1) {
+    background: linear-gradient(180deg, #fff5f5 0%, #fff0f0 100%);
+    border-color: rgba(239, 79, 95, 0.3);
+
+    &:hover {
+      border-color: rgba(239, 79, 95, 0.6);
+      box-shadow: 0 20px 60px rgba(239, 79, 95, 0.2);
+    }
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(180deg, #fff9e5 0%, #fff9e5 100%);
+    border-color: #faecbd;
+
+    &:hover {
+      border-color: #f5d890;
+      box-shadow: 0 20px 60px rgba(250, 236, 189, 0.4);
+    }
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(180deg, #f2ecff 0%, #faf8fe 100%);
+    border-color: #dfcfff;
+
+    &:hover {
+      border-color: #c9a8ff;
+      box-shadow: 0 20px 60px rgba(223, 207, 255, 0.4);
+    }
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(180deg, #fff5f5 0%, #fff0f0 100%);
+    border-color: rgba(239, 79, 95, 0.3);
+
+    &:hover {
+      border-color: rgba(239, 79, 95, 0.6);
+      box-shadow: 0 20px 60px rgba(239, 79, 95, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+    gap: 0.75rem;
+    min-height: 260px;
+    border-radius: 24px;
+
+    &:hover {
+      transform: scale(1.05) !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.25rem 1rem;
+    min-height: 240px;
+    border-radius: 20px;
+
+    &:hover {
+      transform: scale(1.03) !important;
+    }
+  }
+
+  // Blur Background with transition
+  .blurBackground {
+    position: absolute;
+    right: -130px;
+    top: -130px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 200px;
+      right: -100px;
+      top: -100px;
+    }
+
+    @media (max-width: 480px) {
+      width: 160px;
+      height: 160px;
+      right: -80px;
+      top: -80px;
+    }
+  }
+
+  // Brand Logo with transition
+  .brandLogoWrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .brandLogo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 32px;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+      @media (max-width: 1024px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+        border-radius: 24px;
+      }
+
+      @media (max-width: 480px) {
+        width: 72px;
+        height: 72px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  // Brand Content
+  .brandContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      max-width: 160px;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 100%;
+    }
+
+    .brandName {
+      font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+      font-weight: 700;
+      color: #1f2937;
+      text-transform: lowercase;
+      margin: 0;
+      letter-spacing: -0.5px;
+      transition: color 0.3s ease;
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    .brandDescription {
+      font-size: clamp(0.75rem, 1vw, 0.95rem);
+      font-weight: 400;
+      color: #6b7280;
+      line-height: 1.5;
+      margin: 0;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        font-size: 0.75rem;
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    .brandAction {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #1f2937;
+      font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+      font-weight: 500;
+      margin-top: 0.5rem;
+      transition: all 0.3s ease;
+
+      .actionIcon {
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        color: #ef4f5f;
+      }
+
+      &:hover .actionIcon {
+        transform: translateX(4px);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}
+
+// Scroll Animation
+.animateOnScroll {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Responsive Fixes
+@media (max-width: 480px) {
+  .brandsGrid {
+    .brandCard {
+      .brandContent {
+        .brandDescription {
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+  }
+}
+
+// 4K Screens
+@media (min-width: 2000px) {
+  .brandsGrid {
+    max-width: 1600px;
+    gap: 3rem;
+
+    .brandCard {
+      min-height: 400px;
+      padding: 2.5rem 2rem;
+
+      &:hover {
+        transform: scale(1.06) !important;
+      }
+
+      .brandLogoWrapper .brandLogo {
+        width: 160px;
+        height: 160px;
+      }
+
+      .brandContent {
+        max-width: 280px;
+
+        .brandName {
+          font-size: 2rem;
+        }
+
+        .brandDescription {
+          font-size: 1.1rem;
+        }
+
+        .brandAction {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './HeaderCategory.module.scss';
-import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faWarehouse, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faWarehouse, faHandshake, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories, groceryCategoriesSubHeader } from '@/app/data/Categorywise/GroceryCategories';
@@ -28,6 +28,12 @@ import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
 import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
 import { FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
 import SubHeader from '../SubHeader/SubHeader';
+import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
+import WelcomeHufko from '@/components/HomePage/WelcomeHufko/WelcomeHufko';
+import HufkoPrime from '@/components/HomePage/HufkoPrime/HufkoPrime';
+import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
+import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko';
+import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
 
 interface CategoryItem {
   id: string;
@@ -37,9 +43,11 @@ interface CategoryItem {
 
 const HeaderCategory: React.FC = () => {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<string>('food');
+  const [activeTab, setActiveTab] = useState<string>('home');
 
-  const categories: CategoryItem[] = [
+  // All categories including home
+  const allCategories: CategoryItem[] = [
+    { id: 'home', name: 'Home', icon: faHome },
     { id: 'food', name: 'Food Delivery', icon: faUtensils },
     { id: 'grocery', name: 'Grocery Delivery', icon: faBasketShopping },
     { id: 'shopping', name: 'Shopping', icon: faStore },
@@ -49,27 +57,51 @@ const HeaderCategory: React.FC = () => {
     { id: 'wholesale', name: 'Wholesale', icon: faHandshake }
   ];
 
-  // Get category from URL on initial load
-  useEffect(() => {
+  // Categories to display in tabs (excluding home)
+  const displayCategories = allCategories.filter(cat => cat.id !== 'home');
+
+  // Get category from URL and update state
+  const updateCategoryFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     const categoryParam = params.get('category');
     
-    // Check if the category param exists and is valid
-    if (categoryParam && categories.some(cat => cat.id === categoryParam)) {
+    if (categoryParam && allCategories.some(cat => cat.id === categoryParam)) {
       setActiveTab(categoryParam);
+    } else {
+      setActiveTab('home');
     }
+  };
+
+  // Initial load and URL change handling
+  useEffect(() => {
+    updateCategoryFromURL();
+  }, []);
+
+  // Handle popstate event (back/forward browser buttons)
+  useEffect(() => {
+    const handlePopState = () => {
+      updateCategoryFromURL();
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
   }, []);
 
   // Handle category change and update URL
   const handleCategoryChange = (categoryId: string) => {
+    if (categoryId === activeTab) return; // Don't do anything if same category
+    
     setActiveTab(categoryId);
     
     // Update URL with query parameter
     const params = new URLSearchParams(window.location.search);
     params.set('category', categoryId);
     
-    // Use router.replace to update URL without page reload
-    router.replace(`?${params.toString()}`, { scroll: false });
+    // Use router.push to add to browser history (enables back button)
+    router.push(`?${params.toString()}`, { scroll: false });
   };
 
   return (
@@ -77,7 +109,7 @@ const HeaderCategory: React.FC = () => {
       <div className={styles.headerCategory}>
         <div className={styles.container}>
           <div className={styles.categoryTabs}>
-            {categories.map((category) => (
+            {displayCategories.map((category) => (
               <button
                 key={category.id}
                 className={`${styles.categoryTab} ${activeTab === category.id ? styles.active : ''}`}
@@ -91,6 +123,16 @@ const HeaderCategory: React.FC = () => {
         </div>
       </div>
       <div className={styles.tabContainer}>
+        {/* Home Section */}
+        {activeTab === "home" && (
+          <div className={styles.homeContent}>
+            <WelcomeHufko />
+            {/* <PoweringSlides />
+            <HufkoGSTInfo /> */}
+          </div>
+        )}
+        
+        {/* Food Section */}
         {activeTab === "food" && (
           <div className={styles.allCategory}>
             <SubHeader
@@ -100,8 +142,14 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={FoodHeroBannerData} />
             <AllCategory categories={FoodsCategories} />
+            <WelcomeHufko />
+            <HufkoPrime />
+            <DownloadApp />
+            <FranchiseHufko />
           </div>
         )}
+        
+        {/* Grocery Section */}
         {activeTab === "grocery" && (
           <div className={styles.allCategory}>
             <SubHeader
@@ -124,6 +172,8 @@ const HeaderCategory: React.FC = () => {
             </div>
           </div>
         )}
+        
+        {/* Shopping Section */}
         {activeTab === "shopping" && (
           <div className={styles.allCategory}>
             <SubHeader
@@ -141,6 +191,8 @@ const HeaderCategory: React.FC = () => {
             />
           </div>
         )}
+        
+        {/* Flower Section */}
         {activeTab === "flower" && (
           <div className={styles.allCategory}>
             <SubHeader
@@ -152,6 +204,8 @@ const HeaderCategory: React.FC = () => {
             <AllCategory categories={FlowersCategories} />
           </div>
         )}
+        
+        {/* Care Section */}
         {activeTab === "care" && (
           <div className={styles.allCategory}>
             <SubHeader
@@ -163,6 +217,8 @@ const HeaderCategory: React.FC = () => {
             <AllCategory categories={CareCategories} />
           </div>
         )}
+        
+        {/* Pharma Section */}
         {activeTab === "pharma" && (
           <div className={styles.allCategory}>
             <SubHeader
@@ -174,6 +230,8 @@ const HeaderCategory: React.FC = () => {
             <AllCategoryOne categories={PharmaCategories} />
           </div>
         )}
+        
+        {/* Wholesale Section */}
         {activeTab === "wholesale" && (
           <div className={styles.allCategory}>
             <SubHeader

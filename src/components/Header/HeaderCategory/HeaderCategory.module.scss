@@ -137,3 +137,136 @@
   // background-color: #F1F2F4
   margin-top: -5px;
 }
+
+.quickAccessCategories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quickCategoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-color: #ff6b35;
+  }
+
+  .quickIcon {
+    font-size: 32px;
+    color: #ff6b35;
+    margin-bottom: 12px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+  }
+}
+
+.homePageContainer {
+  // padding: 20px 0;
+}
+
+.welcomeSection {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  margin: 0 20px 30px;
+  color: white;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+}
+
+.quickAccessCategories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 0 20px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quickCategoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-color: #ff6b35;
+  }
+
+  .quickIcon {
+    font-size: 32px;
+    color: #ff6b35;
+    margin-bottom: 12px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+  }
+}
+
+// Add this to your existing styles if you want a back to home button
+.backToHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin: 10px 20px;
+  background: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+    transform: translateX(-5px);
+  }
+
+  .homeIcon {
+    font-size: 16px;
+  }
+}
