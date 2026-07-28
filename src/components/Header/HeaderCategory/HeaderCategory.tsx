@@ -127,8 +127,8 @@ const HeaderCategory: React.FC = () => {
         {activeTab === "home" && (
           <div className={styles.homeContent}>
             <WelcomeHufko />
-            {/* <PoweringSlides />
-            <HufkoGSTInfo /> */}
+            <PoweringSlides />
+            {/* <HufkoGSTInfo /> */}
           </div>
         )}
         
