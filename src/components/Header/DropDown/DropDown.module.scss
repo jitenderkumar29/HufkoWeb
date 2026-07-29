@@ -1,0 +1,437 @@
+@use "../../../styles/variables.scss" as *;
+
+.dropdown {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 8px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  box-sizing: border-box;
+  max-height: 1000px;
+  overflow-y: auto;
+  padding: 0 5rem;
+
+  .megaMenu {
+    width: 100%;
+    max-width: 1521px;
+    margin: 0 auto;
+    padding: 32px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    min-height: 390px;
+    height: 100%;
+
+    // Text Columns Container
+    .textColumns {
+      display: flex;
+      flex: 2;
+      gap: 0;
+      justify-content: flex-start;
+      height: 100%;
+
+      .textColumn {
+        flex: 1;
+        min-width: 180px;
+        max-width: 250px;
+        padding-right: 20px;
+        // border-right: 1px solid #e8e8e8;
+        height: 100%;
+        max-height: 390px; /* Set max height for column */
+        overflow: hidden; /* Hide overflow to force items to next column */
+
+        &:last-child {
+          border-right: none;
+          padding-right: 0;
+        }
+
+        .categoryBlock {
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .columnTitle {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            color: $black;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            z-index: 1;
+            padding-bottom: 2px;
+
+            a {
+              color: inherit;
+              text-decoration: none;
+              transition: color 0.2s;
+
+              &:hover {
+                color: #c45500;
+              }
+            }
+          }
+
+          .categoryList {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .categoryItem {
+              margin-bottom: 4px;
+
+              a {
+                font-size: 13px;
+                color: #555;
+                text-decoration: none;
+                line-height: 1.4;
+                transition: 0.2s;
+                display: inline-block;
+
+                &:hover {
+                    color: $black;
+                //   color: #c45500;
+                  text-decoration: underline;
+                }
+              }
+
+              .subCategoryList {
+                list-style: none;
+                margin: 1px 0 2px 16px;
+                padding: 0;
+
+                li {
+                  margin-bottom: 1px;
+
+                  a {
+                    font-size: 12px;
+                    color: #666;
+
+                    &:hover {
+                      color: $black;
+                    //   color: #c45500;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Image Columns Container
+    .imageColumns {
+      display: flex;
+      flex: 1;
+      gap: 16px;
+      justify-content: flex-end;
+    //   min-width: 300px;
+    //   max-width: 500px;
+      min-width: 200px; 
+      max-width: 500px; 
+      min-height: 260px; 
+      max-height: 280px;
+    //   height: 100%;
+      align-items: flex-start;
+
+      .imageColumn {
+        flex: 1;
+        max-width: 200px;
+
+        .merchPanel {
+          display: block;
+          text-align: center;
+          text-decoration: none;
+          transition: transform 0.2s, opacity 0.2s;
+
+          &:hover {
+            transform: translateY(-4px);
+            opacity: 0.9;
+          }
+
+          .merchImage {
+            width: 100%;
+            // max-width: 180px;
+            // min-height: 200px;
+            // max-height: 240px;
+            min-width: 200px; 
+            max-width: 500px; 
+            min-height: 260px; 
+            max-height: 280px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 8px;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            aspect-ratio: 3/4;
+          }
+
+          .merchTitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: #111;
+            margin: 6px 0 4px;
+          }
+
+          .merchLink {
+            font-size: 12px;
+            color: #0066c0;
+            font-weight: 500;
+
+            &:hover {
+              color: $black;
+            //   color: #c45500;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile Styles
+  &.mobile {
+    position: static;
+    width: 100%;
+    max-height: none;
+    overflow-y: visible;
+
+    .megaMenu {
+      max-width: 100%;
+      padding: 0;
+      flex-direction: column;
+      min-height: auto;
+      gap: 0;
+      height: auto;
+
+      .textColumns {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+
+        .textColumn {
+          width: 100%;
+          max-width: 100%;
+          min-width: 100%;
+          border-right: none;
+          border-bottom: 1px solid #eee;
+          padding: 16px 20px;
+          height: auto;
+          max-height: none;
+          overflow: visible;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .categoryBlock {
+            margin-bottom: 20px;
+
+            .columnTitle {
+              font-size: 16px;
+              position: static;
+              background: transparent;
+            }
+
+            .categoryList {
+              .categoryItem {
+                a {
+                  font-size: 14px;
+                  padding: 4px 0;
+                }
+
+                .subCategoryList {
+                  margin-left: 20px;
+
+                  li a {
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .imageColumns {
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        gap: 20px;
+        padding: 16px 20px;
+        height: auto;
+
+        .imageColumn {
+          max-width: 100%;
+          width: 100%;
+
+          .merchPanel {
+            .merchImage {
+              max-width: 200px;
+              min-height: 200px;
+              max-height: 250px;
+              margin: 0 auto 10px;
+            }
+
+            .merchTitle {
+              font-size: 16px;
+            }
+
+            .merchLink {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive Styles
+  @media (max-width: 1200px) {
+    .megaMenu {
+      padding: 0 24px;
+
+      .textColumns {
+        .textColumn {
+          min-width: 150px;
+          max-width: 200px;
+          padding-right: 15px;
+          max-height: 280px;
+        }
+      }
+
+      .imageColumns {
+        min-width: 250px;
+        max-width: 400px;
+        gap: 12px;
+
+        .imageColumn {
+          max-width: 160px;
+
+          .merchPanel {
+            .merchImage {
+              max-width: 150px;
+              min-height: 180px;
+              max-height: 220px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    max-height: 500px;
+
+    .megaMenu {
+      flex-direction: column;
+      padding: 20px;
+      gap: 30px;
+      height: auto;
+
+      .textColumns {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: auto;
+
+        .textColumn {
+          flex: 1;
+          min-width: 200px;
+          max-width: none;
+          border-right: none;
+          padding-right: 0;
+          border-bottom: 1px solid #e8e8e8;
+          padding-bottom: 20px;
+          height: auto;
+          max-height: 280px;
+          overflow: hidden;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .imageColumns {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+
+        .imageColumn {
+          max-width: 180px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-height: none;
+    overflow-y: visible;
+
+    .megaMenu {
+      padding: 0;
+
+      .textColumns {
+        .textColumn {
+          min-width: 100%;
+          padding: 16px 20px;
+          border-bottom: 1px solid #eee;
+          max-height: none;
+          overflow: visible;
+        }
+      }
+
+      .imageColumns {
+        padding: 16px 20px;
+        gap: 16px;
+
+        .imageColumn {
+          max-width: 160px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .megaMenu {
+      padding: 0 48px;
+    }
+  }
+
+  // Custom scrollbar styling
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+
+    &:hover {
+      background: #a8a8a8;
+    }
+  }
+}

@@ -14,7 +14,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -179,8 +179,14 @@ const HeaderCategory: React.FC = () => {
             <SubHeader
               items={shoppingCategoriesSubHeader}
               defaultActive="All"
-              onSelect={(item) => console.log(item.name)}
+              categoriesData={categoriesDataMap}
+              onSelect={(item) => console.log('Selected:', item)}
             />
+            {/* <SubHeader
+              items={shoppingCategoriesSubHeader}
+              defaultActive="All"
+              onSelect={(item) => console.log(item.name)}
+            /> */}
             <HeroBannerAll banners={ShopingHeroBannerData} />
             <AllCategoryOne categories={ShopingCategories} />
             <ShoppingSlides1
