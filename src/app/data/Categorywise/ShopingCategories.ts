@@ -336,7 +336,8 @@ export const homeDecorCategoriesData = [
     items: [
       "Wall Décor",
       "Wall Stickers",
-      "Drawer Handles & Pull Clocks"
+      "Drawer Handles",
+      "Pull Clocks"
     ]
   },
   {
