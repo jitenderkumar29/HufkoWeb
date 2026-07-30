@@ -173,8 +173,8 @@ export const electronicsCategoriesData = [
     title: "Mobile accessories",
     items: [],
     image: {
-      src: "/products/mobileAccessories.png",
-      title: "Mobile accessories",
+      src: "/products/mobile_brands.png",
+      title: "Mobile Brands",
       link: "/accessories"
     }
   }
@@ -370,41 +370,511 @@ export const homeDecorCategoriesData = [
 
 export const mobilesTabletsCategoriesData = [
   {
+    id: "mobiles_tablets",
+    title: "Mobiles & Tablets",
+    items: [
+      "Mobile accessories",
+      "Cases & Covers",
+      "Screen guards",
+      "Power Banks",
+      "Headsets",
+      "Data Cables",
+      "Chargers",
+      "Selfie Sticks",
+      "Skin Stickers",
+      "Internal Batteries",
+      "Mounts & Stands",
+      "Lens Kits",
+      "Replacement Parts"
+    ]
+  },
+  {
+    id: "mobile-brands",
+    title: "Mobile brands",
+    items: [
+      "Mi",
+      "OnePlus",
+      "Samsung",
+      "Huawei",
+      "Apple",
+      "Motorola",
+      "Nokia",
+      "Vivo",
+      "10.or",
+      "Coolpad",
+      "Honor",
+      "Lenovo",
+      "LG",
+      "Micromax"
+    ]
+  },
+  {
+    id: "accessories-brands",
+    title: "Accessories brand",
+    items: [
+      "OnePlus",
+      "AmazonBasics",
+      "Intex",
+      "Ambrane",
+      "Lenovo",
+      "Spigen",
+      "Jabra",
+      "Apple",
+      "Syska",
+      "Boat",
+      "Mivi",
+      "iVoltaa"
+    ]
+  },
+  {
+    id: "mobiles-featured",
     title: "Mobiles",
-    items: ["Smartphones", "Feature Phones", "Refurbished"],
+    items: [],
     image: {
-      src: "/icons/mobiles.png",
+      src: "/products/mobileElectronics.png",
       title: "Mobiles",
       link: "/mobiles"
-    }
+    },
+    seeMore: true
   },
   {
-    title: "Tablets",
-    items: ["Apple iPad", "Samsung Tab", "Lenovo Tab"]
-  },
+    id: "accessories-featured",
+    title: "Mobile accessories",
+    items: [],
+    image: {
+      src: "/products/mobileAccessories.png",
+      title: "Mobile accessories",
+      link: "/accessories"
+    },
+    seeMore: true
+  }
+  ,
   {
-    title: "Accessories",
-    items: ["Cases", "Chargers", "Screen Guards"]
+    id: "accessories-featured",
+    title: "Tablets accessories",
+    items: [],
+    image: {
+      src: "/products/tabletsAccessories.png",
+      title: "Tablets & accessories",
+      link: "/accessories"
+    },
+    seeMore: true
   }
 ];
 
 export const menCategoriesData = [
   {
-    title: "Clothing",
-    items: ["Shirts", "T-Shirts", "Jeans", "Trousers", "Suits"],
+    id: "clothing",
+    title: "CLOTHING",
+    items: [
+      "T-Shirts & Polos",
+      "Shirts",
+      "Trousers",
+      "Jeans",
+      "Innerwear",
+      "Sportswear",
+      "Sleep & Lounge Wear",
+      "Ethnic Wear",
+      "Ties, Socks & Belts",
+      "Suits & Blazers",
+      "Sweaters",
+      "Jackets & Coats"
+    ]
+  },
+  {
+    id: "shoes",
+    title: "SHOES",
+    items: [
+      "Sports Shoes",
+      "Formal Shoes",
+      "Casual Shoes",
+      "Sneakers",
+      "Loafers & Moccasins",
+      "Flip-Floops",
+      "Boots",
+      "Sandals & Floaters",
+      "Thong Sandals",
+      "Boat Shoes"
+    ]
+  },
+  {
+    id: "watches",
+    title: "WATCHES",
+    items: [
+      "Metallic",
+      "Chronographs",
+      "Leather"
+    ]
+  },
+  {
+    id: "jewellery",
+    title: "JEWELLERY",
+    items: [
+      "Rings",
+      "Bracelets"
+    ]
+  },
+  {
+    id: "eyewear",
+    title: "EYEWEAR",
+    items: [
+      "Sunglasses",
+      "Spectacle Frames"
+    ]
+  },
+  {
+    id: "wallets",
+    title: "WALLETS",
+    items: []
+  },
+  {
+    id: "mens-clothing-featured",
+    title: "Men's Clothing",
+    items: [],
     image: {
-      src: "/icons/men-clothing.png",
+      src: "/products/mensClothing.png",
       title: "Men's Clothing",
-      link: "/men/clothing"
-    }
+      link: "/mens-clothing"
+    },
+    exploreStore: true
   },
   {
-    title: "Footwear",
-    items: ["Sneakers", "Formal Shoes", "Sandals", "Loafers"]
+    id: "running-shoes-featured",
+    title: "Running Shoes",
+    items: [],
+    image: {
+      src: "/products/runningShoes.png",
+      title: "Running Shoes",
+      link: "/running-shoes"
+    },
+    seeMore: true
   },
   {
-    title: "Accessories",
-    items: ["Watches", "Belts", "Wallets", "Bags"]
+    id: "max-just-launched",
+    title: "MAX | Just Launched",
+    items: [],
+    image: {
+      src: "/products/maxJustLaunched.png",
+      title: "MAX | Just Launched",
+      link: "/max-just-launched"
+    },
+    exploreStore: true
+  }
+];
+
+export const womenCategoriesData = [
+  {
+    id: "clothing",
+    title: "CLOTHING",
+    items: [
+      "New Arrivals",
+      "Top Brands",
+      "All Western Wear",
+      "Shirts, Tops & Tees",
+      "Dresses",
+      "Jeans & Jeggings",
+      "All Ethnic Wear",
+      "Kurtas",
+      "Salwar Suits",
+      "Sarees",
+      "Lingerie, Sleep & Lounge",
+      "Sportswear",
+      "HANDLOOMS & HANDICRAFTS"
+    ]
+  },
+  {
+    id: "shoes",
+    title: "SHOES",
+    items: [
+      "Fashion Sandals",
+      "Pumps & Peeptoes",
+      "Casual Slippers",
+      "Casual Shoes",
+      "Boots",
+      "Sports Shoes",
+      "Flip-Flops",
+      "Ballet Flats",
+      "Ethnic Footwear",
+      "Formal Shoes"
+    ]
+  },
+  {
+    id: "eyewear",
+    title: "EYEWEAR",
+    items: [
+      "Sunglasses",
+      "Spectacle Frames"
+    ]
+  },
+  {
+    id: "watches",
+    title: "WATCHES",
+    items: [
+      "Gold & rose-gold",
+      "Stainless steel",
+      "Leather"
+    ]
+  },
+  {
+    id: "jewellery",
+    title: "JEWELLERY",
+    items: [
+      "Gold & Diamond Jewellery",
+      "Traditional Imitation",
+      "Fashion Jewellery",
+      "Silver Jewellery"
+    ]
+  },
+  {
+    id: "handbags-clutches",
+    title: "HANDBAGS & CLUTCHES",
+    items: [
+      "Handbags",
+      "Wallets"
+    ]
+  },
+  {
+    id: "womens-clothing-featured",
+    title: "Women's Clothing",
+    items: [],
+    image: {
+      src: "/products/womensClothing.png",
+      title: "Women's Clothing",
+      link: "/womens-clothing"
+    },
+    exploreStore: true
+  },
+  {
+    id: "silver-jewellery-featured",
+    title: "Silver Jewellery",
+    items: [],
+    image: {
+      src: "/products/silverJewellery.png",
+      title: "Silver Jewellery",
+      link: "/silver-jewellery"
+    },
+    exploreStore: true
+  },
+  {
+    id: "max-just-launched",
+    title: "MAX | Just Launched",
+    items: [],
+    image: {
+      src: "/products/maxJustLaunchedWomen.png",
+      title: "MAX | Just Launched",
+      link: "/max-just-launched"
+    },
+    exploreStore: true
+  }
+];
+
+export const kidsCategoriesData = [
+  {
+    id: "girls",
+    title: "GIRLS",
+    items: [
+      "ALL CLOTHING",
+      "Tops & Tees",
+      "Dresses",
+      "Jeans",
+      "Pants",
+      "Clothing Sets",
+      "Baby Girl"
+    ]
+  },
+  {
+    id: "girls-shoes",
+    title: "SHOES",
+    items: []
+  },
+  {
+    id: "girls-watches",
+    title: "WATCHES",
+    items: []
+  },
+  {
+    id: "girls-sunglasses",
+    title: "SUNGLASSES",
+    items: []
+  },
+  {
+    id: "girls-jewellery",
+    title: "JEWELLERY",
+    items: []
+  },
+  {
+    id: "boys",
+    title: "BOYS",
+    items: [
+      "ALL CLOTHING",
+      "T-Shirts",
+      "Shirts",
+      "Jeans",
+      "Pants",
+      "Clothing Sets",
+      "Baby Boy"
+    ]
+  },
+  {
+    id: "boys-shoes",
+    title: "SHOES",
+    items: []
+  },
+  {
+    id: "boys-watches",
+    title: "WATCHES",
+    items: []
+  },
+  {
+    id: "boys-sunglasses",
+    title: "SUNGLASSES",
+    items: []
+  },
+  {
+    id: "boys-jewellery",
+    title: "JEWELLERY",
+    items: []
+  },
+  {
+    id: "kids",
+    title: "KIDS",
+    items: [
+      "Clothing",
+      "Shoes",
+      "Watches",
+      "Jewellery",
+      "Sunglasses",
+      "School Bags"
+    ]
+  },
+  {
+    id: "baby",
+    title: "BABY",
+    items: [
+      "Clothing",
+      "Shoes"
+    ]
+  },
+  {
+    id: "max-just-launched",
+    title: "MAX | Just Launched",
+    items: [],
+    image: {
+      src: "/products/maxJustLaunched.png",
+      title: "MAX | Just Launched",
+      link: "/max-just-launched"
+    },
+    exploreStore: true
+  },
+  {
+    id: "boys-clothing-featured",
+    title: "Boys' Clothing",
+    items: [],
+    image: {
+      src: "/products/boysClothing.png",
+      title: "Boys' Clothing",
+      link: "/boys-clothing"
+    },
+    discount: "40% - 70% off"
+  },
+  {
+    id: "girls-clothing-featured",
+    title: "Girls' Clothing",
+    items: [],
+    image: {
+      src: "/products/girlsClothing.png",
+      title: "Girls' Clothing",
+      link: "/girls-clothing"
+    },
+    discount: "40% - 70% off"
+  }
+];
+
+export const tvsAppliancesCategoriesData = [
+  {
+    id: "televisions",
+    title: "Televisions",
+    items: [
+      "Smart TVs",
+      "32 inch TVs",
+      "Large Screen TVs",
+      "4K TVs",
+      "Full HD TVs",
+      "HD Ready TVs",
+      "Google certified Android TVs",
+      "Android based TVs",
+      "Linux Smart TVs",
+      "TVs with Web OS & Tizen"
+    ]
+  },
+  {
+    id: "shop-by-brand",
+    title: "Shop by brand",
+    items: [
+      "Mi",
+      "Sony",
+      "Samsung",
+      "LG",
+      "Panasonic",
+      "TCL",
+      "BPL",
+      "Micromax",
+      "Onida",
+      "Kodak",
+      "Kevin",
+      "OnePlus"
+    ]
+  },
+  {
+    id: "other-home-entertainment",
+    title: "Other Home entertainment",
+    items: [
+      "Home theater systems",
+      "Projectors & Accessories",
+      "Set top Boxes",
+      "Streaming media players",
+      "DVD & Blu-ray players",
+      "Cables",
+      "Audio-video accessories"
+    ]
+  },
+  {
+    id: "all-home-entertainment",
+    title: "All home entertainment systems",
+    items: []
+  },
+  {
+    id: "smart-tv-store",
+    title: "Smart TV store",
+    items: [],
+    image: {
+      src: "/products/smartTvStore.png",
+      title: "Smart TV store",
+      link: "/smart-tv-store"
+    },
+    seeMore: true
+  },
+  {
+    id: "tv-buying-guide",
+    title: "TV Buying Guide",
+    items: [],
+    image: {
+      src: "/products/tvBuyingGuide.png",
+      title: "TV Buying Guide",
+      link: "/tv-buying-guide"
+    },
+    learnMore: true
+  },
+  {
+    id: "home-entertainment-store",
+    title: "Home entertainment store",
+    items: [],
+    image: {
+      src: "/products/homeEntertainmentStore.png",
+      title: "Home entertainment store",
+      link: "/home-entertainment-store"
+    },
+    seeMore: true
   }
 ];
 
