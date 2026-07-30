@@ -332,7 +332,7 @@ export const homeDecorCategoriesData = [
   },
   {
     id: "childrens_room_decor",
-    title: "Children's Room Décor",
+    title: "Children's Room",
     items: [
       "Wall Décor",
       "Wall Stickers",
