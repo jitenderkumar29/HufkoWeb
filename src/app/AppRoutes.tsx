@@ -25,6 +25,10 @@ const pages: Page[] = [
     Link: '/grocery-product-details',
     View: dynamic(() => import('@/components/Grocery/GroceryProductDetails/GroceryProductDetails'), { ssr: false }),
   },
+  // {
+  //   Link: '/electronics',
+  //   View: dynamic(() => import('@/components/Shopping/Electronics/ElectronicsPage/ElectronicsPage'), { ssr: false }),
+  // },
 ];
 
 const AppRoutes: FC = () => {

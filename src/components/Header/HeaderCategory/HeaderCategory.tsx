@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from './HeaderCategory.module.scss';
 import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faWarehouse, faHandshake, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,7 +14,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -27,13 +27,15 @@ import { WholesaleCategories, wholesaleCategoriesSubHeader } from '@/app/data/Ca
 import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
 import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
 import { FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
-import SubHeader from '../SubHeader/SubHeader';
+import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
 import WelcomeHufko from '@/components/HomePage/WelcomeHufko/WelcomeHufko';
 import HufkoPrime from '@/components/HomePage/HufkoPrime/HufkoPrime';
 import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
 import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko';
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
+import SubSubHeader from '../SubSubHeader/SubSubHeader';
+import ShopByItemcategory from '@/components/Shopping/ShopByItemcategory/ShopByItemcategory';
 
 interface CategoryItem {
   id: string;
@@ -43,7 +45,11 @@ interface CategoryItem {
 
 const HeaderCategory: React.FC = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [activeTab, setActiveTab] = useState<string>('home');
+  const [selectedShoppingCategory, setSelectedShoppingCategory] = useState<string>('All');
+  const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('All');
+  const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('All');
 
   // All categories including home
   const allCategories: CategoryItem[] = [
@@ -64,11 +70,36 @@ const HeaderCategory: React.FC = () => {
   const updateCategoryFromURL = () => {
     const params = new URLSearchParams(window.location.search);
     const categoryParam = params.get('category');
+    const shoppingParam = params.get('shoppingCategory');
+    const electronicsParam = params.get('electronicsSubCategory');
+    const homeDecorParam = params.get('homeDecorSubCategory');
     
+    // Update main tab
     if (categoryParam && allCategories.some(cat => cat.id === categoryParam)) {
       setActiveTab(categoryParam);
     } else {
       setActiveTab('home');
+    }
+    
+    // Update shopping category
+    if (shoppingParam) {
+      setSelectedShoppingCategory(shoppingParam);
+    } else {
+      setSelectedShoppingCategory('All');
+    }
+    
+    // Update electronics subcategory
+    if (electronicsParam) {
+      setSelectedElectronicsSubCategory(electronicsParam);
+    } else {
+      setSelectedElectronicsSubCategory('All');
+    }
+    
+    // Update home decor subcategory
+    if (homeDecorParam) {
+      setSelectedHomeDecorSubCategory(homeDecorParam);
+    } else {
+      setSelectedHomeDecorSubCategory('All');
     }
   };
 
@@ -90,18 +121,94 @@ const HeaderCategory: React.FC = () => {
     };
   }, []);
 
+  // Also listen for URL changes via Next.js router
+  useEffect(() => {
+    const handleRouteChange = () => {
+      updateCategoryFromURL();
+    };
+
+    // Listen for route changes
+    window.addEventListener('popstate', handleRouteChange);
+    
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, []);
+
   // Handle category change and update URL
   const handleCategoryChange = (categoryId: string) => {
-    if (categoryId === activeTab) return; // Don't do anything if same category
+    if (categoryId === activeTab) return;
     
     setActiveTab(categoryId);
+    
+    // Reset shopping subcategory when changing tabs
+    if (categoryId !== 'shopping') {
+      setSelectedShoppingCategory('All');
+      setSelectedElectronicsSubCategory('All');
+      setSelectedHomeDecorSubCategory('All');
+    }
     
     // Update URL with query parameter
     const params = new URLSearchParams(window.location.search);
     params.set('category', categoryId);
     
-    // Use router.push to add to browser history (enables back button)
+    // Remove shopping-related params if not on shopping tab
+    if (categoryId !== 'shopping') {
+      params.delete('shoppingCategory');
+      params.delete('electronicsSubCategory');
+      params.delete('homeDecorSubCategory');
+    }
+    
     router.push(`?${params.toString()}`, { scroll: false });
+  };
+
+  // Handle shopping subcategory selection
+  const handleShoppingSubCategorySelect = (item: SubHeaderItem) => {
+    setSelectedShoppingCategory(item.name);
+    
+    // Update URL with shopping category
+    const params = new URLSearchParams(window.location.search);
+    params.set('shoppingCategory', item.name);
+    
+    // Reset subcategories when main category changes
+    if (item.name !== 'Electronics') {
+      setSelectedElectronicsSubCategory('All');
+      params.delete('electronicsSubCategory');
+    }
+    if (item.name !== 'Home Decor') {
+      setSelectedHomeDecorSubCategory('All');
+      params.delete('homeDecorSubCategory');
+    }
+    
+    router.push(`?${params.toString()}`, { scroll: false });
+    console.log('Selected shopping category:', item);
+  };
+
+  // Handle electronics subcategory selection
+  const handleElectronicsSubCategorySelect = (item: SubHeaderItem) => {
+    setSelectedElectronicsSubCategory(item.name);
+    
+    // Update URL with electronics subcategory
+    const params = new URLSearchParams(window.location.search);
+    params.set('electronicsSubCategory', item.name);
+    router.push(`?${params.toString()}`, { scroll: false });
+    console.log('Selected electronics sub-category:', item);
+  };
+
+  // Handle home decor subcategory selection
+  const handleHomeDecorSubCategorySelect = (item: SubHeaderItem) => {
+    setSelectedHomeDecorSubCategory(item.name);
+    
+    // Update URL with home decor subcategory
+    const params = new URLSearchParams(window.location.search);
+    params.set('homeDecorSubCategory', item.name);
+    router.push(`?${params.toString()}`, { scroll: false });
+    console.log('Selected home decor sub-category:', item);
+  };
+
+  // Check if a specific shopping category is selected
+  const isShoppingCategorySelected = (categoryName: string) => {
+    return selectedShoppingCategory === categoryName;
   };
 
   return (
@@ -176,25 +283,57 @@ const HeaderCategory: React.FC = () => {
         {/* Shopping Section */}
         {activeTab === "shopping" && (
           <div className={styles.allCategory}>
+            {/* Main Shopping Categories */}
             <SubHeader
+              key={`shopping-${selectedShoppingCategory}`}
               items={shoppingCategoriesSubHeader}
-              defaultActive="All"
+              defaultActive={selectedShoppingCategory}
               categoriesData={categoriesDataMap}
-              onSelect={(item) => console.log('Selected:', item)}
+              onSelect={handleShoppingSubCategorySelect}
             />
-            {/* <SubHeader
-              items={shoppingCategoriesSubHeader}
-              defaultActive="All"
-              onSelect={(item) => console.log(item.name)}
-            /> */}
-            <HeroBannerAll banners={ShopingHeroBannerData} />
-            <AllCategoryOne categories={ShopingCategories} />
-            <ShoppingSlides1
-              title="Today's Top Smartphone Deals"
-              deals={ShopingSlide1SmartPhoneDeals}
-              cardWidth={200}
-              showArrow={true}
-            />
+            
+            {/* All Category - Default View */}
+            {isShoppingCategorySelected("All") && (
+              <div className={styles.electronicsSubCategory}>
+                <HeroBannerAll banners={ShopingHeroBannerData} />
+                <AllCategoryOne categories={ShopingCategories} />
+                <ShoppingSlides1
+                  title="Today's Top Smartphone Deals"
+                  deals={ShopingSlide1SmartPhoneDeals}
+                  cardWidth={200}
+                  showArrow={true}
+                />
+              </div>
+            )}
+
+            {/* Electronics Sub-Sub Categories */}
+            {isShoppingCategorySelected("Electronics") && (
+              <div className={styles.electronicsSubCategory}>
+                <SubSubHeader
+                  key={`electronics-${selectedElectronicsSubCategory}`}
+                  items={electronicsSubSubCategoriesSubHeader}
+                  defaultActive={selectedElectronicsSubCategory}
+                  categoriesData={categoriesDataMap}
+                  onSelect={handleElectronicsSubCategorySelect}
+                />
+                <ShopByItemcategory/>
+                {/* Add Electronics content here */}
+              </div>
+            )}
+            
+            {/* Home Decor Sub-Sub Categories */}
+            {isShoppingCategorySelected("Home Decor") && (
+              <div className={styles.electronicsSubCategory}>
+                <SubSubHeader
+                  key={`homedecor-${selectedHomeDecorSubCategory}`}
+                  items={homeDecorSubSubCategoriesSubHeader}
+                  defaultActive={selectedHomeDecorSubCategory}
+                  categoriesData={categoriesDataMap}
+                  onSelect={handleHomeDecorSubCategorySelect}
+                />
+                {/* Add Home Decor content here */}
+              </div>
+            )}
           </div>
         )}
         

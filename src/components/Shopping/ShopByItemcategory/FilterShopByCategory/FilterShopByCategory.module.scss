@@ -1,0 +1,392 @@
+// FilterShopByCategory.module.scss
+
+@use "../../../../styles/variables.scss" as *;
+
+.filterContainer {
+  background: $white;
+  border-radius: 8px;
+  padding: 16px 0;
+  font-family: var(--font-primary);
+  max-width: 320px;
+  width: 100%;
+  box-shadow: $box-shadow-light-1;
+  border: 1px solid $border-light;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $black;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 12px 0;
+  }
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 12px;
+  border-bottom: 1px solid $border-light;
+  margin-bottom: 8px;
+
+  @media (max-width: 480px) {
+    padding: 0 16px 10px;
+  }
+}
+
+.filterTitle {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: $black;
+  margin: 0;
+  letter-spacing: -0.3px;
+  font-family: var(--font-primary);
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+.clearAll {
+  background: none;
+  border: none;
+  color: $primary-color;
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  font-family: var(--font-primary);
+
+  &:hover {
+    background: $light-red;
+    color: $primary-color-dark;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+}
+
+.filterGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.filterGroup {
+  border-bottom: 1px solid $border-light;
+  padding: 0 4px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 2px;
+  }
+}
+
+.groupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: $black;
+  transition: all 0.15s ease;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+  letter-spacing: -0.2px;
+
+  &:hover {
+    background: $light-gray;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: -2px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+.groupTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.groupIcon {
+  display: flex;
+  align-items: center;
+  color: $gray-600;
+  flex-shrink: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 480px) {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.groupTitle {
+  font-weight: var(--font-weight-bold);
+  color: $black;
+  font-size: 15px;
+  font-family: var(--font-primary);
+  letter-spacing: -0.2px;
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
+}
+
+.selectedBadge {
+  background: $primary-color;
+  color: $white;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  border-radius: 50%;
+  padding: 1px 6px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 18px;
+  height: 18px;
+  font-family: var(--font-primary);
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    min-width: 16px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 5px;
+  }
+}
+
+.groupToggle {
+  color: $gray-600;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  @media (max-width: 480px) {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.optionsList {
+  list-style: none;
+  margin: 0;
+  padding: 4px 16px 12px;
+  animation: slideDown 0.2s ease;
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2px 12px 10px;
+  }
+}
+
+.optionItem {
+//   margin: 2px 0;
+  // Remove indentation - all items have same padding
+}
+
+.optionButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px 8px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: $gray-900;
+  transition: all 0.15s ease;
+  text-align: left;
+  min-height: 32px;
+  font-family: var(--font-primary);
+  line-height: 1.2;
+  font-weight: var(--font-weight-normal);
+  margin-left: 1rem;
+
+  &:hover {
+    background: $light-gray;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: -2px;
+  }
+
+  &.selected {
+    color: $primary-color;
+    font-weight: var(--font-weight-bold);
+
+    .checkbox {
+      background: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 4px 6px;
+    min-height: 28px;
+    gap: 6px;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $gray-400;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  background: $white;
+
+  svg {
+    color: $white;
+    width: 12px;
+    height: 12px;
+  }
+
+  @media (max-width: 480px) {
+    width: 16px;
+    height: 16px;
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.optionIcon {
+  display: flex;
+  align-items: center;
+  color: $gray-600;
+  flex-shrink: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 480px) {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.optionLabelTitle {
+  flex: 1;
+  line-height: 1.4;
+  word-break: break-word;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 15px;
+//   line-height: 20px;
+  color: $sub-title-color;
+}
+
+.optionLabel {
+  flex: 1;
+  line-height: 1.4;
+  word-break: break-word;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+  font-size: 15px;
+  line-height: 20px;
+  color: $gray-700;
+}
+
+.optionCount {
+  color: $gray-600;
+  font-size: 12px;
+  margin-left: auto;
+  flex-shrink: 0;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
+}
+
+// Responsive breakpoints
+@media (max-width: 1024px) {
+  .filterContainer {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterContainer {
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterContainer {
+    padding: 8px 0;
+  }
+
+  .filterHeader {
+    padding: 0 12px 10px;
+  }
+
+  .filterTitle {
+    font-size: 15px;
+  }
+}

@@ -1,15 +1,63 @@
+// globals.scss
+
 @use "../styles/variables.scss" as *;
 @import "tailwindcss";
+
+// Font Face declarations for Amazon Ember
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('/fonts/AmazonEmber-Regular.woff2') format('woff2'),
+       url('/fonts/AmazonEmber-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('/fonts/AmazonEmber-Bold.woff2') format('woff2'),
+       url('/fonts/AmazonEmber-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('/fonts/AmazonEmber-Medium.woff2') format('woff2'),
+       url('/fonts/AmazonEmber-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-primary: 'Amazon Ember', 'Inter', Arial, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), Arial, sans-serif;
-  font-weight: 600;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-  
+
+// Utility classes for font weights
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}

@@ -1,47 +1,48 @@
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+import { CategoryItem } from "@/components/Shopping/ShopByItemcategory/ShopByCategory/ShopByCategory";
 
 export const ShopingCategories = [
    {
     id: "electronics",
     name: "Electronics",
     imageUrl: "/products/Electronics.png",
-     url: "/",
+     url: "/electronics",
   },
   {
     id: "home_decor",
     name: "Home Decor",
     imageUrl: "/products/homeDecor.png",
-     url: "/",
+     url: "/home_decor",
   },
    {
     id: "home_furniture",
     name: "Home Furniture",
     imageUrl: "/products/HomeFurniture.png",
-     url: "/",
+     url: "/home_furniture",
   },
   {
     id: "mobiles_tablets",
     name: "Mobiles & Tablets",
     imageUrl: "/products/MobilesTablets.png",
-     url: "/",
+     url: "/mobiles_tablets",
   },
   {
     id: "men",
     name: "Men",
     imageUrl: "/products/men.png",
-     url: "/",
+     url: "/men",
   },
   {
     id: "women",
     name: "Women",
     imageUrl: "/products/women.png",
-     url: "/",
+     url: "/women",
   },
   {
     id: "kids",
     name: "Kids",
     imageUrl: "/products/kids.png",
-     url: "/",
+     url: "/kids",
   },
  
  
@@ -49,7 +50,7 @@ export const ShopingCategories = [
     id: "tvs_appliances",
     name: "TVs & Appliances",
     imageUrl: "/products/TVsAppliances.png",
-     url: "/",
+     url: "/tvs_appliances",
   },
   // {
   //   name: "Flight Bookings",
@@ -59,45 +60,68 @@ export const ShopingCategories = [
     id: "beauty_food",
     name: "Beauty, Food",
     imageUrl: "/products/BeautyFood.png",
-     url: "/",
+     url: "/beauty_food",
   },
   {
     id: "toys_sports",
     name: "Toys & Sports",
     imageUrl: "/products/ToysSports.png",
-     url: "/",
+     url: "/toys_sports",
   },
   {
     id: "lifestyle",
     name: "Lifestyle",
     // name: "Apparel & Lifestyle",
     imageUrl: "/products/ApparelLifestyle.png",
-     url: "/",
+     url: "/lifestyle",
   },
   {
     id: "jewellery",
     name: "Jewellery",
     // name: "Jewellery & Accessories",
     imageUrl: "/products/JewelleryAccessories.png",
-     url: "/",
+     url: "/jewellery",
   },
 ];
 
 export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
-  { name: "All" },
-  { name: "Electronics", id: "electronics" },  // Added id
-  { name: "Home Decor", id: "home_decor" },    // Added id
-  { name: "Home Furniture", id: "home_furniture" },
-  { name: "Mobiles & Tablets", id: "mobiles_tablets" },
-  { name: "Men", id: "men" },
-  { name: "Women", id: "women" },
-  { name: "Kids", id: "kids" },
-  { name: "TVs & Appliances", id: "tvs_appliances" },
-  { name: "Beauty, Food", id: "beauty_food" },
-  { name: "Toys & Sports", id: "toys_sports" },
-  { name: "Lifestyle", id: "lifestyle" },
-  { name: "Jewellery", id: "jewellery" },
+  { name: "All", url: "/" },
+  { name: "Electronics", id: "electronics", url: "/electronics" },
+  { name: "Home Decor", id: "home_decor", url: "/home_decor" },
+  { name: "Home Furniture", id: "home_furniture", url: "/home_furniture" },
+  { name: "Mobiles & Tablets", id: "mobiles_tablets", url: "/mobiles_tablets" },
+  { name: "Men", id: "men", url: "/men" },
+  { name: "Women", id: "women", url: "/women" },
+  { name: "Kids", id: "kids", url: "/kids" },
+  { name: "TVs & Appliances", id: "tvs_appliances", url: "/tvs_appliances" },
+  { name: "Beauty, Food", id: "beauty_food", url: "/beauty_food" },
+  { name: "Toys & Sports", id: "toys_sports", url: "/toys_sports" },
+  { name: "Lifestyle", id: "lifestyle", url: "/lifestyle" },
+  { name: "Jewellery", id: "jewellery", url: "/jewellery" },
 ];
+
+export const electronicsSubSubCategoriesSubHeader: SubHeaderItem[] = [
+  { name: "Electronics", id: "electronics", url: "/electronics" },
+  { name: "Mobiles & Accessories", id: "mobiles_accessories", url: "/mobiles_accessories" },
+  { name: "Laptops & Accessories", id: "laptops_accessories", url: "/laptops_accessories" },
+  { name: "TV & Home Entertainment", id: "tv_home_entertainment", url: "/tv_home_entertainment" },
+  { name: "Audio", id: "audio", url: "/audio" },
+  { name: "Cameras", id: "cameras", url: "/cameras" },
+  { name: "Computer Peripherals", id: "computer_peripherals", url: "/computer_peripherals" },
+  { name: "Smart Technology", id: "smart_technology", url: "/smart_technology" },
+  { name: "Musical Instruments", id: "musical_instruments", url: "/musical_instruments" },
+  { name: "Office & Stationery", id: "office_stationery", url: "/office_stationery" },
+];
+
+export const homeDecorSubSubCategoriesSubHeader: SubHeaderItem[] = [
+  { name: "Home Decor", url: "/" },
+  { name: "Wall Décor", id: "wall_decoration", url: "/home_decor" },
+  { name: "Table Accents", id: "table_accents", url: "/home_decor" },
+  { name: "Home Décor Accents", id: "home_decor_accents", url: "/home_decor" },
+  { name: "Festive Décor", id: "festive_decor", url: "/home_decor" },
+  { name: "Children's Room Décor", id: "childrens_room_decor", url: "/home_decor" },
+];
+
 
 export const electronicsCategoriesData = [
   {
@@ -879,12 +903,107 @@ export const tvsAppliancesCategoriesData = [
   }
 ];
 
+export const mobilesAccessoriesDropDownCategoriesData = [
+  {
+    id: "mobiles_accessories",
+    title: "Mobiles",
+    items: [
+      "Mobile accessories",
+      "Cases & Covers",
+      "Screen guards",
+      "Power Banks",
+      "Headsets",
+      "Data Cables",
+      "Chargers",
+      "Selfie Sticks",
+      "Skin Stickers",
+      "Internal Batteries",
+      "Mounts & Stands",
+      "Lens Kits",
+      "Replacement Parts"
+    ]
+  },
+  {
+    id: "mobile_brands",
+    title: "Mobile brands",
+    items: [
+      "Mi",
+      "OnePlus",
+      "Samsung",
+      "Huawei",
+      "Apple",
+      "Motorola",
+      "Nokia",
+      "Vivo",
+      "10.or",
+      "Coolpad",
+      "Honor",
+      "Lenovo",
+      "LG",
+      "Micromax"
+    ]
+  },
+  {
+    id: "accessories_brands",
+    title: "Accessories brand",
+    items: [
+      "OnePlus",
+      "AmazonBasics",
+      "Intex",
+      "Ambrane",
+      "Lenovo",
+      "Spigen",
+      "Jabra",
+      "Apple",
+      "Syska",
+      "Boat",
+      "Mivi",
+      "iVoltaa"
+    ]
+  },
+  {
+    id: "mobiles-featured",
+    title: "Mobiles",
+    items: [],
+    image: {
+      src: "/products/mobileElectronics.png",
+      title: "Mobiles",
+      link: "/mobiles"
+    },
+    seeMore: true
+  },
+  {
+    id: "accessories-featured",
+    title: "Mobile accessories",
+    items: [],
+    image: {
+      src: "/products/mobileAccessories.png",
+      title: "Mobile accessories",
+      link: "/accessories"
+    },
+    seeMore: true
+  }
+  ,
+  {
+    id: "accessories-featured",
+    title: "Tablets accessories",
+    items: [],
+    image: {
+      src: "/products/tabletsAccessories.png",
+      title: "Tablets & accessories",
+      link: "/accessories"
+    },
+    seeMore: true
+  }
+];
+
 // Map all category data
 export const categoriesDataMap = {
   electronics: electronicsCategoriesData,
   home_decor: homeDecorCategoriesData,
   home_furniture: homeFurnitureCategoriesData, // Reuse or create specific data
-  // mobiles_tablets: mobilesTabletsCategoriesData,
+  mobiles_tablets: mobilesTabletsCategoriesData,
+  mobiles_accessories: mobilesAccessoriesDropDownCategoriesData,
   // men: menCategoriesData,
   // women: womenCategoriesData, // Create this
   // kids: kidsCategoriesData, // Create this
@@ -894,4 +1013,171 @@ export const categoriesDataMap = {
   // lifestyle: lifestyleCategoriesData, // Create this
   // jewellery: jewelleryCategoriesData, // Create this
 };
+
+
+export const ElectronicsCategories: CategoryItem[] = [
+  { 
+    id: 'laptops', 
+    name: 'Laptops', 
+    image: '/products/laptop._SS400_QL85_.jpg', 
+    url: '/laptops',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'headphones', 
+    name: 'Headphones', 
+    image: '/products/Headphones._SS400_QL85_.jpg', 
+    url: '/headphones',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'tablets', 
+    name: 'Tablets', 
+    image: '/products/02_Halos_copy._SS400_QL85_FMpng_.png', 
+    url: '/tablets',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'smartwatches', 
+    name: 'Smartwatches', 
+    image: '/products/Smartwatches._SS400_QL85_.jpg', 
+    url: '/smartwatches',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'monitors', 
+    name: 'Monitors', 
+    image: '/products/Monitors._SS400_QL85_.jpg', 
+    url: '/monitors',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'desktops', 
+    name: 'Desktops', 
+    image: '/products/Desktops._SS400_QL85_.jpg', 
+    url: '/desktops',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'video-games', 
+    name: 'Video Games', 
+    image: '/products/Video-game_Halo._SS400_QL85_FMpng_.png', 
+    url: '/video-games',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'gaming-laptops', 
+    name: 'Gaming Laptops', 
+    image: '/products/Gaming_Laptops._SS400_QL85_.jpg', 
+    url: '/gaming-laptops',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'camera-accessories', 
+    name: 'Camera & Accessories', 
+    image: '/products/Camera__Accessories._SS400_QL85_.jpg', 
+    url: '/camera-accessories',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'computer-accessories', 
+    name: 'Computer Accessories', 
+    image: '/products/Computer_Accessories._SS400_QL85_.jpg', 
+    url: '/computer-accessories',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'home-audio', 
+    name: 'Home Audio', 
+    image: '/products/9_audio._CB795899201_.png', 
+    url: '/home-audio',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'stationery', 
+    name: 'Stationery', 
+    image: '/products/Stationery._SS400_QL85_.jpg', 
+    url: '/stationery',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'musical-instruments', 
+    name: 'Musical Instruments', 
+    image: '/products/musical-instruments._SS400_QL85_.jpg', 
+    url: '/musical-instruments',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'software', 
+    name: 'Software', 
+    image: '/products/Software_Halo._SS400_QL85_.jpg', 
+    url: '/software',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'components', 
+    name: 'Components', 
+    image: '/products/components._SS400_QL85_.jpg', 
+    url: '/components',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'printer', 
+    name: 'Printer', 
+    image: '/products/printer._SS400_QL85_.jpg', 
+    url: '/printer',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'storage', 
+    name: 'Storage', 
+    image: '/products/storage._SS400_QL85_.jpg', 
+    url: '/storage',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  { 
+    id: 'networking', 
+    name: 'Networking', 
+    image: '/products/networking._SS400_QL85_.jpg', 
+    url: '/networking',
+    category: 'shopping',
+    subCategory: 'electronics',
+    subSubCategory: ''
+  },
+  
+];
 
