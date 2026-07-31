@@ -1,0 +1,322 @@
+@use "../../../styles/variables.scss" as *;
+
+.containerBody {
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px !important;
+  box-sizing: border-box;
+  background-color: $white;
+}
+
+.carouselTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 20px 0;
+  padding: 0 10px;
+  
+  @media (min-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.viewportContainer {
+  position: relative;
+  width: 100%;
+}
+
+.viewport {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.viewportRow {
+  width: 100%;
+}
+
+.rowInner {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0;
+  list-style: none;
+  will-change: transform;
+  padding: 10px 0;
+
+  &.dragging {
+    transition: none !important;
+    cursor: grabbing;
+  }
+}
+
+.categoryCard {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  overflow: visible;
+
+  &:hover {
+    .categoryTitle {
+      color: #000;
+    }
+  }
+}
+
+.categoryLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.categoryImage {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 3px solid #f0f0f0;
+}
+
+.categoryImg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.5s ease;
+}
+
+.categoryFooter {
+  margin-top: 12px;
+  text-align: center;
+  padding: 0 4px;
+}
+
+.categoryTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #333;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+  }
+}
+
+.prevButton {
+  left: -15px;
+}
+
+.nextButton {
+  right: -15px;
+}
+
+.scrollbar {
+  padding-top: 20px;
+  position: relative;
+  height: 0;
+  margin-bottom: -5px;
+  width: 100%;
+}
+
+.scroller {
+  cursor: pointer;
+  border-radius: 6px;
+  height: 4px;
+  background: linear-gradient(to right, $primary-color, lighten($primary-color, 20%));
+  display: inline-block;
+  position: absolute;
+  transition: left 0.1s ease;
+  user-select: none;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    height: 5px;
+  }
+}
+
+// Responsive styles
+@media (min-width: 480px) {
+  .categoryTitle {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px !important;
+  }
+
+  .categoryTitle {
+    font-size: 14px;
+  }
+
+  .navButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .prevButton {
+    left: -18px;
+  }
+
+  .nextButton {
+    right: -18px;
+  }
+
+  .categoryImage {
+    border-width: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .prevButton {
+    left: -20px;
+  }
+
+  .nextButton {
+    right: -20px;
+  }
+
+  .categoryTitle {
+    font-size: 15px;
+  }
+
+  .categoryImage {
+    border-width: 4px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .categoryImage {
+    border-width: 4px;
+  }
+
+  .navButton {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+// Touch device optimizations
+@media (hover: none) {
+  .categoryCard:hover {
+    transform: none;
+    
+    .categoryTitle {
+      color: #333;
+    }
+  }
+
+  .categoryImg {
+    .categoryCard:active & {
+      transform: scale(1.05);
+    }
+  }
+
+  .navButton:hover {
+    background-color: white;
+    color: #333;
+    transform: translateY(-50%) scale(1);
+  }
+
+  .navButton:active {
+    transform: translateY(-50%) scale(0.95);
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #1a1a1a;
+  }
+
+  .carouselTitle {
+    color: #e0e0e0;
+  }
+
+  .categoryTitle {
+    color: #e0e0e0;
+  }
+
+  .categoryCard:hover .categoryTitle {
+    color: #ffffff;
+  }
+
+  .categoryImage {
+    border-color: #333;
+    background: #252525;
+  }
+
+  .navButton {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+}

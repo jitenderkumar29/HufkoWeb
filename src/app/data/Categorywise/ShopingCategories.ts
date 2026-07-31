@@ -86,18 +86,18 @@ export const ShopingCategories = [
 
 export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "All", url: "/" },
-  { name: "Electronics", id: "electronics", url: "/electronics" },
-  { name: "Home Decor", id: "home_decor", url: "/home_decor" },
-  { name: "Home Furniture", id: "home_furniture", url: "/home_furniture" },
+  { name: "Electronics", id: "electronics_sub_header", url: "/electronics" },
+  { name: "Home Decor", id: "home_decor_sub_header", url: "/home_decor" },
+  { name: "Home Furniture", id: "home_furniture_sub_header", url: "/home_furniture" },
   { name: "Mobiles & Tablets", id: "mobiles_tablets", url: "/mobiles_tablets" },
-  { name: "Men", id: "men", url: "/men" },
-  { name: "Women", id: "women", url: "/women" },
-  { name: "Kids", id: "kids", url: "/kids" },
-  { name: "TVs & Appliances", id: "tvs_appliances", url: "/tvs_appliances" },
-  { name: "Beauty, Food", id: "beauty_food", url: "/beauty_food" },
-  { name: "Toys & Sports", id: "toys_sports", url: "/toys_sports" },
-  { name: "Lifestyle", id: "lifestyle", url: "/lifestyle" },
-  { name: "Jewellery", id: "jewellery", url: "/jewellery" },
+  { name: "Men's Fashion", id: "mens_fashion_sub_header", url: "/men" },
+  { name: "Women's Fashion", id: "women_fashion_sub_header", url: "/women" },
+  { name: "Kids' Fashion", id: "kids_fashion_sub_header", url: "/kids" },
+  { name: "TVs & Appliances", id: "tvs_appliances_sub_header", url: "/tvs_appliances" },
+  { name: "Beauty, Food", id: "beauty_food_sub_header", url: "/beauty_food" },
+  { name: "Toys & Sports", id: "toys_sports_sub_header", url: "/toys_sports" },
+  { name: "Lifestyle", id: "lifestyle_sub_header", url: "/lifestyle" },
+  { name: "Jewellery", id: "jewellery_sub_header", url: "/jewellery" },
 ];
 
 export const electronicsSubSubCategoriesSubHeader: SubHeaderItem[] = [
@@ -1181,3 +1181,113 @@ export const ElectronicsCategories: CategoryItem[] = [
   
 ];
 
+export const menFashionCarouselCategories = [
+  { 
+    id: '0', 
+    title: "Men's clothing", 
+    imageUrl: "/products/mens_clothing_mens_fashion.jpg", 
+    link: "/sp/pay-day/pay-day-sale" 
+  },
+  { 
+    id: '1', 
+    title: "Live Now", 
+    imageUrl: "/products/pay-day-sale_men_fashion.jpg", 
+    link: "/sp/pay-day/pay-day-sale" 
+  },
+  { 
+    id: '2', 
+    title: "Skin Care", 
+    imageUrl: "/products/skin-care_men_fashion.jpg", 
+    link: "/skin-care/c/7303" 
+  },
+  { 
+    id: '3', 
+    title: "Fragrance", 
+    imageUrl: "/products/fragrance_men_fashion.jpg", 
+    link: "/perfumes-deos/c/7335" 
+  },
+  { 
+    id: '4', 
+    title: "Footwear", 
+    imageUrl: "/products/footwear_men_fashion.jpg", 
+    link: "/footwear/c/14287" 
+  },
+  { 
+    id: '5', 
+    title: "Ethnic Wear", 
+    imageUrl: "/products/ethnic-wear_men_fashion.jpg", 
+    link: "/fashion-lifestyle/ethnicwear/c/26223" 
+  },
+  { 
+    id: '6', 
+    title: "Bath & Body", 
+    imageUrl: "/products/bath-body_men_fashion.jpg", 
+    link: "/bath-body/c/7312" 
+  },
+  { 
+    id: '7', 
+    title: "Hair Care", 
+    imageUrl: "/products/hair-care_men_fashion.jpg", 
+    link: "/hair/c/7296" 
+  },
+  { 
+    id: '8', 
+    title: "Topwear", 
+    imageUrl: "/products/topwear_men_fashion.jpg", 
+    link: "/topwear/c/24294" 
+  },
+  { 
+    id: '9', 
+    title: "Health & Nutrition", 
+    imageUrl: "/products/health-nutrition_men_fashion.jpg", 
+    link: "/health-nutrition/c/7330" 
+  },
+  { 
+    id: '10', 
+    title: "Foot Locker", 
+    imageUrl: "/products/foot-locker_men_fashion.gif", 
+    link: "/sp/footlocker/foot-locker" 
+  },
+  { 
+    id: '11', 
+    title: "Home", 
+    imageUrl: "/products/home_men_fashion.jpg", 
+    link: "/home/c/74572" 
+  },
+  { 
+    id: '12', 
+    title: "Bottomwear", 
+    imageUrl: "/products/bottomwear_men_fashion.jpg", 
+    link: "/bottomwear/c/24302" 
+  },
+  { 
+    id: '13', 
+    title: "Watches", 
+    imageUrl: "/products/watches_men_fashion.jpg", 
+    link: "/watches/c/15885" 
+  },
+  { 
+    id: '14', 
+    title: "Activewear", 
+    imageUrl: "/products/activewear_men_fashion.jpg", 
+    link: "/activewear/c/24309" 
+  },
+  { 
+    id: '15', 
+    title: "Fashion Accessories", 
+    imageUrl: "/products/fashion-accessories_men_fashion.jpg", 
+    link: "/lifestyle-accessories/c/17921" 
+  },
+  { 
+    id: '16', 
+    title: "Grooming Store", 
+    imageUrl: "/products/grooming-store_men_fashion.jpg", 
+    link: "/sp/grooming-store/default" 
+  },
+  { 
+    id: '17', 
+    title: "Fashion store", 
+    imageUrl: "/products/fashion-store_men_fashion.jpg", 
+    link: "/sp/fashion-store/default" 
+  },
+];

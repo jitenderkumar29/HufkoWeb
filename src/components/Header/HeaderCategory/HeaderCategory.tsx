@@ -14,7 +14,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -36,6 +36,7 @@ import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko'
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
 import SubSubHeader from '../SubSubHeader/SubSubHeader';
 import ShopByItemcategory from '@/components/Shopping/ShopByItemcategory/ShopByItemcategory';
+import FashionRoundCarousel from '@/components/Shopping/FashionRoundCarousel/FashionRoundCarousel';
 
 interface CategoryItem {
   id: string;
@@ -47,9 +48,9 @@ const HeaderCategory: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [activeTab, setActiveTab] = useState<string>('home');
-  const [selectedShoppingCategory, setSelectedShoppingCategory] = useState<string>('All');
-  const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('All');
-  const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('All');
+  const [selectedShoppingCategory, setSelectedShoppingCategory] = useState<string>('all');
+  const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('all');
+  const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('all');
 
   // All categories including home
   const allCategories: CategoryItem[] = [
@@ -60,7 +61,7 @@ const HeaderCategory: React.FC = () => {
     { id: 'flower', name: 'Flower Delivery', icon: faSeedling },
     { id: 'care', name: 'Care Services', icon: faHandsHelping },
     { id: 'pharma', name: 'Pharma', icon: faNotesMedical },
-    { id: 'wholesale', name: 'Wholesale', icon: faHandshake }
+    { id: 'wholesale', name: 'Wholesale Delivery', icon: faHandshake }
   ];
 
   // Categories to display in tabs (excluding home)
@@ -81,25 +82,25 @@ const HeaderCategory: React.FC = () => {
       setActiveTab('home');
     }
     
-    // Update shopping category
+    // Update shopping category (using ID)
     if (shoppingParam) {
       setSelectedShoppingCategory(shoppingParam);
     } else {
-      setSelectedShoppingCategory('All');
+      setSelectedShoppingCategory('all');
     }
     
     // Update electronics subcategory
     if (electronicsParam) {
       setSelectedElectronicsSubCategory(electronicsParam);
     } else {
-      setSelectedElectronicsSubCategory('All');
+      setSelectedElectronicsSubCategory('all');
     }
     
     // Update home decor subcategory
     if (homeDecorParam) {
       setSelectedHomeDecorSubCategory(homeDecorParam);
     } else {
-      setSelectedHomeDecorSubCategory('All');
+      setSelectedHomeDecorSubCategory('all');
     }
   };
 
@@ -143,9 +144,9 @@ const HeaderCategory: React.FC = () => {
     
     // Reset shopping subcategory when changing tabs
     if (categoryId !== 'shopping') {
-      setSelectedShoppingCategory('All');
-      setSelectedElectronicsSubCategory('All');
-      setSelectedHomeDecorSubCategory('All');
+      setSelectedShoppingCategory('all');
+      setSelectedElectronicsSubCategory('all');
+      setSelectedHomeDecorSubCategory('all');
     }
     
     // Update URL with query parameter
@@ -164,19 +165,20 @@ const HeaderCategory: React.FC = () => {
 
   // Handle shopping subcategory selection
   const handleShoppingSubCategorySelect = (item: SubHeaderItem) => {
-    setSelectedShoppingCategory(item.name);
+    const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
+    setSelectedShoppingCategory(categoryId);
     
     // Update URL with shopping category
     const params = new URLSearchParams(window.location.search);
-    params.set('shoppingCategory', item.name);
+    params.set('shoppingCategory', categoryId);
     
     // Reset subcategories when main category changes
-    if (item.name !== 'Electronics') {
-      setSelectedElectronicsSubCategory('All');
+    if (categoryId !== 'electronics') {
+      setSelectedElectronicsSubCategory('all');
       params.delete('electronicsSubCategory');
     }
-    if (item.name !== 'Home Decor') {
-      setSelectedHomeDecorSubCategory('All');
+    if (categoryId !== 'home_decor') {
+      setSelectedHomeDecorSubCategory('all');
       params.delete('homeDecorSubCategory');
     }
     
@@ -186,29 +188,31 @@ const HeaderCategory: React.FC = () => {
 
   // Handle electronics subcategory selection
   const handleElectronicsSubCategorySelect = (item: SubHeaderItem) => {
-    setSelectedElectronicsSubCategory(item.name);
+    const subCategoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
+    setSelectedElectronicsSubCategory(subCategoryId);
     
     // Update URL with electronics subcategory
     const params = new URLSearchParams(window.location.search);
-    params.set('electronicsSubCategory', item.name);
+    params.set('electronicsSubCategory', subCategoryId);
     router.push(`?${params.toString()}`, { scroll: false });
     console.log('Selected electronics sub-category:', item);
   };
 
   // Handle home decor subcategory selection
   const handleHomeDecorSubCategorySelect = (item: SubHeaderItem) => {
-    setSelectedHomeDecorSubCategory(item.name);
+    const subCategoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
+    setSelectedHomeDecorSubCategory(subCategoryId);
     
     // Update URL with home decor subcategory
     const params = new URLSearchParams(window.location.search);
-    params.set('homeDecorSubCategory', item.name);
+    params.set('homeDecorSubCategory', subCategoryId);
     router.push(`?${params.toString()}`, { scroll: false });
     console.log('Selected home decor sub-category:', item);
   };
 
-  // Check if a specific shopping category is selected
-  const isShoppingCategorySelected = (categoryName: string) => {
-    return selectedShoppingCategory === categoryName;
+  // Check if a specific shopping category is selected (using ID)
+  const isShoppingCategorySelected = (categoryId: string) => {
+    return selectedShoppingCategory === categoryId;
   };
 
   return (
@@ -293,7 +297,7 @@ const HeaderCategory: React.FC = () => {
             />
             
             {/* All Category - Default View */}
-            {isShoppingCategorySelected("All") && (
+            {isShoppingCategorySelected("all") && (
               <div className={styles.electronicsSubCategory}>
                 <HeroBannerAll banners={ShopingHeroBannerData} />
                 <AllCategoryOne categories={ShopingCategories} />
@@ -307,7 +311,7 @@ const HeaderCategory: React.FC = () => {
             )}
 
             {/* Electronics Sub-Sub Categories */}
-            {isShoppingCategorySelected("Electronics") && (
+            {isShoppingCategorySelected("electronics_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <SubSubHeader
                   key={`electronics-${selectedElectronicsSubCategory}`}
@@ -322,7 +326,7 @@ const HeaderCategory: React.FC = () => {
             )}
             
             {/* Home Decor Sub-Sub Categories */}
-            {isShoppingCategorySelected("Home Decor") && (
+            {isShoppingCategorySelected("home_decor_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <SubSubHeader
                   key={`homedecor-${selectedHomeDecorSubCategory}`}
@@ -334,6 +338,21 @@ const HeaderCategory: React.FC = () => {
                 {/* Add Home Decor content here */}
               </div>
             )}
+
+            {/* Home Men's Fashion Sub-Sub Categories */}
+            {isShoppingCategorySelected("mens_fashion_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                {/* <FashionRoundCarousel
+                  categories={menFashionCarouselCategories}
+                  title=""
+                  autoScroll={false}
+                  showScrollbar = {false}
+                /> */}
+                {/* Add Men's Fashion content here */}
+              </div>
+            )}
+
+           
           </div>
         )}
         
