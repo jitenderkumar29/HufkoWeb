@@ -1,3 +1,4 @@
+// components/Header/HeaderCategory.tsx
 import React, { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './HeaderCategory.module.scss';
@@ -14,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesShoppingMenFashion, toBrandsMenFashion } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -29,14 +30,16 @@ import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGr
 import { FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
 import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
-import WelcomeHufko from '@/components/HomePage/WelcomeHufko/WelcomeHufko';
+import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 import HufkoPrime from '@/components/HomePage/HufkoPrime/HufkoPrime';
 import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
 import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko';
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
 import SubSubHeader from '../SubSubHeader/SubSubHeader';
 import ShopByItemcategory from '@/components/Shopping/ShopByItemcategory/ShopByItemcategory';
-import FashionRoundCarousel from '@/components/Shopping/FashionRoundCarousel/FashionRoundCarousel';
+import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionRoundCarousel/FashionRoundCarousel';
+import HeroBannerSlide from '@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide';
+import TopBrandsOnOffer from '@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 
 interface CategoryItem {
   id: string;
@@ -67,6 +70,17 @@ const HeaderCategory: React.FC = () => {
   // Categories to display in tabs (excluding home)
   const displayCategories = allCategories.filter(cat => cat.id !== 'home');
 
+  // Reset all categories to home
+  const resetToHome = () => {
+    setActiveTab('home');
+    setSelectedShoppingCategory('all');
+    setSelectedElectronicsSubCategory('all');
+    setSelectedHomeDecorSubCategory('all');
+    
+    // Clear URL parameters
+    router.push('/', { scroll: false });
+  };
+
   // Get category from URL and update state
   const updateCategoryFromURL = () => {
     const params = new URLSearchParams(window.location.search);
@@ -74,28 +88,28 @@ const HeaderCategory: React.FC = () => {
     const shoppingParam = params.get('shoppingCategory');
     const electronicsParam = params.get('electronicsSubCategory');
     const homeDecorParam = params.get('homeDecorSubCategory');
-    
+
     // Update main tab
     if (categoryParam && allCategories.some(cat => cat.id === categoryParam)) {
       setActiveTab(categoryParam);
     } else {
       setActiveTab('home');
     }
-    
+
     // Update shopping category (using ID)
     if (shoppingParam) {
       setSelectedShoppingCategory(shoppingParam);
     } else {
       setSelectedShoppingCategory('all');
     }
-    
+
     // Update electronics subcategory
     if (electronicsParam) {
       setSelectedElectronicsSubCategory(electronicsParam);
     } else {
       setSelectedElectronicsSubCategory('all');
     }
-    
+
     // Update home decor subcategory
     if (homeDecorParam) {
       setSelectedHomeDecorSubCategory(homeDecorParam);
@@ -109,6 +123,19 @@ const HeaderCategory: React.FC = () => {
     updateCategoryFromURL();
   }, []);
 
+  // Listen for logo click event
+  useEffect(() => {
+    const handleLogoClick = () => {
+      resetToHome();
+    };
+
+    window.addEventListener('logoClick', handleLogoClick);
+
+    return () => {
+      window.removeEventListener('logoClick', handleLogoClick);
+    };
+  }, []);
+
   // Handle popstate event (back/forward browser buttons)
   useEffect(() => {
     const handlePopState = () => {
@@ -116,7 +143,7 @@ const HeaderCategory: React.FC = () => {
     };
 
     window.addEventListener('popstate', handlePopState);
-    
+
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
@@ -130,7 +157,7 @@ const HeaderCategory: React.FC = () => {
 
     // Listen for route changes
     window.addEventListener('popstate', handleRouteChange);
-    
+
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
     };
@@ -139,27 +166,27 @@ const HeaderCategory: React.FC = () => {
   // Handle category change and update URL
   const handleCategoryChange = (categoryId: string) => {
     if (categoryId === activeTab) return;
-    
+
     setActiveTab(categoryId);
-    
+
     // Reset shopping subcategory when changing tabs
     if (categoryId !== 'shopping') {
       setSelectedShoppingCategory('all');
       setSelectedElectronicsSubCategory('all');
       setSelectedHomeDecorSubCategory('all');
     }
-    
+
     // Update URL with query parameter
     const params = new URLSearchParams(window.location.search);
     params.set('category', categoryId);
-    
+
     // Remove shopping-related params if not on shopping tab
     if (categoryId !== 'shopping') {
       params.delete('shoppingCategory');
       params.delete('electronicsSubCategory');
       params.delete('homeDecorSubCategory');
     }
-    
+
     router.push(`?${params.toString()}`, { scroll: false });
   };
 
@@ -167,11 +194,11 @@ const HeaderCategory: React.FC = () => {
   const handleShoppingSubCategorySelect = (item: SubHeaderItem) => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedShoppingCategory(categoryId);
-    
+
     // Update URL with shopping category
     const params = new URLSearchParams(window.location.search);
     params.set('shoppingCategory', categoryId);
-    
+
     // Reset subcategories when main category changes
     if (categoryId !== 'electronics') {
       setSelectedElectronicsSubCategory('all');
@@ -181,7 +208,7 @@ const HeaderCategory: React.FC = () => {
       setSelectedHomeDecorSubCategory('all');
       params.delete('homeDecorSubCategory');
     }
-    
+
     router.push(`?${params.toString()}`, { scroll: false });
     console.log('Selected shopping category:', item);
   };
@@ -190,7 +217,7 @@ const HeaderCategory: React.FC = () => {
   const handleElectronicsSubCategorySelect = (item: SubHeaderItem) => {
     const subCategoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedElectronicsSubCategory(subCategoryId);
-    
+
     // Update URL with electronics subcategory
     const params = new URLSearchParams(window.location.search);
     params.set('electronicsSubCategory', subCategoryId);
@@ -202,7 +229,7 @@ const HeaderCategory: React.FC = () => {
   const handleHomeDecorSubCategorySelect = (item: SubHeaderItem) => {
     const subCategoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedHomeDecorSubCategory(subCategoryId);
-    
+
     // Update URL with home decor subcategory
     const params = new URLSearchParams(window.location.search);
     params.set('homeDecorSubCategory', subCategoryId);
@@ -237,12 +264,21 @@ const HeaderCategory: React.FC = () => {
         {/* Home Section */}
         {activeTab === "home" && (
           <div className={styles.homeContent}>
-            <WelcomeHufko />
+            <WelcomeVideoHufko
+              title="Premium food delivery app"
+              titleHighlight="World's #1"
+              subtitle="Enjoy fast online ordering on the Hufko app"
+              videoSrc="/videos/food_hufko.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+            />
             <PoweringSlides />
             <HufkoGSTInfo />
           </div>
         )}
-        
+
         {/* Food Section */}
         {activeTab === "food" && (
           <div className={styles.allCategory}>
@@ -253,13 +289,25 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={FoodHeroBannerData} />
             <AllCategory categories={FoodsCategories} />
-            <WelcomeHufko />
+            <WelcomeVideoHufko
+              title="Premium food delivery app"
+              titleHighlight="World's #1"
+              subtitle="Enjoy fast online ordering on the Hufko app"
+              videoSrc="/videos/food_all_video.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+              showLogo={false}
+              showAppStore={true}
+              showPlayStore={true}
+            />            
             <HufkoPrime />
             <DownloadApp />
             <FranchiseHufko />
           </div>
         )}
-        
+
         {/* Grocery Section */}
         {activeTab === "grocery" && (
           <div className={styles.allCategory}>
@@ -273,17 +321,17 @@ const HeaderCategory: React.FC = () => {
             <AllCategoryRound categories={GroceryData1} />
             <AllCategoryRound categories={GroceryData2} />
             <div className={styles.GroceryProductCategory}>
-              <GroceryProductList category="Dairy, Bread & Eggs" grocery={DairyBreadEggsData} groceryCategory="milk"/>
-              <GroceryProductList category="Rolling Paper & Tobacco" grocery={RollingPapersData} groceryCategory="tobacco"/>
-              <GroceryProductList category="Snacks & Munchies" grocery={SnacksMunchiesData} groceryCategory="snacks"/>
-              <GroceryProductList category="Hookah" grocery={HookahData} groceryCategory="Hookah"/>
-              <GroceryProductList category="Mouth fresheners" grocery={MouthFreshenersData} groceryCategory="fresheners"/>
-              <GroceryProductList category="Cold Drinks, & Juices" grocery={ColdDrinksJuicesData} groceryCategory="cold"/>
-              <GroceryProductList category="Candies & Gums" grocery={CandiesGumsData} groceryCategory="candies"/>
+              <GroceryProductList category="Dairy, Bread & Eggs" grocery={DairyBreadEggsData} groceryCategory="milk" />
+              <GroceryProductList category="Rolling Paper & Tobacco" grocery={RollingPapersData} groceryCategory="tobacco" />
+              <GroceryProductList category="Snacks & Munchies" grocery={SnacksMunchiesData} groceryCategory="snacks" />
+              <GroceryProductList category="Hookah" grocery={HookahData} groceryCategory="Hookah" />
+              <GroceryProductList category="Mouth fresheners" grocery={MouthFreshenersData} groceryCategory="fresheners" />
+              <GroceryProductList category="Cold Drinks, & Juices" grocery={ColdDrinksJuicesData} groceryCategory="cold" />
+              <GroceryProductList category="Candies & Gums" grocery={CandiesGumsData} groceryCategory="candies" />
             </div>
           </div>
         )}
-        
+
         {/* Shopping Section */}
         {activeTab === "shopping" && (
           <div className={styles.allCategory}>
@@ -295,7 +343,7 @@ const HeaderCategory: React.FC = () => {
               categoriesData={categoriesDataMap}
               onSelect={handleShoppingSubCategorySelect}
             />
-            
+
             {/* All Category - Default View */}
             {isShoppingCategorySelected("all") && (
               <div className={styles.electronicsSubCategory}>
@@ -320,11 +368,11 @@ const HeaderCategory: React.FC = () => {
                   categoriesData={categoriesDataMap}
                   onSelect={handleElectronicsSubCategorySelect}
                 />
-                <ShopByItemcategory/>
+                <ShopByItemcategory />
                 {/* Add Electronics content here */}
               </div>
             )}
-            
+
             {/* Home Decor Sub-Sub Categories */}
             {isShoppingCategorySelected("home_decor_sub_header") && (
               <div className={styles.electronicsSubCategory}>
@@ -342,20 +390,51 @@ const HeaderCategory: React.FC = () => {
             {/* Home Men's Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("mens_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* <FashionRoundCarousel
+                <FashionRoundCarousel
                   categories={menFashionCarouselCategories}
                   title=""
                   autoScroll={false}
-                  showScrollbar = {false}
-                /> */}
+                  showScrollbar={false}
+                />
+                <HeroBannerSlide
+                  slides={slidesShoppingMenFashion}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  showTitle={true}
+                  showSubtitle={true}
+                  showCTA={true}
+                  onSlideClick={(slide, index) => {
+                    console.log(`Slide ${index + 1} clicked:`, slide);
+                    // Handle navigation
+                  }}
+                  onSlideChange={(index) => {
+                    console.log(`Current slide: ${index + 1}`);
+                  }}
+                />
+                <TopBrandsOnOffer
+                  brands={toBrandsMenFashion}
+                  title="Top Brands on Offer"
+                  subtitle="Dishing out Gen-Z styles"
+                  backgroundColor="#7739B5"
+                  titleColor="#ffffff"
+                  gap={8}
+                  cardPadding={10}
+                  onBrandClick={(brand) => {
+                    console.log('Brand clicked:', brand);
+                    // Handle navigation
+                  }}
+                  onBrandHover={(brand) => {
+                    console.log('Brand hovered:', brand);
+                  }}
+                />
                 {/* Add Men's Fashion content here */}
               </div>
             )}
-
-           
           </div>
         )}
-        
+
         {/* Flower Section */}
         {activeTab === "flower" && (
           <div className={styles.allCategory}>
@@ -368,7 +447,7 @@ const HeaderCategory: React.FC = () => {
             <AllCategory categories={FlowersCategories} />
           </div>
         )}
-        
+
         {/* Care Section */}
         {activeTab === "care" && (
           <div className={styles.allCategory}>
@@ -379,9 +458,22 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={CareHeroBannerData} />
             <AllCategory categories={CareCategories} />
+            <WelcomeVideoHufko
+              title="Premium Care Services app"
+              titleHighlight="World's #1"
+              subtitle="Enjoy fast online Care Services on the Hufko app"
+              videoSrc="/videos/care_services.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+              showLogo={false}
+              showAppStore={true}
+              showPlayStore={true}
+            />
           </div>
         )}
-        
+
         {/* Pharma Section */}
         {activeTab === "pharma" && (
           <div className={styles.allCategory}>
@@ -394,7 +486,7 @@ const HeaderCategory: React.FC = () => {
             <AllCategoryOne categories={PharmaCategories} />
           </div>
         )}
-        
+
         {/* Wholesale Section */}
         {activeTab === "wholesale" && (
           <div className={styles.allCategory}>

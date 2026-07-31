@@ -1,4 +1,6 @@
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide";
+import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
 import { CategoryItem } from "@/components/Shopping/ShopByItemcategory/ShopByCategory/ShopByCategory";
 
 export const ShopingCategories = [
@@ -1290,4 +1292,139 @@ export const menFashionCarouselCategories = [
     imageUrl: "/products/fashion-store_men_fashion.jpg", 
     link: "/sp/fashion-store/default" 
   },
+];
+
+export const slidesShoppingMenFashion: HeroSlide[] = [
+  {
+    id: '1',
+    title: 'Deals on Kids Fashion',
+    subtitle: 'Up to 60% off',
+    description: 'Shop the latest collection of kids clothing, accessories, and more',
+    imageUrl: '/products/Deals_on_Kids_Fashion_.png',
+    link: '/kids-fashion',
+    ctaText: 'Shop Now',
+    discount: '60% OFF',
+    alt: 'Kids fashion deals'
+  },
+  {
+    id: '2',
+    title: 'Winter Collection',
+    subtitle: 'Stay Warm & Stylish',
+    description: 'Explore our winter collection with exclusive discounts',
+    imageUrl: '/products/Stay_Warm_&_Stylish.jpg',
+    link: '/winter-collection',
+    ctaText: 'View Collection',
+    discount: 'UP TO 50% OFF',
+    alt: 'Winter collection'
+  },
+  {
+    id: '3',
+    title: 'Stylish Shoes',
+    subtitle: 'Step into Style',
+    description: 'Premium footwear collection for every occasion',
+    imageUrl: '/products/Step_into_Style.png',
+    link: '/shoes',
+    ctaText: 'Shop Footwear',
+    discount: '30% OFF',
+    alt: 'Stylish shoes'
+  }
+];
+
+export const toBrandsMenFashion: BrandItem[] = [
+  {
+    id: '1',
+    name: 'Highlander',
+    logo: '/products/HighlanderMenFashion.png',
+    discount: 'Min. 70% off',
+    link: '/',
+    alt: 'Highlander brand'
+  },
+  {
+    id: '2',
+    name: 'Bacca Bucci',
+    logo: '/products/Bacca_BucciMenFashion.png',
+    discount: 'Min. 40% off',
+    link: '/',
+    alt: 'Bacca Bucci brand'
+  },
+  {
+    id: '3',
+    name: 'TIMEX',
+    logo: '/products/TIMEXMenFashion.png',
+    discount: 'Up to 60% off',
+    link: '/',
+    alt: 'TIMEX brand'
+  },
+  {
+    id: '4',
+    name: 'The Bear',
+    logo: '/products/The_BearMenFashion.png',
+    discount: 'Min. 70% off',
+    link: '/',
+    alt: 'The Bear brand'
+  },
+  {
+    id: '5',
+    name: 'BFARDO',
+    logo: '/products/BFARDOMenFashion.png',
+    discount: 'Up to 40% off',
+    link: '/',
+    alt: 'BFARDO brand'
+  },
+  {
+    id: '6',
+    name: 'American Tourister',
+    logo: '/products/American_TouristerMenFashion.png',
+    discount: 'Min. 60% off',
+    link: '',
+    alt: 'American Tourister brand'
+  },
+  {
+    id: '7',
+    name: 'Salty Alpha',
+    logo: '/products/Salty_AlphaMenFashion.png',
+    discount: 'Up to 60% off',
+    link: '/',
+    alt: 'Salty Alpha brand'
+  },
+  {
+    id: '8',
+    name: 'Minimalist',
+    logo: '/products/MinimalistMenFashion.png',
+    discount: 'Up to 10% off',
+    link: '/',
+    alt: 'Minimalist brand'
+  },
+  {
+    id: '9',
+    name: 'Limio',
+    logo: '/products/LimioMenFashion.png',
+    discount: 'Min. 70% off',
+    link: '/',
+    alt: 'Limio brand'
+  },
+  {
+    id: '10',
+    name: 'Lotto',
+    logo: '/products/LottoMenFashion.png',
+    discount: 'Up to 20% off',
+    link: '/',
+    alt: 'Lotto brand'
+  },
+  {
+    id: '11',
+    name: 'Bewakoof',
+    logo: '/products/BewakoofMenFashion.png',
+    discount: 'Min. 50% off',
+    link: '/',
+    alt: 'Bewakoof brand'
+  },
+  {
+    id: '12',
+    name: 'Davidoff',
+    logo: '/products/DavidoffMenFashion.png',
+    discount: 'Up to 20% off',
+    link: '/',
+    alt: 'Davidoff brand'
+  }
 ];

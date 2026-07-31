@@ -6,11 +6,13 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
+  const router = useRouter();
   const [showLocationModal, setShowLocationModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cartItems,] = useState(3); // Example cart items count
+  const [cartItems,] = useState(3);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
 
@@ -21,7 +23,6 @@ const Header = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Searching for:', searchQuery);
-    // Add your search logic here
   };
 
   const placeholders = [
@@ -29,33 +30,50 @@ const Header = () => {
     "Food Delivery",
     "Grocery Delivery",
     "Flower Delivery",
-    // "Cabs",
     "Care",
     "Pharma"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimate(true); // Start fade out
+      setAnimate(true);
       setTimeout(() => {
         setPlaceholderIndex((prev) => (prev + 1) % placeholders.length);
-        setAnimate(false); // Reset for next animation
-      }, 300); // Half of animation duration
+        setAnimate(false);
+      }, 300);
     }, 2000);
 
     return () => clearInterval(interval);
   }, [placeholders.length]);
 
-
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Reset to home page with no query parameters
+    const params = new URLSearchParams();
+    // Remove all query parameters
+    router.push('/', { scroll: false });
+    
+    // Force a re-render of HeaderCategory by dispatching a custom event
+    window.dispatchEvent(new CustomEvent('logoClick'));
+    
+    // Alternatively, you can use a state management solution like Zustand or Context
+    // to trigger a reset in HeaderCategory
+  };
 
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.leftSection}>
-          {/* <h1 className={styles.logo}>HUFKO</h1> */}
-          <Link href="/">
-            <Image src={"/icons/logo.png"} className={styles.logo} alt='Logo' width={1080} height={266} />
-            {/* <Image src={"/icons/logo.png"} className={styles.logo} alt='Logo' width={521} height={117} /> */}
+          <Link href="/" onClick={handleLogoClick} scroll={false}>
+            <Image 
+              src={"/icons/logo.png"} 
+              className={styles.logo} 
+              alt='Logo' 
+              width={1080} 
+              height={266} 
+              priority
+            />
           </Link>
           <div className={styles.locationContainer} onClick={toggleLocationModal}>
             <div className={styles.deliveryTime}>Delivery in 10 minutes</div>
@@ -66,7 +84,6 @@ const Header = () => {
                 <IoIosArrowDown className={styles.dropdownIcon} />
               </span>
             </div>
-
           </div>
         </div>
 
@@ -99,25 +116,18 @@ const Header = () => {
             <button className={styles.actionButton}>
               <span>Offer</span>
             </button>
-            {/* <button className={styles.actionButton}>
-              <span className={styles.lang}>Eng <ChevronDown className={styles.langIcon} /></span>
-            </button>  */}
             <button className={styles.loginButton}><span>Login</span>
             </button>
             <button className={styles.cartButton}>
               <ShoppingCart className={styles.cartIcon} />
-              {/* <FaShoppingCart className={styles.cartIcon} /> */}
               <div className={styles.cartDetails}>
                 <span className={styles.cartItems}>{cartItems} items</span>
                 <span className={styles.cartPrice}>₹90</span>
               </div>
             </button>
-
-
           </div>
         </div>
 
-        {/* Location Selection Modal */}
         {showLocationModal && (
           <div className={styles.locationModal}>
             <div className={styles.modalContent}>
