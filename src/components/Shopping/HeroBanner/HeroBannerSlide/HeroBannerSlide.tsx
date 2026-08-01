@@ -12,6 +12,8 @@ export interface HeroSlide {
   alt?: string;
   ctaText?: string;
   discount?: string;
+  imageUrl: string; // Add this line
+  url?: string; // Add this if you want to use it
 }
 
 export interface HeroBannerSlideProps {
