@@ -397,6 +397,19 @@ const HeaderCategory: React.FC = () => {
                   autoScroll={false}
                   showScrollbar={false}
                 />
+                 <HeroBannerHalfSlide
+                    banners={slidesHalfShoppingMenFashion}
+                    itemsPerView={{
+                      mobile: 1,
+                      tablet: 2,
+                      laptop: 3,
+                      desktop: 2.5
+                    }}
+                    autoScrollInterval={10000}
+                    showArrows={true}
+                    backgroundColor="#f5f5f5"
+                    onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                  />
                 <HeroBannerSlide
                   slides={slidesShoppingMenFashion}
                   autoPlay={true}
@@ -460,19 +473,6 @@ const HeaderCategory: React.FC = () => {
                     console.log(`Current slide: ${index + 1}`);
                   }}
                 />
-                  <HeroBannerHalfSlide
-                    banners={slidesHalfShoppingMenFashion}
-                    itemsPerView={{
-                      mobile: 1,
-                      tablet: 2,
-                      laptop: 3,
-                      desktop: 2.5
-                    }}
-                    autoScrollInterval={10000}
-                    showArrows={true}
-                    backgroundColor="#f5f5f5"
-                    onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-                  />
                 <TopBrandsOnOffer
                   brands={toBrandsWomenFashion}
                   title="Top Brands on Offer"
