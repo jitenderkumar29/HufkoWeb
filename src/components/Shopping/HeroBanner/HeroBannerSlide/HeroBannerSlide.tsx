@@ -9,8 +9,6 @@ export interface HeroSlide {
   title: string;
   subtitle?: string;
   description?: string;
-  imageUrl: string;
-  link: string;
   alt?: string;
   ctaText?: string;
   discount?: string;
@@ -228,7 +226,7 @@ const HeroBannerSlide: React.FC<HeroBannerSlideProps> = ({
         }}
       >
         <a 
-          href={slide.link} 
+          href={slide.url} 
           className={styles.slideLink}
           onClick={(e) => {
             if (onSlideClick) {

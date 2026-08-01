@@ -8,7 +8,7 @@ export interface BrandItem {
   name: string;
   logo: string;
   discount: string;
-  link: string;
+  url: string;
   alt?: string;
   category?: string;
 }
@@ -115,7 +115,7 @@ const TopBrandsOnOffer: React.FC<TopBrandsOnOfferProps> = ({
   const defaultRenderBrand = (brand: BrandItem) => {
     return (
       <a
-        href={brand.link}
+        href={brand.url}
         className={styles.brandLink}
         onClick={(e) => {
           if (onBrandClick) {

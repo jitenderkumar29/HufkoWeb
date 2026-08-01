@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesShoppingMenFashion, toBrandsMenFashion } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesHalfShoppingMenFashion, slidesShoppingMenFashion, slidesShoppingWomenFashion, toBrandsMenFashion, toBrandsWomenFashion, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -40,6 +40,7 @@ import ShopByItemcategory from '@/components/Shopping/ShopByItemcategory/ShopByI
 import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionRoundCarousel/FashionRoundCarousel';
 import HeroBannerSlide from '@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide';
 import TopBrandsOnOffer from '@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
+import HeroBannerHalfSlide from '@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide';
 
 interface CategoryItem {
   id: string;
@@ -76,7 +77,7 @@ const HeaderCategory: React.FC = () => {
     setSelectedShoppingCategory('all');
     setSelectedElectronicsSubCategory('all');
     setSelectedHomeDecorSubCategory('all');
-    
+
     // Clear URL parameters
     router.push('/', { scroll: false });
   };
@@ -301,7 +302,7 @@ const HeaderCategory: React.FC = () => {
               showLogo={false}
               showAppStore={true}
               showPlayStore={true}
-            />            
+            />
             <HufkoPrime />
             <DownloadApp />
             <FranchiseHufko />
@@ -432,6 +433,66 @@ const HeaderCategory: React.FC = () => {
                 {/* Add Men's Fashion content here */}
               </div>
             )}
+
+            {/* Home Women's Fashion Sub-Sub Categories */}
+            {isShoppingCategorySelected("women_fashion_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                <FashionRoundCarousel
+                  categories={womenFashionCarouselCategories}
+                  title=""
+                  autoScroll={false}
+                  showScrollbar={false}
+                />
+                <HeroBannerSlide
+                  slides={slidesShoppingWomenFashion}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  showTitle={true}
+                  showSubtitle={true}
+                  showCTA={true}
+                  onSlideClick={(slide, index) => {
+                    console.log(`Slide ${index + 1} clicked:`, slide);
+                    // Handle navigation
+                  }}
+                  onSlideChange={(index) => {
+                    console.log(`Current slide: ${index + 1}`);
+                  }}
+                />
+                  <HeroBannerHalfSlide
+                    banners={slidesHalfShoppingMenFashion}
+                    itemsPerView={{
+                      mobile: 1,
+                      tablet: 2,
+                      laptop: 3,
+                      desktop: 2.5
+                    }}
+                    autoScrollInterval={10000}
+                    showArrows={true}
+                    backgroundColor="#f5f5f5"
+                    onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                  />
+                <TopBrandsOnOffer
+                  brands={toBrandsWomenFashion}
+                  title="Top Brands on Offer"
+                  subtitle="Dishing out Gen-Z styles"
+                  backgroundColor="#7739B5"
+                  titleColor="#ffffff"
+                  gap={8}
+                  cardPadding={10}
+                  onBrandClick={(brand) => {
+                    console.log('Brand clicked:', brand);
+                    // Handle navigation
+                  }}
+                  onBrandHover={(brand) => {
+                    console.log('Brand hovered:', brand);
+                  }}
+                />
+                {/* Add Men's Fashion content here */}
+              </div>
+            )}
+
           </div>
         )}
 

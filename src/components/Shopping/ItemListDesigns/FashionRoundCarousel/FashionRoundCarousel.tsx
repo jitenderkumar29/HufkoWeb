@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 export interface CategoryItem {
   id: string;
-  title: string;
+  name: string;  // Changed from 'title' to 'name'
   imageUrl: string;
-  link: string;
+  url: string;
 }
 
 export interface FashionRoundCarouselProps {
@@ -75,7 +75,7 @@ const FashionRoundCarousel: React.FC<FashionRoundCarouselProps> = ({
   renderNavButton,
   showArrows = true,
   titlePosition = 'top',
-  imageScale = 1.1, // Default zoom factor
+  imageScale = 1.1,
 }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -92,7 +92,7 @@ const FashionRoundCarousel: React.FC<FashionRoundCarouselProps> = ({
     if (!itemsPerView) return { width: cardWidth, height: cardHeight };
 
     const width = window.innerWidth;
-    let itemsToShow = 5; // default
+    let itemsToShow = 5;
 
     if (width >= 1280 && itemsPerView.largeDesktop) {
       itemsToShow = itemsPerView.largeDesktop;
@@ -244,15 +244,14 @@ const FashionRoundCarousel: React.FC<FashionRoundCarouselProps> = ({
 
   const defaultRenderItem = (item: CategoryItem) => {
     const dimensions = getResponsiveCardDimensions();
-    // Calculate larger image dimensions
     const imageWidth = dimensions.width * imageScale;
     const imageHeight = dimensions.height * imageScale;
     
     return (
       <a 
-        href={item.link} 
+        href={item.url} 
         className={styles.categoryLink} 
-        aria-label={item.title}
+        aria-label={item.name}  // Changed from item.title to item.name
         onClick={(e) => {
           if (onCategoryClick) {
             e.preventDefault();
@@ -282,7 +281,7 @@ const FashionRoundCarousel: React.FC<FashionRoundCarouselProps> = ({
           >
             <Image
               src={item.imageUrl}
-              alt={item.title}
+              alt={item.name}  // Changed from item.title to item.name
               fill
               sizes={`${imageWidth}px`}
               className={styles.categoryImg}
@@ -294,7 +293,7 @@ const FashionRoundCarousel: React.FC<FashionRoundCarouselProps> = ({
           </div>
         </div>
         <div className={styles.categoryFooter}>
-          <span className={styles.categoryTitle}>{item.title}</span>
+          <span className={styles.categoryTitle}>{item.name}</span>  {/* Changed from item.title to item.name */}
         </div>
       </a>
     );
@@ -366,7 +365,7 @@ const FashionRoundCarousel: React.FC<FashionRoundCarouselProps> = ({
                   className={`${styles.rowInner} ${isDragging ? styles.dragging : ''}`} 
                   ref={rowInnerRef}
                 >
-                  {categories.map((category, index) => (
+                  {categories.map((category) => (
                     <li 
                       key={category.id} 
                       className={styles.categoryCard}

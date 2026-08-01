@@ -1,4 +1,5 @@
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+import { BannerItem } from "@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide";
 import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide";
 import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
 import { CategoryItem } from "@/components/Shopping/ShopByItemcategory/ShopByCategory/ShopByCategory";
@@ -1186,111 +1187,117 @@ export const ElectronicsCategories: CategoryItem[] = [
 export const menFashionCarouselCategories = [
   { 
     id: '0', 
-    title: "Men's clothing", 
+    name: "Men's clothing", 
     imageUrl: "/products/mens_clothing_mens_fashion.jpg", 
-    link: "/sp/pay-day/pay-day-sale" 
+    url: "/sp/pay-day/pay-day-sale" 
   },
   { 
     id: '1', 
-    title: "Live Now", 
+    name: "Live Now", 
     imageUrl: "/products/pay-day-sale_men_fashion.jpg", 
-    link: "/sp/pay-day/pay-day-sale" 
+    url: "/sp/pay-day/pay-day-sale" 
   },
   { 
     id: '2', 
-    title: "Skin Care", 
+    name: "Skin Care", 
     imageUrl: "/products/skin-care_men_fashion.jpg", 
-    link: "/skin-care/c/7303" 
+    url: "/skin-care/c/7303" 
   },
   { 
     id: '3', 
-    title: "Fragrance", 
+    name: "Fragrance", 
     imageUrl: "/products/fragrance_men_fashion.jpg", 
-    link: "/perfumes-deos/c/7335" 
+    url: "/perfumes-deos/c/7335" 
   },
   { 
     id: '4', 
-    title: "Footwear", 
+    name: "Footwear", 
     imageUrl: "/products/footwear_men_fashion.jpg", 
-    link: "/footwear/c/14287" 
+    url: "/footwear/c/14287" 
   },
   { 
     id: '5', 
-    title: "Ethnic Wear", 
+    name: "Ethnic Wear", 
     imageUrl: "/products/ethnic-wear_men_fashion.jpg", 
-    link: "/fashion-lifestyle/ethnicwear/c/26223" 
+    url: "/fashion-lifestyle/ethnicwear/c/26223" 
   },
   { 
     id: '6', 
-    title: "Bath & Body", 
+    name: "Bath & Body", 
     imageUrl: "/products/bath-body_men_fashion.jpg", 
-    link: "/bath-body/c/7312" 
+    url: "/bath-body/c/7312" 
   },
   { 
     id: '7', 
-    title: "Hair Care", 
+    name: "Hair Care", 
     imageUrl: "/products/hair-care_men_fashion.jpg", 
-    link: "/hair/c/7296" 
+    url: "/hair/c/7296" 
   },
   { 
     id: '8', 
-    title: "Topwear", 
+    name: "Topwear", 
     imageUrl: "/products/topwear_men_fashion.jpg", 
-    link: "/topwear/c/24294" 
+    url: "/topwear/c/24294" 
   },
   { 
     id: '9', 
-    title: "Health & Nutrition", 
+    name: "Health & Nutrition", 
     imageUrl: "/products/health-nutrition_men_fashion.jpg", 
-    link: "/health-nutrition/c/7330" 
+    url: "/health-nutrition/c/7330" 
   },
   { 
     id: '10', 
-    title: "Foot Locker", 
+    name: "Foot Locker", 
     imageUrl: "/products/foot-locker_men_fashion.gif", 
-    link: "/sp/footlocker/foot-locker" 
+    url: "/sp/footlocker/foot-locker" 
   },
   { 
     id: '11', 
-    title: "Home", 
+    name: "Home", 
     imageUrl: "/products/home_men_fashion.jpg", 
-    link: "/home/c/74572" 
+    url: "/home/c/74572" 
   },
   { 
     id: '12', 
-    title: "Bottomwear", 
+    name: "Bottomwear", 
     imageUrl: "/products/bottomwear_men_fashion.jpg", 
-    link: "/bottomwear/c/24302" 
+    url: "/bottomwear/c/24302" 
   },
   { 
     id: '13', 
-    title: "Watches", 
+    name: "Watches", 
     imageUrl: "/products/watches_men_fashion.jpg", 
-    link: "/watches/c/15885" 
+    url: "/watches/c/15885" 
   },
   { 
     id: '14', 
-    title: "Activewear", 
+    name: "Activewear", 
     imageUrl: "/products/activewear_men_fashion.jpg", 
-    link: "/activewear/c/24309" 
+    url: "/activewear/c/24309" 
   },
   { 
     id: '15', 
-    title: "Fashion Accessories", 
+    name: "Fashion Accessories", 
     imageUrl: "/products/fashion-accessories_men_fashion.jpg", 
-    link: "/lifestyle-accessories/c/17921" 
+    url: "/lifestyle-accessories/c/17921" 
   },
   { 
     id: '16', 
-    title: "Grooming Store", 
+    name: "Grooming Store", 
     imageUrl: "/products/grooming-store_men_fashion.jpg", 
-    link: "/sp/grooming-store/default" 
+    url: "/sp/grooming-store/default" 
   },
   { 
     id: '17', 
-    title: "Fashion store", 
+    name: "Fashion store", 
     imageUrl: "/products/fashion-store_men_fashion.jpg", 
-    link: "/sp/fashion-store/default" 
+    url: "/sp/fashion-store/default" 
+  },
+  { 
+    id: '18', 
+    name: "Gen-Z", 
+    imageUrl: "/products/gen-z_men_fashion.jpg", 
+    url: "/sp/fashion-store/default" 
   },
 ];
 
@@ -1301,7 +1308,7 @@ export const slidesShoppingMenFashion: HeroSlide[] = [
     subtitle: 'Up to 60% off',
     description: 'Shop the latest collection of kids clothing, accessories, and more',
     imageUrl: '/products/Deals_on_Kids_Fashion_.png',
-    link: '/kids-fashion',
+    url: '/kids-fashion',
     ctaText: 'Shop Now',
     discount: '60% OFF',
     alt: 'Kids fashion deals'
@@ -1312,7 +1319,7 @@ export const slidesShoppingMenFashion: HeroSlide[] = [
     subtitle: 'Stay Warm & Stylish',
     description: 'Explore our winter collection with exclusive discounts',
     imageUrl: '/products/Stay_Warm_&_Stylish.jpg',
-    link: '/winter-collection',
+    url: '/winter-collection',
     ctaText: 'View Collection',
     discount: 'UP TO 50% OFF',
     alt: 'Winter collection'
@@ -1323,7 +1330,7 @@ export const slidesShoppingMenFashion: HeroSlide[] = [
     subtitle: 'Step into Style',
     description: 'Premium footwear collection for every occasion',
     imageUrl: '/products/Step_into_Style.png',
-    link: '/shoes',
+    url: '/shoes',
     ctaText: 'Shop Footwear',
     discount: '30% OFF',
     alt: 'Stylish shoes'
@@ -1336,7 +1343,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Highlander',
     logo: '/products/HighlanderMenFashion.png',
     discount: 'Min. 70% off',
-    link: '/',
+    url: '/',
     alt: 'Highlander brand'
   },
   {
@@ -1344,7 +1351,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Bacca Bucci',
     logo: '/products/Bacca_BucciMenFashion.png',
     discount: 'Min. 40% off',
-    link: '/',
+    url: '/',
     alt: 'Bacca Bucci brand'
   },
   {
@@ -1352,7 +1359,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'TIMEX',
     logo: '/products/TIMEXMenFashion.png',
     discount: 'Up to 60% off',
-    link: '/',
+    url: '/',
     alt: 'TIMEX brand'
   },
   {
@@ -1360,7 +1367,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'The Bear',
     logo: '/products/The_BearMenFashion.png',
     discount: 'Min. 70% off',
-    link: '/',
+    url: '/',
     alt: 'The Bear brand'
   },
   {
@@ -1368,7 +1375,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'BFARDO',
     logo: '/products/BFARDOMenFashion.png',
     discount: 'Up to 40% off',
-    link: '/',
+    url: '/',
     alt: 'BFARDO brand'
   },
   {
@@ -1376,7 +1383,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'American Tourister',
     logo: '/products/American_TouristerMenFashion.png',
     discount: 'Min. 60% off',
-    link: '',
+    url: '',
     alt: 'American Tourister brand'
   },
   {
@@ -1384,7 +1391,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Salty Alpha',
     logo: '/products/Salty_AlphaMenFashion.png',
     discount: 'Up to 60% off',
-    link: '/',
+    url: '/',
     alt: 'Salty Alpha brand'
   },
   {
@@ -1392,7 +1399,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Minimalist',
     logo: '/products/MinimalistMenFashion.png',
     discount: 'Up to 10% off',
-    link: '/',
+    url: '/',
     alt: 'Minimalist brand'
   },
   {
@@ -1400,7 +1407,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Limio',
     logo: '/products/LimioMenFashion.png',
     discount: 'Min. 70% off',
-    link: '/',
+    url: '/',
     alt: 'Limio brand'
   },
   {
@@ -1408,7 +1415,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Lotto',
     logo: '/products/LottoMenFashion.png',
     discount: 'Up to 20% off',
-    link: '/',
+    url: '/',
     alt: 'Lotto brand'
   },
   {
@@ -1416,7 +1423,7 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Bewakoof',
     logo: '/products/BewakoofMenFashion.png',
     discount: 'Min. 50% off',
-    link: '/',
+    url: '/',
     alt: 'Bewakoof brand'
   },
   {
@@ -1424,7 +1431,369 @@ export const toBrandsMenFashion: BrandItem[] = [
     name: 'Davidoff',
     logo: '/products/DavidoffMenFashion.png',
     discount: 'Up to 20% off',
-    link: '/',
+    url: '/',
     alt: 'Davidoff brand'
+  }
+];
+
+export const womenFashionCarouselCategories = [
+  { 
+    id: '0', 
+    name: "Monsoon", 
+    imageUrl: "/products/monsoon_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '1', 
+    name: "Kurta sets", 
+    imageUrl: "/products/kurta-sets_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '2', 
+    name: "Dresses", 
+    imageUrl: "/products/dresses_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '3', 
+    name: "Sarees", 
+    imageUrl: "/products/sarees_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '4', 
+    name: "Nightsuits", 
+    imageUrl: "/products/nightsuits_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '5', 
+    name: "Kurtis", 
+    imageUrl: "/products/kurtis_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '6', 
+    name: "Jeans", 
+    imageUrl: "/products/jeans_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '7', 
+    name: "Dress Material", 
+    imageUrl: "/products/dress-material_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '8', 
+    name: "Watches", 
+    imageUrl: "/products/watches_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '9', 
+    name: "Drips for Her", 
+    imageUrl: "/products/drips-for-her_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '10', 
+    name: "Next Gen Fashion", 
+    imageUrl: "/products/next-gen-fashion_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '11', 
+    name: "Trends", 
+    imageUrl: "/products/trends_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '12', 
+    name: "Sports Shoes", 
+    imageUrl: "/products/sports-shoes_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '13', 
+    name: "Jewellery", 
+    imageUrl: "/products/jewellery_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '14', 
+    name: "Handbags", 
+    imageUrl: "/products/handbags_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '15', 
+    name: "Kids' clothing", 
+    imageUrl: "/products/kids-clothing_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '16', 
+    name: "Lehenga Cholis", 
+    imageUrl: "/products/lehenaga-cholis_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '17', 
+    name: "Bra, panty", 
+    imageUrl: "/products/bra-panty_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '18', 
+    name: "Heels & Flats", 
+    imageUrl: "/products/heels-flats_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '19', 
+    name: "Tops, t-shirts", 
+    imageUrl: "/products/tops-t-shirts_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '20', 
+    name: "Focus brands", 
+    imageUrl: "/products/focus-brands_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '21', 
+    name: "Celeb looks", 
+    imageUrl: "/products/celeb-looks_womens_fashion.jpg", 
+    url: "/" 
+  }
+];
+
+export const slidesShoppingWomenFashion: HeroSlide[] = [
+  {
+    id: '1',
+    title: 'Ethnic Must-Haves',
+    subtitle: 'Shop Now',
+    description: 'Discover stunning ethnic wear for every occasion',
+    imageUrl: '/products/Ethnic _Must-Haves_WomenFashion.png',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: 'Up to 60% OFF',
+    alt: 'Ethnic must-haves fashion'
+  },
+  {
+    id: '2',
+    title: 'Trolleys & Sets',
+    subtitle: 'Premium Collection',
+    description: 'Shop stylish trolleys and matching sets for your wardrobe',
+    imageUrl: '/products/Trolleys_and_sets_WomenFashion.png',
+    url: '/',
+    ctaText: 'View Collection',
+    discount: 'Best Deals',
+    alt: 'Trolleys and matching sets'
+  },
+  {
+    id: '3',
+    title: 'Sporty Kicks',
+    subtitle: 'Step into Comfort',
+    description: 'Explore the latest sporty footwear collection',
+    imageUrl: '/products/Sporty_kicks_WomenFashion.png',
+    url: '/',
+    ctaText: 'Shop Footwear',
+    discount: '30% OFF',
+    alt: 'Sporty kicks collection'
+  },
+  {
+    id: '4',
+    title: 'Winter Jackets',
+    subtitle: 'Stay Warm & Stylish',
+    description: 'Premium winter jackets and outerwear collection',
+    imageUrl: '/products/Winter_Jackets_WomenFashion.png',
+    url: '/',
+    ctaText: 'Shop Jackets',
+    discount: 'Up to 50% OFF',
+    alt: 'Winter jackets collection'
+  },
+  {
+    id: '5',
+    title: 'Beauty Essentials',
+    subtitle: 'Glow Up',
+    description: 'Discover premium beauty and skincare products',
+    imageUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_.png',
+    url: '/',
+    ctaText: 'Explore Beauty',
+    discount: 'Great Offers',
+    alt: 'Beauty essentials'
+  },
+  {
+    id: '6',
+    title: 'Classic Styles',
+    subtitle: 'Timeless Fashion',
+    description: 'Shop classic and timeless fashion pieces',
+    imageUrl: '/products/Classic_styles_1500x460._SX1500_QL85_FMpng_.png',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: 'Best Sellers',
+    alt: 'Classic styles collection'
+  }
+];
+
+export const toBrandsWomenFashion: BrandItem[] = [
+  {
+    id: '1',
+    name: 'TOKYO TALKIES',
+    logo: '/products/TOKYO_TALKIESWomenFashion.png',
+    discount: 'Min. 50% off',
+    url: '/',
+    alt: 'TOKYO TALKIES brand'
+  },
+  {
+    id: '2',
+    name: 'Shoetopia',
+    logo: '/products/Shoetopia_WomenFashion.png',
+    discount: 'Min. 55% off',
+    url: '/',
+    alt: 'Shoetopia brand'
+  },
+  {
+    id: '3',
+    name: 'SASSAFRAS',
+    logo: '/products/SASSAFRAS_WomenFashion.png',
+    discount: 'Min. 50% off',
+    url: '/',
+    alt: 'SASSAFRAS brand'
+  },
+  {
+    id: '4',
+    name: 'SALTY',
+    logo: '/products/SALTY_WomenFashion.png',
+    discount: 'Up to 70% off',
+    url: '/',
+    alt: 'SALTY brand'
+  },
+  {
+    id: '5',
+    name: 'Palay',
+    logo: '/products/Palay_WomenFashion.png',
+    discount: 'Up to 40% off',
+    url: '/',
+    alt: 'Palay brand'
+  },
+  {
+    id: '6',
+    name: 'MAYBELLINE NEW YORK',
+    logo: '/products/MAYBELLINE_NEW_YORK_WomenFashion.png',
+    discount: 'Min. 40% off',
+    url: '/',
+    alt: 'MAYBELLINE NEW YORK brand'
+  },
+  {
+    id: '7',
+    name: 'SONATA',
+    logo: '/products/SONATA_WomenFashion.png',
+    discount: 'Min. 20% off',
+    url: '/',
+    alt: 'SONATA brand'
+  },
+  {
+    id: '8',
+    name: 'Beauty of Joseon',
+    logo: '/products/Beauty_of_Joseon_WomenFashion.png',
+    discount: 'Up to 15% off',
+    url: '/',
+    alt: 'Beauty of Joseon brand'
+  },
+  {
+    id: '9',
+    name: 'MIRAGGIO',
+    logo: '/products/MIRAGGIO_WomenFashion.png',
+    discount: 'Min. 40% off',
+    url: '/',
+    alt: 'MIRAGGIO brand'
+  },
+  {
+    id: '10',
+    name: 'GRECIILOOKS',
+    logo: '/products/GRECIILOOKS_WomenFashion.png',
+    discount: 'Min. 70% off',
+    url: '/',
+    alt: 'GRECIILOOKS brand'
+  },
+  {
+    id: '11',
+    name: 'Athena Lifestyle',
+    logo: '/products/Athena_Lifestyle_WomenFashion.png',
+    discount: 'Up to 30% off',
+    url: '/',
+    alt: 'Athena Lifestyle brand'
+  },
+  {
+    id: '12',
+    name: 'THEATER',
+    logo: '/products/THEATER_WomenFashion.png',
+    discount: 'Up to 30% off',
+    url: '/',
+    alt: 'THEATER brand'
+  }
+];
+
+export const slidesHalfShoppingMenFashion: BannerItem[] = [
+  {
+    id: '1',
+    title: 'NYKAAMAN',
+    imageUrl: '/products/Nykaa_Man_slidesHalf_MenFashion.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Nykaa Man Freedom Sale',
+    badge: 'Limited Time'
+  },
+  {
+    id: '2',
+    title: 'PAY DAY SALE',
+    imageUrl: '/products/Pay_Day_Sale_slidesHalf_MenFashion.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Pay Day Sale'
+  },
+  {
+    id: '3',
+    title: 'H&M',
+    imageUrl: '/products/H&M_slidesHalf_MenFashion.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'H&M Banner'
+  },
+  {
+    id: '4',
+    title: 'Hair Care',
+    imageUrl: '/products/Hair_Care_slidesHalf_MenFashion.png',
+    url: '/',
+    alt: 'Hair Care',
+    discount: '',
+    discount2: '',
+  },
+  {
+    id: '5',
+    title: 'Fragrance',
+    imageUrl: '/products/Fragrance_slidesHalf_MenFashion.png',
+    url: '/',
+    alt: 'Fragrance',
+    discount: '',
+    discount2: '',
+  },
+  {
+    id: '6',
+    title: 'Bestsellers',
+    imageUrl: '/products/Bestsellers_slidesHalf_MenFashion.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Bestsellers',
+    badge: 'Hot'
   }
 ];

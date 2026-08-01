@@ -8,7 +8,7 @@ export interface SmartphoneDeal {
   name: string;
   price: string;
   imageUrl: string;
-  link: string;
+  url: string;
 }
 
 interface ShoppingSlides1Props {
@@ -55,7 +55,7 @@ const ShoppingSlides1: React.FC<ShoppingSlides1Props> = ({
           {deals.map((deal) => (
             <a
               key={deal.id}
-              href={deal.link}
+              href={deal.url}
               className={styles.dealCard}
               style={{ minWidth: typeof cardWidth === 'number' ? `${cardWidth}px` : cardWidth }}
             >

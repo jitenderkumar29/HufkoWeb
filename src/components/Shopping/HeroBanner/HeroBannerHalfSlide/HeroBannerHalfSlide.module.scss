@@ -1,0 +1,376 @@
+
+@use "../../../../styles/variables.scss" as *;
+// Wrapper - Full Width Background
+.heroBannerWrapper {
+  width: 100%;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  padding: 0;
+}
+
+// Banner Section - Full Width
+.heroBannerHalfSlide {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Carousel Section - Centered with Max Width
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  // max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px;
+  overflow: visible;
+  box-sizing: border-box;
+
+  .carouselContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+
+    .carouselTrack {
+      width: 100%;
+      overflow: hidden;
+      cursor: grab;
+      border-radius: 12px;
+
+      &:active {
+        cursor: grabbing;
+      }
+
+      .carouselInner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        will-change: transform;
+        width: 100%;
+
+        .bannerItem {
+          padding: 0 8px;
+          flex-shrink: 0;
+          min-width: 0;
+
+          .bannerLink {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            height: 100%;
+
+            .bannerCard {
+              position: relative;
+              border-radius: 12px;
+              overflow: hidden;
+              background: #fff;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              height: 100%;
+              width: 100%;
+              // 4:3 Aspect Ratio - width:height = 4:3 (height is 3/4 of width)
+              aspect-ratio: 4 / 3;
+
+              &:hover {
+                // transform: translateY(-4px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+              }
+
+              .bannerImageWrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: #f0f0f0;
+
+                .bannerImage {
+                  object-fit: cover;
+                  transition: transform 0.5s ease;
+                  width: 100%;
+                  height: 100%;
+                }
+
+                &:hover .bannerImage {
+                  // transform: scale(1.05);
+                }
+
+                .bannerBadge {
+                  position: absolute;
+                  top: 12px;
+                  right: 12px;
+                  display: flex;
+                  align-items: center;
+                  gap: 6px;
+                  background: rgba(255, 255, 255, 0.95);
+                  backdrop-filter: blur(10px);
+                  padding: 6px 12px;
+                  border-radius: 50px;
+                  font-size: 11px;
+                  font-weight: 700;
+                  color: #ff3d00;
+                  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                  border: 1px solid rgba(255, 61, 0, 0.2);
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
+                  z-index: 2;
+
+                  svg {
+                    width: 14px;
+                    height: 14px;
+                  }
+                }
+              }
+
+              .bannerOverlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 16px 12px;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+                border-radius: 0 0 12px 12px;
+                z-index: 1;
+
+                .discountContainer {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 2px;
+
+                  .discountText {
+                    font-size: 18px;
+                    font-weight: 800;
+                    color: #fff;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                    letter-spacing: 0.5px;
+
+                    @media (max-width: 480px) {
+                      font-size: 14px;
+                    }
+                  }
+
+                  .discountSubText {
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, 0.9);
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+                    @media (max-width: 480px) {
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
+
+              .bannerTitle {
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(8px);
+                padding: 6px 12px;
+                border-radius: 50px;
+                font-size: 12px;
+                font-weight: 600;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                max-width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                z-index: 2;
+
+                @media (max-width: 480px) {
+                  font-size: 10px;
+                  padding: 4px 10px;
+                  max-width: 60%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Navigation Buttons
+    .navButton {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 55px;
+      height: 55px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      color: #333;
+
+      &:hover:not(.disabled) {
+        background: $primary-color-dark;
+        color: $white;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-50%) scale(1.08);
+      }
+
+      &.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+
+      &.navPrev {
+        left: 16px;
+      }
+
+      &.navNext {
+        right: 16px;
+      }
+
+      @media (max-width: 768px) {
+        width: 36px;
+        height: 36px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &.navPrev {
+          left: 10px;
+        }
+
+        &.navNext {
+          right: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+
+  // Dots Indicator
+  .dotsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 4px 0;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: #d0d0d0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+
+      &:hover {
+        background: #b0b0b0;
+        transform: scale(1.2);
+      }
+
+      &.active {
+        background: #ff6b35;
+        width: 28px;
+        border-radius: 50px;
+        transform: scale(1);
+      }
+
+      @media (max-width: 480px) {
+        width: 8px;
+        height: 8px;
+
+        &.active {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 1024px) {
+  .carouselWrapper {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBannerHalfSlide {
+    padding: 16px 0;
+  }
+
+  .carouselWrapper {
+    padding: 0 8px;
+  }
+
+  .bannerItem {
+    padding: 0 6px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroBannerHalfSlide {
+    padding: 12px 0;
+  }
+
+  .carouselWrapper {
+    padding: 0 4px;
+  }
+
+  .bannerItem {
+    padding: 0 4px !important;
+  }
+
+  .dotsContainer {
+    gap: 6px;
+    margin-top: 16px;
+  }
+}
+
+// Dark Mode Support
+@media (prefers-color-scheme: dark) {
+  .heroBannerWrapper {
+    background-color: #1a1a1a !important;
+  }
+
+  .heroBannerHalfSlide {
+    background-color: #1a1a1a !important;
+  }
+
+  .bannerCard {
+    background: #242424 !important;
+  }
+
+  .navButton {
+    background: rgba(40, 40, 40, 0.95) !important;
+    color: #ccc !important;
+
+    &:hover:not(.disabled) {
+      background: #333 !important;
+    }
+  }
+
+  .dot {
+    background: #444 !important;
+
+    &.active {
+      background: #ff6b35 !important;
+    }
+  }
+}
