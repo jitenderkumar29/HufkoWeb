@@ -95,7 +95,8 @@ export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Mobiles & Tablets", id: "mobiles_tablets", url: "/mobiles_tablets" },
   { name: "Men's Fashion", id: "mens_fashion_sub_header", url: "/men" },
   { name: "Women's Fashion", id: "women_fashion_sub_header", url: "/women" },
-  { name: "Kids' Fashion", id: "kids_fashion_sub_header", url: "/kids" },
+  { name: "Kid's Fashion", id: "kids_fashion_sub_header", url: "/kids" },
+  { name: "Women's Beauty", id: "women_beauty_sub_header", url: "/women_beauty" },
   { name: "TVs & Appliances", id: "tvs_appliances_sub_header", url: "/tvs_appliances" },
   { name: "Beauty, Food", id: "beauty_food_sub_header", url: "/beauty_food" },
   { name: "Toys & Sports", id: "toys_sports_sub_header", url: "/toys_sports" },
@@ -1304,36 +1305,58 @@ export const menFashionCarouselCategories = [
 export const slidesShoppingMenFashion: HeroSlide[] = [
   {
     id: '1',
-    title: 'Deals on Kids Fashion',
-    subtitle: 'Up to 60% off',
-    description: 'Shop the latest collection of kids clothing, accessories, and more',
-    imageUrl: '/products/Deals_on_Kids_Fashion_.png',
-    url: '/kids-fashion',
-    ctaText: 'Shop Now',
-    discount: '60% OFF',
-    alt: 'Kids fashion deals'
+    title: 'Premium Footwear Collection',
+    subtitle: 'Step into Style',
+    description: 'Explore our premium footwear collection with exclusive discounts',
+    imageUrl: '/products/Shoes_1500x460._SX1500_QL85_FMpng_.png',
+    url: '/',
+    ctaText: 'Shop Footwear',
+    discount: '30% OFF',
+    alt: 'Stylish shoes collection'
   },
   {
     id: '2',
-    title: 'Winter Collection',
-    subtitle: 'Stay Warm & Stylish',
-    description: 'Explore our winter collection with exclusive discounts',
-    imageUrl: '/products/Stay_Warm_&_Stylish.jpg',
-    url: '/winter-collection',
-    ctaText: 'View Collection',
+    title: 'Premium Watches',
+    subtitle: 'Timeless Elegance',
+    description: 'Discover our collection of premium watches for every occasion',
+    imageUrl: '/products/Watch_1500x460._SX1500_QL85_FMpng_.png',
+    url: '/',
+    ctaText: 'Shop Watches',
     discount: 'UP TO 50% OFF',
-    alt: 'Winter collection'
+    alt: 'Premium watch collection'
   },
   {
     id: '3',
-    title: 'Stylish Shoes',
-    subtitle: 'Step into Style',
-    description: 'Premium footwear collection for every occasion',
-    imageUrl: '/products/Step_into_Style.png',
-    url: '/shoes',
-    ctaText: 'Shop Footwear',
-    discount: '30% OFF',
-    alt: 'Stylish shoes'
+    title: 'Bags & Backpacks',
+    subtitle: 'Carry in Style',
+    description: 'Shop the latest collection of bags, backpacks, and accessories',
+    imageUrl: '/products/Bag_and_backpack_1500x460._SX1500_QL85_FMpng_.png',
+    url: '/',
+    ctaText: 'Shop Bags',
+    discount: '40% OFF',
+    alt: 'Bags and backpacks collection'
+  },
+  {
+    id: '4',
+    title: 'Beauty Essentials',
+    subtitle: 'Glow Up',
+    description: 'Explore premium beauty products for your daily routine',
+    imageUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_2.png',
+    url: '/',
+    ctaText: 'Shop Beauty',
+    discount: '25% OFF',
+    alt: 'Beauty products collection'
+  },
+  {
+    id: '5',
+    title: 'Winter Fashion',
+    subtitle: 'Stay Warm & Stylish',
+    description: 'Discover our winter collection with exclusive discounts on men\'s fashion',
+    imageUrl: '/products/SPB_1500x460._SX1500_QL85_FMpng_.png',
+    url: '/',
+    ctaText: 'View Collection',
+    discount: 'UP TO 60% OFF',
+    alt: 'Winter fashion collection'
   }
 ];
 
@@ -1795,5 +1818,104 @@ export const slidesHalfShoppingMenFashion: BannerItem[] = [
     discount2: '',
     alt: 'Bestsellers',
     badge: 'Hot'
+  }
+];
+
+export const kidsFashionCarouselCategories = [
+  {
+    id: '0',
+    name: "Boys",
+    imageUrl: "/products/Boys_Clothing._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '1',
+    name: "Girls",
+    imageUrl: "/products/Girls_Clothing._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '2',
+    name: "Footwear",
+    imageUrl: "/products/Footwear2._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '3',
+    name: "Infants",
+    imageUrl: "/products/Baby_Clothing._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '4',
+    name: "Teens",
+    imageUrl: "/products/Teens._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '5',
+    name: "Bags",
+    imageUrl: "/products/Accessories2._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '6',
+    name: "Jewellery",
+    imageUrl: "/products/Jewllery._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '7',
+    name: "Watches",
+    imageUrl: "/products/Watches._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '8',
+    name: "Sunglasses",
+    imageUrl: "/products/Sunglasses1._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '9',
+    name: "Amazon Brands",
+    imageUrl: "/products/Amazon_Brands._SS300_QL85_FMpng_.png",
+    url: "/"
+  }
+];
+
+export const slidesShoppingKidsFashion: HeroSlide[] = [
+  {
+    id: '1',
+    title: 'Deals on Kids Fashion',
+    subtitle: 'Up to 60% off',
+    description: 'Shop the latest collection of kids clothing, accessories, and more',
+    imageUrl: '/products/Deals_on_Kids_Fashion_.png',
+    url: '/kids-fashion',
+    ctaText: 'Shop Now',
+    discount: '60% OFF',
+    alt: 'Kids fashion deals'
+  },
+  {
+    id: '2',
+    title: 'Winter Collection',
+    subtitle: 'Stay Warm & Stylish',
+    description: 'Explore our winter collection with exclusive discounts',
+    imageUrl: '/products/Stay_Warm_&_Stylish.jpg',
+    url: '/winter-collection',
+    ctaText: 'View Collection',
+    discount: 'UP TO 50% OFF',
+    alt: 'Winter collection'
+  },
+  {
+    id: '3',
+    title: 'Stylish Shoes',
+    subtitle: 'Step into Style',
+    description: 'Premium footwear collection for every occasion',
+    imageUrl: '/products/Step_into_Style.png',
+    url: '/shoes',
+    ctaText: 'Shop Footwear',
+    discount: '30% OFF',
+    alt: 'Stylish shoes'
   }
 ];

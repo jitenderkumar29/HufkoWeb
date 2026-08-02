@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesHalfShoppingMenFashion, slidesShoppingMenFashion, slidesShoppingWomenFashion, toBrandsMenFashion, toBrandsWomenFashion, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, kidsFashionCarouselCategories, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesHalfShoppingMenFashion, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenFashion, toBrandsMenFashion, toBrandsWomenFashion, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -319,6 +319,19 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={GroceryHeroBannerData} />
             <AllCategory categories={GroceryCategories} />
+            <WelcomeVideoHufko
+              title="Premium food delivery app"
+              titleHighlight="World's #1"
+              subtitle="Enjoy fast online ordering on the Hufko app"
+              videoSrc="/videos/food_all_video.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+              showLogo={false}
+              showAppStore={true}
+              showPlayStore={true}
+            />
             <AllCategoryRound categories={GroceryData1} />
             <AllCategoryRound categories={GroceryData2} />
             <div className={styles.GroceryProductCategory}>
@@ -489,6 +502,69 @@ const HeaderCategory: React.FC = () => {
                     console.log('Brand hovered:', brand);
                   }}
                 />
+                {/* Add Men's Fashion content here */}
+              </div>
+            )}
+
+            {/* Home Kids' Fashion Sub-Sub Categories */}
+            {isShoppingCategorySelected("kids_fashion_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                <FashionRoundCarousel
+                  categories={kidsFashionCarouselCategories}
+                  title=""
+                  autoScroll={false}
+                  showScrollbar={false}
+                />
+                <HeroBannerSlide
+                  slides={slidesShoppingKidsFashion}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  showTitle={true}
+                  showSubtitle={true}
+                  showCTA={true}
+                  onSlideClick={(slide, index) => {
+                    console.log(`Slide ${index + 1} clicked:`, slide);
+                    // Handle navigation
+                  }}
+                  onSlideChange={(index) => {
+                    console.log(`Current slide: ${index + 1}`);
+                  }}
+                />
+                {/* <HeroBannerSlide
+                  slides={slidesShoppingWomenFashion}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  showTitle={true}
+                  showSubtitle={true}
+                  showCTA={true}
+                  onSlideClick={(slide, index) => {
+                    console.log(`Slide ${index + 1} clicked:`, slide);
+                    // Handle navigation
+                  }}
+                  onSlideChange={(index) => {
+                    console.log(`Current slide: ${index + 1}`);
+                  }}
+                />
+                <TopBrandsOnOffer
+                  brands={toBrandsWomenFashion}
+                  title="Top Brands on Offer"
+                  subtitle="Dishing out Gen-Z styles"
+                  backgroundColor="#7739B5"
+                  titleColor="#ffffff"
+                  gap={8}
+                  cardPadding={10}
+                  onBrandClick={(brand) => {
+                    console.log('Brand clicked:', brand);
+                    // Handle navigation
+                  }}
+                  onBrandHover={(brand) => {
+                    console.log('Brand hovered:', brand);
+                  }}
+                /> */}
                 {/* Add Men's Fashion content here */}
               </div>
             )}
