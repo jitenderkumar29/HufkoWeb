@@ -33,6 +33,8 @@ export interface TopBrandsOnOfferProps {
   backgroundColor?: string;
   /** Text color for the title */
   titleColor?: string;
+  /** Text color for the subtitle */
+  subtitleColor?: string;
   /** Custom CSS class for the container */
   className?: string;
   /** Custom render function for each brand */
@@ -60,6 +62,7 @@ const TopBrandsOnOffer: React.FC<TopBrandsOnOfferProps> = ({
   rows = 2,
   backgroundColor = '#7739B5',
   titleColor = '#ffffff',
+  subtitleColor = '#ffffff',
   className = '',
   renderBrand,
   onBrandClick,
@@ -153,6 +156,10 @@ const TopBrandsOnOffer: React.FC<TopBrandsOnOfferProps> = ({
     color: titleColor,
   };
 
+  const subtitleStyle = {
+    color: subtitleColor,
+  };
+
   // Calculate grid template columns
   const gridStyle = {
     gridTemplateColumns: `repeat(${columnsCount}, 1fr)`,
@@ -173,7 +180,7 @@ const TopBrandsOnOffer: React.FC<TopBrandsOnOfferProps> = ({
               </h2>
             )}
             {subtitle && (
-              <p className={styles.sectionSubtitle}>
+              <p className={styles.sectionSubtitle} style={subtitleStyle}>
                 {subtitle}
               </p>
             )}

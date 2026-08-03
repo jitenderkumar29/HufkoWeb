@@ -1919,3 +1919,327 @@ export const slidesShoppingKidsFashion: HeroSlide[] = [
     alt: 'Stylish shoes'
   }
 ];
+
+export const toBrandsKidsFashion: BrandItem[] = [
+  {
+    id: '1',
+    name: 'HOPSCOTCH',
+    logo: '/products/Hopscotch_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'HOPSCOTCH brand'
+  },
+  {
+    id: '2',
+    name: 'ALLEN SOLLY',
+    logo: '/products/Allen_solly_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'ALLEN SOLLY brand'
+  },
+  {
+    id: '3',
+    name: 'BATA',
+    logo: '/products/Bata_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'BATA brand'
+  },
+  {
+    id: '4',
+    name: 'GAP',
+    logo: '/products/Gap_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'GAP brand'
+  },
+  {
+    id: '5',
+    name: 'SYMBOL PREMIUM',
+    logo: '/products/Symbol_premium_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'SYMBOL PREMIUM brand'
+  },
+  {
+    id: '6',
+    name: 'ZOOP',
+    logo: '/products/Zoop_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'ZOOP brand'
+  },
+  {
+    id: '7',
+    name: 'YELLOW CHIMES',
+    logo: '/products/Yellow_chimes_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'YELLOW CHIMES brand'
+  },
+  {
+    id: '8',
+    name: 'AMERICAN TOURISTER',
+    logo: '/products/American_tourister_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'AMERICAN TOURISTER brand'
+  },
+  {
+    id: '9',
+    name: 'CROCS',
+    logo: '/products/Crocs_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'CROCS brand'
+  },
+  {
+    id: '10',
+    name: 'PS PEACHES',
+    logo: '/products/PS_peaches_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'PS PEACHES brand'
+  },
+  {
+    id: '11',
+    name: 'MAX',
+    logo: '/products/max_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'MAX brand'
+  },
+  {
+    id: '12',
+    name: 'PALAY',
+    logo: '/products/Palay_364x566._CB796942055_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'PALAY brand'
+  }
+];
+
+export const womenBeautyCarouselCategories = [
+  {
+    id: '0',
+    name: "Skincare",
+    imageUrl: "/products/skincare._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '1',
+    name: "Hair Care",
+    imageUrl: "/products/haircare._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '2',
+    name: "Luxury Beauty",
+    imageUrl: "/products/luxe._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '3',
+    name: "Makeup",
+    imageUrl: "/products/makeup._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '4',
+    name: "Deos & Fragrances",
+    imageUrl: "/products/fragrance._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '5',
+    name: "Bath & Shower",
+    imageUrl: "/products/bath._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '6',
+    name: "Professional Beauty",
+    imageUrl: "/products/Pro_Beauty._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '7',
+    name: "Men's Grooming",
+    imageUrl: "/products/grooming._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '8',
+    name: "Women's Grooming",
+    imageUrl: "/products/women_grooming._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '9',
+    name: "Top Rated Beauty",
+    imageUrl: "/products/most_loved._SS300_QL85_FMpng_.png",
+    url: "/"
+  },
+  { 
+    id: '10', 
+    name: "Brands", 
+    imageUrl: "/products/Brands_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '11', 
+    name: "Luxe", 
+    imageUrl: "/products/Luxe_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '12', 
+    name: "Appliances", 
+    imageUrl: "/products/Appliances_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '13', 
+    name: "Bath & Body", 
+    imageUrl: "/products/Bath _Body_womens_fashion_2.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '14', 
+    name: "Natural", 
+    imageUrl: "/products/Natural_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '15', 
+    name: "Mom & Baby", 
+    imageUrl: "/products/Mom_&_Baby_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '16', 
+    name: "Fragrance", 
+    imageUrl: "/products/Fragrance_womens_fashion.jpg", 
+    url: "/" 
+  },
+  { 
+    id: '17', 
+    name: "Lingerie & Accessories", 
+    imageUrl: "/products/Lingerie_&_Accessories_womens_fashion.jpg", 
+    url: "/" 
+  },
+];
+
+
+export const slidesShoppingWomenBeauty: HeroSlide[] = [
+  {
+    id: '1',
+    title: 'Beauty Deals',
+    subtitle: 'Shop Now',
+    description: 'Discover the latest beauty products and exclusive offers',
+    imageUrl: '/products/Unrec_pc._CB797014072_.png',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: '',
+    alt: 'Beauty deals banner'
+  }
+];
+
+export const toBrandsWomenBeauty: BrandItem[] = [
+  {
+    id: '1',
+    name: 'Eyeliners & Mascaras',
+    logo: '/products/Eyeliners__mascaras._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Eyeliners & Mascaras'
+  },
+  {
+    id: '2',
+    name: 'Kajal & Kohls',
+    logo: '/products/Kajal__kohls._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Kajal & Kohls'
+  },
+  {
+    id: '3',
+    name: 'Eyeshadows',
+    logo: '/products/Eyeshadows._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Eyeshadows'
+  },
+  {
+    id: '4',
+    name: 'Foundations',
+    logo: '/products/Foundations._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Foundations'
+  },
+  {
+    id: '5',
+    name: 'Concealers',
+    logo: '/products/Concealers._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Concealers'
+  },
+  {
+    id: '6',
+    name: 'Highlighters',
+    logo: '/products/Highlighters._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Highlighters'
+  },
+  {
+    id: '7',
+    name: 'Lipsticks',
+    logo: '/products/Lip_sticks._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Lipsticks'
+  },
+  {
+    id: '8',
+    name: 'Nail Paints',
+    logo: '/products/Nails_paints._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Nail Paints'
+  },
+  {
+    id: '9',
+    name: 'Makeup Brushes',
+    logo: '/products/Makeup_brushes._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Makeup Brushes'
+  },
+  {
+    id: '10',
+    name: 'Makeup Kits',
+    logo: '/products/Make_up_Kits._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Makeup Kits'
+  },
+  {
+    id: '11',
+    name: 'Compacts',
+    logo: '/products/Compacts._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'Compacts'
+  },
+  {
+    id: '12',
+    name: 'BB & CC Creams',
+    logo: '/products/BB_CC_creams._SX564_QL85_FMpng_.png',
+    discount: 'Shop Now',
+    url: '/',
+    alt: 'BB & CC Creams'
+  }
+];
