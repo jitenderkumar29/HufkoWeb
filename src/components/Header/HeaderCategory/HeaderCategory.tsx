@@ -323,7 +323,7 @@ const HeaderCategory: React.FC = () => {
               title="Premium food delivery app"
               titleHighlight="World's #1"
               subtitle="Enjoy fast online ordering on the Hufko app"
-              videoSrc="/videos/food_all_video.mp4"
+              videoSrc="/videos/grocery_hufko.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
               playStoreLink="/"
@@ -532,24 +532,8 @@ const HeaderCategory: React.FC = () => {
                     console.log(`Current slide: ${index + 1}`);
                   }}
                 />
-                {/* <HeroBannerSlide
-                  slides={slidesShoppingWomenFashion}
-                  autoPlay={true}
-                  autoPlayInterval={5000}
-                  showArrows={true}
-                  showDots={true}
-                  showTitle={true}
-                  showSubtitle={true}
-                  showCTA={true}
-                  onSlideClick={(slide, index) => {
-                    console.log(`Slide ${index + 1} clicked:`, slide);
-                    // Handle navigation
-                  }}
-                  onSlideChange={(index) => {
-                    console.log(`Current slide: ${index + 1}`);
-                  }}
-                />
-                <TopBrandsOnOffer
+                
+                {/* <TopBrandsOnOffer
                   brands={toBrandsWomenFashion}
                   title="Top Brands on Offer"
                   subtitle="Dishing out Gen-Z styles"
