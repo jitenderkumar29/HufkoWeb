@@ -101,8 +101,8 @@
 .carouselWrapper {
   position: relative;
   width: 100%;
-  max-width: $max-width;
-  padding: 0 1rem;
+  // max-width: $max-width;
+  padding: 0 1.25rem;
 
   @media (max-width: 768px) {
     padding: 0 0.5rem;

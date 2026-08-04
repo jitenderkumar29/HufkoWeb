@@ -174,7 +174,7 @@ const PoweringSlides: React.FC = () => {
       <div className={styles.dividerWrapper}>
         <div className={styles.dividerLine}></div>
         <div className={styles.dividerText}>
-          POWERING INDIA'S <br /> CHANGING LIFESTYLES
+          Changing people's <br /> luxury lifestyles
         </div>
         <div className={styles.dividerLine}></div>
       </div>

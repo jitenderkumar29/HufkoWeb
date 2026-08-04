@@ -1,4 +1,5 @@
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+import { FashionCard } from "@/components/Shopping/HeroBanner/FashionFullSlide/FashionFullSlide";
 import { BannerItem } from "@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide";
 import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide";
 import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
@@ -47,8 +48,12 @@ export const ShopingCategories = [
     imageUrl: "/products/kids.png",
      url: "/kids",
   },
- 
- 
+  {
+    id: "beauty",
+    name: "Beauty",
+    imageUrl: "/products/beauty.png",
+     url: "/beauty",
+  },
   {
     id: "tvs_appliances",
     name: "TVs & Appliances",
@@ -1591,6 +1596,19 @@ export const womenFashionCarouselCategories = [
     name: "Celeb looks", 
     imageUrl: "/products/celeb-looks_womens_fashion.jpg", 
     url: "/" 
+  },
+  { 
+    id: '21', 
+    name: "Indian Wear", 
+    imageUrl: "/products/indian-wear_womens_fashion.jpg", 
+    url: "/" 
+  }
+  ,
+  { 
+    id: '21', 
+    name: "Western Wear", 
+    imageUrl: "/products/western-wear_womens_fashion.jpg", 
+    url: "/" 
   }
 ];
 
@@ -2243,3 +2261,203 @@ export const toBrandsWomenBeauty: BrandItem[] = [
     alt: 'BB & CC Creams'
   }
 ];
+
+export const slidesHalfShoppingWomenBeauty: BannerItem[] = [
+  {
+    id: '3814',
+    title: 'Best Sellers at 950',
+    imageUrl: '/products/default.jpg_tr=cm-pad_resize,w-600.png',
+    url: '/',
+    discount: 'Gifts on ₹2200+',
+    discount2: 'Best Sellers at 950',
+    alt: '3814',
+    badge: 'Gifts on ₹2200+'
+  },
+  {
+    id: '1742',
+    title: 'Monsoon Guide',
+    imageUrl: '/products/default.jpg_tr=cm-pad_resize,w-600_2.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: '1742'
+  },
+  {
+    id: '66858',
+     title: 'Up To 25% Off!',
+    imageUrl: '/products/Up_To_25_Off_default.png',
+    url: '/',
+    discount: 'Up To 25% Off!',
+    discount2: 'Treat Yourself Today',
+    alt: '51924',
+    badge: 'Up To 25% Off!'
+    
+  },
+  {
+    id: '51924',
+    title: '3X Fast Style',
+    imageUrl: '/products/3X_Fast_Styledefault.jpg_tr=cm-pad_resize,w-600.png',
+    url: '/',
+    discount: '3X Fast Style',
+    discount2: 'Last All Day',
+    alt: '66858',
+    badge: '3X Fast Style'
+   
+  },
+  {
+    id: '75288',
+    title: 'Brand Sale',
+    imageUrl: '/products/Brand_Sale_default.jpg_tr=cm-pad_resize,w-600.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: '75288'
+  },
+  {
+    id: '11433',
+    title: 'Up To 20% Off',
+    imageUrl: '/products/Up_To_20_Off_default.png',
+    url: '/',
+    discount: 'Up To 20% Off',
+    discount2: 'On Entire Brand!',
+    alt: '11433',
+    badge: 'Up To 20% Off'
+  },
+  {
+    id: 'pay-day-sale',
+    title: 'Pay Day Sale',
+    imageUrl: '/products/Pay_Day_Saledefault.jpg_tr=cm-pad_resize,w-600.png',
+    url: '/',
+    discount: 'UP TO 50% OFF',
+    discount2: 'Shop Now →',
+    alt: 'Pay Day Sale',
+    badge: 'Pay Day Sale'
+  }
+];
+
+export const hottestBrandsWomenFashion: BrandItem[] = [
+  {
+    id: '4495',
+    name: 'Forever New',
+    logo: '/products/Forever_New_WomenFashion.jpg',
+    discount: 'Up to 50% off',
+    url: '/',
+    alt: 'forever-new'
+  },
+  {
+    id: '4240',
+    name: 'Twenty Dresses',
+    logo: '/products/Twenty_Dresses_WomenFashion.jpg',
+    discount: 'Up to 70% off',
+    url: '/',
+    alt: 'twenty-dresses'
+  },
+  {
+    id: '63680',
+    name: 'Libas',
+    logo: '/products/Libas_WomenFashion.jpg',
+    discount: 'Min 30% off',
+    url: '/',
+    alt: 'libas'
+  },
+  {
+    id: '4886',
+    name: 'Puma',
+    logo: '/products/Puma_WomenFashion.jpg',
+    discount: 'Min 40% off',
+    url: '/',
+    alt: 'puma'
+  },
+  {
+    id: '15204',
+    name: 'Cider',
+    logo: '/products/Cider_WomenFashion.jpg',
+    discount: 'Up to 60% off',
+    url: '/',
+    alt: 'cider'
+  },
+  {
+    id: '12071',
+    name: 'Autumn Lane',
+    logo: '/products/Autumn_Lane_WomenFashion.jpg',
+    discount: 'Up to 25% off',
+    url: '/',
+    alt: 'autumnlane'
+  },
+  {
+    id: '6559',
+    name: 'U.S. Polo Assn.',
+    logo: '/products/U.S._Polo_Assn_WomenFashion.jpg',
+    discount: 'Up to 50% off',
+    url: '/',
+    alt: 'u-s-polo-assn'
+  },
+  {
+    id: '11674',
+    name: 'The Souled Store',
+    logo: '/products/The_Souled_Store_WomenFashion.jpg',
+    discount: 'Min 30% off',
+    url: '/',
+    alt: 'the-souled-store'
+  },
+  {
+    id: '13161',
+    name: 'PS Peaches',
+    logo: '/products/PS_Peaches_WomenFashion.jpg',
+    discount: 'Min 50% off',
+    url: '/',
+    alt: 'pspeaches'
+  },
+  {
+    id: '9543',
+    name: 'Pure Home & Living',
+    logo: '/products/Pure_Home_&_Living_WomenFashion.jpg',
+    discount: 'Up to 30% off',
+    url: '/',
+    alt: 'pure-home-living'
+  },
+  {
+    id: '9543',
+    name: 'Relaxed SHorts',
+    logo: '/products/Relaxed_SHorts_WomenFashion.jpg',
+    discount: 'Up to 30% off',
+    url: '/',
+    alt: 'relaxed-shorts'
+  },
+  {
+    id: '9543',
+    name: 'Tinted Sunglasses',
+    logo: '/products/Tinted_Sunglasses_WomenFashion.jpg',
+    discount: 'Up to 30% off',
+    url: '/',
+    alt: 'tinted-sunglasses'
+  }
+];
+
+export const slidesDataFashionFullSlide: FashionCard[] = [
+  {
+    id: "1",
+    title: "Chanderi Shine",
+    image: "/products/chanderi.jpg",
+    link: "/",
+  },
+  {
+    id: "2",
+    title: "Insta Loved",
+    image: "/products/insta.jpg",
+    link: "/",
+  },
+  {
+    id: "3",
+    title: "Party Ready",
+    image: "/products/party.jpg",
+    link: "/",
+  },
+  {
+    id: "4",
+    title: "Daily Coords",
+    image: "/products/daily.jpg",
+    link: "/",
+  },
+];
+

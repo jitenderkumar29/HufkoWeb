@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, kidsFashionCarouselCategories, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesHalfShoppingMenFashion, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -41,6 +41,7 @@ import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionR
 import HeroBannerSlide from '@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide';
 import TopBrandsOnOffer from '@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import HeroBannerHalfSlide from '@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide';
+import FashionFullSlide from '@/components/Shopping/HeroBanner/FashionFullSlide/FashionFullSlide';
 
 interface CategoryItem {
   id: string;
@@ -266,7 +267,7 @@ const HeaderCategory: React.FC = () => {
         {activeTab === "home" && (
           <div className={styles.homeContent}>
             <WelcomeVideoHufko
-              title="Premium food delivery app"
+              title="Premium Instant delivery"
               titleHighlight="World's #1"
               subtitle="Enjoy fast online ordering on the Hufko app"
               videoSrc="/videos/food_hufko.mp4"
@@ -413,19 +414,19 @@ const HeaderCategory: React.FC = () => {
                   autoScroll={false}
                   showScrollbar={false}
                 />
-                 <HeroBannerHalfSlide
-                    banners={slidesHalfShoppingMenFashion}
-                    itemsPerView={{
-                      mobile: 1,
-                      tablet: 2,
-                      laptop: 3,
-                      desktop: 2.5
-                    }}
-                    autoScrollInterval={10000}
-                    showArrows={true}
-                    backgroundColor="#f5f5f5"
-                    onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-                  />
+                <HeroBannerHalfSlide
+                  banners={slidesHalfShoppingMenFashion}
+                  itemsPerView={{
+                    mobile: 1,
+                    tablet: 2,
+                    laptop: 3,
+                    desktop: 2.5
+                  }}
+                  autoScrollInterval={10000}
+                  showArrows={true}
+                  backgroundColor="#f5f5f5"
+                  onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                />
                 <HeroBannerSlide
                   slides={slidesShoppingMenFashion}
                   autoPlay={true}
@@ -505,6 +506,37 @@ const HeaderCategory: React.FC = () => {
                     console.log('Brand hovered:', brand);
                   }}
                 />
+                <TopBrandsOnOffer
+                  brands={hottestBrandsWomenFashion}
+                  title="IN THE SPOTLIGHT"
+                  subtitle="Hottest brands on offer"
+                  backgroundColor="#ffffff"
+                  titleColor="#000000"
+                  subtitleColor="#000000"
+                  columns={{
+                    mobile: 2,
+                    tablet: 3,
+                    desktop: 4,
+                    largeDesktop: 6,
+                  }}
+                  gap={2}
+                  cardPadding={10}
+                  onBrandClick={(brand) => {
+                    console.log('Brand clicked:', brand);
+                    // Handle navigation
+                  }}
+                  onBrandHover={(brand) => {
+                    console.log('Brand hovered:', brand);
+                  }}
+                />
+                <FashionFullSlide
+                  title=""
+                  subtitle=""
+                  buttonText=""
+                  buttonLink="/hidden-gems"
+                  heroImage="/products/bannerFullSlide.jpg"
+                  cards={slidesDataFashionFullSlide}
+                />
                 {/* Add Men's Fashion content here */}
               </div>
             )}
@@ -581,6 +613,19 @@ const HeaderCategory: React.FC = () => {
                   onSlideChange={(index) => {
                     console.log(`Current slide: ${index + 1}`);
                   }}
+                />
+                <HeroBannerHalfSlide
+                  banners={slidesHalfShoppingWomenBeauty}
+                  itemsPerView={{
+                    mobile: 1,
+                    tablet: 2,
+                    laptop: 3,
+                    desktop: 2.5
+                  }}
+                  autoScrollInterval={10000}
+                  showArrows={true}
+                  backgroundColor="#f5f5f5"
+                  onBannerClick={(banner) => console.log('Banner clicked:', banner)}
                 />
                 <TopBrandsOnOffer
                   brands={toBrandsWomenBeauty}
