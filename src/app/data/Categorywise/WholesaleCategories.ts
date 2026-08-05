@@ -134,31 +134,37 @@ export const WholesaleCategories = [
     url: "/in/canned-imported-items",
   },
   {
+    id: "health-wellness",
     name: "Health & Wellness",
     imageUrl: "/products/health-wellness.png",
     url: "/wholesale/health-wellness",
   },
   {
+    id: "household-supplies",
     name: "Household Supplies",
     imageUrl: "/products/household-supplies.png",
     url: "/wholesale/household-supplies",
   },
   {
+    id: "cleaning-products",
     name: "Cleaning Products",
     imageUrl: "/products/cleaning-products.png",
     url: "/wholesale/cleaning-products",
   },
   {
+    id: "paper-plastic",
     name: "Paper & Plastic Goods",
     imageUrl: "/products/paper-plastic.png",
     url: "/wholesale/paper-plastic",
   },
   {
+    id: "pet-supplies",
     name: "Pet Supplies",
     imageUrl: "/products/pet-supplies.png",
     url: "/wholesale/pet-supplies",
   },
   {
+    id: "baby-products",
     name: "Baby Products",
     imageUrl: "/products/baby-products.png",
     url: "/wholesale/baby-products",
