@@ -373,7 +373,7 @@ const HeroBannerSlide: React.FC<HeroBannerSlideProps> = ({
         </div>
         
         {/* Dot Indicators */}
-        {renderDots()}
+        {/* {renderDots()} */}
       </div>
     </div>
   );

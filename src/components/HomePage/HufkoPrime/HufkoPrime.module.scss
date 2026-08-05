@@ -1,4 +1,5 @@
 @use "../../../styles/variables.scss" as *;
+
 .hufkoPrime {
   position: relative;
   width: 100%;
@@ -210,6 +211,82 @@
 }
 
 /* =========================
+   More Button
+========================= */
+
+.moreButtonWrapper {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.moreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  border: 2px solid rgba(244, 213, 159, 0.3);
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    rgba(140, 97, 21, 0.15),
+    rgba(233, 199, 137, 0.15)
+  );
+  color: #f4d59f;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  svg {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      #8c6115,
+      #e9c789,
+      #996f25
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  &:hover {
+    border-color: #f4d59f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(233, 199, 137, 0.2);
+
+    &::before {
+      opacity: 0.1;
+    }
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* =========================
    Coins
 ========================= */
 .coin {
@@ -317,6 +394,11 @@
     width: 54px;
     height: 54px;
   }
+
+  .moreButton {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -337,6 +419,11 @@
     height: 42px;
     right: 18%;
   }
+
+  .moreButton {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -347,5 +434,26 @@
 
   .benefitCard div:last-child {
     text-align: center;
+  }
+
+  .moreButton {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .moreButtonWrapper {
+    padding: 0 1rem;
+  }
+}
+
+/* =========================
+   Responsive benefits
+========================= */
+@media (max-width: 768px) {
+  .benefitCard {
+    min-width: 100%;
+    max-width: 100%;
   }
 }

@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./FashionFullSlide.module.scss";
-import { ArrowRight } from "lucide-react";
+import styles from "./FashionFullSlideGrid.module.scss";
 
 export interface FashionCard {
     id: string;
@@ -23,7 +22,7 @@ export interface FashionFullSlideProps {
     cards: FashionCard[];
 }
 
-const FashionFullSlide = ({
+const FashionFullSlideGrid = ({
     title = "",
     subtitle = "",
     buttonText = "",
@@ -90,4 +89,4 @@ const FashionFullSlide = ({
     );
 };
 
-export default FashionFullSlide;
+export default FashionFullSlideGrid;

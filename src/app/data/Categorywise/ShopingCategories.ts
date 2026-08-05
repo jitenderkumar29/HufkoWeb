@@ -1,5 +1,6 @@
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
-import { FashionCard } from "@/components/Shopping/HeroBanner/FashionFullSlide/FashionFullSlide";
+import { BankOfferSlideData } from "@/components/Shopping/HeroBanner/BankOfferSlide/BankOfferSlide";
+import { FashionCard } from "@/components/Shopping/HeroBanner/FashionFullSlideGrid/FashionFullSlideGrid";
 import { BannerItem } from "@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide";
 import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide";
 import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
@@ -2191,7 +2192,7 @@ export const toBrandsWomenBeauty: BrandItem[] = [
   {
     id: '4',
     name: 'Foundations',
-    logo: '/products/Foundations._SX564_QL85_FMpng_.png',
+    logo: '/products/Foundations.png',
     discount: 'Shop Now',
     url: '/',
     alt: 'Foundations'
@@ -2461,3 +2462,27 @@ export const slidesDataFashionFullSlide: FashionCard[] = [
   },
 ];
 
+export const bankOfferShoppingSlide: BankOfferSlideData[] = [
+  {
+    id: '6a5dfa464622ef5292d5718d',
+    title: 'Get Extra 15% Off',
+    subtitle: 'On Your 1st Purchase',
+    description: 'USE CODE NEW15',
+    imageUrl: '/products/Get_Extra_15_Off.jpg',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: '15% OFF',
+    alt: 'Extra15%_coupon_Nonloggedin'
+  },
+  {
+    id: '6a5dfa245a11ba6bbc89c198',
+    title: 'Get Extra 20% Off',
+    subtitle: 'On Your 1st App Order',
+    description: 'USE CODE EXTRA20%',
+    imageUrl: '/products/Get_Extra_20_Off.jpg',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: '20% OFF',
+    alt: 'Extra20%_coupon'
+  }
+]

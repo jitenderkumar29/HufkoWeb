@@ -1,10 +1,11 @@
 @use "../../../styles/variables.scss" as *;
+
 .allCategoryContainer {
-  padding: 0 1rem;
+  padding: 0 3rem;
   margin-bottom: 0.25rem;
   position: relative;
   width: 100%;
-  max-width: $max-width;
+  // max-width: $max-width;
   margin: 0 auto 0.25rem;
 
   @media (max-width: 768px) {
@@ -47,7 +48,7 @@
 }
 
 .categoryItem {
-  min-width: 100px;
+  min-width: 120px; // Increased from 100px
   height: auto;
   display: flex;
   flex-direction: column;
@@ -66,20 +67,19 @@
   }
 
   @media (max-width: 768px) {
-    min-width: 90px;
+    min-width: 110px; // Increased from 90px
   }
 }
 
 .categoryImage {
-  width: 100px;
-  // height: 148px;
+  width: 120px; // Increased from 100px
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: 768px) {
-    width: 90px;
+    width: 110px; // Increased from 90px
     height: 133px;
   }
 }
@@ -96,27 +96,20 @@
   font-size: 16px;
   font-weight: 600;
   text-align: center;
-  justify-content: center;
   color: $black;
-  display: flex;
-  // flex-direction: column;
-  gap: 0.1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.3rem;
   width: 100%;
   box-sizing: border-box;
-  max-width: 100px;
+  max-width: 120px; // Increased from 100px
+  
+  // Single line ellipsis
   white-space: nowrap;
-  // overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
-
-  span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
   @media (max-width: 768px) {
     font-size: 0.7rem;
+    max-width: 110px; // Increased from 90px
   }
 }
 

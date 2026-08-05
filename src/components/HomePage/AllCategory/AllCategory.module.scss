@@ -1,11 +1,13 @@
 @use "../../../styles/variables.scss" as *;
+
 .allCategoryContainer {
   // padding: 0 1rem;
   margin-bottom: 0.25rem;
   position: relative;
   width: 100%;
-  max-width: $max-width;
+  // max-width: $max-width;
   margin: 0 auto 0.25rem;
+  padding: 0 2rem;
 
   @media (max-width: 768px) {
     padding: 0 0.5rem;

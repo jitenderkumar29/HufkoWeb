@@ -95,9 +95,6 @@ const AllCategoryOne = ({ categories }: AllCategoryProps) => {
               </div>
               <div className={styles.categoryName}>
                 {category.name}
-                {/* {category.name.split(' ').map((word, i) => (
-                  <span key={i}>{word}</span>
-                ))} */}
               </div>
             </a>
           ))}

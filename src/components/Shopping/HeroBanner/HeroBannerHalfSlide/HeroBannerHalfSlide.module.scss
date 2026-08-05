@@ -1,4 +1,3 @@
-
 @use "../../../../styles/variables.scss" as *;
 // Wrapper - Full Width Background
 .heroBannerWrapper {
@@ -18,6 +17,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // Height will be set via inline style if provided
+  min-height: 200px; // Minimum height to prevent collapse
+
+  // If no height is provided, use default aspect ratio
+  &:not([style*="height"]) {
+    .bannerCard {
+      aspect-ratio: 4 / 3;
+    }
+  }
 }
 
 // Carousel Section - Centered with Max Width
@@ -29,15 +37,18 @@
   padding: 0 16px;
   overflow: visible;
   box-sizing: border-box;
+  height: 100%;
 
   .carouselContainer {
     position: relative;
     width: 100%;
     overflow: hidden;
     border-radius: 12px;
+    height: 100%;
 
     .carouselTrack {
       width: 100%;
+      height: 100%;
       overflow: hidden;
       cursor: grab;
       border-radius: 12px;
@@ -51,11 +62,13 @@
         transition: transform 0.5s ease-in-out;
         will-change: transform;
         width: 100%;
+        height: 100%;
 
         .bannerItem {
           padding: 0 8px;
           flex-shrink: 0;
           min-width: 0;
+          height: 100%;
 
           .bannerLink {
             display: block;
@@ -72,8 +85,13 @@
               transition: transform 0.3s ease, box-shadow 0.3s ease;
               height: 100%;
               width: 100%;
-              // 4:3 Aspect Ratio - width:height = 4:3 (height is 3/4 of width)
+              // Default aspect ratio - will be overridden by parent height if set
               aspect-ratio: 4 / 3;
+
+              // If parent has explicit height, remove aspect-ratio
+              .heroBannerHalfSlide[style*="height"] & {
+                aspect-ratio: unset;
+              }
 
               &:hover {
                 // transform: translateY(-4px);

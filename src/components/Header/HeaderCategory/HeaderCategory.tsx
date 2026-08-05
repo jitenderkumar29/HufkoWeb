@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { bankOfferShoppingSlide, categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -24,14 +24,13 @@ import AllCategoryRound from '@/components/HomePage/AllCategoryRound/AllCategory
 import { GroceryData1, GroceryData2 } from '@/app/data/GroceryPageData/GroceryData';
 import { CandiesGumsData, ColdDrinksJuicesData, DairyBreadEggsData, HookahData, MouthFreshenersData, RollingPapersData, SnacksMunchiesData } from '@/app/data/GroceryPageData/GroceryProductData';
 import GroceryProductList from '@/components/Grocery/GroceryProductList/GroceryProductList';
-import { WholesaleCategories, wholesaleCategoriesSubHeader } from '@/app/data/Categorywise/WholesaleCategories';
+import { WholesaleCategories, WholesaleCategoriesList, wholesaleCategoriesSubHeader } from '@/app/data/Categorywise/WholesaleCategories';
 import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
 import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
 import { FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
 import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
-import HufkoPrime from '@/components/HomePage/HufkoPrime/HufkoPrime';
 import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
 import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko';
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
@@ -41,7 +40,10 @@ import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionR
 import HeroBannerSlide from '@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide';
 import TopBrandsOnOffer from '@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import HeroBannerHalfSlide from '@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide';
-import FashionFullSlide from '@/components/Shopping/HeroBanner/FashionFullSlide/FashionFullSlide';
+import FashionFullSlideGrid from '@/components/Shopping/HeroBanner/FashionFullSlideGrid/FashionFullSlideGrid';
+import BankOfferSlide from '@/components/Shopping/HeroBanner/BankOfferSlide/BankOfferSlide';
+import HufkoPrime, { defaultBenefits } from '@/components/HomePage/HufkoPrime/HufkoPrime';
+import { ArrowRight, Clock, IndianRupee, Shield, Users } from 'lucide-react';
 
 interface CategoryItem {
   id: string;
@@ -267,7 +269,7 @@ const HeaderCategory: React.FC = () => {
         {activeTab === "home" && (
           <div className={styles.homeContent}>
             <WelcomeVideoHufko
-              title="Premium Instant delivery"
+              title="Premium Instant Delivery App"
               titleHighlight="World's #1"
               subtitle="Enjoy fast online ordering on the Hufko app"
               videoSrc="/videos/food_hufko.mp4"
@@ -278,6 +280,46 @@ const HeaderCategory: React.FC = () => {
             />
             <PoweringSlides />
             <HufkoGSTInfo />
+            <HufkoPrime
+              benefits={defaultBenefits}
+              onMoreClick={() => console.log('More clicked!')}
+            />
+            <DownloadApp />
+            <FranchiseHufko
+              badgeText="World's Largest Instant Delivery App Platform"
+              badgeIcon={<Shield size={16} />}
+              heading="Own a World's Largest #1"
+              highlightText="Supermarket Franchise"
+              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              stats={[
+                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
+                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
+              ]}
+              buttons={[
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
+              ]}
+              imageSrc="/products/Franchise_Hufko.png"
+              // imageSrc="/icons/HUFKO_Store.png"
+              imageAlt="HUFKO Store"
+              imageWidth={2000}
+              imageHeight={1800}
+              badges={[
+                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
+                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
+              ]}
+              backgroundColor="#055346"
+              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+              overlayOpacity={0.35}
+              className="custom-class"
+              showWave={true}
+              waveColor="white"
+              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+            >
+              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+            </FranchiseHufko>
           </div>
         )}
 
@@ -304,9 +346,49 @@ const HeaderCategory: React.FC = () => {
               showAppStore={true}
               showPlayStore={true}
             />
-            <HufkoPrime />
+            <HufkoPrime
+              benefits={defaultBenefits}
+              onMoreClick={() => console.log('More clicked!')}
+            />
+            {/* <HufkoPrime /> */}
             <DownloadApp />
-            <FranchiseHufko />
+            <FranchiseHufko
+              badgeText="World's Largest Instant Delivery App Platform"
+              badgeIcon={<Shield size={16} />}
+              heading="World's Largest #1"
+              highlightText="AI Powered"
+              description="Enjoy Premium Food and Dining at Premium Restaurants Fast and Easy Online Ordering on the HUFKO App"
+              stats={[
+                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
+                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
+              ]}
+              buttons={[
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
+              ]}
+              imageSrc="/products/HUFKO_Store_FranchiseHufko.png"
+              // imageSrc="/icons/HUFKO_Store.png"
+              imageAlt="HUFKO Store"
+              imageWidth={800}
+              imageHeight={800}
+              badges={[
+                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
+                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
+              ]}
+              backgroundColor="#055346"
+              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+              overlayOpacity={0.35}
+              className="custom-class"
+              showWave={true}
+              waveColor="white"
+              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+            >
+              <span style={{ color: '#ffffff' }}> Premium
+                Food Delivery Technology Platform</span>
+            </FranchiseHufko>
+
           </div>
         )}
 
@@ -347,6 +429,7 @@ const HeaderCategory: React.FC = () => {
               <GroceryProductList category="Cold Drinks, & Juices" grocery={ColdDrinksJuicesData} groceryCategory="cold" />
               <GroceryProductList category="Candies & Gums" grocery={CandiesGumsData} groceryCategory="candies" />
             </div>
+
           </div>
         )}
 
@@ -424,8 +507,17 @@ const HeaderCategory: React.FC = () => {
                   }}
                   autoScrollInterval={10000}
                   showArrows={true}
+                  height={550}
                   backgroundColor="#f5f5f5"
                   onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                />
+                <BankOfferSlide
+                  slides={bankOfferShoppingSlide}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  onSlideChange={(index) => console.log('Current slide:', index)}
                 />
                 <HeroBannerSlide
                   slides={slidesShoppingMenFashion}
@@ -490,6 +582,14 @@ const HeaderCategory: React.FC = () => {
                     console.log(`Current slide: ${index + 1}`);
                   }}
                 />
+                <BankOfferSlide
+                  slides={bankOfferShoppingSlide}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  onSlideChange={(index) => console.log('Current slide:', index)}
+                />
                 <TopBrandsOnOffer
                   brands={toBrandsWomenFashion}
                   title="Top Brands on Offer"
@@ -519,7 +619,7 @@ const HeaderCategory: React.FC = () => {
                     desktop: 4,
                     largeDesktop: 6,
                   }}
-                  gap={2}
+                  gap={5}
                   cardPadding={10}
                   onBrandClick={(brand) => {
                     console.log('Brand clicked:', brand);
@@ -529,7 +629,7 @@ const HeaderCategory: React.FC = () => {
                     console.log('Brand hovered:', brand);
                   }}
                 />
-                <FashionFullSlide
+                <FashionFullSlideGrid
                   title=""
                   subtitle=""
                   buttonText=""
@@ -566,6 +666,14 @@ const HeaderCategory: React.FC = () => {
                   onSlideChange={(index) => {
                     console.log(`Current slide: ${index + 1}`);
                   }}
+                />
+                <BankOfferSlide
+                  slides={bankOfferShoppingSlide}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  onSlideChange={(index) => console.log('Current slide:', index)}
                 />
                 <TopBrandsOnOffer
                   brands={toBrandsKidsFashion}
@@ -614,6 +722,14 @@ const HeaderCategory: React.FC = () => {
                     console.log(`Current slide: ${index + 1}`);
                   }}
                 />
+                <BankOfferSlide
+                  slides={bankOfferShoppingSlide}
+                  autoPlay={true}
+                  autoPlayInterval={5000}
+                  showArrows={true}
+                  showDots={true}
+                  onSlideChange={(index) => console.log('Current slide:', index)}
+                />
                 <HeroBannerHalfSlide
                   banners={slidesHalfShoppingWomenBeauty}
                   itemsPerView={{
@@ -624,6 +740,7 @@ const HeaderCategory: React.FC = () => {
                   }}
                   autoScrollInterval={10000}
                   showArrows={true}
+                  height={650}
                   backgroundColor="#f5f5f5"
                   onBannerClick={(banner) => console.log('Banner clicked:', banner)}
                 />
@@ -631,7 +748,7 @@ const HeaderCategory: React.FC = () => {
                   brands={toBrandsWomenBeauty}
                   title="Top Brands on Offer"
                   subtitle="Dishing out Gen-Z styles"
-                  backgroundColor="#E58C94"
+                  backgroundColor="#CBCDA3"
                   titleColor="#ffffff"
                   subtitleColor="#ffffff"
                   gap={8}
@@ -715,6 +832,7 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={WholesaleHeroBannerData} />
+            <AllCategoryOne categories={WholesaleCategoriesList} />
             <AllCategoryGrid
               title="Wholesale Categories"
               categories={WholesaleCategories}

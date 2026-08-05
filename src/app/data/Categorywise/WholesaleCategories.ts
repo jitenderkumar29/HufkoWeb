@@ -132,7 +132,37 @@ export const WholesaleCategories = [
     name: "Imported Foods",
     imageUrl: "/products/imported-foods.png",
     url: "/in/canned-imported-items",
-  }
+  },
+  {
+    name: "Health & Wellness",
+    imageUrl: "/products/health-wellness.png",
+    url: "/wholesale/health-wellness",
+  },
+  {
+    name: "Household Supplies",
+    imageUrl: "/products/household-supplies.png",
+    url: "/wholesale/household-supplies",
+  },
+  {
+    name: "Cleaning Products",
+    imageUrl: "/products/cleaning-products.png",
+    url: "/wholesale/cleaning-products",
+  },
+  {
+    name: "Paper & Plastic Goods",
+    imageUrl: "/products/paper-plastic.png",
+    url: "/wholesale/paper-plastic",
+  },
+  {
+    name: "Pet Supplies",
+    imageUrl: "/products/pet-supplies.png",
+    url: "/wholesale/pet-supplies",
+  },
+  {
+    name: "Baby Products",
+    imageUrl: "/products/baby-products.png",
+    url: "/wholesale/baby-products",
+  },
 ];
 
 export const wholesaleCategoriesSubHeader: SubHeaderItem[] = [
@@ -200,4 +230,107 @@ export const wholesaleCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Cleaning Supplies" },
   { name: "Disposable Products" },
   { name: "Gift & Promotional Items" },
+];
+
+export const WholesaleCategoriesList = [
+  {
+    name: "Fresh Produce",
+    imageUrl: "/products/fresh-produce.png",
+    url: "/wholesale/fresh-produce",
+  },
+  {
+    name: "Dairy & Eggs",
+    imageUrl: "/products/dairy-eggs.png",
+    url: "/wholesale/dairy-eggs",
+  },
+  {
+    name: "Meat & Poultry",
+    imageUrl: "/products/meat-poultry.png",
+    url: "/wholesale/meat-poultry",
+  },
+  {
+    name: "Seafood",
+    imageUrl: "/products/seafood.png",
+    url: "/wholesale/seafood",
+  },
+  {
+    name: "Bakery & Bread",
+    imageUrl: "/products/bakery-bread.png",
+    url: "/wholesale/bakery-bread",
+  },
+  {
+    name: "Pantry Staples",
+    imageUrl: "/products/pantry-staples.png",
+    url: "/wholesale/pantry-staples",
+  },
+  {
+    name: "Beverages",
+    imageUrl: "/products/beverages.png",
+    url: "/wholesale/beverages",
+  },
+  {
+    name: "Snacks & Sweets",
+    imageUrl: "/products/snacks-sweets.png",
+    url: "/wholesale/snacks-sweets",
+  },
+  {
+    name: "Frozen Foods",
+    imageUrl: "/products/frozen-foods.png",
+    url: "/wholesale/frozen-foods",
+  },
+  {
+    name: "Canned & Jarred Goods",
+    imageUrl: "/products/canned-goods.png",
+    url: "/wholesale/canned-goods",
+  },
+  {
+    name: "Cooking Oils & Vinegars",
+    imageUrl: "/products/oils-vinegars.png",
+    url: "/wholesale/oils-vinegars",
+  },
+  {
+    name: "Spices & Seasonings",
+    imageUrl: "/products/spices-seasonings.png",
+    url: "/wholesale/spices-seasonings",
+  },
+  {
+    name: "Pasta, Rice & Grains",
+    imageUrl: "/products/pasta-rice-grains.png",
+    url: "/wholesale/pasta-rice-grains",
+  },
+  {
+    name: "Breakfast Foods",
+    imageUrl: "/products/breakfast-foods.png",
+    url: "/wholesale/breakfast-foods",
+  },
+  {
+    name: "Health & Wellness",
+    imageUrl: "/products/health-wellness.png",
+    url: "/wholesale/health-wellness",
+  },
+  {
+    name: "Household Supplies",
+    imageUrl: "/products/household-supplies.png",
+    url: "/wholesale/household-supplies",
+  },
+  {
+    name: "Cleaning Products",
+    imageUrl: "/products/cleaning-products.png",
+    url: "/wholesale/cleaning-products",
+  },
+  {
+    name: "Paper & Plastic Goods",
+    imageUrl: "/products/paper-plastic.png",
+    url: "/wholesale/paper-plastic",
+  },
+  {
+    name: "Pet Supplies",
+    imageUrl: "/products/pet-supplies.png",
+    url: "/wholesale/pet-supplies",
+  },
+  {
+    name: "Baby Products",
+    imageUrl: "/products/baby-products.png",
+    url: "/wholesale/baby-products",
+  },
 ];

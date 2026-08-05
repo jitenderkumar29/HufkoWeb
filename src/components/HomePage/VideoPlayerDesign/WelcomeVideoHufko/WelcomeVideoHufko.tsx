@@ -1,6 +1,7 @@
-// src/components/HomePage/WelcomeHufko/WelcomeVideoHufko.tsx
-import React, { useState, useEffect } from 'react';
-import { FaArrowDown } from 'react-icons/fa6';
+// src/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko.tsx
+
+import React, { useState, useEffect, useRef } from 'react';
+import { FaArrowDown, FaVolumeHigh, FaVolumeOff } from 'react-icons/fa6';
 import styles from './WelcomeVideoHufko.module.scss';
 import Image from 'next/image';
 
@@ -87,6 +88,12 @@ interface WelcomeVideoHufkoProps {
    * @default true
    */
   muted?: boolean;
+  
+  /**
+   * Whether to show the volume control button
+   * @default true
+   */
+  showVolumeControl?: boolean;
 }
 
 const WelcomeVideoHufko: React.FC<WelcomeVideoHufkoProps> = ({
@@ -103,22 +110,46 @@ const WelcomeVideoHufko: React.FC<WelcomeVideoHufkoProps> = ({
   className = '',
   autoPlay = true,
   loop = true,
-  muted = true,
+  muted = false,
+  showVolumeControl = true,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMuted, setIsMuted] = useState(muted);
+  const [isHovering, setIsHovering] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
-    <div className={`${styles.welcomeHufko} ${className}`}>
+    <div 
+      className={`${styles.welcomeHufko} ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
           <video 
+            ref={videoRef}
             autoPlay={autoPlay} 
             loop={loop} 
-            muted={muted} 
+            muted={isMuted} 
             playsInline 
             className={styles.heroVideo}
           >
@@ -192,6 +223,24 @@ const WelcomeVideoHufko: React.FC<WelcomeVideoHufkoProps> = ({
               )}
             </div>
           )}
+        </div>
+
+        {/* Volume Control Button */}
+        {showVolumeControl && (
+          <button
+            className={`${styles.volumeControl} ${isHovering ? styles.volumeControlVisible : ''}`}
+            onClick={toggleMute}
+            aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+            title={isMuted ? 'Unmute' : 'Mute'}
+          >
+            {isMuted ? <FaVolumeOff /> : <FaVolumeHigh />}
+          </button>
+        )}
+
+        {/* Scroll Indicator */}
+        <div className={styles.scrollIndicator}>
+          <span>Scroll</span>
+          <FaArrowDown className={styles.scrollIcon} />
         </div>
       </section>
     </div>

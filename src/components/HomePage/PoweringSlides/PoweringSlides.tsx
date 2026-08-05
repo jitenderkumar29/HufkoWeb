@@ -38,6 +38,16 @@ const brands: Brand[] = [
     borderColor: 'border-[#FAECBD]',
     blurColor: '#FFEEAF'
   },
+ {
+    id: 'dineout',
+    name: 'Dineout',
+    logo: '/icons/eternal_slide_8.png',
+    description: 'Discover and book the best restaurants in your city with exclusive offers and discounts',
+    link: '/',
+    bgGradient: 'from-[#FFF9E5] to-[#FFF9E5]',
+    borderColor: 'border-[#FAECBD]',
+    blurColor: '#FFEEAF'
+},
   {
     id: 'shopping',
     name: 'Shopping',

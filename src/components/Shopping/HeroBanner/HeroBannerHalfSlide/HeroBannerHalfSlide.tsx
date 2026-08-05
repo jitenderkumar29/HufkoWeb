@@ -27,6 +27,7 @@ export interface HeroBannerHalfSlideProps {
   showArrows?: boolean;
   className?: string;
   backgroundColor?: string;
+  height?: number | string; // Added height prop
   onBannerClick?: (banner: BannerItem) => void;
 }
 
@@ -42,6 +43,7 @@ const HeroBannerHalfSlide: React.FC<HeroBannerHalfSlideProps> = ({
   showArrows = true,
   className = '',
   backgroundColor = '#f5f5f5',
+  height, // Added height prop
   onBannerClick,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -151,11 +153,17 @@ const HeroBannerHalfSlide: React.FC<HeroBannerHalfSlideProps> = ({
     }
   };
 
+  // Convert height to string with px if it's a number
+  const heightStyle = height ? (typeof height === 'number' ? `${height}px` : height) : undefined;
+
   return (
     <div className={`${styles.heroBannerWrapper} ${className}`}>
       <div 
         className={styles.heroBannerHalfSlide}
-        style={{ backgroundColor }}
+        style={{ 
+          backgroundColor,
+          ...(heightStyle && { height: heightStyle })
+        }}
       >
         <div className={styles.carouselWrapper}>
           <div className={styles.carouselContainer}>
@@ -261,7 +269,7 @@ const HeroBannerHalfSlide: React.FC<HeroBannerHalfSlideProps> = ({
             </div>
           </div>
 
-          {banners.length > itemsToShow && (
+          {/* {banners.length > itemsToShow && (
             <div className={styles.dotsContainer}>
               {Array.from({ length: totalSlides + 1 }).map((_, index) => (
                 <button
@@ -272,7 +280,7 @@ const HeroBannerHalfSlide: React.FC<HeroBannerHalfSlideProps> = ({
                 />
               ))}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

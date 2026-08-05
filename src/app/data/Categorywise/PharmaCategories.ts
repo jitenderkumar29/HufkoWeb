@@ -157,6 +157,7 @@ export const PharmaCategories = [
   },
 ];
 
+
 export const pharmaCategoriesSubHeader: SubHeaderItem[] = [
   { name: "All" },
   { name: "Best Sellers" },
