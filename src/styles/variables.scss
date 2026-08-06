@@ -1,80 +1,90 @@
 @use "sass:map";
 // Max Screen Width
-  $max-width: 1300px;
+$max-width: 1300px;
 
-  // Colors
-  $primary-color-light: #b22f5b;  
-  // $primary-color-light: #f6cedd;  
-  // $primary-color-light: #f6aec8;  
-  // $primary-color-light: #f7a9c5;  
-  $primary-color: #861f41;  
-  // $primary-color: rgb(229 3 44);  
-  // $primary-color: #BE205A; @latest 
-  // $primary-color: #ECDCFF;  
-  $primary-color-dark : #580c25;   // Dark blue-gray
-  // $primary-color-dark : #f41365fc;   // Dark blue-gray
-  // $primary-color-dark : #950EDB;   // Dark blue-gray
-  $secondary-color: #dd4175;
-  // $secondary-color: #1E84CC;
-  $secondary-color-dark: #026bb6;
+// Colors
+$primary-color-light: #b22f5b;
+// $primary-color-light: #f6cedd;  
+// $primary-color-light: #f6aec8;  
+// $primary-color-light: #f7a9c5;  
+$primary-color: #861f41;
+// $primary-color: rgb(229 3 44);  
+// $primary-color: #BE205A; @latest 
+// $primary-color: #ECDCFF;  
+$primary-color-dark : #580c25; // Dark blue-gray
+// $primary-color-dark : #f41365fc;   // Dark blue-gray
+// $primary-color-dark : #950EDB;   // Dark blue-gray
+$secondary-color: #dd4175;
+// $secondary-color: #1E84CC;
+$secondary-color-dark: #026bb6;
 
-  // Button Color
-  $button-red: #E83F25;
-  $button-red-hover: #A62C2C;
-  $light-red: #f8eaea;
+// Button Color
+$button-red: #E83F25;
+$button-red-hover: #A62C2C;
+$light-red: #f8eaea;
 
-  // Neutral Colors
-  $white: #ffffff;
-  $black: #000000;
-  $light-gray: #f5f5f5;
-  $gray: #cccccc;
-  $gray-50: #f8f9fa;
-  $gray-100: #f1f3f5;
-  $gray-200: #e9ecef;
-  $gray-300: #dee2e6;
-  $gray-400: #ced4da;
-  $gray-500: #adb5bd;
-  $gray-600: #868e96;
-  $gray-700: #495057;
-  $gray-800: #343a40;
-  $gray-900: #212529;
-  $dark-gray: #555555;
-  $active-gray: #e8f5e9;
-  $red: #ff0000;
-  $green: #0a8a13;
-  $green-dark: #066d0f;
-  $green-hover-bg: #e8f5e9;
-  $blue: #0000ff;
-  $yellow: #ffff00;
-  $purple: #800080;
-  
+// Neutral Colors
+$white: #ffffff;
+$black: #000000;
+$light-gray: #f5f5f5;
+$gray: #cccccc;
+$gray-50: #f8f9fa;
+$gray-100: #f1f3f5;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$dark-gray: #555555;
+$active-gray: #e8f5e9;
+$red: #ff0000;
+$green: #0a8a13;
+$green-dark: #066d0f;
+$green-hover-bg: #e8f5e9;
+$blue: #0000ff;
+$yellow: #ffff00;
+$purple: #800080;
+
 // Title
-  $title-color: #111111;
-  $sub-title-color: #0f1111;
-  // Border
-  $border-color: #dee2e6;
-  $border-light: #e9ecef;
-  $border-dark: #ced4da;
-  $border-focus: #b5b5b5;
-  $border-very-light: #e0e0e0;
-  $border-very-dark: 2px solid #808080;
-  $border: 1px solid $border-color;
+$title-color: #111111;
+$sub-title-color: #0f1111;
+// Border
+$border-color: #dee2e6;
+$border-light: #e9ecef;
+$border-dark: #ced4da;
+$border-focus: #b5b5b5;
+$border-very-light: #e0e0e0;
+$border-very-dark: 2px solid #808080;
+$border: 1px solid $border-color;
 
-  // Status Colors
-  $success-color: #28a745;
-  $warning-color: #ffc107;
-  $error-color: #dc3545;
-  $info-color: #17a2b8;
+// Status Colors
+$success-color: #28a745;
+$warning-color: #ffc107;
+$error-color: #dc3545;
+$info-color: #17a2b8;
 
-  //Link Colors
-  $link: #0000ff;
-  $link-hover: #007bff;
+//Link Colors
+$link: #0000ff;
+$link-hover: #007bff;
 
 
-  // Shadow
-  
-  $subheader-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  $box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-  $box-shadow-light-1: 0 2px 4px rgba(0, 0, 0, 0.1);
-  $box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
-  $box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.9);
+// Shadow
+
+$subheader-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+$box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+$box-shadow-light-1: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
+$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.9);
+$card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+$card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;

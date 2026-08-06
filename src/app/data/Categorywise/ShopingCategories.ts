@@ -4,6 +4,7 @@ import { FashionCard } from "@/components/Shopping/HeroBanner/FashionFullSlideGr
 import { BannerItem } from "@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide";
 import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide";
 import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
+import { ScrollItem } from "@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll";
 import { CategoryItem } from "@/components/Shopping/ShopByItemcategory/ShopByCategory/ShopByCategory";
 
 export const ShopingCategories = [
@@ -2486,3 +2487,112 @@ export const bankOfferShoppingSlide: BankOfferSlideData[] = [
     alt: 'Extra20%_coupon'
   }
 ]
+
+export const ScrollItemWomensBeauty: ScrollItem[] = [
+  {
+    id: '1',
+    title: 'Discover Our Stores',
+    subtitle: "Check out what's trending now.",
+    imageUrl: '/products/Discover_Our_Stores.jpg',
+    link: '#'
+  },
+  {
+    id: '2',
+    title: 'THE GIFT STORE',
+    subtitle: 'Gifting Made Easy',
+    imageUrl: '/products/THE_GIFT_STORE.jpg',
+    link: '#',
+    badge: 'Gift'
+  },
+  {
+    id: '3',
+    title: 'THE ULTIMATE Bridal Beauty STORE',
+    subtitle: 'Get Shaadi Ready',
+    imageUrl: '/products/THE_ULIMITATE_Bridal_Beauty_STORE.jpg',
+    link: '#',
+    badge: 'Bridal'
+  },
+  {
+    id: '4',
+    title: 'NEW AT NYKAA',
+    subtitle: 'Fresh Finds. Just In.',
+    imageUrl: '/products/NEW_AT_NYKAA.jpg',
+    link: '#',
+    badge: 'New'
+  },
+  {
+    id: '5',
+    title: 'The Gen Z Store',
+    subtitle: 'Trending. Viral. You.',
+    imageUrl: '/products/The_Gen_Z_Store.jpg',
+    link: '#',
+    badge: 'Trending'
+  },
+  {
+    id: '6',
+    title: 'THE INGREDIENT STORE',
+    subtitle: 'Find Your Ideal Match',
+    imageUrl: '/products/THE_INGREDIENT_STORE.jpg',
+    link: '#',
+    badge: 'Ingredients'
+  },
+  {
+    id: '7',
+    title: 'Fragrance COLLECTIVE',
+    subtitle: 'Meet Your Scent Soulmate',
+    imageUrl: '/products/Fragrance_COLLECTIVE.jpg',
+    link: '#',
+    badge: 'Fragrance'
+  },
+  {
+    id: '8',
+    title: 'NYKAA K·Beauty Festival',
+    subtitle: 'Secrets To Healthy Skin',
+    imageUrl: '/products/NYKAA_K·Beauty_Festival.jpg',
+    link: '#',
+    badge: 'K-Beauty'
+  },
+  {
+    id: '9',
+    title: 'THE BEAUTY CLEARANCE SALE',
+    subtitle: 'UP TO 60% OFF',
+    description: 'Stock up now!',
+    imageUrl: '/products/THE_BEAUTY_CLEARANCE_SALE.jpg',
+    link: '#',
+    discount: '60% OFF'
+  },
+  {
+    id: '10',
+    title: 'THE travel beauty STORE',
+    subtitle: 'Glow On The Go',
+    imageUrl: '/products/THE_travel_beauty_STORE.jpg',
+    link: '#',
+    badge: 'Travel'
+  },
+  {
+    id: '11',
+    title: 'NYKAA BEAUTY REWIND 2025',
+    subtitle: 'Beauty You Loved',
+    imageUrl: '/products/NYKAA_BEAUTY_REWIND_2025.jpg',
+    link: '#',
+    badge: 'Rewind'
+  },
+  {
+    id: '12',
+    title: 'SHOWER STACK',
+    subtitle: 'BUILT TO SMELL GOOD',
+    description: 'Shower. Seal. Scent.',
+    imageUrl: '/products/SHOWER_STACK.jpg',
+    link: '#',
+    badge: 'Shower'
+  },
+  {
+    id: '13',
+    title: 'HEALTHY HAIR HABITS',
+    subtitle: 'TREAT WASH NOURISH',
+    description: 'Healthy Hair Essentials',
+    imageUrl: '/products/HEALTHY_HAIR_HABITS.jpg',
+    link: '#',
+    badge: 'Hair'
+  }
+];
