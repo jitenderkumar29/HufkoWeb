@@ -301,7 +301,7 @@ const HeaderCategory: React.FC = () => {
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
               imageSrc="/products/HUFKO_Store_FranchiseHufko.png"
@@ -343,7 +343,7 @@ const HeaderCategory: React.FC = () => {
               title="Premium food delivery app"
               titleHighlight="World's #1"
               subtitle="Enjoy fast online ordering on the Hufko app"
-              videoSrc="/videos/food_all_video.mp4"
+              videoSrc="/videos/delivery_by_hufko.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
               playStoreLink="/"
@@ -359,7 +359,7 @@ const HeaderCategory: React.FC = () => {
             />
             {/* <HufkoPrime /> */}
             <DownloadApp />
-            <FranchiseVideo
+            {/* <FranchiseVideo
               // Content
               badgeText="Download Featured App"
               badgeIcon={<Star size={16} />}
@@ -435,7 +435,7 @@ const HeaderCategory: React.FC = () => {
               waveColor="#f5f5f5"
             >
               <span style={{ color: '#ffffff' }}> in India - <br /> Start with Hufko</span>
-            </FranchiseVideo>
+            </FranchiseVideo> */}
             <FranchiseHufko
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
@@ -575,21 +575,55 @@ const HeaderCategory: React.FC = () => {
                   cardWidth={200}
                   showArrow={true}
                 />
+                 <FranchiseHufko
+              badgeText="World's Largest Instant Delivery App Platform"
+              badgeIcon={<Shield size={16} />}
+              heading="Own a World's Largest #1"
+              highlightText="Hypermarket Franchise"
+              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              stats={[
+                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
+                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
+              ]}
+              buttons={[
+                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
+              ]}
+              imageSrc="/products/Hypermarket_Franchise.png"
+              // imageSrc="/icons/HUFKO_Store.png"
+              imageAlt="HUFKO Store"
+              imageWidth={3000}
+              imageHeight={1800}
+              badges={[
+                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
+                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
+              ]}
+              backgroundColor="#055346"
+              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+              overlayOpacity={0.35}
+              className="custom-class"
+              showWave={true}
+              waveColor="white"
+              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+            >
+              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+            </FranchiseHufko>
               </div>
             )}
 
             {/* Electronics Sub-Sub Categories */}
             {isShoppingCategorySelected("electronics_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                <SubSubHeader
+                {/* <SubSubHeader
                   key={`electronics-${selectedElectronicsSubCategory}`}
                   items={electronicsSubSubCategoriesSubHeader}
                   defaultActive={selectedElectronicsSubCategory}
                   categoriesData={categoriesDataMap}
                   onSelect={handleElectronicsSubCategorySelect}
-                />
+                /> */}
                 <ShopByItemcategory />
-                {/* Add Electronics content here */}
               </div>
             )}
 
@@ -890,41 +924,7 @@ const HeaderCategory: React.FC = () => {
                 {/* Add Men's Fashion content here */}
               </div>
             )}
-            <FranchiseHufko
-              badgeText="World's Largest Instant Delivery App Platform"
-              badgeIcon={<Shield size={16} />}
-              heading="Own a World's Largest #1"
-              highlightText="Hypermarket Franchise"
-              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-              stats={[
-                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
-                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
-                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
-              ]}
-              buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
-                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
-              ]}
-              imageSrc="/products/Hypermarket_Franchise.png"
-              // imageSrc="/icons/HUFKO_Store.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={1800}
-              badges={[
-                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
-                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
-              ]}
-              backgroundColor="#055346"
-              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
-              overlayOpacity={0.35}
-              className="custom-class"
-              showWave={true}
-              waveColor="white"
-              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
-              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
-            >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+           
           </div>
         )}
 
@@ -1066,7 +1066,7 @@ const HeaderCategory: React.FC = () => {
                 { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Pharmaceutical_Franchise.png"
+              imageSrc="/products/Pharmaceutical_Franchise2.png"
               // imageSrc="/icons/HUFKO_Store.png"
               imageAlt="HUFKO Store"
               imageWidth={3000}
@@ -1075,7 +1075,7 @@ const HeaderCategory: React.FC = () => {
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
               ]}
-              backgroundColor="#055346"
+              backgroundColor="#1DCDB1"
               gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
               overlayOpacity={0.35}
               className="custom-class"

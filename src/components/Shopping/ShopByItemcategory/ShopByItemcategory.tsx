@@ -4,8 +4,9 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './ShopByItemcategory.module.scss';
 import ShopByCategory from './ShopByCategory/ShopByCategory';
-import { ElectronicsCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { ElectronicsCategories, HeadphonesHorizontalSliderOneLine, PcAccessoriesHorizontalSliderOneLine, SmartwatchesHorizontalSliderOneLine } from '@/app/data/Categorywise/ShopingCategories';
 import FilterShopByCategory from './FilterShopByCategory/FilterShopByCategory';
+import HorizontalSliderOneLine from '../ItemListDesigns/HorizontalSliderOneLine/HorizontalSliderOneLine';
 
 interface ShopByItemcategoryProps {
   // Add any props you might need
@@ -16,7 +17,7 @@ const ShopByItemcategory: React.FC<ShopByItemcategoryProps> = () => {
 
   const handleCategoryClick = (category: any) => {
     console.log('Category clicked:', category);
-    
+
     // Navigate with hierarchy info
     if (category.category && category.subCategory) {
       router.push(`/${category.category}/${category.subCategory}/${category.id}`);
@@ -51,7 +52,31 @@ const ShopByItemcategory: React.FC<ShopByItemcategoryProps> = () => {
               showArrows={true}
               onCategoryClick={handleCategoryClick}
             />
-            
+            <HorizontalSliderOneLine
+              products={HeadphonesHorizontalSliderOneLine}
+              title="Deals on Headphones"
+              exploreMoreLink="/deals/headphones"
+              backgroundColor="#F27311"
+              primaryColor="#ffffff"
+              secondaryColor="#F27311"
+            />
+            <HorizontalSliderOneLine
+              products={PcAccessoriesHorizontalSliderOneLine}
+              title="Deals on PC Accessories"
+              exploreMoreLink="/deals/pc-accessories"
+              backgroundColor="#F27311"
+              primaryColor="#ffffff"
+              secondaryColor="#F27311"
+            />
+            <HorizontalSliderOneLine
+              products={SmartwatchesHorizontalSliderOneLine}
+              title="Deals on Smartwatches"
+              exploreMoreLink="/deals/smartwatches"
+              backgroundColor="#F27311"
+              primaryColor="#ffffff"
+              secondaryColor="#F27311"
+            />
+
           </main>
         </div>
       </div>

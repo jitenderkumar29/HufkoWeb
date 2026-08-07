@@ -1,0 +1,502 @@
+@import "../../../../styles/variables.scss";
+// app/components/HorizontalSliderOneLine.module.scss
+// Variables (can be overridden via CSS custom properties)
+
+// $white: var(--white, #ffffff);
+// $white: #ffffff;
+// $black: #0f1111;
+// $dark-gray: #565959;
+$font-family: "Amazon Ember Regular", "Amazon Ember", Arial, sans-serif;
+
+.sliderWrapper {
+  font-family: $font-family;
+  background-color: $slider-bg;
+  border-radius: 10px;
+   padding: 1rem;
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+
+  // Responsive padding
+  @media (min-width: 768px) {
+    padding: 24px 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 28px 32px;
+  }
+}
+
+.sliderContainer {
+  margin: 0 auto;
+  position: relative;
+}
+
+// ===== HEADER =====
+.sliderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+
+  @media (min-width: 480px) {
+    margin-bottom: 8px;
+  }
+}
+
+.sliderTitle {
+  margin: 0;
+  color: $white;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+
+  // Responsive font sizes
+  @media (min-width: 480px) {
+    font-size: 22px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 28px;
+  }
+}
+
+.exploreMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  @media (min-width: 480px) {
+    font-size: 15px;
+    gap: 6px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $white;
+    outline-offset: 2px;
+  }
+}
+
+.exploreIcon {
+  flex-shrink: 0;
+}
+
+// ===== PRODUCT ROW =====
+.sliderRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.productsContainer {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 2px 8px 2px;
+  flex: 1;
+  min-height: 240px;
+
+  // Hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  // Dragging state
+  &.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+    user-select: none;
+
+    .productCard {
+      pointer-events: none;
+    }
+  }
+}
+
+// ===== PRODUCT CARD =====
+.productCard {
+//   flex: 0 0 160px;
+  min-width: 250px;
+  max-width: 250px;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  // Responsive card sizes
+  @media (min-width: 430px) {
+    flex: 0 0 180px;
+  }
+
+  @media (min-width: 600px) {
+    flex: 0 0 200px;
+  }
+
+  @media (min-width: 768px) {
+    flex: 0 0 220px;
+    border-radius: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    flex: 0 0 240px;
+  }
+
+  &:hover {
+    // transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.productLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:focus-visible {
+    outline: 2px solid $slider-secondary;
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+}
+
+.productImageWrapper {
+  position: relative;
+  aspect-ratio: 1 / 1;
+//   backgroun d-color: #f7f7f7;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 17, 17, 0.03);
+    pointer-events: none;
+  }
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+
+  .productCard:hover & {
+    // transform: scale(1.03);
+  }
+}
+
+.productInfo {
+  padding: 8px 10px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+
+  @media (min-width: 480px) {
+    padding: 10px 12px 14px 12px;
+  }
+}
+
+.productTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: $black;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;  // Changed from 2 to 1 for single line
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 18px;  // Reduced to match single line height (13px * 1.4 ≈ 18px)
+  max-height: 18px;  // Ensure it doesn't expand beyond one line
+
+  @media (min-width: 480px) {
+    font-size: 15px;
+    min-height: 20px;  // 14px * 1.4 ≈ 20px
+    max-height: 20px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 15px;
+    min-height: 21px;  // 15px * 1.4 ≈ 21px
+    max-height: 21px;
+  }
+}
+
+.productPrice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  font-size: 13px;
+
+  @media (min-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+.currentPrice {
+  font-weight: 700;
+  color: $black;
+  font-size: 17px;
+
+  @media (min-width: 480px) {
+    font-size: 17px;
+  }
+}
+
+.priceLabel {
+  font-size: 11px;
+  color: $dark-gray;
+  margin-left: 2px;
+
+  @media (min-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.oldPrice {
+  font-size: 11px;
+  color: $dark-gray;
+  text-decoration: line-through;
+
+  @media (min-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+// ===== ARROW BUTTONS =====
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: $white;
+  color: $black;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+
+  @media (min-width: 480px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: 768px) {
+    width: 44px;
+    height: 44px;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $slider-secondary;
+    outline-offset: 2px;
+  }
+}
+
+.arrowLeft {
+  left: -6px;
+
+  @media (min-width: 480px) {
+    left: -8px;
+  }
+
+  @media (min-width: 768px) {
+    left: -12px;
+  }
+}
+
+.arrowRight {
+  right: -6px;
+
+  @media (min-width: 480px) {
+    right: -8px;
+  }
+
+  @media (min-width: 768px) {
+    right: -12px;
+  }
+}
+
+// ===== RESPONSIVE BREAKPOINTS =====
+
+// Small mobile (320px - 429px)
+@media (max-width: 429px) {
+  .sliderWrapper {
+      padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .sliderTitle {
+    font-size: 24px;
+  }
+
+  .exploreMore {
+    font-size: 13px;
+  }
+
+  .productCard {
+    flex: 0 0 140px;
+    min-width: 120px;
+  }
+
+  .productTitle {
+    font-size: 15px;
+    min-height: 32px;
+  }
+
+  .currentPrice {
+    font-size: 17px;
+  }
+
+  .arrowButton {
+    width: 30px;
+    height: 30px;
+  }
+
+  .arrowLeft {
+    left: -4px;
+  }
+  .arrowRight {
+    right: -4px;
+  }
+}
+
+// Tablet (720px - 1023px)
+@media (min-width: 720px) and (max-width: 1023px) {
+  .sliderWrapper {
+     padding: 1rem;
+  }
+
+  .productCard {
+    flex: 0 0 200px;
+  }
+}
+
+// Desktop (1024px+)
+@media (min-width: 1024px) {
+  .sliderWrapper {
+      padding: 1rem;
+    border-radius: 10px;
+    margin: 24px 0;
+  }
+
+  .productsContainer {
+    gap: 16px;
+    padding: 4px 4px 12px 4px;
+  }
+
+  .productCard {
+    flex: 0 0 240px;
+  }
+
+  .arrowButton {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .arrowLeft {
+    left: -16px;
+  }
+  .arrowRight {
+    right: -16px;
+  }
+}
+
+// Large Desktop (1600px+)
+@media (min-width: 1600px) {
+  .sliderWrapper {
+     padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .productCard {
+    flex: 0 0 260px;
+  }
+
+  .sliderTitle {
+    font-size: 24px;
+  }
+
+  .exploreMore {
+    font-size: 17px;
+  }
+}
+
+// Touch-friendly: bigger tap targets on mobile
+@media (hover: none) and (pointer: coarse) {
+  .arrowButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .arrowLeft {
+    left: -2px;
+  }
+  .arrowRight {
+    right: -2px;
+  }
+}

@@ -95,7 +95,7 @@ const HufkoPrime: React.FC<HufkoPrimeProps> = ({
     benefits = defaultBenefits,
     brandName = 'HUFKO',
     title = 'PRIME',
-    subtitle = "India's Top Savings\nProgram for Food Lovers",
+    subtitle = "India's Top Savings\nProgram for Hufko Lovers",
     headingText = 'PRIME BENEFITS',
     moreButtonText = 'More',
     moreButtonUrl,

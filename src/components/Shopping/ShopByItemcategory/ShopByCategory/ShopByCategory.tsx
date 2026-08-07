@@ -206,11 +206,11 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
       {/* Header */}
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
-        {hasMultiplePages && (
+        {/* {hasMultiplePages && (
           <span className={styles.pageIndicator}>
             {currentPage + 1} / {totalPages}
           </span>
-        )}
+        )} */}
       </div>
 
       {/* Carousel */}
