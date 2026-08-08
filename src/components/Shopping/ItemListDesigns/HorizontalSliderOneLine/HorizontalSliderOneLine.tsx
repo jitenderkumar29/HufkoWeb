@@ -126,6 +126,7 @@ const HorizontalSliderOneLine: React.FC<HorizontalSliderOneLineProps> = ({
   };
 
   return (
+    <div className={styles.sliderContainerMain}>
     <div
       className={`${styles.sliderWrapper} ${className}`}
       style={
@@ -212,6 +213,7 @@ const HorizontalSliderOneLine: React.FC<HorizontalSliderOneLineProps> = ({
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

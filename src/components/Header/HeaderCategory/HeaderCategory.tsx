@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import styles from './HeaderCategory.module.scss';
-import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faWarehouse, faHandshake, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faHandshake, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories, groceryCategoriesSubHeader } from '@/app/data/Categorywise/GroceryCategories';
@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { bankOfferShoppingSlide, categoriesDataMap, electronicsSubSubCategoriesSubHeader, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { bankOfferShoppingSlide, categoriesDataMap, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -35,7 +35,6 @@ import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
 import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko';
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
 import SubSubHeader from '../SubSubHeader/SubSubHeader';
-import ShopByItemcategory from '@/components/Shopping/ShopByItemcategory/ShopByItemcategory';
 import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionRoundCarousel/FashionRoundCarousel';
 import HeroBannerSlide from '@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide';
 import TopBrandsOnOffer from '@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
@@ -43,9 +42,9 @@ import HeroBannerHalfSlide from '@/components/Shopping/HeroBanner/HeroBannerHalf
 import FashionFullSlideGrid from '@/components/Shopping/HeroBanner/FashionFullSlideGrid/FashionFullSlideGrid';
 import BankOfferSlide from '@/components/Shopping/HeroBanner/BankOfferSlide/BankOfferSlide';
 import HufkoPrime, { defaultBenefits } from '@/components/HomePage/HufkoPrime/HufkoPrime';
-import { ArrowRight, Clock, IndianRupee, Shield, Star, Users } from 'lucide-react';
+import { ArrowRight, Clock, IndianRupee, Shield, Users } from 'lucide-react';
 import VerticalScroll from '@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll';
-import FranchiseVideo from '@/components/HomePage/VideoPlayerDesign/FranchiseVideo/FranchiseVideo';
+import ShopByMainCategory from '@/components/Shopping/ShopByItemcategory/ShopByMainCategory/ShopByMainCategory';
 
 interface CategoryItem {
   id: string;
@@ -60,6 +59,8 @@ const HeaderCategory: React.FC = () => {
   const [selectedShoppingCategory, setSelectedShoppingCategory] = useState<string>('all');
   const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('all');
   const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedSubHeaderItem, setSelectedSubHeaderItem] = useState<SubHeaderItem | null>(null);
 
   // All categories including home
   const allCategories: CategoryItem[] = [
@@ -197,6 +198,9 @@ const HeaderCategory: React.FC = () => {
   };
 
   // Handle shopping subcategory selection
+  // In HeaderCategory.tsx
+
+  // Handle shopping subcategory selection
   const handleShoppingSubCategorySelect = (item: SubHeaderItem) => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedShoppingCategory(categoryId);
@@ -217,6 +221,11 @@ const HeaderCategory: React.FC = () => {
 
     router.push(`?${params.toString()}`, { scroll: false });
     console.log('Selected shopping category:', item);
+
+    // Pass the category to ShopByMainCategory component
+    // You can do this via props, context, or state management
+    // For example, if you have a state for the selected category:
+    setSelectedCategory(item.category || categoryId);
   };
 
   // Handle electronics subcategory selection
@@ -575,68 +584,73 @@ const HeaderCategory: React.FC = () => {
                   cardWidth={200}
                   showArrow={true}
                 />
-                 <FranchiseHufko
-              badgeText="World's Largest Instant Delivery App Platform"
-              badgeIcon={<Shield size={16} />}
-              heading="Own a World's Largest #1"
-              highlightText="Hypermarket Franchise"
-              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-              stats={[
-                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
-                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
-                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
-              ]}
-              buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
-                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
-              ]}
-              imageSrc="/products/Hypermarket_Franchise.png"
-              // imageSrc="/icons/HUFKO_Store.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={1800}
-              badges={[
-                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
-                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
-              ]}
-              backgroundColor="#055346"
-              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
-              overlayOpacity={0.35}
-              className="custom-class"
-              showWave={true}
-              waveColor="white"
-              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
-              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
-            >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+                <FranchiseHufko
+                  badgeText="World's Largest Instant Delivery App Platform"
+                  badgeIcon={<Shield size={16} />}
+                  heading="Own a World's Largest #1"
+                  highlightText="Hypermarket Franchise"
+                  description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+                  stats={[
+                    { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+                    { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
+                    { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
+                  ]}
+                  buttons={[
+                    { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                    { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
+                  ]}
+                  imageSrc="/products/Hypermarket_Franchise.png"
+                  // imageSrc="/icons/HUFKO_Store.png"
+                  imageAlt="HUFKO Store"
+                  imageWidth={3000}
+                  imageHeight={1800}
+                  badges={[
+                    { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
+                    { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
+                  ]}
+                  backgroundColor="#055346"
+                  gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+                  overlayOpacity={0.35}
+                  className="custom-class"
+                  showWave={true}
+                  waveColor="white"
+                  onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+                  onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+                >
+                  <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+                </FranchiseHufko>
               </div>
             )}
 
             {/* Electronics Sub-Sub Categories */}
             {isShoppingCategorySelected("electronics_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* <SubSubHeader
-                  key={`electronics-${selectedElectronicsSubCategory}`}
-                  items={electronicsSubSubCategoriesSubHeader}
-                  defaultActive={selectedElectronicsSubCategory}
-                  categoriesData={categoriesDataMap}
-                  onSelect={handleElectronicsSubCategorySelect}
-                /> */}
-                <ShopByItemcategory />
+                {/* Pass the selected category to ShopByMainCategory */}
+                <ShopByMainCategory
+                  category={selectedCategory}
+                  selectedItem={selectedSubHeaderItem}
+                  // Or pass the entire item with all data
+                  subHeaderItem={selectedSubHeaderItem}
+                />
               </div>
             )}
 
             {/* Home Decor Sub-Sub Categories */}
             {isShoppingCategorySelected("home_decor_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                <SubSubHeader
+                <ShopByMainCategory
+                  category={selectedCategory}
+                  selectedItem={selectedSubHeaderItem}
+                  // Or pass the entire item with all data
+                  subHeaderItem={selectedSubHeaderItem}
+                />
+                {/* <SubSubHeader
                   key={`homedecor-${selectedHomeDecorSubCategory}`}
                   items={homeDecorSubSubCategoriesSubHeader}
                   defaultActive={selectedHomeDecorSubCategory}
                   categoriesData={categoriesDataMap}
                   onSelect={handleHomeDecorSubCategorySelect}
-                />
+                /> */}
                 {/* Add Home Decor content here */}
               </div>
             )}
@@ -924,7 +938,7 @@ const HeaderCategory: React.FC = () => {
                 {/* Add Men's Fashion content here */}
               </div>
             )}
-           
+
           </div>
         )}
 
@@ -1100,7 +1114,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={WholesaleHeroBannerData} />
             <AllCategoryOne categories={WholesaleCategoriesList} />
-             <WelcomeVideoHufko
+            <WelcomeVideoHufko
               title=""
               titleHighlight=""
               subtitle=""

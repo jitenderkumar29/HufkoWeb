@@ -8,6 +8,11 @@
 // $dark-gray: #565959;
 $font-family: "Amazon Ember Regular", "Amazon Ember", Arial, sans-serif;
 
+.sliderContainerMain{
+  padding: 0rem 2rem;
+  background-color: $white;
+}
+
 .sliderWrapper {
   font-family: $font-family;
   background-color: $slider-bg;

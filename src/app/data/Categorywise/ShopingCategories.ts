@@ -94,21 +94,23 @@ export const ShopingCategories = [
   },
 ];
 
+// In your data file (ShopingCategories.ts or wherever this is defined)
+
 export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
-  { name: "All", url: "/" },
-  { name: "Electronics", id: "electronics_sub_header", url: "/electronics" },
-  { name: "Home Decor", id: "home_decor_sub_header", url: "/home_decor" },
-  { name: "Home Furniture", id: "home_furniture_sub_header", url: "/home_furniture" },
-  { name: "Mobiles & Tablets", id: "mobiles_tablets", url: "/mobiles_tablets" },
-  { name: "Men's Fashion", id: "mens_fashion_sub_header", url: "/men" },
-  { name: "Women's Fashion", id: "women_fashion_sub_header", url: "/women" },
-  { name: "Kid's Fashion", id: "kids_fashion_sub_header", url: "/kids" },
-  { name: "Women's Beauty", id: "women_beauty_sub_header", url: "/women_beauty" },
-  { name: "TVs & Appliances", id: "tvs_appliances_sub_header", url: "/tvs_appliances" },
-  { name: "Beauty, Food", id: "beauty_food_sub_header", url: "/beauty_food" },
-  { name: "Toys & Sports", id: "toys_sports_sub_header", url: "/toys_sports" },
-  { name: "Lifestyle", id: "lifestyle_sub_header", url: "/lifestyle" },
-  { name: "Jewellery", id: "jewellery_sub_header", url: "/jewellery" },
+  { name: "All", url: "/", category: "all" },
+  { name: "Electronics", id: "electronics_sub_header", url: "/electronics", category: "electronics" },
+  { name: "Home Decor", id: "home_decor_sub_header", url: "/home_decor", category: "home_decor" },
+  { name: "Home Furniture", id: "home_furniture_sub_header", url: "/home_furniture", category: "home_furniture" },
+  { name: "Mobiles & Tablets", id: "mobiles_tablets", url: "/mobiles_tablets", category: "mobiles_tablets" },
+  { name: "Men's Fashion", id: "mens_fashion_sub_header", url: "/men", category: "mens_fashion" },
+  { name: "Women's Fashion", id: "women_fashion_sub_header", url: "/women", category: "women_fashion" },
+  { name: "Kid's Fashion", id: "kids_fashion_sub_header", url: "/kids", category: "kids_fashion" },
+  { name: "Women's Beauty", id: "women_beauty_sub_header", url: "/women_beauty", category: "women_beauty" },
+  { name: "TVs & Appliances", id: "tvs_appliances_sub_header", url: "/tvs_appliances", category: "tvs_appliances" },
+  { name: "Beauty, Food", id: "beauty_food_sub_header", url: "/beauty_food", category: "beauty_food" },
+  { name: "Toys & Sports", id: "toys_sports_sub_header", url: "/toys_sports", category: "toys_sports" },
+  { name: "Lifestyle", id: "lifestyle_sub_header", url: "/lifestyle", category: "lifestyle" },
+  { name: "Jewellery", id: "jewellery_sub_header", url: "/jewellery", category: "jewellery" },
 ];
 
 export const electronicsSubSubCategoriesSubHeader: SubHeaderItem[] = [
@@ -2903,3 +2905,755 @@ export const SmartwatchesHorizontalSliderOneLine = [
     link: "/",
   },
 ];
+
+export const electronicsCarouselCategories = [
+  { 
+    id: '0', 
+    name: "Smartphones", 
+    imageUrl: "/products/smartphones_electronics2.jpg", 
+    url: "/electronics/smartphones",
+    category: "electronics"
+  },
+  { 
+    id: '1', 
+    name: "Laptops & Computers", 
+    imageUrl: "/products/laptop._SS400_QL85_.jpg", 
+    url: "/electronics/laptops",
+    category: "electronics"
+  },
+  { 
+    id: '2', 
+    name: "Tablets", 
+    imageUrl: "/products/02_Halos_copy._SS400_QL85_FMpng_.png", 
+    url: "/electronics/tablets",
+    category: "electronics"
+  },
+  { 
+    id: '3', 
+    name: "Headphones & Earphones", 
+    imageUrl: "/products/Headphones._SS400_QL85_.jpg", 
+    url: "/electronics/headphones",
+    category: "electronics"
+  },
+  { 
+    id: '4', 
+    name: "Smart Watches", 
+    imageUrl: "/products/Smartwatches._SS400_QL85_.jpg", 
+    url: "/electronics/smartwatches",
+    category: "electronics"
+  },
+  { 
+    id: '5', 
+    name: "Cameras & Photography", 
+    imageUrl: "/products/Camera__Accessories._SS400_QL85_.jpg", 
+    url: "/electronics/cameras",
+    category: "electronics"
+  },
+  { 
+    id: '6', 
+    name: "Televisions", 
+    imageUrl: "/products/televisions_electronics.jpg", 
+    url: "/electronics/tvs",
+    category: "electronics"
+  },
+  { 
+    id: '7', 
+    name: "Audio Speakers", 
+    imageUrl: "/products/9_audio._CB795899201_.png", 
+    url: "/electronics/speakers",
+    category: "electronics"
+  },
+  { 
+    id: '8', 
+    name: "Gaming Consoles", 
+    imageUrl: "/products/Gaming_Laptops._SS400_QL85_.jpg", 
+    url: "/electronics/gaming",
+    category: "electronics"
+  },
+  
+  { 
+    id: '9', 
+    name: "Computer Accessories", 
+    imageUrl: "/products/Computer_Accessories._SS400_QL85_.jpg", 
+    url: "/electronics/accessories",
+    category: "electronics"
+  },
+  { 
+    id: '10', 
+    name: "Printers & Scanners", 
+    imageUrl: "/products/printer._SS400_QL85_.jpg", 
+    url: "/electronics/printers",
+    category: "electronics"
+  },
+  { 
+    id: '11', 
+    name: "Storage Devices", 
+    imageUrl: "/products/storage._SS400_QL85_.jpg", 
+    url: "/electronics/storage",
+    category: "electronics"
+  },
+  { 
+    id: '12', 
+    name: "Mobile Accessories", 
+    imageUrl: "/products/mobile_accessories_electronics.jpg", 
+    url: "/electronics/mobile-accessories",
+    category: "electronics"
+  },
+  { 
+    id: '13', 
+    name: "Networking Devices", 
+    imageUrl: "/products/networking_devices_electronics.jpg", 
+    url: "/electronics/networking",
+    category: "electronics"
+  },
+  { 
+    id: '14', 
+    name: "Smart Home Devices", 
+    imageUrl: "/products/smart_home_electronics.jpg", 
+    url: "/electronics/smart-home",
+    category: "electronics"
+  },
+  { 
+    id: '15', 
+    name: "Fitness Trackers", 
+    imageUrl: "/products/fitness_trackers_electronics.jpg", 
+    url: "/electronics/fitness-trackers",
+    category: "electronics"
+  },
+  { 
+    id: '16', 
+    name: "Drone & Gadgets", 
+    imageUrl: "/products/drones_gadgets_electronics.jpg", 
+    url: "/electronics/drones",
+    category: "electronics"
+  },
+  { 
+    id: '17', 
+    name: "Monitor & Display", 
+    imageUrl: "/products/Monitors._SS400_QL85_.jpg", 
+    url: "/electronics/monitors",
+    category: "electronics"
+  },
+  { 
+    id: '18', 
+    name: "Software & Antivirus", 
+    imageUrl: "/products/software_antivirus_electronics.jpg", 
+    url: "/electronics/software",
+    category: "electronics"
+  },
+  { 
+    id: '19', 
+    name: "Tech Deals", 
+    imageUrl: "/products/tech_deals_electronics.jpg", 
+    url: "/electronics/deals",
+    category: "electronics"
+  },
+  { 
+    id: '20', 
+    name: 'Desktops', 
+    imageUrl: '/products/Desktops._SS400_QL85_.jpg', 
+    url: '/desktops',
+    category: "electronics"
+  },
+  { 
+    id: '21', 
+    name: 'Video Games', 
+    imageUrl: '/products/Video-game_Halo._SS400_QL85_FMpng_.png', 
+    url: '/video-games',
+    category: 'electronics',
+  },
+  { 
+    id: '22', 
+    name: 'Stationery', 
+    imageUrl: '/products/Stationery._SS400_QL85_.jpg', 
+    url: '/stationery',
+    category: 'electronics',
+  },
+   { 
+    id: '23', 
+    name: 'Musical Instruments', 
+    imageUrl: '/products/musical-instruments._SS400_QL85_.jpg', 
+    url: '/musical-instruments',
+    category: 'electronics',
+  },
+  { 
+    id: '24', 
+    name: 'Software', 
+    imageUrl: '/products/Software_Halo._SS400_QL85_.jpg', 
+    url: '/software',
+    category: 'electronics',
+  },
+   { 
+    id: '25', 
+    name: 'Components', 
+    imageUrl: '/products/components._SS400_QL85_.jpg', 
+    url: '/components',
+    category: 'electronics',
+  },
+  { 
+    id: '26', 
+    name: 'Networking', 
+    imageUrl: '/products/networking._SS400_QL85_.jpg', 
+    url: '/networking',
+    category: 'electronics',
+  },
+  
+];
+
+export const slidesElectronicsFashion: HeroSlide[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    description: '',
+    imageUrl: '/products/Electronics_1500x460._SX1500_QL85_FMpng.png',
+    url: '/',
+    ctaText: '',
+    discount: '',
+    alt: ''
+  },
+  {
+    id: '2',
+    title: '',
+    subtitle: '',
+    description: '',
+    imageUrl: '/products/Electronics_2.png',
+    url: '/',
+    ctaText: '',
+    discount: '',
+    alt: ''
+  },
+  {
+    id: '3',
+    title: '',
+    subtitle: '',
+    description: '',
+    imageUrl: '/products/Electronics_3.png',
+    url: '/',
+    ctaText: '',
+    discount: '',
+    alt: ''
+  },
+  // {
+  //   id: '4',
+  //   title: '',
+  //   subtitle: '',
+  //   description: '',
+  //   imageUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_2.png',
+  //   url: '/',
+  //   ctaText: '',
+  //   discount: '',
+  //   alt: ''
+  // },
+  // {
+  //   id: '5',
+  //   title: '',
+  //   subtitle: '',
+  //   description: '',
+  //   imageUrl: '/products/SPB_1500x460._SX1500_QL85_FMpng_.png',
+  //   url: '/',
+  //   ctaText: '',
+  //   discount: '',
+  //   alt: ''
+  // }
+];
+
+export const toElectronicsItems = [
+  {
+    id: '1',
+    title: 'Asus Tab',
+    subtitle: 'New Launch | Latest Tablet',
+    imageUrl: '/products/a61a436a233ae87c.png',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Realme Techlife Power Bank',
+    subtitle: 'Fast Charging | 2000mAh+ | Min. 50% off',
+    imageUrl: '/products/44dc95716403f4b0.png',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Electronic Accessory',
+    subtitle: 'Premium Quality | Best Price',
+    imageUrl: '/products/acd1b0f0e403a8c4.png',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Infinix XWatch H5 Pro',
+    subtitle: 'Smart Watch | Premium Design | Up to 40% off',
+    imageUrl: '/products/3e2663b4a7c108d2.png',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Motorola Pad 70 Groove',
+    subtitle: '8GB RAM | 256GB ROM | 12.1-inch | Gaming Tablet',
+    imageUrl: '/products/15fc67670f5d1418.png',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Hero XOOM 160',
+    subtitle: 'New Launch | Premium Features',
+    imageUrl: '/products/c3c588b267a9c891.png',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Surface Pro 12',
+    subtitle: 'Microsoft Surface | Premium Laptop | Up to 35% off',
+    imageUrl: '/products/4bdf69554d531026.png',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Epson New Launch Printer',
+    subtitle: 'All-in-One Printer | Best Quality',
+    imageUrl: '/products/e6eb321f14efcc27.png',
+    link: '/'
+  },
+  {
+    id: '9',
+    title: 'boAt Trimmer',
+    subtitle: 'Personal Care | Grooming Essentials | Up to 50% off',
+    imageUrl: '/products/1938612b5b1cb66d.png',
+    link: '/'
+  },
+  {
+    id: '10',
+    title: 'Kandao Funcam 360',
+    subtitle: '360° Camera | Premium Capture',
+    imageUrl: '/products/5c1aa4e0305a1aac.png',
+    link: '/'
+  },
+  {
+    id: '11',
+    title: 'ASUS Vivobook 15',
+    subtitle: 'Latest Launch Laptop | Up to 40% off',
+    imageUrl: '/products/e349654347aa6a2e.png',
+    link: '/'
+  },
+  {
+    id: '12',
+    title: 'Electronic Accessory',
+    subtitle: 'Premium Quality | Best Price',
+    imageUrl: '/products/39d3a3af51fd5e3d.png',
+    link: '/'
+  },
+  {
+    id: '13',
+    title: 'Logitech New Launches',
+    subtitle: 'Premium Laptop Accessories | Up to 35% off',
+    imageUrl: '/products/3ac3856c9ba68c8c.png',
+    link: '/'
+  },
+  {
+    id: '14',
+    title: 'Onmo Core Bluetooth Controller',
+    subtitle: 'Premium Gaming Controller | Up to 45% off',
+    imageUrl: '/products/c8a988d248d5be8f.png',
+    link: '/'
+  }
+];
+
+export const topDealsElectronicsCategories: CategoryItem[] = [
+  { 
+    id: 'B0FN9WN6XD', 
+    name: 'Deal 1', 
+    image: '/products/L_1.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0FFTLRYRV', 
+    name: 'Deal 2', 
+    image: '/products/L_2.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GNMG31LQ', 
+    name: 'Deal 3', 
+    image: '/products/L_3.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GWQGM5FJ', 
+    name: 'Deal 4', 
+    image: '/products/L_4.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0DSFQZTVW', 
+    name: 'Deal 5', 
+    image: '/products/L_5.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GTZHLMG3', 
+    name: 'Deal 6', 
+    image: '/products/L_6.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G495PMV8', 
+    name: 'Deal 7', 
+    image: '/products/L_7.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GYRK1RZC', 
+    name: 'Deal 8', 
+    image: '/products/L_8.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GX4W73SM', 
+    name: 'Deal 9', 
+    image: '/products/L_9.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G8HBRT27', 
+    name: 'Deal 10', 
+    image: '/products/L_10.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GSVTDN5G', 
+    name: 'Deal 11', 
+    image: '/products/L_11.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GMQP579H', 
+    name: 'Deal 12', 
+    image: '/products/L_12.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G2BHDDB8', 
+    name: 'Deal 13', 
+    image: '/products/L_13.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0DSHWKNZG', 
+    name: 'Deal 14', 
+    image: '/products/L_14.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GRHZDJBJ', 
+    name: 'Deal 15', 
+    image: '/products/L_15.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GXJYZ4X8', 
+    name: 'Deal 16', 
+    image: '/products/L_16.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0F8P844W2', 
+    name: 'Deal 17', 
+    image: '/products/L_17.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0BJDJY8LY', 
+    name: 'Deal 18', 
+    image: '/products/L_18.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0F8P4Y7VF', 
+    name: 'Deal 19', 
+    image: '/products/L_19.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0FMRTWFMN', 
+    name: 'Deal 20', 
+    image: '/products/L_20.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0H3PV7418', 
+    name: 'Deal 21', 
+    image: '/products/L_21.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GWHGS8P5', 
+    name: 'Deal 22', 
+    image: '/products/L_22.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0F9X5DSBS', 
+    name: 'Deal 23', 
+    image: '/products/L_23.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0FDKS93JV', 
+    name: 'Deal 24', 
+    image: '/products/L_24.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0H4QMDD6J', 
+    name: 'Deal 25', 
+    image: '/products/L_25.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GTZKGNM6', 
+    name: 'Deal 26', 
+    image: '/products/L_26.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GX4W73SM', 
+    name: 'Deal 27', 
+    image: '/products/L_27.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GVRZD89W', 
+    name: 'Deal 28', 
+    image: '/products/L_28.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GVNJ8KPB', 
+    name: 'Deal 29', 
+    image: '/products/L_29.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G46HR61G', 
+    name: 'Deal 30', 
+    image: '/products/L_30.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0D49W5KZP', 
+    name: 'Deal 31', 
+    image: '/products/L_31.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G5NG4FFW', 
+    name: 'Deal 32', 
+    image: '/products/L_32.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'deals',
+    subSubCategory: 'top-deals'
+  }
+];
+export const topDealsOnTabletsCategories: CategoryItem[] = [
+  { 
+    id: 'B0FJG1V6RJ', 
+    name: 'Tablet Deal 1', 
+    image: '/products/T1.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0FNWNZZ1B', 
+    name: 'Tablet Deal 2', 
+    image: '/products/T2.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GPVX566R', 
+    name: 'Tablet Deal 3', 
+    image: '/products/T3.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GDPWLJMM', 
+    name: 'Tablet Deal 4', 
+    image: '/products/T4.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0GWHYQW77', 
+    name: 'Tablet Deal 5', 
+    image: '/products/T5.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0FBRS76BR', 
+    name: 'Tablet Deal 6', 
+    image: '/products/T6.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G1C13SB3', 
+    name: 'Tablet Deal 7', 
+    image: '/products/T7.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0D7N23QKD', 
+    name: 'Tablet Deal 8', 
+    image: '/products/T8.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  },
+  { 
+    id: 'B0G7F4FJSC', 
+    name: 'Tablet Deal 9', 
+    image: '/products/T9.jpg', 
+    url: '/',
+    category: 'electronics',
+    subCategory: 'tablets',
+    subSubCategory: 'top-deals'
+  }
+];
+
+export const bankOfferElectronicsSlide: BankOfferSlideData[] = [
+  {
+    id: '6a5dfa464622ef5292d5718d',
+    title: 'Get Extra 15% Off',
+    subtitle: 'On Your 1st Purchase',
+    description: 'USE CODE NEW15',
+    imageUrl: '/products/AugART26_Bank_PC_1.jpg',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: '15% OFF',
+    alt: 'Extra15%_coupon_Nonloggedin'
+  },
+  // {
+  //   id: '6a5dfa245a11ba6bbc89c198',
+  //   title: 'Get Extra 20% Off',
+  //   subtitle: 'On Your 1st App Order',
+  //   description: 'USE CODE EXTRA20%',
+  //   imageUrl: '/products/Get_Extra_20_Off.jpg',
+  //   url: '/',
+  //   ctaText: 'Shop Now',
+  //   discount: '20% OFF',
+  //   alt: 'Extra20%_coupon'
+  // }
+]

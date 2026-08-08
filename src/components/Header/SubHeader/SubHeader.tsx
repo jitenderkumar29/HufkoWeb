@@ -10,6 +10,7 @@ export interface SubHeaderItem {
   url?: string;
   icon?: React.ReactNode;
   id?: string;
+  category?: string;
 }
 
 export interface CategoryData {
