@@ -1,8 +1,8 @@
-@use "../../../styles/variables.scss" as *;
+@use "../../../../styles/variables.scss" as *;
 .heroBanner {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 400px;
   background-color: #ffffff;
   margin-top: 0;
   overflow: hidden;
@@ -24,6 +24,29 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+
+    &.leftAlign {
+      .bannerContent {
+        left: 0;
+        padding-left: 5rem;
+        padding-right: 2rem;
+        align-items: center;
+        text-align: center;
+        // background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, transparent 100%);
+      }
+    }
+
+    &.rightAlign {
+      .bannerContent {
+        right: 0;
+        padding-right: 5rem;
+        padding-left: 2rem;
+        // background: linear-gradient(to left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, transparent 100%);
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
   }
 
   .bannerLink {
@@ -35,52 +58,56 @@
   }
 
   .bannerContent {
-    padding-left: 5rem;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: start;
-    height: 100%;
+    justify-content: center;
     padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 0 8px;
-    position: relative;
     z-index: 1;
+    transition: all 0.3s ease;
+    Color: $white;
+    // padding-left: 5rem;
   }
 
   .discountBadge {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    color: #ff5722;
-    margin-bottom: 10px;
+    // color: #ff5722;
+    // margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    Color: $white;
   }
 
   .saleText {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #333;
     margin-bottom: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    Color: $white;
   }
 
   .category {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     color: #666;
     margin-bottom: 5px;
+    Color: $white;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #444;
     margin-bottom: 15px;
     font-weight: 500;
+    Color: $white;
   }
 
   .offText {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #ff5722;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -156,8 +183,18 @@
     height: 350px;
 
     .bannerContent {
-      padding-left: 5rem;
+      width: 55%;
       padding: 15px;
+    }
+
+    .bannerItem {
+      &.leftAlign .bannerContent {
+        padding-left: 3rem;
+      }
+
+      &.rightAlign .bannerContent {
+        padding-right: 3rem;
+      }
     }
 
     .discountBadge {
@@ -165,7 +202,7 @@
     }
 
     .saleText {
-      font-size: 1.5rem;
+      font-size: 2.8rem;
     }
 
     .category {
@@ -187,8 +224,20 @@
     height: 300px;
 
     .bannerContent {
+      width: 70%;
       padding: 10px;
-      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .bannerItem {
+      &.leftAlign .bannerContent {
+        padding-left: 2rem;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+      }
+
+      &.rightAlign .bannerContent {
+        padding-right: 2rem;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+      }
     }
 
     .discountBadge {
@@ -239,5 +288,21 @@
 @media (max-width: 480px) {
   .heroBanner {
     height: 250px;
+
+    .bannerContent {
+      width: 85%;
+    }
+
+    .bannerItem {
+      &.leftAlign .bannerContent {
+        padding-left: 1rem;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 80%, transparent 100%);
+      }
+
+      &.rightAlign .bannerContent {
+        padding-right: 1rem;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 80%, transparent 100%);
+      }
+    }
   }
 }

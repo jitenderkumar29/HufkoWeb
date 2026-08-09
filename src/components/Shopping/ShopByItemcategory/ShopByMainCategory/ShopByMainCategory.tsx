@@ -56,6 +56,8 @@ import HorizontalSliderOneLine from '../../ItemListDesigns/HorizontalSliderOneLi
 import ShopByCategory from '../ShopByCategory/ShopByCategory';
 import { useRouter } from 'next/navigation';
 import VerticalScrollSquare from '../../ItemListDesigns/VerticalScrollSquare/VerticalScrollSquare';
+import HeroBannerLeftContent from '../../HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent';
+import { FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -72,7 +74,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = React.useState<string>('all');
     const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = React.useState<string>('all');
 
-     const router = useRouter();
+    const router = useRouter();
 
     // Use the category prop to filter or display content
     React.useEffect(() => {
@@ -111,17 +113,17 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     };
 
     const handleCategoryClick = (category: any) => {
-    console.log('Category clicked:', category);
+        console.log('Category clicked:', category);
 
-    // Navigate with hierarchy info
-    if (category.category && category.subCategory) {
-      router.push(`/${category.category}/${category.subCategory}/${category.id}`);
-    } else if (category.category) {
-      router.push(`/${category.category}/${category.id}`);
-    } else {
-      router.push(category.url || `/${category.id}`);
-    }
-  };
+        // Navigate with hierarchy info
+        if (category.category && category.subCategory) {
+            router.push(`/${category.category}/${category.subCategory}/${category.id}`);
+        } else if (category.category) {
+            router.push(`/${category.category}/${category.id}`);
+        } else {
+            router.push(category.url || `/${category.id}`);
+        }
+    };
 
     // Render content based on category
     const renderCategoryContent = () => {
@@ -135,21 +137,9 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             autoScroll={false}
                             showScrollbar={false}
                         />
-                        <HeroBannerSlide
-                            slides={slidesElectronicsFashion}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            showTitle={true}
-                            showSubtitle={true}
-                            showCTA={true}
-                            onSlideClick={(slide, index) => {
-                                console.log(`Slide ${index + 1} clicked:`, slide);
-                            }}
-                            onSlideChange={(index) => {
-                                console.log(`Current slide: ${index + 1}`);
-                            }}
+                        <HeroBannerLeftContent
+                            banners={slidesElectronicsFashion}
+                            defaultAlign="left" // Default alignment if not specified per banner
                         />
                         <BankOfferSlide
                             slides={bankOfferElectronicsSlide}

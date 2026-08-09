@@ -8,7 +8,7 @@ import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories, groceryCategoriesSubHeader } from '@/app/data/Categorywise/GroceryCategories';
 import HeroBannerAll from '@/components/HomePage/HeroBannerAll/HeroBannerAll';
 import { ShopingHeroBannerData } from '@/app/data/HeroBannerwise/ShopingHero';
-import { FoodHeroBannerData } from '@/app/data/HeroBannerwise/FoodHero';
+import { FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
 import { GroceryHeroBannerData } from '@/app/data/HeroBannerwise/GroceryHero';
 import { FlowerHeroBannerData } from '@/app/data/HeroBannerwise/FlowerHero';
 import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
@@ -45,6 +45,7 @@ import HufkoPrime, { defaultBenefits } from '@/components/HomePage/HufkoPrime/Hu
 import { ArrowRight, Clock, IndianRupee, Shield, Users } from 'lucide-react';
 import VerticalScroll from '@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll';
 import ShopByMainCategory from '@/components/Shopping/ShopByItemcategory/ShopByMainCategory/ShopByMainCategory';
+import HeroBannerLeftContent from '@/components/Shopping/HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent';
 
 interface CategoryItem {
   id: string;
@@ -346,7 +347,12 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={FoodHeroBannerData} />
+            {/* <HeroBannerAll banners={FoodHeroBannerData} /> */}
+
+            <HeroBannerLeftContent
+              banners={FoodHeroBannerLeftContent}
+              defaultAlign="left" // Default alignment if not specified per banner
+            />
             <AllCategory categories={FoodsCategories} />
             <WelcomeVideoHufko
               title="Premium food delivery app"
@@ -578,12 +584,27 @@ const HeaderCategory: React.FC = () => {
               <div className={styles.electronicsSubCategory}>
                 <HeroBannerAll banners={ShopingHeroBannerData} />
                 <AllCategoryOne categories={ShopingCategories} />
+                <WelcomeVideoHufko
+                  title="Premium food delivery app"
+                  titleHighlight="World's #1"
+                  subtitle="Enjoy fast online ordering on the Hufko app"
+                  videoSrc="/videos/shopping_section_video.mp4"
+                  logoSrc="/icons/logo_video.png"
+                  appStoreLink="/"
+                  playStoreLink="/"
+                  className="custom-hero"
+                  showLogo={false}
+                  showAppStore={true}
+                  showPlayStore={true}
+                  muted={true}
+                />
                 <ShoppingSlides1
                   title="Today's Top Smartphone Deals"
                   deals={ShopingSlide1SmartPhoneDeals}
                   cardWidth={200}
                   showArrow={true}
                 />
+
                 <FranchiseHufko
                   badgeText="World's Largest Instant Delivery App Platform"
                   badgeIcon={<Shield size={16} />}
@@ -621,7 +642,6 @@ const HeaderCategory: React.FC = () => {
                 </FranchiseHufko>
               </div>
             )}
-
             {/* Electronics Sub-Sub Categories */}
             {isShoppingCategorySelected("electronics_sub_header") && (
               <div className={styles.electronicsSubCategory}>

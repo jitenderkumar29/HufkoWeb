@@ -2,6 +2,7 @@ import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
 import { BankOfferSlideData } from "@/components/Shopping/HeroBanner/BankOfferSlide/BankOfferSlide";
 import { FashionCard } from "@/components/Shopping/HeroBanner/FashionFullSlideGrid/FashionFullSlideGrid";
 import { BannerItem } from "@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide";
+import { BannerItemContent } from "@/components/Shopping/HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent";
 import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide";
 import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
 import { ScrollItem } from "@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll";
@@ -2910,49 +2911,49 @@ export const electronicsCarouselCategories = [
   { 
     id: '0', 
     name: "Smartphones", 
-    imageUrl: "/products/smartphones_electronics2.jpg", 
+    imageUrl: "/products/smartphones_electronics1.jpg", 
     url: "/electronics/smartphones",
     category: "electronics"
   },
   { 
     id: '1', 
     name: "Laptops & Computers", 
-    imageUrl: "/products/laptop._SS400_QL85_.jpg", 
+    imageUrl: "/products/laptop._SS400_QL85_1.jpg", 
     url: "/electronics/laptops",
     category: "electronics"
   },
   { 
     id: '2', 
     name: "Tablets", 
-    imageUrl: "/products/02_Halos_copy._SS400_QL85_FMpng_.png", 
+    imageUrl: "/products/02_Halos_copy._SS400_QL85_FMpng_1.png", 
     url: "/electronics/tablets",
     category: "electronics"
   },
   { 
     id: '3', 
     name: "Headphones & Earphones", 
-    imageUrl: "/products/Headphones._SS400_QL85_.jpg", 
+    imageUrl: "/products/Headphones._SS400_QL85_1.jpg", 
     url: "/electronics/headphones",
     category: "electronics"
   },
   { 
     id: '4', 
     name: "Smart Watches", 
-    imageUrl: "/products/Smartwatches._SS400_QL85_.jpg", 
+    imageUrl: "/products/Smartwatches._SS400_QL85_1.jpg", 
     url: "/electronics/smartwatches",
     category: "electronics"
   },
   { 
     id: '5', 
     name: "Cameras & Photography", 
-    imageUrl: "/products/Camera__Accessories._SS400_QL85_.jpg", 
+    imageUrl: "/products/Camera__Accessories._SS400_QL85_1.jpg", 
     url: "/electronics/cameras",
     category: "electronics"
   },
   { 
     id: '6', 
     name: "Televisions", 
-    imageUrl: "/products/televisions_electronics.jpg", 
+    imageUrl: "/products/televisions_electronics1.jpg", 
     url: "/electronics/tvs",
     category: "electronics"
   },
@@ -2966,7 +2967,7 @@ export const electronicsCarouselCategories = [
   { 
     id: '8', 
     name: "Gaming Consoles", 
-    imageUrl: "/products/Gaming_Laptops._SS400_QL85_.jpg", 
+    imageUrl: "/products/Gaming_Laptops._SS400_QL85_1.jpg", 
     url: "/electronics/gaming",
     category: "electronics"
   },
@@ -2974,35 +2975,35 @@ export const electronicsCarouselCategories = [
   { 
     id: '9', 
     name: "Computer Accessories", 
-    imageUrl: "/products/Computer_Accessories._SS400_QL85_.jpg", 
+    imageUrl: "/products/Computer_Accessories._SS400_QL85_1.jpg", 
     url: "/electronics/accessories",
     category: "electronics"
   },
   { 
     id: '10', 
     name: "Printers & Scanners", 
-    imageUrl: "/products/printer._SS400_QL85_.jpg", 
+    imageUrl: "/products/printer._SS400_QL85_1.jpg", 
     url: "/electronics/printers",
     category: "electronics"
   },
   { 
     id: '11', 
     name: "Storage Devices", 
-    imageUrl: "/products/storage._SS400_QL85_.jpg", 
+    imageUrl: "/products/storage._SS400_QL85_1.jpg", 
     url: "/electronics/storage",
     category: "electronics"
   },
   { 
     id: '12', 
     name: "Mobile Accessories", 
-    imageUrl: "/products/mobile_accessories_electronics.jpg", 
+    imageUrl: "/products/mobile_accessories_electronics1.jpg", 
     url: "/electronics/mobile-accessories",
     category: "electronics"
   },
   { 
     id: '13', 
     name: "Networking Devices", 
-    imageUrl: "/products/networking_devices_electronics.jpg", 
+    imageUrl: "/products/networking_devices_electronics1.jpg", 
     url: "/electronics/networking",
     category: "electronics"
   },
@@ -3100,63 +3101,54 @@ export const electronicsCarouselCategories = [
   
 ];
 
-export const slidesElectronicsFashion: HeroSlide[] = [
+export const slidesElectronicsFashion : BannerItemContent[] = [
   {
     id: '1',
-    title: '',
-    subtitle: '',
-    description: '',
-    imageUrl: '/products/Electronics_1500x460._SX1500_QL85_FMpng.png',
-    url: '/',
-    ctaText: '',
-    discount: '',
-    alt: ''
+    title: 'Premium Electronics Collection',
+    subtitle: 'Latest Tech at Best Prices',
+    category: 'Electronics',
+    discount: 'Up to 40% OFF',
+    imgUrl: '/products/Electronics_1500x460._SX1500_QL85_FMpng1.png',
+    align: 'left'
   },
   {
     id: '2',
-    title: '',
-    subtitle: '',
-    description: '',
-    imageUrl: '/products/Electronics_2.png',
-    url: '/',
-    ctaText: '',
-    discount: '',
-    alt: ''
-  },
-  {
-    id: '3',
-    title: '',
-    subtitle: '',
-    description: '',
-    imageUrl: '/products/Electronics_3.png',
-    url: '/',
-    ctaText: '',
-    discount: '',
-    alt: ''
+    title: 'Smart Tech Devices',
+    subtitle: 'Transform Your Living Space',
+    category: 'Smart Electronics',
+    discount: '25% OFF',
+    imgUrl: '/products/Electronics_1.png',
+    align: 'left'
   },
   // {
+  //   id: '3',
+  //   title: 'Gaming & Entertainment',
+  //   subtitle: 'Level Up Your Experience',
+  //   category: 'Gaming',
+  //   discount: '30% OFF',
+  //   imgUrl: '/products/Electronics_3.png',
+  //   align: 'left'
+  // },
+  // {
   //   id: '4',
-  //   title: '',
-  //   subtitle: '',
-  //   description: '',
-  //   imageUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_2.png',
-  //   url: '/',
-  //   ctaText: '',
-  //   discount: '',
-  //   alt: ''
+  //   title: 'Beauty Tech Innovations',
+  //   subtitle: 'Smart Beauty Devices',
+  //   category: 'Beauty Tech',
+  //   discount: '20% OFF',
+  //   imgUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_2.png',
+  //   align: 'right'
   // },
   // {
   //   id: '5',
-  //   title: '',
-  //   subtitle: '',
-  //   description: '',
-  //   imageUrl: '/products/SPB_1500x460._SX1500_QL85_FMpng_.png',
-  //   url: '/',
-  //   ctaText: '',
-  //   discount: '',
-  //   alt: ''
+  //   title: 'Audio & Sound Systems',
+  //   subtitle: 'Immersive Sound Experience',
+  //   category: 'Audio Systems',
+  //   discount: '35% OFF',
+  //   imgUrl: '/products/SPB_1500x460._SX1500_QL85_FMpng_.png',
+  //   align: 'left'
   // }
 ];
+
 
 export const toElectronicsItems = [
   {
@@ -3639,7 +3631,7 @@ export const bankOfferElectronicsSlide: BankOfferSlideData[] = [
     title: 'Get Extra 15% Off',
     subtitle: 'On Your 1st Purchase',
     description: 'USE CODE NEW15',
-    imageUrl: '/products/AugART26_Bank_PC_1.jpg',
+    imageUrl: '/products/AugART26_Bank_PC_2.png',
     url: '/',
     ctaText: 'Shop Now',
     discount: '15% OFF',
@@ -3657,3 +3649,61 @@ export const bankOfferElectronicsSlide: BankOfferSlideData[] = [
   //   alt: 'Extra20%_coupon'
   // }
 ]
+
+// export const slidesElectronicsFashion2: HeroSlide[] = [
+//   {
+//     id: '1',
+//     title: '',
+//     subtitle: '',
+//     description: '',
+//     imageUrl: '/products/Electronics_Banner_Design_1.png',
+//     url: '/',
+//     ctaText: '',
+//     discount: '',
+//     alt: ''
+//   },
+//   {
+//     id: '2',
+//     title: '',
+//     subtitle: '',
+//     description: '',
+//     imageUrl: '/products/Electronics_2.png',
+//     url: '/',
+//     ctaText: '',
+//     discount: '',
+//     alt: ''
+//   },
+//   {
+//     id: '3',
+//     title: '',
+//     subtitle: '',
+//     description: '',
+//     imageUrl: '/products/Electronics_3.png',
+//     url: '/',
+//     ctaText: '',
+//     discount: '',
+//     alt: ''
+//   },
+//   // {
+//   //   id: '4',
+//   //   title: '',
+//   //   subtitle: '',
+//   //   description: '',
+//   //   imageUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_2.png',
+//   //   url: '/',
+//   //   ctaText: '',
+//   //   discount: '',
+//   //   alt: ''
+//   // },
+//   // {
+//   //   id: '5',
+//   //   title: '',
+//   //   subtitle: '',
+//   //   description: '',
+//   //   imageUrl: '/products/SPB_1500x460._SX1500_QL85_FMpng_.png',
+//   //   url: '/',
+//   //   ctaText: '',
+//   //   discount: '',
+//   //   alt: ''
+//   // }
+// ];
