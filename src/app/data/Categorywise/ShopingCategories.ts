@@ -2911,7 +2911,7 @@ export const electronicsCarouselCategories = [
   { 
     id: '0', 
     name: "Smartphones", 
-    imageUrl: "/products/smartphones_electronics1.jpg", 
+    imageUrl: "/products/smartphones_electronics2.jpg", 
     url: "/electronics/smartphones",
     category: "electronics"
   },
@@ -3541,6 +3541,7 @@ export const topDealsElectronicsCategories: CategoryItem[] = [
     subSubCategory: 'top-deals'
   }
 ];
+
 export const topDealsOnTabletsCategories: CategoryItem[] = [
   { 
     id: 'B0FJG1V6RJ', 
@@ -3707,3 +3708,491 @@ export const bankOfferElectronicsSlide: BankOfferSlideData[] = [
 //   //   alt: ''
 //   // }
 // ];
+
+
+export const homeFurnitureCarouselCategories = [
+  { 
+    id: '1', 
+    name: "Mattresses", 
+    imageUrl: "/products/6dcd96ab3dffa743.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '2', 
+    name: "Office chairs", 
+    imageUrl: "/products/a275e52dd5391137.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '3', 
+    name: "Beds", 
+    imageUrl: "/products/619a90cb3079dd36.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '4', 
+    name: "Wardrobes", 
+    imageUrl: "/products/ea4ca063f2e858e3.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '5', 
+    name: "Office tables", 
+    imageUrl: "/products/a55b07b0721bb404.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '6', 
+    name: "Recliners", 
+    imageUrl: "/products/8ad710342f6f7a43.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '7', 
+    name: "Hammock", 
+    imageUrl: "/products/02132b72c4ccf6f9.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '8', 
+    name: "Collapsibles", 
+    imageUrl: "/products/e23b5aec2a9e1c80.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '9', 
+    name: "Bean bags", 
+    imageUrl: "/products/66769a6c1ba60981.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '10', 
+    name: "Book shelvs", 
+    imageUrl: "/products/1f4e96262c476aa8.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '11', 
+    name: "Kids' furniture", 
+    imageUrl: "/products/e41a32a2a0fb6cb3.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '12', 
+    name: "Sofas", 
+    imageUrl: "/products/55f6c3ea8cf26b12.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '13', 
+    name: "Dining sets", 
+    imageUrl: "/products/c5c2a0ca01c2814e.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '14', 
+    name: "Coffee tables", 
+    imageUrl: "/products/616b670374b61ceb.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '15', 
+    name: "Dressing tables", 
+    imageUrl: "/products/ef014c0f5062c9e1.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '16', 
+    name: "Sofa beds", 
+    imageUrl: "/products/a8e5319319cae362.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '17', 
+    name: "TV units", 
+    imageUrl: "/products/0c3b3b685386636d.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '18', 
+    name: "PLT", 
+    imageUrl: "/products/4e2d959065ba18aa.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '19', 
+    name: "Shoe racks", 
+    imageUrl: "/products/268487a337a39374.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '20', 
+    name: "Home temples", 
+    imageUrl: "/products/1f8f90501c659669.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '21', 
+    name: "Inflatable sofas", 
+    imageUrl: "/products/4bd722c8ddfa9ace.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '22', 
+    name: "Covers", 
+    imageUrl: "/products/bd844edb9fa863a8.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '23', 
+    name: "Dining Tables", 
+    imageUrl: "/products/dining-table.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '24', 
+    name: "Study Tables", 
+    imageUrl: "/products/study-table.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '25', 
+    name: "Bookshelves", 
+    imageUrl: "/products/bookshelf.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '26', 
+    name: "Storage Units", 
+    imageUrl: "/products/storage-unit.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '27', 
+    name: "Wall Shelves", 
+    imageUrl: "/products/wall-shelf.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '28', 
+    name: "Shoe Racks", 
+    imageUrl: "/products/shoe-rack.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '29', 
+    name: "Sofas", 
+    imageUrl: "/products/329a854dd8c44fde.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '30', 
+    name: "Mattresses", 
+    imageUrl: "/products/57d04728e66ae68f.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '31', 
+    name: "Wardrobes", 
+    imageUrl: "/products/5da0aa15c8500bdf.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '32', 
+    name: "Blankets", 
+    imageUrl: "/products/9a4b3856cceca99b.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '33', 
+    name: "Bedsheets", 
+    imageUrl: "/products/12960b239d8fae6a.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '34', 
+    name: "Furnishing", 
+    imageUrl: "/products/f7a66d4708b4055d.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '35', 
+    name: "Mats & rugs", 
+    imageUrl: "/products/971d07d5c6063aed.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '36', 
+    name: "Mosquito nets", 
+    imageUrl: "/products/458751bc65631f19.jpg", 
+    url: '/',
+    category: "home_furniture"
+  },
+  { 
+    id: '37', 
+    name: "View all", 
+    imageUrl: "/products/cb76a0a6fc5d9f20.jpg", 
+    url: '/',
+    category: "home_furniture"
+  }
+];
+
+export const slideshomeFurniture : BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/homeFurniture_1.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/homeFurniture_2.png',
+    align: 'left'
+  }
+]
+
+ export const homeFurnitureHorizontalSliderOneLine = [
+  {
+    id: "1",
+    title: "Nilkamal Freedom Big FMM Plastic Cabinet | 3-Year Warranty | 4-Shelf Storage Cupboard with Doors | Multi Organiser for Home, Wardrobe, and Kitchen | Clothes Rack, Shelves, Brown & Biscuit Colour",
+    price: 5599.00,
+    oldPrice: 8000.00,
+    currency: "₹",
+    imageUrl: "/products/nilkamal-freedom-cabinet.jpg",
+    link: "/",
+  },
+  {
+    id: "2",
+    title: "Furniture Cafe Modern Rectangular Coffee Table with White Marble Top and Black Metal Frame - Contemporary Center Table for Living Room (Golden & White)",
+    price: 2890.00,
+    oldPrice: 4999.00,
+    currency: "₹",
+    imageUrl: "/products/furniture-cafe-coffee-table.jpg",
+    link: "/",
+  },
+  {
+    id: "3",
+    title: "Smartsters Single Bed with Storage for Kids | Engineered Wood | Double Drawers | Soft Edge | Secret Den Child-Friendly Design | Marine Teal | 40 x 81 x 38 inches | Easy Pull-Out Storage",
+    price: 8426.49,
+    oldPrice: 32999.00,
+    currency: "₹",
+    imageUrl: "/products/smartsters-single-bed.jpg",
+    link: "/",
+  },
+  {
+    id: "4",
+    title: "Godrej Interio Allure 6-Seater Rubber Wood Rectangular Dining Table (1-Year Warranty, Brownish Black)",
+    price: 25790.00,
+    oldPrice: 29787.00,
+    currency: "₹",
+    imageUrl: "/products/godrej-interio-dining-table.jpg",
+    link: "/",
+  },
+  {
+    id: "5",
+    title: "Nilkamal SpaceMax 4 Shelves Plastic Bookshelf with 3-Year Warranty | Multipurpose Storage Cabinet & Book Rack for Home | Durable, Waterproof, Easy-Clean | Living Room & Bedroom Organiser | Biscuit Brown",
+    price: 5670.00,
+    oldPrice: 8000.00,
+    currency: "₹",
+    imageUrl: "/products/nilkamal-spacemax-bookshelf.jpg",
+    link: "/",
+  },
+  {
+    id: "6",
+    title: "Nilkamal Freedom Large 18 (FMSC18) Shoe Rack Plastic Cabinet 3-Year Warranty with Dustproof Door – Shoe Rack for Home, Chappal Stand for Home Indoor & Outdoor, Shoes Rack Plastic with Door",
+    price: 4334.48,
+    oldPrice: 7000.00,
+    currency: "₹",
+    imageUrl: "/products/nilkamal-shoe-rack.jpg",
+    link: "/",
+  },
+  {
+    id: "7",
+    title: "Interio by Godrej Curv Premium Mesh Wide Back Ergonomic Chair for Work from Home/Study | 1 Year Warranty | Height Adjustable Chair | Heavy Duty PP Base | DIY Installation (Milan Red)",
+    price: 5299.00,
+    oldPrice: 16500.00,
+    currency: "₹",
+    imageUrl: "/products/godrej-curv-chair.jpg",
+    link: "/",
+  },
+];
+
+export const topDealshomeFurnitureCategories: CategoryItem[] = [
+{
+id: 'B0FN9WN6XD',
+name: 'Green Soul',
+image: '/products/Green_Soul_1.jpg',
+url: '/stores/GreenSoul',
+category: 'Furniture',
+subCategory: 'Chairs',
+},
+{
+id: 'B0FN9WN6XE',
+name: 'Nilkamal',
+image: '/products/Nilkamal_2.jpg',
+url: '/stores/Nilkamal',
+category: 'Furniture',
+subCategory: 'Home',
+},
+{
+id: 'B0FN9WN6XF',
+name: 'Sleepwell',
+image: '/products/Sleepwell_3.jpg',
+url: '/stores/Sleepwell',
+category: 'Mattress',
+subCategory: 'Bedding',
+},
+{
+id: 'B0FN9WN6XG',
+name: 'The Sleep Company',
+image: '/products/The_Sleep_Company_4.jpg',
+url: '/stores/TheSleepCompany',
+category: 'Mattress',
+subCategory: 'Smart Mattress',
+},
+{
+id: 'B0FN9WN6XH',
+name: 'Interio by Goorej',
+image: '/products/Interio_by_Goorej_5.jpg',
+url: '/stores/Interio',
+category: 'Furniture',
+subCategory: 'Office',
+},
+{
+id: 'B0FN9WN6XI',
+name: 'Drogo',
+image: '/products/Drogo_6.jpg',
+url: '/stores/DROGO',
+category: 'Furniture',
+subCategory: 'Home Decor',
+},
+];
+
+export const topHomeFurnitureItems = [
+  {
+    id: '1',
+    title: 'Sleepyhead',
+    subtitle: 'Mattresses',
+    imageUrl: '/products/6353e94a1c07906f.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Wooden Street',
+    subtitle: 'Beds',
+    imageUrl: '/products/af2c7d43715a4889.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/394dbf4cc5c01bc8.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/844384b50cccca99.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/fe52c6a092282155.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/63d119356b2170c3.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/cb39b76b131f29c9.jpg',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/d390fae27b44fd3b.jpg',
+    link: '/'
+  },
+  {
+    id: '9',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/32fd51f10a616742.jpg',
+    link: '/'
+  },
+  {
+    id: '10',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/0b41a86c34279069.jpg',
+    link: '/'
+  },
+  {
+    id: '11',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/1124c02d88fafc55.jpg',
+    link: '/'
+  },
+  {
+    id: '12',
+    title: 'Sleepyhead Recliner',
+    subtitle: 'Recliners',
+    imageUrl: '/products/16a05b1214bc950e.jpg',
+    link: '/'
+  }
+];

@@ -36,9 +36,9 @@ const HorizontalSliderOneLine: React.FC<HorizontalSliderOneLineProps> = ({
   products,
   title,
   exploreMoreLink = "#",
-  backgroundColor = "#F27311",
+  backgroundColor = "",
   primaryColor = "#ffffff",
-  secondaryColor = "#F27311",
+  secondaryColor = "",
   className = "",
 }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);

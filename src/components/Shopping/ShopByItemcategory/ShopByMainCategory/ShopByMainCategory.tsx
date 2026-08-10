@@ -9,18 +9,20 @@ import {
     womenFashionCarouselCategories,
     kidsFashionCarouselCategories,
     womenBeautyCarouselCategories,
-    electronicsSubSubCategoriesSubHeader,
-    homeDecorSubSubCategoriesSubHeader,
     electronicsCarouselCategories,
     slidesElectronicsFashion,
     toElectronicsItems,
     HeadphonesHorizontalSliderOneLine,
     PcAccessoriesHorizontalSliderOneLine,
     SmartwatchesHorizontalSliderOneLine,
-    ElectronicsCategories,
     topDealsElectronicsCategories,
     topDealsOnTabletsCategories,
-    bankOfferElectronicsSlide
+    bankOfferElectronicsSlide,
+    homeFurnitureCarouselCategories,
+    slideshomeFurniture,
+    homeFurnitureHorizontalSliderOneLine,
+    topDealshomeFurnitureCategories,
+    topHomeFurnitureItems,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -176,11 +178,99 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             products={HeadphonesHorizontalSliderOneLine}
                             title="Deals on Headphones"
                             exploreMoreLink="/deals/headphones"
-                            backgroundColor="#F27311"
+                            backgroundColor="#7739B5"
+                            primaryColor="#ffffff"
+                            secondaryColor="#7739B5"
+                        />
+                        <HorizontalSliderOneLine
+                            products={PcAccessoriesHorizontalSliderOneLine}
+                            title="Deals on PC Accessories"
+                            exploreMoreLink="/deals/pc-accessories"
+                            backgroundColor="#CBCDA3"
                             primaryColor="#ffffff"
                             secondaryColor="#F27311"
                         />
                         <HorizontalSliderOneLine
+                            products={SmartwatchesHorizontalSliderOneLine}
+                            title="Deals on Smartwatches"
+                            exploreMoreLink="/deals/smartwatches"
+                            backgroundColor="#F27311"
+                            primaryColor="#ffffff"
+                            secondaryColor="#F27311"
+                        />
+                        {/* <TopBrandsOnOffer
+                            brands={toBrandsMenFashion}
+                            title="Top Brands on Offer"
+                            subtitle="Best electronics deals"
+                            backgroundColor="#7739B5"
+                            titleColor="#ffffff"
+                            gap={8}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
+                        /> */}
+                    </div>
+                );
+
+                 case 'home_furniture':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={homeFurnitureCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slideshomeFurniture}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                         <VerticalScroll
+                            items={topHomeFurnitureItems}
+                            imageHeight={350}
+                            title="Hufko unique launches"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        />
+                          <VerticalScrollSquare
+                            title="Top deals | Up to 40% off"
+                            categories={topDealshomeFurnitureCategories}
+                            itemsPerView={6}
+                            rows={1}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        {/* 
+                      
+                        <VerticalScrollSquare
+                            title="Top deals on tablets | Up to 40% off"
+                            categories={topDealsOnTabletsCategories}
+                            itemsPerView={6}
+                            rows={1}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        /> */}
+                        <HorizontalSliderOneLine
+                            products={homeFurnitureHorizontalSliderOneLine}
+                            title="Up to 60% off"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#FFCB39"
+                            primaryColor="#ffffff"
+                            secondaryColor="#FFCB39"
+                        />
+                        {/* <HorizontalSliderOneLine
                             products={PcAccessoriesHorizontalSliderOneLine}
                             title="Deals on PC Accessories"
                             exploreMoreLink="/deals/pc-accessories"
@@ -195,7 +285,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             backgroundColor="#F27311"
                             primaryColor="#ffffff"
                             secondaryColor="#F27311"
-                        />
+                        /> */}
                         {/* <TopBrandsOnOffer
                             brands={toBrandsMenFashion}
                             title="Top Brands on Offer"
