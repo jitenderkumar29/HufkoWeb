@@ -23,6 +23,11 @@ import {
     homeFurnitureHorizontalSliderOneLine,
     topDealshomeFurnitureCategories,
     topHomeFurnitureItems,
+    slidesHomeDecor,
+    homeDecorCarouselCategories,
+    topDealshomeDecorCategories,
+    topHomeDecorItems,
+    giftworthyVasesHomeDecorItems,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -216,7 +221,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </div>
                 );
 
-                 case 'home_furniture':
+            case 'home_furniture':
                 return (
                     <div className={styles.categoryContent}>
                         <FashionRoundCarousel
@@ -577,12 +582,61 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
 
             case 'home_decor':
                 return (
-                    <div className={styles.categoryContent}>
-                        <div className={styles.homeDecorContent}>
-                            <h3>Home Decor Collection</h3>
-                            {/* Add home decor specific content here */}
+                     <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={homeDecorCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesHomeDecor}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <div className={styles.categorySliderOneLine}>
+                         <HorizontalSliderOneLine
+                            products={topHomeDecorItems}
+                            title="Stylish wall decor"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#ffffff"
+                            primaryColor="#000000"
+                            secondaryColor="#7739B5"
+                        />
                         </div>
-                    </div>
+                         {/* <VerticalScroll
+                            items={topHomeDecorItems}
+                            imageHeight={350}
+                            title="Hufko unique launches"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        /> */}
+                          <VerticalScrollSquare
+                            title="Shop by brands"
+                            categories={topDealshomeDecorCategories}
+                            itemsPerView={6}
+                            rows={1}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <div className={styles.categorySliderOneLine}>
+                         <HorizontalSliderOneLine
+                            products={giftworthyVasesHomeDecorItems}
+                            title="Giftworthy vases"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#ffffff"
+                            primaryColor="#000000"
+                            secondaryColor="#7739B5"
+                        />
+                        </div>
+                        </div>
                 );
 
             case 'mobiles_tablets':

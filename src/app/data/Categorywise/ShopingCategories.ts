@@ -2909,28 +2909,28 @@ export const SmartwatchesHorizontalSliderOneLine = [
 
 export const electronicsCarouselCategories = [
   { 
-    id: '0', 
+    id: '0',
     name: "Smartphones", 
     imageUrl: "/products/smartphones_electronics2.jpg", 
     url: "/electronics/smartphones",
     category: "electronics"
   },
   { 
-    id: '1', 
+    id: '1',
     name: "Laptops & Computers", 
     imageUrl: "/products/laptop._SS400_QL85_1.jpg", 
     url: "/electronics/laptops",
     category: "electronics"
   },
   { 
-    id: '2', 
+    id: '2',
     name: "Tablets", 
     imageUrl: "/products/02_Halos_copy._SS400_QL85_FMpng_1.png", 
     url: "/electronics/tablets",
     category: "electronics"
   },
   { 
-    id: '3', 
+    id: '3',
     name: "Headphones & Earphones", 
     imageUrl: "/products/Headphones._SS400_QL85_1.jpg", 
     url: "/electronics/headphones",
@@ -2944,28 +2944,28 @@ export const electronicsCarouselCategories = [
     category: "electronics"
   },
   { 
-    id: '5', 
+    id: '5',
     name: "Cameras & Photography", 
     imageUrl: "/products/Camera__Accessories._SS400_QL85_1.jpg", 
     url: "/electronics/cameras",
     category: "electronics"
   },
   { 
-    id: '6', 
+    id: '6',
     name: "Televisions", 
     imageUrl: "/products/televisions_electronics1.jpg", 
     url: "/electronics/tvs",
     category: "electronics"
   },
   { 
-    id: '7', 
+    id: '7',
     name: "Audio Speakers", 
     imageUrl: "/products/9_audio._CB795899201_.png", 
     url: "/electronics/speakers",
     category: "electronics"
   },
   { 
-    id: '8', 
+    id: '8',
     name: "Gaming Consoles", 
     imageUrl: "/products/Gaming_Laptops._SS400_QL85_1.jpg", 
     url: "/electronics/gaming",
@@ -2973,7 +2973,7 @@ export const electronicsCarouselCategories = [
   },
   
   { 
-    id: '9', 
+    id: '9',
     name: "Computer Accessories", 
     imageUrl: "/products/Computer_Accessories._SS400_QL85_1.jpg", 
     url: "/electronics/accessories",
@@ -4195,4 +4195,412 @@ export const topHomeFurnitureItems = [
     imageUrl: '/products/16a05b1214bc950e.jpg',
     link: '/'
   }
+];
+
+export const slidesHomeDecor : BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/homeDecor_1.png',
+    align: 'left'
+  },
+  // {
+  //   id: '2',
+  //   title: '',
+  //   subtitle: '',
+  //   category: '',
+  //   discount: '',
+  //   imgUrl: '/products/homeDecor_2.png',
+  //   align: 'left'
+  // }
+]
+
+export const homeDecorCarouselCategories = [
+  { 
+    id: '1', 
+    name: "Wall Art", 
+    imageUrl: "/products/6dcd96ab3dffa74311231.jpg", 
+    url: "/category/wall-art",
+    category: "home_decor"
+  },
+  { 
+    id: '2', 
+    name: "Throw Pillows", 
+    imageUrl: "/products/7e1f07bc4e00b85421.jpg", 
+    url: "/category/throw-pillows",
+    category: "home_decor"
+  },
+  { 
+    id: '3', 
+    name: "Area Rugs", 
+    imageUrl: "/products/8f2d18cd5f11c9653.jpg", 
+    url: "/category/area-rugs",
+    category: "home_decor"
+  },
+  { 
+    id: '4', 
+    name: "Wall Mirrors", 
+    imageUrl: "/products/9g3e29de6012d07641.jpg", 
+    url: "/category/wall-mirrors",
+    category: "home_decor"
+  },
+  { 
+    id: '5', 
+    name: "Vases & Planters", 
+    imageUrl: "/products/0h4f30ef7113e1875.jpg", 
+    url: "/category/vases-planters",
+    category: "home_decor"
+  },
+  { 
+    id: '6', 
+    name: "Candles & Holders", 
+    imageUrl: "/products/1i5g41fg8224f2986.jpg", 
+    url: "/category/candles-holders",
+    category: "home_decor"
+  },
+  { 
+    id: '7', 
+    name: "Wall Clocks", 
+    imageUrl: "/products/2j6h52gh9335g309712.jpg", 
+    url: "/category/wall-clocks",
+    category: "home_decor"
+  },
+  { 
+    id: '8', 
+    name: "Photo Frames", 
+    imageUrl: "/products/3k7i63hi0446h41081.jpg", 
+    url: "/category/photo-frames",
+    category: "home_decor"
+  },
+  { 
+    id: '9', 
+    name: "Decorative Bowls", 
+    imageUrl: "/products/4l8j74ij1557i52191.jpg", 
+    url: "/category/decorative-bowls",
+    category: "home_decor"
+  },
+  { 
+    id: '10', 
+    name: "Table Lamps", 
+    imageUrl: "/products/5m9k85jk2668j63201.jpg", 
+    url: "/category/table-lamps",
+    category: "home_decor"
+  },
+  { 
+    id: '11', 
+    name: "Artificial Plants", 
+    imageUrl: "/products/6n0l96kl3779k7431.jpg", 
+    url: "/category/artificial-plants",
+    category: "home_decor"
+  },
+  { 
+    id: '12', 
+    name: "Wall Shelves", 
+    imageUrl: "/products/7o1m07lm4880l8542.jpg", 
+    url: "/category/wall-shelves",
+    category: "home_decor"
+  },
+  { 
+    id: '13', 
+    name: "Decorative Trays", 
+    imageUrl: "/products/8p2n18mn5991m9653.jpg", 
+    url: "/category/decorative-trays",
+    category: "home_decor"
+  },
+  { 
+    id: '14', 
+    name: "Rugs & Mats", 
+    imageUrl: "/products/9q3o29no6002n0764.jpg", 
+    url: "/category/rugs-mats",
+    category: "home_decor"
+  },
+  { 
+    id: '15', 
+    name: "Decorative Accents", 
+    imageUrl: "/products/0r4p30op7113o1875.jpg", 
+    url: "/category/decorative-accents",
+    category: "home_decor"
+  },
+];
+
+export const topDealshomeDecorCategories: CategoryItem[] = [
+  {
+    id: 'nestasia',
+    name: 'Nestasia',
+    image: '/products/brand-in-focus-9C-400x4001._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'ajanta',
+    name: 'Ajanta',
+    image: '/products/brand-in-focus-9C-400x4002._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'tied-ribbons',
+    name: 'Tied Ribbons',
+    image: '/products/brand-in-focus-9C-400x4003._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'solimo',
+    name: 'Solimo',
+    image: '/products/brand-in-focus-9C-400x4004._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'collectible-india',
+    name: 'Collectible India',
+    image: '/products/brand-in-focus-9C-400x4005._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'seiko',
+    name: 'Seiko',
+    image: '/products/titandecor._SS400_QL85_FMpng_.png',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'artstreet',
+    name: 'ArtStreet',
+    image: '/products/brand-in-focus-9C-400x4007._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'satyamkraft',
+    name: 'SatyamKraft',
+    image: '/products/brand-in-focus-9C-400x4008._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+  {
+    id: 'shubhkart',
+    name: 'Shubhkart',
+    image: '/products/brand-in-focus-9C-400x4009._SS400_QL85_.jpg',
+    url: '/',
+    category: 'home_decor',
+    subCategory: 'brands',
+  },
+];
+
+export const topHomeDecorItems = [
+  {
+    id: "1",
+    title: "BEHOMA Gold Metal Photo Frame (4x6) With Palm Tree Design",
+    price: 856,
+    oldPrice: 2499,
+    currency: "₹",
+    imageUrl: "/products/51b-qpFCdjL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "2",
+    title: "Mold Your Memories Aluminum Rectangular Photo Frame Set Of 2 A4 Size",
+    price: 1999,
+    oldPrice: undefined, // Changed from null to undefined
+    currency: "₹",
+    imageUrl: "/products/51ivkLbmPdL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "3",
+    title: "Habere India Wall Mirror with Leaf Design | Rattan Frame for Living Room",
+    price: 2579,
+    oldPrice: 8999,
+    currency: "₹",
+    imageUrl: "/products/410mPOGyLmL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "4",
+    title: "Royalzig Set of 5 Wooden Photo Frame for Wall Decoration",
+    price: 2999,
+    oldPrice: 6999,
+    currency: "₹",
+    imageUrl: "/products/51gJsUSQ1CL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "5",
+    title: "CasaGold 24 Inch Gold Abstract Vintage Hammered Mirror",
+    price: 13999,
+    oldPrice: 18200,
+    currency: "₹",
+    imageUrl: "/products/410I7jeJLcL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "6",
+    title: "UNIVERSE LIGHTS 6 Pack Chef Fridge Magnet Refrigerator Magnets",
+    price: 999,
+    oldPrice: 1699,
+    currency: "₹",
+    imageUrl: "/products/51pRRG1jmVL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "7",
+    title: "Decor de Maison Mitsuki Luxury Table Clock for Living Room, Bedroom",
+    price: 3000,
+    oldPrice: 5520,
+    currency: "₹",
+    imageUrl: "/products/41RcYHJErkL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "8",
+    title: "Skywalk Cute Indian Couple Cycle Ride Wooden Fridge Magnet",
+    price: 179,
+    oldPrice: 499,
+    currency: "₹",
+    imageUrl: "/products/511rwJ+8DTL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "9",
+    title: "SkyWalker India Souvenir Wooden MDF Goa Fridge Magnet",
+    price: 179,
+    oldPrice: 399,
+    currency: "₹",
+    imageUrl: "/products/51CGDQtIUWL.AC_SX250.jpg",
+    link: "#",
+  },
+];
+
+export const giftworthyVasesHomeDecorItems = [
+  {
+    id: "B0C3JNHK1L",
+    title: "FURN ASPIRE Combo Set Of Ceramic Vase And Hand Made Artificial Flowers Bouquet",
+    price: 1471,
+    oldPrice: 1900,
+    currency: "₹",
+    imageUrl: "/products/51CJHjEdZhL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0CTHS7GJ9",
+    title: "Glimpse Homes Crinkled Paper Bag Vase | Ceramic Flower Vase | Living Room Decor | 8 inch",
+    price: 1198,
+    oldPrice: 1399,
+    currency: "₹",
+    imageUrl: "/products/415f3wfFzHL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B09QSP77HB",
+    title: "Pure Home + Living Ivory Honeycomb Pearl Finish Ceramic Vase - Medium",
+    price: 1507,
+    oldPrice: 1799,
+    currency: "₹",
+    imageUrl: "/products/51qSDtCxjFL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0C8HT1NR8",
+    title: "MARKET 99 Ceramic Flower Vase (Pink) | Engraved Ribbed Floral Pattern | Decorative Floral Vase",
+    price: 749,
+    oldPrice: 1499,
+    currency: "₹",
+    imageUrl: "/products/41uvv6it42L.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0D14RGWJ1",
+    title: "PUREZENTO Vintage Roman White Vase - Set of 3 | Decorative Bottle Shaped Vases with Twine Bow",
+    price: 799,
+    oldPrice: 2599,
+    currency: "₹",
+    imageUrl: "/products/31zPel1zYZL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0BVVJXHT7",
+    title: "ABOUT SPACE Glass Bud Flower Vase – Pack of 10 Clear Glass Centrepiece for Mini Flowers",
+    price: 1499,
+    oldPrice: 2599,
+    currency: "₹",
+    imageUrl: "/products/41KtF7M-CCL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B09LYY8SZC",
+    title: "Craftribal Inverted U Shape Ceramic Minimalist Aesthetic Flower Vase | Pampas Grass Vase",
+    price: 739,
+    oldPrice: 1799,
+    currency: "₹",
+    imageUrl: "/products/41hURdLnIaL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0CN4FKXGB",
+    title: "FURN ASPIRE Glass Vase With Artificial Flowers Modern Flower Plants Vases",
+    price: 1399,
+    oldPrice: 2000,
+    currency: "₹",
+    imageUrl: "/products/51ubrKuLRmL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0C3XG327N",
+    title: "BEHOMA Metal Flower Vase for Home Decor, White | Metal flower vase for fresh or artificial flowers",
+    price: 760,
+    oldPrice: 1600,
+    currency: "₹",
+    imageUrl: "/products/419nb9oqlUL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0CQP7TG8N",
+    title: "PUREZENTO Ivory Textured Rounded Bottle Shaped Ceramic Vase 6.5 Inch",
+    price: 422,
+    oldPrice: 825,
+    currency: "₹",
+    imageUrl: "/products/31wFfYrDRxL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0CVW1T33T",
+    title: "HOMEVERSE 24pcs Artificial Faux Eucalyptus Stems with Fake Leaves",
+    price: 454,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/41uUgZe7LqL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0C3JLTZJC",
+    title: "FURN ASPIRE Combo Set Of Ceramic Vase And Hand Made Artificial Flowers Bouquet (Vase1)",
+    price: 1471,
+    oldPrice: 1900,
+    currency: "₹",
+    imageUrl: "/products/51QdMmBjeeL.AC_SX250.jpg",
+    link: "#",
+  },
+  {
+    id: "B0CZXTLGXS",
+    title: "Nostrae by Ekhasa 100% Crystal Clear Glass Bud Vases Flower Pots for Home Decor (Set of 5)",
+    price: 657,
+    oldPrice: 1999,
+    currency: "₹",
+    imageUrl: "/products/51hqZjEfZRL.AC_SX250.jpg",
+    link: "#",
+  },
 ];
