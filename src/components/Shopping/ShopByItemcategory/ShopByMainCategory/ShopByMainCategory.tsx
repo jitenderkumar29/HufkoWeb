@@ -28,6 +28,11 @@ import {
     topDealshomeDecorCategories,
     topHomeDecorItems,
     giftworthyVasesHomeDecorItems,
+    sportsFitnessCarouselCategories,
+    slidesShoppingSportsFitness,
+    topTrendingPicksSportsFitnessCategories,
+    greatDealsForYouSportsFitness,
+    ScrollItemSportsFitness,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -65,6 +70,7 @@ import { useRouter } from 'next/navigation';
 import VerticalScrollSquare from '../../ItemListDesigns/VerticalScrollSquare/VerticalScrollSquare';
 import HeroBannerLeftContent from '../../HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent';
 import { FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
+import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -221,6 +227,65 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </div>
                 );
 
+            case 'home_decor':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={homeDecorCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesHomeDecor}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <div className={styles.categorySliderOneLine}>
+                            <HorizontalSliderOneLine
+                                products={topHomeDecorItems}
+                                title="Stylish wall decor"
+                                exploreMoreLink="/deals/headphones"
+                                backgroundColor="#ffffff"
+                                primaryColor="#000000"
+                                secondaryColor="#7739B5"
+                            />
+                        </div>
+                        {/* <VerticalScroll
+                            items={topHomeDecorItems}
+                            imageHeight={350}
+                            title="Hufko unique launches"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        /> */}
+                        <VerticalScrollSquare
+                            title="Shop by brands"
+                            categories={topDealshomeDecorCategories}
+                            itemsPerView={6}
+                            rows={1}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <div className={styles.categorySliderOneLine}>
+                            <HorizontalSliderOneLine
+                                products={giftworthyVasesHomeDecorItems}
+                                title="Giftworthy vases"
+                                exploreMoreLink="/deals/headphones"
+                                backgroundColor="#ffffff"
+                                primaryColor="#000000"
+                                secondaryColor="#7739B5"
+                            />
+                        </div>
+                    </div>
+                );
+
             case 'home_furniture':
                 return (
                     <div className={styles.categoryContent}>
@@ -234,6 +299,23 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             banners={slideshomeFurniture}
                             defaultAlign="left" // Default alignment if not specified per banner
                         />
+                        <WelcomeVideoHufko
+                            title=""
+                            titleHighlight=""
+                            subtitle=""
+                            // title="Premium food delivery app"
+                            // titleHighlight="World's #1"
+                            // subtitle="Enjoy fast online ordering on the Hufko app"
+                            videoSrc="/videos/furniture.mp4"
+                            logoSrc="/icons/logo_video.png"
+                            appStoreLink="/"
+                            playStoreLink="/"
+                            className="custom-hero"
+                            showLogo={false}
+                            showAppStore={false}
+                            showPlayStore={false}
+                            muted={true}
+                        />
                         <BankOfferSlide
                             slides={bankOfferElectronicsSlide}
                             autoPlay={true}
@@ -242,14 +324,14 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             showDots={true}
                             onSlideChange={(index) => console.log('Current slide:', index)}
                         />
-                         <VerticalScroll
+                        <VerticalScroll
                             items={topHomeFurnitureItems}
                             imageHeight={350}
                             title="Hufko unique launches"
                             subtitle="Based on your preferences"
                             ctaText="See All Recommendations"
                         />
-                          <VerticalScrollSquare
+                        <VerticalScrollSquare
                             title="Top deals | Up to 40% off"
                             categories={topDealshomeFurnitureCategories}
                             itemsPerView={6}
@@ -580,64 +662,74 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </div>
                 );
 
-            case 'home_decor':
+            case 'sports_fitness':
                 return (
-                     <div className={styles.categoryContent}>
+                    <div className={styles.categoryContent}>
                         <FashionRoundCarousel
-                            categories={homeDecorCarouselCategories}
+                            categories={sportsFitnessCarouselCategories}
                             title=""
                             autoScroll={false}
                             showScrollbar={false}
                         />
-                        <HeroBannerLeftContent
-                            banners={slidesHomeDecor}
-                            defaultAlign="left" // Default alignment if not specified per banner
+                        <HeroBannerSlide
+                            slides={slidesShoppingSportsFitness}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            showTitle={true}
+                            showSubtitle={true}
+                            showCTA={true}
+                            onSlideClick={(slide, index) => {
+                                console.log(`Slide ${index + 1} clicked:`, slide);
+                            }}
+                            onSlideChange={(index) => {
+                                console.log(`Current slide: ${index + 1}`);
+                            }}
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
+                            slides={bankOfferShoppingSlide}
                             autoPlay={true}
                             autoPlayInterval={5000}
                             showArrows={true}
                             showDots={true}
                             onSlideChange={(index) => console.log('Current slide:', index)}
                         />
-                        <div className={styles.categorySliderOneLine}>
-                         <HorizontalSliderOneLine
-                            products={topHomeDecorItems}
-                            title="Stylish wall decor"
-                            exploreMoreLink="/deals/headphones"
-                            backgroundColor="#ffffff"
-                            primaryColor="#000000"
-                            secondaryColor="#7739B5"
-                        />
-                        </div>
-                         {/* <VerticalScroll
-                            items={topHomeDecorItems}
-                            imageHeight={350}
-                            title="Hufko unique launches"
-                            subtitle="Based on your preferences"
-                            ctaText="See All Recommendations"
-                        /> */}
-                          <VerticalScrollSquare
-                            title="Shop by brands"
-                            categories={topDealshomeDecorCategories}
+                        <VerticalScrollSquare
+                            title="Top trending picks"
+                            categories={topTrendingPicksSportsFitnessCategories}
                             itemsPerView={6}
                             rows={1}
                             showArrows={true}
                             onCategoryClick={handleCategoryClick}
                         />
-                        <div className={styles.categorySliderOneLine}>
-                         <HorizontalSliderOneLine
-                            products={giftworthyVasesHomeDecorItems}
-                            title="Giftworthy vases"
-                            exploreMoreLink="/deals/headphones"
+                        <TopBrandsOnOffer
+                            brands={greatDealsForYouSportsFitness}
+                            title="Great deals for you"
+                            subtitle="Limited-Time Deals Just for You"
                             backgroundColor="#ffffff"
-                            primaryColor="#000000"
-                            secondaryColor="#7739B5"
+                            titleColor="#000000"
+                            subtitleColor="#000000"
+                            gap={8}
+                            rows={1}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
                         />
-                        </div>
-                        </div>
+                        <VerticalScroll
+                            items={ScrollItemSportsFitness}
+                            imageHeight={400}
+                            title="The hobby club"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        />
+                    </div>
                 );
+
 
             case 'mobiles_tablets':
                 return (

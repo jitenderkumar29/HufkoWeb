@@ -9,59 +9,59 @@ import { ScrollItem } from "@/components/Shopping/ItemListDesigns/VerticalScroll
 import { CategoryItem } from "@/components/Shopping/ShopByItemcategory/ShopByCategory/ShopByCategory";
 
 export const ShopingCategories = [
-   {
+  {
     id: "electronics",
     name: "Electronics",
     imageUrl: "/products/Electronics.png",
-     url: "/electronics",
+    url: "/electronics",
   },
   {
     id: "home_decor",
     name: "Home Decor",
     imageUrl: "/products/homeDecor.png",
-     url: "/home_decor",
+    url: "/home_decor",
   },
-   {
+  {
     id: "home_furniture",
     name: "Home Furniture",
     imageUrl: "/products/HomeFurniture.png",
-     url: "/home_furniture",
+    url: "/home_furniture",
   },
   {
     id: "mobiles_tablets",
     name: "Mobiles & Tablets",
     imageUrl: "/products/MobilesTablets.png",
-     url: "/mobiles_tablets",
+    url: "/mobiles_tablets",
   },
   {
     id: "men",
     name: "Men",
     imageUrl: "/products/men.png",
-     url: "/men",
+    url: "/men",
   },
   {
     id: "women",
     name: "Women",
     imageUrl: "/products/women.png",
-     url: "/women",
+    url: "/women",
   },
   {
     id: "kids",
     name: "Kids",
     imageUrl: "/products/kids.png",
-     url: "/kids",
+    url: "/kids",
   },
   {
     id: "beauty",
     name: "Beauty",
     imageUrl: "/products/beauty.png",
-     url: "/beauty",
+    url: "/beauty",
   },
   {
     id: "tvs_appliances",
     name: "TVs & Appliances",
     imageUrl: "/products/TVsAppliances.png",
-     url: "/tvs_appliances",
+    url: "/tvs_appliances",
   },
   // {
   //   name: "Flight Bookings",
@@ -71,27 +71,27 @@ export const ShopingCategories = [
     id: "beauty_food",
     name: "Beauty, Food",
     imageUrl: "/products/BeautyFood.png",
-     url: "/beauty_food",
+    url: "/beauty_food",
   },
   {
-    id: "toys_sports",
-    name: "Toys & Sports",
-    imageUrl: "/products/ToysSports.png",
-     url: "/toys_sports",
+    id: "sports_fitness",
+    name: "Sports & Fitness",
+    imageUrl: "/products/sports_&_fitness.png",
+    url: "/sports_&_fitness",
   },
   {
-    id: "lifestyle",
-    name: "Lifestyle",
+    id: "books",
+    name: "Books",
     // name: "Apparel & Lifestyle",
-    imageUrl: "/products/ApparelLifestyle.png",
-     url: "/lifestyle",
+    imageUrl: "/products/books.png",
+    url: "/lifestyle",
   },
   {
     id: "jewellery",
     name: "Jewellery",
     // name: "Jewellery & Accessories",
     imageUrl: "/products/JewelleryAccessories.png",
-     url: "/jewellery",
+    url: "/jewellery",
   },
 ];
 
@@ -109,8 +109,8 @@ export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Women's Beauty", id: "women_beauty_sub_header", url: "/women_beauty", category: "women_beauty" },
   { name: "TVs & Appliances", id: "tvs_appliances_sub_header", url: "/tvs_appliances", category: "tvs_appliances" },
   { name: "Beauty, Food", id: "beauty_food_sub_header", url: "/beauty_food", category: "beauty_food" },
-  { name: "Toys & Sports", id: "toys_sports_sub_header", url: "/toys_sports", category: "toys_sports" },
-  { name: "Lifestyle", id: "lifestyle_sub_header", url: "/lifestyle", category: "lifestyle" },
+  { name: "Sports & Fitness", id: "sports_fitness_sub_header", url: "/sports_fitness", category: "sports_fitness" },
+  { name: "Books", id: "books_sub_header", url: "/books", category: "books" },
   { name: "Jewellery", id: "jewellery_sub_header", url: "/jewellery", category: "jewellery" },
 ];
 
@@ -135,7 +135,6 @@ export const homeDecorSubSubCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Festive Décor", id: "festive_decor", url: "/home_decor" },
   { name: "Children's Room Décor", id: "childrens_room_decor", url: "/home_decor" },
 ];
-
 
 export const electronicsCategoriesData = [
   {
@@ -228,7 +227,7 @@ export const electronicsCategoriesData = [
   }
 ];
 
-export const  homeFurnitureCategoriesData = [
+export const homeFurnitureCategoriesData = [
   {
     id: "home_furniture",
     title: "Bedroom Linen",
@@ -1028,287 +1027,286 @@ export const categoriesDataMap = {
   // jewellery: jewelleryCategoriesData, // Create this
 };
 
-
 export const ElectronicsCategories: CategoryItem[] = [
-  { 
-    id: 'laptops', 
-    name: 'Laptops', 
-    image: '/products/laptop._SS400_QL85_.jpg', 
+  {
+    id: 'laptops',
+    name: 'Laptops',
+    image: '/products/laptop._SS400_QL85_.jpg',
     url: '/laptops',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'headphones', 
-    name: 'Headphones', 
-    image: '/products/Headphones._SS400_QL85_.jpg', 
+  {
+    id: 'headphones',
+    name: 'Headphones',
+    image: '/products/Headphones._SS400_QL85_.jpg',
     url: '/headphones',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'tablets', 
-    name: 'Tablets', 
-    image: '/products/02_Halos_copy._SS400_QL85_FMpng_.png', 
+  {
+    id: 'tablets',
+    name: 'Tablets',
+    image: '/products/02_Halos_copy._SS400_QL85_FMpng_.png',
     url: '/tablets',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'smartwatches', 
-    name: 'Smartwatches', 
-    image: '/products/Smartwatches._SS400_QL85_.jpg', 
+  {
+    id: 'smartwatches',
+    name: 'Smartwatches',
+    image: '/products/Smartwatches._SS400_QL85_.jpg',
     url: '/smartwatches',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'monitors', 
-    name: 'Monitors', 
-    image: '/products/Monitors._SS400_QL85_.jpg', 
+  {
+    id: 'monitors',
+    name: 'Monitors',
+    image: '/products/Monitors._SS400_QL85_.jpg',
     url: '/monitors',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'desktops', 
-    name: 'Desktops', 
-    image: '/products/Desktops._SS400_QL85_.jpg', 
+  {
+    id: 'desktops',
+    name: 'Desktops',
+    image: '/products/Desktops._SS400_QL85_.jpg',
     url: '/desktops',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'video-games', 
-    name: 'Video Games', 
-    image: '/products/Video-game_Halo._SS400_QL85_FMpng_.png', 
+  {
+    id: 'video-games',
+    name: 'Video Games',
+    image: '/products/Video-game_Halo._SS400_QL85_FMpng_.png',
     url: '/video-games',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'gaming-laptops', 
-    name: 'Gaming Laptops', 
-    image: '/products/Gaming_Laptops._SS400_QL85_.jpg', 
+  {
+    id: 'gaming-laptops',
+    name: 'Gaming Laptops',
+    image: '/products/Gaming_Laptops._SS400_QL85_.jpg',
     url: '/gaming-laptops',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'camera-accessories', 
-    name: 'Camera & Accessories', 
-    image: '/products/Camera__Accessories._SS400_QL85_.jpg', 
+  {
+    id: 'camera-accessories',
+    name: 'Camera & Accessories',
+    image: '/products/Camera__Accessories._SS400_QL85_.jpg',
     url: '/camera-accessories',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'computer-accessories', 
-    name: 'Computer Accessories', 
-    image: '/products/Computer_Accessories._SS400_QL85_.jpg', 
+  {
+    id: 'computer-accessories',
+    name: 'Computer Accessories',
+    image: '/products/Computer_Accessories._SS400_QL85_.jpg',
     url: '/computer-accessories',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'home-audio', 
-    name: 'Home Audio', 
-    image: '/products/9_audio._CB795899201_.png', 
+  {
+    id: 'home-audio',
+    name: 'Home Audio',
+    image: '/products/9_audio._CB795899201_.png',
     url: '/home-audio',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'stationery', 
-    name: 'Stationery', 
-    image: '/products/Stationery._SS400_QL85_.jpg', 
+  {
+    id: 'stationery',
+    name: 'Stationery',
+    image: '/products/Stationery._SS400_QL85_.jpg',
     url: '/stationery',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'musical-instruments', 
-    name: 'Musical Instruments', 
-    image: '/products/musical-instruments._SS400_QL85_.jpg', 
+  {
+    id: 'musical-instruments',
+    name: 'Musical Instruments',
+    image: '/products/musical-instruments._SS400_QL85_.jpg',
     url: '/musical-instruments',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'software', 
-    name: 'Software', 
-    image: '/products/Software_Halo._SS400_QL85_.jpg', 
+  {
+    id: 'software',
+    name: 'Software',
+    image: '/products/Software_Halo._SS400_QL85_.jpg',
     url: '/software',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'components', 
-    name: 'Components', 
-    image: '/products/components._SS400_QL85_.jpg', 
+  {
+    id: 'components',
+    name: 'Components',
+    image: '/products/components._SS400_QL85_.jpg',
     url: '/components',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'printer', 
-    name: 'Printer', 
-    image: '/products/printer._SS400_QL85_.jpg', 
+  {
+    id: 'printer',
+    name: 'Printer',
+    image: '/products/printer._SS400_QL85_.jpg',
     url: '/printer',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'storage', 
-    name: 'Storage', 
-    image: '/products/storage._SS400_QL85_.jpg', 
+  {
+    id: 'storage',
+    name: 'Storage',
+    image: '/products/storage._SS400_QL85_.jpg',
     url: '/storage',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  { 
-    id: 'networking', 
-    name: 'Networking', 
-    image: '/products/networking._SS400_QL85_.jpg', 
+  {
+    id: 'networking',
+    name: 'Networking',
+    image: '/products/networking._SS400_QL85_.jpg',
     url: '/networking',
     category: 'shopping',
     subCategory: 'electronics',
     subSubCategory: ''
   },
-  
+
 ];
 
 export const menFashionCarouselCategories = [
-  { 
-    id: '0', 
-    name: "Men's clothing", 
-    imageUrl: "/products/mens_clothing_mens_fashion.jpg", 
-    url: "/sp/pay-day/pay-day-sale" 
+  {
+    id: '0',
+    name: "Men's clothing",
+    imageUrl: "/products/mens_clothing_mens_fashion.jpg",
+    url: "/sp/pay-day/pay-day-sale"
   },
-  { 
-    id: '1', 
-    name: "Live Now", 
-    imageUrl: "/products/pay-day-sale_men_fashion.jpg", 
-    url: "/sp/pay-day/pay-day-sale" 
+  {
+    id: '1',
+    name: "Live Now",
+    imageUrl: "/products/pay-day-sale_men_fashion.jpg",
+    url: "/sp/pay-day/pay-day-sale"
   },
-  { 
-    id: '2', 
-    name: "Skin Care", 
-    imageUrl: "/products/skin-care_men_fashion.jpg", 
-    url: "/skin-care/c/7303" 
+  {
+    id: '2',
+    name: "Skin Care",
+    imageUrl: "/products/skin-care_men_fashion.jpg",
+    url: "/skin-care/c/7303"
   },
-  { 
-    id: '3', 
-    name: "Fragrance", 
-    imageUrl: "/products/fragrance_men_fashion.jpg", 
-    url: "/perfumes-deos/c/7335" 
+  {
+    id: '3',
+    name: "Fragrance",
+    imageUrl: "/products/fragrance_men_fashion.jpg",
+    url: "/perfumes-deos/c/7335"
   },
-  { 
-    id: '4', 
-    name: "Footwear", 
-    imageUrl: "/products/footwear_men_fashion.jpg", 
-    url: "/footwear/c/14287" 
+  {
+    id: '4',
+    name: "Footwear",
+    imageUrl: "/products/footwear_men_fashion.jpg",
+    url: "/footwear/c/14287"
   },
-  { 
-    id: '5', 
-    name: "Ethnic Wear", 
-    imageUrl: "/products/ethnic-wear_men_fashion.jpg", 
-    url: "/fashion-lifestyle/ethnicwear/c/26223" 
+  {
+    id: '5',
+    name: "Ethnic Wear",
+    imageUrl: "/products/ethnic-wear_men_fashion.jpg",
+    url: "/fashion-lifestyle/ethnicwear/c/26223"
   },
-  { 
-    id: '6', 
-    name: "Bath & Body", 
-    imageUrl: "/products/bath-body_men_fashion.jpg", 
-    url: "/bath-body/c/7312" 
+  {
+    id: '6',
+    name: "Bath & Body",
+    imageUrl: "/products/bath-body_men_fashion.jpg",
+    url: "/bath-body/c/7312"
   },
-  { 
-    id: '7', 
-    name: "Hair Care", 
-    imageUrl: "/products/hair-care_men_fashion.jpg", 
-    url: "/hair/c/7296" 
+  {
+    id: '7',
+    name: "Hair Care",
+    imageUrl: "/products/hair-care_men_fashion.jpg",
+    url: "/hair/c/7296"
   },
-  { 
-    id: '8', 
-    name: "Topwear", 
-    imageUrl: "/products/topwear_men_fashion.jpg", 
-    url: "/topwear/c/24294" 
+  {
+    id: '8',
+    name: "Topwear",
+    imageUrl: "/products/topwear_men_fashion.jpg",
+    url: "/topwear/c/24294"
   },
-  { 
-    id: '9', 
-    name: "Health & Nutrition", 
-    imageUrl: "/products/health-nutrition_men_fashion.jpg", 
-    url: "/health-nutrition/c/7330" 
+  {
+    id: '9',
+    name: "Health & Nutrition",
+    imageUrl: "/products/health-nutrition_men_fashion.jpg",
+    url: "/health-nutrition/c/7330"
   },
-  { 
-    id: '10', 
-    name: "Foot Locker", 
-    imageUrl: "/products/foot-locker_men_fashion.gif", 
-    url: "/sp/footlocker/foot-locker" 
+  {
+    id: '10',
+    name: "Foot Locker",
+    imageUrl: "/products/foot-locker_men_fashion.gif",
+    url: "/sp/footlocker/foot-locker"
   },
-  { 
-    id: '11', 
-    name: "Home", 
-    imageUrl: "/products/home_men_fashion.jpg", 
-    url: "/home/c/74572" 
+  {
+    id: '11',
+    name: "Home",
+    imageUrl: "/products/home_men_fashion.jpg",
+    url: "/home/c/74572"
   },
-  { 
-    id: '12', 
-    name: "Bottomwear", 
-    imageUrl: "/products/bottomwear_men_fashion.jpg", 
-    url: "/bottomwear/c/24302" 
+  {
+    id: '12',
+    name: "Bottomwear",
+    imageUrl: "/products/bottomwear_men_fashion.jpg",
+    url: "/bottomwear/c/24302"
   },
-  { 
-    id: '13', 
-    name: "Watches", 
-    imageUrl: "/products/watches_men_fashion.jpg", 
-    url: "/watches/c/15885" 
+  {
+    id: '13',
+    name: "Watches",
+    imageUrl: "/products/watches_men_fashion.jpg",
+    url: "/watches/c/15885"
   },
-  { 
-    id: '14', 
-    name: "Activewear", 
-    imageUrl: "/products/activewear_men_fashion.jpg", 
-    url: "/activewear/c/24309" 
+  {
+    id: '14',
+    name: "Activewear",
+    imageUrl: "/products/activewear_men_fashion.jpg",
+    url: "/activewear/c/24309"
   },
-  { 
-    id: '15', 
-    name: "Fashion Accessories", 
-    imageUrl: "/products/fashion-accessories_men_fashion.jpg", 
-    url: "/lifestyle-accessories/c/17921" 
+  {
+    id: '15',
+    name: "Fashion Accessories",
+    imageUrl: "/products/fashion-accessories_men_fashion.jpg",
+    url: "/lifestyle-accessories/c/17921"
   },
-  { 
-    id: '16', 
-    name: "Grooming Store", 
-    imageUrl: "/products/grooming-store_men_fashion.jpg", 
-    url: "/sp/grooming-store/default" 
+  {
+    id: '16',
+    name: "Grooming Store",
+    imageUrl: "/products/grooming-store_men_fashion.jpg",
+    url: "/sp/grooming-store/default"
   },
-  { 
-    id: '17', 
-    name: "Fashion store", 
-    imageUrl: "/products/fashion-store_men_fashion.jpg", 
-    url: "/sp/fashion-store/default" 
+  {
+    id: '17',
+    name: "Fashion store",
+    imageUrl: "/products/fashion-store_men_fashion.jpg",
+    url: "/sp/fashion-store/default"
   },
-  { 
-    id: '18', 
-    name: "Gen-Z", 
-    imageUrl: "/products/gen-z_men_fashion.jpg", 
-    url: "/sp/fashion-store/default" 
+  {
+    id: '18',
+    name: "Gen-Z",
+    imageUrl: "/products/gen-z_men_fashion.jpg",
+    url: "/sp/fashion-store/default"
   },
 ];
 
@@ -1470,150 +1468,150 @@ export const toBrandsMenFashion: BrandItem[] = [
 ];
 
 export const womenFashionCarouselCategories = [
-  { 
-    id: '0', 
-    name: "Monsoon", 
-    imageUrl: "/products/monsoon_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '0',
+    name: "Monsoon",
+    imageUrl: "/products/monsoon_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '1', 
-    name: "Kurta sets", 
-    imageUrl: "/products/kurta-sets_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '1',
+    name: "Kurta sets",
+    imageUrl: "/products/kurta-sets_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '2', 
-    name: "Dresses", 
-    imageUrl: "/products/dresses_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '2',
+    name: "Dresses",
+    imageUrl: "/products/dresses_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '3', 
-    name: "Sarees", 
-    imageUrl: "/products/sarees_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '3',
+    name: "Sarees",
+    imageUrl: "/products/sarees_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '4', 
-    name: "Nightsuits", 
-    imageUrl: "/products/nightsuits_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '4',
+    name: "Nightsuits",
+    imageUrl: "/products/nightsuits_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '5', 
-    name: "Kurtis", 
-    imageUrl: "/products/kurtis_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '5',
+    name: "Kurtis",
+    imageUrl: "/products/kurtis_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '6', 
-    name: "Jeans", 
-    imageUrl: "/products/jeans_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '6',
+    name: "Jeans",
+    imageUrl: "/products/jeans_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '7', 
-    name: "Dress Material", 
-    imageUrl: "/products/dress-material_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '7',
+    name: "Dress Material",
+    imageUrl: "/products/dress-material_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '8', 
-    name: "Watches", 
-    imageUrl: "/products/watches_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '8',
+    name: "Watches",
+    imageUrl: "/products/watches_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '9', 
-    name: "Drips for Her", 
-    imageUrl: "/products/drips-for-her_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '9',
+    name: "Drips for Her",
+    imageUrl: "/products/drips-for-her_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '10', 
-    name: "Next Gen Fashion", 
-    imageUrl: "/products/next-gen-fashion_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '10',
+    name: "Next Gen Fashion",
+    imageUrl: "/products/next-gen-fashion_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '11', 
-    name: "Trends", 
-    imageUrl: "/products/trends_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '11',
+    name: "Trends",
+    imageUrl: "/products/trends_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '12', 
-    name: "Sports Shoes", 
-    imageUrl: "/products/sports-shoes_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '12',
+    name: "Sports Shoes",
+    imageUrl: "/products/sports-shoes_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '13', 
-    name: "Jewellery", 
-    imageUrl: "/products/jewellery_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '13',
+    name: "Jewellery",
+    imageUrl: "/products/jewellery_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '14', 
-    name: "Handbags", 
-    imageUrl: "/products/handbags_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '14',
+    name: "Handbags",
+    imageUrl: "/products/handbags_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '15', 
-    name: "Kids' clothing", 
-    imageUrl: "/products/kids-clothing_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '15',
+    name: "Kids' clothing",
+    imageUrl: "/products/kids-clothing_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '16', 
-    name: "Lehenga Cholis", 
-    imageUrl: "/products/lehenaga-cholis_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '16',
+    name: "Lehenga Cholis",
+    imageUrl: "/products/lehenaga-cholis_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '17', 
-    name: "Bra, panty", 
-    imageUrl: "/products/bra-panty_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '17',
+    name: "Bra, panty",
+    imageUrl: "/products/bra-panty_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '18', 
-    name: "Heels & Flats", 
-    imageUrl: "/products/heels-flats_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '18',
+    name: "Heels & Flats",
+    imageUrl: "/products/heels-flats_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '19', 
-    name: "Tops, t-shirts", 
-    imageUrl: "/products/tops-t-shirts_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '19',
+    name: "Tops, t-shirts",
+    imageUrl: "/products/tops-t-shirts_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '20', 
-    name: "Focus brands", 
-    imageUrl: "/products/focus-brands_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '20',
+    name: "Focus brands",
+    imageUrl: "/products/focus-brands_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '21', 
-    name: "Celeb looks", 
-    imageUrl: "/products/celeb-looks_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '21',
+    name: "Celeb looks",
+    imageUrl: "/products/celeb-looks_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '21', 
-    name: "Indian Wear", 
-    imageUrl: "/products/indian-wear_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '21',
+    name: "Indian Wear",
+    imageUrl: "/products/indian-wear_womens_fashion.jpg",
+    url: "/"
   }
   ,
-  { 
-    id: '21', 
-    name: "Western Wear", 
-    imageUrl: "/products/western-wear_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '21',
+    name: "Western Wear",
+    imageUrl: "/products/western-wear_womens_fashion.jpg",
+    url: "/"
   }
 ];
 
@@ -2103,56 +2101,55 @@ export const womenBeautyCarouselCategories = [
     imageUrl: "/products/most_loved._SS300_QL85_FMpng_.png",
     url: "/"
   },
-  { 
-    id: '10', 
-    name: "Brands", 
-    imageUrl: "/products/Brands_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '10',
+    name: "Brands",
+    imageUrl: "/products/Brands_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '11', 
-    name: "Luxe", 
-    imageUrl: "/products/Luxe_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '11',
+    name: "Luxe",
+    imageUrl: "/products/Luxe_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '12', 
-    name: "Appliances", 
-    imageUrl: "/products/Appliances_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '12',
+    name: "Appliances",
+    imageUrl: "/products/Appliances_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '13', 
-    name: "Bath & Body", 
-    imageUrl: "/products/Bath _Body_womens_fashion_2.jpg", 
-    url: "/" 
+  {
+    id: '13',
+    name: "Bath & Body",
+    imageUrl: "/products/Bath _Body_womens_fashion_2.jpg",
+    url: "/"
   },
-  { 
-    id: '14', 
-    name: "Natural", 
-    imageUrl: "/products/Natural_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '14',
+    name: "Natural",
+    imageUrl: "/products/Natural_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '15', 
-    name: "Mom & Baby", 
-    imageUrl: "/products/Mom_&_Baby_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '15',
+    name: "Mom & Baby",
+    imageUrl: "/products/Mom_&_Baby_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '16', 
-    name: "Fragrance", 
-    imageUrl: "/products/Fragrance_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '16',
+    name: "Fragrance",
+    imageUrl: "/products/Fragrance_womens_fashion.jpg",
+    url: "/"
   },
-  { 
-    id: '17', 
-    name: "Lingerie & Accessories", 
-    imageUrl: "/products/Lingerie_&_Accessories_womens_fashion.jpg", 
-    url: "/" 
+  {
+    id: '17',
+    name: "Lingerie & Accessories",
+    imageUrl: "/products/Lingerie_&_Accessories_womens_fashion.jpg",
+    url: "/"
   },
 ];
-
 
 export const slidesShoppingWomenBeauty: HeroSlide[] = [
   {
@@ -2289,14 +2286,14 @@ export const slidesHalfShoppingWomenBeauty: BannerItem[] = [
   },
   {
     id: '66858',
-     title: 'Up To 25% Off!',
+    title: 'Up To 25% Off!',
     imageUrl: '/products/Up_To_25_Off_default.png',
     url: '/',
     discount: 'Up To 25% Off!',
     discount2: 'Treat Yourself Today',
     alt: '51924',
     badge: 'Up To 25% Off!'
-    
+
   },
   {
     id: '51924',
@@ -2307,7 +2304,7 @@ export const slidesHalfShoppingWomenBeauty: BannerItem[] = [
     discount2: 'Last All Day',
     alt: '66858',
     badge: '3X Fast Style'
-   
+
   },
   {
     id: '75288',
@@ -2600,90 +2597,90 @@ export const ScrollItemWomensBeauty: ScrollItem[] = [
   }
 ];
 
- export const HeadphonesHorizontalSliderOneLine = [
-    {
-      id: "1",
-      title: "JBL C100SI Wired In Ear Headphones With Mic, Pure Bass Sound",
-      price: 599,
-      oldPrice: 1299,
-      currency: "₹",
-      imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "2",
-      title: "boAt Bassheads 225 Wired in Ear Earphone with Mic",
-      price: 549,
-      oldPrice: 999,
-      currency: "₹",
-      imageUrl: "/products/61iSV4o+X-L._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "3",
-      title: "boAt Bassheads 105 Wired in Ear Earphones with Mic",
-      price: 349,
-      oldPrice: 999,
-      currency: "₹",
-      imageUrl: "/products/51PyI5qRSwS._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "4",
-      title: "JBL C200SI Premium in Ear Wired Earphones with Mic",
-      price: 749,
-      oldPrice: 1499,
-      currency: "₹",
-      imageUrl: "/products/51R2zw+oxCL._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "5",
-      title: "JBL Tune 310 Wired in Ear Type C Headphones",
-      price: 1299,
-      oldPrice: 1999,
-      currency: "₹",
-      imageUrl: "/products/61W50xR23vL._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "6",
-      title: "Sennheiser IE 300 Hi-Res Audiophile in Ear Headphones",
-      price: 11990,
-      oldPrice: 29990,
-      currency: "₹",
-      imageUrl: "/products/61ASgJqJiuL._AC_SR480,440_.jpg",
-      link: "#"
-    },
-    {
-      id: "7",
-      title: "Sennheiser HD 560S Open-Back Audiophile Over Ear Headphones",
-      price: 10990,
-      oldPrice: 20990,
-      currency: "₹",
-      imageUrl: "/products/61MGAGocToL._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "8",
-      title: "Sennheiser HD 560S Open-Back Audiophile Over Ear Wired Headphones,Neutral Reference Sound,Angled Transducers,Wide Soundstage,Detachable Cable,Lightweight,Natural Sound for Gaming,2Y Warranty",
-      price: 10990,
-      oldPrice: 20990,
-      currency: "₹",
-      imageUrl: "/products/Sennheiser61MGAGocToL._AC_SR480,440_.jpg",
-      link: "#",
-    },
-    {
-      id: "9",
-      title: "Sennheiser CX 80s Wired in Ear Earphones with in-Line Microphone, Superior Sound, One Button Smart Control, Lightweight Design, 3.5mm Jack, 3 Ear Tip Sizes, 2Y Warranty, ‎Voice Control, Black",
-      price: 10990,
-      oldPrice: 20990,
-      currency: "₹",
-      imageUrl: "/products/Sennheiser61MGAGocToL._AC_SR480,440Superior_.jpg",
-      link: "#",
-    },
-    
-  ];
+export const HeadphonesHorizontalSliderOneLine = [
+  {
+    id: "1",
+    title: "JBL C100SI Wired In Ear Headphones With Mic, Pure Bass Sound",
+    price: 599,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "2",
+    title: "boAt Bassheads 225 Wired in Ear Earphone with Mic",
+    price: 549,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/61iSV4o+X-L._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "3",
+    title: "boAt Bassheads 105 Wired in Ear Earphones with Mic",
+    price: 349,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/51PyI5qRSwS._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "4",
+    title: "JBL C200SI Premium in Ear Wired Earphones with Mic",
+    price: 749,
+    oldPrice: 1499,
+    currency: "₹",
+    imageUrl: "/products/51R2zw+oxCL._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "5",
+    title: "JBL Tune 310 Wired in Ear Type C Headphones",
+    price: 1299,
+    oldPrice: 1999,
+    currency: "₹",
+    imageUrl: "/products/61W50xR23vL._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "6",
+    title: "Sennheiser IE 300 Hi-Res Audiophile in Ear Headphones",
+    price: 11990,
+    oldPrice: 29990,
+    currency: "₹",
+    imageUrl: "/products/61ASgJqJiuL._AC_SR480,440_.jpg",
+    link: "#"
+  },
+  {
+    id: "7",
+    title: "Sennheiser HD 560S Open-Back Audiophile Over Ear Headphones",
+    price: 10990,
+    oldPrice: 20990,
+    currency: "₹",
+    imageUrl: "/products/61MGAGocToL._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "8",
+    title: "Sennheiser HD 560S Open-Back Audiophile Over Ear Wired Headphones,Neutral Reference Sound,Angled Transducers,Wide Soundstage,Detachable Cable,Lightweight,Natural Sound for Gaming,2Y Warranty",
+    price: 10990,
+    oldPrice: 20990,
+    currency: "₹",
+    imageUrl: "/products/Sennheiser61MGAGocToL._AC_SR480,440_.jpg",
+    link: "#",
+  },
+  {
+    id: "9",
+    title: "Sennheiser CX 80s Wired in Ear Earphones with in-Line Microphone, Superior Sound, One Button Smart Control, Lightweight Design, 3.5mm Jack, 3 Ear Tip Sizes, 2Y Warranty, ‎Voice Control, Black",
+    price: 10990,
+    oldPrice: 20990,
+    currency: "₹",
+    imageUrl: "/products/Sennheiser61MGAGocToL._AC_SR480,440Superior_.jpg",
+    link: "#",
+  },
+
+];
 
 export const PcAccessoriesHorizontalSliderOneLine = [
   {
@@ -2908,200 +2905,200 @@ export const SmartwatchesHorizontalSliderOneLine = [
 ];
 
 export const electronicsCarouselCategories = [
-  { 
+  {
     id: '0',
-    name: "Smartphones", 
-    imageUrl: "/products/smartphones_electronics2.jpg", 
+    name: "Smartphones",
+    imageUrl: "/products/smartphones_electronics2.jpg",
     url: "/electronics/smartphones",
     category: "electronics"
   },
-  { 
+  {
     id: '1',
-    name: "Laptops & Computers", 
-    imageUrl: "/products/laptop._SS400_QL85_1.jpg", 
+    name: "Laptops & Computers",
+    imageUrl: "/products/laptop._SS400_QL85_1.jpg",
     url: "/electronics/laptops",
     category: "electronics"
   },
-  { 
+  {
     id: '2',
-    name: "Tablets", 
-    imageUrl: "/products/02_Halos_copy._SS400_QL85_FMpng_1.png", 
+    name: "Tablets",
+    imageUrl: "/products/02_Halos_copy._SS400_QL85_FMpng_1.png",
     url: "/electronics/tablets",
     category: "electronics"
   },
-  { 
+  {
     id: '3',
-    name: "Headphones & Earphones", 
-    imageUrl: "/products/Headphones._SS400_QL85_1.jpg", 
+    name: "Headphones & Earphones",
+    imageUrl: "/products/Headphones._SS400_QL85_1.jpg",
     url: "/electronics/headphones",
     category: "electronics"
   },
-  { 
-    id: '4', 
-    name: "Smart Watches", 
-    imageUrl: "/products/Smartwatches._SS400_QL85_1.jpg", 
+  {
+    id: '4',
+    name: "Smart Watches",
+    imageUrl: "/products/Smartwatches._SS400_QL85_1.jpg",
     url: "/electronics/smartwatches",
     category: "electronics"
   },
-  { 
+  {
     id: '5',
-    name: "Cameras & Photography", 
-    imageUrl: "/products/Camera__Accessories._SS400_QL85_1.jpg", 
+    name: "Cameras & Photography",
+    imageUrl: "/products/Camera__Accessories._SS400_QL85_1.jpg",
     url: "/electronics/cameras",
     category: "electronics"
   },
-  { 
+  {
     id: '6',
-    name: "Televisions", 
-    imageUrl: "/products/televisions_electronics1.jpg", 
+    name: "Televisions",
+    imageUrl: "/products/televisions_electronics1.jpg",
     url: "/electronics/tvs",
     category: "electronics"
   },
-  { 
+  {
     id: '7',
-    name: "Audio Speakers", 
-    imageUrl: "/products/9_audio._CB795899201_.png", 
+    name: "Audio Speakers",
+    imageUrl: "/products/9_audio._CB795899201_.png",
     url: "/electronics/speakers",
     category: "electronics"
   },
-  { 
+  {
     id: '8',
-    name: "Gaming Consoles", 
-    imageUrl: "/products/Gaming_Laptops._SS400_QL85_1.jpg", 
+    name: "Gaming Consoles",
+    imageUrl: "/products/Gaming_Laptops._SS400_QL85_1.jpg",
     url: "/electronics/gaming",
     category: "electronics"
   },
-  
-  { 
+
+  {
     id: '9',
-    name: "Computer Accessories", 
-    imageUrl: "/products/Computer_Accessories._SS400_QL85_1.jpg", 
+    name: "Computer Accessories",
+    imageUrl: "/products/Computer_Accessories._SS400_QL85_1.jpg",
     url: "/electronics/accessories",
     category: "electronics"
   },
-  { 
-    id: '10', 
-    name: "Printers & Scanners", 
-    imageUrl: "/products/printer._SS400_QL85_1.jpg", 
+  {
+    id: '10',
+    name: "Printers & Scanners",
+    imageUrl: "/products/printer._SS400_QL85_1.jpg",
     url: "/electronics/printers",
     category: "electronics"
   },
-  { 
-    id: '11', 
-    name: "Storage Devices", 
-    imageUrl: "/products/storage._SS400_QL85_1.jpg", 
+  {
+    id: '11',
+    name: "Storage Devices",
+    imageUrl: "/products/storage._SS400_QL85_1.jpg",
     url: "/electronics/storage",
     category: "electronics"
   },
-  { 
-    id: '12', 
-    name: "Mobile Accessories", 
-    imageUrl: "/products/mobile_accessories_electronics1.jpg", 
+  {
+    id: '12',
+    name: "Mobile Accessories",
+    imageUrl: "/products/mobile_accessories_electronics1.jpg",
     url: "/electronics/mobile-accessories",
     category: "electronics"
   },
-  { 
-    id: '13', 
-    name: "Networking Devices", 
-    imageUrl: "/products/networking_devices_electronics1.jpg", 
+  {
+    id: '13',
+    name: "Networking Devices",
+    imageUrl: "/products/networking_devices_electronics1.jpg",
     url: "/electronics/networking",
     category: "electronics"
   },
-  { 
-    id: '14', 
-    name: "Smart Home Devices", 
-    imageUrl: "/products/smart_home_electronics.jpg", 
+  {
+    id: '14',
+    name: "Smart Home Devices",
+    imageUrl: "/products/smart_home_electronics.jpg",
     url: "/electronics/smart-home",
     category: "electronics"
   },
-  { 
-    id: '15', 
-    name: "Fitness Trackers", 
-    imageUrl: "/products/fitness_trackers_electronics.jpg", 
+  {
+    id: '15',
+    name: "Fitness Trackers",
+    imageUrl: "/products/fitness_trackers_electronics.jpg",
     url: "/electronics/fitness-trackers",
     category: "electronics"
   },
-  { 
-    id: '16', 
-    name: "Drone & Gadgets", 
-    imageUrl: "/products/drones_gadgets_electronics.jpg", 
+  {
+    id: '16',
+    name: "Drone & Gadgets",
+    imageUrl: "/products/drones_gadgets_electronics.jpg",
     url: "/electronics/drones",
     category: "electronics"
   },
-  { 
-    id: '17', 
-    name: "Monitor & Display", 
-    imageUrl: "/products/Monitors._SS400_QL85_.jpg", 
+  {
+    id: '17',
+    name: "Monitor & Display",
+    imageUrl: "/products/Monitors._SS400_QL85_.jpg",
     url: "/electronics/monitors",
     category: "electronics"
   },
-  { 
-    id: '18', 
-    name: "Software & Antivirus", 
-    imageUrl: "/products/software_antivirus_electronics.jpg", 
+  {
+    id: '18',
+    name: "Software & Antivirus",
+    imageUrl: "/products/software_antivirus_electronics.jpg",
     url: "/electronics/software",
     category: "electronics"
   },
-  { 
-    id: '19', 
-    name: "Tech Deals", 
-    imageUrl: "/products/tech_deals_electronics.jpg", 
+  {
+    id: '19',
+    name: "Tech Deals",
+    imageUrl: "/products/tech_deals_electronics.jpg",
     url: "/electronics/deals",
     category: "electronics"
   },
-  { 
-    id: '20', 
-    name: 'Desktops', 
-    imageUrl: '/products/Desktops._SS400_QL85_.jpg', 
+  {
+    id: '20',
+    name: 'Desktops',
+    imageUrl: '/products/Desktops._SS400_QL85_.jpg',
     url: '/desktops',
     category: "electronics"
   },
-  { 
-    id: '21', 
-    name: 'Video Games', 
-    imageUrl: '/products/Video-game_Halo._SS400_QL85_FMpng_.png', 
+  {
+    id: '21',
+    name: 'Video Games',
+    imageUrl: '/products/Video-game_Halo._SS400_QL85_FMpng_.png',
     url: '/video-games',
     category: 'electronics',
   },
-  { 
-    id: '22', 
-    name: 'Stationery', 
-    imageUrl: '/products/Stationery._SS400_QL85_.jpg', 
+  {
+    id: '22',
+    name: 'Stationery',
+    imageUrl: '/products/Stationery._SS400_QL85_.jpg',
     url: '/stationery',
     category: 'electronics',
   },
-   { 
-    id: '23', 
-    name: 'Musical Instruments', 
-    imageUrl: '/products/musical-instruments._SS400_QL85_.jpg', 
+  {
+    id: '23',
+    name: 'Musical Instruments',
+    imageUrl: '/products/musical-instruments._SS400_QL85_.jpg',
     url: '/musical-instruments',
     category: 'electronics',
   },
-  { 
-    id: '24', 
-    name: 'Software', 
-    imageUrl: '/products/Software_Halo._SS400_QL85_.jpg', 
+  {
+    id: '24',
+    name: 'Software',
+    imageUrl: '/products/Software_Halo._SS400_QL85_.jpg',
     url: '/software',
     category: 'electronics',
   },
-   { 
-    id: '25', 
-    name: 'Components', 
-    imageUrl: '/products/components._SS400_QL85_.jpg', 
+  {
+    id: '25',
+    name: 'Components',
+    imageUrl: '/products/components._SS400_QL85_.jpg',
     url: '/components',
     category: 'electronics',
   },
-  { 
-    id: '26', 
-    name: 'Networking', 
-    imageUrl: '/products/networking._SS400_QL85_.jpg', 
+  {
+    id: '26',
+    name: 'Networking',
+    imageUrl: '/products/networking._SS400_QL85_.jpg',
     url: '/networking',
     category: 'electronics',
   },
-  
+
 ];
 
-export const slidesElectronicsFashion : BannerItemContent[] = [
+export const slidesElectronicsFashion: BannerItemContent[] = [
   {
     id: '1',
     title: 'Premium Electronics Collection',
@@ -3252,289 +3249,289 @@ export const toElectronicsItems = [
 ];
 
 export const topDealsElectronicsCategories: CategoryItem[] = [
-  { 
-    id: 'B0FN9WN6XD', 
-    name: 'Deal 1', 
-    image: '/products/L_1.jpg', 
+  {
+    id: 'B0FN9WN6XD',
+    name: 'Deal 1',
+    image: '/products/L_1.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0FFTLRYRV', 
-    name: 'Deal 2', 
-    image: '/products/L_2.jpg', 
+  {
+    id: 'B0FFTLRYRV',
+    name: 'Deal 2',
+    image: '/products/L_2.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GNMG31LQ', 
-    name: 'Deal 3', 
-    image: '/products/L_3.jpg', 
+  {
+    id: 'B0GNMG31LQ',
+    name: 'Deal 3',
+    image: '/products/L_3.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GWQGM5FJ', 
-    name: 'Deal 4', 
-    image: '/products/L_4.jpg', 
+  {
+    id: 'B0GWQGM5FJ',
+    name: 'Deal 4',
+    image: '/products/L_4.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0DSFQZTVW', 
-    name: 'Deal 5', 
-    image: '/products/L_5.jpg', 
+  {
+    id: 'B0DSFQZTVW',
+    name: 'Deal 5',
+    image: '/products/L_5.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GTZHLMG3', 
-    name: 'Deal 6', 
-    image: '/products/L_6.jpg', 
+  {
+    id: 'B0GTZHLMG3',
+    name: 'Deal 6',
+    image: '/products/L_6.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G495PMV8', 
-    name: 'Deal 7', 
-    image: '/products/L_7.jpg', 
+  {
+    id: 'B0G495PMV8',
+    name: 'Deal 7',
+    image: '/products/L_7.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GYRK1RZC', 
-    name: 'Deal 8', 
-    image: '/products/L_8.jpg', 
+  {
+    id: 'B0GYRK1RZC',
+    name: 'Deal 8',
+    image: '/products/L_8.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GX4W73SM', 
-    name: 'Deal 9', 
-    image: '/products/L_9.jpg', 
+  {
+    id: 'B0GX4W73SM',
+    name: 'Deal 9',
+    image: '/products/L_9.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G8HBRT27', 
-    name: 'Deal 10', 
-    image: '/products/L_10.jpg', 
+  {
+    id: 'B0G8HBRT27',
+    name: 'Deal 10',
+    image: '/products/L_10.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GSVTDN5G', 
-    name: 'Deal 11', 
-    image: '/products/L_11.jpg', 
+  {
+    id: 'B0GSVTDN5G',
+    name: 'Deal 11',
+    image: '/products/L_11.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GMQP579H', 
-    name: 'Deal 12', 
-    image: '/products/L_12.jpg', 
+  {
+    id: 'B0GMQP579H',
+    name: 'Deal 12',
+    image: '/products/L_12.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G2BHDDB8', 
-    name: 'Deal 13', 
-    image: '/products/L_13.jpg', 
+  {
+    id: 'B0G2BHDDB8',
+    name: 'Deal 13',
+    image: '/products/L_13.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0DSHWKNZG', 
-    name: 'Deal 14', 
-    image: '/products/L_14.jpg', 
+  {
+    id: 'B0DSHWKNZG',
+    name: 'Deal 14',
+    image: '/products/L_14.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GRHZDJBJ', 
-    name: 'Deal 15', 
-    image: '/products/L_15.jpg', 
+  {
+    id: 'B0GRHZDJBJ',
+    name: 'Deal 15',
+    image: '/products/L_15.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GXJYZ4X8', 
-    name: 'Deal 16', 
-    image: '/products/L_16.jpg', 
+  {
+    id: 'B0GXJYZ4X8',
+    name: 'Deal 16',
+    image: '/products/L_16.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0F8P844W2', 
-    name: 'Deal 17', 
-    image: '/products/L_17.jpg', 
+  {
+    id: 'B0F8P844W2',
+    name: 'Deal 17',
+    image: '/products/L_17.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0BJDJY8LY', 
-    name: 'Deal 18', 
-    image: '/products/L_18.jpg', 
+  {
+    id: 'B0BJDJY8LY',
+    name: 'Deal 18',
+    image: '/products/L_18.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0F8P4Y7VF', 
-    name: 'Deal 19', 
-    image: '/products/L_19.jpg', 
+  {
+    id: 'B0F8P4Y7VF',
+    name: 'Deal 19',
+    image: '/products/L_19.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0FMRTWFMN', 
-    name: 'Deal 20', 
-    image: '/products/L_20.jpg', 
+  {
+    id: 'B0FMRTWFMN',
+    name: 'Deal 20',
+    image: '/products/L_20.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0H3PV7418', 
-    name: 'Deal 21', 
-    image: '/products/L_21.jpg', 
+  {
+    id: 'B0H3PV7418',
+    name: 'Deal 21',
+    image: '/products/L_21.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GWHGS8P5', 
-    name: 'Deal 22', 
-    image: '/products/L_22.jpg', 
+  {
+    id: 'B0GWHGS8P5',
+    name: 'Deal 22',
+    image: '/products/L_22.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0F9X5DSBS', 
-    name: 'Deal 23', 
-    image: '/products/L_23.jpg', 
+  {
+    id: 'B0F9X5DSBS',
+    name: 'Deal 23',
+    image: '/products/L_23.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0FDKS93JV', 
-    name: 'Deal 24', 
-    image: '/products/L_24.jpg', 
+  {
+    id: 'B0FDKS93JV',
+    name: 'Deal 24',
+    image: '/products/L_24.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0H4QMDD6J', 
-    name: 'Deal 25', 
-    image: '/products/L_25.jpg', 
+  {
+    id: 'B0H4QMDD6J',
+    name: 'Deal 25',
+    image: '/products/L_25.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GTZKGNM6', 
-    name: 'Deal 26', 
-    image: '/products/L_26.jpg', 
+  {
+    id: 'B0GTZKGNM6',
+    name: 'Deal 26',
+    image: '/products/L_26.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GX4W73SM', 
-    name: 'Deal 27', 
-    image: '/products/L_27.jpg', 
+  {
+    id: 'B0GX4W73SM',
+    name: 'Deal 27',
+    image: '/products/L_27.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GVRZD89W', 
-    name: 'Deal 28', 
-    image: '/products/L_28.jpg', 
+  {
+    id: 'B0GVRZD89W',
+    name: 'Deal 28',
+    image: '/products/L_28.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GVNJ8KPB', 
-    name: 'Deal 29', 
-    image: '/products/L_29.jpg', 
+  {
+    id: 'B0GVNJ8KPB',
+    name: 'Deal 29',
+    image: '/products/L_29.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G46HR61G', 
-    name: 'Deal 30', 
-    image: '/products/L_30.jpg', 
+  {
+    id: 'B0G46HR61G',
+    name: 'Deal 30',
+    image: '/products/L_30.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0D49W5KZP', 
-    name: 'Deal 31', 
-    image: '/products/L_31.jpg', 
+  {
+    id: 'B0D49W5KZP',
+    name: 'Deal 31',
+    image: '/products/L_31.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G5NG4FFW', 
-    name: 'Deal 32', 
-    image: '/products/L_32.jpg', 
+  {
+    id: 'B0G5NG4FFW',
+    name: 'Deal 32',
+    image: '/products/L_32.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'deals',
@@ -3543,82 +3540,82 @@ export const topDealsElectronicsCategories: CategoryItem[] = [
 ];
 
 export const topDealsOnTabletsCategories: CategoryItem[] = [
-  { 
-    id: 'B0FJG1V6RJ', 
-    name: 'Tablet Deal 1', 
-    image: '/products/T1.jpg', 
+  {
+    id: 'B0FJG1V6RJ',
+    name: 'Tablet Deal 1',
+    image: '/products/T1.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0FNWNZZ1B', 
-    name: 'Tablet Deal 2', 
-    image: '/products/T2.jpg', 
+  {
+    id: 'B0FNWNZZ1B',
+    name: 'Tablet Deal 2',
+    image: '/products/T2.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GPVX566R', 
-    name: 'Tablet Deal 3', 
-    image: '/products/T3.jpg', 
+  {
+    id: 'B0GPVX566R',
+    name: 'Tablet Deal 3',
+    image: '/products/T3.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GDPWLJMM', 
-    name: 'Tablet Deal 4', 
-    image: '/products/T4.jpg', 
+  {
+    id: 'B0GDPWLJMM',
+    name: 'Tablet Deal 4',
+    image: '/products/T4.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0GWHYQW77', 
-    name: 'Tablet Deal 5', 
-    image: '/products/T5.jpg', 
+  {
+    id: 'B0GWHYQW77',
+    name: 'Tablet Deal 5',
+    image: '/products/T5.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0FBRS76BR', 
-    name: 'Tablet Deal 6', 
-    image: '/products/T6.jpg', 
+  {
+    id: 'B0FBRS76BR',
+    name: 'Tablet Deal 6',
+    image: '/products/T6.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G1C13SB3', 
-    name: 'Tablet Deal 7', 
-    image: '/products/T7.jpg', 
+  {
+    id: 'B0G1C13SB3',
+    name: 'Tablet Deal 7',
+    image: '/products/T7.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0D7N23QKD', 
-    name: 'Tablet Deal 8', 
-    image: '/products/T8.jpg', 
+  {
+    id: 'B0D7N23QKD',
+    name: 'Tablet Deal 8',
+    image: '/products/T8.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
     subSubCategory: 'top-deals'
   },
-  { 
-    id: 'B0G7F4FJSC', 
-    name: 'Tablet Deal 9', 
-    image: '/products/T9.jpg', 
+  {
+    id: 'B0G7F4FJSC',
+    name: 'Tablet Deal 9',
+    image: '/products/T9.jpg',
     url: '/',
     category: 'electronics',
     subCategory: 'tablets',
@@ -3711,268 +3708,268 @@ export const bankOfferElectronicsSlide: BankOfferSlideData[] = [
 
 
 export const homeFurnitureCarouselCategories = [
-  { 
-    id: '1', 
-    name: "Mattresses", 
-    imageUrl: "/products/6dcd96ab3dffa743.jpg", 
+  {
+    id: '1',
+    name: "Mattresses",
+    imageUrl: "/products/6dcd96ab3dffa743.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '2', 
-    name: "Office chairs", 
-    imageUrl: "/products/a275e52dd5391137.jpg", 
+  {
+    id: '2',
+    name: "Office chairs",
+    imageUrl: "/products/a275e52dd5391137.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '3', 
-    name: "Beds", 
-    imageUrl: "/products/619a90cb3079dd36.jpg", 
+  {
+    id: '3',
+    name: "Beds",
+    imageUrl: "/products/619a90cb3079dd36.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '4', 
-    name: "Wardrobes", 
-    imageUrl: "/products/ea4ca063f2e858e3.jpg", 
+  {
+    id: '4',
+    name: "Wardrobes",
+    imageUrl: "/products/ea4ca063f2e858e3.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '5', 
-    name: "Office tables", 
-    imageUrl: "/products/a55b07b0721bb404.jpg", 
+  {
+    id: '5',
+    name: "Office tables",
+    imageUrl: "/products/a55b07b0721bb404.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '6', 
-    name: "Recliners", 
-    imageUrl: "/products/8ad710342f6f7a43.jpg", 
+  {
+    id: '6',
+    name: "Recliners",
+    imageUrl: "/products/8ad710342f6f7a43.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '7', 
-    name: "Hammock", 
-    imageUrl: "/products/02132b72c4ccf6f9.jpg", 
+  {
+    id: '7',
+    name: "Hammock",
+    imageUrl: "/products/02132b72c4ccf6f9.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '8', 
-    name: "Collapsibles", 
-    imageUrl: "/products/e23b5aec2a9e1c80.jpg", 
+  {
+    id: '8',
+    name: "Collapsibles",
+    imageUrl: "/products/e23b5aec2a9e1c80.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '9', 
-    name: "Bean bags", 
-    imageUrl: "/products/66769a6c1ba60981.jpg", 
+  {
+    id: '9',
+    name: "Bean bags",
+    imageUrl: "/products/66769a6c1ba60981.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '10', 
-    name: "Book shelvs", 
-    imageUrl: "/products/1f4e96262c476aa8.jpg", 
+  {
+    id: '10',
+    name: "Book shelvs",
+    imageUrl: "/products/1f4e96262c476aa8.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '11', 
-    name: "Kids' furniture", 
-    imageUrl: "/products/e41a32a2a0fb6cb3.jpg", 
+  {
+    id: '11',
+    name: "Kids' furniture",
+    imageUrl: "/products/e41a32a2a0fb6cb3.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '12', 
-    name: "Sofas", 
-    imageUrl: "/products/55f6c3ea8cf26b12.jpg", 
+  {
+    id: '12',
+    name: "Sofas",
+    imageUrl: "/products/55f6c3ea8cf26b12.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '13', 
-    name: "Dining sets", 
-    imageUrl: "/products/c5c2a0ca01c2814e.jpg", 
+  {
+    id: '13',
+    name: "Dining sets",
+    imageUrl: "/products/c5c2a0ca01c2814e.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '14', 
-    name: "Coffee tables", 
-    imageUrl: "/products/616b670374b61ceb.jpg", 
+  {
+    id: '14',
+    name: "Coffee tables",
+    imageUrl: "/products/616b670374b61ceb.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '15', 
-    name: "Dressing tables", 
-    imageUrl: "/products/ef014c0f5062c9e1.jpg", 
+  {
+    id: '15',
+    name: "Dressing tables",
+    imageUrl: "/products/ef014c0f5062c9e1.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '16', 
-    name: "Sofa beds", 
-    imageUrl: "/products/a8e5319319cae362.jpg", 
+  {
+    id: '16',
+    name: "Sofa beds",
+    imageUrl: "/products/a8e5319319cae362.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '17', 
-    name: "TV units", 
-    imageUrl: "/products/0c3b3b685386636d.jpg", 
+  {
+    id: '17',
+    name: "TV units",
+    imageUrl: "/products/0c3b3b685386636d.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '18', 
-    name: "PLT", 
-    imageUrl: "/products/4e2d959065ba18aa.jpg", 
+  {
+    id: '18',
+    name: "PLT",
+    imageUrl: "/products/4e2d959065ba18aa.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '19', 
-    name: "Shoe racks", 
-    imageUrl: "/products/268487a337a39374.jpg", 
+  {
+    id: '19',
+    name: "Shoe racks",
+    imageUrl: "/products/268487a337a39374.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '20', 
-    name: "Home temples", 
-    imageUrl: "/products/1f8f90501c659669.jpg", 
+  {
+    id: '20',
+    name: "Home temples",
+    imageUrl: "/products/1f8f90501c659669.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '21', 
-    name: "Inflatable sofas", 
-    imageUrl: "/products/4bd722c8ddfa9ace.jpg", 
+  {
+    id: '21',
+    name: "Inflatable sofas",
+    imageUrl: "/products/4bd722c8ddfa9ace.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '22', 
-    name: "Covers", 
-    imageUrl: "/products/bd844edb9fa863a8.jpg", 
+  {
+    id: '22',
+    name: "Covers",
+    imageUrl: "/products/bd844edb9fa863a8.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '23', 
-    name: "Dining Tables", 
-    imageUrl: "/products/dining-table.jpg", 
+  {
+    id: '23',
+    name: "Dining Tables",
+    imageUrl: "/products/dining-table.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '24', 
-    name: "Study Tables", 
-    imageUrl: "/products/study-table.jpg", 
+  {
+    id: '24',
+    name: "Study Tables",
+    imageUrl: "/products/study-table.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '25', 
-    name: "Bookshelves", 
-    imageUrl: "/products/bookshelf.jpg", 
+  {
+    id: '25',
+    name: "Bookshelves",
+    imageUrl: "/products/bookshelf.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '26', 
-    name: "Storage Units", 
-    imageUrl: "/products/storage-unit.jpg", 
+  {
+    id: '26',
+    name: "Storage Units",
+    imageUrl: "/products/storage-unit.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '27', 
-    name: "Wall Shelves", 
-    imageUrl: "/products/wall-shelf.jpg", 
+  {
+    id: '27',
+    name: "Wall Shelves",
+    imageUrl: "/products/wall-shelf.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '28', 
-    name: "Shoe Racks", 
-    imageUrl: "/products/shoe-rack.jpg", 
+  {
+    id: '28',
+    name: "Shoe Racks",
+    imageUrl: "/products/shoe-rack.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '29', 
-    name: "Sofas", 
-    imageUrl: "/products/329a854dd8c44fde.jpg", 
+  {
+    id: '29',
+    name: "Sofas",
+    imageUrl: "/products/329a854dd8c44fde.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '30', 
-    name: "Mattresses", 
-    imageUrl: "/products/57d04728e66ae68f.jpg", 
+  {
+    id: '30',
+    name: "Mattresses",
+    imageUrl: "/products/57d04728e66ae68f.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '31', 
-    name: "Wardrobes", 
-    imageUrl: "/products/5da0aa15c8500bdf.jpg", 
+  {
+    id: '31',
+    name: "Wardrobes",
+    imageUrl: "/products/5da0aa15c8500bdf.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '32', 
-    name: "Blankets", 
-    imageUrl: "/products/9a4b3856cceca99b.jpg", 
+  {
+    id: '32',
+    name: "Blankets",
+    imageUrl: "/products/9a4b3856cceca99b.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '33', 
-    name: "Bedsheets", 
-    imageUrl: "/products/12960b239d8fae6a.jpg", 
+  {
+    id: '33',
+    name: "Bedsheets",
+    imageUrl: "/products/12960b239d8fae6a.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '34', 
-    name: "Furnishing", 
-    imageUrl: "/products/f7a66d4708b4055d.jpg", 
+  {
+    id: '34',
+    name: "Furnishing",
+    imageUrl: "/products/f7a66d4708b4055d.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '35', 
-    name: "Mats & rugs", 
-    imageUrl: "/products/971d07d5c6063aed.jpg", 
+  {
+    id: '35',
+    name: "Mats & rugs",
+    imageUrl: "/products/971d07d5c6063aed.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '36', 
-    name: "Mosquito nets", 
-    imageUrl: "/products/458751bc65631f19.jpg", 
+  {
+    id: '36',
+    name: "Mosquito nets",
+    imageUrl: "/products/458751bc65631f19.jpg",
     url: '/',
     category: "home_furniture"
   },
-  { 
-    id: '37', 
-    name: "View all", 
-    imageUrl: "/products/cb76a0a6fc5d9f20.jpg", 
+  {
+    id: '37',
+    name: "View all",
+    imageUrl: "/products/cb76a0a6fc5d9f20.jpg",
     url: '/',
     category: "home_furniture"
   }
 ];
 
-export const slideshomeFurniture : BannerItemContent[] = [
+export const slideshomeFurniture: BannerItemContent[] = [
   {
     id: '1',
     title: '',
@@ -3993,7 +3990,7 @@ export const slideshomeFurniture : BannerItemContent[] = [
   }
 ]
 
- export const homeFurnitureHorizontalSliderOneLine = [
+export const homeFurnitureHorizontalSliderOneLine = [
   {
     id: "1",
     title: "Nilkamal Freedom Big FMM Plastic Cabinet | 3-Year Warranty | 4-Shelf Storage Cupboard with Doors | Multi Organiser for Home, Wardrobe, and Kitchen | Clothes Rack, Shelves, Brown & Biscuit Colour",
@@ -4060,54 +4057,54 @@ export const slideshomeFurniture : BannerItemContent[] = [
 ];
 
 export const topDealshomeFurnitureCategories: CategoryItem[] = [
-{
-id: 'B0FN9WN6XD',
-name: 'Green Soul',
-image: '/products/Green_Soul_1.jpg',
-url: '/stores/GreenSoul',
-category: 'Furniture',
-subCategory: 'Chairs',
-},
-{
-id: 'B0FN9WN6XE',
-name: 'Nilkamal',
-image: '/products/Nilkamal_2.jpg',
-url: '/stores/Nilkamal',
-category: 'Furniture',
-subCategory: 'Home',
-},
-{
-id: 'B0FN9WN6XF',
-name: 'Sleepwell',
-image: '/products/Sleepwell_3.jpg',
-url: '/stores/Sleepwell',
-category: 'Mattress',
-subCategory: 'Bedding',
-},
-{
-id: 'B0FN9WN6XG',
-name: 'The Sleep Company',
-image: '/products/The_Sleep_Company_4.jpg',
-url: '/stores/TheSleepCompany',
-category: 'Mattress',
-subCategory: 'Smart Mattress',
-},
-{
-id: 'B0FN9WN6XH',
-name: 'Interio by Goorej',
-image: '/products/Interio_by_Goorej_5.jpg',
-url: '/stores/Interio',
-category: 'Furniture',
-subCategory: 'Office',
-},
-{
-id: 'B0FN9WN6XI',
-name: 'Drogo',
-image: '/products/Drogo_6.jpg',
-url: '/stores/DROGO',
-category: 'Furniture',
-subCategory: 'Home Decor',
-},
+  {
+    id: 'B0FN9WN6XD',
+    name: 'Green Soul',
+    image: '/products/Green_Soul_1.jpg',
+    url: '/stores/GreenSoul',
+    category: 'Furniture',
+    subCategory: 'Chairs',
+  },
+  {
+    id: 'B0FN9WN6XE',
+    name: 'Nilkamal',
+    image: '/products/Nilkamal_2.jpg',
+    url: '/stores/Nilkamal',
+    category: 'Furniture',
+    subCategory: 'Home',
+  },
+  {
+    id: 'B0FN9WN6XF',
+    name: 'Sleepwell',
+    image: '/products/Sleepwell_3.jpg',
+    url: '/stores/Sleepwell',
+    category: 'Mattress',
+    subCategory: 'Bedding',
+  },
+  {
+    id: 'B0FN9WN6XG',
+    name: 'The Sleep Company',
+    image: '/products/The_Sleep_Company_4.jpg',
+    url: '/stores/TheSleepCompany',
+    category: 'Mattress',
+    subCategory: 'Smart Mattress',
+  },
+  {
+    id: 'B0FN9WN6XH',
+    name: 'Interio by Goorej',
+    image: '/products/Interio_by_Goorej_5.jpg',
+    url: '/stores/Interio',
+    category: 'Furniture',
+    subCategory: 'Office',
+  },
+  {
+    id: 'B0FN9WN6XI',
+    name: 'Drogo',
+    image: '/products/Drogo_6.jpg',
+    url: '/stores/DROGO',
+    category: 'Furniture',
+    subCategory: 'Home Decor',
+  },
 ];
 
 export const topHomeFurnitureItems = [
@@ -4197,7 +4194,7 @@ export const topHomeFurnitureItems = [
   }
 ];
 
-export const slidesHomeDecor : BannerItemContent[] = [
+export const slidesHomeDecor: BannerItemContent[] = [
   {
     id: '1',
     title: '',
@@ -4219,108 +4216,108 @@ export const slidesHomeDecor : BannerItemContent[] = [
 ]
 
 export const homeDecorCarouselCategories = [
-  { 
-    id: '1', 
-    name: "Wall Art", 
-    imageUrl: "/products/6dcd96ab3dffa74311231.jpg", 
+  {
+    id: '1',
+    name: "Wall Art",
+    imageUrl: "/products/6dcd96ab3dffa74311231.jpg",
     url: "/category/wall-art",
     category: "home_decor"
   },
-  { 
-    id: '2', 
-    name: "Throw Pillows", 
-    imageUrl: "/products/7e1f07bc4e00b85421.jpg", 
+  {
+    id: '2',
+    name: "Throw Pillows",
+    imageUrl: "/products/7e1f07bc4e00b85421.jpg",
     url: "/category/throw-pillows",
     category: "home_decor"
   },
-  { 
-    id: '3', 
-    name: "Area Rugs", 
-    imageUrl: "/products/8f2d18cd5f11c9653.jpg", 
+  {
+    id: '3',
+    name: "Area Rugs",
+    imageUrl: "/products/8f2d18cd5f11c9653.jpg",
     url: "/category/area-rugs",
     category: "home_decor"
   },
-  { 
-    id: '4', 
-    name: "Wall Mirrors", 
-    imageUrl: "/products/9g3e29de6012d07641.jpg", 
+  {
+    id: '4',
+    name: "Wall Mirrors",
+    imageUrl: "/products/9g3e29de6012d07641.jpg",
     url: "/category/wall-mirrors",
     category: "home_decor"
   },
-  { 
-    id: '5', 
-    name: "Vases & Planters", 
-    imageUrl: "/products/0h4f30ef7113e1875.jpg", 
+  {
+    id: '5',
+    name: "Vases & Planters",
+    imageUrl: "/products/0h4f30ef7113e1875.jpg",
     url: "/category/vases-planters",
     category: "home_decor"
   },
-  { 
-    id: '6', 
-    name: "Candles & Holders", 
-    imageUrl: "/products/1i5g41fg8224f2986.jpg", 
+  {
+    id: '6',
+    name: "Candles & Holders",
+    imageUrl: "/products/1i5g41fg8224f2986.jpg",
     url: "/category/candles-holders",
     category: "home_decor"
   },
-  { 
-    id: '7', 
-    name: "Wall Clocks", 
-    imageUrl: "/products/2j6h52gh9335g309712.jpg", 
+  {
+    id: '7',
+    name: "Wall Clocks",
+    imageUrl: "/products/2j6h52gh9335g309712.jpg",
     url: "/category/wall-clocks",
     category: "home_decor"
   },
-  { 
-    id: '8', 
-    name: "Photo Frames", 
-    imageUrl: "/products/3k7i63hi0446h41081.jpg", 
+  {
+    id: '8',
+    name: "Photo Frames",
+    imageUrl: "/products/3k7i63hi0446h41081.jpg",
     url: "/category/photo-frames",
     category: "home_decor"
   },
-  { 
-    id: '9', 
-    name: "Decorative Bowls", 
-    imageUrl: "/products/4l8j74ij1557i52191.jpg", 
+  {
+    id: '9',
+    name: "Decorative Bowls",
+    imageUrl: "/products/4l8j74ij1557i52191.jpg",
     url: "/category/decorative-bowls",
     category: "home_decor"
   },
-  { 
-    id: '10', 
-    name: "Table Lamps", 
-    imageUrl: "/products/5m9k85jk2668j63201.jpg", 
+  {
+    id: '10',
+    name: "Table Lamps",
+    imageUrl: "/products/5m9k85jk2668j63201.jpg",
     url: "/category/table-lamps",
     category: "home_decor"
   },
-  { 
-    id: '11', 
-    name: "Artificial Plants", 
-    imageUrl: "/products/6n0l96kl3779k7431.jpg", 
+  {
+    id: '11',
+    name: "Artificial Plants",
+    imageUrl: "/products/6n0l96kl3779k7431.jpg",
     url: "/category/artificial-plants",
     category: "home_decor"
   },
-  { 
-    id: '12', 
-    name: "Wall Shelves", 
-    imageUrl: "/products/7o1m07lm4880l8542.jpg", 
+  {
+    id: '12',
+    name: "Wall Shelves",
+    imageUrl: "/products/7o1m07lm4880l8542.jpg",
     url: "/category/wall-shelves",
     category: "home_decor"
   },
-  { 
-    id: '13', 
-    name: "Decorative Trays", 
-    imageUrl: "/products/8p2n18mn5991m9653.jpg", 
+  {
+    id: '13',
+    name: "Decorative Trays",
+    imageUrl: "/products/8p2n18mn5991m9653.jpg",
     url: "/category/decorative-trays",
     category: "home_decor"
   },
-  { 
-    id: '14', 
-    name: "Rugs & Mats", 
-    imageUrl: "/products/9q3o29no6002n0764.jpg", 
+  {
+    id: '14',
+    name: "Rugs & Mats",
+    imageUrl: "/products/9q3o29no6002n0764.jpg",
     url: "/category/rugs-mats",
     category: "home_decor"
   },
-  { 
-    id: '15', 
-    name: "Decorative Accents", 
-    imageUrl: "/products/0r4p30op7113o1875.jpg", 
+  {
+    id: '15',
+    name: "Decorative Accents",
+    imageUrl: "/products/0r4p30op7113o1875.jpg",
     url: "/category/decorative-accents",
     category: "home_decor"
   },
@@ -4603,4 +4600,335 @@ export const giftworthyVasesHomeDecorItems = [
     imageUrl: "/products/51hqZjEfZRL.AC_SX250.jpg",
     link: "#",
   },
+];
+
+export const sportsFitnessCarouselCategories = [
+  {
+    id: '1',
+    name: "Cycling",
+    imageUrl: "/products/Halo_Tiles_Teaser_Cycle._SS400_QL85_FMpng_1.png",
+    url: "/"
+  },
+  {
+    id: '2',
+    name: "Strength training",
+    imageUrl: "/products/Halo_Tiles_Teaser_Strength_Training._SS400_QL85_FMpng_1.png",
+    url: "/"
+  },
+  {
+    id: '3',
+    name: "Cardio",
+    imageUrl: "/products/Halo_Tiles_Teaser_Cardio._SS400_QL85_FMpng_1.png",
+    url: "/"
+  },
+  {
+    id: '4',
+    name: "Football",
+    imageUrl: "/products/Halo_Tiles_Teaser_Football._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '5',
+    name: "Cricket",
+    imageUrl: "/products/Halo_Tiles_Main_Store_Cricket._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '6',
+    name: "Junior sports",
+    imageUrl: "/products/Halo_Tiles_Teaser_Junior_Sports._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '7',
+    name: "Badminton",
+    imageUrl: "/products/Halo_Tiles_Teaser_Badminton._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '8',
+    name: "Fitness accessories",
+    imageUrl: "/products/Halo_Tiles_Teaser_Fitness_Accessories._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '9',
+    name: "Pickleball",
+    imageUrl: "/products/Halo_Tiles_Teaser_Pickle_Ball._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '10',
+    name: "Yoga",
+    imageUrl: "/products/Halo_Tiles_Teaser_Yoga._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '11',
+    name: "Skating",
+    imageUrl: "/products/Halo_Tiles_Teaser_Skates._SS400_QL85_FMpng_.png",
+    url: "/"
+  },
+  {
+    id: '12',
+    name: "Swimming",
+    imageUrl: "/products/Halo_Tiles_Teaser_Swimming._SS400_QL85_FMpng_.png",
+    url: "/"
+  }
+];
+
+export const slidesShoppingSportsFitness: HeroSlide[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    description: '',
+    imageUrl: '/products/Main_Header_Starting_99_PC._CB755068594_.gif',
+    url: '/',
+    ctaText: 'Shop Now',
+    discount: '',
+    alt: 'Beauty deals banner'
+  }
+];
+
+export const topTrendingPicksSportsFitnessCategories: CategoryItem[] = [
+  {
+    id: '1',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Pull_Up_Bar-1._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '2',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Walking_pad._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '3',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Football._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '4',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Yoga_mat._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '5',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Resistance_bands._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '6',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Dumbbells._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '7',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Cycles._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '8',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Treadmills._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '9',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Pull_Up_Bar._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '10',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Badminton_racquet._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+  {
+    id: '11',
+    name: '',
+    image: '/products/Most_Searched_Card_Main_Store_Cricket_bat._SS800_QL85_FMpng_.png',
+    url: '/',
+    category: 'sports_fitness',
+    subCategory: 'top_trending_picks',
+  },
+];
+
+export const greatDealsForYouSportsFitness: BrandItem[] = [
+  {
+    id: '1',
+    name: 'Powermax 4HP Treadmill',
+    logo: '/products/Powermax_4HP_treadmill_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0FHHG2YW4',
+    alt: 'Shop now',
+  },
+  {
+    id: '2',
+    name: 'Lifelong 3HP Walking Pad',
+    logo: '/products/Lifelong_3HP_walking_pad_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0FD817WFP',
+    alt: 'Shop now',
+  },
+  {
+    id: '3',
+    name: 'Leader Gladiator Geared Cycle',
+    logo: '/products/Leader_gladiator_geared_cycle_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0BYS8M635',
+    alt: 'Shop now',
+  },
+  {
+    id: '4',
+    name: 'Yonex Graphite Badminton Racquet',
+    logo: '/products/Yonex_graphite_badminton_racquet_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B08WQ2THFG',
+    alt: 'Shop now',
+  },
+  {
+    id: '5',
+    name: 'Adidas League Football',
+    logo: '/products/Adidas_league_football_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0DLJD5K46',
+    alt: 'Shop now',
+  },
+  {
+    id: '6',
+    name: 'SG Kashmir Willow Cricket Bat',
+    logo: '/products/SG_Kashmir_willow_cricket_bat_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B081VFDN72',
+    alt: 'Shop now',
+  },
+  {
+    id: '7',
+    name: 'Kidsmate Adjustable Kick Scooter',
+    logo: '/products/Kidsmate_adjustable_kick_scooter_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0D4DZ7WL2',
+    alt: 'Shop now',
+  },
+  {
+    id: '8',
+    name: 'Slovic Pull Up Bar',
+    logo: '/products/Slovic_pull_up_bar_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0B6NSDR2H',
+    alt: 'Shop now',
+  },
+  {
+    id: '9',
+    name: 'Sparnod 2-in-1 Walking Pad',
+    logo: '/products/Sparnod_2_in_1_walking_pad_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0FHW238R2',
+    alt: 'Shop now',
+  },
+  {
+    id: '10',
+    name: 'Boldfit Resistance Bands Set',
+    logo: '/products/Boldfit_resistance_bands_set_Great_Deals_for_You_Main_Store1._CB755060971_.png',
+    discount: '',
+    url: '/dp/B08C7S9RNY',
+    alt: 'Shop now',
+  },
+  {
+    id: '11',
+    name: 'R for Rabbit Tricycle',
+    logo: '/products/R_for_Rabbit_tricycle_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B0GD7TDTN1',
+    alt: 'Shop now',
+  },
+  {
+    id: '12',
+    name: 'Boldfit Anti-Slip Yoga Mat',
+    logo: '/products/Boldfit_anti-slip_yoga_mat_Great_Deals_for_You_Main_Store._CB755062263_.png',
+    discount: '',
+    url: '/dp/B07MNL598L',
+    alt: 'Shop now',
+  },
+];
+
+export const ScrollItemSportsFitness: ScrollItem[] = [
+  {
+    id: '1',
+    title: 'Badminton',
+    subtitle: '3★ & above • 40% or more off',
+    imageUrl: '/products/68ea70a5301bc2ec.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Fishing',
+    subtitle: '3★ & above • 50% or more off',
+    imageUrl: '/products/edc5707ccbda23cc.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Cricket',
+    subtitle: '3★ & above • 50% or more off',
+    imageUrl: '/products/4991372908a44ecc.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Skating',
+    subtitle: '3★ & above • 60% or more off',
+    imageUrl: '/products/60c8f865346a782c.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Football',
+    subtitle: '3★ & above • 40% or more off',
+    imageUrl: '/products/d011051cbf50adbb.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Swimming',
+    subtitle: '3★ & above',
+    imageUrl: '/products/74cd3a560ad9ee6d.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Fitness Accessories',
+    subtitle: '3★ & above',
+    imageUrl: '/products/cce350901f3c23c9.jpg',
+    link: '/'
+  }
 ];

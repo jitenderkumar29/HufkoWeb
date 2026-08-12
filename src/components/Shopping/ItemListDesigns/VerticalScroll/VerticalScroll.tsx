@@ -41,7 +41,7 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
   ctaText = 'View All',
   onCtaClick,
   className = '',
-  imageAspectRatio = '3/4',
+  imageAspectRatio = '3/4.1',
   imageHeight,
   imageHeightResponsive,
   imageFit = 'cover'
