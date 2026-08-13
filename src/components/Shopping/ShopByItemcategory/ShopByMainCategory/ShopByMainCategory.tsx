@@ -33,6 +33,11 @@ import {
     topTrendingPicksSportsFitnessCategories,
     greatDealsForYouSportsFitness,
     ScrollItemSportsFitness,
+    babyToysCarouselCategories,
+    savingsSpecialBabyToysItems,
+    popCultureShopBabyToysItems,
+    latestLaunchesBabyToysItems,
+    slidesBabyToys,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -730,7 +735,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </div>
                 );
 
-
             case 'mobiles_tablets':
                 return (
                     <div className={styles.categoryContent}>
@@ -739,6 +743,52 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             deals={ShopingSlide1SmartPhoneDeals}
                             cardWidth={200}
                             showArrow={true}
+                        />
+                        {/* Add more mobile & tablet content */}
+                    </div>
+                );
+
+            case 'baby_toys':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={babyToysCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesBabyToys}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <VerticalScroll
+                            items={savingsSpecialBabyToysItems}
+                            imageHeight={420}
+                            title="Savings special"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        />
+                        <VerticalScroll
+                            items={popCultureShopBabyToysItems}
+                            imageHeight={400}
+                            title="Pop culture shop"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        />
+                        <VerticalScroll
+                            items={latestLaunchesBabyToysItems}
+                            imageHeight={400}
+                            title="Latest launches"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
                         />
                         {/* Add more mobile & tablet content */}
                     </div>

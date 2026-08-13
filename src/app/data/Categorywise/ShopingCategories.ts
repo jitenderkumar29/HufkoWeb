@@ -68,15 +68,15 @@ export const ShopingCategories = [
   //   imageUrl: "/products/FlightBookings.png",
   // },
   {
-    id: "beauty_food",
-    name: "Beauty, Food",
+    id: "baby_toys",
+    name: "Baby & Toys",
     imageUrl: "/products/BeautyFood.png",
     url: "/beauty_food",
   },
   {
     id: "sports_fitness",
     name: "Sports & Fitness",
-    imageUrl: "/products/sports_&_fitness.png",
+    imageUrl: "/products/sports_&_fitness_1.png",
     url: "/sports_&_fitness",
   },
   {
@@ -108,7 +108,7 @@ export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Kid's Fashion", id: "kids_fashion_sub_header", url: "/kids", category: "kids_fashion" },
   { name: "Women's Beauty", id: "women_beauty_sub_header", url: "/women_beauty", category: "women_beauty" },
   { name: "TVs & Appliances", id: "tvs_appliances_sub_header", url: "/tvs_appliances", category: "tvs_appliances" },
-  { name: "Beauty, Food", id: "beauty_food_sub_header", url: "/beauty_food", category: "beauty_food" },
+  { name: "Baby & Toys", id: "baby_toys_sub_header", url: "/beauty_food", category: "baby_toys" },
   { name: "Sports & Fitness", id: "sports_fitness_sub_header", url: "/sports_fitness", category: "sports_fitness" },
   { name: "Books", id: "books_sub_header", url: "/books", category: "books" },
   { name: "Jewellery", id: "jewellery_sub_header", url: "/jewellery", category: "jewellery" },
@@ -3146,7 +3146,6 @@ export const slidesElectronicsFashion: BannerItemContent[] = [
   // }
 ];
 
-
 export const toElectronicsItems = [
   {
     id: '1',
@@ -4606,73 +4605,85 @@ export const sportsFitnessCarouselCategories = [
   {
     id: '1',
     name: "Cycling",
-    imageUrl: "/products/Halo_Tiles_Teaser_Cycle._SS400_QL85_FMpng_1.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Cycle._SS400_QL85_FMpng_12.png",
     url: "/"
   },
   {
     id: '2',
     name: "Strength training",
-    imageUrl: "/products/Halo_Tiles_Teaser_Strength_Training._SS400_QL85_FMpng_1.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Strength_Training._SS400_QL85_FMpng_12.png",
     url: "/"
   },
   {
     id: '3',
     name: "Cardio",
-    imageUrl: "/products/Halo_Tiles_Teaser_Cardio._SS400_QL85_FMpng_1.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Cardio._SS400_QL85_FMpng_12.png",
     url: "/"
   },
   {
     id: '4',
     name: "Football",
-    imageUrl: "/products/Halo_Tiles_Teaser_Football._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Football._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '5',
     name: "Cricket",
-    imageUrl: "/products/Halo_Tiles_Main_Store_Cricket._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Main_Store_Cricket._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '6',
     name: "Junior sports",
-    imageUrl: "/products/Halo_Tiles_Teaser_Junior_Sports._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Junior_Sports._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '7',
     name: "Badminton",
-    imageUrl: "/products/Halo_Tiles_Teaser_Badminton._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Badminton._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '8',
     name: "Fitness accessories",
-    imageUrl: "/products/Halo_Tiles_Teaser_Fitness_Accessories._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Fitness_Accessories._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '9',
     name: "Pickleball",
-    imageUrl: "/products/Halo_Tiles_Teaser_Pickle_Ball._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Pickle_Ball._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '10',
     name: "Yoga",
-    imageUrl: "/products/Halo_Tiles_Teaser_Yoga._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Yoga._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '11',
     name: "Skating",
-    imageUrl: "/products/Halo_Tiles_Teaser_Skates._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Skates._SS400_QL85_FMpng_2.png",
     url: "/"
   },
   {
     id: '12',
     name: "Swimming",
-    imageUrl: "/products/Halo_Tiles_Teaser_Swimming._SS400_QL85_FMpng_.png",
+    imageUrl: "/products/Halo_Tiles_Teaser_Swimming._SS400_QL85_FMpng_2.png",
+    url: "/"
+  },
+  {
+    id: '13',
+    name: "tennis",
+    imageUrl: "/products/Halo_Tiles_Teaser_tennis._SS400_QL85_FMpng_2.png",
+    url: "/"
+  },
+  {
+    id: '12',
+    name: "Camping & Outdoors",
+    imageUrl: "/products/Halo_Tiles_Teaser_camping_outdoors._SS400_QL85_FMpng_2.png",
     url: "/"
   }
 ];
@@ -4931,4 +4942,295 @@ export const ScrollItemSportsFitness: ScrollItem[] = [
     imageUrl: '/products/cce350901f3c23c9.jpg',
     link: '/'
   }
+];
+
+export const babyToysCarouselCategories = [
+  {
+    id: '1',
+    name: "Baby diapers",
+    imageUrl: "/products/fa29c57902ffb67b.jpg",
+    url: "/"
+  },
+  {
+    id: '2',
+    name: "Wipes",
+    imageUrl: "/products/fa29c57902ffb67b1.jpg",
+    url: "/"
+  },
+  {
+    id: '3',
+    name: "Skin & Hair care",
+    imageUrl: "/products/fa29c57902ffb67b12.jpg",
+    url: "/"
+  },
+  {
+    id: '4',
+    name: "Baby travel",
+    imageUrl: "/products/fa29c57902ffb67b123.jpg",
+    url: "/"
+  },
+  {
+    id: '5',
+    name: "Bedding",
+    imageUrl: "/products/fa29c57902ffb67b321.jpg",
+    url: "/"
+  },
+  {
+    id: '6',
+    name: "Gifting combos",
+    imageUrl: "/products/fa29c57902ffb67b21.jpg",
+    url: "/"
+  },
+  {
+    id: '7',
+    name: "Premium toys",
+    imageUrl: "/products/fa29c57902ffb67b11.jpg",
+    url: "/"
+  },
+  {
+    id: '8',
+    name: "STEM toys",
+    imageUrl: "/products/fa29c57902ffb67b23.jpg",
+    url: "/"
+  },
+  {
+    id: '9',
+    name: "Stationery",
+    imageUrl: "/products/fa29c57902ffb67b212.jpg",
+    url: "/"
+  },
+  {
+    id: '10',
+    name: "Indoor toys",
+    imageUrl: "/products/fa29c57902ffb67b231.jpg",
+    url: "/"
+  },
+  {
+    id: '11',
+    name: "Toys & more",
+    imageUrl: "/products/fa29c57902ffb67b132.jpg",
+    url: "/"
+  },
+  {
+    id: '12',
+    name: "Pet toys",
+    imageUrl: "/products/fa29c57902ffb67b213.jpg",
+    url: "/"
+  }
+];
+
+export const savingsSpecialBabyToysItems = [
+  {
+    id: '1',
+    title: "Baby Diapers",
+    subtitle: "Up to 50% off",
+    imageUrl: "/products/107c8dce15d7f832.jpg",
+    link: "/"
+  },
+  {
+    id: '2',
+    title: "Electric Ride-ons",
+    subtitle: "50% or more off",
+    imageUrl: "/products/50fec996a198bae9.jpg",
+    link: "/"
+  },
+  {
+    id: '3',
+    title: "Skin & Hair Care",
+    subtitle: "Under ₹499",
+    imageUrl: "/products/d760afc38cd47d5b.jpg",
+    link: "/"
+  },
+  {
+    id: '4',
+    title: "Rakhi Collection",
+    subtitle: "Special offers",
+    imageUrl: "/products/b9e0d5f1b8e2b723.png",
+    link: "/"
+  },
+  {
+    id: '5',
+    title: "Baby Wipes",
+    subtitle: "Under ₹249",
+    imageUrl: "/products/1a6de77078801c5b.jpg",
+    link: "/"
+  },
+  {
+    id: '6',
+    title: "Art & Craft Kits",
+    subtitle: "Creative fun",
+    imageUrl: "/products/1e526c9dc05f185f.jpg",
+    link: "/"
+  },
+  {
+    id: '7',
+    title: "Mosquito Nets",
+    subtitle: "F-Assured | 4★ & above",
+    imageUrl: "/products/0d02ea8e131fb424.jpg",
+    link: "/"
+  }
+];
+
+export const popCultureShopBabyToysItems = [
+  {
+    id: '1',
+    title: "Barbie",
+    subtitle: "Stationery & more",
+    imageUrl: "/products/24a08a380cfdf22e.jpg",
+    link: "/"
+  },
+  {
+    id: '2',
+    title: "Harry Potter",
+    subtitle: "Toys & stationery",
+    imageUrl: "/products/262c02f0944baff8.jpg",
+    link: "/"
+  },
+  {
+    id: '3',
+    title: "Tom and Jerry",
+    subtitle: "Classic collection",
+    imageUrl: "/products/3e398521b6ae3ee8.jpg",
+    link: "/"
+  },
+  {
+    id: '4',
+    title: "Batman",
+    subtitle: "Toys & stationery",
+    imageUrl: "/products/bb8094d0be2e2988.jpg",
+    link: "/"
+  },
+  {
+    id: '5',
+    title: "Spiderman",
+    subtitle: "Toys collection",
+    imageUrl: "/products/e051bee95f8baf14.jpg",
+    link: "/"
+  }
+];
+export const latestLaunchesBabyToysItems = [
+  {
+    id: '1',
+    title: "LEGO Deals",
+    subtitle: "GOAT 2026 collection",
+    imageUrl: "/products/2010a290e1f35074.jpg",
+    link: "/"
+  },
+  {
+    id: '2',
+    title: "Baby Bedding",
+    subtitle: "Comfort essentials",
+    imageUrl: "/products/f60206c9065ff555.jpg",
+    link: "/"
+  },
+  {
+    id: '3',
+    title: "Kids Scooters",
+    subtitle: "60% or more off",
+    imageUrl: "/products/82686aaba886b170.jpg",
+    link: "/"
+  },
+  {
+    id: '4',
+    title: "Baby Food",
+    subtitle: "Nutrition essentials",
+    imageUrl: "/products/82686aaba886b1701.jpg",
+    link: "/"
+  },
+  {
+    id: '5',
+    title: "Calculators",
+    subtitle: "Stationery essentials",
+    imageUrl: "/products/389a5c25b8d18ca3.jpg",
+    link: "/"
+  },
+  {
+    id: '6',
+    title: "Baby Diapers",
+    subtitle: "Daily essentials",
+    imageUrl: "/products/c8608e85cb0582b0.jpg",
+    link: "/"
+  },
+  {
+    id: '7',
+    title: "Action Figures",
+    subtitle: "Toys collection",
+    imageUrl: "/products/83d741b9ec7a1afb.jpg",
+    link: "/"
+  }
+];
+
+export const slidesBabyToys: BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/1_First_Friend._CB773853331_.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/2_Building._CB773853331_.png',
+    align: 'left'
+  },
+  {
+    id: '3',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/3_Soft_toys._CB773853331_.png',
+    align: 'left'
+  },
+  {
+    id: '4',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/4_Art__craft._CB773853331_.png',
+    align: 'left'
+  },
+  {
+    id: '5',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/5_Outdoor_PC._CB773853331_.png',
+    align: 'left'
+  },
+  // {
+  //   id: '3',
+  //   title: 'Gaming & Entertainment',
+  //   subtitle: 'Level Up Your Experience',
+  //   category: 'Gaming',
+  //   discount: '30% OFF',
+  //   imgUrl: '/products/Electronics_3.png',
+  //   align: 'left'
+  // },
+  // {
+  //   id: '4',
+  //   title: 'Beauty Tech Innovations',
+  //   subtitle: 'Smart Beauty Devices',
+  //   category: 'Beauty Tech',
+  //   discount: '20% OFF',
+  //   imgUrl: '/products/Beauty_1500x460._SX1500_QL85_FMpng_2.png',
+  //   align: 'right'
+  // },
+  // {
+  //   id: '5',
+  //   title: 'Audio & Sound Systems',
+  //   subtitle: 'Immersive Sound Experience',
+  //   category: 'Audio Systems',
+  //   discount: '35% OFF',
+  //   imgUrl: '/products/SPB_1500x460._SX1500_QL85_FMpng_.png',
+  //   align: 'left'
+  // }
 ];
