@@ -93,6 +93,14 @@ export const ShopingCategories = [
     imageUrl: "/products/JewelleryAccessories.png",
     url: "/jewellery",
   },
+  {
+    id: "auto_accessories",
+    name: "Auto Accessories",
+    // name: "Jewellery & Accessories",
+    imageUrl: "/products/auto_accessories.png",
+    url: "/auto_accessories",
+  },
+
 ];
 
 // In your data file (ShopingCategories.ts or wherever this is defined)
@@ -112,6 +120,7 @@ export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Sports & Fitness", id: "sports_fitness_sub_header", url: "/sports_fitness", category: "sports_fitness" },
   { name: "Books", id: "books_sub_header", url: "/books", category: "books" },
   { name: "Jewellery", id: "jewellery_sub_header", url: "/jewellery", category: "jewellery" },
+  { name: "Auto Accessories", id: "auto_accessories_sub_header", url: "/auto_accessories", category: "auto_accessories" },
 ];
 
 export const electronicsSubSubCategoriesSubHeader: SubHeaderItem[] = [
@@ -4104,6 +4113,14 @@ export const topDealshomeFurnitureCategories: CategoryItem[] = [
     category: 'Furniture',
     subCategory: 'Home Decor',
   },
+  {
+   id: 'B0FN9WN6XH',
+    name: 'Interio by Goorej',
+    image: '/products/Interio_by_Goorej_5.jpg',
+    url: '/stores/Interio',
+    category: 'Furniture',
+    subCategory: 'Office',
+  },
 ];
 
 export const topHomeFurnitureItems = [
@@ -5234,3 +5251,505 @@ export const slidesBabyToys: BannerItemContent[] = [
   //   align: 'left'
   // }
 ];
+
+export const booksCarouselCategories = [
+  {
+    id: '1',
+    name: "Fiction",
+    imageUrl: "/products/fiction.jpg",
+    url: "/categories/fiction"
+  },
+  {
+    id: '2',
+    name: "Non-Fiction",
+    imageUrl: "/products/nonfiction.jpg",
+    url: "/categories/non-fiction"
+  },
+  {
+    id: '3',
+    name: "Science Fiction",
+    imageUrl: "/products/scifi.jpg",
+    url: "/categories/sci-fi"
+  },
+  {
+    id: '4',
+    name: "Fantasy",
+    imageUrl: "/products/fantasy.jpg",
+    url: "/categories/fantasy"
+  },
+  {
+    id: '5',
+    name: "Mystery & Thriller",
+    imageUrl: "/products/mystery.jpg",
+    url: "/categories/mystery-thriller"
+  },
+  {
+    id: '6',
+    name: "Romance",
+    imageUrl: "/products/romance.jpg",
+    url: "/categories/romance"
+  },
+  {
+    id: '7',
+    name: "Biography",
+    imageUrl: "/products/biography.jpg",
+    url: "/categories/biography"
+  },
+  {
+    id: '8',
+    name: "History",
+    imageUrl: "/products/history.jpg",
+    url: "/categories/history"
+  },
+  {
+    id: '9',
+    name: "Self-Help",
+    imageUrl: "/products/selfhelp.jpg",
+    url: "/categories/self-help"
+  },
+  {
+    id: '10',
+    name: "Business & Money",
+    imageUrl: "/products/business.jpg",
+    url: "/categories/business"
+  },
+  {
+    id: '11',
+    name: "Children's Books",
+    imageUrl: "/products/childrens.jpg",
+    url: "/categories/childrens"
+  },
+  {
+    id: '12',
+    name: "Young Adult",
+    imageUrl: "/products/youngadult.jpg",
+    url: "/categories/young-adult"
+  },
+  {
+    id: '13',
+    name: "Science & Technology",
+    imageUrl: "/products/science.jpg",
+    url: "/categories/science-technology"
+  },
+  {
+    id: '14',
+    name: "Art & Photography",
+    imageUrl: "/products/art.jpg",
+    url: "/categories/art-photography"
+  },
+  {
+    id: '15',
+    name: "Travel",
+    imageUrl: "/products/travel.jpg",
+    url: "/categories/travel"
+  }
+];
+
+export const slidesbooks: BannerItemContent[] = [
+  {
+    id: '1',
+     title: 'New Releases',
+    subtitle: 'Fresh titles from your favorite authors',
+    category: 'New Arrivals',
+    discount: '20% off',
+    imgUrl: '/products/1_books._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+    title: 'Bestselling Fiction',
+    subtitle: 'Discover the most captivating stories of the year',
+    category: 'Fiction',
+    discount: 'Up to 50% off',
+    imgUrl: '/products/2_books._CB773853331_1.png',
+    align: 'left'
+  },
+];
+
+export const bestSellersInPrintBooksItems = [
+  {
+    id: "1",
+    title: "The Covenant of Water",
+    price: 599,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/bestseller1.jpg",
+    link: "/books/covenant-of-water"
+  },
+  {
+    id: "2",
+    title: "The Heaven & Earth Grocery Store",
+    price: 549,
+    oldPrice: 1199,
+    currency: "₹",
+    imageUrl: "/products/bestseller2.jpg",
+    link: "/books/heaven-earth-grocery-store"
+  },
+  {
+    id: "3",
+    title: "Fourth Wing",
+    price: 699,
+    oldPrice: 1499,
+    currency: "₹",
+    imageUrl: "/products/bestseller3.jpg",
+    link: "/books/fourth-wing"
+  },
+  {
+    id: "4",
+    title: "Iron Flame",
+    price: 749,
+    oldPrice: 1599,
+    currency: "₹",
+    imageUrl: "/products/bestseller4.jpg",
+    link: "/books/iron-flame"
+  },
+  {
+    id: "5",
+    title: "The Women",
+    price: 499,
+    oldPrice: 1099,
+    currency: "₹",
+    imageUrl: "/products/bestseller5.jpg",
+    link: "/books/the-women"
+  },
+  {
+    id: "6",
+    title: "Atomic Habits",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/bestseller6.jpg",
+    link: "/books/atomic-habits"
+  },
+  {
+    id: "7",
+    title: "The Silent Patient",
+    price: 449,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/bestseller7.jpg",
+    link: "/books/silent-patient"
+  },
+  {
+    id: "8",
+    title: "Where the Crawdads Sing",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/bestseller8.jpg",
+    link: "/books/where-crawdads-sing"
+  },
+  {
+    id: "9",
+    title: "It Ends With Us",
+    price: 349,
+    oldPrice: 799,
+    currency: "₹",
+    imageUrl: "/products/bestseller9.jpg",
+    link: "/books/it-ends-with-us"
+  },
+  {
+    id: "10",
+    title: "The Alchemist",
+    price: 299,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/bestseller10.jpg",
+    link: "/books/alchemist"
+  },
+  {
+    id: "11",
+    title: "The Psychology of Money",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/bestseller11.jpg",
+    link: "/books/psychology-of-money"
+  },
+  {
+    id: "12",
+    title: "Becoming",
+    price: 499,
+    oldPrice: 1099,
+    currency: "₹",
+    imageUrl: "/products/bestseller12.jpg",
+    link: "/books/becoming"
+  },
+  {
+    id: "13",
+    title: "Dune",
+    price: 599,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/bestseller13.jpg",
+    link: "/books/dune"
+  },
+  {
+    id: "14",
+    title: "The Midnight Library",
+    price: 449,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/bestseller14.jpg",
+    link: "/books/midnight-library"
+  },
+  {
+    id: "15",
+    title: "The Seven Husbands of Evelyn Hugo",
+    price: 499,
+    oldPrice: 1099,
+    currency: "₹",
+    imageUrl: "/products/bestseller15.jpg",
+    link: "/books/evelyn-hugo"
+  }
+];
+
+export const newReleasesOnKindleBooksItems = [
+  {
+    id: "1",
+    title: "The Familiar",
+    price: 499,
+    oldPrice: 1099,
+    currency: "₹",
+    imageUrl: "/products/kindle1.jpg",
+    link: "/books/familiar"
+  },
+  {
+    id: "2",
+    title: "The Women",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/kindle2.jpg",
+    link: "/books/the-women"
+  },
+  {
+    id: "3",
+    title: "Fourth Wing",
+    price: 599,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/kindle3.jpg",
+    link: "/books/fourth-wing"
+  },
+  {
+    id: "4",
+    title: "Iron Flame",
+    price: 649,
+    oldPrice: 1399,
+    currency: "₹",
+    imageUrl: "/products/kindle4.jpg",
+    link: "/books/iron-flame"
+  },
+  {
+    id: "5",
+    title: "The Heaven & Earth Grocery Store",
+    price: 449,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/kindle5.jpg",
+    link: "/books/heaven-earth-grocery-store"
+  },
+  {
+    id: "6",
+    title: "Lessons in Chemistry",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/kindle6.jpg",
+    link: "/books/lessons-chemistry"
+  },
+  {
+    id: "7",
+    title: "Tom Lake",
+    price: 349,
+    oldPrice: 799,
+    currency: "₹",
+    imageUrl: "/products/kindle7.jpg",
+    link: "/books/tom-lake"
+  },
+  {
+    id: "8",
+    title: "The Silent Patient",
+    price: 299,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/kindle8.jpg",
+    link: "/books/silent-patient"
+  },
+  {
+    id: "9",
+    title: "Atomic Habits",
+    price: 249,
+    oldPrice: 599,
+    currency: "₹",
+    imageUrl: "/products/kindle9.jpg",
+    link: "/books/atomic-habits"
+  },
+  {
+    id: "10",
+    title: "The Psychology of Money",
+    price: 299,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/kindle10.jpg",
+    link: "/books/psychology-of-money"
+  },
+  {
+    id: "11",
+    title: "Tomorrow, and Tomorrow, and Tomorrow",
+    price: 449,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/kindle11.jpg",
+    link: "/books/tomorrow"
+  },
+  {
+    id: "12",
+    title: "Demon Copperhead",
+    price: 499,
+    oldPrice: 1099,
+    currency: "₹",
+    imageUrl: "/products/kindle12.jpg",
+    link: "/books/demon-copperhead"
+  },
+  {
+    id: "13",
+    title: "The Midnight Library",
+    price: 349,
+    oldPrice: 799,
+    currency: "₹",
+    imageUrl: "/products/kindle13.jpg",
+    link: "/books/midnight-library"
+  },
+  {
+    id: "14",
+    title: "The Seven Husbands of Evelyn Hugo",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/kindle14.jpg",
+    link: "/books/evelyn-hugo"
+  },
+  {
+    id: "15",
+    title: "It Ends With Us",
+    price: 299,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/kindle15.jpg",
+    link: "/books/it-ends-with-us"
+  }
+];
+
+export const bestSellersOnKindleBooksItems = [
+  {
+    id: "1",
+    title: "The Familiar",
+    price: 499,
+    oldPrice: 1099,
+    currency: "₹",
+    imageUrl: "/products/68a8dg4sdgsdig.jpg",
+    link: "/books/familiar"
+  },
+  {
+    id: "2",
+    title: "Fourth Wing",
+    price: 599,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/72bc9fh5tehtijh.jpg",
+    link: "/books/fourth-wing"
+  },
+  {
+    id: "3",
+    title: "The Covenant of Water",
+    price: 549,
+    oldPrice: 1199,
+    currency: "₹",
+    imageUrl: "/products/83cd0gi6ufiukli.jpg",
+    link: "/books/covenant-of-water"
+  },
+  {
+    id: "4",
+    title: "Iron Flame",
+    price: 649,
+    oldPrice: 1399,
+    currency: "₹",
+    imageUrl: "/products/94de1hj7vgjvl_mj.jpg",
+    link: "/books/iron-flame"
+  },
+  {
+    id: "5",
+    title: "The Women",
+    price: 399,
+    oldPrice: 899,
+    currency: "₹",
+    imageUrl: "/products/05ef2ik8whkwmnk.jpg",
+    link: "/books/the-women"
+  },
+  {
+    id: "6",
+    title: "Atomic Habits",
+    price: 299,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/16fg3jl9xilxnol.jpg",
+    link: "/books/atomic-habits"
+  },
+  {
+    id: "7",
+    title: "The Psychology of Money",
+    price: 349,
+    oldPrice: 799,
+    currency: "₹",
+    imageUrl: "/products/27gh4km0yjm ypm.jpg",
+    link: "/books/psychology-of-money"
+  },
+  {
+    id: "8",
+    title: "The Silent Patient",
+    price: 299,
+    oldPrice: 699,
+    currency: "₹",
+    imageUrl: "/products/38hi5ln1zknzqn.jpg",
+    link: "/books/silent-patient"
+  },
+  {
+    id: "9",
+    title: "Where the Crawdads Sing",
+    price: 349,
+    oldPrice: 799,
+    currency: "₹",
+    imageUrl: "/products/49ij6mo2alomro.jpg",
+    link: "/books/where-crawdads-sing"
+  },
+  {
+    id: "10",
+    title: "The Alchemist",
+    price: 249,
+    oldPrice: 599,
+    currency: "₹",
+    imageUrl: "/products/50jk7np3bpmnsp.jpg",
+    link: "/books/alchemist"
+  },
+  {
+    id: "11",
+    title: "Becoming",
+    price: 449,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/61kl8oq4cqnotq.jpg",
+    link: "/books/becoming"
+  },
+  {
+    id: "12",
+    title: "The Midnight Library",
+    price: 349,
+    oldPrice: 799,
+    currency: "₹",
+    imageUrl: "/products/72lm9pr5dropur.jpg",
+    link: "/books/midnight-library"
+  },
+];
+

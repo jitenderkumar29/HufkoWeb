@@ -38,6 +38,11 @@ import {
     popCultureShopBabyToysItems,
     latestLaunchesBabyToysItems,
     slidesBabyToys,
+    booksCarouselCategories,
+    slidesbooks,
+    bestSellersInPrintBooksItems,
+    newReleasesOnKindleBooksItems,
+    bestSellersOnKindleBooksItems,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -76,6 +81,7 @@ import VerticalScrollSquare from '../../ItemListDesigns/VerticalScrollSquare/Ver
 import HeroBannerLeftContent from '../../HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent';
 import { FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
+import HorizontalSliderOneLine2 from '../../ItemListDesigns/HorizontalSliderOneLine2/HorizontalSliderOneLine2';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -345,7 +351,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             onCategoryClick={handleCategoryClick}
                         />
                         {/* 
-                      
                         <VerticalScrollSquare
                             title="Top deals on tablets | Up to 40% off"
                             categories={topDealsOnTabletsCategories}
@@ -712,9 +717,9 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             brands={greatDealsForYouSportsFitness}
                             title="Great deals for you"
                             subtitle="Limited-Time Deals Just for You"
-                            backgroundColor="#ffffff"
-                            titleColor="#000000"
-                            subtitleColor="#000000"
+                            backgroundColor="#7739B5"
+                            titleColor="#ffffff"
+                            subtitleColor="#ffffff"
                             gap={8}
                             rows={1}
                             cardPadding={10}
@@ -789,6 +794,67 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             title="Latest launches"
                             subtitle="Based on your preferences"
                             ctaText="See All Recommendations"
+                        />
+                        {/* Add more mobile & tablet content */}
+                    </div>
+                );
+            
+                case 'books':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={booksCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesbooks}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <HorizontalSliderOneLine2
+                            products={bestSellersInPrintBooksItems}
+                            title="Best sellers in print"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#ffffff"
+                            primaryColor="#000000"
+                            secondaryColor="#ffffff"
+                            cardWidth={240}
+                            imageHeight={300}
+                            gap={12}
+                            showExploreMore={true}
+                        />
+                        <HorizontalSliderOneLine2
+                            products={newReleasesOnKindleBooksItems}
+                            title="Best sellers in print"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#ffffff"
+                            primaryColor="#000000"
+                            secondaryColor="#ffffff"
+                            cardWidth={240}
+                            imageHeight={300}
+                            gap={12}
+                            showExploreMore={true}
+                        />
+                        <HorizontalSliderOneLine2
+                            products={bestSellersOnKindleBooksItems}
+                            title="Bestsellers on Kindle"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#ffffff"
+                            primaryColor="#000000"
+                            secondaryColor="#ffffff"
+                            cardWidth={240}
+                            imageHeight={300}
+                            gap={12}
+                            showExploreMore={true}
                         />
                         {/* Add more mobile & tablet content */}
                     </div>
