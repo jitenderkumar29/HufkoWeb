@@ -36,7 +36,7 @@ $font-family: "Amazon Ember Regular", "Amazon Ember", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 24px;
   margin-bottom: 8px;
   flex-wrap: wrap;
 
@@ -109,7 +109,7 @@ $font-family: "Amazon Ember Regular", "Amazon Ember", Arial, sans-serif;
 
 .productsContainer {
   display: flex;
-  gap: var(--gap, 12px);
+  gap: 30px !important;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -439,7 +439,7 @@ $font-family: "Amazon Ember Regular", "Amazon Ember", Arial, sans-serif;
   }
 
   .productsContainer {
-    gap: var(--gap, 16px);
+    gap: 30px !important;
     padding: var(--container-padding, 4px 4px 12px 4px);
   }
 

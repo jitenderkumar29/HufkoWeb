@@ -37,8 +37,8 @@ interface VerticalScrollProps {
 const VerticalScroll: React.FC<VerticalScrollProps> = ({
   items = ScrollItemWomensBeauty,
   title = 'Shop by Category',
-  subtitle = 'Discover our curated collections',
-  ctaText = 'View All',
+  subtitle,
+  ctaText,
   onCtaClick,
   className = '',
   imageAspectRatio = '3/4.1',
@@ -104,7 +104,9 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
         <div className={styles.headerContent}>
           <div className={styles.titleSection}>
             <h2 className={styles.title}>{title}</h2>
-            <p className={styles.subtitle}>{subtitle}</p>
+            {subtitle && (
+              <p className={styles.subtitle}>{subtitle}</p>
+            )}
           </div>
           {ctaText && (
             <button 

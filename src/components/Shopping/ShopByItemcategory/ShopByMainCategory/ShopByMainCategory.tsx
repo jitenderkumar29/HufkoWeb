@@ -43,6 +43,11 @@ import {
     bestSellersInPrintBooksItems,
     newReleasesOnKindleBooksItems,
     bestSellersOnKindleBooksItems,
+    autoAccessoriesCarouselCategories,
+    slidesautoAccessories,
+    dealsOnCarAccessoriesAutoAccessoriesItems,
+    dealsOnBikeAccessoriesAutoAccessoriesItems,
+    premiumAtItsBestAutoAccessoriesItems,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -799,7 +804,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </div>
                 );
             
-                case 'books':
+            case 'books':
                 return (
                     <div className={styles.categoryContent}>
                         <FashionRoundCarousel
@@ -856,6 +861,68 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             gap={12}
                             showExploreMore={true}
                         />
+                         {/* <VerticalScrollSquare
+                            title="Shop by publishers"
+                            categories={shopByPublishersBooksCategories}
+                            itemsPerView={6}
+                            rows={1}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <VerticalScroll
+                            items={shopByLanguageBooksItems}
+                            imageHeight={400}
+                            title="Shop by language"
+                            subtitle=""
+                            ctaText=""
+                        /> */}
+                        {/* Add more mobile & tablet content */}
+                    </div>
+                );
+           
+            case 'auto_accessories':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={autoAccessoriesCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesautoAccessories}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <VerticalScroll
+                            items={dealsOnCarAccessoriesAutoAccessoriesItems}
+                            imageHeight={400}
+                            title="Deals on car accessories"
+                            subtitle=""
+                            ctaText=""
+                        />
+                        <VerticalScroll
+                            items={dealsOnBikeAccessoriesAutoAccessoriesItems}
+                            imageHeight={400}
+                            title="Deals on bike accessories"
+                            subtitle=""
+                            ctaText=""
+                        />
+                        <VerticalScroll
+                            items={premiumAtItsBestAutoAccessoriesItems}
+                            imageHeight={400}
+                            title="Premium at its best"
+                            subtitle=""
+                            ctaText=""
+                        />
+                        
                         {/* Add more mobile & tablet content */}
                     </div>
                 );

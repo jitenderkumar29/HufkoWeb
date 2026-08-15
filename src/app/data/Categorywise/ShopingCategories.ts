@@ -5753,3 +5753,355 @@ export const bestSellersOnKindleBooksItems = [
   },
 ];
 
+export const autoAccessoriesCarouselCategories = [
+  {
+    id: '1',
+    name: "Media player",
+    imageUrl: "/products/media-player.jpg",
+    url: "/"
+  },
+  {
+    id: '2',
+    name: "Helmets",
+    imageUrl: "/products/helmets.jpg",
+    url: "/"
+  },
+  {
+    id: '3',
+    name: "Engine oils",
+    imageUrl: "/products/engine-oils.jpg",
+    url: "/"
+  },
+  {
+    id: '4',
+    name: "Dashcams",
+    imageUrl: "/products/dashcams.jpg",
+    url: "/"
+  },
+  {
+    id: '5',
+    name: "Subwoofers",
+    imageUrl: "/products/subwoofers.jpg",
+    url: "/"
+  },
+  {
+    id: '6',
+    name: "Tyres",
+    imageUrl: "/products/tyres.jpg",
+    url: "/"
+  },
+  {
+    id: '7',
+    name: "Cleaners",
+    imageUrl: "/products/cleaners.jpg",
+    url: "/"
+  },
+  {
+    id: '8',
+    name: "Styling",
+    imageUrl: "/products/styling.jpg",
+    url: "/"
+  },
+  {
+    id: '9',
+    name: "Batteries",
+    imageUrl: "/products/batteries.jpg",
+    url: "/"
+  },
+  {
+    id: '10',
+    name: "Tyre inflator",
+    imageUrl: "/products/tyre-inflator.jpg",
+    url: "/"
+  },
+  {
+    id: '11',
+    name: "Lights",
+    imageUrl: "/products/lights.jpg",
+    url: "/"
+  },
+  {
+    id: '12',
+    name: "Car washer",
+    imageUrl: "/products/car-washer.jpg",
+    url: "/"
+  }
+];
+
+export const slidesautoAccessories: BannerItemContent[] = [
+ {
+    id: '1',
+    title: 'Upgrade Your Ride',
+    subtitle: 'Premium auto accessories for every vehicle',
+    category: 'Auto Accessories',
+    discount: 'Up to 40% off',
+    imgUrl: '/products/1_autoAccessories._CB773853331_1.png',
+    align: 'right'
+  },
+  {
+    id: '2',
+    title: 'Essential Car Care',
+    subtitle: 'Keep your vehicle in top condition',
+    category: 'Car Care',
+    discount: 'Up to 30% off',
+    imgUrl: '/products/2_autoAccessories._CB773853331_1.png',
+    align: 'left'
+  },
+];
+
+export const dealsOnCarAccessoriesAutoAccessoriesItems = [
+  {
+    id: '1',
+    title: 'Car Mats',
+    subtitle: 'Premium floor protection for your vehicle',
+    imageUrl: '/products/car-mats.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Car Security Cameras',
+    subtitle: '24/7 surveillance for peace of mind',
+    imageUrl: '/products/car-security-cameras.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Car Body Covers',
+    subtitle: 'Protect your car from dust and weather',
+    imageUrl: '/products/car-body-covers.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'High Pressure Washers',
+    subtitle: 'Powerful cleaning for your vehicle',
+    imageUrl: '/products/high-pressure-washers.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Car Seat Covers',
+    subtitle: 'Stylish and comfortable seat protection',
+    imageUrl: '/products/car-seat-covers.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Car Mobile Chargers',
+    subtitle: 'Fast charging on the go',
+    imageUrl: '/products/car-mobile-chargers.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Car Air Fresheners',
+    subtitle: 'Keep your car smelling fresh',
+    imageUrl: '/products/car-air-fresheners.jpg',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Car Polishes',
+    subtitle: 'Restore your car\'s showroom shine',
+    imageUrl: '/products/car-polishes.jpg',
+    link: '/'
+  }
+];
+
+export const dealsOnBikeAccessoriesAutoAccessoriesItems = [
+  {
+    id: '1',
+    title: 'Bike Seat Covers',
+    subtitle: 'Comfortable and durable seat protection for your bike',
+    imageUrl: '/products/bike-seat-covers.png',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Biker Helmets',
+    subtitle: 'Safety first with premium quality helmets',
+    imageUrl: '/products/biker-helmets.png',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Rider Protective Jackets',
+    subtitle: 'Stay safe and stylish on every ride',
+    imageUrl: '/products/rider-protective-jackets.png',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Riding Gloves',
+    subtitle: 'Enhanced grip and protection for your hands',
+    imageUrl: '/products/riding-gloves.png',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Bike Body Covers',
+    subtitle: 'Protect your bike from dust, rain, and scratches',
+    imageUrl: '/products/bike-body-covers.png',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Bike Mobile Holders',
+    subtitle: 'Secure and convenient phone mounting for navigation',
+    imageUrl: '/products/bike-mobile-holders.png',
+    link: '/'
+  }
+];
+
+export const premiumAtItsBestAutoAccessoriesItems = [
+  {
+    id: '1',
+    title: 'High Pressure Washers',
+    subtitle: 'Powerful cleaning performance for your vehicle',
+    imageUrl: '/products/high-pressure-washers.png',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Car Subwoofers',
+    subtitle: 'Deep bass and premium audio experience',
+    imageUrl: '/products/car-subwoofers.png',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Car Amplifiers',
+    subtitle: 'Crystal clear sound with powerful amplification',
+    imageUrl: '/products/car-amplifiers.png',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Car Media Players',
+    subtitle: 'Entertainment on the go with advanced features',
+    imageUrl: '/products/car-media-players.png',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Car Speakers',
+    subtitle: 'Immersive audio for the ultimate driving experience',
+    imageUrl: '/products/car-speakers.png',
+    link: '/'
+  }
+];
+
+export const shopByPublishersBooksCategories: CategoryItem[] = [
+  {
+    id: 'MTG',
+    name: 'MTG',
+    image: '/products/mtg.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'MTG'
+  },
+  {
+    id: 'Arihant',
+    name: 'Arihant',
+    image: '/products/arihant.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'Arihant'
+  },
+  {
+    id: 'PW',
+    name: 'PW (Physics Wallah)',
+    image: '/products/pw.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'PW'
+  },
+  {
+    id: 'Oswaal',
+    name: 'Oswaal',
+    image: '/products/oswaal.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'Oswaal'
+  },
+  {
+    id: 'McgrawHill',
+    name: 'McGraw Hill',
+    image: '/products/mcgraw-hill.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'McGraw Hill'
+  },
+  {
+    id: 'Repro',
+    name: 'Repro',
+    image: '/products/repro.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'Repro'
+  },
+  {
+    id: 'Disha',
+    name: 'Disha',
+    image: '/products/disha.jpg',
+    url: '/',
+    category: 'Books',
+    subCategory: 'Publishers',
+    subSubCategory: 'Disha'
+  }
+];
+
+export const shopByLanguageBooksItems = [
+  {
+    id: '1',
+    title: 'Kannada Books',
+    subtitle: 'Explore Kannada literature and stories',
+    imageUrl: '/products/kannada-books.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Hindi Books',
+    subtitle: 'Popular Hindi novels and poetry',
+    imageUrl: '/products/hindi-books.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Tamil Books',
+    subtitle: 'Read Tamil fiction and classics',
+    imageUrl: '/products/tamil-books.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Marathi Books',
+    subtitle: 'Explore Marathi literature and culture',
+    imageUrl: '/products/marathi-books.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'English Books',
+    subtitle: 'Best-selling English books and novels',
+    imageUrl: '/products/english-books.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Bengali Books',
+    subtitle: 'Discover Bengali novels and poetry',
+    imageUrl: '/products/bengali-books.jpg',
+    link: '/'
+  }
+];
+
+
+
+
