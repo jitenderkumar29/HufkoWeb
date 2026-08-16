@@ -48,6 +48,8 @@ import {
     dealsOnCarAccessoriesAutoAccessoriesItems,
     dealsOnBikeAccessoriesAutoAccessoriesItems,
     premiumAtItsBestAutoAccessoriesItems,
+    shopByPublishersBooksCategories,
+    shopByLanguageBooksItems,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -861,7 +863,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             gap={12}
                             showExploreMore={true}
                         />
-                         {/* <VerticalScrollSquare
+                         <VerticalScrollSquare
                             title="Shop by publishers"
                             categories={shopByPublishersBooksCategories}
                             itemsPerView={6}
@@ -875,7 +877,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             title="Shop by language"
                             subtitle=""
                             ctaText=""
-                        /> */}
+                        />
                         {/* Add more mobile & tablet content */}
                     </div>
                 );
