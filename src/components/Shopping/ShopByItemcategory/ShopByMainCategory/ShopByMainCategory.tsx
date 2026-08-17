@@ -50,6 +50,12 @@ import {
     premiumAtItsBestAutoAccessoriesItems,
     shopByPublishersBooksCategories,
     shopByLanguageBooksItems,
+    jewelleryCarouselCategories,
+    slidesJewellery,
+    discoverOurCuratedStoresJewelleryItems,
+    slidesHalfJewellery,
+    shopByColourslidesHalfJewellery,
+    shopByBondslidesHalfJewellery,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -805,7 +811,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                         {/* Add more mobile & tablet content */}
                     </div>
                 );
-            
+
             case 'books':
                 return (
                     <div className={styles.categoryContent}>
@@ -863,7 +869,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             gap={12}
                             showExploreMore={true}
                         />
-                         <VerticalScrollSquare
+                        <VerticalScrollSquare
                             title="Shop by publishers"
                             categories={shopByPublishersBooksCategories}
                             itemsPerView={6}
@@ -881,7 +887,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                         {/* Add more mobile & tablet content */}
                     </div>
                 );
-           
+
             case 'auto_accessories':
                 return (
                     <div className={styles.categoryContent}>
@@ -924,7 +930,91 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             subtitle=""
                             ctaText=""
                         />
-                        
+
+                        {/* Add more mobile & tablet content */}
+                    </div>
+                );
+
+            case 'jewellery':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={jewelleryCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesJewellery}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <VerticalScroll
+                            items={discoverOurCuratedStoresJewelleryItems}
+                            imageHeight={400}
+                            title="Discover Our Curated Stores"
+                            subtitle=""
+                            ctaText=""
+                        />
+                        <div className={styles.headingContent}>
+                            <h2 className={styles.heading}>Latest Collections</h2>
+                        </div>
+                        <HeroBannerHalfSlide
+                            banners={slidesHalfJewellery}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 2.5
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={450}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
+                        <div className={styles.headingContent}>
+                            <h2 className={styles.heading}>Shop by Colour</h2>
+                        </div>
+                        <HeroBannerHalfSlide
+                            banners={shopByColourslidesHalfJewellery}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 4
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={370}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
+                        <div className={styles.headingContent}>
+                            <h2 className={styles.heading}>Shop by Bond</h2>
+                        </div>
+                        <HeroBannerHalfSlide
+                            banners={shopByBondslidesHalfJewellery}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 6
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={350}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
+
                         {/* Add more mobile & tablet content */}
                     </div>
                 );

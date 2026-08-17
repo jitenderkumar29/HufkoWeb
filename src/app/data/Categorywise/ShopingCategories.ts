@@ -97,7 +97,7 @@ export const ShopingCategories = [
     id: "auto_accessories",
     name: "Auto Accessories",
     // name: "Jewellery & Accessories",
-    imageUrl: "/products/auto_accessories.png",
+    imageUrl: "/products/auto_accessories3.png",
     url: "/auto_accessories",
   },
 
@@ -4114,7 +4114,7 @@ export const topDealshomeFurnitureCategories: CategoryItem[] = [
     subCategory: 'Home Decor',
   },
   {
-   id: 'B0FN9WN6XH',
+    id: 'B0FN9WN6XH',
     name: 'Interio by Goorej',
     image: '/products/Interio_by_Goorej_5.jpg',
     url: '/stores/Interio',
@@ -5348,7 +5348,7 @@ export const booksCarouselCategories = [
 export const slidesbooks: BannerItemContent[] = [
   {
     id: '1',
-     title: 'New Releases',
+    title: 'New Releases',
     subtitle: 'Fresh titles from your favorite authors',
     category: 'New Arrivals',
     discount: '20% off',
@@ -5829,7 +5829,7 @@ export const autoAccessoriesCarouselCategories = [
 ];
 
 export const slidesautoAccessories: BannerItemContent[] = [
- {
+  {
     id: '1',
     title: 'Upgrade Your Ride',
     subtitle: 'Premium auto accessories for every vehicle',
@@ -6102,6 +6102,423 @@ export const shopByLanguageBooksItems = [
   }
 ];
 
+export const jewelleryCarouselCategories = [
+  {
+    id: '1',
+    name: "Rakhis",
+    imageUrl: "/products/rakhis.jpg",
+    url: "/collections/rakhis"
+  },
+  {
+    id: '2',
+    name: "Rings",
+    imageUrl: "/products/rings.jpg",
+    url: "/collections/rings"
+  },
+  {
+    id: '3',
+    name: "Bracelets",
+    imageUrl: "/products/bracelets.jpg",
+    url: "/collections/silver-bracelets"
+  },
+  {
+    id: '4',
+    name: "Pendants",
+    imageUrl: "/products/pendants.jpg",
+    url: "/collections/pendants"
+  },
+  {
+    id: '5',
+    name: "Earrings",
+    imageUrl: "/products/earrings.jpg",
+    url: "/collections/earrings"
+  },
+  {
+    id: '6',
+    name: "Men In Silver",
+    imageUrl: "/products/men-in-silver.jpg",
+    url: "/collections/mens-silver-jewellery"
+  },
+  {
+    id: '7',
+    name: "Personalised",
+    imageUrl: "/products/personalised.jpg",
+    url: "/collections/personalised-jewellery"
+  },
+  {
+    id: '8',
+    name: "Anklets",
+    imageUrl: "/products/anklets.jpg",
+    url: "/collections/anklets"
+  },
+  {
+    id: '9',
+    name: "Silver Chains",
+    imageUrl: "/products/silver-chains.jpg",
+    url: "/collections/silver-chains"
+  },
+  {
+    id: '10',
+    name: "Sets",
+    imageUrl: "/products/sets.jpg",
+    url: "/collections/all-sets"
+  },
+  {
+    id: '11',
+    name: "Mangalsutras",
+    imageUrl: "/products/mangalsutras.jpg",
+    url: "/collections/mangalsutras"
+  },
+  {
+    id: '12',
+    name: "Nose Pins",
+    imageUrl: "/products/nose-pins.jpg",
+    url: "/collections/nose-pins-and-nose-rings"
+  },
+  {
+    id: '13',
+    name: "Perfumes",
+    imageUrl: "/products/perfumes.jpg",
+    url: "/collections/perfumes"
+  },
+  {
+    id: '14',
+    name: "Toe Rings",
+    imageUrl: "/products/toe-rings.jpg",
+    url: "/collections/toe-rings"
+  },
+  {
+    id: '15',
+    name: "New Launch",
+    imageUrl: "/products/new-launch.jpg",
+    url: "/collections/fresh-drops"
+  }
+];
+
+export const slidesJewellery: BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/1_jewellery._CB773853331_1.png',
+    align: 'right'
+  },
+
+  {
+    id: '2',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/4_jewellery._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '3',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/2_jewellery._CB773853331_1.png',
+    align: 'left'
+
+  },
+  {
+    id: '4',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/3_jewellery._CB773853331_1.png',
+    align: 'left'
+  },
+];
+
+export const discoverOurCuratedStoresJewelleryItems = [
+  {
+    id: '1',
+    title: 'Fashion Jewellery',
+    subtitle: 'Trendy & affordable everyday wear',
+    imageUrl: '/products/fashion-jewellery.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Silver Jewellery',
+    subtitle: 'Elegant sterling silver collections',
+    imageUrl: '/products/silver-jewellery.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Hidden Gems',
+    subtitle: 'Unique & exclusive jewellery finds',
+    imageUrl: '/products/hidden-gems.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Luxe Collection',
+    subtitle: 'Designer luxury jewellery pieces',
+    imageUrl: '/products/luxe.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Fine Jewellery',
+    subtitle: 'Premium craftsmanship for special occasions',
+    imageUrl: '/products/fine-jewellery.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Revolve',
+    subtitle: 'Curated international styles',
+    imageUrl: '/products/revolve.jpg',
+    link: '/'
+  }
+];
+
+export const slidesHalfJewellery: BannerItem[] = [
+  {
+    id: '1',
+    title: 'Thalassa Collection',
+    imageUrl: '/products/thalassa-collection.jpg',
+    url: '/collections/thalassa-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Thalassa Collection by GIVA',
+    badge: 'New Collection'
+  },
+  {
+    id: '2',
+    title: 'Pearl-fectly',
+    imageUrl: '/products/pearl-fectly.jpg',
+    url: '/collections/pearl',
+    discount: '',
+    discount2: '',
+    alt: 'Pearl Collection by GIVA',
+    badge: 'Trending'
+  },
+  {
+    id: '3',
+    title: 'All Yours',
+    imageUrl: '/products/all-yours.jpg',
+    url: '/collections/all-yours-collection',
+    discount: '',
+    discount2: '',
+    alt: 'All Yours Collection by GIVA',
+    badge: 'Best Seller'
+  },
+  {
+    id: '4',
+    title: 'Glow In Motion',
+    imageUrl: '/products/glow-in-motion.jpg',
+    url: '/collections/glow-in-motion',
+    discount: '',
+    discount2: '',
+    alt: 'Glow In Motion Collection by GIVA',
+    badge: 'New Arrival'
+  },
+  {
+    id: '5',
+    title: 'Fresh Drops',
+    imageUrl: '/products/fresh-drops-collection.jpg',
+    url: '/collections/fresh-drops',
+    discount: '',
+    discount2: '',
+    alt: 'Fresh Drops Collection by GIVA',
+    badge: 'Just In'
+  },
+  {
+    id: '6',
+    title: 'Shakti Collection',
+    imageUrl: '/products/shakti-collection.jpg',
+    url: '/collections/shakti-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Shakti Collection by GIVA',
+    badge: 'Limited Edition'
+  },
+  {
+    id: '7',
+    title: 'Piercing Collection',
+    imageUrl: '/products/piercing-collection.jpg',
+    url: '/collections/piercing-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Piercing Collection by GIVA',
+    badge: 'New'
+  },
+  {
+    id: '8',
+    title: 'Natural Gemstones',
+    imageUrl: '/products/natural-gemstones.jpg',
+    url: '/collections/natural-gemstone-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Natural Gemstone Collection by GIVA',
+    badge: 'Premium'
+  },
+  {
+    id: '9',
+    title: 'What The Heart Wants',
+    imageUrl: '/products/what-the-heart-wants.jpg',
+    url: '/collections/wthw',
+    discount: '',
+    discount2: '',
+    alt: 'What The Heart Wants Collection by GIVA',
+    badge: 'Romantic'
+  },
+  {
+    id: '10',
+    title: 'Mascot Collection',
+    imageUrl: '/products/mascot-collection.jpg',
+    url: '/collections/mascot-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Mascot Collection by GIVA',
+    badge: 'Cute Finds'
+  },
+  {
+    id: '11',
+    title: 'Wings Of Wonder',
+    imageUrl: '/products/wings-of-wonder.jpg',
+    url: '/collections/wings-of-wonder',
+    discount: '',
+    discount2: '',
+    alt: 'Wings Of Wonder Collection by GIVA',
+    badge: 'Inspirational'
+  },
+  {
+    id: '12',
+    title: 'Sky High',
+    imageUrl: '/products/sky-high.jpg',
+    url: '/collections/sky-high',
+    discount: '',
+    discount2: '',
+    alt: 'Sky High Collection by GIVA',
+    badge: 'Elevated Style'
+  },
+  {
+    id: '13',
+    title: 'Stackable Collection',
+    imageUrl: '/products/stackable-collection.jpg',
+    url: '/collections/stackable-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Stackable Collection by GIVA',
+    badge: 'Mix & Match'
+  }
+];
+
+export const shopByColourslidesHalfJewellery: BannerItem[] = [
+  {
+    id: '1',
+    title: 'Silver',
+    imageUrl: '/products/silver.jpg',
+    url: '/collections/925-silver-jewellery',
+    discount: '',
+    discount2: '',
+    alt: '925 Silver Jewellery by GIVA',
+    badge: 'Pure Silver'
+  },
+  {
+    id: '2',
+    title: 'Gold Plated',
+    imageUrl: '/products/gold-plated.jpg',
+    url: '/collections/18k-gold-plated-jewellery',
+    discount: '',
+    discount2: '',
+    alt: '18K Gold Plated Jewellery by GIVA',
+    badge: 'Luxury Finish'
+  },
+  {
+    id: '3',
+    title: 'Rose Gold',
+    imageUrl: '/products/rose-gold.jpg',
+    url: '/collections/rose-gold-collection',
+    discount: '',
+    discount2: '',
+    alt: 'Rose Gold Collection by GIVA',
+    badge: 'Trending'
+  },
+  {
+    id: '4',
+    title: 'Oxidised',
+    imageUrl: '/products/oxidised.jpg',
+    url: '/collections/avni-oxidised-silver-1',
+    discount: '',
+    discount2: '',
+    alt: 'Oxidised Silver Jewellery by GIVA',
+    badge: 'Bohemian'
+  }
+];
+
+export const shopByBondslidesHalfJewellery: BannerItem[] = [
+  {
+    id: '1',
+    title: '',
+    imageUrl: '/products/mother-gift.jpg',
+    url: '/collections/gifts-mother',
+    discount: '',
+    discount2: '',
+    alt: 'Gifts for Mother by GIVA',
+    badge: ''
+  },
+  {
+    id: '2',
+    title: '',
+    imageUrl: '/products/husband-gift.jpg',
+    url: '/collections/mens-silver-jewellery',
+    discount: '',
+    discount2: '',
+    alt: 'Gifts for Husband by GIVA',
+    badge: ''
+  },
+  {
+    id: '3',
+    title: '',
+    imageUrl: '/products/wife-gift.jpg',
+    url: '/collections/gifts-wife',
+    discount: '',
+    discount2: '',
+    alt: 'Gifts for Wife by GIVA',
+    badge: ''
+  },
+  {
+    id: '4',
+    title: '',
+    imageUrl: '/products/sister-gift.jpg',
+    url: '/collections/gifts-sister',
+    discount: '',
+    discount2: '',
+    alt: 'Gifts for Sister by GIVA',
+    badge: ''
+  },
+  {
+    id: '5',
+    title: '',
+    imageUrl: '/products/brother-gift.jpg',
+    url: '/collections/mens-silver-jewellery',
+    discount: '',
+    discount2: '',
+    alt: 'Gifts for Brother by GIVA',
+    badge: ''
+  },
+  {
+    id: '6',
+    title: '',
+    imageUrl: '/products/friends-gift.jpg',
+    url: '/collections/gifts-for-friends',
+    discount: '',
+    discount2: '',
+    alt: 'Gifts for Friends by GIVA',
+    badge: ''
+  }
+];
 
 
 

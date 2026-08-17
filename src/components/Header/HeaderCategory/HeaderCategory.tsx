@@ -1015,6 +1015,17 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+             {isShoppingCategorySelected("jewellery_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                {/* Pass the selected category to ShopByMainCategory */}
+                <ShopByMainCategory
+                  category={selectedCategory}
+                  selectedItem={selectedSubHeaderItem}
+                  // Or pass the entire item with all data
+                  subHeaderItem={selectedSubHeaderItem}
+                />
+              </div>
+            )}
 
           </div>
         )}
@@ -1142,6 +1153,23 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={PharmaHeroBannerData} />
             <AllCategoryOne categories={PharmaCategories} />
+            <WelcomeVideoHufko
+              title=""
+              titleHighlight=""
+              subtitle=""
+              // title="Premium Care Services app"
+              // titleHighlight="World's #1"
+              // subtitle="Enjoy fast online Care Services on the Hufko app"
+              videoSrc="/videos/pharma_new.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+              showLogo={false}
+              showAppStore={false}
+              showPlayStore={false}
+              muted={true}
+            />
             <FranchiseHufko
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
