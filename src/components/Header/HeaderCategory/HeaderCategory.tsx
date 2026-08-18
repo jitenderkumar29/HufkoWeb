@@ -1026,6 +1026,17 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+             {isShoppingCategorySelected("tvs_appliances_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                {/* Pass the selected category to ShopByMainCategory */}
+                <ShopByMainCategory
+                  category={selectedCategory}
+                  selectedItem={selectedSubHeaderItem}
+                  // Or pass the entire item with all data
+                  subHeaderItem={selectedSubHeaderItem}
+                />
+              </div>
+            )}
 
           </div>
         )}
@@ -1160,7 +1171,7 @@ const HeaderCategory: React.FC = () => {
               // title="Premium Care Services app"
               // titleHighlight="World's #1"
               // subtitle="Enjoy fast online Care Services on the Hufko app"
-              videoSrc="/videos/pharma_new.mp4"
+              videoSrc="/videos/PHARMA _NEW_VIDEO.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
               playStoreLink="/"

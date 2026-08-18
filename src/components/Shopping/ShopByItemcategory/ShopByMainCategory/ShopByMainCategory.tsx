@@ -56,6 +56,11 @@ import {
     slidesHalfJewellery,
     shopByColourslidesHalfJewellery,
     shopByBondslidesHalfJewellery,
+    tvsAppliancesCarouselCategories,
+    slidesTVsAppliances,
+    shopByBrandsTVsAppliancesCategories,
+    topDealsTVsAppliancesItems,
+    TVsAppliancesHorizontalSliderOneLine,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -1014,6 +1019,56 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             backgroundColor="#f5f5f5"
                             onBannerClick={(banner) => console.log('Banner clicked:', banner)}
                         />
+
+                        {/* Add more mobile & tablet content */}
+                    </div>
+                );
+            
+            case 'tvs_appliances':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={tvsAppliancesCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesTVsAppliances}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <VerticalScrollSquare
+                            title="Shop by Brands!"
+                            categories={shopByBrandsTVsAppliancesCategories}
+                            itemsPerView={6}
+                            rows={2}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <VerticalScroll
+                            items={topDealsTVsAppliancesItems}
+                            imageHeight={320}
+                            title="Top Deals!"
+                            subtitle=""
+                            ctaText=""
+                        />
+                         <HorizontalSliderOneLine
+                            products={TVsAppliancesHorizontalSliderOneLine}
+                            title="Under ₹1,000"
+                            exploreMoreLink="/deals/headphones"
+                            backgroundColor="#ffffff"
+                            primaryColor="#000000"
+                            secondaryColor="#ffffff"
+                        />
+                        
 
                         {/* Add more mobile & tablet content */}
                     </div>

@@ -6520,5 +6520,368 @@ export const shopByBondslidesHalfJewellery: BannerItem[] = [
   }
 ];
 
+export const tvsAppliancesCarouselCategories = [
+  {
+    id: '1',
+    name: "Accessories",
+    imageUrl: "/products/accessories1.jpg",
+    url: "/"
+  },
+  {
+    id: '2',
+    name: "Media Streaming Devices",
+    imageUrl: "/products/media-streaming-devices1.jpg",
+    url: "/"
+  },
+  {
+    id: '3',
+    name: "Projectors",
+    imageUrl: "/products/projectors1.jpg",
+    url: "/"
+  },
+  {
+    id: '4',
+    name: "Home Theater Systems",
+    imageUrl: "/products/home-theater-systems1.jpg",
+    url: "/"
+  },
+  {
+    id: '5',
+    name: "TV Receivers",
+    imageUrl: "/products/tv-receivers1.jpg",
+    url: "/"
+  },
+  {
+    id: '6',
+    name: "Satellite Equipment",
+    imageUrl: "/products/satellite-equipment1.jpg",
+    url: "/"
+  },
+  {
+    id: '7',
+    name: "AV Receivers & Amplifiers",
+    imageUrl: "/products/av-receivers-amplifiers1.jpg",
+    url: "/"
+  },
+  {
+    id: '8',
+    name: "Speakers",
+    imageUrl: "/products/speakers1.jpg",
+    url: "/"
+  },
+  {
+    id: '9',
+    name: "Video Players & Recorders",
+    imageUrl: "/products/video-players-recorders1.jpg",
+    url: "/"
+  },
+  {
+    id: '10',
+    name: "Blu-ray Players & Recorders",
+    imageUrl: "/products/blu-ray-players-recorders1.jpg",
+    url: "/"
+  }
+];
+
+export const slidesTVsAppliances: BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/1_TVsAppliances._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/2_TVsAppliances._CB773853331_1.png',
+    align: 'left'
+  }
+];
+
+export const shopByBrandsTVsAppliancesCategories: CategoryItem[] = [
+  {
+    id: '1',
+    name: 'TCL',
+    image: '/products/tcl.jpg',
+    url: '/'
+  },
+  {
+    id: '2',
+    name: 'Samsung',
+    image: '/products/samsung.jpg',
+    url: '/'
+  },
+  {
+    id: '3',
+    name: 'LG',
+    image: '/products/lg.jpg',
+    url: '/'
+  },
+  {
+    id: '4',
+    name: 'Xiaomi',
+    image: '/products/xiaomi.jpg',
+    url: '/'
+  },
+  {
+    id: '5',
+    name: 'Sony',
+    image: '/products/sony.jpg',
+    url: '/'
+  },
+  {
+    id: '6',
+    name: 'Hisense',
+    image: '/products/hisense.jpg',
+    url: '/'
+  },
+  {
+    id: '7',
+    name: 'Vu',
+    image: '/products/vu.jpg',
+    url: '/'
+  },
+  {
+    id: '8',
+    name: 'Infinix',
+    image: '/products/infinix.jpg',
+    url: '/'
+  },
+  {
+    id: '9',
+    name: 'Acerpure',
+    image: '/products/acerpure.jpg',
+    url: '/'
+  },
+  {
+    id: '10',
+    name: 'Vzy',
+    image: '/products/vzy.jpg',
+    url: '/'
+  },
+  {
+    id: '11',
+    name: 'Realme Techlife',
+    image: '/products/realme-techlife.jpg',
+    url: '/'
+  },
+  {
+    id: '12',
+    name: 'Motorola',
+    image: '/products/motorola.jpg',
+    url: '/'
+  },
+  {
+    id: '13',
+    name: 'Sansui',
+    image: '/products/sansui.jpg',
+    url: '/'
+  },
+  {
+    id: '14',
+    name: 'Bush',
+    image: '/products/bush.jpg',
+    url: '/'
+  },
+  {
+    id: '15',
+    name: 'iFFalcon',
+    image: '/products/iffalcon.jpg',
+    url: '/'
+  },
+  {
+    id: '16',
+    name: 'Toshiba',
+    image: '/products/toshiba.jpg',
+    url: '/'
+  },
+  {
+    id: '17',
+    name: 'Philips',
+    image: '/products/philips.jpg',
+    url: '/'
+  },
+  {
+    id: '18',
+    name: 'Thomson',
+    image: '/products/thomson.jpg',
+    url: '/'
+  },
+  {
+    id: '19',
+    name: 'Kodak',
+    image: '/products/kodak.jpg',
+    url: '/'
+  },
+  {
+    id: '20',
+    name: 'Haier',
+    image: '/products/haier.jpg',
+    url: '/'
+  },
+  {
+    id: '21',
+    name: 'VW',
+    image: '/products/vw.jpg',
+    url: '/'
+  },
+  {
+    id: '22',
+    name: 'Unoboom',
+    image: '/products/unoboom.jpg',
+    url: '/'
+  },
+  {
+    id: '23',
+    name: 'VZY',
+    image: '/products/vzy_dish_tv.jpg',
+    url: '/'
+  }
+];
+
+export const topDealsTVsAppliancesItems = [
+  {
+    id: '1',
+    title: 'Xiaomi Smart TV',
+    subtitle: '108 cm (43 inches) 4K Ultra HD Smart LED TV',
+    imageUrl: '/products/xiaomi-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Samsung Smart TV',
+    subtitle: '126 cm (50 inches) Crystal 4K UHD Smart TV',
+    imageUrl: '/products/samsung-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Hisense Smart TV',
+    subtitle: '139 cm (55 inches) 4K Ultra HD Smart LED TV',
+    imageUrl: '/products/hisense-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'LG Smart TV',
+    subtitle: '108 cm (43 inches) 4K Ultra HD Smart TV',
+    imageUrl: '/products/lg-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Motorola Smart TV',
+    subtitle: '126 cm (50 inches) 4K Ultra HD Smart LED TV',
+    imageUrl: '/products/motorola-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Sony Smart TV',
+    subtitle: '139 cm (55 inches) 4K OLED Smart TV',
+    imageUrl: '/products/sony-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'TCL Smart TV',
+    subtitle: '80 cm (32 inches) HD Ready Smart LED TV',
+    imageUrl: '/products/tcl-smart-tv.jpg',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Vu Smart TV',
+    subtitle: '108 cm (43 inches) 4K Ultra HD Smart LED TV',
+    imageUrl: '/products/vu-smart-tv.jpg',
+    link: '/'
+  }
+];
+
+export const TVsAppliancesHorizontalSliderOneLine = [
+  {
+    id: "B0HCPG3VCT",
+    title: "Original Remote Control Compatible with Sony Bravia TV Remote Control URC 153 Fit for Smart LCD LED UHD OLED QLED 4K Android Television",
+    price: 199,
+    oldPrice: 1999,
+    currency: "₹",
+    imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_1.jpg",
+    link: "/",
+    rating: 4.5,
+    reviews: 1147
+  },
+  {
+    id: "B0GDG2JFDK",
+    title: "Zebronics USB Extension Cable, 1.5 Meter Length, 480Mbps Data Transfer, Full Copper Core, Nickel-Plated Connectors",
+    price: 129,
+    oldPrice: 599,
+    currency: "₹",
+    imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_2.jpg",
+    link: "/",
+    rating: 4.4,
+    reviews: 408
+  },
+  {
+    id: "B0FSGGMPD1",
+    title: "Silicone LG TV Remote Cover Case Compatible with 2025 and Above Model - LG Remote Cover MR25GA Full Wrap - Black",
+    price: 299,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_3.jpg",
+    link: "/",
+    rating: 4.5,
+    reviews: 1134
+  },
+  {
+    id: "B0DK1CJKM3",
+    title: "Jio Original & Genuine Bluetooth Voice Remote for JioFiber Set-Top Box | 43-Key Universal Replacement | Easy Pairing | 6-Month Warranty",
+    price: 699,
+    oldPrice: 999,
+    currency: "₹",
+    imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_4.jpg",
+    link: "/",
+    rating: 4.2,
+    reviews: 487
+  },
+  {
+    id: "B0FSCS6592",
+    title: "Zebronics Type C to HDMI Cable, 4K @ 60Hz | 1080p @ 240Hz, 18Gbps Data Transfer, 3D Compatible, 1M Braided Cable",
+    price: 699,
+    oldPrice: 2999,
+    currency: "₹",
+    imageUrl: "/products/51Q8DUDT2eL._AC_SR480,440_.jpg",
+    link: "/",
+    rating: 4.2,
+    reviews: 1835
+  },
+  {
+    id: "B0GL9DWGV6",
+    title: "K2 Remotes Compatible for Zebronics Android Pixaplay Smart LED Projector Remote – Version 02 | IR Replacement Controller",
+    price: 299,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/B0GL9DWGV6._AC_SR480,440_.jpg",
+    link: "/",
+    rating: 4.0,
+    reviews: 27
+  },
+  {
+    id: "B0GD5YVBL9",
+    title: "LRIPL MPEG-4 Full HD Set Top Box Free to Air Without YouTube Function | HDMI+AV Cable Port | MPEG-4 Technology | BIS Approved",
+    price: 999,
+    oldPrice: 1299,
+    currency: "₹",
+    imageUrl: "/products/B0GD5YVBL9._AC_SR480,440_.jpg",
+    link: "/",
+    rating: 3.9,
+    reviews: 18
+  }
+];
 
 
