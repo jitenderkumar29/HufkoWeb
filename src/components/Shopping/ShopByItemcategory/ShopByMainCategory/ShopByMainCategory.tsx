@@ -61,6 +61,12 @@ import {
     shopByBrandsTVsAppliancesCategories,
     topDealsTVsAppliancesItems,
     TVsAppliancesHorizontalSliderOneLine,
+    mobilesTabletsCarouselCategories,
+    slidesMobilesTablets,
+    newLauncheslidesHalfMobilesTablets,
+    bestDealsOnNoCostEMIMobilesTabletsItems,
+    shopByBrandsMobilesTabletsCategories,
+    slidesHalfMobilesTablets,
 } from '@/app/data/Categorywise/ShopingCategories';
 import TopBrandsOnOffer from '../../ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import VerticalScroll from '../../ItemListDesigns/VerticalScroll/VerticalScroll';
@@ -758,19 +764,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </div>
                 );
 
-            case 'mobiles_tablets':
-                return (
-                    <div className={styles.categoryContent}>
-                        <ShoppingSlides1
-                            title="Today's Top Smartphone Deals"
-                            deals={ShopingSlide1SmartPhoneDeals}
-                            cardWidth={200}
-                            showArrow={true}
-                        />
-                        {/* Add more mobile & tablet content */}
-                    </div>
-                );
-
             case 'baby_toys':
                 return (
                     <div className={styles.categoryContent}>
@@ -1070,6 +1063,80 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                         />
                         
 
+                        {/* Add more mobile & tablet content */}
+                    </div>
+                );
+            
+            case 'mobiles_tablets':
+                return (
+                    <div className={styles.categoryContent}>
+                        <FashionRoundCarousel
+                            categories={mobilesTabletsCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                        />
+                        <HeroBannerLeftContent
+                            banners={slidesMobilesTablets}
+                            defaultAlign="left" // Default alignment if not specified per banner
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                         <div className={styles.headingContent}>
+                            <h2 className={styles.heading}>New Launches</h2>
+                        </div>
+                        <HeroBannerHalfSlide
+                            banners={newLauncheslidesHalfMobilesTablets}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 4
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={370}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
+                        <VerticalScroll
+                            items={bestDealsOnNoCostEMIMobilesTabletsItems}
+                            imageHeight={400}
+                            title="Best Deals on No Cost EMI"
+                            subtitle=""
+                            ctaText=""
+                        />
+                        <VerticalScrollSquare
+                            title="Shop by Brands!"
+                            categories={shopByBrandsMobilesTabletsCategories}
+                            itemsPerView={6}
+                            rows={2}
+                            showArrows={true}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                         <div className={styles.headingContent}>
+                            <h2 className={styles.heading}>Upcoming Launches</h2>
+                        </div>
+                        <HeroBannerHalfSlide
+                            banners={slidesHalfMobilesTablets}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 2.5
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={350}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
                         {/* Add more mobile & tablet content */}
                     </div>
                 );

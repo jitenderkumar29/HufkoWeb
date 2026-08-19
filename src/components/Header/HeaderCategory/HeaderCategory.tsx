@@ -1037,6 +1037,17 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+             {isShoppingCategorySelected("mobiles_tablets_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                {/* Pass the selected category to ShopByMainCategory */}
+                <ShopByMainCategory
+                  category={selectedCategory}
+                  selectedItem={selectedSubHeaderItem}
+                  // Or pass the entire item with all data
+                  subHeaderItem={selectedSubHeaderItem}
+                />
+              </div>
+            )}
 
           </div>
         )}

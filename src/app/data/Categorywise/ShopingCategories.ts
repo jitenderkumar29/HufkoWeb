@@ -110,7 +110,7 @@ export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Electronics", id: "electronics_sub_header", url: "/electronics", category: "electronics" },
   { name: "Home Decor", id: "home_decor_sub_header", url: "/home_decor", category: "home_decor" },
   { name: "Home Furniture", id: "home_furniture_sub_header", url: "/home_furniture", category: "home_furniture" },
-  { name: "Mobiles & Tablets", id: "mobiles_tablets", url: "/mobiles_tablets", category: "mobiles_tablets" },
+  { name: "Mobiles & Tablets", id: "mobiles_tablets_sub_header", url: "/mobiles_tablets", category: "mobiles_tablets" },
   { name: "Men's Fashion", id: "mens_fashion_sub_header", url: "/men", category: "mens_fashion" },
   { name: "Women's Fashion", id: "women_fashion_sub_header", url: "/women", category: "women_fashion" },
   { name: "Kid's Fashion", id: "kids_fashion_sub_header", url: "/kids", category: "kids_fashion" },
@@ -6881,6 +6881,546 @@ export const TVsAppliancesHorizontalSliderOneLine = [
     link: "/",
     rating: 3.9,
     reviews: 18
+  }
+];
+
+export const mobilesTabletsCarouselCategories = [
+  // Smartphone Brands (from first file)
+  {
+    id: '1',
+    name: "iPhone",
+    imageUrl: "/products/iphone21.png",
+    url: "/",
+    badge: "New Arrivals"
+  },
+  {
+    id: '2',
+    name: "vivo",
+    imageUrl: "/products/vivo1.jpg",
+    url: "/",
+    badge: "Trending"
+  },
+  {
+    id: '3',
+    name: "OPPO",
+    imageUrl: "/products/oppo1.jpg",
+    url: "/",
+    badge: "Best Sellers"
+  },
+  {
+    id: '4',
+    name: "POCO",
+    imageUrl: "/products/poco1.jpg",
+    url: "/",
+    badge: "Featured"
+  },
+  {
+    id: '5',
+    name: "AI+",
+    imageUrl: "/products/ai-plus1.jpg",
+    url: "/",
+    badge: "AI Powered"
+  },
+  {
+    id: '6',
+    name: "Redmi",
+    imageUrl: "/products/redmi1.jpg",
+    url: "/",
+    badge: "Popular"
+  },
+  {
+    id: '7',
+    name: "Infinix",
+    imageUrl: "/products/infinix11.jpg",
+    url: "/",
+    badge: "Budget Pick"
+  },
+  {
+    id: '8',
+    name: "HMD",
+    imageUrl: "/products/hmd1.jpg",
+    url: "/",
+    badge: "New"
+  },
+  {
+    id: '9',
+    name: "LAVA",
+    imageUrl: "/products/lava1.jpg",
+    url: "/",
+    badge: "Value Deal"
+  },
+  {
+    id: '10',
+    name: "motorola",
+    imageUrl: "/products/motorola11.jpg",
+    url: "/",
+    badge: "Premium"
+  },
+  {
+    id: '11',
+    name: "Samsung",
+    imageUrl: "/products/samsung11.jpg",
+    url: "/",
+    badge: "Best Sellers"
+  },
+  {
+    id: '12',
+    name: "realme",
+    imageUrl: "/products/realme1.jpg",
+    url: "/",
+    badge: "Top Rated"
+  },
+  {
+    id: '13',
+    name: "Nothing",
+    imageUrl: "/products/nothing1.jpg",
+    url: "/",
+    badge: "Unique"
+  },
+  {
+    id: '14',
+    name: "Snapdragon",
+    imageUrl: "/products/snapdragon1.jpg",
+    url: "/",
+    badge: "Power"
+  },
+  {
+    id: '15',
+    name: "Google",
+    imageUrl: "/products/google1.jpg",
+    url: "/",
+    badge: "Pixel"
+  },
+  {
+    id: '16',
+    name: "Tecno",
+    imageUrl: "/products/tecno1.jpg",
+    url: "/",
+    badge: "Affordable"
+  },
+  {
+    id: '17',
+    name: "boltt",
+    imageUrl: "/products/boltt1.jpg",
+    url: "/",
+    badge: "Coming Soon"
+  },
+  // Product Categories (from second file)
+  {
+    id: '18',
+    name: "Smartphones",
+    imageUrl: "/products/smartphones.jpg",
+    url: "/category/smartphones",
+    badge: "New Arrivals"
+  },
+  {
+    id: '19',
+    name: "Tablets",
+    imageUrl: "/products/tablets.jpg",
+    url: "/category/tablets",
+    badge: "Best Sellers"
+  },
+  {
+    id: '20',
+    name: "Accessories",
+    imageUrl: "/products/accessories2.jpg",
+    url: "/category/accessories",
+    badge: "Up to 50% Off"
+  },
+  {
+    id: '21',
+    name: "Smartwatches",
+    imageUrl: "/products/smartwatches.jpg",
+    url: "/category/smartwatches",
+    badge: "Featured"
+  },
+  {
+    id: '22',
+    name: "E-Readers",
+    imageUrl: "/products/ereaders.jpg",
+    url: "/category/ereaders",
+    badge: "New"
+  },
+  {
+    id: '23',
+    name: "Power Banks",
+    imageUrl: "/products/powerbanks.jpg",
+    url: "/category/powerbanks",
+    badge: "Popular"
+  },
+  {
+    id: '24',
+    name: "Chargers",
+    imageUrl: "/products/chargers.jpg",
+    url: "/category/chargers",
+    badge: "Essentials"
+  },
+  {
+    id: '25',
+    name: "Phone Cases",
+    imageUrl: "/products/phone-cases.jpg",
+    url: "/category/phone-cases",
+    badge: "Trending"
+  },
+  {
+    id: '26',
+    name: "Screen Protectors",
+    imageUrl: "/products/screen-protectors.jpg",
+    url: "/category/screen-protectors",
+    badge: "Protection"
+  },
+  {
+    id: '27',
+    name: "Wireless Earbuds",
+    imageUrl: "/products/wireless-earbuds.jpg",
+    url: "/category/wireless-earbuds",
+    badge: "Wireless"
+  },
+  {
+    id: '28',
+    name: "Smart Home",
+    imageUrl: "/products/smart-home.jpg",
+    url: "/category/smart-home",
+    badge: "Smart Tech"
+  },
+  {
+    id: '29',
+    name: "Gaming Accessories",
+    imageUrl: "/products/gaming-accessories.jpg",
+    url: "/category/gaming-accessories",
+    badge: "Gaming"
+  }
+];
+
+export const slidesMobilesTablets: BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/1_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/2_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '3',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/3_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '4',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/4_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '5',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/5_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '6',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/6_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  },
+  {
+    id: '7',
+     title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/7_MobilesTablets._CB773853331_1.png',
+    align: 'left'
+  }
+];
+
+export const newLauncheslidesHalfMobilesTablets: BannerItem[] = [
+  {
+    id: '1',
+    title: '',
+    imageUrl: '/products/vivo-s2.jpg',
+    url: '/collections/vivo-s2-mobiles',
+    discount: '',
+    discount2: '',
+    alt: 'vivo S2 Mobile Phones',
+    badge: ''
+  },
+  {
+    id: '2',
+    title: '',
+    imageUrl: '/products/google-pixel-11-pro.jpg',
+    url: '/collections/google-pixel-11-pro',
+    discount: '',
+    discount2: '',
+    alt: 'Google Pixel 11 Pro',
+    badge: ''
+  },
+  {
+    id: '3',
+    title: '',
+    imageUrl: '/products/realme-16x-5g.jpg',
+    url: '/collections/realme-16x-5g-mobile-phones',
+    discount: '',
+    discount2: '',
+    alt: 'realme 16X 5G Mobile Phones',
+    badge: ''
+  },
+  {
+    id: '4',
+    title: '',
+    imageUrl: '/products/samsung-galaxy-z-fold-8.jpg',
+    url: '/collections/samsung-galaxy-z-fold-8-mobiles',
+    discount: '',
+    discount2: '',
+    alt: 'Samsung Galaxy Z Fold 8 Mobiles',
+    badge: ''
+  }
+];
+
+export const bestDealsOnNoCostEMIMobilesTabletsItems = [
+  {
+    id: '1',
+    title: 'Samsung Galaxy S25 5G',
+    subtitle: 'Icy Blue, 128 GB',
+    imageUrl: '/products/samsung-galaxy-s25-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'OPPO K14X 5G',
+    subtitle: 'Prism Violet, 64 GB',
+    imageUrl: '/products/oppo-k14x-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'vivo T5 Lite 44W 5G',
+    subtitle: 'Twilight Shadow, 256 GB',
+    imageUrl: '/products/vivo-t5-lite-44w-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'motorola Edge 60 Fusion 5G',
+    subtitle: 'Pantone Amazonite, 256 GB',
+    imageUrl: '/products/motorola-edge-60-fusion-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Redmi Note 15 SE 5G',
+    subtitle: 'Crimson Reserve, 128 GB',
+    imageUrl: '/products/redmi-note-15-se-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Nothing Phone 4a',
+    subtitle: 'Black, 256 GB',
+    imageUrl: '/products/nothing-phone-4a.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'realme P4 Pro 5G',
+    subtitle: 'Birch Wood, 128 GB',
+    imageUrl: '/products/realme-p4-pro-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'realme P4 Power 5G',
+    subtitle: 'Transorange, 256 GB',
+    imageUrl: '/products/realme-p4-power-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '9',
+    title: 'vivo X200T',
+    subtitle: 'Stellar Black, 256 GB',
+    imageUrl: '/products/vivo-x200t.jpg',
+    link: '/'
+  },
+  {
+    id: '10',
+    title: 'POCO X8 Pro Max',
+    subtitle: 'Black, 256 GB',
+    imageUrl: '/products/poco-x8-pro-max.jpg',
+    link: '/'
+  },
+  {
+    id: '11',
+    title: 'OPPO K14 5G',
+    subtitle: 'Prism Violet, 128 GB',
+    imageUrl: '/products/oppo-k14-5g.jpg',
+    link: '/'
+  },
+  {
+    id: '12',
+    title: 'Samsung Galaxy S25 5G',
+    subtitle: 'Icy Blue, 128 GB',
+    imageUrl: '/products/samsung-galaxy-s25-5g1.jpg',
+    link: '/'
+  }
+];
+
+export const shopByBrandsMobilesTabletsCategories: CategoryItem[] = [
+  {
+    id: '1',
+    name: 'Apple',
+    image: '/products/apple.png',
+    url: '/'
+  },
+  {
+    id: '2',
+    name: 'Nothing',
+    image: '/products/nothing.png',
+    url: '/'
+  },
+  {
+    id: '3',
+    name: 'Samsung',
+    image: '/products/samsung.png',
+    url: '/'
+  },
+  {
+    id: '4',
+    name: 'OPPO',
+    image: '/products/oppo.png',
+    url: '/'
+  },
+  {
+    id: '5',
+    name: 'realme',
+    image: '/products/realme.png',
+    url: '/'
+  },
+  {
+    id: '6',
+    name: 'Redmi',
+    image: '/products/mi.png',
+    url: '/'
+  },
+  {
+    id: '7',
+    name: 'Google',
+    image: '/products/google.png',
+    url: '/'
+  },
+  {
+    id: '8',
+    name: 'vivo',
+    image: '/products/vivo.png',
+    url: '/'
+  },
+  {
+    id: '9',
+    name: 'OnePlus',
+    image: '/products/oneplus.png',
+    url: '/'
+  },
+  {
+    id: '10',
+    name: 'POCO',
+    image: '/products/poco.png',
+    url: '/'
+  },
+  {
+    id: '11',
+    name: 'Tecno',
+    image: '/products/tecno.png',
+    url: '/'
+  },
+  {
+    id: '12',
+    name: 'motorola',
+    image: '/products/motorola.png',
+    url: '/'
+  },
+  {
+    id: '13',
+    name: 'Nokia',
+    image: '/products/nokia.png',
+    url: '/'
+  },
+  {
+    id: '14',
+    name: 'itel',
+    image: '/products/itel.png',
+    url: '/'
+  },
+  {
+    id: '15',
+    name: 'Jio',
+    image: '/products/jio.png',
+    url: '/'
+  }
+];
+
+export const slidesHalfMobilesTablets: BannerItem[] = [
+  {
+    id: '1',
+    title: '',
+    imageUrl: '/products/realme-p4s-5g.png',
+    url: '/realme-p4s-5g-coming-soon-store',
+    discount: '',
+    discount2: '',
+    alt: 'realme P4S 5G Coming Soon',
+    badge: ''
+  },
+  {
+    id: '2',
+    title: '',
+    imageUrl: '/products/boltt-smartphone.jpg',
+    url: '/boltt-smartphone-coming-soon-at-store',
+    discount: '',
+    discount2: '',
+    alt: 'boltt Smartphone Coming Soon',
+    badge: ''
+  },
+  {
+    id: '3',
+    title: '',
+    imageUrl: '/products/boltt-evo.png',
+    url: '/boltt-evo-coming-soon-store',
+    discount: '',
+    discount2: '',
+    alt: 'boltt Evo Coming Soon',
+    badge: ''
+  },
+  {
+    id: '4',
+    title: '',
+    imageUrl: '/products/poco-m8x-5g.jpg',
+    url: '/poco-m8x-5g-coming-soon-store',
+    discount: '',
+    discount2: '',
+    alt: 'POCO M8X 5G Coming Soon',
+    badge: ''
   }
 ];
 
