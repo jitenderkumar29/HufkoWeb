@@ -6,8 +6,8 @@ import styles from './VerticalScrollSquare.module.scss';
 
 export interface CategoryItem {
   id: string;
-  name: string;
-  image: string;
+  name?: string;        // Add name as optional
+  imageUrl: string;
   url: string;
   alt?: string;
   category?: string;
@@ -272,8 +272,8 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
                     >
                       <div className={styles.categoryImageWrapper}>
                         <img
-                          src={category.image}
-                          alt={category.alt || category.name}
+                          src={category.imageUrl}
+                          alt={category.alt || category.name || category.imageUrl}
                           className={styles.categoryImage}
                           loading="lazy"
                           onError={(e) => {

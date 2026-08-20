@@ -7,8 +7,8 @@
   overflow: hidden;
 //   background: #f5f5f5;
 //   border-radius: 12px;
-  padding: 1rem 1.5rem;
-  border: 1px solid $gray-200;
+  // padding: 1rem 1.5rem;
+  // border: 1px solid $gray-200;
 
   .slideWrapper {
     position: relative;
@@ -256,6 +256,7 @@
     transform: translateY(-50%);
     width: 48px;
     height: 48px;
+    // background: transparent;
     background: rgba(255, 255, 255, 0.9);
     border: none;
     border-radius: 50%;
@@ -302,7 +303,7 @@
   }
 
   .arrowLeft {
-    left: 40px;
+    left: 10px;
 
     @media (max-width: 768px) {
       left: 8px;
@@ -310,7 +311,7 @@
   }
 
   .arrowRight {
-    right: 40px;
+    right: 10px;
 
     @media (max-width: 768px) {
       right: 8px;

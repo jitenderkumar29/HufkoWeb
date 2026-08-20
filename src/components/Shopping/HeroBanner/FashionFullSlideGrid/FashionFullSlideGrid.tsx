@@ -7,7 +7,7 @@ import styles from "./FashionFullSlideGrid.module.scss";
 export interface FashionCard {
     id: string;
     title: string;
-    image: string;
+    imageUrl: string;
     link: string;
 }
 
@@ -70,7 +70,7 @@ const FashionFullSlideGrid = ({
                             className={styles.card}
                         >
                             <Image
-                                src={card.image}
+                                src={card.imageUrl}
                                 fill
                                 alt={card.title}
                                 className={styles.cardImage}

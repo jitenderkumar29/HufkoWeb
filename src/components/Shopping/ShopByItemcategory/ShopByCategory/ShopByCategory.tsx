@@ -7,7 +7,7 @@ import styles from './ShopByCategory.module.scss';
 export interface CategoryItem {
   id: string;
   name: string;
-  image: string;
+  imageUrl: string;
   url: string;
   alt?: string;
   category?: string;
@@ -278,7 +278,7 @@ const ShopByCategory: React.FC<ShopByCategoryProps> = ({
                     >
                       <div className={styles.categoryImageWrapper}>
                         <img
-                          src={category.image}
+                          src={category.imageUrl}
                           alt={category.alt || category.name}
                           className={styles.categoryImage}
                           loading="lazy"
