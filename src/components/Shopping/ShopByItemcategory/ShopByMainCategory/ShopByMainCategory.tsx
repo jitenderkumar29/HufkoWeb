@@ -72,10 +72,8 @@ import {
     homeKitchenCarouselCategories,
     slidesHomeKitchen,
     bankOfferMobileSlide,
-    homeKitchenItems,
     monsoonDealsHomeKitchenItems,
     grabOrGoneHomeKitchenItems,
-    favoriteStoresHomeKitchenCategories,
     favoriteStoresHomeKitchenItems,
     discoverTrendingBrandsHomeKitchenItems,
 } from '@/app/data/Categorywise/ShopingCategories';
