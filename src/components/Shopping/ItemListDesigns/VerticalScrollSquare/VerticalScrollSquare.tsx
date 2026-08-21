@@ -6,7 +6,7 @@ import styles from './VerticalScrollSquare.module.scss';
 
 export interface CategoryItem {
   id: string;
-  name?: string;        // Add name as optional
+  name?: string;
   imageUrl: string;
   url: string;
   alt?: string;
@@ -23,6 +23,35 @@ interface VerticalScrollSquareProps {
   showArrows?: boolean;
   onCategoryClick?: (category: CategoryItem) => void;
   className?: string;
+  imageWidth?: string | number;
+  imageHeight?: string | number;
+  imageWidthResponsive?: {
+    sm?: string | number;
+    md?: string | number;
+    lg?: string | number;
+    xl?: string | number;
+    '2xl'?: string | number;
+  };
+  imageHeightResponsive?: {
+    sm?: string | number;
+    md?: string | number;
+    lg?: string | number;
+    xl?: string | number;
+    '2xl'?: string | number;
+  };
+  imageFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  itemPadding?: string | number;
+  gap?: string | number;
+  gapResponsive?: {
+    sm?: string | number;
+    md?: string | number;
+    lg?: string | number;
+    xl?: string | number;
+  };
+  backgroundColor?: string;
+  titleColor?: string;
+  showNames?: boolean;
+  nameColor?: string;
 }
 
 const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
@@ -33,6 +62,18 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
   showArrows = true,
   onCategoryClick,
   className = '',
+  imageWidth,
+  imageHeight,
+  imageWidthResponsive,
+  imageHeightResponsive,
+  imageFit = 'cover',
+  itemPadding,
+  gap,
+  gapResponsive,
+  backgroundColor,
+  titleColor,
+  showNames = false,
+  nameColor,
 }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
@@ -55,14 +96,12 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Get items per row based on screen size
   const getItemsPerRow = () => {
     if (isMobile) return 2;
     if (isTablet) return 4;
     return itemsPerView || 6;
   };
 
-  // Calculate total pages and slide step
   useEffect(() => {
     const itemsPerRow = getItemsPerRow();
     const totalItemsPerPage = itemsPerRow * rows;
@@ -72,22 +111,17 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
       setTotalPages(1);
       setSlideStep(0);
     } else {
-      // Calculate how many pages we need
       const pages = Math.ceil(totalItems / totalItemsPerPage);
       setTotalPages(pages);
-      
-      // Calculate the step to evenly distribute items
       const step = Math.ceil((totalItems - totalItemsPerPage) / (pages - 1));
       setSlideStep(step);
     }
     
-    // Reset to first page if current page is out of bounds
     if (currentPage >= totalPages && totalPages > 0) {
       setCurrentPage(0);
     }
   }, [categories, isMobile, isTablet, itemsPerView, rows, currentPage]);
 
-  // Get items for the current page with calculated step
   const getCurrentPageItems = (): CategoryItem[] => {
     const itemsPerRow = getItemsPerRow();
     const totalItemsPerPage = itemsPerRow * rows;
@@ -97,7 +131,6 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
       return categories.slice(0, totalItems);
     }
     
-    // Calculate start position with even distribution
     const maxStart = totalItems - totalItemsPerPage;
     const start = Math.min(currentPage * slideStep, maxStart);
     const end = Math.min(start + totalItemsPerPage, totalItems);
@@ -105,20 +138,15 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
     return categories.slice(start, end);
   };
 
-  // Create rows with zigzag pattern
   const getVisibleRows = (): CategoryItem[][] => {
     const itemsPerRow = getItemsPerRow();
     const currentItems = getCurrentPageItems();
     const rows_data: CategoryItem[][] = [];
     
-    // Always create exactly 2 rows
     for (let i = 0; i < rows; i++) {
       rows_data.push([]);
     }
     
-    // Distribute items in zigzag pattern:
-    // Row 0: items at even indices (0, 2, 4, 6, ...)
-    // Row 1: items at odd indices (1, 3, 5, 7, ...)
     currentItems.forEach((item, index) => {
       const rowIndex = index % rows;
       if (rowIndex < rows_data.length) {
@@ -126,7 +154,6 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
       }
     });
     
-    // Fill remaining slots with placeholders (empty)
     for (let i = 0; i < rows; i++) {
       while (rows_data[i].length < itemsPerRow) {
         rows_data[i].push({} as CategoryItem);
@@ -167,7 +194,6 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
     }
   };
 
-  // Touch event handlers for mobile swipe
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.touches[0].clientX);
   };
@@ -189,9 +215,107 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
     }
   };
 
+  const toCssValue = (value: string | number | undefined): string | undefined => {
+    if (value === undefined) return undefined;
+    return typeof value === 'number' ? `${value}px` : value;
+  };
+
+  // Get image style
+  const getImageStyle = (): React.CSSProperties => {
+    const style: React.CSSProperties = {};
+    
+    if (imageWidth !== undefined) {
+      style.width = typeof imageWidth === 'number' ? `${imageWidth}px` : imageWidth;
+    }
+    
+    if (imageHeight !== undefined) {
+      style.height = typeof imageHeight === 'number' ? `${imageHeight}px` : imageHeight;
+    }
+    
+    if (imageFit) {
+      style.objectFit = imageFit;
+    }
+    
+    return style;
+  };
+
+  // Build responsive CSS variables - using React.CSSProperties with proper typing
+  const getImageVariables = (): React.CSSProperties & Record<string, string> => {
+    const vars: Record<string, string> = {};
+    
+    if (imageWidthResponsive) {
+      Object.entries(imageWidthResponsive).forEach(([breakpoint, value]) => {
+        if (value !== undefined) {
+          const cssVar = `--image-width-${breakpoint}`;
+          vars[cssVar] = typeof value === 'number' ? `${value}px` : value;
+        }
+      });
+    }
+    
+    if (imageHeightResponsive) {
+      Object.entries(imageHeightResponsive).forEach(([breakpoint, value]) => {
+        if (value !== undefined) {
+          const cssVar = `--image-height-${breakpoint}`;
+          vars[cssVar] = typeof value === 'number' ? `${value}px` : value;
+        }
+      });
+    }
+    
+    return vars;
+  };
+
+  // Get gap style
+  const getGapStyle = (): React.CSSProperties => {
+    const style: React.CSSProperties = {};
+    
+    if (gap !== undefined) {
+      style.gap = typeof gap === 'number' ? `${gap}px` : gap;
+    }
+    
+    return style;
+  };
+
+  // Get responsive gap variables
+  const getGapVariables = (): React.CSSProperties & Record<string, string> => {
+    const vars: Record<string, string> = {};
+    
+    if (gapResponsive) {
+      Object.entries(gapResponsive).forEach(([breakpoint, value]) => {
+        if (value !== undefined) {
+          const cssVar = `--gap-${breakpoint}`;
+          vars[cssVar] = typeof value === 'number' ? `${value}px` : value;
+        }
+      });
+    }
+    
+    return vars;
+  };
+
+  // Get item padding style
+  const getItemPaddingStyle = (): React.CSSProperties => {
+    if (itemPadding === undefined) return {};
+    return {
+      padding: typeof itemPadding === 'number' ? `${itemPadding}px` : itemPadding
+    };
+  };
+
   const itemsPerRow = getItemsPerRow();
   const visibleRows = getVisibleRows();
   const hasMultiplePages = totalPages > 1;
+  const imageVariables = getImageVariables();
+  const gapVariables = getGapVariables();
+
+  // Container style - merge with proper types
+  const containerStyle: React.CSSProperties = {
+    ...(backgroundColor && { backgroundColor }),
+    ...imageVariables as React.CSSProperties,
+    ...gapVariables as React.CSSProperties,
+  };
+
+  // Title style
+  const titleStyle: React.CSSProperties = {
+    ...(titleColor && { color: titleColor }),
+  };
 
   if (categories.length === 0) {
     return null;
@@ -201,10 +325,11 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
     <div 
       className={`${styles.verticalScrollSquare} ${className}`}
       ref={carouselRef}
+      style={containerStyle}
     >
       {/* Header */}
       <div className={styles.header}>
-        <h2 className={styles.title}>{title}</h2>
+        <h2 className={styles.title} style={titleStyle}>{title}</h2>
       </div>
 
       {/* Carousel */}
@@ -242,6 +367,7 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            style={getGapStyle()}
           >
             {visibleRows.map((row, rowIndex) => (
               <div key={rowIndex} className={styles.categoryRow}>
@@ -269,19 +395,28 @@ const VerticalScrollSquare: React.FC<VerticalScrollSquareProps> = ({
                           handleCategoryClick(category);
                         }
                       }}
+                      style={getItemPaddingStyle()}
                     >
                       <div className={styles.categoryImageWrapper}>
                         <img
                           src={category.imageUrl}
                           alt={category.alt || category.name || category.imageUrl}
                           className={styles.categoryImage}
+                          style={getImageStyle()}
                           loading="lazy"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = '/products/placeholder.jpg';
                           }}
                         />
                       </div>
-                      {/* <span className={styles.categoryName}>{category.name}</span> */}
+                      {showNames && category.name && (
+                        <span 
+                          className={styles.categoryName}
+                          style={{ color: nameColor }}
+                        >
+                          {category.name}
+                        </span>
+                      )}
                     </div>
                   );
                 })}

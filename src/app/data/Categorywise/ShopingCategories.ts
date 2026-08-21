@@ -16,6 +16,12 @@ export const ShopingCategories = [
     url: "/electronics",
   },
   {
+    id: "home_kitchen",
+    name: "Home & Kitchen",
+    imageUrl: "/products/home_kitchen3.png",
+    url: "/home_kitchen",
+  },
+  {
     id: "home_decor",
     name: "Home Decor",
     imageUrl: "/products/homeDecor.png",
@@ -108,6 +114,7 @@ export const ShopingCategories = [
 export const shoppingCategoriesSubHeader: SubHeaderItem[] = [
   { name: "All", url: "/", category: "all" },
   { name: "Electronics", id: "electronics_sub_header", url: "/electronics", category: "electronics" },
+  { name: "Home & Kitchen", id: "home_kitchen_sub_header", url: "/home_kitchen", category: "home_kitchen" },
   { name: "Home Decor", id: "home_decor_sub_header", url: "/home_decor", category: "home_decor" },
   { name: "Home Furniture", id: "home_furniture_sub_header", url: "/home_furniture", category: "home_furniture" },
   { name: "Mobiles & Tablets", id: "mobiles_tablets_sub_header", url: "/mobiles_tablets", category: "mobiles_tablets" },
@@ -7428,15 +7435,6 @@ export const instaFindsAppliances = [
   }
 ];
 
-
-
-
-
-
-
-
-
-
 export const mobilesTabletsCarouselCategories = [
   // Smartphone Brands
   {
@@ -8265,6 +8263,581 @@ export const dealsOnExchangeMobilesTabletsItems = [
     subtitle: 'Pantone Shadow, 256 GB',
     imageUrl: '/products/n7p4r6t9x2w5v8k31.png',
     url: '/'
+  }
+];
+
+export const homeKitchenCarouselCategories = [
+  {
+    id: '1',
+    name: "Monsoon",
+    imageUrl: "/products/monsoon.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "monsoon"
+  },
+  {
+    id: '2',
+    name: "Cookware",
+    imageUrl: "/products/cookware.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "cookware"
+  },
+  {
+    id: '3',
+    name: "Lighting",
+    imageUrl: "/products/lighting.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "lighting"
+  },
+  {
+    id: '4',
+    name: "Containers",
+    imageUrl: "/products/containers.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "containers"
+  },
+  {
+    id: '5',
+    name: "Drinkware",
+    imageUrl: "/products/drinkware.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "drinkware"
+  },
+  {
+    id: '6',
+    name: "Mirrors",
+    imageUrl: "/products/mirrors.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "mirrors"
+  },
+  {
+    id: '7',
+    name: "Cleaning",
+    imageUrl: "/products/cleaning.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "cleaning"
+  },
+  {
+    id: '8',
+    name: "Furnishing",
+    imageUrl: "/products/furnishing.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "furnishing"
+  },
+  {
+    id: '9',
+    name: "Utilities",
+    imageUrl: "/products/utilities.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "utilities"
+  },
+  {
+    id: '10',
+    name: "Mattress",
+    imageUrl: "/products/mattress.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "mattress"
+  },
+  {
+    id: '11',
+    name: "Beds",
+    imageUrl: "/products/beds.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "beds"
+  },
+  {
+    id: '12',
+    name: "Gardening",
+    imageUrl: "/products/gardening.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "gardening"
+  },
+  {
+    id: '13',
+    name: "Bath linen",
+    imageUrl: "/products/bath-linen.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "bath-linen"
+  },
+  {
+    id: '14',
+    name: "Locks",
+    imageUrl: "/products/locks.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "locks"
+  },
+  {
+    id: '15',
+    name: "Rakhi",
+    imageUrl: "/products/rakhi.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "rakhi"
+  },
+  {
+    id: '16',
+    name: "Decor",
+    imageUrl: "/products/decor.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "decor"
+  },
+  {
+    id: '17',
+    name: "Mosquito nets",
+    imageUrl: "/products/mosquito-nets.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "mosquito-nets"
+  },
+  {
+    id: '18',
+    name: "Bedsheets",
+    imageUrl: "/products/bedsheets.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "bedsheets"
+  },
+  {
+    id: '19',
+    name: "Pooja needs",
+    imageUrl: "/products/pooja-needs.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "pooja-needs"
+  },
+  {
+    id: '20',
+    name: "Dining",
+    imageUrl: "/products/dining.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "dining"
+  },
+  {
+    id: '21',
+    name: "Wallpaper",
+    imageUrl: "/products/wallpaper.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "wallpaper"
+  },
+  {
+    id: '22',
+    name: "Electrical",
+    imageUrl: "/products/electrical.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "electrical"
+  },
+  {
+    id: '23',
+    name: "Hardware",
+    imageUrl: "/products/hardware.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "hardware"
+  },
+  {
+    id: '24',
+    name: "Covers",
+    imageUrl: "/products/covers.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "covers"
+  },
+  {
+    id: '25',
+    name: "Sofas",
+    imageUrl: "/products/sofas.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "sofas"
+  },
+  {
+    id: '26',
+    name: "Mats & rugs",
+    imageUrl: "/products/mats-rugs.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "mats-rugs"
+  },
+  {
+    id: '27',
+    name: "Bathroom",
+    imageUrl: "/products/bathroom.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "bathroom"
+  },
+  {
+    id: '28',
+    name: "Comforters",
+    imageUrl: "/products/comforters.jpg",
+    url: "/",
+    category: "home-kitchen",
+    subCategory: "comforters"
+  }
+];
+
+export const slidesHomeKitchen: BannerItemContent[] = [
+  {
+    id: '1',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_1.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_2.png',
+    align: 'left'
+  },
+  {
+    id: '3',
+   title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_3.png',
+    align: 'left'
+  },
+  {
+    id: '4',
+   title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_4.png',
+    align: 'left'
+  },
+  {
+    id: '5',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_5.png',
+    align: 'left'
+  },
+  {
+    id: '6',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_6.png',
+    align: 'left'
+  },
+  {
+    id: '7',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_7.png',
+    align: 'left'
+  },
+  {
+    id: '8',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_8.png',
+    align: 'left'
+  },
+  {
+    id: '9',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/HomeKitchen_9.png',
+    align: 'left'
+  },
+];
+
+export const grabOrGoneHomeKitchenItems = [
+  {
+    id: '1',
+    title: 'Sofa & Chair Covers',
+    subtitle: 'HOKiPO',
+    imageUrl: '/products/sofa-chair-covers.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Wardrobes',
+    subtitle: 'Nilkamal',
+    imageUrl: '/products/wardrobes.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Wall Clocks',
+    subtitle: 'AJANTA',
+    imageUrl: '/products/wall-clocks.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Bedsheets',
+    subtitle: 'Raymond Home',
+    imageUrl: '/products/bedsheets-raymond.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Bathroom Fittings',
+    subtitle: 'Hindware',
+    imageUrl: '/products/bathroom-fittings.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Solar Panels',
+    subtitle: '',
+    imageUrl: '/products/solar-panels.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Lighting',
+    subtitle: 'MURPHY',
+    imageUrl: '/products/lighting-murphy.jpg',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Kitchen Cookware',
+    subtitle: 'Prestige',
+    imageUrl: '/products/kitchen-prestige.jpg',
+    link: '/'
+  },
+  {
+    id: '9',
+    title: 'Kitchen Serveware',
+    subtitle: 'MILTON',
+    imageUrl: '/products/kitchen-milton.jpg',
+    link: '/'
+  },
+  {
+    id: '10',
+    title: 'Commode & Wash Basin',
+    subtitle: '',
+    imageUrl: '/products/commode-washbasin.jpg',
+    link: '/'
+  }
+];
+
+export const monsoonDealsHomeKitchenItems = [
+  {
+    id: '1',
+    title: 'Umbrellas',
+    subtitle: '',
+    imageUrl: '/products/umbrellas.jpg',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Mosquito Nets',
+    subtitle: '',
+    imageUrl: '/products/mosquito_nets.jpg',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Cloth Dryer Stands',
+    subtitle: '',
+    imageUrl: '/products/cloth-dryer-stands.jpg',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'Floor Coverings',
+    subtitle: '',
+    imageUrl: '/products/floor-coverings.jpg',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Door Stoppers',
+    subtitle: '',
+    imageUrl: '/products/door-stoppers.jpg',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Torches',
+    subtitle: '',
+    imageUrl: '/products/torches.jpg',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Emergency Lights',
+    subtitle: '',
+    imageUrl: '/products/emergency-lights.jpg',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Bath Linen',
+    subtitle: '',
+    imageUrl: '/products/bath_linen.jpg',
+    link: '/'
+  },
+  {
+    id: '9',
+    title: 'Mosquito Killers',
+    subtitle: '',
+    imageUrl: '/products/mosquito-killers.jpg',
+    link: '/'
+  },
+  {
+    id: '10',
+    title: 'Flasks',
+    subtitle: '',
+    imageUrl: '/products/flasks.jpg',
+    link: '/'
+  },
+  {
+    id: '11',
+    title: 'Dinner Sets',
+    subtitle: '',
+    imageUrl: '/products/dinner-sets.jpg',
+    link: '/'
+  },
+  {
+    id: '12',
+    title: 'Cookware Range',
+    subtitle: '',
+    imageUrl: '/products/cookware-range.jpg',
+    link: '/'
+  }
+];
+
+export const favoriteStoresHomeKitchenItems = [
+  {
+    id: '1',
+    title: 'Budget Store',
+    subtitle: '',
+    imageUrl: '/products/budget-store.gif',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Customers Most Loved',
+    subtitle: '',
+    imageUrl: '/products/customers-most-loved.gif',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Bestseller Store',
+    subtitle: '',
+    imageUrl: '/products/bestseller-store.gif',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'New Launches',
+    subtitle: '',
+    imageUrl: '/products/new-launches.gif',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Clearance Store',
+    subtitle: '',
+    imageUrl: '/products/clearance-store.gif',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Redesign Your Home',
+    subtitle: '',
+    imageUrl: '/products/redesign-your-home.gif',
+    link: '/'
+  },
+  {
+    id: '7',
+    title: 'Everything Store',
+    subtitle: '',
+    imageUrl: '/products/everything-store.gif',
+    link: '/'
+  },
+  {
+    id: '8',
+    title: 'Restock & Replenish',
+    subtitle: '',
+    imageUrl: '/products/restock-replenish.gif',
+    link: '/'
+  }
+];
+
+export const discoverTrendingBrandsHomeKitchenItems = [
+  {
+    id: '1',
+    title: 'Wipro',
+    subtitle: 'Home',
+    imageUrl: '/products/wipro.png',
+    link: '/'
+  },
+  {
+    id: '2',
+    title: 'Alton',
+    subtitle: 'Home Improvement',
+    imageUrl: '/products/alton.png',
+    link: '/'
+  },
+  {
+    id: '3',
+    title: 'Boldfit',
+    subtitle: 'Sports',
+    imageUrl: '/products/boldfit.png',
+    link: '/'
+  },
+  {
+    id: '4',
+    title: 'BSB Home',
+    subtitle: 'Home',
+    imageUrl: '/products/bsb-home.png',
+    link: '/'
+  },
+  {
+    id: '5',
+    title: 'Kohler',
+    subtitle: 'Home Improvement',
+    imageUrl: '/products/kohler.png',
+    link: '/'
+  },
+  {
+    id: '6',
+    title: 'Halonix',
+    subtitle: 'Home',
+    imageUrl: '/products/halonix.png',
+    link: '/'
   }
 ];
 

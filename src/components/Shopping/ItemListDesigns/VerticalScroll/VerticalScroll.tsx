@@ -32,6 +32,11 @@ interface VerticalScrollProps {
     xl?: string | number;
   };
   imageFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  // New props for background color
+  backgroundColor?: string;
+  cardBackgroundColor?: string;
+  titleColor?: string;
+  subtitleColor?: string;
 }
 
 const VerticalScroll: React.FC<VerticalScrollProps> = ({
@@ -44,7 +49,11 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
   imageAspectRatio = '3/4.1',
   imageHeight,
   imageHeightResponsive,
-  imageFit = 'cover'
+  imageFit = 'cover',
+  backgroundColor,
+  cardBackgroundColor = '#ffffff',
+  titleColor,
+  subtitleColor
 }) => {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
@@ -98,14 +107,39 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
     return classes.join(' ');
   };
 
+  // Dynamic styles
+  const containerStyle: React.CSSProperties = {};
+  if (backgroundColor) {
+    containerStyle.backgroundColor = backgroundColor;
+  }
+
+  const cardStyle: React.CSSProperties = {};
+  if (cardBackgroundColor) {
+    cardStyle.backgroundColor = cardBackgroundColor;
+    cardStyle.borderColor = cardBackgroundColor !== '#ffffff' ? cardBackgroundColor : undefined;
+  }
+
+  const titleStyle: React.CSSProperties = {};
+  if (titleColor) {
+    titleStyle.color = titleColor;
+  }
+
+  const subtitleStyle: React.CSSProperties = {};
+  if (subtitleColor) {
+    subtitleStyle.color = subtitleColor;
+  }
+
   return (
-    <div className={`${styles.verticalScroll} ${className}`}>
+    <div 
+      className={`${styles.verticalScroll} ${className}`}
+      style={containerStyle}
+    >
       <div className={styles.header}>
         <div className={styles.headerContent}>
           <div className={styles.titleSection}>
-            <h2 className={styles.title}>{title}</h2>
+            <h2 className={styles.title} style={titleStyle}>{title}</h2>
             {subtitle && (
-              <p className={styles.subtitle}>{subtitle}</p>
+              <p className={styles.subtitle} style={subtitleStyle}>{subtitle}</p>
             )}
           </div>
           {ctaText && (
@@ -113,6 +147,10 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
               className={styles.ctaButton} 
               onClick={onCtaClick}
               aria-label={ctaText}
+              style={{
+                borderColor: titleColor || undefined,
+                color: titleColor || undefined
+              }}
             >
               {ctaText}
               <ChevronRight size={16} />
@@ -124,6 +162,10 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
             className={styles.navButton} 
             onClick={() => scroll('left')}
             aria-label="Scroll left"
+            style={{
+              borderColor: titleColor ? `${titleColor}40` : undefined,
+              color: titleColor || undefined
+            }}
           >
             <ChevronLeft size={20} />
           </button>
@@ -131,6 +173,10 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
             className={styles.navButton} 
             onClick={() => scroll('right')}
             aria-label="Scroll right"
+            style={{
+              borderColor: titleColor ? `${titleColor}40` : undefined,
+              color: titleColor || undefined
+            }}
           >
             <ChevronRight size={20} />
           </button>
@@ -140,7 +186,7 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
       <div className={styles.scrollWrapper}>
         <div className={styles.scrollContainer} ref={scrollContainerRef}>
           {items.map((item) => (
-            <div key={item.id} className={styles.card}>
+            <div key={item.id} className={styles.card} style={cardStyle}>
               <a href={item.link || '#'} className={styles.cardLink}>
                 <div 
                   className={`${styles.cardImage} ${getResponsiveImageClass()}`}
@@ -153,25 +199,7 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
                     className={styles.image}
                     style={{ objectFit: imageFit }}
                   />
-                  {/* {item.badge && (
-                    <span className={styles.badge}>{item.badge}</span>
-                  )}
-                  {item.discount && (
-                    <span className={styles.discountBadge}>{item.discount}</span>
-                  )} */}
                 </div>
-                {/* <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{item.title}</h3>
-                  {item.subtitle && (
-                    <p className={styles.cardSubtitle}>{item.subtitle}</p>
-                  )}
-                  {item.description && (
-                    <p className={styles.cardDescription}>{item.description}</p>
-                  )}
-                  <span className={styles.cardLinkText}>
-                    Shop Now <ChevronRight size={14} />
-                  </span>
-                </div> */}
               </a>
             </div>
           ))}
@@ -184,6 +212,9 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({
             key={item.id} 
             className={`${styles.dot} ${index === 0 ? styles.active : ''}`}
             aria-label={`Go to slide ${index + 1}`}
+            style={{
+              backgroundColor: index === 0 ? (titleColor || undefined) : undefined
+            }}
           />
         ))}
       </div>

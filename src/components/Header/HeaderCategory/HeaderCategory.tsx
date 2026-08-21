@@ -668,6 +668,18 @@ const HeaderCategory: React.FC = () => {
             )}
 
             {/* Home Decor Sub-Sub Categories */}
+            {isShoppingCategorySelected("home_kitchen_sub_header") && (
+              <div className={styles.electronicsSubCategory}>
+                <ShopByMainCategory
+                  category={selectedCategory}
+                  selectedItem={selectedSubHeaderItem}
+                  // Or pass the entire item with all data
+                  subHeaderItem={selectedSubHeaderItem}
+                />
+              </div>
+            )}
+
+            {/* Home Decor Sub-Sub Categories */}
             {isShoppingCategorySelected("home_decor_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
