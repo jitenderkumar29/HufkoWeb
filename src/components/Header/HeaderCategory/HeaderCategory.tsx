@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import { bankOfferShoppingSlide, categoriesDataMap, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { bankOfferShoppingSlide, categoriesData, categoriesDataCardHalfDynamic, categoriesDataMap, categoriesInternationalFlowerDeliveryData, customerTestimonialDataFlower, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfFlower, slidesHalfFlowerBouquetsForThem, slidesHalfFlowerGift, slidesHalfFlowerShopByOccasionsRelations, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -46,6 +46,9 @@ import { ArrowRight, Clock, IndianRupee, Shield, Users } from 'lucide-react';
 import VerticalScroll from '@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll';
 import ShopByMainCategory from '@/components/Shopping/ShopByItemcategory/ShopByMainCategory/ShopByMainCategory';
 import HeroBannerLeftContent from '@/components/Shopping/HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent';
+import ProductCategoryCardHalfDynamic from '@/components/Shopping/ItemListDesigns/ProductCategoryCardHalfDynamic/ProductCategoryCardHalfDynamic';
+import CustomerTestimonial from '@/components/Shopping/ItemListDesigns/CustomerTestimonial/CustomerTestimonial';
+import CategoryListCard from '@/components/Shopping/ItemListDesigns/CategoryListCard/CategoryListCard';
 
 interface CategoryItem {
   id: string;
@@ -654,7 +657,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-           
+
             {isShoppingCategorySelected("home_furniture_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
@@ -710,7 +713,7 @@ const HeaderCategory: React.FC = () => {
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-              
+
             )}
 
             {/* Home Women's Fashion Sub-Sub Categories */}
@@ -724,7 +727,7 @@ const HeaderCategory: React.FC = () => {
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-              
+
             )}
 
             {/* Home Kids' Fashion Sub-Sub Categories */}
@@ -738,7 +741,7 @@ const HeaderCategory: React.FC = () => {
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-              
+
             )}
 
             {/* Home Kids' Fashion Sub-Sub Categories */}
@@ -752,10 +755,10 @@ const HeaderCategory: React.FC = () => {
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-              
+
             )}
 
-             {isShoppingCategorySelected("sports_fitness_sub_header") && (
+            {isShoppingCategorySelected("sports_fitness_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -766,7 +769,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-             {isShoppingCategorySelected("baby_toys_sub_header") && (
+            {isShoppingCategorySelected("baby_toys_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -777,7 +780,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-             {isShoppingCategorySelected("books_sub_header") && (
+            {isShoppingCategorySelected("books_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -788,7 +791,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-             {isShoppingCategorySelected("auto_accessories_sub_header") && (
+            {isShoppingCategorySelected("auto_accessories_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -799,7 +802,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-             {isShoppingCategorySelected("jewellery_sub_header") && (
+            {isShoppingCategorySelected("jewellery_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -810,7 +813,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-             {isShoppingCategorySelected("appliances_sub_header") && (
+            {isShoppingCategorySelected("appliances_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -821,7 +824,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
-             {isShoppingCategorySelected("mobiles_tablets_sub_header") && (
+            {isShoppingCategorySelected("mobiles_tablets_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
@@ -846,6 +849,117 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={FlowerHeroBannerData} />
             <AllCategory categories={FlowersCategories} />
+            <WelcomeVideoHufko
+              title=""
+              titleHighlight=""
+              subtitle=""
+              // title="Premium Care Services app"
+              // titleHighlight="World's #1"
+              // subtitle="Enjoy fast online Care Services on the Hufko app"
+              videoSrc="/videos/flower.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+              showLogo={false}
+              showAppStore={false}
+              showPlayStore={false}
+              muted={true}
+            />
+            <HeroBannerHalfSlide
+              banners={slidesHalfFlower}
+              itemsPerView={{
+                mobile: 1,
+                tablet: 2,
+                laptop: 3,
+                desktop: 4.5
+              }}
+              autoScrollInterval={10000}
+              showArrows={true}
+              height={250}
+              backgroundColor="#f5f5f5"
+              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+            />
+            <div className={styles.headingContent}>
+              <h2 className={styles.heading}>Shop By Occasions & Relations
+                <br />
+                <p className={styles.subHeading}>Surprise Your Loved Ones</p>
+              </h2>
+            </div>
+            <HeroBannerHalfSlide
+              banners={slidesHalfFlowerShopByOccasionsRelations}
+              itemsPerView={{
+                mobile: 1,
+                tablet: 2,
+                laptop: 3,
+                desktop: 4
+              }}
+              autoScrollInterval={10000}
+              showArrows={true}
+              height={400}
+              backgroundColor="#f5f5f5"
+              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+            />
+            <ProductCategoryCardHalfDynamic
+              categories={categoriesDataCardHalfDynamic}
+              backgroundColor="#E7EDEF"
+              onLinkClick={(link, category) => {
+                console.log('Link clicked:', link.title, 'from', category.title);
+              }}
+            />
+            <div className={styles.headingContent}>
+              <h2 className={styles.heading}>Bouquets For Them
+                <br />
+                <p className={styles.subHeading}>Order flower baskets and more online</p>
+              </h2>
+            </div>
+            <HeroBannerHalfSlide
+              banners={slidesHalfFlowerBouquetsForThem}
+              itemsPerView={{
+                mobile: 1,
+                tablet: 2,
+                laptop: 3,
+                desktop: 2
+              }}
+              autoScrollInterval={10000}
+              showArrows={true}
+              height={370}
+              backgroundColor="#f5f5f5"
+              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+            />
+            <HeroBannerHalfSlide
+              banners={slidesHalfFlowerGift}
+              itemsPerView={{
+                mobile: 1,
+                tablet: 2,
+                laptop: 3,
+                desktop: 1.6
+              }}
+              autoScrollInterval={10000}
+              showArrows={true}
+              height={370}
+              backgroundColor="#f5f5f5"
+              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+            />
+            <CategoryListCard
+              categories={categoriesInternationalFlowerDeliveryData}
+              title="International Flower Delivery"
+              itemsPerView={{
+                mobile: 2,
+                tablet: 3,
+                desktop: 5  // This ensures all items show on desktop
+              }}
+              subTitle="Deliver fresh flowers worldwide"
+              rows={1}  // Single row
+              cardHeight={200}
+              imageWidth={170}
+              imageHeight={170}
+              backgroundColor="#f5f5f5"
+              viewAllText="View All"
+              viewAllUrl="/international"
+              onCategoryClick={(category) => console.log('Category clicked:', category.title)}
+              onViewAllClick={() => console.log('View all clicked')}
+            />
             <FranchiseHufko
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
@@ -881,6 +995,15 @@ const HeaderCategory: React.FC = () => {
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
             </FranchiseHufko>
+            <CustomerTestimonial
+              testimonials={customerTestimonialDataFlower}
+              title="Customer Testimonial"
+              viewAllText="View All"
+              viewAllUrl="/reviews"
+              backgroundColor="#f5f5f5"
+              onViewAllClick={() => console.log('View all clicked')}
+            />
+
           </div>
         )}
 

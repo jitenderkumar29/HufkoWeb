@@ -281,8 +281,8 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             banners={slidesHomeKitchen}
                             defaultAlign="left"
                         />
-                        <BankOfferSlide
-                            slides={bankOfferMobileSlide}
+                         <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
                             autoPlay={true}
                             autoPlayInterval={5000}
                             showArrows={true}

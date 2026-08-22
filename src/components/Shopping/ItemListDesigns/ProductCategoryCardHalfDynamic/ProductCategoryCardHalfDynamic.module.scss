@@ -1,0 +1,346 @@
+@use "../../../../styles/variables.scss" as *;
+
+.productCategoryCard {
+    width: 100%;
+    padding: 24px 0;
+    background: transparent;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        sans-serif;
+    padding: 0 1.5rem;
+}
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.categoryGrid {
+    width: 100%;
+    //   max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+
+    background: var(--category-bg, #e7edef);
+    border-radius: 20px;
+}
+
+/* =========================================================
+   CATEGORY CARD
+   ========================================================= */
+
+.categoryItem {
+    position: relative;
+
+    min-height: 282px;
+    height: 282px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #c7c7c7;
+    border-radius: 18px;
+
+    box-shadow: none;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* =========================================================
+   IMAGE POSITION
+   ========================================================= */
+
+.imageLeft {
+    flex-direction: row;
+}
+
+.imageRight {
+    flex-direction: row-reverse;
+}
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.categoryImageWrapper {
+    position: relative;
+
+    width: 55%;
+    height: 100%;
+
+    flex: 0 0 55%;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+.categoryImage {
+    object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.45s ease;
+}
+
+/* Very subtle hover effect */
+
+.categoryItem:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.categoryItem:hover .categoryImage {
+    // transform: scale(1.025);
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.categoryContent {
+    width: 45%;
+    flex: 0 0 45%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 28px 28px 28px 30px;
+
+    background: #ffffff;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.categoryTitle {
+    margin: 0 0 15px;
+
+    color: #101828;
+
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 700;
+
+    letter-spacing: -0.25px;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.categoryLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.categoryLink {
+    display: block;
+
+    padding: 0;
+
+    color: #666666;
+
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.categoryLink:hover {
+    color: $link-hover;
+    // transform: translateX(2px);
+}
+
+/*
+ * Optional highlighted link.
+ * The screenshot shows "Mugs" highlighted in blue.
+ * This can be applied by adding class/data logic later.
+ */
+.categoryLink[data-highlight="true"] {
+    color: $link-hover;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .categoryGrid {
+        padding: 28px;
+        gap: 18px;
+    }
+
+    .categoryItem {
+        min-height: 245px;
+        height: 245px;
+    }
+
+    .categoryContent {
+        padding: 24px;
+    }
+
+    .categoryTitle {
+        font-size: 18px;
+        margin-bottom: 13px;
+    }
+
+    .categoryLinks {
+        gap: 10px;
+    }
+
+    .categoryLink {
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+    .categoryGrid {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .categoryItem {
+        min-height: 220px;
+        height: 220px;
+    }
+
+    .categoryContent {
+        padding: 20px;
+    }
+
+    .categoryTitle {
+        font-size: 17px;
+    }
+
+    .categoryLink {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+    .productCategoryCard {
+        padding: 12px 0;
+    }
+
+    .categoryGrid {
+        grid-template-columns: 1fr;
+
+        padding: 14px;
+
+        gap: 14px;
+
+        border-radius: 16px;
+    }
+
+    .categoryItem,
+    .imageLeft,
+    .imageRight {
+        flex-direction: column;
+
+        height: auto;
+        min-height: 0;
+
+        border-radius: 14px;
+    }
+
+    .categoryImageWrapper {
+        width: 100%;
+        height: auto;
+
+        flex: none;
+
+        aspect-ratio: 1.75 / 1;
+    }
+
+    .categoryContent {
+        width: 100%;
+        flex: none;
+
+        padding: 18px 18px 20px;
+    }
+
+    .categoryTitle {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .categoryLinks {
+        gap: 9px;
+    }
+
+    .categoryLink {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+    .categoryGrid {
+        padding: 10px;
+        gap: 12px;
+        border-radius: 14px;
+    }
+
+    .categoryItem {
+        border-radius: 12px;
+    }
+
+    .categoryImageWrapper {
+        aspect-ratio: 1.7 / 1;
+    }
+
+    .categoryContent {
+        padding: 15px 16px 17px;
+    }
+
+    .categoryTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .categoryLinks {
+        gap: 8px;
+    }
+
+    .categoryLink {
+        font-size: 13px;
+    }
+}

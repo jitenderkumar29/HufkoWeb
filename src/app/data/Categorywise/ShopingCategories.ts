@@ -7,6 +7,7 @@ import { HeroSlide } from "@/components/Shopping/HeroBanner/HeroBannerSlide/Hero
 import { BrandItem } from "@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer";
 import { ScrollItem } from "@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll";
 import { CategoryItem } from "@/components/Shopping/ShopByItemcategory/ShopByCategory/ShopByCategory";
+import { Cake, Gift, Flower2, Leaf, Sparkles } from 'lucide-react';
 
 export const ShopingCategories = [
   {
@@ -7708,7 +7709,7 @@ export const slidesMobilesTablets: BannerItemContent[] = [
     subtitle: '',
     category: '',
     discount: '',
-    imgUrl: '/products/1_MobilesTablets._CB773853331_1.png',
+    imgUrl: '/products/1_MobilesTablets._CB773853331_3.png',
     align: 'left'
   },
   {
@@ -7717,7 +7718,7 @@ export const slidesMobilesTablets: BannerItemContent[] = [
     subtitle: '',
     category: '',
     discount: '',
-    imgUrl: '/products/2_MobilesTablets._CB773853331_1.png',
+    imgUrl: '/products/2_MobilesTablets._CB773853331_2.png',
     align: 'left'
   },
   {
@@ -7726,7 +7727,7 @@ export const slidesMobilesTablets: BannerItemContent[] = [
     subtitle: '',
     category: '',
     discount: '',
-    imgUrl: '/products/3_MobilesTablets._CB773853331_1.png',
+    imgUrl: '/products/3_MobilesTablets._CB773853331_2.png',
     align: 'left'
   },
   {
@@ -7735,36 +7736,36 @@ export const slidesMobilesTablets: BannerItemContent[] = [
     subtitle: '',
     category: '',
     discount: '',
-    imgUrl: '/products/4_MobilesTablets._CB773853331_1.png',
+    imgUrl: '/products/4_MobilesTablets._CB773853331_2.png',
     align: 'left'
   },
-  {
-    id: '5',
-     title: '',
-    subtitle: '',
-    category: '',
-    discount: '',
-    imgUrl: '/products/5_MobilesTablets._CB773853331_1.png',
-    align: 'left'
-  },
+  // {
+  //   id: '5',
+  //    title: '',
+  //   subtitle: '',
+  //   category: '',
+  //   discount: '',
+  //   imgUrl: '/products/5_MobilesTablets._CB773853331_3.png',
+  //   align: 'left'
+  // },
   {
     id: '6',
      title: '',
     subtitle: '',
     category: '',
     discount: '',
-    imgUrl: '/products/6_MobilesTablets._CB773853331_1.png',
+    imgUrl: '/products/6_MobilesTablets._CB773853331_2.png',
     align: 'left'
   },
-  {
-    id: '7',
-     title: '',
-    subtitle: '',
-    category: '',
-    discount: '',
-    imgUrl: '/products/7_MobilesTablets._CB773853331_1.png',
-    align: 'left'
-  }
+  // {
+  //   id: '7',
+  //    title: '',
+  //   subtitle: '',
+  //   category: '',
+  //   discount: '',
+  //   imgUrl: '/products/7_MobilesTablets._CB773853331_2.png',
+  //   align: 'left'
+  // }
 ];
 
 export const newLauncheslidesHalfMobilesTablets: BannerItem[] = [
@@ -8841,4 +8842,352 @@ export const discoverTrendingBrandsHomeKitchenItems = [
   }
 ];
 
+export const slidesHalfFlower: BannerItem[] = [
+  {
+    id: '0',
+    title: '',
+    imageUrl: '/products/birthday.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View birthday international',
+    badge: ''
+  },
+  {
+    id: '1',
+    title: '',
+    imageUrl: '/products/anniversary.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View anniversary',
+    badge: ''
+  },
+  {
+    id: '2',
+    title: '',
+    imageUrl: '/products/congratulations.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View congratulations',
+    badge: ''
+  },
+  {
+    id: '3',
+    title: '',
+    imageUrl: '/products/thank-you.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View thank you',
+    badge: ''
+  },
+  {
+    id: '4',
+    title: '',
+    imageUrl: '/products/baby-shower.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View baby shower',
+    badge: ''
+  },
+  {
+    id: '5',
+    title: '',
+    imageUrl: '/products/house-warming.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View house warming',
+    badge: ''
+  },
+  {
+    id: '6',
+    title: '',
+    imageUrl: '/products/retirement.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View retirement',
+    badge: ''
+  },
+  {
+    id: '7',
+    title: '',
+    imageUrl: '/products/rakhi-international.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'View rakhi international',
+    badge: ''
+  },
+  
+];
 
+export const slidesHalfFlowerShopByOccasionsRelations: BannerItem[] = [
+  {
+    id: '0',
+    title: 'Birthday Gifts',
+    imageUrl: '/products/birthdayGifts.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Send Birthday Gifts Through FlowerAura',
+    badge: ''
+  },
+  {
+    id: '1',
+    title: 'Anniversary Gifts',
+    imageUrl: '/products/anniversaryGifts.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Send Anniversary Gifts in India',
+    badge: ''
+  },
+  {
+    id: '2',
+    title: 'Gifts for Him',
+    imageUrl: '/products/gifts-for-himGifts.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Online Gift for Him',
+    badge: ''
+  },
+  {
+    id: '3',
+    title: 'Gifts for Her',
+    imageUrl: '/products/gifts-for-herGifts.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Send Gifts for Her Through FlowerAura',
+    badge: ''
+  }
+];
+
+export const categoriesDataCardHalfDynamic = [
+  {
+    id: '1',
+    title: 'Delicious Cakes',
+    imageUrl: '/products/DeliciousCakes.jpg',
+    alt: 'Delicious Cakes',
+    links: [
+      { title: 'Birthday Cakes', url: '/birthday/cakes' },
+      { title: 'Anniversary Cakes', url: '/anniversary/cakes' },
+      { title: 'Designer Cakes', url: '/cakes/designer' },
+      { title: 'Photo Cakes', url: '/cakes/photo' },
+      { title: 'Chocolate Cakes', url: '/cakes/chocolate' },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Gifting Gallery',
+    imageUrl: '/products/GiftingGallery.jpg',
+    alt: 'Gifting Gallery',
+    links: [
+      { title: 'Photo Gifts', url: '/gifts/photo-gifts' },
+      { title: 'Mugs', url: '/gifts/mugs' },
+      { title: 'Cushions', url: '/gifts/cushions' },
+      { title: 'Name Gifts', url: '/personalised-gifts/name-gifts' },
+      { title: 'Caricatures', url: '/personalised-gifts/caricatures' },
+    ],
+  },
+  {
+    id: '3',
+    title: 'Floral Delights',
+    imageUrl: '/products/FloralDelights.jpg',
+    alt: 'Floral Delights',
+    links: [
+      { title: 'Red Roses', url: '/flowers/roses' },
+      { title: 'Birthday Flowers', url: '/birthday/flowers' },
+      { title: 'Anniversary Flowers', url: '/anniversary/flowers' },
+      { title: 'Exotic Flowers', url: '/flowers/exotic' },
+      { title: 'Flower Boxes', url: '/flowers/in-box' },
+    ],
+  },
+  {
+    id: '4',
+    title: 'Plant Paradise',
+    imageUrl: '/products/PlantParadise.jpg',
+    alt: 'Plant Paradise',
+    links: [
+      { title: 'Bonsai', url: '/plants/bonsai' },
+      { title: 'Indoor', url: '/plants/indoor' },
+      { title: 'Air Purifying', url: '/plants/air-purifying' },
+      { title: 'Lucky Bamboo', url: '/plants/lucky-bamboo' },
+      { title: 'Flowering', url: '/plants/flowering' },
+    ],
+  },
+];
+
+export const customerTestimonialDataFlower = [
+  {
+    id: '1',
+    name: 'Vr Kiran',
+    rating: 5,
+    comment: 'My sister loved it. And they helped me shift the delivery date a day before. Great experience',
+    date: '19/07/2026',
+    isVerified: true,
+  },
+  {
+    id: '2',
+    name: 'pgdavid75',
+    rating: 5,
+    comment: 'The recipient was very happy to receive the flowers and said it was fresh and beautiful. thank you flower aura.',
+    date: '18/07/2026',
+    isVerified: true,
+  },
+  {
+    id: '3',
+    name: 'aishasithika21',
+    rating: 5,
+    comment: 'Ive been ordering from flower aura for past few months now, it became a constant to go choice. Always the fresh flowers and the way you guys design it is sooo prefect. And mainly Price is very fair not very expensive...',
+    date: '13/07/2026',
+    isVerified: true,
+  },
+  // ... more testimonials
+];
+
+export const slidesHalfFlowerGift: BannerItem[] = [
+ 
+  {
+    id: '1',
+    title: 'Flowers',
+    imageUrl: '/products/flowersGift.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Flowers',
+    badge: ''
+  },
+  {
+    id: '2',
+    title: 'Birthday',
+    imageUrl: '/products/birthdayGift.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Birthday',
+    badge: ''
+  },
+  {
+    id: '3',
+    title: 'Anniversary',
+    imageUrl: '/products/anniversaryGift.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Anniversary',
+    badge: ''
+  },
+  {
+    id: '4',
+    title: 'Corporate Gifts',
+    imageUrl: '/products/corporate-giftsGift.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Corporate Gifts',
+    badge: ''
+  }
+];
+
+export const slidesHalfFlowerBouquetsForThem: BannerItem[] = [
+  {
+    id: '0',
+    title: '',
+    imageUrl: '/products/flowers-for-her.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Flowers for Her',
+    badge: ''
+  },
+  {
+    id: '1',
+    title: '',
+    imageUrl: '/products/flowers-for-him.png',
+    url: '/',
+    discount: '',
+    discount2: '',
+    alt: 'Flowers for Him',
+    badge: ''
+  }
+];
+
+export const categoriesInternationalFlowerDeliveryData = [
+  {
+    id: '1',
+    title: 'India',
+    imageUrl: '/products/indiaFlowerDelivery.png',
+    alt: 'India',
+    url: '/all-flowers'
+  },
+  {
+    id: '2',
+    title: 'United States',
+    imageUrl: '/products/united-statesFlowerDelivery.png',
+    alt: 'Send Flowers to USA',
+    url: '/usa/flowers'
+  },
+  {
+    id: '3',
+    title: 'UAE',
+    imageUrl: '/products/uaeFlowerDelivery.png',
+    alt: 'UAE',
+    url: '/uae/flowers'
+  },
+  {
+    id: '4',
+    title: 'UK',
+    imageUrl: '/products/ukFlowerDelivery.png',
+    alt: 'Send Flowers to UK',
+    url: '/uk/flowers'
+  },
+  {
+    id: '5',
+    title: 'Canada',
+    imageUrl: '/products/canadaFlowerDelivery.png',
+    alt: 'Send Flowers to Canada',
+    url: '/canada/flowers'
+  },
+  {
+    id: '6',
+    title: 'Australia',
+    imageUrl: '/products/australiaFlowerDelivery.png',
+    alt: 'Send Flower to Australia',
+    url: '/australia/flowers'
+  },
+  {
+    id: '7',
+    title: 'Singapore',
+    imageUrl: '/products/singaporeFlowerDelivery.png',
+    alt: 'Flower Delivery Singapore',
+    url: '/singapore/flowers'
+  },
+  {
+    id: '8',
+    title: 'Germany',
+    imageUrl: '/products/germanyFlowerDelivery.png',
+    alt: 'Send Flowers To Germany',
+    url: '/germany/flowers'
+  },
+  {
+    id: '9',
+    title: 'New Zealand',
+    imageUrl: '/products/new-zealandFlowerDelivery.png',
+    alt: 'New Zealand',
+    url: '/new-zealand/flowers'
+  },
+  {
+    id: '10',
+    title: 'Netherlands',
+    imageUrl: '/products/netherlandsFlowerDelivery.png',
+    alt: 'Netherlands',
+    url: '/netherlands/flowers'
+  }
+];
