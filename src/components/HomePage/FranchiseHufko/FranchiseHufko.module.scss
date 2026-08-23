@@ -1,20 +1,23 @@
+// components/HomePage/FranchiseHufko/FranchiseHufko.module.scss
+
 @import '@/styles/variables.scss';
 
 .franchiseSection {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 115vh;
   display: flex;
   align-items: center;
-  padding: 0rem 0 1.5rem 0;
+  padding: 2rem 0 1.5rem 0;
   width: 100%;
 
   @media (max-width: 1024px) {
     min-height: auto;
+    padding: 2rem 0;
   }
 
   @media (max-width: 768px) {
-    padding: 1rem 0 1.5rem;
+    padding: 1.5rem 0;
   }
 }
 
@@ -84,16 +87,13 @@
 }
 
 @keyframes blobFloat {
-
   0%,
   100% {
     transform: translate(0, 0) scale(1);
   }
-
   33% {
     transform: translate(20px, -20px) scale(1.1);
   }
-
   66% {
     transform: translate(-10px, 20px) scale(0.9);
   }
@@ -107,7 +107,6 @@
 }
 
 .container {
-  // max-width: $max-width;
   padding: 0 5rem;
   margin: 0 auto;
   width: 100%;
@@ -197,19 +196,17 @@
   background: #ec2024;
   border-radius: 50%;
   animation: pulse 1.5s ease-in-out infinite;
+}
 
-  @keyframes pulse {
-
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    50% {
-      opacity: 0.5;
-      transform: scale(0.8);
-    }
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
   }
 }
 
@@ -415,8 +412,9 @@
   transition: all 0.8s ease 0.2s;
   display: flex;
   justify-content: right;
-  align-items: right;
+  align-items: center;
   margin-right: -0.5rem;
+  height: 100%;
 
   &.visible {
     opacity: 1;
@@ -425,6 +423,7 @@
 
   @media (max-width: 1024px) {
     transform: translateY(30px);
+    justify-content: center;
 
     &.visible {
       transform: translateY(0);
@@ -441,35 +440,51 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   max-width: 100%;
   transform: scale(0.95);
-  height: 100%;
-  // height: 350px;
+  height: auto;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1024px) {
     max-width: 90%;
     transform: scale(1);
+    max-height: 400px;
   }
 
   @media (max-width: 768px) {
     max-width: 100%;
     padding: 1rem;
     border-radius: 1rem;
+    max-height: 350px;
+  }
+
+  @media (max-width: 480px) {
+    max-height: 280px;
+    padding: 0.75rem;
   }
 }
 
 .image {
   width: 100%;
   height: 100%;
-  // height: auto;
+  max-height: 400px;
+  object-fit: contain;
   border-radius: 1rem;
-  // object-fit: cover;
 
   @media (max-width: 768px) {
     border-radius: 0.75rem;
+    max-height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-height: 220px;
   }
 }
 
 .desktopImage {
   display: block;
+  width: 100%;
+  height: 100%;
 
   @media (max-width: 768px) {
     display: none;
@@ -478,9 +493,153 @@
 
 .mobileImage {
   display: none;
+  width: 100%;
+  height: 100%;
 
   @media (max-width: 768px) {
     display: block;
+  }
+}
+
+// Swiper Container
+.swiperContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 100%;
+  max-height: 400px;
+
+  @media (max-width: 768px) {
+    max-height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-height: 220px;
+  }
+}
+
+.swiperTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  min-width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .imageFixed{
+  border-radius: 20px;
+  }
+}
+
+// Swiper Arrows
+.swiperArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+
+  &:hover {
+    background: #ffffff;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 28px;
+    
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 24px;
+    height: 24px;
+    
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.swiperArrowLeft {
+  left: 8px;
+}
+
+.swiperArrowRight {
+  right: 8px;
+}
+
+// Swiper Dots
+.swiperDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 4px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.swiperDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+  }
+
+  &Active {
+    background: #ffffff;
+    width: 28px;
+    border-radius: 5px;
+    
+    &:hover {
+      background: #ffffff;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 8px;
+    height: 8px;
+
+    &Active {
+      width: 20px;
+    }
   }
 }
 
@@ -498,6 +657,7 @@
   animation: floatBadge 3s ease-in-out infinite;
   white-space: nowrap;
   cursor: default;
+  z-index: 10;
 
   @media (max-width: 768px) {
     font-size: 0.65rem;
@@ -528,58 +688,56 @@
 }
 
 @keyframes floatBadge {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-8px);
   }
 }
 
 .badgeTopRight {
-  top: -12px;
-  right: -12px;
+  top: -8px;
+  right: -8px;
   animation-delay: 0s;
 
   @media (max-width: 768px) {
-    top: -8px;
-    right: -8px;
+    top: -4px;
+    right: -4px;
   }
 }
 
 .badgeTopLeft {
-  top: -12px;
-  left: -12px;
+  top: -8px;
+  left: -8px;
   animation-delay: -0.5s;
 
   @media (max-width: 768px) {
-    top: -8px;
-    left: -8px;
+    top: -4px;
+    left: -4px;
   }
 }
 
 .badgeBottomRight {
-  bottom: -12px;
-  right: -12px;
+  bottom: -8px;
+  right: -8px;
   animation-delay: -1.5s;
 
   @media (max-width: 768px) {
-    bottom: -8px;
-    right: -8px;
+    bottom: -4px;
+    right: -4px;
   }
 }
 
 .badgeBottomLeft {
-  bottom: -12px;
-  left: -12px;
+  bottom: -8px;
+  left: -8px;
   animation-delay: -1s;
 
   @media (max-width: 768px) {
-    bottom: -8px;
-    left: -8px;
+    bottom: -4px;
+    left: -4px;
   }
 }
 

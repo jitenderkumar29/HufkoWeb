@@ -13,7 +13,7 @@ export const ShopingCategories = [
   {
     id: "electronics",
     name: "Electronics",
-    imageUrl: "/products/Electronics.png",
+    imageUrl: "/products/Electronics1.png",
     url: "/electronics",
   },
   {
@@ -31,13 +31,13 @@ export const ShopingCategories = [
   {
     id: "home_furniture",
     name: "Home Furniture",
-    imageUrl: "/products/HomeFurniture.png",
+    imageUrl: "/products/HomeFurniture12.png",
     url: "/home_furniture",
   },
   {
     id: "mobiles_tablets",
     name: "Mobiles & Tablets",
-    imageUrl: "/products/MobilesTablets.png",
+    imageUrl: "/products/MobilesTablets1.png",
     url: "/mobiles_tablets",
   },
   {
@@ -66,8 +66,8 @@ export const ShopingCategories = [
   },
   {
     id: "tvs_appliances",
-    name: "TVs & Appliances",
-    imageUrl: "/products/TVsAppliances.png",
+    name: "Appliances",
+    imageUrl: "/products/TVsAppliances1.png",
     url: "/tvs_appliances",
   },
   // {

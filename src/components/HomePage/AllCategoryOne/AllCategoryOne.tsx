@@ -1,19 +1,28 @@
+// components/HomePage/AllCategoryOne/AllCategoryOne.tsx
+
 import { useState, useRef, useEffect } from 'react';
 import styles from './AllCategoryOne.module.scss';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 interface Category {
+  id?: string;
   name: string;
   imageUrl: string;
+  url?: string;
 }
 
 interface AllCategoryProps {
   categories: Category[];
-  // title?: string;
+  onCategoryClick?: (category: { id: string; name: string }) => void;
+  title?: string;
 }
 
-const AllCategoryOne = ({ categories }: AllCategoryProps) => {
+const AllCategoryOne = ({ 
+  categories, 
+  onCategoryClick, 
+  title = "" 
+}: AllCategoryProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleItems, setVisibleItems] = useState(6);
@@ -43,8 +52,11 @@ const AllCategoryOne = ({ categories }: AllCategoryProps) => {
 
   const scrollLeft = () => {
     if (containerRef.current) {
+      const containerWidth = containerRef.current.clientWidth;
+      const scrollAmount = containerWidth * 0.6; // Scroll 60% of container width
+      
       containerRef.current.scrollBy({
-        left: -500,
+        left: -scrollAmount,
         behavior: 'smooth',
       });
       setActiveIndex(Math.max(0, activeIndex - 1));
@@ -53,23 +65,45 @@ const AllCategoryOne = ({ categories }: AllCategoryProps) => {
 
   const scrollRight = () => {
     if (containerRef.current) {
+      const containerWidth = containerRef.current.clientWidth;
+      const scrollAmount = containerWidth * 0.6; // Scroll 60% of container width
+      
       containerRef.current.scrollBy({
-        left: 500,
+        left: scrollAmount,
         behavior: 'smooth',
       });
       setActiveIndex(Math.min(categories.length - visibleItems, activeIndex + 1));
     }
   };
 
+  const handleCategoryClick = (category: Category) => {
+    // Use id if available, otherwise use name as fallback
+    const categoryId = category.id || category.name.toLowerCase().replace(/\s+/g, '_');
+    
+    if (onCategoryClick) {
+      onCategoryClick({ id: categoryId, name: category.name });
+    }
+
+    // Optional: If you want to navigate to a URL
+    if (category.url) {
+      // Uncomment if you want to navigate
+      // window.location.href = category.url;
+    }
+  };
+
+  // Check if scroll buttons should be disabled
+  const isLeftDisabled = activeIndex === 0;
+  const isRightDisabled = activeIndex >= categories.length - visibleItems;
+
   return (
     <div className={styles.allCategoryContainer}>
-      {/* <h2 className={styles.sectionTitle}>Shop by Category</h2> */}
+      {title && <h2 className={styles.sectionTitle}>{title}</h2>}
 
       <div className={styles.categoryWrapper}>
         <button
           className={`${styles.navButton} ${styles.leftButton}`}
           onClick={scrollLeft}
-          disabled={activeIndex === 0}
+          disabled={isLeftDisabled}
           aria-label="Scroll left"
         >
           <ChevronLeft size={24} />
@@ -77,18 +111,26 @@ const AllCategoryOne = ({ categories }: AllCategoryProps) => {
 
         <div className={styles.categoryContainer} ref={containerRef}>
           {categories.map((category, index) => (
-            <a
+            <div
               key={index}
-              href="#"
               className={styles.categoryItem}
+              onClick={() => handleCategoryClick(category)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleCategoryClick(category);
+                }
+              }}
+              role="button"
+              tabIndex={0}
               aria-label={category.name}
             >
               <div className={styles.categoryImage}>
                 <Image
                   src={category.imageUrl}
                   alt={category.name}
-                  width={100}
-                  height={148}
+                  width={120}
+                  height={110}
                   loading="lazy"
                   className={styles.image}
                 />
@@ -96,14 +138,14 @@ const AllCategoryOne = ({ categories }: AllCategoryProps) => {
               <div className={styles.categoryName}>
                 {category.name}
               </div>
-            </a>
+            </div>
           ))}
         </div>
 
         <button
           className={`${styles.navButton} ${styles.rightButton}`}
           onClick={scrollRight}
-          disabled={activeIndex === categories.length - visibleItems}
+          disabled={isRightDisabled}
           aria-label="Scroll right"
         >
           <ChevronRight size={24} />

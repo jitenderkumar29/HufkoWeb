@@ -15,7 +15,7 @@ import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
 import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
-import {categoriesDataCardHalfDynamic, categoriesDataMap, categoriesInternationalFlowerDeliveryData, customerTestimonialDataFlower, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfFlower, slidesHalfFlowerBouquetsForThem, slidesHalfFlowerGift, slidesHalfFlowerShopByOccasionsRelations, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
+import { categoriesDataCardHalfDynamic, categoriesDataMap, categoriesInternationalFlowerDeliveryData, customerTestimonialDataFlower, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfFlower, slidesHalfFlowerBouquetsForThem, slidesHalfFlowerGift, slidesHalfFlowerShopByOccasionsRelations, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
 import { flowerCategoriesSubHeader, FlowersCategories } from '@/app/data/Categorywise/FlowersCategories';
 import { CareCategories, careCategoriesSubHeader } from '@/app/data/Categorywise/CareCategories';
@@ -55,6 +55,25 @@ interface CategoryItem {
   name: string;
   icon: IconDefinition;
 }
+
+// Category to sub-header mapping
+const categoryToSubHeaderMapping: Record<string, string> = {
+  'electronics': 'electronics_sub_header',
+  'home_kitchen': 'home_kitchen_sub_header',
+  'home_decor': 'home_decor_sub_header',
+  'home_furniture': 'home_furniture_sub_header',
+  'mobiles_tablets': 'mobiles_tablets_sub_header',
+  'men': 'mens_fashion_sub_header',
+  'women': 'women_fashion_sub_header',
+  'kids': 'kids_fashion_sub_header',
+  'beauty': 'women_beauty_sub_header',
+  'tvs_appliances': 'appliances_sub_header',
+  'baby_toys': 'baby_toys_sub_header',
+  'sports_fitness': 'sports_fitness_sub_header',
+  'books': 'books_sub_header',
+  'jewellery': 'jewellery_sub_header',
+  'auto_accessories': 'auto_accessories_sub_header',
+};
 
 const HeaderCategory: React.FC = () => {
   const router = useRouter();
@@ -202,9 +221,6 @@ const HeaderCategory: React.FC = () => {
   };
 
   // Handle shopping subcategory selection
-  // In HeaderCategory.tsx
-
-  // Handle shopping subcategory selection
   const handleShoppingSubCategorySelect = (item: SubHeaderItem) => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedShoppingCategory(categoryId);
@@ -214,11 +230,11 @@ const HeaderCategory: React.FC = () => {
     params.set('shoppingCategory', categoryId);
 
     // Reset subcategories when main category changes
-    if (categoryId !== 'electronics') {
+    if (categoryId !== 'electronics_sub_header') {
       setSelectedElectronicsSubCategory('all');
       params.delete('electronicsSubCategory');
     }
-    if (categoryId !== 'home_decor') {
+    if (categoryId !== 'home_decor_sub_header') {
       setSelectedHomeDecorSubCategory('all');
       params.delete('homeDecorSubCategory');
     }
@@ -227,9 +243,8 @@ const HeaderCategory: React.FC = () => {
     console.log('Selected shopping category:', item);
 
     // Pass the category to ShopByMainCategory component
-    // You can do this via props, context, or state management
-    // For example, if you have a state for the selected category:
     setSelectedCategory(item.category || categoryId);
+    setSelectedSubHeaderItem(item);
   };
 
   // Handle electronics subcategory selection
@@ -261,6 +276,54 @@ const HeaderCategory: React.FC = () => {
     return selectedShoppingCategory === categoryId;
   };
 
+  // Handle category click from AllCategoryOne
+  const handleShoppingCategoryClick = (category: { id: string; name: string }) => {
+    // First, switch to shopping tab if not already
+    if (activeTab !== 'shopping') {
+      setActiveTab('shopping');
+    }
+
+    // Get the corresponding sub-header ID
+    const subHeaderId = categoryToSubHeaderMapping[category.id];
+
+    if (subHeaderId) {
+      // Update the shopping category state
+      setSelectedShoppingCategory(subHeaderId);
+
+      // Find the sub-header item to set as selected
+      const subHeaderItem = shoppingCategoriesSubHeader.find(
+        item => item.id === subHeaderId || item.name.toLowerCase().replace(/\s+/g, '_') === subHeaderId
+      );
+
+      if (subHeaderItem) {
+        setSelectedSubHeaderItem(subHeaderItem);
+        setSelectedCategory(subHeaderItem.category || category.id);
+      }
+
+      // Update URL
+      const params = new URLSearchParams(window.location.search);
+      params.set('category', 'shopping');
+      params.set('shoppingCategory', subHeaderId);
+
+      // Reset subcategories
+      setSelectedElectronicsSubCategory('all');
+      params.delete('electronicsSubCategory');
+      setSelectedHomeDecorSubCategory('all');
+      params.delete('homeDecorSubCategory');
+
+      router.push(`?${params.toString()}`, { scroll: false });
+
+      console.log('Category clicked:', category.name, '-> Sub-header:', subHeaderId);
+    } else {
+      // If no mapping found, default to 'all'
+      setSelectedShoppingCategory('all');
+      const params = new URLSearchParams(window.location.search);
+      params.set('category', 'shopping');
+      params.set('shoppingCategory', 'all');
+      router.push(`?${params.toString()}`, { scroll: false });
+    }
+  };
+
   return (
     <>
       <div className={styles.headerCategory}>
@@ -288,7 +351,6 @@ const HeaderCategory: React.FC = () => {
               titleHighlight="World's #1"
               subtitle="Enjoy fast online ordering on the Hufko app"
               videoSrc="/videos/food_all_video.mp4"
-              // videoSrc="/videos/food_hufko.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
               playStoreLink="/"
@@ -317,11 +379,12 @@ const HeaderCategory: React.FC = () => {
                 { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/HUFKO_Store_FranchiseHufko.png"
-              // imageSrc="/icons/HUFKO_Store.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={1800}
+              images={[
+                { src: "/products/HUFKO_Store_FranchiseHufko2.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/HUFKO_Store_FranchiseHufko.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/HUFKO_Store_FranchiseHufko3123.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/HUFKO_Store_FranchiseHufko4123.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -332,13 +395,15 @@ const HeaderCategory: React.FC = () => {
               className="custom-class"
               showWave={true}
               waveColor="white"
+              autoPlayInterval={3000}
+              showDots={true}
+              showArrows={true}
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+              onSlideChange={(index) => console.log('Slide changed to:', index)}
             >
-              <span style={{ color: '#ffffff' }}> Premium
-                Instant Delivery Technology Platform</span>
+              <span style={{ color: '#ffffff' }}> Premium Instant Delivery Technology Platform</span>
             </FranchiseHufko>
-
           </div>
         )}
 
@@ -350,11 +415,9 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            {/* <HeroBannerAll banners={FoodHeroBannerData} /> */}
-
             <HeroBannerLeftContent
               banners={FoodHeroBannerLeftContent}
-              defaultAlign="left" // Default alignment if not specified per banner
+              defaultAlign="left"
             />
             <AllCategory categories={FoodsCategories} />
             <WelcomeVideoHufko
@@ -375,85 +438,7 @@ const HeaderCategory: React.FC = () => {
               benefits={defaultBenefits}
               onMoreClick={() => console.log('More clicked!')}
             />
-            {/* <HufkoPrime /> */}
             <DownloadApp />
-            {/* <FranchiseVideo
-              // Content
-              badgeText="Download Featured App"
-              badgeIcon={<Star size={16} />}
-              heading="Download the #1"
-              highlightText="Food Delivery App"
-              description="Get your favorite meals delivered in minutes. Join millions of happy customers."
-
-              // Video - Dynamic sizing
-              videoSrc="/videos/delivery_by_hufko.mp4"
-              videoPoster="/images/poster.jpg"
-              autoPlay={true}
-              muted={false}
-              loop={true}
-              controls={true}
-              controlsList="nodownload noremoteplayback"
-              videoWidth={800}
-              videoHeight={850}
-              aspectRatio="18/12"
-              objectFit="cover"  // Cover, contain, or fill
-
-              // Custom Stats
-              stats={[
-                { value: '10M+', label: 'Downloads', icon: Users },
-                { value: '4.9', label: 'App Rating', icon: Star },
-                { value: '30min', label: 'Avg Delivery', icon: Clock },
-              ]}
-
-              // Custom Buttons
-              buttons={[
-                {
-                  label: 'Download Now',
-                  variant: 'primary',
-                  onClick: () => window.open('/download', '_blank')
-                },
-                {
-                  label: 'Learn More',
-                  variant: 'secondary',
-                  onClick: () => console.log('Learn more clicked')
-                },
-              ]}
-
-              // Custom Badges
-              badges={[
-                {
-                  text: '📱 App of the Year',
-                  position: 'top-right',
-                  backgroundColor: '#f5a623',
-                  color: '#1a1a1a'
-                },
-                {
-                  text: '🔒 Secure Payment',
-                  position: 'bottom-left',
-                  backgroundColor: '#ffffff',
-                  color: '#055346'
-                },
-                {
-                  text: '🚀 50K+ Orders',
-                  position: 'top-left',
-                  backgroundColor: '#ec2024',
-                  color: '#ffffff'
-                },
-              ]}
-
-              // Callbacks
-              onVideoPlay={() => console.log('Video started')}
-              onVideoPause={() => console.log('Video paused')}
-              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
-              onBadgeClick={(badge) => console.log(`Badge clicked: ${badge.text}`)}
-
-              // Styling
-              gradient="linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)"
-              overlayOpacity={0.5}
-              waveColor="#f5f5f5"
-            >
-              <span style={{ color: '#ffffff' }}> in India - <br /> Start with Hufko</span>
-            </FranchiseVideo> */}
             <FranchiseHufko
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
@@ -469,11 +454,10 @@ const HeaderCategory: React.FC = () => {
                 { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Premium_Restaurant_Franchise.png"
-              // imageSrc="/icons/HUFKO_Store.png"
+              imageSrc="/products/Premium_Restaurant_Franchise1.png"
               imageAlt="HUFKO Store"
               imageWidth={3000}
-              imageHeight={1500}
+              imageHeight={1800}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -489,7 +473,6 @@ const HeaderCategory: React.FC = () => {
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
             </FranchiseHufko>
-
           </div>
         )}
 
@@ -507,9 +490,6 @@ const HeaderCategory: React.FC = () => {
               title=""
               titleHighlight=""
               subtitle=""
-              // title="Premium food delivery app"
-              // titleHighlight="World's #1"
-              // subtitle="Enjoy fast online ordering on the Hufko app"
               videoSrc="/videos/grocery_hufko.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
@@ -547,7 +527,6 @@ const HeaderCategory: React.FC = () => {
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
               imageSrc="/products/Franchise_Hufko2.png"
-              // imageSrc="/icons/HUFKO_Store.png"
               imageAlt="HUFKO Store"
               imageWidth={1200}
               imageHeight={1000}
@@ -566,7 +545,6 @@ const HeaderCategory: React.FC = () => {
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
             </FranchiseHufko>
-
           </div>
         )}
 
@@ -586,7 +564,10 @@ const HeaderCategory: React.FC = () => {
             {isShoppingCategorySelected("all") && (
               <div className={styles.electronicsSubCategory}>
                 <HeroBannerAll banners={ShopingHeroBannerData} />
-                <AllCategoryOne categories={ShopingCategories} />
+                <AllCategoryOne
+                  categories={ShopingCategories}
+                  onCategoryClick={handleShoppingCategoryClick}
+                />
                 <WelcomeVideoHufko
                   title="Premium food delivery app"
                   titleHighlight="World's #1"
@@ -623,8 +604,7 @@ const HeaderCategory: React.FC = () => {
                     { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                     { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
                   ]}
-                  imageSrc="/products/Hypermarket_Franchise.png"
-                  // imageSrc="/icons/HUFKO_Store.png"
+                  imageSrc="/products/Hypermarket_Franchise1.png"
                   imageAlt="HUFKO Store"
                   imageWidth={3000}
                   imageHeight={1800}
@@ -648,11 +628,9 @@ const HeaderCategory: React.FC = () => {
             {/* Electronics Sub-Sub Categories */}
             {isShoppingCategorySelected("electronics_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
@@ -660,11 +638,9 @@ const HeaderCategory: React.FC = () => {
 
             {isShoppingCategorySelected("home_furniture_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
@@ -676,7 +652,6 @@ const HeaderCategory: React.FC = () => {
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
@@ -688,154 +663,118 @@ const HeaderCategory: React.FC = () => {
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
-                {/* <SubSubHeader
-                  key={`homedecor-${selectedHomeDecorSubCategory}`}
-                  items={homeDecorSubSubCategoriesSubHeader}
-                  defaultActive={selectedHomeDecorSubCategory}
-                  categoriesData={categoriesDataMap}
-                  onSelect={handleHomeDecorSubCategorySelect}
-                /> */}
-                {/* Add Home Decor content here */}
               </div>
             )}
 
             {/* Home Men's Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("mens_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-
             )}
 
             {/* Home Women's Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("women_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-
             )}
 
             {/* Home Kids' Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("kids_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-
             )}
 
             {/* Home Kids' Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("women_beauty_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
-
             )}
 
             {isShoppingCategorySelected("sports_fitness_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
             {isShoppingCategorySelected("baby_toys_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
             {isShoppingCategorySelected("books_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
             {isShoppingCategorySelected("auto_accessories_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
             {isShoppingCategorySelected("jewellery_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
             {isShoppingCategorySelected("appliances_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
             {isShoppingCategorySelected("mobiles_tablets_sub_header") && (
               <div className={styles.electronicsSubCategory}>
-                {/* Pass the selected category to ShopByMainCategory */}
                 <ShopByMainCategory
                   category={selectedCategory}
                   selectedItem={selectedSubHeaderItem}
-                  // Or pass the entire item with all data
                   subHeaderItem={selectedSubHeaderItem}
                 />
               </div>
             )}
-
           </div>
         )}
 
@@ -853,9 +792,6 @@ const HeaderCategory: React.FC = () => {
               title=""
               titleHighlight=""
               subtitle=""
-              // title="Premium Care Services app"
-              // titleHighlight="World's #1"
-              // subtitle="Enjoy fast online Care Services on the Hufko app"
               videoSrc="/videos/flower.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
@@ -947,10 +883,10 @@ const HeaderCategory: React.FC = () => {
               itemsPerView={{
                 mobile: 2,
                 tablet: 3,
-                desktop: 5  // This ensures all items show on desktop
+                desktop: 5
               }}
               subTitle="Deliver fresh flowers worldwide"
-              rows={1}  // Single row
+              rows={1}
               cardHeight={200}
               imageWidth={170}
               imageHeight={170}
@@ -975,8 +911,7 @@ const HeaderCategory: React.FC = () => {
                 { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Flowers_and_Gifts_Franchise.png"
-              // imageSrc="/icons/HUFKO_Store.png"
+              imageSrc="/products/Flowers_and_Gifts_Franchise1.png"
               imageAlt="HUFKO Store"
               imageWidth={3000}
               imageHeight={1800}
@@ -1003,7 +938,6 @@ const HeaderCategory: React.FC = () => {
               backgroundColor="#f5f5f5"
               onViewAllClick={() => console.log('View all clicked')}
             />
-
           </div>
         )}
 
@@ -1021,9 +955,6 @@ const HeaderCategory: React.FC = () => {
               title=""
               titleHighlight=""
               subtitle=""
-              // title="Premium Care Services app"
-              // titleHighlight="World's #1"
-              // subtitle="Enjoy fast online Care Services on the Hufko app"
               videoSrc="/videos/care_services.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
@@ -1050,7 +981,6 @@ const HeaderCategory: React.FC = () => {
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
               imageSrc="/products/Premium_Saloon_&_Spa_Franchise.png"
-              // imageSrc="/icons/HUFKO_Store.png"
               imageAlt="HUFKO Store"
               imageWidth={2000}
               imageHeight={1800}
@@ -1086,9 +1016,6 @@ const HeaderCategory: React.FC = () => {
               title=""
               titleHighlight=""
               subtitle=""
-              // title="Premium Care Services app"
-              // titleHighlight="World's #1"
-              // subtitle="Enjoy fast online Care Services on the Hufko app"
               videoSrc="/videos/PHARMA _NEW_VIDEO.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
@@ -1114,8 +1041,7 @@ const HeaderCategory: React.FC = () => {
                 { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Pharmaceutical_Franchise2.png"
-              // imageSrc="/icons/HUFKO_Store.png"
+              imageSrc="/products/Pharmaceutical_Franchise21.png"
               imageAlt="HUFKO Store"
               imageWidth={3000}
               imageHeight={1800}
@@ -1135,7 +1061,6 @@ const HeaderCategory: React.FC = () => {
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
             </FranchiseHufko>
           </div>
-
         )}
 
         {/* Wholesale Section */}
@@ -1152,9 +1077,6 @@ const HeaderCategory: React.FC = () => {
               title=""
               titleHighlight=""
               subtitle=""
-              // title="Premium Care Services app"
-              // titleHighlight="World's #1"
-              // subtitle="Enjoy fast online Care Services on the Hufko app"
               videoSrc="/videos/wholesale_hufko.mp4"
               logoSrc="/icons/logo_video.png"
               appStoreLink="/"
@@ -1184,11 +1106,10 @@ const HeaderCategory: React.FC = () => {
                 { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Wholesale_Supermarket_Franchise2.png"
-              // imageSrc="/icons/HUFKO_Store.png"
+              imageSrc="/products/Wholesale_Supermarket_Franchise21.png"
               imageAlt="HUFKO Store"
               imageWidth={3000}
-              imageHeight={1800}
+              imageHeight={2100}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },

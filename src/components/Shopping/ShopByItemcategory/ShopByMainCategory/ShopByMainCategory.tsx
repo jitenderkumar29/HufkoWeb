@@ -210,13 +210,21 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
+                            slides={bankOfferShoppingSlide}
                             autoPlay={true}
                             autoPlayInterval={5000}
                             showArrows={true}
                             showDots={true}
                             onSlideChange={(index) => console.log('Current slide:', index)}
                         />
+                        {/* <BankOfferSlide
+                            slides={bankOfferElectronicsSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        /> */}
                         <VerticalScroll
                             items={toElectronicsItems}
                             imageHeight={400}
@@ -281,8 +289,8 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             banners={slidesHomeKitchen}
                             defaultAlign="left"
                         />
-                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
+                        <BankOfferSlide
+                            slides={bankOfferShoppingSlide}
                             autoPlay={true}
                             autoPlayInterval={5000}
                             showArrows={true}
@@ -335,13 +343,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <div className={styles.categorySliderOneLine}>
                             <HorizontalSliderOneLine
                                 products={topHomeDecorItems}
@@ -402,13 +410,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             muted={true}
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <VerticalScroll
                             items={topHomeFurnitureItems}
                             imageHeight={350}
@@ -438,288 +446,288 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
             case 'mens_fashion':
                 return (
                     <>
-                            <FashionRoundCarousel
-                                categories={menFashionCarouselCategories}
-                                title=""
-                                autoScroll={false}
-                                showScrollbar={false}
-                                onCategoryClick={handleCategoryClick}
-                            />
-                            <HeroBannerHalfSlide
-                                banners={slidesHalfShoppingMenFashion}
-                                itemsPerView={{
-                                    mobile: 1,
-                                    tablet: 2,
-                                    laptop: 3,
-                                    desktop: 2.5
-                                }}
-                                autoScrollInterval={10000}
-                                showArrows={true}
-                                height={550}
-                                backgroundColor="#f5f5f5"
-                                onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-                            />
-                            <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
-                            <HeroBannerSlide
-                                slides={slidesShoppingMenFashion}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                showTitle={true}
-                                showSubtitle={true}
-                                showCTA={true}
-                                onSlideClick={(slide, index) => {
-                                    console.log(`Slide ${index + 1} clicked:`, slide);
-                                    // Handle navigation
-                                }}
-                                onSlideChange={(index) => {
-                                    console.log(`Current slide: ${index + 1}`);
-                                }}
-                            />
-                            <TopBrandsOnOffer
-                                brands={toBrandsMenFashion}
-                                title="Top Brands on Offer"
-                                subtitle="Dishing out Gen-Z styles"
-                                backgroundColor="#7739B5"
-                                titleColor="#ffffff"
-                                gap={8}
-                                cardPadding={10}
-                                onBrandClick={(brand) => {
-                                    console.log('Brand clicked:', brand);
-                                    // Handle navigation
-                                }}
-                                onBrandHover={(brand) => {
-                                    console.log('Brand hovered:', brand);
-                                }}
-                            />
-                            {/* Add Men's Fashion content here */}
+                        <FashionRoundCarousel
+                            categories={menFashionCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <HeroBannerHalfSlide
+                            banners={slidesHalfShoppingMenFashion}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 2.5
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={550}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <HeroBannerSlide
+                            slides={slidesShoppingMenFashion}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            showTitle={true}
+                            showSubtitle={true}
+                            showCTA={true}
+                            onSlideClick={(slide, index) => {
+                                console.log(`Slide ${index + 1} clicked:`, slide);
+                                // Handle navigation
+                            }}
+                            onSlideChange={(index) => {
+                                console.log(`Current slide: ${index + 1}`);
+                            }}
+                        />
+                        <TopBrandsOnOffer
+                            brands={toBrandsMenFashion}
+                            title="Top Brands on Offer"
+                            subtitle="Dishing out Gen-Z styles"
+                            backgroundColor="#7739B5"
+                            titleColor="#ffffff"
+                            gap={8}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                                // Handle navigation
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
+                        />
+                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
             case 'women_fashion':
                 return (
                     <>
-                            <FashionRoundCarousel
-                                categories={womenFashionCarouselCategories}
-                                title=""
-                                autoScroll={false}
-                                showScrollbar={false}
-                                onCategoryClick={handleCategoryClick}
-                            />
-                            <HeroBannerSlide
-                                slides={slidesShoppingWomenFashion}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                showTitle={true}
-                                showSubtitle={true}
-                                showCTA={true}
-                                onSlideClick={(slide, index) => {
-                                    console.log(`Slide ${index + 1} clicked:`, slide);
-                                    // Handle navigation
-                                }}
-                                onSlideChange={(index) => {
-                                    console.log(`Current slide: ${index + 1}`);
-                                }}
-                            />
-                            <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
-                            <TopBrandsOnOffer
-                                brands={toBrandsWomenFashion}
-                                title="Top Brands on Offer"
-                                subtitle="Dishing out Gen-Z styles"
-                                backgroundColor="#7739B5"
-                                titleColor="#ffffff"
-                                gap={8}
-                                cardPadding={10}
-                                onBrandClick={(brand) => {
-                                    console.log('Brand clicked:', brand);
-                                    // Handle navigation
-                                }}
-                                onBrandHover={(brand) => {
-                                    console.log('Brand hovered:', brand);
-                                }}
-                            />
-                            <TopBrandsOnOffer
-                                brands={hottestBrandsWomenFashion}
-                                title="IN THE SPOTLIGHT"
-                                subtitle="Hottest brands on offer"
-                                backgroundColor="#ffffff"
-                                titleColor="#000000"
-                                subtitleColor="#000000"
-                                columns={{
-                                    mobile: 2,
-                                    tablet: 3,
-                                    desktop: 4,
-                                    largeDesktop: 6,
-                                }}
-                                gap={5}
-                                cardPadding={10}
-                                onBrandClick={(brand) => {
-                                    console.log('Brand clicked:', brand);
-                                    // Handle navigation
-                                }}
-                                onBrandHover={(brand) => {
-                                    console.log('Brand hovered:', brand);
-                                }}
-                            />
-                            <FashionFullSlideGrid
-                                title=""
-                                subtitle=""
-                                buttonText=""
-                                buttonLink="/hidden-gems"
-                                heroImage="/products/bannerFullSlide.jpg"
-                                cards={slidesDataFashionFullSlide}
-                            />
-                            {/* Add Men's Fashion content here */}
+                        <FashionRoundCarousel
+                            categories={womenFashionCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <HeroBannerSlide
+                            slides={slidesShoppingWomenFashion}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            showTitle={true}
+                            showSubtitle={true}
+                            showCTA={true}
+                            onSlideClick={(slide, index) => {
+                                console.log(`Slide ${index + 1} clicked:`, slide);
+                                // Handle navigation
+                            }}
+                            onSlideChange={(index) => {
+                                console.log(`Current slide: ${index + 1}`);
+                            }}
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <TopBrandsOnOffer
+                            brands={toBrandsWomenFashion}
+                            title="Top Brands on Offer"
+                            subtitle="Dishing out Gen-Z styles"
+                            backgroundColor="#7739B5"
+                            titleColor="#ffffff"
+                            gap={8}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                                // Handle navigation
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
+                        />
+                        <TopBrandsOnOffer
+                            brands={hottestBrandsWomenFashion}
+                            title="IN THE SPOTLIGHT"
+                            subtitle="Hottest brands on offer"
+                            backgroundColor="#ffffff"
+                            titleColor="#000000"
+                            subtitleColor="#000000"
+                            columns={{
+                                mobile: 2,
+                                tablet: 3,
+                                desktop: 4,
+                                largeDesktop: 6,
+                            }}
+                            gap={5}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                                // Handle navigation
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
+                        />
+                        <FashionFullSlideGrid
+                            title=""
+                            subtitle=""
+                            buttonText=""
+                            buttonLink="/hidden-gems"
+                            heroImage="/products/bannerFullSlide.jpg"
+                            cards={slidesDataFashionFullSlide}
+                        />
+                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
             case 'kids_fashion':
                 return (
                     <>
-                            <FashionRoundCarousel
-                                categories={kidsFashionCarouselCategories}
-                                title=""
-                                autoScroll={false}
-                                showScrollbar={false}
-                                onCategoryClick={handleCategoryClick}
-                            />
-                            <HeroBannerSlide
-                                slides={slidesShoppingKidsFashion}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                showTitle={true}
-                                showSubtitle={true}
-                                showCTA={true}
-                                onSlideClick={(slide, index) => {
-                                    console.log(`Slide ${index + 1} clicked:`, slide);
-                                    // Handle navigation
-                                }}
-                                onSlideChange={(index) => {
-                                    console.log(`Current slide: ${index + 1}`);
-                                }}
-                            />
-                            <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
-                            <TopBrandsOnOffer
-                                brands={toBrandsKidsFashion}
-                                title="Top Brands on Offer"
-                                subtitle="Dishing out Gen-Z styles"
-                                backgroundColor="#E6EDF3"
-                                titleColor="#000000"
-                                subtitleColor="#000000"
-                                gap={8}
-                                cardPadding={10}
-                                onBrandClick={(brand) => {
-                                    console.log('Brand clicked:', brand);
-                                    // Handle navigation
-                                }}
-                                onBrandHover={(brand) => {
-                                    console.log('Brand hovered:', brand);
-                                }}
-                            />
-                            {/* Add Men's Fashion content here */}
+                        <FashionRoundCarousel
+                            categories={kidsFashionCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <HeroBannerSlide
+                            slides={slidesShoppingKidsFashion}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            showTitle={true}
+                            showSubtitle={true}
+                            showCTA={true}
+                            onSlideClick={(slide, index) => {
+                                console.log(`Slide ${index + 1} clicked:`, slide);
+                                // Handle navigation
+                            }}
+                            onSlideChange={(index) => {
+                                console.log(`Current slide: ${index + 1}`);
+                            }}
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <TopBrandsOnOffer
+                            brands={toBrandsKidsFashion}
+                            title="Top Brands on Offer"
+                            subtitle="Dishing out Gen-Z styles"
+                            backgroundColor="#E6EDF3"
+                            titleColor="#000000"
+                            subtitleColor="#000000"
+                            gap={8}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                                // Handle navigation
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
+                        />
+                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
             case 'women_beauty':
                 return (
                     <>
-                            <FashionRoundCarousel
-                                categories={womenBeautyCarouselCategories}
-                                title=""
-                                autoScroll={false}
-                                showScrollbar={false}
-                                onCategoryClick={handleCategoryClick}
-                            />
-                            <HeroBannerSlide
-                                slides={slidesShoppingWomenBeauty}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                showTitle={true}
-                                showSubtitle={true}
-                                showCTA={true}
-                                onSlideClick={(slide, index) => {
-                                    console.log(`Slide ${index + 1} clicked:`, slide);
-                                    // Handle navigation
-                                }}
-                                onSlideChange={(index) => {
-                                    console.log(`Current slide: ${index + 1}`);
-                                }}
-                            />
-                            <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
-                            <HeroBannerHalfSlide
-                                banners={slidesHalfShoppingWomenBeauty}
-                                itemsPerView={{
-                                    mobile: 1,
-                                    tablet: 2,
-                                    laptop: 3,
-                                    desktop: 2.5
-                                }}
-                                autoScrollInterval={10000}
-                                showArrows={true}
-                                height={650}
-                                backgroundColor="#f5f5f5"
-                                onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-                            />
-                            <TopBrandsOnOffer
-                                brands={toBrandsWomenBeauty}
-                                title="Top Brands on Offer"
-                                subtitle="Dishing out Gen-Z styles"
-                                backgroundColor="#CBCDA3"
-                                titleColor="#ffffff"
-                                subtitleColor="#ffffff"
-                                gap={8}
-                                cardPadding={10}
-                                onBrandClick={(brand) => {
-                                    console.log('Brand clicked:', brand);
-                                    // Handle navigation
-                                }}
-                                onBrandHover={(brand) => {
-                                    console.log('Brand hovered:', brand);
-                                }}
-                            />
-                            <VerticalScroll
-                                items={ScrollItemWomensBeauty}
-                                imageHeight={400}
-                                title="Recommended for You"
-                                subtitle="Based on your preferences"
-                                ctaText="See All Recommendations"
-                            />
-                            {/* Add Men's Fashion content here */}
+                        <FashionRoundCarousel
+                            categories={womenBeautyCarouselCategories}
+                            title=""
+                            autoScroll={false}
+                            showScrollbar={false}
+                            onCategoryClick={handleCategoryClick}
+                        />
+                        <HeroBannerSlide
+                            slides={slidesShoppingWomenBeauty}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            showTitle={true}
+                            showSubtitle={true}
+                            showCTA={true}
+                            onSlideClick={(slide, index) => {
+                                console.log(`Slide ${index + 1} clicked:`, slide);
+                                // Handle navigation
+                            }}
+                            onSlideChange={(index) => {
+                                console.log(`Current slide: ${index + 1}`);
+                            }}
+                        />
+                        <BankOfferSlide
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
+                        <HeroBannerHalfSlide
+                            banners={slidesHalfShoppingWomenBeauty}
+                            itemsPerView={{
+                                mobile: 1,
+                                tablet: 2,
+                                laptop: 3,
+                                desktop: 2.5
+                            }}
+                            autoScrollInterval={10000}
+                            showArrows={true}
+                            height={650}
+                            backgroundColor="#f5f5f5"
+                            onBannerClick={(banner) => console.log('Banner clicked:', banner)}
+                        />
+                        <TopBrandsOnOffer
+                            brands={toBrandsWomenBeauty}
+                            title="Top Brands on Offer"
+                            subtitle="Dishing out Gen-Z styles"
+                            backgroundColor="#CBCDA3"
+                            titleColor="#ffffff"
+                            subtitleColor="#ffffff"
+                            gap={8}
+                            cardPadding={10}
+                            onBrandClick={(brand) => {
+                                console.log('Brand clicked:', brand);
+                                // Handle navigation
+                            }}
+                            onBrandHover={(brand) => {
+                                console.log('Brand hovered:', brand);
+                            }}
+                        />
+                        <VerticalScroll
+                            items={ScrollItemWomensBeauty}
+                            imageHeight={400}
+                            title="Recommended for You"
+                            subtitle="Based on your preferences"
+                            ctaText="See All Recommendations"
+                        />
+                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
@@ -750,13 +758,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             }}
                         />
                         <BankOfferSlide
-                            slides={bankOfferShoppingSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <VerticalScrollSquare
                             title="Top trending picks"
                             categories={topTrendingPicksSportsFitnessCategories}
@@ -807,13 +815,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <VerticalScroll
                             items={savingsSpecialBabyToysItems}
                             imageHeight={420}
@@ -852,14 +860,14 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             banners={slidesbooks}
                             defaultAlign="left"
                         />
-                        <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                       <BankOfferSlide
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <HorizontalSliderOneLine2
                             products={bestSellersInPrintBooksItems}
                             title="Best sellers in print"
@@ -929,13 +937,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <VerticalScroll
                             items={dealsOnCarAccessoriesAutoAccessoriesItems}
                             imageHeight={400}
@@ -975,13 +983,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <VerticalScroll
                             items={discoverOurCuratedStoresJewelleryItems}
                             imageHeight={400}
@@ -1058,13 +1066,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <VerticalScrollSquare
                             title="Shop by Brands!"
                             categories={shopByBrandsTVsAppliancesCategories}
@@ -1126,13 +1134,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        />
+                                slides={bankOfferShoppingSlide}
+                                autoPlay={true}
+                                autoPlayInterval={5000}
+                                showArrows={true}
+                                showDots={true}
+                                onSlideChange={(index) => console.log('Current slide:', index)}
+                            />
                         <div className={styles.headingContent}>
                             <h2 className={styles.heading}>New Launches</h2>
                         </div>
