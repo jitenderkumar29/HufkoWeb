@@ -74,7 +74,7 @@
     // color: $primary-color;
     // color: #950EDB;
     color: $white;
-    font-size:20px;
+    font-size: 18px;
     margin-top: 1px;
     margin-right: 5px;
   }
@@ -539,6 +539,203 @@
     .userIcon,
     .cartIcon {
       font-size: 0.9rem;
+    }
+  }
+}
+
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .deliveryTime {
+    font-size: 10px;
+    font-weight: 600;
+    color: $white;
+    letter-spacing: 0.5px;
+    // text-transform: uppercase;
+  }
+
+  .deliveryLocation {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+
+    .locationIcon {
+      color: $white;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .locationText {
+      font-size: 13px;
+      font-weight: 500;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      max-width: 220px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (max-width: 768px) {
+        max-width: 140px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 100px;
+        font-size: 11px;
+      }
+    }
+
+    .dropdownIcon {
+      font-size: 12px;
+      color: #666;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .locationContainer {
+    margin-left: 8px;
+    
+    .deliveryTime {
+      font-size: 8px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .locationContainer {
+    margin-left: 4px;
+    padding: 2px 4px;
+    
+    .deliveryTime {
+      font-size: 7px;
+    }
+  }
+}
+
+// components/Header/Header.module.scss - Add these styles to your existing file
+
+.locationContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &.locationMissing {
+    .deliveryTime {
+      color: $white;
+    }
+
+    .locationIcon {
+      color: $white;
+    }
+
+    .locationText {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+
+  .deliveryTime {
+    font-size: 10px;
+    font-weight: 600;
+    color: $white;
+    letter-spacing: 0.5px;
+  }
+
+  .deliveryLocation {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+
+    .locationIcon {
+      color: $white;
+      font-size: 18px;
+      flex-shrink: 0;
+
+      &.missingIcon {
+        animation: pulse 2s ease-in-out infinite;
+      }
+    }
+
+    .locationText {
+      font-size: 13px;
+      font-weight: 500;
+      color: $white;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      max-width: 220px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (max-width: 768px) {
+        max-width: 140px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 100px;
+        font-size: 11px;
+      }
+    }
+
+    .dropdownIcon {
+      font-size: 12px;
+      color: $white;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .locationContainer {
+    margin-left: 8px;
+    
+    .deliveryTime {
+      font-size: 8px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .locationContainer {
+    margin-left: 4px;
+    padding: 2px 4px;
+    
+    .deliveryTime {
+      font-size: 7px;
     }
   }
 }

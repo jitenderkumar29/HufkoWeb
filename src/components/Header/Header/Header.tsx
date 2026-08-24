@@ -7,17 +7,39 @@ import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import AddressSelection, { AddressData } from '@/components/Address/AddressSelection/AddressSelection';
 
 const Header = () => {
   const router = useRouter();
   const [showLocationModal, setShowLocationModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [cartItems,] = useState(3);
+  const [cartItems] = useState(3);
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
+  
+  // State for address display - using "Location missing" as placeholder
+  const [address, setAddress] = useState<AddressData>({
+    country: '',
+    pincode: '',
+    fullAddress: 'Location missing'
+  });
 
   const toggleLocationModal = () => {
     setShowLocationModal(!showLocationModal);
+  };
+
+  const handleAddressConfirm = (addressData: AddressData) => {
+    setAddress({
+      country: addressData.country,
+      pincode: addressData.pincode,
+      fullAddress: addressData.fullAddress || `${addressData.pincode}, ${addressData.country}`
+    });
+    setShowLocationModal(false);
+    console.log('Address confirmed:', addressData);
+  };
+
+  const handleAddressClose = () => {
+    setShowLocationModal(false);
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -48,18 +70,24 @@ const Header = () => {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    
-    // Reset to home page with no query parameters
-    const params = new URLSearchParams();
-    // Remove all query parameters
     router.push('/', { scroll: false });
-    
-    // Force a re-render of HeaderCategory by dispatching a custom event
     window.dispatchEvent(new CustomEvent('logoClick'));
-    
-    // Alternatively, you can use a state management solution like Zustand or Context
-    // to trigger a reset in HeaderCategory
   };
+
+  // Format address display
+  const getDisplayAddress = () => {
+    if (address.fullAddress && address.fullAddress !== 'Location missing') {
+      const parts = address.fullAddress.split(',');
+      if (parts.length > 3) {
+        return `${parts[0]}, ${parts[1]}, ${parts[2]}`;
+      }
+      return address.fullAddress;
+    }
+    return 'Location missing';
+  };
+
+  // Check if location is set
+  const isLocationSet = address.fullAddress && address.fullAddress !== 'Location missing';
 
   return (
     <header className={styles.header}>
@@ -75,12 +103,15 @@ const Header = () => {
               priority
             />
           </Link>
-          <div className={styles.locationContainer} onClick={toggleLocationModal}>
+          <div 
+            className={`${styles.locationContainer} ${!isLocationSet ? styles.locationMissing : ''}`} 
+            onClick={toggleLocationModal}
+          >
             <div className={styles.deliveryTime}>Delivery in 10 minutes</div>
             <div className={styles.deliveryLocation}>
-              <FaMapMarkerAlt className={styles.locationIcon} />
+              <FaMapMarkerAlt className={`${styles.locationIcon} ${!isLocationSet ? styles.missingIcon : ''}`} />
               <span className={styles.locationText}>
-                B62, Pocket B, South City |, Sect..
+                {getDisplayAddress()}
                 <IoIosArrowDown className={styles.dropdownIcon} />
               </span>
             </div>
@@ -116,7 +147,8 @@ const Header = () => {
             <button className={styles.actionButton}>
               <span>Offer</span>
             </button>
-            <button className={styles.loginButton}><span>Login</span>
+            <button className={styles.loginButton}>
+              <span>Login</span>
             </button>
             <button className={styles.cartButton}>
               <ShoppingCart className={styles.cartIcon} />
@@ -129,23 +161,12 @@ const Header = () => {
         </div>
 
         {showLocationModal && (
-          <div className={styles.locationModal}>
-            <div className={styles.modalContent}>
-              <h3>Change Location</h3>
-              <button className={styles.detectLocationButton}>
-                Detect my location
-              </button>
-              <div className={styles.orDivider}>OR</div>
-              <input
-                type="text"
-                placeholder="Search delivery location"
-                className={styles.locationSearch}
-              />
-              <button className={styles.closeModal} onClick={toggleLocationModal}>
-                ×
-              </button>
-            </div>
-          </div>
+          <AddressSelection 
+            onConfirm={handleAddressConfirm}
+            onClose={handleAddressClose}
+            initialCountry={address.country || 'India'}
+            initialPincode={address.pincode}
+          />
         )}
       </div>
     </header>
