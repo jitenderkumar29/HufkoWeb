@@ -745,7 +745,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
 
                         <button
                             className={styles.detectLocationButton}
-                            // onClick={handleDetectLocation}
+                            onClick={handleDetectLocation}
                             disabled={isDetecting}
                         >
                             {isDetecting ? (

@@ -567,7 +567,7 @@
   .deliveryLocation {
     display: flex;
     align-items: center;
-    gap: 6px;
+    // gap: 6px;
     margin-top: 2px;
 
     .locationIcon {
@@ -669,7 +669,7 @@
   .deliveryLocation {
     display: flex;
     align-items: center;
-    gap: 6px;
+    // gap: 6px;
     margin-top: 2px;
 
     .locationIcon {
@@ -738,4 +738,21 @@
       font-size: 7px;
     }
   }
+}
+
+.flagIcon {
+  width: 20px;
+  height: 20px;
+  // border-radius: 50%;
+  object-fit: cover;
+  margin-right: 6px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.deliveryLocation {
+  display: flex;
+  align-items: center;
+  // gap: 4px;
+  // ... existing styles
 }

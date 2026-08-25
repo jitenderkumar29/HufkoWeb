@@ -79,70 +79,19 @@ export const FlowersCategories = [
 ];
 
 export const flowerCategoriesSubHeader: SubHeaderItem[] = [
-  { name: "All" },
-  { name: "Best Sellers" },
-  { name: "New Arrivals" },
-  { name: "Offers" },
-
-  // Flower Types
-  { name: "Roses" },
-  { name: "Lilies" },
-  { name: "Orchids" },
-  { name: "Carnations" },
-  { name: "Gerberas" },
-  { name: "Tulips" },
-  { name: "Sunflowers" },
-  { name: "Mixed Bouquets" },
-  { name: "Exotic Flowers" },
-
-  // Arrangements
-  { name: "Bouquets" },
-  { name: "Flower Baskets" },
-  { name: "Flower Boxes" },
-  { name: "Luxury Flowers" },
-  { name: "Hand Tied Bouquets" },
-
-  // Occasions
-  { name: "Birthday" },
-  { name: "Anniversary" },
-  { name: "Wedding" },
-  { name: "Congratulations" },
-  { name: "Love & Romance" },
-  { name: "Get Well Soon" },
-  { name: "Thank You" },
-  { name: "Sympathy" },
-  { name: "New Baby" },
-  { name: "Housewarming" },
-
-  // Plants
-  { name: "Indoor Plants" },
-  { name: "Outdoor Plants" },
-  { name: "Lucky Bamboo" },
-  { name: "Succulents" },
-  { name: "Money Plant" },
-  { name: "Flowering Plants" },
-  { name: "Bonsai" },
-
-  // Gifts
-  { name: "Cakes" },
-  { name: "Chocolates" },
-  { name: "Teddy Bears" },
-  { name: "Gift Hampers" },
-  { name: "Personalized Gifts" },
-  { name: "Greeting Cards" },
-
-  // Festivals
-  { name: "Valentine's Day" },
-  { name: "Mother's Day" },
-  { name: "Father's Day" },
-  { name: "Women's Day" },
-  { name: "Raksha Bandhan" },
-  { name: "Diwali" },
-  { name: "Christmas" },
-  { name: "New Year" },
-
-  // Services
-  { name: "Same Day Delivery" },
-  { name: "Midnight Delivery" },
-  { name: "Express Delivery" },
+  { name: "Festival", id: "festival_sub_header", url: "/festival", category: "flower" },
+  { name: "Global", id: "global_sub_header", url: "/global", category: "flower" },
+  { name: "Birthday", id: "birthday_sub_header", url: "/birthday", category: "flower" },
+  { name: "Occasions", id: "occasions_sub_header", url: "/occasions", category: "flower" },
+  { name: "Anniversary", id: "anniversary_sub_header", url: "/anniversary", category: "flower" },
+  { name: "Flowers", id: "flowers_sub_header", url: "/flowers", category: "flower" },
+  { name: "Cakes", id: "cakes_sub_header", url: "/cakes", category: "flower" },
+  { name: "Personalised", id: "personalised_sub_header", url: "/personalised", category: "flower" },
+  { name: "Plants", id: "plants_sub_header", url: "/plants", category: "flower" },
+  { name: "Chocolates", id: "chocolates_sub_header", url: "/chocolates", category: "flower" },
+  { name: "Lifestyle", id: "lifestyle_sub_header", url: "/lifestyle", category: "flower" },
+  { name: "Hatke", id: "hatke", url: "/hatke", category: "flower" },
+  { name: "LUXE", id: "luxe_sub_header", url: "/luxe", category: "flower" },
+  { name: "Hampers", id: "hampers_sub_header", url: "/hampers", category: "flower" },
+  { name: "Balloons", id: "balloons_sub_header", url: "/balloons", category: "flower" }
 ];
