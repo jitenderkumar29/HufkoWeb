@@ -1,0 +1,1025 @@
+@use "sass:map";
+@import '@/styles/variables.scss';
+
+// Variables specific to this component
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+$glass-hover: rgba(255, 255, 255, 0.15);
+
+// Main Container
+.detailsPage {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 1rem;
+  }
+}
+
+// Background Decorations
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+
+  &1 {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: -100px;
+    background: radial-gradient(circle, $secondary-color, transparent 70%);
+    animation: blobFloat 8s ease-in-out infinite;
+
+    @media (max-width: $breakpoint-md) {
+      width: 300px;
+      height: 300px;
+      top: -50px;
+      right: -50px;
+    }
+  }
+
+  &2 {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    left: -100px;
+    background: radial-gradient(circle, $button-red, transparent 70%);
+    animation: blobFloat 10s ease-in-out infinite reverse;
+
+    @media (max-width: $breakpoint-md) {
+      width: 250px;
+      height: 250px;
+      bottom: -50px;
+      left: -50px;
+    }
+  }
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+// Container
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+// Back Button
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: $glass-bg;
+  color: $white;
+  border: 1px solid $glass-border;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  &:hover {
+    // background: $glass-hover;
+    // transform: translateX(-4px);
+    // border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:active {
+    transform: translateX(-2px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Card
+.card {
+  background: $glass-bg;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid $glass-border;
+  animation: fadeInUp 0.6s ease-out;
+  box-shadow: $card-shadow;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Grid Layout
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+
+  @media (max-width: $breakpoint-lg) {
+    gap: 2rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+// Left Column - Content
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// Category Badge
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba($secondary-color, 0.15);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  width: fit-content;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: $secondary-color;
+  }
+
+  span {
+    color: $secondary-color;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+// Title
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: $white;
+  line-height: 1.2;
+  margin: 0;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 1.5rem;
+  }
+}
+
+// Description
+.description {
+  font-size: 1.125rem;
+  color: $gray-100;
+  line-height: 1.7;
+  margin: 0;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 1rem;
+  }
+}
+
+// Stats Grid
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: $glass-bg;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+}
+
+.statItem {
+  text-align: center;
+
+  .statValue {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $secondary-color;
+    margin-bottom: 0.25rem;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      font-size: 1rem;
+    }
+  }
+
+  .statLabel {
+    font-size: 0.875rem;
+    color: $gray-400;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// Features
+.featuresSection {
+  h3 {
+    color: $white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: $gray-100;
+  font-size: 1rem;
+
+  svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: $secondary-color;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 0.85rem;
+  }
+}
+
+// Right Column - Image
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imageCard {
+  width: 100%;
+  background: $glass-bg;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  border: 1px solid $glass-border;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0.75rem;
+    border-radius: 1rem;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    border-radius: 0.75rem;
+  }
+}
+
+// Action Buttons
+.actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+.primaryButton {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: $button-red;
+  color: $white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba($button-red, 0.4);
+
+  &:hover {
+    background: $button-red-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 28px rgba($button-red, 0.6);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.9rem;
+    padding: 0.625rem 1rem;
+  }
+}
+
+.secondaryButton {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: $glass-bg;
+  color: $white;
+  border: 1px solid $glass-border;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: $glass-hover;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.9rem;
+    padding: 0.625rem 1rem;
+  }
+}
+
+// No Category State
+.noCategory {
+  background: $glass-bg;
+  border-radius: 2rem;
+  padding: 3rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid $glass-border;
+  text-align: center;
+
+  h1 {
+    color: $white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.75rem;
+    }
+  }
+
+  p {
+    color: $gray-100;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 1rem;
+    }
+  }
+
+  .homeButton {
+    padding: 0.75rem 2rem;
+    background: $button-red;
+    color: $white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $button-red-hover;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba($button-red, 0.4);
+    }
+  }
+}
+
+// Loading Spinner
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: $white;
+  color: $white;
+}
+
+.loadingContent {
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  // border: 4px solid rgba(255, 255, 255, 0.3);
+  // border-top: 4px solid $secondary-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loadingText {
+  font-size: 1rem;
+  color: $gray-400;
+}
+
+
+// ============================================================
+// Franchise Navigation Sections
+// ============================================================
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  padding: 2rem 2rem;
+  background: $white;
+  color: $white;
+  scroll-margin-top: 80px;
+  animation: sectionFadeIn 0.5s ease-out;
+  
+  // Active section highlight
+  &.active {
+    // border-left: 4px solid $secondary-color;
+    // background: rgba($secondary-color, 0.03);
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 4rem 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    min-height: auto;
+    padding: 3rem 1rem;
+    scroll-margin-top: 70px;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 2.5rem 0.75rem;
+  }
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// ============================================================
+// Section Content
+// ============================================================
+
+.sectionContent {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+
+// ============================================================
+// Section Eyebrow
+// ============================================================
+
+.sectionEyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  // background: rgba($secondary-color, 0.12);
+  // border: 1px solid rgba($secondary-color, 0.25);
+  border-radius: 9999px;
+  color: $secondary-color;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+// ============================================================
+// Section Title
+// ============================================================
+
+.sectionTitle {
+  margin: 0 0 1rem;
+  color: $white;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  font-weight: 800;
+
+  @media (max-width: $breakpoint-lg) {
+    font-size: 2.25rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    font-size: 1.65rem;
+  }
+}
+
+
+// ============================================================
+// Section Description
+// ============================================================
+
+.sectionDescription {
+  max-width: 750px;
+  margin: 0 0 2.5rem;
+  color: $gray-100;
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
+// ============================================================
+// Locations
+// ============================================================
+
+.locationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.locationCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  min-height: 220px;
+  padding: 2rem;
+  background: $white;
+  // border: 1px solid $glass-border;
+  // border-radius: 1.5rem;
+  color: $white;
+  cursor: pointer;
+  // backdrop-filter: blur(12px);
+  // transition:
+  //   transform 0.3s ease,
+  //   background 0.3s ease,
+  //   border-color 0.3s ease,
+  //   box-shadow 0.3s ease;
+
+  svg {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 1.25rem;
+    color: $secondary-color;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 750;
+  }
+
+  p {
+    margin: 0;
+    color: $gray-400;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    // background: $glass-hover;
+    // border-color: rgba($secondary-color, 0.4);
+    // transform: translateY(-5px);
+    // box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $secondary-color;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    min-height: 180px;
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+// ============================================================
+// Generic Information Card
+// ============================================================
+
+.infoCard {
+  width: 100%;
+  padding: 2rem;
+  background: $glass-bg;
+  // border: 1px solid $glass-border;
+  // border-radius: 1.5rem;
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+
+  svg {
+    margin-bottom: 1rem;
+    color: $secondary-color;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    color: $white;
+    font-size: 1.35rem;
+    font-weight: 750;
+  }
+
+  p {
+    margin: 0;
+    color: $gray-400;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  &:hover {
+    // background: $glass-hover;
+    // border-color: rgba($secondary-color, 0.3);
+    // transform: translateY(-4px);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+// ============================================================
+// Gallery
+// ============================================================
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.galleryItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 1.5rem;
+  background: $glass-bg;
+  border: 1px solid $glass-border;
+  border-radius: 1.25rem;
+  color: $gray-400;
+  font-size: 1rem;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+
+  &:hover {
+    background: $glass-hover;
+    border-color: rgba($secondary-color, 0.3);
+    transform: translateY(-4px);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    min-height: 180px;
+  }
+}
+
+
+// ============================================================
+// Services
+// ============================================================
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  .infoCard {
+    height: 100%;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
+// ============================================================
+// Brands
+// ============================================================
+
+.brandGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+
+  .infoCard {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
+// ============================================================
+// Food & Beverage Content
+// ============================================================
+
+.foodBeverageContent {
+  padding: 4rem 2rem;
+  max-width: $max-width;
+  margin: 0 auto;
+  color: $white;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: $gray-100;
+    line-height: 1.7;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 2rem 1rem;
+    
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+// ============================================================
+// 404 Not Found - Full Page
+// ============================================================
+
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: $primary-color;
+  width: 100%;
+}
+
+.notFoundContent {
+  text-align: center;
+  max-width: 600px;
+}
+
+.notFoundTitle {
+  font-size: 6rem;
+  font-weight: 900;
+  color: $secondary-color;
+  margin: 0;
+  line-height: 1;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 4rem;
+  }
+}
+
+.notFoundSubtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $white;
+  margin: 1rem 0 0.5rem;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.25rem;
+  }
+}
+
+.notFoundDescription {
+  color: $gray-400;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.95rem;
+  }
+}
+
+
+// ============================================================
+// Responsive Section Spacing
+// ============================================================
+
+@media (prefers-reduced-motion: reduce) {
+  .section,
+  .locationCard,
+  .infoCard,
+  .galleryItem {
+    animation: none;
+    transition: none;
+  }
+}
+
+// ============================================================
+// Error Container (instead of 404)
+// ============================================================
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: $primary-color;
+  width: 100%;
+}
+
+.errorContent {
+  text-align: center;
+  max-width: 600px;
+}
+
+.errorTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: $secondary-color;
+  margin: 0 0 1rem;
+  line-height: 1;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 2.5rem;
+  }
+}
+
+.errorDescription {
+  color: $gray-100;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+
+  @media (max-width: $breakpoint-md) {
+    font-size: 0.95rem;
+  }
+}

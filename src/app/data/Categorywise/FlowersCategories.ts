@@ -79,6 +79,7 @@ export const FlowersCategories = [
 ];
 
 export const flowerCategoriesSubHeader: SubHeaderItem[] = [
+  { name: "All", url: "/", category: "flower" },
   { name: "Festival", id: "festival_sub_header", url: "/festival", category: "flower" },
   { name: "Global", id: "global_sub_header", url: "/global", category: "flower" },
   { name: "Birthday", id: "birthday_sub_header", url: "/birthday", category: "flower" },

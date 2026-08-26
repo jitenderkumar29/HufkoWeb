@@ -596,7 +596,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
 
                     {/* Description */}
                     <div className={styles.description}>
-                        <p>Find the perfect gifts for you or your loved ones - it's like magic!</p>
+                        <p>Enjoy your premium shopping for your ultra luxury lifestyle -It's like magic</p>
                     </div>
 
                     {/* Country Dropdown */}
@@ -690,7 +690,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                         <div className={styles.inputWrapper} ref={suggestionsRef}>
                             <input
                                 type="text"
-                                placeholder={isDetecting ? "Detecting location..." : `Enter pincode for ${selectedCountry.name}`}
+                                placeholder={isDetecting ? "Detecting location..." : `Enter pincode or City for ${selectedCountry.name}`}
                                 value={pincode}
                                 onChange={(e) => handlePincodeChange(e.target.value)}
                                 className={`${styles.pincodeInput} ${suggestions.length > 0 && showSuggestions ? styles.hasSuggestions : ''}`}

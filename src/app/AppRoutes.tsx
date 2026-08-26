@@ -1,54 +1,114 @@
 'use client';
-import React, { Suspense, FC } from 'react';
-import dynamic from 'next/dynamic';
+import React, { Suspense, FC, useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
 
-const NotFound: FC = () => <div>404 - Page Not Found</div>;
+// Simple 404 component
+const NotFound: FC = () => (
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    minHeight: '100vh',
+    color: 'white',
+    background: '#055346',
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    flexDirection: 'column',
+    gap: '1rem'
+  }}>
+    <div>404</div>
+    <div style={{ fontSize: '1rem', opacity: 0.7 }}>Page Not Found</div>
+  </div>
+);
 
-// Define type for route mapping
-interface Page {
-  Link: string;
-  View: React.ComponentType;
-}
+// Create components with dynamic imports
+const HomePage = dynamic(
+  () => import('@/components/HomePage/HomePage'),
+  { 
+    ssr: false,
+    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Home...</div>
+  }
+);
 
-// ✅ Use `dynamic()` instead of `lazy()`
-const pages: Page[] = [
-  {
-    Link: '/',
-    View: dynamic(() => import('@/components/HomePage/HomePage'), { ssr: false }),
-  },
-  {
-    Link: '/all-grocery-tabwise-Page',
-    View: dynamic(() => import('@/components/Grocery/GroceryAllTabWisePage/GroceryAllTabWisePage'), { ssr: false }),
-  },
-  {
-    Link: '/grocery-product-details',
-    View: dynamic(() => import('@/components/Grocery/GroceryProductDetails/GroceryProductDetails'), { ssr: false }),
-  },
-  // {
-  //   Link: '/electronics',
-  //   View: dynamic(() => import('@/components/Shopping/Electronics/ElectronicsPage/ElectronicsPage'), { ssr: false }),
-  // },
-];
+const GroceryAllTabWisePage = dynamic(
+  () => import('@/components/Grocery/GroceryAllTabWisePage/GroceryAllTabWisePage'),
+  { 
+    ssr: false,
+    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Grocery...</div>
+  }
+);
+
+const GroceryProductDetails = dynamic(
+  () => import('@/components/Grocery/GroceryProductDetails/GroceryProductDetails'),
+  { 
+    ssr: false,
+    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Product...</div>
+  }
+);
+
+const FranchiseDetailsPage = dynamic(
+  () => import('@/components/HomePage/FranchiseHufko/FranchiseDetailsPage/FranchiseDetailsPage'),
+  { 
+    ssr: false,
+    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Franchise Details...</div>
+  }
+);
+
+// Map routes to components
+const routeMap: Record<string, React.ComponentType> = {
+  '/': HomePage,
+  '/all-grocery-tabwise-Page': GroceryAllTabWisePage,
+  '/grocery-product-details': GroceryProductDetails,
+  '/franchise-details': FranchiseDetailsPage,
+};
 
 const AppRoutes: FC = () => {
-  const [, setIsLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000); // Simulate loading for 3 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
+  const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
-  const cleanPath = pathname.replace(/\/+$/, '') || '/';
+  
+  const cleanPath = pathname || '/';
 
-  const matchedPage = pages.find((page) => page.Link === cleanPath);
-  const View = matchedPage?.View ?? NotFound;
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        minHeight: '100vh',
+        color: 'white',
+        background: '#055346'
+      }}>
+        Loading...
+      </div>
+    );
+  }
+
+  // Get the component for this route
+  const View = routeMap[cleanPath];
+
+  // If no component found, show 404
+  if (!View) {
+    return <NotFound />;
+  }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        minHeight: '100vh',
+        color: 'white',
+        background: '#055346'
+      }}>
+        Loading...
+      </div>
+    }>
       <View />
     </Suspense>
   );

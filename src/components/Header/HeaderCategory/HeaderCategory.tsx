@@ -32,7 +32,7 @@ import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
-import FranchiseHufko from '@/components/HomePage/FranchiseHufko/FranchiseHufko';
+import FranchiseHufkoSlide from '@/components/HomePage/FranchiseHufko/FranchiseHufkoSlide';
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
 import SubSubHeader from '../SubSubHeader/SubSubHeader';
 import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionRoundCarousel/FashionRoundCarousel';
@@ -364,12 +364,14 @@ const HeaderCategory: React.FC = () => {
               onMoreClick={() => console.log('More clicked!')}
             />
             <DownloadApp />
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="World's Largest #1"
               highlightText="AI Powered"
               description="Enjoy Premium Food and Dining at Premium Restaurants Fast and Easy Online Ordering on the HUFKO App"
+              franchiseCategory="home_food_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
@@ -403,7 +405,7 @@ const HeaderCategory: React.FC = () => {
               onSlideChange={(index) => console.log('Slide changed to:', index)}
             >
               <span style={{ color: '#ffffff' }}> Premium Instant Delivery Technology Platform</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
           </div>
         )}
 
@@ -439,12 +441,14 @@ const HeaderCategory: React.FC = () => {
               onMoreClick={() => console.log('More clicked!')}
             />
             <DownloadApp />
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="Own a World's Largest #1"
               highlightText="Premium Restaurant Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="food_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
@@ -472,7 +476,7 @@ const HeaderCategory: React.FC = () => {
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
           </div>
         )}
 
@@ -511,7 +515,7 @@ const HeaderCategory: React.FC = () => {
               <GroceryProductList category="Cold Drinks, & Juices" grocery={ColdDrinksJuicesData} groceryCategory="cold" />
               <GroceryProductList category="Candies & Gums" grocery={CandiesGumsData} groceryCategory="candies" />
             </div>
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="Own a World's Largest #1"
@@ -544,7 +548,7 @@ const HeaderCategory: React.FC = () => {
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
           </div>
         )}
 
@@ -589,7 +593,7 @@ const HeaderCategory: React.FC = () => {
                   showArrow={true}
                 />
 
-                <FranchiseHufko
+                <FranchiseHufkoSlide
                   badgeText="World's Largest Instant Delivery App Platform"
                   badgeIcon={<Shield size={16} />}
                   heading="Own a World's Largest #1"
@@ -622,7 +626,7 @@ const HeaderCategory: React.FC = () => {
                   onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
                 >
                   <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-                </FranchiseHufko>
+                </FranchiseHufkoSlide>
               </div>
             )}
             {/* Electronics Sub-Sub Categories */}
@@ -896,7 +900,7 @@ const HeaderCategory: React.FC = () => {
               onCategoryClick={(category) => console.log('Category clicked:', category.title)}
               onViewAllClick={() => console.log('View all clicked')}
             />
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="Own a World's Largest #1"
@@ -929,7 +933,7 @@ const HeaderCategory: React.FC = () => {
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
             <CustomerTestimonial
               testimonials={customerTestimonialDataFlower}
               title="Customer Testimonial"
@@ -965,7 +969,7 @@ const HeaderCategory: React.FC = () => {
               showPlayStore={false}
               muted={true}
             />
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="Own a World's Largest #1"
@@ -998,7 +1002,7 @@ const HeaderCategory: React.FC = () => {
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
           </div>
         )}
 
@@ -1026,7 +1030,7 @@ const HeaderCategory: React.FC = () => {
               showPlayStore={false}
               muted={true}
             />
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="Own a World's Largest #1"
@@ -1059,7 +1063,7 @@ const HeaderCategory: React.FC = () => {
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
           </div>
         )}
 
@@ -1091,7 +1095,7 @@ const HeaderCategory: React.FC = () => {
               title="Wholesale Categories"
               categories={WholesaleCategories}
             />
-            <FranchiseHufko
+            <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
               badgeIcon={<Shield size={16} />}
               heading="Own a World's Largest #1"
@@ -1124,7 +1128,7 @@ const HeaderCategory: React.FC = () => {
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
               <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
-            </FranchiseHufko>
+            </FranchiseHufkoSlide>
           </div>
         )}
       </div>

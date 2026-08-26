@@ -1,0 +1,899 @@
+@use "sass:map";
+@import '@/styles/variables.scss';
+
+// ============================================================
+// Component Variables
+// ============================================================
+
+$card-radius: 20px;
+$transition-speed: 0.4s;
+
+$border-radius-sm: 12px;
+$border-radius-md: 16px;
+$border-radius-lg: 20px;
+
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+
+// ============================================================
+// Main Container
+// ============================================================
+
+.cardFranchise {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  padding: $spacing-xl;
+
+  width: 100%;
+  min-height: 280px;
+
+  background: $white;
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform $transition-speed ease,
+    background $transition-speed ease,
+    border-color $transition-speed ease,
+    box-shadow $transition-speed ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $secondary-color;
+  }
+
+  &:focus-within {
+    outline: 2px solid $secondary-color;
+    outline-offset: 4px;
+  }
+
+
+  // ==========================================================
+  // IMAGE LEFT
+  // Video on LEFT
+  // ==========================================================
+
+  &.imageLeft {
+    flex-direction: row;
+
+    .mediaSection {
+      flex: 0 0 45%;
+      max-width: 45%;
+      width: 45%;
+    }
+
+    .contentSection {
+      flex: 1 1 55%;
+      min-width: 0;
+    }
+  }
+
+
+  // ==========================================================
+  // IMAGE RIGHT
+  // Video on RIGHT
+  // ==========================================================
+
+  &.imageRight {
+    flex-direction: row-reverse;
+
+    .mediaSection {
+      flex: 0 0 45%;
+      max-width: 45%;
+      width: 45%;
+    }
+
+    .contentSection {
+      flex: 1 1 55%;
+      min-width: 0;
+    }
+
+    .decorativeLine {
+      background: linear-gradient(
+        270deg,
+        $secondary-color,
+        transparent
+      );
+    }
+
+    &.bgGradient {
+      .decorativeLine {
+        background: linear-gradient(
+          270deg,
+          $gold-color,
+          transparent
+        );
+      }
+    }
+  }
+
+
+  // ==========================================================
+  // PRIMARY VARIANT
+  // ==========================================================
+
+  &.primary {
+    background: $white;
+
+    .title {
+      color: $gray-900;
+    }
+
+    .featureItem {
+      color: $gray-700;
+    }
+
+    .titleIcon {
+      background: rgba($secondary-color, 0.15);
+      color: $secondary-color;
+    }
+  }
+
+
+  // ==========================================================
+  // SECONDARY VARIANT
+  // ==========================================================
+
+  &.secondary {
+    background: linear-gradient(
+      135deg,
+      #fff5f5 0%,
+      #fce4e4 100%
+    );
+
+    border: 1px solid rgba($button-red, 0.2);
+
+    .title {
+      color: $primary-color-dark;
+    }
+
+    .featureItem {
+      color: $gray-700;
+    }
+
+    .titleIcon {
+      background: rgba($button-red, 0.15);
+      color: $button-red;
+    }
+
+    .featureIcon {
+      color: $button-red;
+    }
+
+    .decorativeLine {
+      background: linear-gradient(
+        90deg,
+        $button-red,
+        transparent
+      );
+    }
+  }
+
+
+  // ==========================================================
+  // BACKGROUND - LIGHT
+  // ==========================================================
+
+  &.bgLight {
+    background: $white;
+  }
+
+
+  // ==========================================================
+  // BACKGROUND - DARK
+  // ==========================================================
+
+  &.bgDark {
+    background: $primary-color-dark;
+
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.3);
+
+    .title {
+      color: $white;
+    }
+
+    .featureItem {
+      color: rgba($white, 0.85);
+    }
+
+    .featureIcon {
+      color: $secondary-color;
+    }
+
+    .titleIcon {
+      background: rgba($secondary-color, 0.2);
+      color: $secondary-color;
+    }
+
+    .decorativeLine {
+      background: linear-gradient(
+        90deg,
+        $secondary-color,
+        transparent
+      );
+    }
+
+    .videoBadge {
+      background: rgba($secondary-color, 0.9);
+    }
+  }
+
+
+  // ==========================================================
+  // BACKGROUND - GRADIENT
+  // ==========================================================
+
+  &.bgGradient {
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $primary-color-dark 100%
+    );
+
+    box-shadow:
+      0 10px 40px rgba($primary-color, 0.3);
+
+    .title {
+      color: $white;
+    }
+
+    .featureItem {
+      color: rgba($white, 0.9);
+    }
+
+    .featureIcon {
+      color: $gold-color;
+    }
+
+    .titleIcon {
+      background: rgba($gold-color, 0.2);
+      color: $gold-color;
+    }
+
+    .decorativeLine {
+      background: linear-gradient(
+        90deg,
+        $gold-color,
+        transparent
+      );
+    }
+
+    .videoBadge {
+      background: rgba($gold-color, 0.9);
+      color: $primary-color-dark;
+    }
+  }
+}
+
+
+// ============================================================
+// Media Section
+// ============================================================
+
+.mediaSection {
+  position: relative;
+  min-width: 0;
+}
+
+
+// ============================================================
+// Video Wrapper
+// ============================================================
+
+.videoWrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  border-radius: $border-radius-md;
+
+  overflow: hidden;
+
+  background: rgba($black, 0.05);
+
+  box-shadow: $box-shadow-light-1;
+
+  transition:
+    transform $transition-speed ease,
+    box-shadow $transition-speed ease;
+}
+
+
+// ============================================================
+// Video Player
+// ============================================================
+
+.videoPlayer {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: $border-radius-md;
+}
+
+
+// ============================================================
+// Video Badge
+// ============================================================
+
+.videoBadge {
+  position: absolute;
+
+  top: $spacing-md;
+  right: $spacing-md;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: $spacing-sm;
+
+  padding: $spacing-sm $spacing-md;
+
+  background: rgba($black, 0.6);
+
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba($white, 0.1);
+
+  border-radius: 9999px;
+
+  color: $white;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+// ============================================================
+// Play Button Overlay
+// ============================================================
+
+.playOverlay {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  padding: 0;
+
+  border: 2px solid rgba($white, 0.3);
+
+  border-radius: 50%;
+
+  background: rgba($white, 0.2);
+
+  backdrop-filter: blur(4px);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba($white, 0.3);
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.1);
+  }
+
+  &:active {
+    transform:
+      translate(-50%, -50%)
+      scale(0.95);
+  }
+
+  svg {
+    width: 28px;
+    height: 28px;
+
+    color: $white;
+
+    margin-left: 4px;
+  }
+}
+
+
+// ============================================================
+// Content Section
+// ============================================================
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+
+  gap: $spacing-md;
+
+  min-width: 0;
+}
+
+
+// ============================================================
+// Title Wrapper
+// ============================================================
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+
+  gap: $spacing-md;
+
+  margin-bottom: $spacing-sm;
+}
+
+
+// ============================================================
+// Title Icon
+// ============================================================
+
+.titleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba($secondary-color, 0.1);
+
+  color: $secondary-color;
+
+  transition:
+    transform $transition-speed ease,
+    background $transition-speed ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cardFranchise:hover & {
+    transform:
+      rotate(10deg)
+      scale(1.05);
+  }
+}
+
+
+// ============================================================
+// Title
+// ============================================================
+
+.title {
+  margin: 0;
+
+  color: $title-color;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: -0.3px;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.95rem;
+  }
+}
+
+
+// ============================================================
+// Features List
+// ============================================================
+
+.featuresList {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: $spacing-sm;
+}
+
+
+// ============================================================
+// Feature Item
+// ============================================================
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+
+  gap: $spacing-md;
+
+  font-size: 0.9rem;
+
+  color: $gray-700;
+
+  line-height: 1.6;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.8rem;
+    gap: $spacing-sm;
+  }
+}
+
+
+// ============================================================
+// Feature Icon
+// ============================================================
+
+.featureIcon {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: $secondary-color;
+
+  transition:
+    transform 0.3s ease;
+
+  .featureItem:hover & {
+    transform: scale(1.1);
+  }
+}
+
+
+// ============================================================
+// Decorative Line
+// ============================================================
+
+.decorativeLine {
+  width: 60px;
+  height: 3px;
+
+  margin-top: $spacing-sm;
+
+  background: linear-gradient(
+    90deg,
+    $secondary-color,
+    transparent
+  );
+
+  border-radius: 9999px;
+
+  transition:
+    width 0.3s ease;
+
+  .cardFranchise:hover & {
+    width: 100px;
+  }
+}
+
+
+// ============================================================
+// RESPONSIVE - TABLET
+// ============================================================
+
+@media (max-width: $breakpoint-md) {
+
+  .cardFranchise {
+    flex-direction: column !important;
+
+    width: 100%;
+
+    padding: $spacing-lg;
+
+    gap: $spacing-lg;
+
+    min-height: auto;
+
+
+    // --------------------------------------------------------
+    // Both left and right layouts become vertical
+    // --------------------------------------------------------
+
+    &.imageLeft,
+    &.imageRight {
+      flex-direction: column !important;
+
+      .mediaSection {
+        width: 100%;
+
+        flex: 0 0 auto;
+
+        max-width: 100%;
+      }
+
+      .contentSection {
+        width: 100%;
+
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+
+  .mediaSection {
+    width: 100%;
+
+    flex: 0 0 auto;
+
+    max-width: 100%;
+  }
+
+
+  .videoWrapper {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    max-height: 300px;
+  }
+
+
+  .contentSection {
+    width: 100%;
+  }
+
+
+  .title {
+    font-size: 1rem;
+  }
+
+
+  .featureItem {
+    font-size: 0.85rem;
+  }
+}
+
+
+// ============================================================
+// RESPONSIVE - SMALL TABLET / MOBILE
+// ============================================================
+
+@media (max-width: $breakpoint-sm) {
+
+  .cardFranchise {
+    padding: $spacing-md;
+
+    gap: $spacing-md;
+
+    border-radius: $border-radius-md;
+
+    min-height: auto;
+  }
+
+
+  .videoWrapper {
+    border-radius: $border-radius-sm;
+
+    max-height: 220px;
+  }
+
+
+  .videoPlayer {
+    border-radius: $border-radius-sm;
+  }
+
+
+  .videoBadge {
+    top: $spacing-sm;
+    right: $spacing-sm;
+
+    padding:
+      $spacing-xs
+      $spacing-sm;
+
+    font-size: 0.6rem;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+
+  .playOverlay {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+
+  .titleWrapper {
+    gap: $spacing-sm;
+  }
+
+
+  .titleIcon {
+    width: 28px;
+    height: 28px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+
+  .featuresList {
+    gap: $spacing-xs;
+  }
+
+
+  .featureItem {
+    font-size: 0.75rem;
+
+    gap: $spacing-sm;
+  }
+
+
+  .featureIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .decorativeLine {
+    width: 40px;
+    height: 2px;
+
+    .cardFranchise:hover & {
+      width: 60px;
+    }
+  }
+}
+
+
+// ============================================================
+// RESPONSIVE - EXTRA SMALL
+// ============================================================
+
+@media (max-width: $breakpoint-xs) {
+
+  .cardFranchise {
+    padding: $spacing-sm;
+
+    border-radius: $border-radius-sm;
+
+    gap: $spacing-sm;
+  }
+
+
+  .videoWrapper {
+    max-height: 180px;
+  }
+
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+
+  .featureItem {
+    font-size: 0.7rem;
+  }
+
+
+  .videoBadge {
+    font-size: 0.5rem;
+
+    padding:
+      2px
+      $spacing-sm;
+  }
+}
+
+
+// ============================================================
+// REDUCED MOTION
+// ============================================================
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cardFranchise,
+  .videoWrapper,
+  .featureIcon,
+  .decorativeLine,
+  .titleIcon,
+  .playOverlay {
+    transition: none !important;
+  }
+
+
+  .cardFranchise:hover {
+    transform: none !important;
+  }
+
+
+  .playOverlay:hover {
+    transform:
+      translate(-50%, -50%)
+      scale(1) !important;
+  }
+}
+
+
+// ============================================================
+// DARK MODE SUPPORT
+// ============================================================
+
+@media (prefers-color-scheme: dark) {
+
+  .cardFranchise:not(.bgLight):not(.bgDark):not(.bgGradient) {
+    background: $gray-900;
+
+    border-color: $gray-700;
+
+
+    .title {
+      color: $white;
+    }
+
+
+    .featureItem {
+      color: rgba($white, 0.85);
+    }
+
+
+    .featureIcon {
+      color: $secondary-color;
+    }
+
+
+    .titleIcon {
+      background: rgba($secondary-color, 0.2);
+
+      color: $secondary-color;
+    }
+
+
+    .decorativeLine {
+      background: linear-gradient(
+        90deg,
+        $secondary-color,
+        transparent
+      );
+    }
+  }
+}
