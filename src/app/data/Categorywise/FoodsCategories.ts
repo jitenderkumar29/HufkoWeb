@@ -733,6 +733,8 @@ export const FoodsCategories = [
 
 export const foodCategoriesSubHeader: SubHeaderItem[] = [
   { name: "All" },
+  { name: "Order Now " },
+  { name: "Dine Out" },
   { name: "Popular" },
   { name: "Offers" },
   { name: "Breakfast" },

@@ -11,7 +11,7 @@ const NotFound: FC = () => (
     alignItems: 'center', 
     minHeight: '100vh',
     color: 'white',
-    background: '#055346',
+    background: '#530605',
     fontSize: '2rem',
     fontWeight: 'bold',
     flexDirection: 'column',
@@ -22,37 +22,25 @@ const NotFound: FC = () => (
   </div>
 );
 
-// Create components with dynamic imports
+// Create components with dynamic imports (no loading fallback)
 const HomePage = dynamic(
   () => import('@/components/HomePage/HomePage'),
-  { 
-    ssr: false,
-    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Home...</div>
-  }
+  { ssr: false }
 );
 
 const GroceryAllTabWisePage = dynamic(
   () => import('@/components/Grocery/GroceryAllTabWisePage/GroceryAllTabWisePage'),
-  { 
-    ssr: false,
-    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Grocery...</div>
-  }
+  { ssr: false }
 );
 
 const GroceryProductDetails = dynamic(
   () => import('@/components/Grocery/GroceryProductDetails/GroceryProductDetails'),
-  { 
-    ssr: false,
-    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Product...</div>
-  }
+  { ssr: false }
 );
 
 const FranchiseDetailsPage = dynamic(
   () => import('@/components/HomePage/FranchiseHufko/FranchiseDetailsPage/FranchiseDetailsPage'),
-  { 
-    ssr: false,
-    loading: () => <div style={{ padding: '2rem', textAlign: 'center', color: 'white', background: '#055346', minHeight: '100vh' }}>Loading Franchise Details...</div>
-  }
+  { ssr: false }
 );
 
 // Map routes to components
@@ -74,18 +62,7 @@ const AppRoutes: FC = () => {
   }, []);
 
   if (!isMounted) {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        minHeight: '100vh',
-        color: 'white',
-        background: '#055346'
-      }}>
-        Loading...
-      </div>
-    );
+    return null;
   }
 
   // Get the component for this route
@@ -97,18 +74,7 @@ const AppRoutes: FC = () => {
   }
 
   return (
-    <Suspense fallback={
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        minHeight: '100vh',
-        color: 'white',
-        background: '#055346'
-      }}>
-        Loading...
-      </div>
-    }>
+    <Suspense fallback={null}>
       <View />
     </Suspense>
   );

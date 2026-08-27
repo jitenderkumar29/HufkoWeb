@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, ReactNode, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Users, IndianRupee, Clock, ArrowRight, LucideIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, IndianRupee, Clock, ArrowRight, LucideIcon } from 'lucide-react';
 import styles from './FranchiseHufkoSlide.module.scss';
 
 // Types
@@ -69,10 +69,9 @@ export interface FranchiseHufkoProps {
   // Swiper settings
   autoPlayInterval?: number;
   showDots?: boolean;
-  showArrows?: boolean;
   
   // Callbacks
-  onButtonClick?: (buttonIndex: number, button: ButtonItem) => void; // Updated to include button
+  onButtonClick?: (buttonIndex: number, button: ButtonItem) => void;
   onBadgeClick?: (badge: BadgeItem) => void;
   onSlideChange?: (index: number) => void;
   
@@ -106,7 +105,6 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
   waveColor = "white",
   autoPlayInterval = 3000,
   showDots = true,
-  showArrows = true,
   onButtonClick,
   onBadgeClick,
   onSlideChange,
@@ -116,7 +114,6 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
   const router = useRouter();
   const sectionRef = useRef<HTMLElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Prepare images array with consistent dimensions
@@ -160,9 +157,7 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
         clearInterval(autoPlayTimerRef.current);
       }
       autoPlayTimerRef.current = setInterval(() => {
-        if (!isHovering) {
-          setCurrentSlide((prev) => (prev + 1) % totalSlides);
-        }
+        setCurrentSlide((prev) => (prev + 1) % totalSlides);
       }, autoPlayInterval);
     };
 
@@ -173,25 +168,13 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
         clearInterval(autoPlayTimerRef.current);
       }
     };
-  }, [isMultiImage, totalSlides, autoPlayInterval, isHovering]);
+  }, [isMultiImage, totalSlides, autoPlayInterval]);
 
   useEffect(() => {
     if (onSlideChange) {
       onSlideChange(currentSlide);
     }
   }, [currentSlide, onSlideChange]);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  const goToPrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const goToNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
 
   const defaultStats: StatItem[] = [
     { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
@@ -223,32 +206,24 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
 
   const badges = customBadges || defaultBadges;
 
-  // ✅ FIXED: Updated handleButtonClick with proper callback handling
   const handleButtonClick = (index: number, button: ButtonItem) => {
-    // First, call the onButtonClick callback if provided (for logging, analytics, etc.)
     if (onButtonClick) {
       onButtonClick(index, button);
     }
 
-    // Check if button has custom onClick - this takes priority
     if (button.onClick) {
       button.onClick();
       return;
     }
 
-    // Check if button has a link
     if (button.link) {
       router.push(button.link);
       return;
     }
 
-    // Default behavior: For "More" button or any button with label "More"
     if (button.label.toLowerCase() === 'more') {
-      // Navigate to details page with franchiseCategory as query parameter
       router.push(`${detailsPagePath}?category=${encodeURIComponent(franchiseCategory)}`);
     }
-    // For other buttons (like "Order Now"), do nothing or you can add other default behaviors
-    // The onButtonClick callback already handled logging
   };
 
   const getBadgePositionClass = (position: string): string => {
@@ -313,14 +288,6 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
               <p className={styles.description}>{description}</p>
             )}
 
-            {/* Display franchise category if provided */}
-            {/* {franchiseCategory && (
-              <div className={styles.franchiseCategory}>
-                <span className={styles.categoryLabel}>Category:</span>
-                <span className={styles.categoryValue}>{franchiseCategory}</span>
-              </div>
-            )} */}
-
             {buttons.length > 0 && (
               <div className={styles.actions}>
                 {buttons.map((button, index) => (
@@ -352,8 +319,6 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
 
           <div 
             className={`${styles.imageWrapper} ${styles.animateOnScroll}`}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
           >
             <div className={styles.imageCard}>
               <div className={styles.swiperContainer}>
@@ -361,48 +326,27 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
                   className={styles.swiperTrack}
                   style={{ 
                     transform: `translateX(-${currentSlide * 100}%)`,
-                    transition: 'transform 0.5s ease-in-out'
+                    transition: 'none'
                   }}
                 >
                   {normalizedImages.map((image, index) => (
                     <div key={index} className={styles.swiperSlide}>
-                      <div className={styles.imageWrapperFixed}>
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          width={image.displayWidth || 600}
-                          height={image.displayHeight || 400}
-                          className={styles.imageFixed}
-                          priority={index === 0}
-                          style={{
-                            objectFit: 'contain',
-                            width: '100%',
-                            height: '100%',
-                          }}
-                        />
-                      </div>
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        width={image.displayWidth || 600}
+                        height={image.displayHeight || 400}
+                        className={styles.imageFixed}
+                        priority={index === 0}
+                        style={{
+                          objectFit: 'cover',
+                          width: '100%',
+                          height: '100%',
+                        }}
+                      />
                     </div>
                   ))}
                 </div>
-
-                {isMultiImage && showArrows && (
-                  <>
-                    <button
-                      className={`${styles.swiperArrow} ${styles.swiperArrowLeft}`}
-                      onClick={goToPrevSlide}
-                      aria-label="Previous slide"
-                    >
-                      <ChevronLeft size={24} />
-                    </button>
-                    <button
-                      className={`${styles.swiperArrow} ${styles.swiperArrowRight}`}
-                      onClick={goToNextSlide}
-                      aria-label="Next slide"
-                    >
-                      <ChevronRight size={24} />
-                    </button>
-                  </>
-                )}
               </div>
 
               {isMultiImage && showDots && (
@@ -411,7 +355,7 @@ const FranchiseHufkoSlide: React.FC<FranchiseHufkoProps> = ({
                     <button
                       key={index}
                       className={`${styles.swiperDot} ${currentSlide === index ? styles.swiperDotActive : ''}`}
-                      onClick={() => goToSlide(index)}
+                      onClick={() => setCurrentSlide(index)}
                       aria-label={`Go to slide ${index + 1}`}
                     />
                   ))}

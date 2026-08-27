@@ -8,7 +8,7 @@ import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories, groceryCategoriesSubHeader } from '@/app/data/Categorywise/GroceryCategories';
 import HeroBannerAll from '@/components/HomePage/HeroBannerAll/HeroBannerAll';
 import { ShopingHeroBannerData } from '@/app/data/HeroBannerwise/ShopingHero';
-import { FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
+import { FoodDineOutCollections, FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
 import { GroceryHeroBannerData } from '@/app/data/HeroBannerwise/GroceryHero';
 import { FlowerHeroBannerData } from '@/app/data/HeroBannerwise/FlowerHero';
 import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
@@ -49,6 +49,7 @@ import HeroBannerLeftContent from '@/components/Shopping/HeroBanner/HeroBannerLe
 import ProductCategoryCardHalfDynamic from '@/components/Shopping/ItemListDesigns/ProductCategoryCardHalfDynamic/ProductCategoryCardHalfDynamic';
 import CustomerTestimonial from '@/components/Shopping/ItemListDesigns/CustomerTestimonial/CustomerTestimonial';
 import CategoryListCard from '@/components/Shopping/ItemListDesigns/CategoryListCard/CategoryListCard';
+import FoodDineOutCard from '@/components/FoodDelivery/FoodDineOutCard/FoodDineOutCard';
 
 interface CategoryItem {
   id: string;
@@ -399,7 +400,6 @@ const HeaderCategory: React.FC = () => {
               waveColor="white"
               autoPlayInterval={3000}
               showDots={true}
-              showArrows={true}
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
               onSlideChange={(index) => console.log('Slide changed to:', index)}
@@ -421,7 +421,18 @@ const HeaderCategory: React.FC = () => {
               banners={FoodHeroBannerLeftContent}
               defaultAlign="left"
             />
-            <AllCategory categories={FoodsCategories} />
+            <div className={styles.categoryGap}>
+              <AllCategory categories={FoodsCategories} />
+            </div>
+            <FoodDineOutCard
+              items={FoodDineOutCollections}
+              title="Dine Out Collections Nearby You"
+              viewAllLink="/collections"
+              viewAllText="View All"
+              autoPlayInterval={3000}
+              showArrows={true}
+              onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
+            />
             <WelcomeVideoHufko
               title="Premium food delivery app"
               titleHighlight="World's #1"
@@ -455,13 +466,15 @@ const HeaderCategory: React.FC = () => {
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Premium_Restaurant_Franchise1.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={1800}
+              images={[
+                { src: "/products/Premium_Restaurant_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Premium_Restaurant_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Premium_Restaurant_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Premium_Restaurant_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -472,11 +485,15 @@ const HeaderCategory: React.FC = () => {
               className="custom-class"
               showWave={true}
               waveColor="white"
+              autoPlayInterval={3000}
+              showDots={true}
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+              onSlideChange={(index) => console.log('Slide changed to:', index)}
             >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+              <span style={{ color: '#ffffff' }}> Premium Instant Delivery Technology Platform</span>
             </FranchiseHufkoSlide>
+
           </div>
         )}
 
@@ -489,7 +506,9 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={GroceryHeroBannerData} />
+            <div className={styles.categoryGap}>
             <AllCategory categories={GroceryCategories} />
+            </div>
             <WelcomeVideoHufko
               title=""
               titleHighlight=""
@@ -521,19 +540,23 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Supermarket Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="grocery_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Franchise_Hufko2.png"
-              imageAlt="HUFKO Store"
-              imageWidth={1200}
-              imageHeight={1000}
+              images={[
+                { src: "/products/Franchise_Hufko1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Franchise_Hufko2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Franchise_Hufko3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Franchise_Hufko4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -568,10 +591,12 @@ const HeaderCategory: React.FC = () => {
             {isShoppingCategorySelected("all") && (
               <div className={styles.electronicsSubCategory}>
                 <HeroBannerAll banners={ShopingHeroBannerData} />
+                <div className={styles.categoryGap}>
                 <AllCategoryOne
                   categories={ShopingCategories}
                   onCategoryClick={handleShoppingCategoryClick}
                 />
+                </div>
                 <WelcomeVideoHufko
                   title="Premium food delivery app"
                   titleHighlight="World's #1"
@@ -599,19 +624,23 @@ const HeaderCategory: React.FC = () => {
                   heading="Own a World's Largest #1"
                   highlightText="Hypermarket Franchise"
                   description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+                  franchiseCategory="shopping_beverage"
+                  detailsPagePath="/franchise-details"
                   stats={[
                     { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                     { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
                     { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
                   ]}
                   buttons={[
-                    { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                    { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                     { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
                   ]}
-                  imageSrc="/products/Hypermarket_Franchise1.png"
-                  imageAlt="HUFKO Store"
-                  imageWidth={3000}
-                  imageHeight={1800}
+                  images={[
+                    { src: "/products/Hypermarket_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                    { src: "/products/Hypermarket_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                    { src: "/products/Hypermarket_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                    { src: "/products/Hypermarket_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+                  ]}
                   badges={[
                     { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                     { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -791,7 +820,9 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={FlowerHeroBannerData} />
+            <div className={styles.categoryGap}>
             <AllCategory categories={FlowersCategories} />
+            </div>
             <WelcomeVideoHufko
               title=""
               titleHighlight=""
@@ -906,19 +937,23 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Flowers & Gifts Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="flower_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Flowers_and_Gifts_Franchise1.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={1800}
+              images={[
+                { src: "/products/Flowers_and_Gifts_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Flowers_and_Gifts_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Flowers_and_Gifts_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Flowers_and_Gifts_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -954,7 +989,9 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={CareHeroBannerData} />
+            <div className={styles.categoryGap}>
             <AllCategory categories={CareCategories} />
+            </div>
             <WelcomeVideoHufko
               title=""
               titleHighlight=""
@@ -975,19 +1012,23 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Premium Saloon & Spa Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="flower_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Premium_Saloon_&_Spa_Franchise.png"
-              imageAlt="HUFKO Store"
-              imageWidth={2000}
-              imageHeight={1800}
+              images={[
+                { src: "/products/Premium_Saloon_&_Spa_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Premium_Saloon_&_Spa_Franchise.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Premium_Saloon_&_Spa_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Premium_Saloon_&_Spa_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -1015,7 +1056,9 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={PharmaHeroBannerData} />
+            <div className={styles.categoryGap}>
             <AllCategoryOne categories={PharmaCategories} />
+            </div>
             <WelcomeVideoHufko
               title=""
               titleHighlight=""
@@ -1036,19 +1079,23 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Pharmaceutical Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="flower_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Pharmaceutical_Franchise21.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={1800}
+              images={[
+                { src: "/products/Pharmaceutical_Franchise1.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Pharmaceutical.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Pharmaceutical_Franchise3.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Pharmaceutical_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
@@ -1076,7 +1123,9 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={WholesaleHeroBannerData} />
+            <div className={styles.categoryGap}>
             <AllCategoryOne categories={WholesaleCategoriesList} />
+            </div>
             <WelcomeVideoHufko
               title=""
               titleHighlight=""
@@ -1101,19 +1150,23 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Wholesale Supermarket Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="wholesale_beverage"
+              detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
                 { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
                 { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
               ]}
               buttons={[
-                { label: 'Apply Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
                 { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
               ]}
-              imageSrc="/products/Wholesale_Supermarket_Franchise21.png"
-              imageAlt="HUFKO Store"
-              imageWidth={3000}
-              imageHeight={2100}
+              images={[
+                { src: "/products/Wholesale_Supermarket_Franchise1.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Wholesale_Supermarket_Franchise2.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Wholesale_Supermarket_Franchise3.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Wholesale_Supermarket_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
               badges={[
                 { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
                 { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },

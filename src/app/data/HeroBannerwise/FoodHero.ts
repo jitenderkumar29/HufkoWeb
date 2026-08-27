@@ -152,3 +152,62 @@ import { BannerItemContent } from "@/components/Shopping/HeroBanner/HeroBannerLe
     align: 'left'
   }
   ]
+
+  export const FoodDineOutCollections = [
+  {
+    id: 1,
+    title: 'Insta-worthy spots',
+    placeCount: '99 Places',
+    imageUrl: '/products/1730709895.png',
+    link: '/ncr/insta-worthy',
+    alt: 'Insta-worthy spots',
+  },
+  {
+    id: 2,
+    title: 'Omakase bars',
+    placeCount: '9 Places',
+    imageUrl: '/products/1752236513.png',
+    link: '/ncr/omakase-bars',
+    alt: 'Omakase bars',
+  },
+  {
+    id: 3,
+    title: 'Secret speakeasy bars',
+    placeCount: '24 Places',
+    imageUrl: '/products/1741170543.png',
+    link: '/ncr/secret-speakeasy-bars',
+    alt: 'Secret speakeasy bars',
+  },
+  {
+    id: 4,
+    title: 'Must visit cafes',
+    placeCount: '60 Places',
+    imageUrl: '/products/1727266460.png',
+    link: '/ncr/great-cafes',
+    alt: 'Must visit cafes',
+  },
+  {
+    id: 5,
+    title: 'Iconic restaurants',
+    placeCount: '53 Places',
+    imageUrl: '/products/1746185735.png',
+    link: '/ncr/iconic-restaurants',
+    alt: 'Iconic restaurants',
+  },
+  {
+    id: 6,
+    title: "Chef's Tasting Menus",
+    placeCount: '10 Places',
+    imageUrl: '/products/17522365131.png',
+    link: '/ncr/chef-tasting-menu',
+    alt: "Chef's Tasting Menus",
+  },
+  {
+    id: 7,
+    title: 'Fancy pizza finds',
+    placeCount: '40 Places',
+    imageUrl: '/products/17522365132.png',
+    link: '/ncr/pizza-time',
+    alt: 'Fancy pizza finds',
+  },
+];

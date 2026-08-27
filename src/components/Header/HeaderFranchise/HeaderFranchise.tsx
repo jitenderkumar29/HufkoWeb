@@ -69,7 +69,7 @@ const HeaderFranchise: React.FC<HeaderFranchiseProps> = ({
   heroTitle = 'TAJ HOTELS',
   heroSubtitle = 'Experience Luxury Redefined',
   showHeroSearch = true, // Default: show hero search
-  searchPlaceholder = 'Click here to search for Destinations or Hotels.',
+  searchPlaceholder = 'Click here to search for Ultra Premium Dine.',
   onHeroSearch,
   showHeaderSearch = false, // Default: hide header search
 }) => {

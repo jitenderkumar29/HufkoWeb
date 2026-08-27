@@ -55,14 +55,15 @@ export const homeHufkoFranchiseNavItems: NavItemHeaderFranchise[] = [
 
 function LoadingSpinner() {
     return (
-        <div className={styles.loadingContainer}>
-            <div className={styles.loadingContent}>
-                <div className={styles.spinner} />
-                <p className={styles.loadingText}>
-                    Loading franchise details...
-                </p>
-            </div>
-        </div>
+        <></>
+        // <div className={styles.loadingContainer}>
+        //     <div className={styles.loadingContent}>
+        //         <div className={styles.spinner} />
+        //         <p className={styles.loadingText}>
+        //             Loading franchise details...
+        //         </p>
+        //     </div>
+        // </div>
     );
 }
 
@@ -521,7 +522,8 @@ function FranchiseDetailsContent() {
 
 
     if (loading) {
-        return <LoadingSpinner />;
+        return <></>;
+        // <LoadingSpinner />;
     }
 
 
@@ -590,7 +592,7 @@ function FranchiseDetailsContent() {
                     heroTitle=""
                     heroSubtitle=""
                     showHeroSearch={true}
-                    searchPlaceholder="Click here to search"
+                    searchPlaceholder="Click here to search for ultra premium dine."
                     onHeroSearch={handleHeroSearch}
                     onSearchClick={() => console.log('Search clicked')}
                     onUserClick={() => console.log('User clicked')}
