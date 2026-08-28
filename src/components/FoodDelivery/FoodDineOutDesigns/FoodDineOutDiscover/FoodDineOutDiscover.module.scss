@@ -1,0 +1,711 @@
+// components/FoodDineOutDiscover/FoodDineOutDiscover.module.scss
+
+@use "../../../../styles/variables.scss" as *;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px 20px;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 24px 16px 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 12px 14px;
+  }
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
+  width: 100%;
+}
+
+.headerContent {
+  min-width: 0;
+  flex: 1;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  color: #202124;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  @media (max-width: 900px) {
+    font-size: 27px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+}
+
+.subtitle {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.4;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.navButton {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e3e4e5;
+  color: $black;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: $primary-color;
+    color: $white;
+    transform: scale(1.03);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  &.disabled {
+    background: #f0f1f2;
+    color: #a5a5a5;
+    cursor: default;
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 36px;
+    height: 36px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+/* =========================================
+   HORIZONTAL SCROLL
+========================================= */
+
+.scrollWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrollContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 0 0 1px;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    gap: 14px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  position: relative;
+
+  flex: 0 0 410px;
+  width: 410px;
+  min-width: 410px;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  scroll-snap-align: start;
+
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    border-color: #dedede;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 1100px) {
+    flex-basis: 370px;
+    width: 370px;
+    min-width: 370px;
+  }
+
+  @media (max-width: 900px) {
+    flex-basis: 330px;
+    width: 330px;
+    min-width: 330px;
+  }
+
+  @media (max-width: 768px) {
+    flex-basis: 300px;
+    width: 300px;
+    min-width: 300px;
+    border-radius: 14px;
+  }
+
+  @media (max-width: 480px) {
+    flex-basis: 280px;
+    width: 280px;
+    min-width: 280px;
+  }
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 236px;
+
+  overflow: hidden;
+
+  background: #eee;
+
+  @media (max-width: 1100px) {
+    height: 220px;
+  }
+
+  @media (max-width: 768px) {
+    height: 190px;
+  }
+
+  @media (max-width: 480px) {
+    height: 175px;
+  }
+}
+
+.cardImage {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+/* Dark gradient at bottom of image */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.42) 24%,
+      rgba(0, 0, 0, 0.04) 58%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  pointer-events: none;
+}
+
+.imageBottom {
+  position: absolute;
+
+  left: 16px;
+  right: 14px;
+  bottom: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  z-index: 2;
+
+  @media (max-width: 480px) {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+.restaurantName {
+  min-width: 0;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 1100px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 19px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   RATING
+========================================= */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  gap: 5px;
+
+  min-width: 49px;
+  height: 25px;
+
+  padding: 0 7px;
+
+  border-radius: 13px;
+
+  background: #169447;
+  color: #fff;
+
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 700;
+
+  box-sizing: border-box;
+
+  @media (max-width: 480px) {
+    min-width: 44px;
+    height: 23px;
+    font-size: 12px;
+  }
+}
+
+.ratingStar {
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.cardContent {
+  padding: 14px 15px 15px;
+
+  background: #fff;
+
+  @media (max-width: 480px) {
+    padding: 12px;
+  }
+}
+
+.restaurantInfo {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  min-width: 0;
+
+  &:first-child {
+    margin-bottom: 7px;
+  }
+}
+
+.cuisine,
+.location {
+  min-width: 0;
+
+  color: #686868;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.location {
+  color: #6f6f6f;
+}
+
+.price {
+  flex-shrink: 0;
+
+  color: #646464;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.distance {
+  flex-shrink: 0;
+
+  color: #666;
+
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   PRIMARY GREEN OFFER
+========================================= */
+
+.primaryOffer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 46px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  background: #18a875;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  gap: 9px;
+
+  overflow: hidden;
+
+  @media (max-width: 480px) {
+    min-height: 42px;
+    padding: 0 9px;
+    gap: 7px;
+    border-radius: 8px;
+  }
+}
+
+.offerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #fff;
+  color: #18a875;
+
+  @media (max-width: 480px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.primaryOfferText {
+  min-width: 0;
+
+  flex: 1;
+
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.offerCount {
+  flex-shrink: 0;
+
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   SECONDARY BANK OFFER
+========================================= */
+
+.secondaryOffer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 46px;
+
+  margin-top: 14px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  background: #c7f5e4;
+
+  border-radius: 9px;
+
+  color: #0b9d69;
+
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    min-height: 42px;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 39px;
+    margin-top: 10px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* =========================================
+   UPI OFFER
+========================================= */
+
+.upiOffer {
+  width: 100%;
+
+  margin-top: 14px;
+
+  color: #4e2ac8;
+
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   LARGE SCREEN - MATCH REFERENCE
+========================================= */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1460px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card {
+    flex-basis: 410px;
+    width: 410px;
+    min-width: 410px;
+  }
+
+  .imageWrapper {
+    height: 236px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .header {
+    margin-bottom: 18px;
+  }
+
+  .navigation {
+    gap: 8px;
+  }
+
+  .scrollContainer {
+    margin-right: -12px;
+    padding-right: 12px;
+  }
+}

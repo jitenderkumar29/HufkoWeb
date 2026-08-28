@@ -113,6 +113,12 @@ import HeroBannerLeftContent from '../../HeroBanner/HeroBannerLeftContent/HeroBa
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 import HorizontalSliderOneLine2 from '../../ItemListDesigns/HorizontalSliderOneLine2/HorizontalSliderOneLine2';
 import SubCategoryItemsList from '../SubCategoryItemsList/SubCategoryItemsList';
+import FoodDineOutCard from '@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutCard/FoodDineOutCard';
+import { FoodDineOutCollections } from '@/app/data/HeroBannerwise/FoodHero';
+import VideoPlayerSlide from '@/components/FoodDelivery/VideoPlayer/VideoPlayerSlide/VideoPlayerSlide';
+import SearchBarDineOut from '@/components/FoodDelivery/SearchBarDineOut/SearchBarDineOut';
+import FoodDineOutDiscover from '@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutDiscover/FoodDineOutDiscover';
+import { DiningDataItems } from '@/app/data/Categorywise/FoodsCategories';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -188,6 +194,22 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         } else {
             router.push(category.url || `/${category.id}`);
         }
+    };
+
+    const handleSearch = (data: any) => {
+        console.log('Search data:', data);
+        // Handle search logic here
+    };
+
+    const handleDiningSelect = (item: any) => {
+        console.log('Selected dining:', item);
+        // Handle navigation or modal opening
+    };
+
+    const handleAction = (item: any) => {
+        console.log('Action clicked for:', item);
+        // Open booking modal or navigate to booking page
+        // openBookingModal(item);
     };
 
     // Render the main content based on category
@@ -343,13 +365,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <div className={styles.categorySliderOneLine}>
                             <HorizontalSliderOneLine
                                 products={topHomeDecorItems}
@@ -410,13 +432,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             muted={true}
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <VerticalScroll
                             items={topHomeFurnitureItems}
                             imageHeight={350}
@@ -758,13 +780,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             }}
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <VerticalScrollSquare
                             title="Top trending picks"
                             categories={topTrendingPicksSportsFitnessCategories}
@@ -815,13 +837,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <VerticalScroll
                             items={savingsSpecialBabyToysItems}
                             imageHeight={420}
@@ -860,14 +882,14 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             banners={slidesbooks}
                             defaultAlign="left"
                         />
-                       <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                        <BankOfferSlide
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <HorizontalSliderOneLine2
                             products={bestSellersInPrintBooksItems}
                             title="Best sellers in print"
@@ -937,13 +959,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <VerticalScroll
                             items={dealsOnCarAccessoriesAutoAccessoriesItems}
                             imageHeight={400}
@@ -983,13 +1005,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <VerticalScroll
                             items={discoverOurCuratedStoresJewelleryItems}
                             imageHeight={400}
@@ -1066,13 +1088,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <VerticalScrollSquare
                             title="Shop by Brands!"
                             categories={shopByBrandsTVsAppliancesCategories}
@@ -1134,13 +1156,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             defaultAlign="left"
                         />
                         <BankOfferSlide
-                                slides={bankOfferShoppingSlide}
-                                autoPlay={true}
-                                autoPlayInterval={5000}
-                                showArrows={true}
-                                showDots={true}
-                                onSlideChange={(index) => console.log('Current slide:', index)}
-                            />
+                            slides={bankOfferShoppingSlide}
+                            autoPlay={true}
+                            autoPlayInterval={5000}
+                            showArrows={true}
+                            showDots={true}
+                            onSlideChange={(index) => console.log('Current slide:', index)}
+                        />
                         <div className={styles.headingContent}>
                             <h2 className={styles.heading}>New Launches</h2>
                         </div>
@@ -1190,6 +1212,69 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             backgroundColor="#f5f5f5"
                             onBannerClick={(banner) => console.log('Banner clicked:', banner)}
                         />
+                    </>
+                );
+
+            case 'order_now_food':
+                return (
+                    <>
+                        <div className={styles.dineOutCard}>
+                            {/* <FoodDineOutCard
+                                items={FoodDineOutCollections}
+                                title="Dine Out Collections Nearby You"
+                                viewAllLink="/collections"
+                                viewAllText="View All"
+                                autoPlayInterval={3000}
+                                showArrows={true}
+                                onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
+                            /> */}
+                        </div>
+                    </>
+                );
+
+            case 'dine_out_food':
+                return (
+                    <>
+                        <div className={styles.videoPlayerSlide}>
+                            <VideoPlayerSlide
+                                src="/videos/DINEOUT.mp4"
+                                poster="/"
+                                // title="Big Buck Bunny - Animated Short Film"
+                                aspectRatio="21:9"
+                            // height={650}
+                            />
+                        </div>
+                        <div className={styles.searchBarDineOut}>
+                            <SearchBarDineOut
+                                hotelName=""
+                                // checkInDate="29 Aug 2026"
+                                // checkOutDate="30 Aug 2026"
+                                guests={1}
+                                rooms={1}
+                                onSearch={handleSearch}
+                                placeholder="Find a hotel nearby me"
+                            />
+                        </div>
+                        <div className={styles.foodDineOutDiscover}>
+                            <FoodDineOutDiscover
+                                items={DiningDataItems}
+                                title="Discover best restaurants on Dineout"
+                                subtitle="Curated picks just for you"
+                                onSelect={handleAction}
+                            />
+                        </div>
+
+                        <div className={styles.dineOutCard}>
+                            <FoodDineOutCard
+                                items={FoodDineOutCollections}
+                                title="Dine Out Collections Nearby me"
+                                viewAllLink="/collections"
+                                viewAllText="View All"
+                                autoPlayInterval={3000}
+                                showArrows={true}
+                                onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
+                            />
+                        </div>
                     </>
                 );
 

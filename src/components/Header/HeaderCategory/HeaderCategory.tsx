@@ -49,7 +49,7 @@ import HeroBannerLeftContent from '@/components/Shopping/HeroBanner/HeroBannerLe
 import ProductCategoryCardHalfDynamic from '@/components/Shopping/ItemListDesigns/ProductCategoryCardHalfDynamic/ProductCategoryCardHalfDynamic';
 import CustomerTestimonial from '@/components/Shopping/ItemListDesigns/CustomerTestimonial/CustomerTestimonial';
 import CategoryListCard from '@/components/Shopping/ItemListDesigns/CategoryListCard/CategoryListCard';
-import FoodDineOutCard from '@/components/FoodDelivery/FoodDineOutCard/FoodDineOutCard';
+import FoodDineOutCard from '@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutCard/FoodDineOutCard';
 
 interface CategoryItem {
   id: string;
@@ -76,15 +76,109 @@ const categoryToSubHeaderMapping: Record<string, string> = {
   'auto_accessories': 'auto_accessories_sub_header',
 };
 
+// Food category mapping - maps sub-header IDs to ShopByMainCategory category values
+const foodCategoryMapping: Record<string, string> = {
+  'all_sub_header': 'all',
+  'order_now_sub_header': 'order_now_food',
+  'dine_out_sub_header': 'dine_out_food',
+  'popular_sub_header': 'popular_food',
+  'offers_sub_header': 'offers_food',
+  // Meal Types
+  'breakfast_sub_header': 'breakfast_food',
+  'lunch_sub_header': 'lunch_food',
+  'dinner_sub_header': 'dinner_food',
+  'snacks_sub_header': 'snacks_food',
+  'street_food_sub_header': 'street_food',
+  'fast_food_sub_header': 'fast_food',
+  // Indian Cuisine
+  'north_indian_sub_header': 'north_indian_food',
+  'south_indian_sub_header': 'south_indian_food',
+  'punjabi_sub_header': 'punjabi_food',
+  'gujarati_sub_header': 'gujarati_food',
+  'rajasthani_sub_header': 'rajasthani_food',
+  'maharashtrian_sub_header': 'maharashtrian_food',
+  'bengali_sub_header': 'bengali_food',
+  'hyderabadi_sub_header': 'hyderabadi_food',
+  'kashmiri_sub_header': 'kashmiri_food',
+  // Asian & International
+  'chinese_sub_header': 'chinese_food',
+  'thai_sub_header': 'thai_food',
+  'japanese_sub_header': 'japanese_food',
+  'korean_sub_header': 'korean_food',
+  'italian_sub_header': 'italian_food',
+  'mexican_sub_header': 'mexican_food',
+  'continental_sub_header': 'continental_food',
+  // Main Courses
+  'biryani_sub_header': 'biryani_food',
+  'pizza_sub_header': 'pizza_food',
+  'burger_sub_header': 'burger_food',
+  'sandwich_sub_header': 'sandwich_food',
+  'rolls_sub_header': 'rolls_food',
+  'wraps_sub_header': 'wraps_food',
+  'pasta_sub_header': 'pasta_food',
+  'noodles_sub_header': 'noodles_food',
+  'fried_rice_sub_header': 'fried_rice_food',
+  'thali_sub_header': 'thali_food',
+  // Non-Veg
+  'chicken_sub_header': 'chicken_food',
+  'mutton_sub_header': 'mutton_food',
+  'fish_seafood_sub_header': 'fish_seafood_food',
+  'eggs_sub_header': 'eggs_food',
+  'kebabs_sub_header': 'kebabs_food',
+  'bbq_grill_sub_header': 'bbq_grill_food',
+  'tandoori_sub_header': 'tandoori_food',
+  // Veg & Healthy
+  'pure_veg_sub_header': 'pure_veg_food',
+  'healthy_meals_sub_header': 'healthy_meals_food',
+  'salads_sub_header': 'salads_food',
+  'soups_sub_header': 'soups_food',
+  'protein_meals_sub_header': 'protein_meals_food',
+  'vegan_sub_header': 'vegan_food',
+  'jain_food_sub_header': 'jain_food',
+  // Bakery & Desserts
+  'bakery_sub_header': 'bakery_food',
+  'cakes_sub_header': 'cakes_food',
+  'pastries_sub_header': 'pastries_food',
+  'ice_cream_sub_header': 'ice_cream_food',
+  'desserts_sub_header': 'desserts_food',
+  'brownies_sub_header': 'brownies_food',
+  'cookies_sub_header': 'cookies_food',
+  // Beverages
+  'tea_sub_header': 'tea_food',
+  'coffee_sub_header': 'coffee_food',
+  'milkshakes_sub_header': 'milkshakes_food',
+  'smoothies_sub_header': 'smoothies_food',
+  'juices_sub_header': 'juices_food',
+  'soft_drinks_sub_header': 'soft_drinks_food',
+  'mocktails_sub_header': 'mocktails_food',
+  // Quick Bites
+  'maggi_sub_header': 'maggi_food',
+  'momos_sub_header': 'momos_food',
+  'fries_sub_header': 'fries_food',
+  'chaat_sub_header': 'chaat_food',
+  'pani_puri_sub_header': 'pani_puri_food',
+  'pav_bhaji_sub_header': 'pav_bhaji_food',
+  'dosa_sub_header': 'dosa_food',
+  'idli_sub_header': 'idli_food',
+  'vada_pav_sub_header': 'vada_pav_food',
+  'samosa_sub_header': 'samosa_food',
+};
+
 const HeaderCategory: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
   const [activeTab, setActiveTab] = useState<string>('home');
+  
+  // Shopping states
   const [selectedShoppingCategory, setSelectedShoppingCategory] = useState<string>('all');
   const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('all');
   const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSubHeaderItem, setSelectedSubHeaderItem] = useState<SubHeaderItem | null>(null);
+  
+  // Food states - SEPARATE from shopping
+  const [selectedFoodCategory, setSelectedFoodCategory] = useState<string>('all_sub_header');
+  const [selectedFoodCategoryValue, setSelectedFoodCategoryValue] = useState<string>('all');
 
   // All categories including home
   const allCategories: CategoryItem[] = [
@@ -107,6 +201,8 @@ const HeaderCategory: React.FC = () => {
     setSelectedShoppingCategory('all');
     setSelectedElectronicsSubCategory('all');
     setSelectedHomeDecorSubCategory('all');
+    setSelectedFoodCategory('all_sub_header');
+    setSelectedFoodCategoryValue('all');
 
     // Clear URL parameters
     router.push('/', { scroll: false });
@@ -119,6 +215,7 @@ const HeaderCategory: React.FC = () => {
     const shoppingParam = params.get('shoppingCategory');
     const electronicsParam = params.get('electronicsSubCategory');
     const homeDecorParam = params.get('homeDecorSubCategory');
+    const foodParam = params.get('foodCategory');
 
     // Update main tab
     if (categoryParam && allCategories.some(cat => cat.id === categoryParam)) {
@@ -132,6 +229,17 @@ const HeaderCategory: React.FC = () => {
       setSelectedShoppingCategory(shoppingParam);
     } else {
       setSelectedShoppingCategory('all');
+    }
+
+    // Update food category
+    if (foodParam) {
+      setSelectedFoodCategory(foodParam);
+      // Set the corresponding category value for ShopByMainCategory
+      const categoryValue = foodCategoryMapping[foodParam] || 'all';
+      setSelectedFoodCategoryValue(categoryValue);
+    } else {
+      setSelectedFoodCategory('all_sub_header');
+      setSelectedFoodCategoryValue('all');
     }
 
     // Update electronics subcategory
@@ -200,11 +308,16 @@ const HeaderCategory: React.FC = () => {
 
     setActiveTab(categoryId);
 
-    // Reset shopping subcategory when changing tabs
+    // Reset subcategories when changing tabs
     if (categoryId !== 'shopping') {
       setSelectedShoppingCategory('all');
       setSelectedElectronicsSubCategory('all');
       setSelectedHomeDecorSubCategory('all');
+    }
+    
+    if (categoryId !== 'food') {
+      setSelectedFoodCategory('all_sub_header');
+      setSelectedFoodCategoryValue('all');
     }
 
     // Update URL with query parameter
@@ -217,8 +330,35 @@ const HeaderCategory: React.FC = () => {
       params.delete('electronicsSubCategory');
       params.delete('homeDecorSubCategory');
     }
+    
+    // Remove food-related params if not on food tab
+    if (categoryId !== 'food') {
+      params.delete('foodCategory');
+    }
 
     router.push(`?${params.toString()}`, { scroll: false });
+  };
+
+  // Handle food subcategory selection
+  const handleFoodSubCategorySelect = (item: SubHeaderItem) => {
+    const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
+    setSelectedFoodCategory(categoryId);
+    
+    // Set the corresponding category value for ShopByMainCategory
+    const categoryValue = foodCategoryMapping[categoryId] || 'all';
+    setSelectedFoodCategoryValue(categoryValue);
+
+    // Update URL with food category
+    const params = new URLSearchParams(window.location.search);
+    params.set('foodCategory', categoryId);
+
+    router.push(`?${params.toString()}`, { scroll: false });
+    console.log('Selected food category:', item, 'Category value:', categoryValue);
+  };
+
+  // Check if a specific food category is selected
+  const isFoodCategorySelected = (categoryId: string) => {
+    return selectedFoodCategory === categoryId;
   };
 
   // Handle shopping subcategory selection
@@ -414,86 +554,104 @@ const HeaderCategory: React.FC = () => {
           <div className={styles.allCategory}>
             <SubHeader
               items={foodCategoriesSubHeader}
-              defaultActive="All"
-              onSelect={(item) => console.log(item.name)}
+              defaultActive="all_sub_header"
+              onSelect={handleFoodSubCategorySelect}
             />
-            <HeroBannerLeftContent
-              banners={FoodHeroBannerLeftContent}
-              defaultAlign="left"
-            />
-            <div className={styles.categoryGap}>
-              <AllCategory categories={FoodsCategories} />
-            </div>
-            <FoodDineOutCard
-              items={FoodDineOutCollections}
-              title="Dine Out Collections Nearby You"
-              viewAllLink="/collections"
-              viewAllText="View All"
-              autoPlayInterval={3000}
-              showArrows={true}
-              onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
-            />
-            <WelcomeVideoHufko
-              title="Premium food delivery app"
-              titleHighlight="World's #1"
-              subtitle="Enjoy fast online ordering on the Hufko app"
-              videoSrc="/videos/delivery_by_hufko.mp4"
-              logoSrc="/icons/logo_video.png"
-              appStoreLink="/"
-              playStoreLink="/"
-              className="custom-hero"
-              showLogo={false}
-              showAppStore={true}
-              showPlayStore={true}
-              muted={true}
-            />
-            <HufkoPrime
-              benefits={defaultBenefits}
-              onMoreClick={() => console.log('More clicked!')}
-            />
-            <DownloadApp />
-            <FranchiseHufkoSlide
-              badgeText="World's Largest Instant Delivery App Platform"
-              badgeIcon={<Shield size={16} />}
-              heading="Own a World's Largest #1"
-              highlightText="Premium Restaurant Franchise"
-              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-              franchiseCategory="food_beverage"
-              detailsPagePath="/franchise-details"
-              stats={[
-                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
-                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
-                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
-              ]}
-              buttons={[
-                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
-                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
-              ]}
-              images={[
-                { src: "/products/Premium_Restaurant_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
-                { src: "/products/Premium_Restaurant_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
-                { src: "/products/Premium_Restaurant_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
-                { src: "/products/Premium_Restaurant_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
-              ]}
-              badges={[
-                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
-                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
-              ]}
-              backgroundColor="#055346"
-              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
-              overlayOpacity={0.35}
-              className="custom-class"
-              showWave={true}
-              waveColor="white"
-              autoPlayInterval={3000}
-              showDots={true}
-              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
-              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
-              onSlideChange={(index) => console.log('Slide changed to:', index)}
-            >
-              <span style={{ color: '#ffffff' }}> Premium Instant Delivery Technology Platform</span>
-            </FranchiseHufkoSlide>
+            
+            {/* All Category - Default View */}
+            {selectedFoodCategory === "all_sub_header" && (
+              <div className={styles.SubCategory}>
+                <HeroBannerLeftContent
+                  banners={FoodHeroBannerLeftContent}
+                  defaultAlign="left"
+                />
+                <div className={styles.categoryGap}>
+                  <AllCategory categories={FoodsCategories} />
+                </div>
+                <WelcomeVideoHufko
+                  title="Premium food delivery app"
+                  titleHighlight="World's #1"
+                  subtitle="Enjoy fast online ordering on the Hufko app"
+                  videoSrc="/videos/delivery_by_hufko.mp4"
+                  logoSrc="/icons/logo_video.png"
+                  appStoreLink="/"
+                  playStoreLink="/"
+                  className="custom-hero"
+                  showLogo={false}
+                  showAppStore={true}
+                  showPlayStore={true}
+                  muted={true}
+                />
+                <div className={styles.dineOutCard}>
+                  <FoodDineOutCard
+                    items={FoodDineOutCollections}
+                    title="Dine Out Collections Nearby You"
+                    viewAllLink="/collections"
+                    viewAllText="View All"
+                    autoPlayInterval={3000}
+                    showArrows={true}
+                    onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
+                  />
+                </div>
+                <HufkoPrime
+                  benefits={defaultBenefits}
+                  onMoreClick={() => console.log('More clicked!')}
+                />
+                <DownloadApp />
+                <FranchiseHufkoSlide
+                  badgeText="World's Largest Instant Delivery App Platform"
+                  badgeIcon={<Shield size={16} />}
+                  heading="Own a World's Largest #1"
+                  highlightText="Premium Restaurant Franchise"
+                  description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+                  franchiseCategory="food_beverage"
+                  detailsPagePath="/franchise-details"
+                  stats={[
+                    { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+                    { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
+                    { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
+                  ]}
+                  buttons={[
+                    { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                    { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
+                  ]}
+                  images={[
+                    { src: "/products/Premium_Restaurant_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                    { src: "/products/Premium_Restaurant_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                    { src: "/products/Premium_Restaurant_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                    { src: "/products/Premium_Restaurant_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+                  ]}
+                  badges={[
+                    { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
+                    { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
+                  ]}
+                  backgroundColor="#055346"
+                  gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+                  overlayOpacity={0.35}
+                  className="custom-class"
+                  showWave={true}
+                  waveColor="white"
+                  autoPlayInterval={3000}
+                  showDots={true}
+                  onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+                  onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+                  onSlideChange={(index) => console.log('Slide changed to:', index)}
+                >
+                  <span style={{ color: '#ffffff' }}> Technology Platform</span>
+                </FranchiseHufkoSlide>
+              </div>
+            )}
 
+            {/* Dynamic Food Categories - using the mapped category value */}
+            {selectedFoodCategory !== "all_sub_header" && (
+              <div className={styles.electronicsSubCategory}>
+                <ShopByMainCategory
+                  category={selectedFoodCategoryValue}
+                  selectedItem={selectedSubHeaderItem}
+                  subHeaderItem={selectedSubHeaderItem}
+                />
+              </div>
+            )}
           </div>
         )}
 
@@ -507,7 +665,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={GroceryHeroBannerData} />
             <div className={styles.categoryGap}>
-            <AllCategory categories={GroceryCategories} />
+              <AllCategory categories={GroceryCategories} />
             </div>
             <WelcomeVideoHufko
               title=""
@@ -592,10 +750,10 @@ const HeaderCategory: React.FC = () => {
               <div className={styles.electronicsSubCategory}>
                 <HeroBannerAll banners={ShopingHeroBannerData} />
                 <div className={styles.categoryGap}>
-                <AllCategoryOne
-                  categories={ShopingCategories}
-                  onCategoryClick={handleShoppingCategoryClick}
-                />
+                  <AllCategoryOne
+                    categories={ShopingCategories}
+                    onCategoryClick={handleShoppingCategoryClick}
+                  />
                 </div>
                 <WelcomeVideoHufko
                   title="Premium food delivery app"
@@ -821,7 +979,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={FlowerHeroBannerData} />
             <div className={styles.categoryGap}>
-            <AllCategory categories={FlowersCategories} />
+              <AllCategory categories={FlowersCategories} />
             </div>
             <WelcomeVideoHufko
               title=""
@@ -990,7 +1148,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={CareHeroBannerData} />
             <div className={styles.categoryGap}>
-            <AllCategory categories={CareCategories} />
+              <AllCategory categories={CareCategories} />
             </div>
             <WelcomeVideoHufko
               title=""
@@ -1057,7 +1215,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={PharmaHeroBannerData} />
             <div className={styles.categoryGap}>
-            <AllCategoryOne categories={PharmaCategories} />
+              <AllCategoryOne categories={PharmaCategories} />
             </div>
             <WelcomeVideoHufko
               title=""
@@ -1124,7 +1282,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={WholesaleHeroBannerData} />
             <div className={styles.categoryGap}>
-            <AllCategoryOne categories={WholesaleCategoriesList} />
+              <AllCategoryOne categories={WholesaleCategoriesList} />
             </div>
             <WelcomeVideoHufko
               title=""
