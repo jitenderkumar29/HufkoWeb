@@ -274,9 +274,98 @@
 }
 
 .dineOutCard{
-  margin-top: 1.5rem;
+//   margin-top: 1.5rem;
 }
 
 .searchBarDineOut{
     margin-top: -15rem;
+}
+
+// YourPage.module.scss
+
+.dineOutCard {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+//   border-radius: 16px; // Optional: for rounded corners
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  
+  // If VideoPlayerSlide has a specific height, you can set it here
+  // Or let the video component control its own dimensions
+  
+  video, 
+  .videoPlayer {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.searchOverlay {
+  position: absolute;
+  top: 390; // Position from bottom
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 900px;
+  z-index: 10;
+  pointer-events: none; // Allow clicks to pass through container
+  
+  // Make the search bar itself interactive
+  > * {
+    pointer-events: auto;
+  }
+  
+  // Add a subtle dark overlay behind the search bar for better visibility
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     bottom: -20px;
+//     left: -20px;
+//     right: -20px;
+//     height: 120px;
+//     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+//     z-index: -1;
+//     border-radius: 20px;
+//   }
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .searchOverlay {
+    width: 92%;
+    top: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchOverlay {
+    width: 95%;
+    bottom: 20px;
+    
+    &::before {
+      height: 100px;
+      bottom: -15px;
+      left: -15px;
+      right: -15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .searchOverlay {
+    width: 98%;
+    bottom: 12px;
+    
+    &::before {
+      height: 80px;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+    }
+  }
 }

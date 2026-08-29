@@ -113,12 +113,15 @@ import HeroBannerLeftContent from '../../HeroBanner/HeroBannerLeftContent/HeroBa
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 import HorizontalSliderOneLine2 from '../../ItemListDesigns/HorizontalSliderOneLine2/HorizontalSliderOneLine2';
 import SubCategoryItemsList from '../SubCategoryItemsList/SubCategoryItemsList';
-import FoodDineOutCard from '@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutCard/FoodDineOutCard';
+import FoodDineOutCard from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
 import { FoodDineOutCollections } from '@/app/data/HeroBannerwise/FoodHero';
 import VideoPlayerSlide from '@/components/FoodDelivery/VideoPlayer/VideoPlayerSlide/VideoPlayerSlide';
-import SearchBarDineOut from '@/components/FoodDelivery/SearchBarDineOut/SearchBarDineOut';
-import FoodDineOutDiscover from '@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutDiscover/FoodDineOutDiscover';
-import { DiningDataItems } from '@/app/data/Categorywise/FoodsCategories';
+import SearchBarDineOut from '@/components/SearchBar/SearchBarDineOut/SearchBarDineOut';
+import FoodDineOutDiscover from '@/components/FoodDelivery/FoodDesigns/FoodDineOutDiscover/FoodDineOutDiscover';
+import { DiningDataItems, FoodCategoryItemsListData, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
+import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBarOrderNow';
+import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
+import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -211,6 +214,19 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         // Open booking modal or navigate to booking page
         // openBookingModal(item);
     };
+
+    const handleFoodCategoryClick = (category: any) => {
+        console.log('Selected category:', category);
+        // Navigate to category page or filter products
+    };
+
+    const handleBrandClick = (brand: TopBrandInterface) => {
+    console.log('Selected brand:', brand.name);
+    console.log('Delivery time:', brand.deliveryTime);
+    console.log('Cuisine:', brand.cuisine);
+    // Navigate to brand page or show details
+  };
+
 
     // Render the main content based on category
     const renderMainContent = () => {
@@ -1219,15 +1235,40 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                 return (
                     <>
                         <div className={styles.dineOutCard}>
-                            {/* <FoodDineOutCard
-                                items={FoodDineOutCollections}
-                                title="Dine Out Collections Nearby You"
-                                viewAllLink="/collections"
-                                viewAllText="View All"
+                            <div className={styles.videoWrapper}>
+                                <VideoPlayerSlide
+                                    src="/videos/DINE_OUT_1.mp4"
+                                    poster="/"
+                                    aspectRatio="21:9"
+                                />
+                            </div>
+                            <div className={styles.searchOverlay}>
+                                <SearchBarOrderNow
+                                    onSearch={handleSearch}
+                                    className="custom-search-bar"
+                                    placeholder="Search restaurants..."
+                                />
+                            </div>
+                            <FoodCategoryList
+                                categories={FoodCategoryItemsListData}
+                                title="Inspiration for your first order"
+                                onCategoryClick={handleFoodCategoryClick}
+                                itemsPerView={5}
+                                autoPlay={true}
+                                showArrows={true}
+                            />
+                            <TopBrandsFood
+                                title="Popular Food Brands"
+                                brands={TopBrandsDataFood}
+                                onBrandClick={handleBrandClick}
+                                className="custom-wrapper"
+                                itemsPerView={6}
+                                autoPlay={true}
                                 autoPlayInterval={3000}
                                 showArrows={true}
-                                onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
-                            /> */}
+                            />
+
+
                         </div>
                     </>
                 );

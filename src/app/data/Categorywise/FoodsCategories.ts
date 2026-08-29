@@ -1,5 +1,19 @@
-import { DiningItem } from "@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutDiscover/FoodDineOutDiscover";
+import { FoodCategoryInterface } from "@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList";
+import { DiningItem } from "@/components/FoodDelivery/FoodDesigns/FoodDineOutDiscover/FoodDineOutDiscover";
+import { TopBrandInterface } from "@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood";
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
+
+export interface FoodCategoryItem {
+  id: string;
+  name: string;
+  image: string;
+  imageUrl: string;
+  slug: string;
+  url: string;
+  cuisine?: string;
+  deliveryTime?: string;
+  // ... other properties
+}
 
 export const FoodsCategories = [
   // {
@@ -1011,4 +1025,194 @@ export const DiningDataItems: DiningItem[] = [
     secondaryOffer: 'Up to 10% off with bank offers',
     upiOffer: 'Get extra ₹75 off using PAYTM UPI',
   },
+];
+
+export const FoodCategoryItemsListData: FoodCategoryInterface[] = [
+  {
+    id: '1',
+    name: 'Biryani',
+    image: '/products/bf2d0e73add1c206aeeb9fec762438111727708719.png',
+    slug: 'dish-biryani',
+    cuisine: 'Hyderabadi, Mughlai'
+  },
+  {
+    id: '2',
+    name: 'Pizza',
+    image: '/products/d0bd7c9405ac87f6aa65e31fe55800941632716575.png',
+    slug: 'dish-pizza',
+    cuisine: 'Italian, Fast Food'
+  },
+  {
+    id: '3',
+    name: 'Veg Meal',
+    image: '/products/9cdab6d5f275b8d2532e3878134ddbda.jpg',
+    slug: 'dish-veg-meal',
+    cuisine: 'Indian, Healthy'
+  },
+  {
+    id: '4',
+    name: 'Thali',
+    image: '/products/52eb9796bb9bcf0eba64c643349e97211634401116.png',
+    slug: 'dish-thali',
+    cuisine: 'Indian, Traditional'
+  },
+  {
+    id: '5',
+    name: 'Burger',
+    image: '/products/ccb7dc2ba2b054419f805da7f05704471634886169.png',
+    slug: 'dish-burger',
+    cuisine: 'Fast Food, American'
+  },
+  {
+    id: '6',
+    name: 'Chicken',
+    image: '/products/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png',
+    slug: 'dish-chicken',
+    cuisine: 'Non-Veg, Tandoori'
+  },
+  {
+    id: '7',
+    name: 'North Indian',
+    image: '/products/019409fe8f838312214d9211be010ef31678798444.jpeg',
+    slug: 'dish-north-indian',
+    cuisine: 'Indian, Punjabi'
+  },
+  {
+    id: '8',
+    name: 'Cake',
+    image: '/products/d5ab931c8c239271de45e1c159af94311634805744.png',
+    slug: 'dish-cake',
+    cuisine: 'Dessert, Bakery'
+  },
+  {
+    id: '9',
+    name: 'Chole Bhature',
+    image: '/products/c953e5ca07150e9a51f8b21102e20f7e1634805157.png',
+    slug: 'dish-chole-bhature',
+    cuisine: 'Indian, Street Food'
+  },
+  {
+    id: '10',
+    name: 'Rolls',
+    image: '/products/c2f22c42f7ba90d81440a88449f4e5891634806087.png',
+    slug: 'dish-rolls',
+    cuisine: 'Fast Food, Indian'
+  },
+  {
+    id: '11',
+    name: 'Sweets',
+    image: '/products/a9481ab8dce1f7cd553fe5dd6f47f7b91637241749.png',
+    slug: 'dish-sweets',
+    cuisine: 'Dessert, Indian'
+  },
+  {
+    id: '12',
+    name: 'Dosa',
+    image: '/products/8dc39742916ddc369ebeb91928391b931632716660.png',
+    slug: 'dish-dosa',
+    cuisine: 'South Indian, Breakfast'
+  }
+];
+
+export const TopBrandsDataFood: TopBrandInterface[] = [
+  {
+    id: '1',
+    name: "McDonald's",
+    image: '/products/mcdonalds.jpg',
+    slug: 'mcdonalds',
+    cuisine: 'American, Fast Food',
+    deliveryTime: '25 min',
+    imageUrl: '/products/mcdonalds.jpg',
+    url: '/brands/mcdonalds',
+  },
+  {
+    id: '2',
+    name: 'Haldiram\'s',
+    image: '/products/haldirams.jpg',
+    slug: 'haldirams',
+    cuisine: 'Indian, Sweets, Snacks',
+    deliveryTime: '28 min',
+    imageUrl: '/products/haldirams.jpg',
+    url: '/brands/haldirams',
+  },
+  {
+    id: '3',
+    name: 'Burger King',
+    image: '/products/burger-king.jpg',
+    slug: 'burger-king',
+    cuisine: 'American, Burgers, Fast Food',
+    deliveryTime: '25 min',
+    imageUrl: '/products/burger-king.jpg',
+    url: '/brands/burger-king',
+  },
+  {
+    id: '4',
+    name: 'Punjabi Angithi By Vegorama Group',
+    image: '/products/punjabi-angithi.jpg',
+    slug: 'punjabi-angithi',
+    cuisine: 'North Indian, Punjabi, Tandoor',
+    deliveryTime: '45 min',
+    imageUrl: '/products/punjabi-angithi.jpg',
+    url: '/brands/punjabi-angithi',
+  },
+  {
+    id: '5',
+    name: 'KFC',
+    image: '/products/kfc.jpg',
+    slug: 'kfc',
+    cuisine: 'American, Fast Food, Fried Chicken',
+    deliveryTime: '28 min',
+    imageUrl: '/products/kfc.jpg',
+    url: '/brands/kfc',
+  },
+  {
+    id: '6',
+    name: 'Subway',
+    image: '/products/subway.jpg',
+    slug: 'subway',
+    cuisine: 'American, Healthy, Sandwiches',
+    deliveryTime: '29 min',
+    imageUrl: '/products/subway.jpg',
+    url: '/brands/subway',
+  },
+  {
+    id: '7',
+    name: 'Bikanervala',
+    image: '/products/Bikanervala.jpg',
+    slug: 'Bikanervala',
+    cuisine: 'Bikanervala',
+    deliveryTime: '30 min',
+    imageUrl: '/products/Bikanervala.jpg',
+    url: '/brands/Bikanervala',
+  },
+  {
+    id: '8',
+    name: 'Taco Bell',
+    image: '/products/Taco_Bell.jpg',
+    slug: 'Taco-Bell',
+    cuisine: 'Taco Bell',
+    deliveryTime: '35 min',
+    imageUrl: '/products/Taco_Bell.jpg',
+    url: '/brands/Taco_Bell',
+  },
+  {
+    id: '9',
+    name: 'Bakingo',
+    image: '/products/Bakingo.jpg',
+    slug: 'Bakingo',
+    cuisine: 'Bakingo',
+    deliveryTime: '20 min',
+    imageUrl: '/products/Bakingo.jpg',
+    url: '/brands/Bakingo',
+  },
+  {
+    id: '10',
+    name: "Nathu's Sweets",
+    image: '/products/Nathus_Sweets.jpg',
+    slug: 'Nathu\'s Sweets',
+    cuisine: 'Nathu\'s Sweets',
+    deliveryTime: '22 min',
+    imageUrl: '/products/Nathus_Sweets.jpg',
+    url: '/brands/taco-bell',
+  }
 ];

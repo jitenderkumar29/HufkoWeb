@@ -68,7 +68,7 @@ const HeaderFranchise: React.FC<HeaderFranchiseProps> = ({
   videoPoster = '/images/hero-poster.jpg',
   heroTitle = 'TAJ HOTELS',
   heroSubtitle = 'Experience Luxury Redefined',
-  showHeroSearch = true, // Default: show hero search
+  showHeroSearch = false, // Default: show hero search
   searchPlaceholder = 'Click here to search for Ultra Premium Dine.',
   onHeroSearch,
   showHeaderSearch = false, // Default: hide header search

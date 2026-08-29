@@ -49,7 +49,7 @@ import HeroBannerLeftContent from '@/components/Shopping/HeroBanner/HeroBannerLe
 import ProductCategoryCardHalfDynamic from '@/components/Shopping/ItemListDesigns/ProductCategoryCardHalfDynamic/ProductCategoryCardHalfDynamic';
 import CustomerTestimonial from '@/components/Shopping/ItemListDesigns/CustomerTestimonial/CustomerTestimonial';
 import CategoryListCard from '@/components/Shopping/ItemListDesigns/CategoryListCard/CategoryListCard';
-import FoodDineOutCard from '@/components/FoodDelivery/FoodDineOutDesigns/FoodDineOutCard/FoodDineOutCard';
+import FoodDineOutCard from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
 
 interface CategoryItem {
   id: string;

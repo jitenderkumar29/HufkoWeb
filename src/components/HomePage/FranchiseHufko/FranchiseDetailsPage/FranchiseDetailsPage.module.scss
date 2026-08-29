@@ -1023,3 +1023,64 @@ $glass-hover: rgba(255, 255, 255, 0.15);
     font-size: 0.95rem;
   }
 }
+
+// YourPage.module.scss
+
+.detailsPage {
+  position: relative;
+  min-height: 100vh;
+}
+
+.headerWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 500px; // Adjust based on your header height
+}
+
+.searchBarOverlay {
+  position: absolute;
+  bottom: 70px; // Negative value to overlap the bottom of header
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 100;
+  pointer-events: none; // Allows clicks to pass through to the search bar itself
+
+  // Make the search bar itself clickable
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.mainContent {
+  margin-top: 30px; // Adjust based on how much you want the search bar to overlap
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .searchBarOverlay {
+    bottom: -20px;
+    width: 95%;
+  }
+
+  .mainContent {
+    margin-top: 20px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchBarOverlay {
+    bottom: -15px;
+    width: 98%;
+  }
+
+  .mainContent {
+    margin-top: 15px;
+    padding: 12px;
+  }
+}

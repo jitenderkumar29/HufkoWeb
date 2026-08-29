@@ -18,6 +18,7 @@ import HeaderFranchise, {
     NavItemHeaderFranchise,
 } from '@/components/Header/HeaderFranchise/HeaderFranchise';
 import CardFranchise from '../CardFranchise/CardFranchise';
+import SearchBarPremiere, { SearchDataPremiere } from '../../../SearchBar/SearchBarPremiere/SearchBarPremiere';
 
 
 export const homeHufkoFranchiseNavItems: NavItemHeaderFranchise[] = [
@@ -490,6 +491,7 @@ function FranchiseDetailsContent() {
 
     const [loading, setLoading] = useState(true);
     const [isValidCategory, setIsValidCategory] = useState(true);
+    const [searchResults, setSearchResults] = useState<SearchDataPremiere | null>(null);
 
     /*
      * Active navigation section
@@ -554,6 +556,20 @@ function FranchiseDetailsContent() {
         }, 50);
     };
 
+    const handleSearch = (data: SearchDataPremiere) => {
+        console.log('Search Data:', data);
+        setSearchResults(data);
+
+        // Example: Navigate to results page or call API
+        // router.push(`/results?hotel=${data.hotel}&date=${data.date}&guests=${data.guests}`);
+    };
+
+    // Handle date selection
+    const handleDateSelect = (date: Date) => {
+        console.log('Selected Date:', date);
+        // Update calendar or perform any date-related actions
+    };
+
 
     // If invalid category, show error message
     if (!isValidCategory) {
@@ -591,7 +607,7 @@ function FranchiseDetailsContent() {
                     videoPoster="/images/hero-poster.jpg"
                     heroTitle=""
                     heroSubtitle=""
-                    showHeroSearch={true}
+                    showHeroSearch={false}
                     searchPlaceholder="Click here to search for ultra premium dine."
                     onHeroSearch={handleHeroSearch}
                     onSearchClick={() => console.log('Search clicked')}
@@ -599,6 +615,18 @@ function FranchiseDetailsContent() {
                     onWishlistClick={() => console.log('Wishlist clicked')}
                     onCartClick={() => console.log('Cart clicked')}
                 />
+                <div className={styles.searchBarDineOut}>
+                    <SearchBarPremiere
+                        hotelName="Taj Exotica Resort & Spa, The Palm, Dubai"
+                        selectedDate="Today"
+                        guests={2}
+                        rooms={1}
+                        onSearch={handleSearch}
+                        onDateSelect={handleDateSelect}
+                        className="custom-search-bar"
+                        placeholder="Search for a hotel or resort"
+                    />
+                </div>
 
                 <main>
                     <LocationsSection
@@ -643,27 +671,43 @@ function FranchiseDetailsContent() {
     if (franchiseCategory === 'food_beverage') {
         return (
             <div className={styles.detailsPage}>
-                <HeaderFranchise
-                    navItems={homeHufkoFranchiseNavItems}
-                    cartItemCount={3}
-                    videoSrc="/videos/CHANGE_TO_MULTICUSINE_RESTURAN.mp4"
-                    videoPoster="/images/hero-poster.jpg"
-                    heroTitle=""
-                    heroSubtitle=""
-                    showHeroSearch={true}
-                    searchPlaceholder="Click here to search for Destinations or Hotels."
-                    onHeroSearch={handleHeroSearch}
-                    onSearchClick={() => console.log('Search clicked')}
-                    onUserClick={() => console.log('User clicked')}
-                    onWishlistClick={() => console.log('Wishlist clicked')}
-                    onCartClick={() => console.log('Cart clicked')}
-                />
+                <div className={styles.headerWrapper}>
+                    <HeaderFranchise
+                        navItems={homeHufkoFranchiseNavItems}
+                        cartItemCount={3}
+                        videoSrc="/videos/CHANGE_TO_MULTICUSINE_RESTURAN.mp4"
+                        videoPoster="/images/hero-poster.jpg"
+                        heroTitle=""
+                        heroSubtitle=""
+                        showHeroSearch={false}
+                        searchPlaceholder="Click here to search for Destinations or Hotels."
+                        onHeroSearch={handleHeroSearch}
+                        onSearchClick={() => console.log('Search clicked')}
+                        onUserClick={() => console.log('User clicked')}
+                        onWishlistClick={() => console.log('Wishlist clicked')}
+                        onCartClick={() => console.log('Cart clicked')}
+                    />
 
-                <main>
-                    <div className={styles.foodBeverageContent}>
-                        <h2>Food & Beverage Franchise</h2>
-                        <p>Explore our food and beverage franchise opportunities.</p>
+                    {/* SearchBarPremiere positioned over the bottom of the header */}
+                    <div className={styles.searchBarOverlay}>
+                        <SearchBarPremiere
+                            hotelName="Taj Exotica Resort & Spa, The Palm, Dubai"
+                            selectedDate="Today"
+                            guests={2}
+                            rooms={1}
+                            onSearch={handleSearch}
+                            onDateSelect={handleDateSelect}
+                            className="custom-search-bar"
+                            placeholder="Search for a hotel or resort"
+                        />
                     </div>
+                </div>
+
+                <main className={styles.mainContent}>
+                    <LocationsSection
+                        onSelectLocation={handleSectionChange}
+                        isActive={activeSection === 'locations'}
+                    />
                 </main>
             </div>
         );
