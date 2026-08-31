@@ -1,5 +1,6 @@
 import { FoodCategoryInterface } from "@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList";
 import { DiningItem } from "@/components/FoodDelivery/FoodDesigns/FoodDineOutDiscover/FoodDineOutDiscover";
+import { RestaurantItemFoodInterface } from "@/components/FoodDelivery/FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard";
 import { TopBrandInterface } from "@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood";
 import { SubHeaderItem } from "@/components/Header/SubHeader/SubHeader";
 
@@ -752,7 +753,7 @@ export const foodCategoriesSubHeader: SubHeaderItem[] = [
   // Quick Actions
   { name: "Order Now", id: "order_now_sub_header", url: "/order-now", category: "order_now_food" },
   { name: "Dine Out", id: "dine_out_sub_header", url: "/dine-out", category: "dine_out_food" },
-  { name: "Popular", id: "popular_sub_header", url: "/popular", category: "popular_food" },
+  { name: "Nightlife", id: "nightlife_sub_header", url: "/nightlife", category: "nightlife_food" },
   { name: "Offers", id: "offers_sub_header", url: "/offers", category: "offers_food" },
   
   // Meal Types
@@ -1216,3 +1217,46 @@ export const TopBrandsDataFood: TopBrandInterface[] = [
     url: '/brands/taco-bell',
   }
 ];
+
+export const OrderNowItemsList: RestaurantItemFoodInterface[] = [
+    {
+      id: 1,
+      name: "Slice of Italy",
+      rating: 4.3,
+      deliveryTime: "50-60 mins",
+      cuisines: ["Pizzas", "Italian", "Desserts"],
+      location: "Okhla",
+      imageUrl: "/products/5dc3546b5256aac8eaed766e65c003bb.jpg",
+    },
+    {
+      id: 2,
+      name: "Bakingo",
+      rating: 4.5,
+      deliveryTime: "30-35 mins",
+      cuisines: ["Bakery", "Desserts", "Beverages", "Snacks"],
+      location: "Sector 37",
+      imageUrl: "/products/c11d9b86-a04f-4f9e-bb4e-dab6dde06d3d_462153.jpg",
+      offer: "ITEMS AT ₹69",
+    },
+    {
+      id: 3,
+      name: "The Belgian Waffle Co.",
+      rating: 4.6,
+      deliveryTime: "30-35 mins",
+      cuisines: ["Desserts", "Waffle", "Coffee"],
+      location: "NIKHIL COMPLEX",
+      imageUrl: "/products/024d65e0-459e-45bc-b912-d0970cc02c40_915658.jpg",
+      offer: "20% OFF UPTO ₹50",
+    },
+    {
+      id: 4,
+      name: "Theobroma",
+      rating: 4.3,
+      deliveryTime: "30-35 mins",
+      cuisines: ["Bakery", "Desserts", "Beverages"],
+      location: "Sector-37",
+      imageUrl: "/products/28525129-2b53-433f-8dec-51fcc3cc262f_1305119.jpg",
+      offer: "ITEMS AT ₹37",
+    },
+    // Add more items as needed
+  ];

@@ -1170,7 +1170,7 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Premium Saloon & Spa Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-              franchiseCategory="flower_beverage"
+              franchiseCategory="care_beverage"
               detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
@@ -1237,7 +1237,7 @@ const HeaderCategory: React.FC = () => {
               heading="Own a World's Largest #1"
               highlightText="Pharmaceutical Franchise"
               description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-              franchiseCategory="flower_beverage"
+              franchiseCategory="pharma_beverage"
               detailsPagePath="/franchise-details"
               stats={[
                 { value: '3,00,000+', label: 'Franchise Partners', icon: Users },

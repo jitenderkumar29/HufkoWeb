@@ -1,4 +1,5 @@
 // components/SearchBarPremiere/SearchBarPremiere.tsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   Calendar, 
@@ -60,6 +61,9 @@ const HOTEL_LIST = [
   'Taj Connemara, Chennai',
 ];
 
+// Dropdown position type
+type DropdownPosition = 'below' | 'above';
+
 const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
   hotelName = 'Taj Exotica Resort & Spa, The Palm, Dubai',
   guests = 2,
@@ -107,6 +111,12 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
+  // Dropdown position states
+  const [calendarPosition, setCalendarPosition] = useState<DropdownPosition>('below');
+  const [timePosition, setTimePosition] = useState<DropdownPosition>('below');
+  const [guestPosition, setGuestPosition] = useState<DropdownPosition>('below');
+  const [hotelPosition, setHotelPosition] = useState<DropdownPosition>('below');
+
   // Room management state
   const [roomDetails, setRoomDetails] = useState<RoomDetail[]>([
     { id: 1, adults: 1, children: 0 }
@@ -118,6 +128,12 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
   const timeDropdownRef = useRef<HTMLDivElement>(null);
   const hotelDropdownRef = useRef<HTMLDivElement>(null);
   const hotelInputRef = useRef<HTMLInputElement>(null);
+
+  // Refs for the trigger elements to calculate space
+  const calendarTriggerRef = useRef<HTMLDivElement>(null);
+  const timeTriggerRef = useRef<HTMLDivElement>(null);
+  const guestTriggerRef = useRef<HTMLDivElement>(null);
+  const hotelTriggerRef = useRef<HTMLDivElement>(null);
 
   // Calculate total guests
   const totalGuests = roomDetails.reduce((sum, room) => sum + room.adults + room.children, 0);
@@ -155,6 +171,87 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Calculate position for dropdowns - FIXED with better logic
+  const calculatePosition = (
+    triggerRef: React.RefObject<HTMLDivElement | null>,
+    dropdownHeight: number
+  ): DropdownPosition => {
+    if (!triggerRef.current) return 'below';
+    
+    const rect = triggerRef.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Calculate available space below and above
+    const spaceBelow = windowHeight - rect.bottom - 20; // 20px padding
+    const spaceAbove = rect.top - 20; // 20px padding
+    
+    // If there's enough space below, show below
+    // If there's more space above than below, show above
+    // Otherwise default to below
+    if (spaceBelow >= dropdownHeight) {
+      return 'below';
+    } else if (spaceAbove >= dropdownHeight) {
+      return 'above';
+    } else {
+      // If neither has enough space, show where there's more space
+      return spaceAbove > spaceBelow ? 'above' : 'below';
+    }
+  };
+
+  // Helper to get dropdown height based on type with more accurate heights
+  const getDropdownHeight = (type: 'calendar' | 'time' | 'guest' | 'hotel'): number => {
+    switch (type) {
+      case 'calendar':
+        return 420; // Approximate height of calendar dropdown
+      case 'time':
+        return 350; // Approximate height of time dropdown
+      case 'guest':
+        return 450; // Approximate height of guest dropdown
+      case 'hotel':
+        return 300; // Approximate height of hotel dropdown
+      default:
+        return 300;
+    }
+  };
+
+  // Position calculation functions for each dropdown
+  const calculateCalendarPosition = () => {
+    const height = getDropdownHeight('calendar');
+    const position = calculatePosition(calendarTriggerRef, height);
+    setCalendarPosition(position);
+  };
+
+  const calculateTimePosition = () => {
+    const height = getDropdownHeight('time');
+    const position = calculatePosition(timeTriggerRef, height);
+    setTimePosition(position);
+  };
+
+  const calculateGuestPosition = () => {
+    const height = getDropdownHeight('guest');
+    const position = calculatePosition(guestTriggerRef, height);
+    setGuestPosition(position);
+  };
+
+  const calculateHotelPosition = () => {
+    const height = getDropdownHeight('hotel');
+    const position = calculatePosition(hotelTriggerRef, height);
+    setHotelPosition(position);
+  };
+
+  // Handle window resize to recalculate positions
+  useEffect(() => {
+    const handleResize = () => {
+      if (showCalendar) calculateCalendarPosition();
+      if (showTimeSelection) calculateTimePosition();
+      if (isGuestDropdownOpen) calculateGuestPosition();
+      if (showHotelDropdown) calculateHotelPosition();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [showCalendar, showTimeSelection, isGuestDropdownOpen, showHotelDropdown]);
 
   const handleSearch = () => {
     const searchData: SearchDataPremiere = {
@@ -324,11 +421,6 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
     );
   };
 
-  const formatTimeDisplay = (time: string) => {
-    const [hours, minutes] = time.split(':');
-    return `${hours}:${minutes}`;
-  };
-
   const generateTimeSlots = () => {
     const slots = [];
     const startHour = 6;
@@ -354,25 +446,86 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
     return `${start} - ${end}`;
   };
 
+  // Helper function to get dropdown position class
+  const getPositionClass = (position: DropdownPosition) => {
+    return position === 'above' ? styles.dropdownAbove : styles.dropdownBelow;
+  };
+
+  // Helper function to get dropdown style - FIXED to handle positioning properly
+  const getDropdownStyle = (position: DropdownPosition, gap: string = '13px') => {
+    if (position === 'above') {
+      return {
+        bottom: `calc(100% + ${gap})`,
+        top: 'auto' as const,
+        transform: 'translateX(-50%)',
+      };
+    } else {
+      return {
+        top: `calc(100% + ${gap})`,
+        bottom: 'auto' as const,
+        transform: 'translateX(-50%)',
+      };
+    }
+  };
+
+  // Special style for hotel dropdown (doesn't use transform)
+  const getHotelDropdownStyle = (position: DropdownPosition, gap: string = '13px') => {
+    if (position === 'above') {
+      return {
+        bottom: `calc(100% + ${gap})`,
+        top: 'auto' as const,
+      };
+    } else {
+      return {
+        top: `calc(100% + ${gap})`,
+        bottom: 'auto' as const,
+      };
+    }
+  };
+
+  // Force position recalculation when dropdown opens
+  const handleDropdownOpen = (
+    type: 'calendar' | 'time' | 'guest' | 'hotel',
+    setter: (value: boolean) => void,
+    currentState: boolean,
+    calculateFn: () => void
+  ) => {
+    const newState = !currentState;
+    setter(newState);
+    if (newState) {
+      // Use setTimeout to ensure DOM is updated before calculating
+      setTimeout(calculateFn, 10);
+    }
+  };
+
   return (
     <div className={`${styles.searchBarContainer} ${className}`}>
       <div className={styles.searchBar}>
         {/* Hotel Search with Dropdown */}
         <div className={styles.searchSection} ref={hotelDropdownRef}>
-          <div className={styles.inputWrapper}>
+          <div 
+            className={styles.inputWrapper}
+            ref={hotelTriggerRef}
+          >
             <MapPin size={18} className={styles.icon} />
             <input
               ref={hotelInputRef}
               type="text"
               value={searchTerm}
               onChange={handleHotelInputChange}
-              onFocus={handleHotelInputFocus}
+              onFocus={() => {
+                setShowHotelDropdown(true);
+                setTimeout(calculateHotelPosition, 10);
+              }}
               placeholder={placeholder}
               className={styles.hotelInput}
               autoComplete="off"
             />
             {showHotelDropdown && (
-              <div className={styles.hotelDropdown}>
+              <div 
+                className={`${styles.hotelDropdown} ${getPositionClass(hotelPosition)}`}
+                style={getHotelDropdownStyle(hotelPosition, '13px')}
+              >
                 <div className={styles.hotelDropdownHeader}>
                   <span>{filteredHotels.length} Hotels</span>
                   <button 
@@ -409,12 +562,16 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
         {/* Single Date Selection */}
         <div className={styles.searchSection}>
           <div className={styles.dateWrapper} ref={calendarRef}>
-            <div className={styles.dateDisplay} onClick={() => {
-                setShowCalendar(prev => !prev);
+            <div 
+              className={styles.dateDisplay}
+              ref={calendarTriggerRef}
+              onClick={() => {
+                handleDropdownOpen('calendar', setShowCalendar, showCalendar, calculateCalendarPosition);
                 setShowTimeSelection(false);
                 setIsGuestDropdownOpen(false);
                 setShowHotelDropdown(false);
-              }}>
+              }}
+            >
               <Calendar size={18} className={styles.icon} />
               <div className={styles.dateRange}>
                 <span className={styles.dateText}>{displayDate}</span>
@@ -424,7 +581,10 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
             </div>
             
             {showCalendar && (
-              <div className={styles.calendarDropdown}>
+              <div 
+                className={`${styles.calendarDropdown} ${getPositionClass(calendarPosition)}`}
+                style={getDropdownStyle(calendarPosition, '13px')}
+              >
                 <div className={styles.quickSelect}>
                   <QuickSelectButton label="Today" daysToAdd={0} />
                   <QuickSelectButton label="Tomorrow" daysToAdd={1} />
@@ -473,8 +633,9 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
           <div className={styles.timeWrapper} ref={timeDropdownRef}>
             <div 
               className={styles.timeDisplay}
+              ref={timeTriggerRef}
               onClick={() => {
-                setShowTimeSelection(prev => !prev);
+                handleDropdownOpen('time', setShowTimeSelection, showTimeSelection, calculateTimePosition);
                 setShowCalendar(false);
                 setIsGuestDropdownOpen(false);
                 setShowHotelDropdown(false);
@@ -486,7 +647,10 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
             </div>
             
             {showTimeSelection && (
-              <div className={styles.timeDropdown}>
+              <div 
+                className={`${styles.timeDropdown} ${getPositionClass(timePosition)}`}
+                style={getDropdownStyle(timePosition, '13px')}
+              >
                 <div className={styles.timeHeader}>
                   <span>Select Time Slot</span>
                 </div>
@@ -516,8 +680,9 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
           <div className={styles.guestWrapper} ref={guestDropdownRef}>
             <div 
               className={styles.guestDisplay}
+              ref={guestTriggerRef}
               onClick={() => {
-                setIsGuestDropdownOpen(prev => !prev);
+                handleDropdownOpen('guest', setIsGuestDropdownOpen, isGuestDropdownOpen, calculateGuestPosition);
                 setShowCalendar(false);
                 setShowTimeSelection(false);
                 setShowHotelDropdown(false);
@@ -525,17 +690,20 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
             >
               <Users size={18} className={styles.icon} />
               <span className={styles.guestText}>{totalGuests} Guest{totalGuests > 1 ? 's' : ''}</span>
-              <span className={styles.roomText}>{totalRooms} Room{totalRooms > 1 ? 's' : ''}</span>
+              <span className={styles.roomText}>{totalRooms} Table{totalRooms > 1 ? 's' : ''}</span>
               <ChevronDown size={16} className={`${styles.chevron} ${isGuestDropdownOpen ? styles.rotated : ''}`} />
             </div>
             
             {isGuestDropdownOpen && (
-              <div className={styles.guestDropdown}>
+              <div 
+                className={`${styles.guestDropdown} ${getPositionClass(guestPosition)}`}
+                style={getDropdownStyle(guestPosition, '8px')}
+              >
                 <div className={styles.roomsContainer}>
                   {roomDetails.map((room, index) => (
                     <div key={room.id} className={styles.roomCard}>
                       <div className={styles.roomHeader}>
-                        <span className={styles.roomTitle}>Room {index + 1}</span>
+                        <span className={styles.roomTitle}>Table {index + 1}</span>
                         {roomDetails.length > 1 && (
                           <button 
                             className={styles.removeRoomBtn}
@@ -598,7 +766,7 @@ const SearchBarPremiere: React.FC<SearchBarPremiereProps> = ({
                 
                 <button className={styles.addRoomBtn} onClick={addRoom}>
                   <Plus size={16} />
-                  ADD MORE ROOMS
+                  ADD MORE TABLES
                 </button>
               </div>
             )}

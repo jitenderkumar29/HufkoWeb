@@ -118,10 +118,11 @@ import { FoodDineOutCollections } from '@/app/data/HeroBannerwise/FoodHero';
 import VideoPlayerSlide from '@/components/FoodDelivery/VideoPlayer/VideoPlayerSlide/VideoPlayerSlide';
 import SearchBarDineOut from '@/components/SearchBar/SearchBarDineOut/SearchBarDineOut';
 import FoodDineOutDiscover from '@/components/FoodDelivery/FoodDesigns/FoodDineOutDiscover/FoodDineOutDiscover';
-import { DiningDataItems, FoodCategoryItemsListData, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
+import { DiningDataItems, FoodCategoryItemsListData, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
 import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBarOrderNow';
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
+import OrderNowItemsListCard, { RestaurantItemFoodInterface } from '@/components/FoodDelivery/FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -221,10 +222,15 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     };
 
     const handleBrandClick = (brand: TopBrandInterface) => {
-    console.log('Selected brand:', brand.name);
-    console.log('Delivery time:', brand.deliveryTime);
-    console.log('Cuisine:', brand.cuisine);
-    // Navigate to brand page or show details
+        console.log('Selected brand:', brand.name);
+        console.log('Delivery time:', brand.deliveryTime);
+        console.log('Cuisine:', brand.cuisine);
+        // Navigate to brand page or show details
+    };
+
+    const handleItemFoodClick = (item: RestaurantItemFoodInterface) => {
+    console.log('Selected restaurant:', item.name);
+    // Navigate to restaurant details page
   };
 
 
@@ -1251,14 +1257,14 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             </div>
                             <FoodCategoryList
                                 categories={FoodCategoryItemsListData}
-                                title="Inspiration for your first order"
+                                title="Suggestion for your online order"
                                 onCategoryClick={handleFoodCategoryClick}
                                 itemsPerView={5}
                                 autoPlay={true}
                                 showArrows={true}
                             />
                             <TopBrandsFood
-                                title="Popular Food Brands"
+                                title="Best popular food brands near me"
                                 brands={TopBrandsDataFood}
                                 onBrandClick={handleBrandClick}
                                 className="custom-wrapper"
@@ -1266,6 +1272,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 autoPlay={true}
                                 autoPlayInterval={3000}
                                 showArrows={true}
+                            />
+                            <OrderNowItemsListCard
+                                items={OrderNowItemsList}
+                                title="Food Delivery Restaurants in Delhi NCR"
+                                onItemClick={handleItemFoodClick}
+                                variant="default"
+                                showOffers={true}
                             />
 
 

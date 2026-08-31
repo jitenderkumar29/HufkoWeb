@@ -17,9 +17,11 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease;
   flex-wrap: wrap;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   position: relative;
   z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.30);
+  border-radius: 50px;
 
   &:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -27,7 +29,6 @@
 
   &:focus-within {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    border-color: #b8860b;
   }
 }
 
@@ -52,8 +53,6 @@
 }
 
 // Each section is its own positioning context.
-// Date must sit above Time, and Time must sit above Guest,
-// so each dropdown can render directly below its own section.
 .searchSection:has(.inputWrapper) {
   position: relative;
   z-index: 10;
@@ -97,7 +96,7 @@
 
 .divider {
   width: 1px;
-  height: 36px;
+  height: 61px;
   background: rgba(255, 255, 255, 0.3);
   flex-shrink: 0;
 
@@ -143,7 +142,6 @@
 // Hotel Dropdown Styles
 .hotelDropdown {
   position: absolute;
-  top: calc(100% + 4px);
   left: -8px;
   right: -8px;
   background: rgba(255, 255, 255, 0.95);
@@ -155,7 +153,6 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   max-height: 300px;
   overflow-y: auto;
-  animation: slideDown 0.2s ease-out;
 
   @media (max-width: 768px) {
     left: 0;
@@ -327,10 +324,9 @@
   }
 }
 
-// COMPACT CALENDAR DROPDOWN - Positioned below date section
+// COMPACT CALENDAR DROPDOWN
 .calendarDropdown {
   position: absolute;
-  top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.98);
@@ -628,10 +624,9 @@
   }
 }
 
-// Time Dropdown - Positioned below time section
+// Time Dropdown
 .timeDropdown {
   position: absolute;
-  top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
@@ -805,7 +800,6 @@
 
 .guestDropdown {
   position: absolute;
-  top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
@@ -1028,7 +1022,7 @@
 
 // Book Now Button
 .bookButton {
-  padding: 16px 28px;
+  padding: 20px 28px;
   background: $primary-color !important;
   color: #ffffff;
   border: none;
@@ -1041,7 +1035,8 @@
   font-family: inherit;
   min-width: 130px;
   z-index: 10;
-  border-radius: 8px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 
   &:hover {
     opacity: 0.9;
@@ -1063,6 +1058,75 @@
     padding: 12px 20px;
     width: 100%;
     min-width: unset;
+  }
+}
+
+// Dropdown position classes
+.dropdownBelow {
+  animation: dropdownOpen 0.2s ease-out;
+}
+
+.dropdownAbove {
+  animation: dropdownOpenAbove 0.2s ease-out;
+
+}
+
+// Animations
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+    margin-top: -8px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes dropdownOpenAbove {
+  from {
+    opacity: 0;
+    margin-bottom: -8px;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+.calendarDropdown {
+  &.dropdownBelow {
+    animation: dropdownOpen 0.2s ease-out;
+  }
+  &.dropdownAbove {
+    animation: dropdownOpenAbove 0.2s ease-out;
+  }
+}
+
+.timeDropdown {
+  &.dropdownBelow {
+    animation: dropdownOpen 0.25s ease-out;
+  }
+  &.dropdownAbove {
+    animation: dropdownOpenAbove 0.25s ease-out;
+  }
+}
+
+.guestDropdown {
+  &.dropdownBelow {
+    animation: dropdownOpen 0.25s ease-out;
+  }
+  &.dropdownAbove {
+    animation: dropdownOpenAbove 0.25s ease-out;
+  }
+}
+
+.hotelDropdown {
+  &.dropdownBelow {
+    animation: dropdownOpen 0.25s ease-out;
+  }
+  &.dropdownAbove {
+    animation: dropdownOpenAbove 0.25s ease-out;
   }
 }
 
@@ -1211,37 +1275,6 @@
       padding: 3px 6px;
     }
   }
-}
-
-// Animations
-// Do not animate transform here because calendar/time/guest dropdowns
-// use transform for their horizontal positioning.
-@keyframes dropdownOpen {
-  from {
-    opacity: 0;
-    margin-top: -8px;
-  }
-
-  to {
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-
-.calendarDropdown {
-  animation: dropdownOpen 0.2s ease-out;
-}
-
-.timeDropdown {
-  animation: dropdownOpen 0.25s ease-out;
-}
-
-.guestDropdown {
-  animation: dropdownOpen 0.25s ease-out;
-}
-
-.hotelDropdown {
-  animation: dropdownOpen 0.25s ease-out;
 }
 
 // Scrollbar styling

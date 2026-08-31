@@ -2,6 +2,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import styles from './VideoPlayerSlide.module.scss';
+import { FaVolumeOff } from 'react-icons/fa';
+import { FaVolumeHigh } from 'react-icons/fa6';
 
 interface VideoPlayerProps {
   src: string;
@@ -164,17 +166,6 @@ const VideoPlayerSlide: React.FC<VideoPlayerProps> = ({
     }
   };
 
-  const togglePlay = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  };
-
   return (
     <div 
       ref={containerRef}
@@ -192,13 +183,12 @@ const VideoPlayerSlide: React.FC<VideoPlayerProps> = ({
         loop={loop}
         playsInline
         className={`${styles.videoElement} ${styles[`fit-${fit}`]}`}
-        onClick={togglePlay}
         style={{
           objectFit: fit,
         }}
       />
 
-      {/* Mute/Unmute Button - Top Right */}
+      {/* Mute/Unmute Button - Top Right Corner */}
       <button 
         className={styles.muteButton}
         onClick={(e) => {
@@ -207,19 +197,8 @@ const VideoPlayerSlide: React.FC<VideoPlayerProps> = ({
         }}
         aria-label={isMuted ? 'Unmute' : 'Mute'}
       >
-        {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+        {isMuted ? <FaVolumeOff size={24}/> : <FaVolumeHigh size={24}/>}
       </button>
-
-      {/* Play/Pause Overlay - Center */}
-      {!isPlaying && (
-        <div className={styles.playOverlay} onClick={togglePlay}>
-          <div className={styles.playIcon}>
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="white">
-              <polygon points="5,3 19,12 5,21" />
-            </svg>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

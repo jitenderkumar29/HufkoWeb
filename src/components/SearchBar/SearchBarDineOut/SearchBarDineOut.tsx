@@ -535,12 +535,12 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
                   {roomDetails.map((room, index) => (
                     <div key={room.id} className={styles.roomCard}>
                       <div className={styles.roomHeader}>
-                        <span className={styles.roomTitle}>Room {index + 1}</span>
+                        <span className={styles.roomTitle}>Table {index + 1}</span>
                         {roomDetails.length > 1 && (
                           <button 
                             className={styles.removeRoomBtn}
                             onClick={() => removeRoom(room.id)}
-                            aria-label="Remove room"
+                            aria-label="Remove Table"
                           >
                             <Trash2 size={16} />
                           </button>
@@ -598,7 +598,7 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
                 
                 <button className={styles.addRoomBtn} onClick={addRoom}>
                   <Plus size={16} />
-                  ADD MORE ROOMS
+                  ADD MORE TABLES
                 </button>
               </div>
             )}

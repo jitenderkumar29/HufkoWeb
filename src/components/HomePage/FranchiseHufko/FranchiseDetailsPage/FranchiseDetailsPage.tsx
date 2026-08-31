@@ -474,7 +474,7 @@ function BrandsSection({ isActive = false }: { isActive?: boolean }) {
 
 
 // Valid franchise categories
-const VALID_CATEGORIES = ['home_food_beverage', 'food_beverage', 'grocery_beverage', 'shopping_beverage'];
+const VALID_CATEGORIES = ['home_food_beverage', 'food_beverage', 'grocery_beverage', 'shopping_beverage','shopping_beverage','flower_beverage','care_beverage','pharma_beverage','wholesale_beverage'];
 
 /*
 |--------------------------------------------------------------------------
@@ -666,7 +666,6 @@ function FranchiseDetailsContent() {
         );
     }
 
-
     // Food & Beverage
     if (franchiseCategory === 'food_beverage') {
         return (
@@ -721,7 +720,99 @@ function FranchiseDetailsContent() {
                     <HeaderFranchise
                         navItems={homeHufkoFranchiseNavItems}
                         cartItemCount={3}
-                        videoSrc="/videos/HUFKO_SUPERMARKET_2.mp4"
+                        videoSrc="/videos/HUFKO_SUPERMARKET.mp4"
+                        videoPoster="/images/hero-poster.jpg"
+                        heroTitle=""
+                        heroSubtitle=""
+                        showHeroSearch={false}
+                        searchPlaceholder="Click here to search for Destinations or Hotels."
+                        onHeroSearch={handleHeroSearch}
+                        onSearchClick={() => console.log('Search clicked')}
+                        onUserClick={() => console.log('User clicked')}
+                        onWishlistClick={() => console.log('Wishlist clicked')}
+                        onCartClick={() => console.log('Cart clicked')}
+                    />
+
+                    {/* SearchBarPremiere positioned over the bottom of the header */}
+                    {/* <div className={styles.searchBarOverlay}>
+                        <SearchBarPremiere
+                            hotelName="Taj Exotica Resort & Spa, The Palm, Dubai"
+                            selectedDate="Today"
+                            guests={2}
+                            rooms={1}
+                            onSearch={handleSearch}
+                            onDateSelect={handleDateSelect}
+                            className="custom-search-bar"
+                            placeholder="Search for a hotel or resort"
+                        />
+                    </div> */}
+                </div>
+
+                <main className={styles.mainContent}>
+                    <LocationsSection
+                        onSelectLocation={handleSectionChange}
+                        isActive={activeSection === 'locations'}
+                    />
+                </main>
+            </div>
+        );
+    }
+
+    // Grocery Beverage
+    if (franchiseCategory === 'shopping_beverage') {
+        return (
+            <div className={styles.detailsPage}>
+                <div className={styles.headerWrapper}>
+                    <HeaderFranchise
+                        navItems={homeHufkoFranchiseNavItems}
+                        cartItemCount={3}
+                        videoSrc="/videos/shopping_section_video.mp4"
+                        videoPoster="/images/hero-poster.jpg"
+                        heroTitle=""
+                        heroSubtitle=""
+                        showHeroSearch={false}
+                        searchPlaceholder="Click here to search for Destinations or Hotels."
+                        onHeroSearch={handleHeroSearch}
+                        onSearchClick={() => console.log('Search clicked')}
+                        onUserClick={() => console.log('User clicked')}
+                        onWishlistClick={() => console.log('Wishlist clicked')}
+                        onCartClick={() => console.log('Cart clicked')}
+                    />
+
+                    {/* SearchBarPremiere positioned over the bottom of the header */}
+                    {/* <div className={styles.searchBarOverlay}>
+                        <SearchBarPremiere
+                            hotelName="Taj Exotica Resort & Spa, The Palm, Dubai"
+                            selectedDate="Today"
+                            guests={2}
+                            rooms={1}
+                            onSearch={handleSearch}
+                            onDateSelect={handleDateSelect}
+                            className="custom-search-bar"
+                            placeholder="Search for a hotel or resort"
+                        />
+                    </div> */}
+                </div>
+
+                <main className={styles.mainContent}>
+                    <LocationsSection
+                        onSelectLocation={handleSectionChange}
+                        isActive={activeSection === 'locations'}
+                    />
+                </main>
+            </div>
+        );
+    }
+
+    // Flower Beverage
+    if (franchiseCategory === 'flower_beverage') {
+        return (
+            <div className={styles.detailsPage}>
+                <div className={styles.headerWrapper}>
+                    <HeaderFranchise
+                        navItems={homeHufkoFranchiseNavItems}
+                        cartItemCount={3}
+                        videoSrc="/videos/shopping_section_video.mp4"
                         videoPoster="/images/hero-poster.jpg"
                         heroTitle=""
                         heroSubtitle=""
@@ -759,8 +850,100 @@ function FranchiseDetailsContent() {
         );
     }
 
-    // Grocery Beverage
-    if (franchiseCategory === 'shopping_beverage') {
+    // Care Beverage
+    if (franchiseCategory === 'care_beverage') {
+        return (
+            <div className={styles.detailsPage}>
+                <div className={styles.headerWrapper}>
+                    <HeaderFranchise
+                        navItems={homeHufkoFranchiseNavItems}
+                        cartItemCount={3}
+                        videoSrc="/videos/shopping_section_video.mp4"
+                        videoPoster="/images/hero-poster.jpg"
+                        heroTitle=""
+                        heroSubtitle=""
+                        showHeroSearch={false}
+                        searchPlaceholder="Click here to search for Destinations or Hotels."
+                        onHeroSearch={handleHeroSearch}
+                        onSearchClick={() => console.log('Search clicked')}
+                        onUserClick={() => console.log('User clicked')}
+                        onWishlistClick={() => console.log('Wishlist clicked')}
+                        onCartClick={() => console.log('Cart clicked')}
+                    />
+
+                    {/* SearchBarPremiere positioned over the bottom of the header */}
+                    <div className={styles.searchBarOverlay}>
+                        <SearchBarPremiere
+                            hotelName="Taj Exotica Resort & Spa, The Palm, Dubai"
+                            selectedDate="Today"
+                            guests={2}
+                            rooms={1}
+                            onSearch={handleSearch}
+                            onDateSelect={handleDateSelect}
+                            className="custom-search-bar"
+                            placeholder="Search for a hotel or resort"
+                        />
+                    </div>
+                </div>
+
+                <main className={styles.mainContent}>
+                    <LocationsSection
+                        onSelectLocation={handleSectionChange}
+                        isActive={activeSection === 'locations'}
+                    />
+                </main>
+            </div>
+        );
+    }
+
+    // Pharma Beverage
+    if (franchiseCategory === 'pharma_beverage') {
+        return (
+            <div className={styles.detailsPage}>
+                <div className={styles.headerWrapper}>
+                    <HeaderFranchise
+                        navItems={homeHufkoFranchiseNavItems}
+                        cartItemCount={3}
+                        videoSrc="/videos/shopping_section_video.mp4"
+                        videoPoster="/images/hero-poster.jpg"
+                        heroTitle=""
+                        heroSubtitle=""
+                        showHeroSearch={false}
+                        searchPlaceholder="Click here to search for Destinations or Hotels."
+                        onHeroSearch={handleHeroSearch}
+                        onSearchClick={() => console.log('Search clicked')}
+                        onUserClick={() => console.log('User clicked')}
+                        onWishlistClick={() => console.log('Wishlist clicked')}
+                        onCartClick={() => console.log('Cart clicked')}
+                    />
+
+                    {/* SearchBarPremiere positioned over the bottom of the header */}
+                    <div className={styles.searchBarOverlay}>
+                        <SearchBarPremiere
+                            hotelName="Taj Exotica Resort & Spa, The Palm, Dubai"
+                            selectedDate="Today"
+                            guests={2}
+                            rooms={1}
+                            onSearch={handleSearch}
+                            onDateSelect={handleDateSelect}
+                            className="custom-search-bar"
+                            placeholder="Search for a hotel or resort"
+                        />
+                    </div>
+                </div>
+
+                <main className={styles.mainContent}>
+                    <LocationsSection
+                        onSelectLocation={handleSectionChange}
+                        isActive={activeSection === 'locations'}
+                    />
+                </main>
+            </div>
+        );
+    }
+    
+    // Wholesale Beverage
+    if (franchiseCategory === 'wholesale_beverage') {
         return (
             <div className={styles.detailsPage}>
                 <div className={styles.headerWrapper}>
