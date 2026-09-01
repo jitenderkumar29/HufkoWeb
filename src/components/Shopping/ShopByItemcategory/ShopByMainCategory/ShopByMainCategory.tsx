@@ -1407,13 +1407,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             />
                         </div>
 
-                        <OrderNowItemsListCard
+                        {/* <OrderNowItemsListCard
                                 items={DineoutItemsList}
                                 title={getLocationBasedTitle("Food Delivery Restaurants in")}
                                 variant="5col"
                                 showOffers={true}
                                 onItemClick={(item) => console.log('Clicked:', item)}
-                            />
+                            /> */}
                     </>
                 );
 
