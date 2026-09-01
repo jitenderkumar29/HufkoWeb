@@ -906,7 +906,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                         )}
 
                         {/* Selected address preview */}
-                        {selectedSuggestion && (
+                        {/* {selectedSuggestion && (
                             <div className={styles.selectedAddressPreview}>
                                 <div className={styles.addressPreviewContent}>
                                     <MapPin size={16} className={styles.previewIcon} />
@@ -931,7 +931,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                                     Change
                                 </button>
                             </div>
-                        )}
+                        )} */}
                     </div>
 
                     {/* Confirm Button */}
