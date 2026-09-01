@@ -1,7 +1,7 @@
 // components/Shopping/ShopByMainCategory/ShopByMainCategory.tsx
 
 import { SubHeaderItem } from '@/components/Header/SubHeader/SubHeader';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ShopByMainCategory.module.scss';
 import FashionRoundCarousel from '../../ItemListDesigns/FashionRoundCarousel/FashionRoundCarousel';
 import {
@@ -118,7 +118,7 @@ import { FoodDineOutCollections } from '@/app/data/HeroBannerwise/FoodHero';
 import VideoPlayerSlide from '@/components/FoodDelivery/VideoPlayer/VideoPlayerSlide/VideoPlayerSlide';
 import SearchBarDineOut from '@/components/SearchBar/SearchBarDineOut/SearchBarDineOut';
 import FoodDineOutDiscover from '@/components/FoodDelivery/FoodDesigns/FoodDineOutDiscover/FoodDineOutDiscover';
-import { DiningDataItems, FoodCategoryItemsListData, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
+import { DineoutItemsList, DiningDataItems, FoodCategoryItemsListData, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
 import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBarOrderNow';
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
@@ -129,6 +129,29 @@ interface ShopByMainCategoryProps {
     selectedItem?: SubHeaderItem | null;
     subHeaderItem?: SubHeaderItem | null;
 }
+
+// Storage keys (matching AddressSelection)
+const STORAGE_KEYS = {
+    SELECTED_COUNTRY: 'address_selection_country',
+    SELECTED_CITY: 'address_selection_city',
+    SELECTED_STATE: 'address_selection_state',
+    SELECTED_LOCALITY: 'address_selection_locality',
+    SELECTED_PINCODE: 'address_selection_pincode',
+    SELECTED_FULL_ADDRESS: 'address_selection_full_address',
+};
+
+// Custom event name for address changes
+const ADDRESS_CHANGE_EVENT = 'addressSelectionChanged';
+
+// Helper to get from localStorage
+const getFromStorage = (key: string): string | null => {
+    try {
+        return localStorage.getItem(key);
+    } catch (error) {
+        console.error('Error reading from localStorage:', error);
+        return null;
+    }
+};
 
 // Map of categories to their carousel data
 const categoryCarouselMap: Record<string, CategoryItem[]> = {
@@ -157,7 +180,62 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     const [selectedCategory, setSelectedCategory] = React.useState<CategoryItem | null>(null);
     const [showSubCategoryView, setShowSubCategoryView] = React.useState(false);
 
+    // State for address information from localStorage
+    const [selectedCity, setSelectedCity] = useState<string>('');
+    const [selectedCountry, setSelectedCountry] = useState<string>('');
+    const [selectedState, setSelectedState] = useState<string>('');
+    const [selectedLocality, setSelectedLocality] = useState<string>('');
+
     const router = useRouter();
+
+    // Load address data from localStorage
+    const loadAddressData = () => {
+        const city = getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+        const country = getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+        const state = getFromStorage(STORAGE_KEYS.SELECTED_STATE) || '';
+        const locality = getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+
+        setSelectedCity(city);
+        setSelectedCountry(country);
+        setSelectedState(state);
+        setSelectedLocality(locality);
+
+        console.log('Address data loaded:', { city, country, state, locality });
+    };
+
+    // Load address data on mount and when category changes
+    useEffect(() => {
+        loadAddressData();
+    }, [category]);
+
+    // Listen for custom address change event (dispatched from AddressSelection)
+    useEffect(() => {
+        const handleAddressChange = (event: Event) => {
+            console.log('Address change event received');
+            loadAddressData();
+        };
+
+        // Listen for the custom event
+        window.addEventListener(ADDRESS_CHANGE_EVENT, handleAddressChange);
+
+        // Also listen for storage events (for cross-tab updates)
+        const handleStorageChange = (e: StorageEvent) => {
+            if (e.key === STORAGE_KEYS.SELECTED_CITY ||
+                e.key === STORAGE_KEYS.SELECTED_COUNTRY ||
+                e.key === STORAGE_KEYS.SELECTED_STATE ||
+                e.key === STORAGE_KEYS.SELECTED_LOCALITY) {
+                console.log('Storage change detected for address keys');
+                loadAddressData();
+            }
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+
+        return () => {
+            window.removeEventListener(ADDRESS_CHANGE_EVENT, handleAddressChange);
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
 
     // Get the current category's carousel data
     const getCurrentCarouselData = (): CategoryItem[] => {
@@ -229,10 +307,36 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     };
 
     const handleItemFoodClick = (item: RestaurantItemFoodInterface) => {
-    console.log('Selected restaurant:', item.name);
-    // Navigate to restaurant details page
-  };
+        console.log('Selected restaurant:', item.name);
+        // Navigate to restaurant details page
+    };
 
+    // Generate location-based title with all available address parts
+    // Generate location-based title with locality and country
+    const getLocationBasedTitle = (baseTitle: string): string => {
+        // Get location parts from state
+        const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+        const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+        const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+
+        // Priority: locality > city, then add country
+        let locationString = '';
+        if (locality) {
+            locationString = country ? `${locality}, ${country}` : locality;
+        } else if (city) {
+            locationString = country ? `${city}, ${country}` : city;
+        } else if (country) {
+            locationString = country;
+        }
+
+        // Return formatted title
+        if (locationString) {
+            return `Food Delivery Restaurants in ${locationString}`;
+        }
+
+        // Fallback
+        return "Food Delivery Restaurants";
+    };
 
     // Render the main content based on category
     const renderMainContent = () => {
@@ -261,14 +365,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             showDots={true}
                             onSlideChange={(index) => console.log('Current slide:', index)}
                         />
-                        {/* <BankOfferSlide
-                            slides={bankOfferElectronicsSlide}
-                            autoPlay={true}
-                            autoPlayInterval={5000}
-                            showArrows={true}
-                            showDots={true}
-                            onSlideChange={(index) => console.log('Current slide:', index)}
-                        /> */}
                         <VerticalScroll
                             items={toElectronicsItems}
                             imageHeight={400}
@@ -530,7 +626,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             showCTA={true}
                             onSlideClick={(slide, index) => {
                                 console.log(`Slide ${index + 1} clicked:`, slide);
-                                // Handle navigation
                             }}
                             onSlideChange={(index) => {
                                 console.log(`Current slide: ${index + 1}`);
@@ -546,13 +641,11 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             cardPadding={10}
                             onBrandClick={(brand) => {
                                 console.log('Brand clicked:', brand);
-                                // Handle navigation
                             }}
                             onBrandHover={(brand) => {
                                 console.log('Brand hovered:', brand);
                             }}
                         />
-                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
@@ -577,7 +670,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             showCTA={true}
                             onSlideClick={(slide, index) => {
                                 console.log(`Slide ${index + 1} clicked:`, slide);
-                                // Handle navigation
                             }}
                             onSlideChange={(index) => {
                                 console.log(`Current slide: ${index + 1}`);
@@ -601,7 +693,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             cardPadding={10}
                             onBrandClick={(brand) => {
                                 console.log('Brand clicked:', brand);
-                                // Handle navigation
                             }}
                             onBrandHover={(brand) => {
                                 console.log('Brand hovered:', brand);
@@ -624,7 +715,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             cardPadding={10}
                             onBrandClick={(brand) => {
                                 console.log('Brand clicked:', brand);
-                                // Handle navigation
                             }}
                             onBrandHover={(brand) => {
                                 console.log('Brand hovered:', brand);
@@ -638,7 +728,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             heroImage="/products/bannerFullSlide.jpg"
                             cards={slidesDataFashionFullSlide}
                         />
-                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
@@ -663,7 +752,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             showCTA={true}
                             onSlideClick={(slide, index) => {
                                 console.log(`Slide ${index + 1} clicked:`, slide);
-                                // Handle navigation
                             }}
                             onSlideChange={(index) => {
                                 console.log(`Current slide: ${index + 1}`);
@@ -688,13 +776,11 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             cardPadding={10}
                             onBrandClick={(brand) => {
                                 console.log('Brand clicked:', brand);
-                                // Handle navigation
                             }}
                             onBrandHover={(brand) => {
                                 console.log('Brand hovered:', brand);
                             }}
                         />
-                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
@@ -719,7 +805,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             showCTA={true}
                             onSlideClick={(slide, index) => {
                                 console.log(`Slide ${index + 1} clicked:`, slide);
-                                // Handle navigation
                             }}
                             onSlideChange={(index) => {
                                 console.log(`Current slide: ${index + 1}`);
@@ -758,7 +843,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             cardPadding={10}
                             onBrandClick={(brand) => {
                                 console.log('Brand clicked:', brand);
-                                // Handle navigation
                             }}
                             onBrandHover={(brand) => {
                                 console.log('Brand hovered:', brand);
@@ -771,7 +855,6 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             subtitle="Based on your preferences"
                             ctaText="See All Recommendations"
                         />
-                        {/* Add Men's Fashion content here */}
                     </>
                 );
 
@@ -1275,13 +1358,11 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             />
                             <OrderNowItemsListCard
                                 items={OrderNowItemsList}
-                                title="Food Delivery Restaurants in Delhi NCR"
-                                onItemClick={handleItemFoodClick}
-                                variant="default"
+                                title={getLocationBasedTitle("Food Delivery Restaurants in")}
+                                variant="5col"
                                 showOffers={true}
+                                onItemClick={(item) => console.log('Clicked:', item)}
                             />
-
-
                         </div>
                     </>
                 );
@@ -1293,16 +1374,12 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             <VideoPlayerSlide
                                 src="/videos/DINEOUT.mp4"
                                 poster="/"
-                                // title="Big Buck Bunny - Animated Short Film"
                                 aspectRatio="21:9"
-                            // height={650}
                             />
                         </div>
                         <div className={styles.searchBarDineOut}>
                             <SearchBarDineOut
                                 hotelName=""
-                                // checkInDate="29 Aug 2026"
-                                // checkOutDate="30 Aug 2026"
                                 guests={1}
                                 rooms={1}
                                 onSearch={handleSearch}
@@ -1329,6 +1406,14 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
                             />
                         </div>
+
+                        <OrderNowItemsListCard
+                                items={DineoutItemsList}
+                                title={getLocationBasedTitle("Food Delivery Restaurants in")}
+                                variant="5col"
+                                showOffers={true}
+                                onItemClick={(item) => console.log('Clicked:', item)}
+                            />
                     </>
                 );
 

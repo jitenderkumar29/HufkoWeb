@@ -1,7 +1,8 @@
 // components/OrderNowItemsListCard/OrderNowItemsListCard.module.scss
+@use "../../../../styles/variables.scss" as *;
+
 .orderNowContainer {
     width: 100%;
-    //   max-width: 1200px;
     margin: 0 auto;
     padding: 20px 16px;
     padding: 0rem 2rem;
@@ -99,6 +100,171 @@
                 }
             }
         }
+
+        // 5-Column variant
+        &.variant-5col {
+            grid-template-columns: 1fr;
+
+            @media (min-width: 640px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            @media (min-width: 1024px) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+
+            @media (min-width: 1280px) {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 18px;
+            }
+
+            @media (min-width: 1536px) {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+            }
+
+            .restaurantCard {
+                .imageContainer {
+                    height: 160px;
+
+                    @media (min-width: 768px) {
+                        height: 180px;
+                    }
+
+                    @media (min-width: 1024px) {
+                        height: 190px;
+                    }
+
+                    @media (min-width: 1536px) {
+                        height: 200px;
+                    }
+                }
+
+                .cardContent {
+                    padding: 10px 12px 12px 0px;
+
+                    @media (min-width: 768px) {
+                        padding: 12px 14px 14px 5px;
+                    }
+
+                    .restaurantName {
+                        font-size: 14px;
+                        margin-bottom: 4px;
+
+                        @media (min-width: 768px) {
+                            font-size: 15px;
+                            margin-bottom: 6px;
+                        }
+                    }
+
+                    .metaInfo {
+                        gap: 4px;
+                        margin-bottom: 4px;
+
+                        @media (min-width: 768px) {
+                            gap: 6px;
+                            margin-bottom: 6px;
+                        }
+
+                        .ratingContainer {
+                            padding: 1px 6px 1px 3px;
+
+                            .starIcon {
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            .rating {
+                                font-size: 11px;
+
+                                @media (min-width: 768px) {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        .dotSeparator {
+                            font-size: 12px;
+                        }
+
+                        .timeContainer {
+                            .clockIcon {
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            .deliveryTime {
+                                font-size: 11px;
+
+                                @media (min-width: 768px) {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    .cuisinesContainer {
+                        margin-bottom: 2px;
+
+                        .cuisines {
+                            font-size: 11px;
+
+                            @media (min-width: 768px) {
+                                font-size: 11px;
+                            }
+
+                            @media (min-width: 1536px) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .locationContainer {
+                        .locationIcon {
+                            width: 12px;
+                            height: 12px;
+                        }
+
+                        .location {
+                            font-size: 11px;
+
+                            @media (min-width: 768px) {
+                                font-size: 11px;
+                            }
+
+                            @media (min-width: 1536px) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                // Hide offer badges in 5-col on smaller screens to save space
+                .offerOverlay {
+                    .offerBadge {
+                        font-size: 9px;
+                        padding: 2px 8px;
+
+                        @media (min-width: 768px) {
+                            font-size: 10px;
+                            padding: 3px 10px;
+                        }
+
+                        @media (min-width: 1536px) {
+                            font-size: 11px;
+                            padding: 4px 10px;
+                        }
+
+                        .offerIcon {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .restaurantCard {
@@ -106,21 +272,15 @@
         border-radius: 12px;
         overflow: hidden;
         cursor: pointer;
-        border-bottom: 1ps solid rgb(0, 0, 0);
+        // border-bottom: 1px solid rgb(0, 0, 0);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08),
-            0 4px 16px rgba(0, 0, 0, 0.04),
-            0 1px 4px rgba(0, 0, 0, 0.06);
         margin-bottom: 5px;
 
         &:hover {
-            //   transform: translateY(-4px);
-            //   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
             border-color: rgba(0, 0, 0, 0.08);
         }
 
         &:active {
-            //   transform: scale(0.98);
             transition-duration: 0.1s;
         }
 
@@ -149,10 +309,6 @@
                 height: 100%;
                 object-fit: cover;
                 transition: transform 0.5s ease;
-
-                &:hover {
-                    //   transform: scale(1.05);
-                }
             }
 
             .offerOverlay {
@@ -196,10 +352,10 @@
         }
 
         .cardContent {
-            padding: 14px 16px 16px;
+            padding: 14px 16px 16px 0px;
 
             @media (min-width: 768px) {
-                padding: 16px 18px 18px;
+                padding: 16px 18px 18px 5px;
             }
 
             .restaurantName {
@@ -256,7 +412,7 @@
                 }
 
                 .dotSeparator {
-                    color: #8a8a8a;
+                    color: $gray-900;
                     font-weight: 300;
                 }
 
@@ -272,7 +428,7 @@
 
                     .deliveryTime {
                         font-size: 13px;
-                        color: #4a4a4a;
+                        color: $gray-900;
                         font-weight: 500;
 
                         @media (min-width: 768px) {
@@ -286,8 +442,8 @@
                 margin-bottom: 4px;
 
                 .cuisines {
-                    font-size: 13px;
-                    color: #6a6a6a;
+                    font-size: 12px;
+                    color: $gray-900;
                     display: -webkit-box;
                     -webkit-line-clamp: 1;
                     -webkit-box-orient: vertical;
@@ -295,7 +451,7 @@
                     line-height: 1.4;
 
                     @media (min-width: 768px) {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -306,20 +462,20 @@
                 gap: 4px;
 
                 .locationIcon {
-                    color: #8a8a8a;
+                    color: $gray-900;
                     flex-shrink: 0;
                 }
 
                 .location {
                     font-size: 12px;
-                    color: #8a8a8a;
+                    color: $gray-900;
                     font-weight: 400;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
 
                     @media (min-width: 768px) {
-                        font-size: 13px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -388,6 +544,20 @@
                 .locationContainer {
                     .location {
                         color: #7a7a7a;
+                    }
+                }
+            }
+        }
+
+        // Dark mode adjustments for 5-col variant
+        .itemsGrid {
+            &.variant-5col {
+                .restaurantCard {
+                    .offerOverlay {
+                        .offerBadge {
+                            background: rgba(30, 30, 30, 0.95);
+                            color: #e8e8e8;
+                        }
                     }
                 }
             }

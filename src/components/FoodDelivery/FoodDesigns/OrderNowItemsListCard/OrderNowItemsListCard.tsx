@@ -21,7 +21,7 @@ interface OrderNowItemsListCardProps {
   onItemClick?: (item: RestaurantItemFoodInterface) => void;
   className?: string;
   showOffers?: boolean;
-  variant?: 'default' | 'compact' | 'featured';
+  variant?: 'default' | 'compact' | 'featured' | '5col';
 }
 
 const OrderNowItemsListCard: React.FC<OrderNowItemsListCardProps> = ({

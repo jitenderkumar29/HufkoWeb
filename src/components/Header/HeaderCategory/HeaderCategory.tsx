@@ -602,7 +602,7 @@ const HeaderCategory: React.FC = () => {
                   badgeText="World's Largest Instant Delivery App Platform"
                   badgeIcon={<Shield size={16} />}
                   heading="Own a World's Largest #1"
-                  highlightText="Premium Restaurant Franchise"
+                  highlightText="Ultra Premium Restaurant"
                   description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
                   franchiseCategory="food_beverage"
                   detailsPagePath="/franchise-details"
@@ -637,7 +637,7 @@ const HeaderCategory: React.FC = () => {
                   onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
                   onSlideChange={(index) => console.log('Slide changed to:', index)}
                 >
-                  <span style={{ color: '#ffffff' }}> Technology Platform</span>
+                  <span style={{ color: '#ffffff' }}> Franchise</span>
                 </FranchiseHufkoSlide>
               </div>
             )}

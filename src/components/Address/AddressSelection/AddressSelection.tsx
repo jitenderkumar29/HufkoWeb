@@ -216,6 +216,57 @@ const countries: Country[] = [
     { code: 'CO', name: 'Colombia', flag: 'https://static-assets-prod.fnp.com/assets/images/custom/country-flags/colombia.svg', dialCode: '+57' },
 ];
 
+// Storage keys
+const STORAGE_KEYS = {
+    SELECTED_COUNTRY: 'address_selection_country',
+    SELECTED_CITY: 'address_selection_city',
+    SELECTED_STATE: 'address_selection_state',
+    SELECTED_LOCALITY: 'address_selection_locality',
+    SELECTED_PINCODE: 'address_selection_pincode',
+    SELECTED_FULL_ADDRESS: 'address_selection_full_address',
+};
+
+// Custom event name for address changes
+const ADDRESS_CHANGE_EVENT = 'addressSelectionChanged';
+
+// Helper functions for localStorage
+const saveToStorage = (key: string, value: string) => {
+    try {
+        localStorage.setItem(key, value);
+    } catch (error) {
+        console.error('Error saving to localStorage:', error);
+    }
+};
+
+const getFromStorage = (key: string): string | null => {
+    try {
+        return localStorage.getItem(key);
+    } catch (error) {
+        console.error('Error reading from localStorage:', error);
+        return null;
+    }
+};
+
+const clearAddressStorage = () => {
+    Object.values(STORAGE_KEYS).forEach(key => {
+        try {
+            localStorage.removeItem(key);
+        } catch (error) {
+            console.error('Error clearing localStorage:', error);
+        }
+    });
+};
+
+// Helper function to dispatch address change event
+const dispatchAddressChangeEvent = () => {
+    try {
+        window.dispatchEvent(new CustomEvent(ADDRESS_CHANGE_EVENT));
+        console.log('Address change event dispatched');
+    } catch (error) {
+        console.error('Error dispatching address change event:', error);
+    }
+};
+
 const AddressSelection: React.FC<AddressSelectionProps> = ({
     onConfirm,
     onClose,
@@ -223,17 +274,51 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
     initialPincode = '',
     className = '',
 }) => {
+    // Load initial country from localStorage if available
+    const getInitialCountry = (): Country => {
+        const savedCountryName = getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY);
+        if (savedCountryName) {
+            const found = countries.find(c => c.name === savedCountryName);
+            if (found) return found;
+        }
+        return countries.find(c => c.name === initialCountry) || countries[0];
+    };
+
     const [isOpen, setIsOpen] = useState(true);
-    const [selectedCountry, setSelectedCountry] = useState<Country>(
-        countries.find(c => c.name === initialCountry) || countries[0]
-    );
-    const [pincode, setPincode] = useState(initialPincode);
+    const [selectedCountry, setSelectedCountry] = useState<Country>(getInitialCountry);
+    const [pincode, setPincode] = useState(() => {
+        const savedPincode = getFromStorage(STORAGE_KEYS.SELECTED_PINCODE);
+        return savedPincode || initialPincode;
+    });
     const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [isDetecting, setIsDetecting] = useState(false);
     const [suggestions, setSuggestions] = useState<AddressSuggestion[]>([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const [selectedSuggestion, setSelectedSuggestion] = useState<AddressSuggestion | null>(null);
+    const [selectedSuggestion, setSelectedSuggestion] = useState<AddressSuggestion | null>(() => {
+        // Try to restore selected suggestion from localStorage
+        const savedFullAddress = getFromStorage(STORAGE_KEYS.SELECTED_FULL_ADDRESS);
+        const savedCity = getFromStorage(STORAGE_KEYS.SELECTED_CITY);
+        const savedState = getFromStorage(STORAGE_KEYS.SELECTED_STATE);
+        const savedLocality = getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY);
+        const savedPincode = getFromStorage(STORAGE_KEYS.SELECTED_PINCODE);
+        const savedCountry = getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY);
+        const savedCountryCode = getFromStorage('address_selection_country_code');
+
+        if (savedFullAddress && savedCity && savedState && savedCountry) {
+            return {
+                id: 'restored-1',
+                pincode: savedPincode || '',
+                locality: savedLocality || savedCity,
+                city: savedCity,
+                state: savedState,
+                country: savedCountry,
+                countryCode: savedCountryCode || '',
+                fullAddress: savedFullAddress,
+            };
+        }
+        return null;
+    });
     const [isLoading, setIsLoading] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [detectError, setDetectError] = useState<string | null>(null);
@@ -250,12 +335,11 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
     // Fetch address data from Nominatim (OpenStreetMap) API
     const fetchAddressFromNominatim = useCallback(async (query: string, countryCode: string) => {
         try {
-            // Use Nominatim API with country filter
             const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&countrycodes=${countryCode.toLowerCase()}&format=json&addressdetails=1&limit=10&accept-language=en`;
 
             const response = await fetch(url, {
                 headers: {
-                    'User-Agent': 'AddressSelectionApp/1.0' // Required by Nominatim
+                    'User-Agent': 'AddressSelectionApp/1.0'
                 }
             });
 
@@ -274,7 +358,6 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                     const country = address.country || selectedCountry.name;
                     const countryCodeFromAddress = address.country_code?.toUpperCase() || countryCode;
 
-                    // Build a clean address string
                     const addressParts = [
                         item.display_name?.split(',')[0] || '',
                         city,
@@ -315,6 +398,9 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
         setSelectedSuggestion(null);
         setDetectError(null);
 
+        // Save pincode to localStorage
+        saveToStorage(STORAGE_KEYS.SELECTED_PINCODE, value);
+
         // Clear previous timeout
         if (debounceTimerRef.current) {
             clearTimeout(debounceTimerRef.current);
@@ -325,13 +411,10 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
         if (trimmedValue.length >= 2) {
             setIsLoading(true);
 
-            // Debounce API calls
             debounceTimerRef.current = setTimeout(async () => {
                 const countryCode = getCountryCode();
-                // Search by postal code
                 const results = await fetchAddressFromNominatim(trimmedValue, countryCode);
 
-                // If no results, try searching with country context
                 let finalResults = results;
                 if (results.length === 0) {
                     const contextualQuery = `${trimmedValue} ${selectedCountry.name}`;
@@ -361,9 +444,22 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
         setSearchTerm('');
         setDetectError(null);
 
+        // Save selected country to localStorage
+        saveToStorage(STORAGE_KEYS.SELECTED_COUNTRY, country.name);
+
         setSuggestions([]);
         setShowSuggestions(false);
         setSelectedSuggestion(null);
+
+        // Clear city/state from localStorage when country changes
+        localStorage.removeItem(STORAGE_KEYS.SELECTED_CITY);
+        localStorage.removeItem(STORAGE_KEYS.SELECTED_STATE);
+        localStorage.removeItem(STORAGE_KEYS.SELECTED_LOCALITY);
+        localStorage.removeItem(STORAGE_KEYS.SELECTED_FULL_ADDRESS);
+        localStorage.removeItem('address_selection_country_code');
+
+        // Dispatch event to notify other components
+        dispatchAddressChangeEvent();
 
         // Refetch suggestions for new country if pincode exists
         const trimmedPincode = pincode.trim();
@@ -391,11 +487,24 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
         setShowSuggestions(false);
         setDetectError(null);
 
+        // Save full address details to localStorage
+        saveToStorage(STORAGE_KEYS.SELECTED_FULL_ADDRESS, suggestion.fullAddress);
+        saveToStorage(STORAGE_KEYS.SELECTED_CITY, suggestion.city);
+        saveToStorage(STORAGE_KEYS.SELECTED_STATE, suggestion.state);
+        saveToStorage(STORAGE_KEYS.SELECTED_LOCALITY, suggestion.locality);
+        saveToStorage(STORAGE_KEYS.SELECTED_PINCODE, suggestion.pincode);
+        saveToStorage(STORAGE_KEYS.SELECTED_COUNTRY, suggestion.country);
+        saveToStorage('address_selection_country_code', suggestion.countryCode);
+
         // Update country if different
         const country = countries.find(c => c.code === suggestion.countryCode);
         if (country) {
             setSelectedCountry(country);
+            saveToStorage(STORAGE_KEYS.SELECTED_COUNTRY, country.name);
         }
+
+        // Dispatch event to notify other components
+        dispatchAddressChangeEvent();
     };
 
     const handleConfirm = () => {
@@ -411,6 +520,18 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                 lat: selectedSuggestion.lat,
                 lng: selectedSuggestion.lng,
             };
+            // Save all address data to localStorage on confirm
+            saveToStorage(STORAGE_KEYS.SELECTED_COUNTRY, selectedSuggestion.country);
+            saveToStorage(STORAGE_KEYS.SELECTED_CITY, selectedSuggestion.city);
+            saveToStorage(STORAGE_KEYS.SELECTED_STATE, selectedSuggestion.state);
+            saveToStorage(STORAGE_KEYS.SELECTED_LOCALITY, selectedSuggestion.locality);
+            saveToStorage(STORAGE_KEYS.SELECTED_PINCODE, selectedSuggestion.pincode);
+            saveToStorage(STORAGE_KEYS.SELECTED_FULL_ADDRESS, selectedSuggestion.fullAddress);
+            saveToStorage('address_selection_country_code', selectedSuggestion.countryCode);
+
+            // Dispatch event to notify other components
+            dispatchAddressChangeEvent();
+
             onConfirm?.(addressData);
             setIsOpen(false);
             onClose?.();
@@ -421,6 +542,15 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                 fullAddress: `${pincode.trim()}, ${selectedCountry.name}`,
                 countryCode: selectedCountry.code,
             };
+            // Save basic address to localStorage
+            saveToStorage(STORAGE_KEYS.SELECTED_COUNTRY, selectedCountry.name);
+            saveToStorage(STORAGE_KEYS.SELECTED_PINCODE, pincode.trim());
+            saveToStorage(STORAGE_KEYS.SELECTED_FULL_ADDRESS, `${pincode.trim()}, ${selectedCountry.name}`);
+            saveToStorage('address_selection_country_code', selectedCountry.code);
+
+            // Dispatch event to notify other components
+            dispatchAddressChangeEvent();
+
             onConfirm?.(addressData);
             setIsOpen(false);
             onClose?.();
@@ -437,7 +567,6 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                     try {
                         const { latitude, longitude } = position.coords;
 
-                        // Use Nominatim API for reverse geocoding
                         const url = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1&accept-language=en`;
 
                         const response = await fetch(url, {
@@ -466,6 +595,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                             ) || countries[0];
 
                             setSelectedCountry(country);
+                            saveToStorage(STORAGE_KEYS.SELECTED_COUNTRY, country.name);
 
                             const addressParts = [
                                 data.display_name?.split(',')[0] || '',
@@ -493,6 +623,17 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                             setPincode(suggestion.fullAddress);
                             setSuggestions([]);
                             setShowSuggestions(false);
+
+                            // Save detected location to localStorage
+                            saveToStorage(STORAGE_KEYS.SELECTED_FULL_ADDRESS, suggestion.fullAddress);
+                            saveToStorage(STORAGE_KEYS.SELECTED_CITY, suggestion.city);
+                            saveToStorage(STORAGE_KEYS.SELECTED_STATE, suggestion.state);
+                            saveToStorage(STORAGE_KEYS.SELECTED_LOCALITY, suggestion.locality);
+                            saveToStorage(STORAGE_KEYS.SELECTED_PINCODE, suggestion.pincode);
+                            saveToStorage('address_selection_country_code', suggestion.countryCode);
+
+                            // Dispatch event to notify other components
+                            dispatchAddressChangeEvent();
                         } else {
                             setDetectError('Could not find location details. Please enter manually.');
                         }
@@ -684,9 +825,6 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
 
                     {/* Pincode Input with Suggestions */}
                     <div className={styles.pincodeSection}>
-                        {/* Detect Location Button */}
-
-
                         <div className={styles.inputWrapper} ref={suggestionsRef}>
                             <input
                                 type="text"
@@ -767,27 +905,33 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                             </div>
                         )}
 
-
                         {/* Selected address preview */}
-                        {/* {selectedSuggestion && (
+                        {selectedSuggestion && (
                             <div className={styles.selectedAddressPreview}>
                                 <div className={styles.addressPreviewContent}>
                                     <MapPin size={16} className={styles.previewIcon} />
                                     <span className={styles.addressText}>{selectedSuggestion.fullAddress}</span>
                                 </div>
-                                <br />
                                 <button
-                                    className={styles.changeAddressBtn}  // Changed from 'changeAddress' to 'changeAddressBtn'
+                                    className={styles.changeAddressBtn}
                                     onClick={() => {
                                         setSelectedSuggestion(null);
                                         setPincode(selectedSuggestion.pincode);
                                         setShowSuggestions(true);
+                                        // Clear saved address details when changing
+                                        localStorage.removeItem(STORAGE_KEYS.SELECTED_FULL_ADDRESS);
+                                        localStorage.removeItem(STORAGE_KEYS.SELECTED_CITY);
+                                        localStorage.removeItem(STORAGE_KEYS.SELECTED_STATE);
+                                        localStorage.removeItem(STORAGE_KEYS.SELECTED_LOCALITY);
+                                        
+                                        // Dispatch event to notify other components
+                                        dispatchAddressChangeEvent();
                                     }}
                                 >
                                     Change
                                 </button>
                             </div>
-                        )} */}
+                        )}
                     </div>
 
                     {/* Confirm Button */}

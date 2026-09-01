@@ -203,7 +203,7 @@ const SearchBarOrderNow: React.FC<SearchBarOrderNowProps> = ({
                 }
               }}
               onFocus={() => setIsCityDropdownOpen(true)}
-              placeholder="Select City or Location"
+              placeholder="Select Locality"
               className={styles.cityInput}
               autoComplete="off"
             />
