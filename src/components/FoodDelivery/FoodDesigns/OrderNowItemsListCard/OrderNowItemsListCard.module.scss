@@ -61,7 +61,8 @@
                 padding: 12px;
 
                 .restaurantName {
-                    font-size: 15px;
+                    font-size: 17px;
+                    font-weight: 900;
                 }
             }
         }
@@ -91,7 +92,8 @@
                     }
 
                     .restaurantName {
-                        font-size: 20px;
+                        font-size: 17px;
+                        font-weight: 900;
 
                         @media (min-width: 768px) {
                             font-size: 22px;
@@ -150,12 +152,15 @@
                     }
 
                     .restaurantName {
-                        font-size: 14px;
+                        font-size: 17px;
+                        font-weight: 900;
                         margin-bottom: 4px;
 
                         @media (min-width: 768px) {
-                            font-size: 15px;
+                            font-size: 17px;
                             margin-bottom: 6px;
+                            font-weight: 900;
+
                         }
                     }
 
@@ -359,8 +364,8 @@
             }
 
             .restaurantName {
-                font-size: 16px;
-                font-weight: 700;
+                font-size: 17px;
+                font-weight: 900;
                 color: #1a1a1a;
                 margin: 0 0 6px 0;
                 line-height: 1.3;

@@ -270,11 +270,11 @@
 }
 
 .foodDineOutDiscover{
-     margin-top: 8.5rem;
+     margin-top: -1.5rem;
 }
 
 .dineOutCard{
-//   margin-top: 1.5rem;
+  margin-top: 8.5rem;
 }
 
 .searchBarDineOut{
@@ -307,7 +307,7 @@
 
 .searchOverlay {
   position: absolute;
-  top: 390; // Position from bottom
+  top: 590; // Position from bottom
   left: 50%;
   transform: translateX(-50%);
   width: 90%;

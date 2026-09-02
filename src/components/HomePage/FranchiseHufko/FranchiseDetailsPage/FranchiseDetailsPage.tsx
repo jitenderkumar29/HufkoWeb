@@ -950,7 +950,7 @@ function FranchiseDetailsContent() {
                     <HeaderFranchise
                         navItems={homeHufkoFranchiseNavItems}
                         cartItemCount={3}
-                        videoSrc="/videos/shopping_section_video.mp4"
+                        videoSrc="/videos/HUFKO_WHOLESALE_FRANCHISE.mp4"
                         videoPoster="/images/hero-poster.jpg"
                         heroTitle=""
                         heroSubtitle=""

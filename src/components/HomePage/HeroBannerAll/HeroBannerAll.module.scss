@@ -1,8 +1,9 @@
 @use "../../../styles/variables.scss" as *;
+
 .heroBanner {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: auto; // Changed from fixed height
   background-color: #ffffff;
   margin-top: 0;
   overflow: hidden;
@@ -11,6 +12,7 @@
   .swiperContainer {
     width: 100%;
     height: 100%;
+    min-height: 200px; // Fallback minimum height
   }
 
   .swiperSlide {
@@ -24,6 +26,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    aspect-ratio: auto; // Let the container control aspect ratio
   }
 
   .bannerLink {
@@ -148,13 +151,20 @@
       }
     }
   }
+
+  // Ensure the container fills the height
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
 }
 
 // Responsive styles
 @media (max-width: 1191px) {
   .heroBanner {
-    height: 350px;
-
     .bannerContent {
       padding-left: 5rem;
       padding: 15px;
@@ -179,13 +189,21 @@
     .offText {
       font-size: 1.1rem;
     }
+
+    .prevButton,
+    .nextButton {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        font-size: 1.1rem;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .heroBanner {
-    height: 300px;
-
     .bannerContent {
       padding: 10px;
       background-color: rgba(255, 255, 255, 0.9);
@@ -238,6 +256,51 @@
 
 @media (max-width: 480px) {
   .heroBanner {
-    height: 250px;
+    .bannerContent {
+      padding: 8px;
+    }
+
+    .discountBadge {
+      font-size: 1.4rem;
+    }
+
+    .saleText {
+      font-size: 1rem;
+    }
+
+    .category {
+      font-size: 0.8rem;
+    }
+
+    .subtitle {
+      font-size: 0.7rem;
+    }
+
+    .offText {
+      font-size: 0.9rem;
+    }
+
+    .prevButton,
+    .nextButton {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        font-size: 0.8rem;
+      }
+    }
+
+    .pagination {
+      bottom: 8px;
+
+      .paginationDot {
+        width: 8px;
+        height: 3px;
+
+        &.activeDot {
+          width: 16px;
+        }
+      }
+    }
   }
 }

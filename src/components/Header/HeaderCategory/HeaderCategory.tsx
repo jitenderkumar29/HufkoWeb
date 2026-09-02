@@ -602,7 +602,7 @@ const HeaderCategory: React.FC = () => {
                   badgeText="World's Largest Instant Delivery App Platform"
                   badgeIcon={<Shield size={16} />}
                   heading="Own a World's Largest #1"
-                  highlightText="Ultra Premium Restaurant"
+                  highlightText="Ultra Premium Restaurant Franchise"
                   description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
                   franchiseCategory="food_beverage"
                   detailsPagePath="/franchise-details"
@@ -637,7 +637,7 @@ const HeaderCategory: React.FC = () => {
                   onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
                   onSlideChange={(index) => console.log('Slide changed to:', index)}
                 >
-                  <span style={{ color: '#ffffff' }}> Franchise</span>
+                  <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
                 </FranchiseHufkoSlide>
               </div>
             )}
@@ -663,7 +663,8 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={GroceryHeroBannerData} />
+            <HeroBannerAll banners={GroceryHeroBannerData} height={360} />
+            {/* <HeroBannerAll banners={GroceryHeroBannerData} /> */}
             <div className={styles.categoryGap}>
               <AllCategory categories={GroceryCategories} />
             </div>
@@ -728,7 +729,7 @@ const HeaderCategory: React.FC = () => {
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
             </FranchiseHufkoSlide>
           </div>
         )}
@@ -748,7 +749,7 @@ const HeaderCategory: React.FC = () => {
             {/* All Category - Default View */}
             {isShoppingCategorySelected("all") && (
               <div className={styles.electronicsSubCategory}>
-                <HeroBannerAll banners={ShopingHeroBannerData} />
+                <HeroBannerAll banners={ShopingHeroBannerData}  height={375} />
                 <div className={styles.categoryGap}>
                   <AllCategoryOne
                     categories={ShopingCategories}
@@ -812,7 +813,7 @@ const HeaderCategory: React.FC = () => {
                   onButtonClick={(index) => console.log(`Button ${index} clicked`)}
                   onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
                 >
-                  <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+                  <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
                 </FranchiseHufkoSlide>
               </div>
             )}
@@ -977,7 +978,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={FlowerHeroBannerData} />
+            <HeroBannerAll banners={FlowerHeroBannerData}  height={360} />
             <div className={styles.categoryGap}>
               <AllCategory categories={FlowersCategories} />
             </div>
@@ -1125,7 +1126,7 @@ const HeaderCategory: React.FC = () => {
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
             </FranchiseHufkoSlide>
             <CustomerTestimonial
               testimonials={customerTestimonialDataFlower}
@@ -1146,7 +1147,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={CareHeroBannerData} />
+            <HeroBannerAll banners={CareHeroBannerData}  height={360} />
             <div className={styles.categoryGap}>
               <AllCategory categories={CareCategories} />
             </div>
@@ -1200,7 +1201,7 @@ const HeaderCategory: React.FC = () => {
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
             </FranchiseHufkoSlide>
           </div>
         )}
@@ -1213,7 +1214,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={PharmaHeroBannerData} />
+            <HeroBannerAll banners={PharmaHeroBannerData}  height={375} />
             <div className={styles.categoryGap}>
               <AllCategoryOne categories={PharmaCategories} />
             </div>
@@ -1267,7 +1268,7 @@ const HeaderCategory: React.FC = () => {
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
             </FranchiseHufkoSlide>
           </div>
         )}
@@ -1280,7 +1281,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={WholesaleHeroBannerData} />
+            <HeroBannerAll banners={WholesaleHeroBannerData}  height={375} />
             <div className={styles.categoryGap}>
               <AllCategoryOne categories={WholesaleCategoriesList} />
             </div>
@@ -1338,7 +1339,7 @@ const HeaderCategory: React.FC = () => {
               onButtonClick={(index) => console.log(`Button ${index} clicked`)}
               onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
             >
-              <span style={{ color: '#ffffff' }}> in India - Start with Hufko</span>
+              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
             </FranchiseHufkoSlide>
           </div>
         )}

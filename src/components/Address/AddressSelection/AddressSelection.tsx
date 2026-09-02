@@ -828,7 +828,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                         <div className={styles.inputWrapper} ref={suggestionsRef}>
                             <input
                                 type="text"
-                                placeholder={isDetecting ? "Detecting location..." : `Enter pincode or City for ${selectedCountry.name}`}
+                                placeholder={isDetecting ? "Detecting location..." : `Enter pincode or Locality for ${selectedCountry.name}`}
                                 value={pincode}
                                 onChange={(e) => handlePincodeChange(e.target.value)}
                                 className={`${styles.pincodeInput} ${suggestions.length > 0 && showSuggestions ? styles.hasSuggestions : ''}`}
@@ -894,7 +894,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({
                             ) : (
                                 <>
                                     <Navigation size={18} />
-                                    <span>Detect my location</span>
+                                    <span>Detect Current Location</span>
                                 </>
                             )}
                         </button>

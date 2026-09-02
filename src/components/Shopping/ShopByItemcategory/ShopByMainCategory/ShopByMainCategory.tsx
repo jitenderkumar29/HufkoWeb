@@ -123,6 +123,7 @@ import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBa
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
 import OrderNowItemsListCard, { RestaurantItemFoodInterface } from '@/components/FoodDelivery/FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard';
+import DineOutItemsListCard from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -1323,7 +1324,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
             case 'order_now_food':
                 return (
                     <>
-                        <div className={styles.dineOutCard}>
+                        <div className={styles.dineOutCardOrderNow}>
                             <div className={styles.videoWrapper}>
                                 <VideoPlayerSlide
                                     src="/videos/DINE_OUT_1.mp4"
@@ -1383,22 +1384,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 guests={1}
                                 rooms={1}
                                 onSearch={handleSearch}
-                                placeholder="Find a hotel nearby me"
+                                placeholder="Find restaurant nearby me"
                             />
                         </div>
-                        <div className={styles.foodDineOutDiscover}>
-                            <FoodDineOutDiscover
-                                items={DiningDataItems}
-                                title="Discover best restaurants on Dineout"
-                                subtitle="Curated picks just for you"
-                                onSelect={handleAction}
-                            />
-                        </div>
-
                         <div className={styles.dineOutCard}>
                             <FoodDineOutCard
                                 items={FoodDineOutCollections}
-                                title="Dine Out Collections Nearby me"
+                                title="Dineout collections category nearby me"
                                 viewAllLink="/collections"
                                 viewAllText="View All"
                                 autoPlayInterval={3000}
@@ -1406,14 +1398,20 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
                             />
                         </div>
-
-                        {/* <OrderNowItemsListCard
-                                items={DineoutItemsList}
-                                title={getLocationBasedTitle("Food Delivery Restaurants in")}
-                                variant="5col"
-                                showOffers={true}
-                                onItemClick={(item) => console.log('Clicked:', item)}
-                            /> */}
+                        {/* <div className={styles.foodDineOutDiscover}>
+                            <FoodDineOutDiscover
+                                items={DiningDataItems}
+                                title="Discover best restaurants on Dineout"
+                                // subtitle="Curated picks just for you"
+                                onSelect={handleAction}
+                            />
+                        </div> */}
+                        <DineOutItemsListCard
+                            items={DineoutItemsList}
+                            title="Top collections dineout restaurants nearby me"
+                            onItemClick={(item) => console.log('Clicked:', item.name)}
+                             columns={4}
+                        />
                     </>
                 );
 

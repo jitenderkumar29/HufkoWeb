@@ -1,9 +1,14 @@
-// components/SearchBarDineOut/SearchBarDineOut.tsx
-import React, { useState, useRef, useEffect } from 'react';
-import { 
-  Calendar, 
-  Users, 
-  ChevronDown, 
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  useLayoutEffect,
+} from 'react';
+
+import {
+  Calendar,
+  Users,
+  ChevronDown,
   Plus,
   Minus,
   MapPin,
@@ -11,8 +16,9 @@ import {
   Trash2,
   User,
   UserPlus,
-  Search
+  Search,
 } from 'lucide-react';
+
 import styles from './SearchBarDineOut.module.scss';
 
 interface SearchBarDineOutProps {
@@ -41,7 +47,6 @@ interface RoomDetail {
   children: number;
 }
 
-// Sample hotel list
 const HOTEL_LIST = [
   'Taj Exotica Resort & Spa, The Palm, Dubai',
   'Taj Dubai, Business Bay',
@@ -60,6 +65,10 @@ const HOTEL_LIST = [
   'Taj Connemara, Chennai',
 ];
 
+type DropdownPlacement = 'above' | 'below';
+
+const DROPDOWN_GAP = 8;
+
 const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
   hotelName = 'Taj Exotica Resort & Spa, The Palm, Dubai',
   guests = 2,
@@ -67,94 +76,492 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
   onSearch,
   onDateSelect,
   className = '',
-  placeholder = 'Find a hotel',
+  placeholder = 'Find Restaurant',
 }) => {
-  // Get today's date
   const today = new Date();
-  
+
   const formatDate = (date: Date) => {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+
     const day = date.getDate();
     const month = months[date.getMonth()];
     const year = date.getFullYear();
+
     return `${day} ${month} ${year}`;
   };
 
   const formatDateForDisplay = (date: Date) => {
-    const today = new Date();
-    const tomorrow = new Date(today);
+    const currentToday = new Date();
+
+    const tomorrow = new Date(currentToday);
     tomorrow.setDate(tomorrow.getDate() + 1);
-    
-    if (date.toDateString() === today.toDateString()) {
+
+    if (date.toDateString() === currentToday.toDateString()) {
       return 'Today';
-    } else if (date.toDateString() === tomorrow.toDateString()) {
+    }
+
+    if (date.toDateString() === tomorrow.toDateString()) {
       return 'Tomorrow';
     }
+
     return formatDate(date);
   };
 
-  const [hotel, setHotel] = useState(hotelName);
-  const [selectedDate, setSelectedDate] = useState<Date>(today);
-  const [formattedDate, setFormattedDate] = useState(formatDate(today));
-  const [displayDate, setDisplayDate] = useState(formatDateForDisplay(today));
-  const [isGuestDropdownOpen, setIsGuestDropdownOpen] = useState(false);
-  const [showCalendar, setShowCalendar] = useState(false);
-  const [showTimeSelection, setShowTimeSelection] = useState(false);
-  const [showHotelDropdown, setShowHotelDropdown] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(hotelName);
-  const [filteredHotels, setFilteredHotels] = useState(HOTEL_LIST);
-  const [selectedTime, setSelectedTime] = useState('06:00-06:59');
-  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
-  const [currentYear, setCurrentYear] = useState(today.getFullYear());
+  /* ============================================================
+     STATE
+  ============================================================ */
 
-  // Room management state
-  const [roomDetails, setRoomDetails] = useState<RoomDetail[]>([
-    { id: 1, adults: 1, children: 0 }
-  ]);
+  const [hotel, setHotel] = useState(hotelName);
+
+  const [selectedDate, setSelectedDate] = useState<Date>(today);
+  const [formattedDate, setFormattedDate] = useState(
+    formatDate(today)
+  );
+  const [displayDate, setDisplayDate] = useState(
+    formatDateForDisplay(today)
+  );
+
+  const [isGuestDropdownOpen, setIsGuestDropdownOpen] =
+    useState(false);
+
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  const [showTimeSelection, setShowTimeSelection] =
+    useState(false);
+
+  const [showHotelDropdown, setShowHotelDropdown] =
+    useState(false);
+
+  const [searchTerm, setSearchTerm] = useState(hotelName);
+
+  const [filteredHotels, setFilteredHotels] =
+    useState(HOTEL_LIST);
+
+  const [selectedTime, setSelectedTime] =
+    useState('06:00-06:59');
+
+  const [currentMonth, setCurrentMonth] =
+    useState(today.getMonth());
+
+  const [currentYear, setCurrentYear] =
+    useState(today.getFullYear());
+
+  /*
+   * Dropdown placement.
+   *
+   * Default is ABOVE because that is what we want for
+   * Date and Time.
+   */
+  const [calendarPlacement, setCalendarPlacement] =
+    useState<DropdownPlacement>('above');
+
+  const [timePlacement, setTimePlacement] =
+    useState<DropdownPlacement>('above');
+
+  const [guestPlacement, setGuestPlacement] =
+    useState<DropdownPlacement>('above');
+
+  const [hotelPlacement, setHotelPlacement] =
+    useState<DropdownPlacement>('above');
+
+  /* ============================================================
+     ROOM STATE
+  ============================================================ */
+
+  const [roomDetails, setRoomDetails] = useState<RoomDetail[]>(
+    [
+      {
+        id: 1,
+        adults: 1,
+        children: 0,
+      },
+    ]
+  );
+
   const [nextRoomId, setNextRoomId] = useState(2);
 
-  const guestDropdownRef = useRef<HTMLDivElement>(null);
-  const calendarRef = useRef<HTMLDivElement>(null);
-  const timeDropdownRef = useRef<HTMLDivElement>(null);
-  const hotelDropdownRef = useRef<HTMLDivElement>(null);
-  const hotelInputRef = useRef<HTMLInputElement>(null);
+  /* ============================================================
+     REFS
+  ============================================================ */
 
-  // Calculate total guests
-  const totalGuests = roomDetails.reduce((sum, room) => sum + room.adults + room.children, 0);
+  const guestDropdownRef =
+    useRef<HTMLDivElement>(null);
+
+  const calendarRef =
+    useRef<HTMLDivElement>(null);
+
+  const calendarDropdownRef =
+    useRef<HTMLDivElement>(null);
+
+  const timeDropdownRef =
+    useRef<HTMLDivElement>(null);
+
+  const timeDropdownContentRef =
+    useRef<HTMLDivElement>(null);
+
+  const hotelDropdownRef =
+    useRef<HTMLDivElement>(null);
+
+  const hotelInputRef =
+    useRef<HTMLInputElement>(null);
+
+  const guestDropdownContentRef =
+    useRef<HTMLDivElement>(null);
+
+  const hotelDropdownContentRef =
+    useRef<HTMLDivElement>(null);
+
+  /* ============================================================
+     TOTALS
+  ============================================================ */
+
+  const totalGuests = roomDetails.reduce(
+    (sum, room) =>
+      sum + room.adults + room.children,
+    0
+  );
+
   const totalRooms = roomDetails.length;
 
-  // Filter hotels based on search term
+  /* ============================================================
+     HOTEL FILTER
+  ============================================================ */
+
   useEffect(() => {
     if (searchTerm.trim() === '') {
       setFilteredHotels(HOTEL_LIST);
-    } else {
-      const filtered = HOTEL_LIST.filter(hotel =>
-        hotel.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredHotels(filtered);
+      return;
     }
+
+    const filtered = HOTEL_LIST.filter((hotelItem) =>
+      hotelItem
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredHotels(filtered);
   }, [searchTerm]);
 
-  // Close dropdowns on outside click
+  /* ============================================================
+     DROPDOWN POSITION CALCULATOR
+  ============================================================ */
+
+  const calculateDropdownPlacement = (
+    triggerElement: HTMLElement | null,
+    dropdownElement: HTMLElement | null,
+    preferred: DropdownPlacement = 'above'
+  ): DropdownPlacement => {
+    if (!triggerElement || !dropdownElement) {
+      return preferred;
+    }
+
+    const triggerRect =
+      triggerElement.getBoundingClientRect();
+
+    const dropdownHeight =
+      dropdownElement.offsetHeight;
+
+    const viewportHeight = window.innerHeight;
+
+    const spaceAbove = triggerRect.top;
+    const spaceBelow =
+      viewportHeight - triggerRect.bottom;
+
+    const requiredSpace =
+      dropdownHeight + DROPDOWN_GAP;
+
+    /*
+     * Placement rule:
+     *
+     * 1. Prefer ABOVE the actual trigger section.
+     * 2. If there is not enough room above, use BELOW.
+     * 3. If neither side can fully contain the dropdown,
+     *    use the side with more available space.
+     *
+     * This is viewport-aware and works on desktop and mobile.
+     */
+    if (spaceAbove >= requiredSpace) {
+      return 'above';
+    }
+
+    if (spaceBelow >= requiredSpace) {
+      return 'below';
+    }
+
+    return spaceAbove >= spaceBelow
+      ? 'above'
+      : 'below';
+  };
+
+  /* ============================================================
+     DATE POSITION
+  ============================================================ */
+
+  const updateCalendarPlacement = () => {
+    if (!showCalendar) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const placement =
+        calculateDropdownPlacement(
+          calendarRef.current,
+          calendarDropdownRef.current,
+          'above'
+        );
+
+      setCalendarPlacement(placement);
+    });
+  };
+
+  /* ============================================================
+     TIME POSITION
+  ============================================================ */
+
+  const updateTimePlacement = () => {
+    if (!showTimeSelection) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const placement =
+        calculateDropdownPlacement(
+          timeDropdownRef.current,
+          timeDropdownContentRef.current,
+          'above'
+        );
+
+      setTimePlacement(placement);
+    });
+  };
+
+  /* ============================================================
+     GUEST POSITION
+  ============================================================ */
+
+  const updateGuestPlacement = () => {
+    if (!isGuestDropdownOpen) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const placement =
+        calculateDropdownPlacement(
+          guestDropdownRef.current,
+          guestDropdownContentRef.current,
+          'above'
+        );
+
+      setGuestPlacement(placement);
+    });
+  };
+
+  /* ============================================================
+     HOTEL POSITION
+  ============================================================ */
+
+  const updateHotelPlacement = () => {
+    if (!showHotelDropdown) {
+      return;
+    }
+
+    requestAnimationFrame(() => {
+      const placement =
+        calculateDropdownPlacement(
+          hotelDropdownRef.current,
+          hotelDropdownContentRef.current,
+          'above'
+        );
+
+      setHotelPlacement(placement);
+    });
+  };
+
+  /* ============================================================
+     RECALCULATE WHEN DROPDOWN OPENS
+  ============================================================ */
+
+  useLayoutEffect(() => {
+    if (!showCalendar) {
+      return;
+    }
+
+    /*
+     * Two animation frames make sure the dropdown has
+     * actually rendered before measuring its height.
+     */
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        updateCalendarPlacement();
+      });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [showCalendar]);
+
+  useLayoutEffect(() => {
+    if (!showTimeSelection) {
+      return;
+    }
+
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        updateTimePlacement();
+      });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [showTimeSelection]);
+
+  useLayoutEffect(() => {
+    if (!isGuestDropdownOpen) {
+      return;
+    }
+
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        updateGuestPlacement();
+      });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [
+    isGuestDropdownOpen,
+    roomDetails.length,
+  ]);
+
+  useLayoutEffect(() => {
+    if (!showHotelDropdown) {
+      return;
+    }
+
+    const frame = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        updateHotelPlacement();
+      });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [
+    showHotelDropdown,
+    filteredHotels.length,
+  ]);
+
+  /* ============================================================
+     WINDOW RESIZE / SCROLL
+  ============================================================ */
+
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (guestDropdownRef.current && !guestDropdownRef.current.contains(event.target as Node)) {
+    const handleViewportChange = () => {
+      updateCalendarPlacement();
+      updateTimePlacement();
+      updateGuestPlacement();
+      updateHotelPlacement();
+    };
+
+    window.addEventListener(
+      'resize',
+      handleViewportChange
+    );
+
+    /*
+     * Important:
+     * Recalculate while scrolling because the search bar
+     * can move relative to the viewport.
+     */
+    window.addEventListener(
+      'scroll',
+      handleViewportChange,
+      true
+    );
+
+    return () => {
+      window.removeEventListener(
+        'resize',
+        handleViewportChange
+      );
+
+      window.removeEventListener(
+        'scroll',
+        handleViewportChange,
+        true
+      );
+    };
+  }, [
+    showCalendar,
+    showTimeSelection,
+    isGuestDropdownOpen,
+    showHotelDropdown,
+  ]);
+
+  /* ============================================================
+     OUTSIDE CLICK
+  ============================================================ */
+
+  useEffect(() => {
+    const handleClickOutside = (
+      event: MouseEvent
+    ) => {
+      const target = event.target as Node;
+
+      if (
+        guestDropdownRef.current &&
+        !guestDropdownRef.current.contains(target)
+      ) {
         setIsGuestDropdownOpen(false);
       }
-      if (calendarRef.current && !calendarRef.current.contains(event.target as Node)) {
+
+      if (
+        calendarRef.current &&
+        !calendarRef.current.contains(target)
+      ) {
         setShowCalendar(false);
       }
-      if (timeDropdownRef.current && !timeDropdownRef.current.contains(event.target as Node)) {
+
+      if (
+        timeDropdownRef.current &&
+        !timeDropdownRef.current.contains(target)
+      ) {
         setShowTimeSelection(false);
       }
-      if (hotelDropdownRef.current && !hotelDropdownRef.current.contains(event.target as Node)) {
+
+      if (
+        hotelDropdownRef.current &&
+        !hotelDropdownRef.current.contains(target)
+      ) {
         setShowHotelDropdown(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener(
+      'mousedown',
+      handleClickOutside
+    );
+
+    return () => {
+      document.removeEventListener(
+        'mousedown',
+        handleClickOutside
+      );
+    };
   }, []);
+
+  /* ============================================================
+     SEARCH
+  ============================================================ */
 
   const handleSearch = () => {
     const searchData: SearchData = {
@@ -165,68 +572,124 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
       time: selectedTime,
       roomDetails,
     };
-    if (onSearch) {
-      onSearch(searchData);
-    }
+
+    onSearch?.(searchData);
+
     setIsGuestDropdownOpen(false);
   };
 
-  // Room management functions
+  /* ============================================================
+     ROOM MANAGEMENT
+  ============================================================ */
+
   const addRoom = () => {
-    if (roomDetails.length < 10) {
-      setRoomDetails([...roomDetails, { id: nextRoomId, adults: 1, children: 0 }]);
-      setNextRoomId(nextRoomId + 1);
+    if (roomDetails.length >= 10) {
+      return;
     }
+
+    setRoomDetails([
+      ...roomDetails,
+      {
+        id: nextRoomId,
+        adults: 1,
+        children: 0,
+      },
+    ]);
+
+    setNextRoomId((prev) => prev + 1);
   };
 
   const removeRoom = (roomId: number) => {
-    if (roomDetails.length > 1) {
-      setRoomDetails(roomDetails.filter(room => room.id !== roomId));
+    if (roomDetails.length <= 1) {
+      return;
     }
+
+    setRoomDetails((prev) =>
+      prev.filter((room) => room.id !== roomId)
+    );
   };
 
-  const updateAdults = (roomId: number, delta: number) => {
-    setRoomDetails(roomDetails.map(room => {
-      if (room.id === roomId) {
-        const newAdults = Math.max(1, Math.min(10, room.adults + delta));
-        return { ...room, adults: newAdults };
-      }
-      return room;
-    }));
+  const updateAdults = (
+    roomId: number,
+    delta: number
+  ) => {
+    setRoomDetails((prev) =>
+      prev.map((room) => {
+        if (room.id !== roomId) {
+          return room;
+        }
+
+        const newAdults = Math.max(
+          1,
+          Math.min(10, room.adults + delta)
+        );
+
+        return {
+          ...room,
+          adults: newAdults,
+        };
+      })
+    );
   };
 
-  const updateChildren = (roomId: number, delta: number) => {
-    setRoomDetails(roomDetails.map(room => {
-      if (room.id === roomId) {
-        const newChildren = Math.max(0, Math.min(10, room.children + delta));
-        return { ...room, children: newChildren };
-      }
-      return room;
-    }));
+  const updateChildren = (
+    roomId: number,
+    delta: number
+  ) => {
+    setRoomDetails((prev) =>
+      prev.map((room) => {
+        if (room.id !== roomId) {
+          return room;
+        }
+
+        const newChildren = Math.max(
+          0,
+          Math.min(10, room.children + delta)
+        );
+
+        return {
+          ...room,
+          children: newChildren,
+        };
+      })
+    );
   };
+
+  /* ============================================================
+     DATE
+  ============================================================ */
 
   const handleDateSelect = (date: Date) => {
     setSelectedDate(date);
     setFormattedDate(formatDate(date));
-    setDisplayDate(formatDateForDisplay(date));
-    
-    if (onDateSelect) {
-      onDateSelect(date);
-    }
+    setDisplayDate(
+      formatDateForDisplay(date)
+    );
+
+    onDateSelect?.(date);
+
     setShowCalendar(false);
   };
 
-  const handleHotelSelect = (selectedHotel: string) => {
+  /* ============================================================
+     HOTEL
+  ============================================================ */
+
+  const handleHotelSelect = (
+    selectedHotel: string
+  ) => {
     setHotel(selectedHotel);
     setSearchTerm(selectedHotel);
     setShowHotelDropdown(false);
-    if (hotelInputRef.current) {
-      hotelInputRef.current.blur();
-    }
+
+    hotelInputRef.current?.blur();
   };
 
-  const handleHotelInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleHotelInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const value = e.target.value;
+
     setSearchTerm(value);
     setHotel(value);
     setShowHotelDropdown(true);
@@ -236,166 +699,383 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
     setShowHotelDropdown(true);
   };
 
+  /* ============================================================
+     MONTH NAVIGATION
+  ============================================================ */
+
   const goToPreviousMonth = () => {
     if (currentMonth === 0) {
       setCurrentMonth(11);
-      setCurrentYear(currentYear - 1);
+      setCurrentYear((prev) => prev - 1);
     } else {
-      setCurrentMonth(currentMonth - 1);
+      setCurrentMonth((prev) => prev - 1);
     }
   };
 
   const goToNextMonth = () => {
     if (currentMonth === 11) {
       setCurrentMonth(0);
-      setCurrentYear(currentYear + 1);
+      setCurrentYear((prev) => prev + 1);
     } else {
-      setCurrentMonth(currentMonth + 1);
+      setCurrentMonth((prev) => prev + 1);
     }
   };
 
+  /* ============================================================
+     CALENDAR
+  ============================================================ */
+
   const generateCalendarDays = () => {
-    const days = [];
-    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-    
+    const days: React.ReactNode[] = [];
+
+    const firstDay = new Date(
+      currentYear,
+      currentMonth,
+      1
+    ).getDay();
+
+    const daysInMonth = new Date(
+      currentYear,
+      currentMonth + 1,
+      0
+    ).getDate();
+
     for (let i = 0; i < firstDay; i++) {
-      days.push(<div key={`empty-${i}`} className={styles.emptyDay}></div>);
+      days.push(
+        <div
+          key={`empty-${i}`}
+          className={styles.emptyDay}
+        />
+      );
     }
-    
+
     const todayDate = new Date();
-    todayDate.setHours(0, 0, 0, 0);
-    
+
+    todayDate.setHours(
+      0,
+      0,
+      0,
+      0
+    );
+
     for (let i = 1; i <= daysInMonth; i++) {
-      const date = new Date(currentYear, currentMonth, i);
-      date.setHours(0, 0, 0, 0);
-      const isToday = date.getTime() === todayDate.getTime();
-      const isSelected = selectedDate && date.getTime() === selectedDate.getTime();
-      const isWeekend = date.getDay() === 0 || date.getDay() === 6;
-      const isPast = date < todayDate;
-      const isSelectable = date >= todayDate;
-      
+      const date = new Date(
+        currentYear,
+        currentMonth,
+        i
+      );
+
+      date.setHours(
+        0,
+        0,
+        0,
+        0
+      );
+
+      const isToday =
+        date.getTime() === todayDate.getTime();
+
+      const isSelected =
+        selectedDate &&
+        date.getTime() ===
+          selectedDate.getTime();
+
+      const isWeekend =
+        date.getDay() === 0 ||
+        date.getDay() === 6;
+
+      const isPast =
+        date < todayDate;
+
+      const isSelectable =
+        date >= todayDate;
+
       let dayLabel = i.toString();
-      if (isToday) dayLabel = 'Today';
-      
+
+      if (isToday) {
+        dayLabel = 'Today';
+      }
+
       days.push(
         <button
           key={i}
-          className={`${styles.day} 
-            ${isToday ? styles.today : ''} 
-            ${isSelected ? styles.selected : ''} 
+          type="button"
+          className={`
+            ${styles.day}
+            ${isToday ? styles.today : ''}
+            ${isSelected ? styles.selected : ''}
             ${isWeekend ? styles.weekend : ''}
             ${isPast ? styles.past : ''}
-            ${!isSelectable ? styles.disabled : ''}`}
+            ${!isSelectable ? styles.disabled : ''}
+          `}
           onClick={() => {
-            if (!isPast && isSelectable) {
+            if (
+              !isPast &&
+              isSelectable
+            ) {
               handleDateSelect(date);
             }
           }}
-          disabled={isPast || !isSelectable}
+          disabled={
+            isPast ||
+            !isSelectable
+          }
         >
-          <span className={styles.dayNumber}>{dayLabel}</span>
+          <span
+            className={styles.dayNumber}
+          >
+            {dayLabel}
+          </span>
+
           {isPast && (
-            <span className={styles.unavailable}>Past</span>
+            <span
+              className={styles.unavailable}
+            >
+              Past
+            </span>
           )}
         </button>
       );
     }
-    
+
     return days;
   };
 
-  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
-                      'July', 'August', 'September', 'October', 'November', 'December'];
+  const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
 
-  const QuickSelectButton = ({ label, daysToAdd }: { label: string; daysToAdd: number }) => {
+  /* ============================================================
+     QUICK SELECT
+  ============================================================ */
+
+  const QuickSelectButton = ({
+    label,
+    daysToAdd,
+  }: {
+    label: string;
+    daysToAdd: number;
+  }) => {
     const date = new Date();
-    date.setDate(date.getDate() + daysToAdd);
-    const isSelected = selectedDate && 
-      date.toDateString() === selectedDate.toDateString();
+
+    date.setDate(
+      date.getDate() + daysToAdd
+    );
+
+    const isSelected =
+      selectedDate &&
+      date.toDateString() ===
+        selectedDate.toDateString();
 
     return (
       <button
-        className={`${styles.quickSelectBtn} ${isSelected ? styles.active : ''}`}
-        onClick={() => handleDateSelect(date)}
+        type="button"
+        className={`
+          ${styles.quickSelectBtn}
+          ${isSelected ? styles.active : ''}
+        `}
+        onClick={() =>
+          handleDateSelect(date)
+        }
       >
         {label}
       </button>
     );
   };
 
-  const formatTimeDisplay = (time: string) => {
-    const [hours, minutes] = time.split(':');
-    return `${hours}:${minutes}`;
-  };
+  /* ============================================================
+     TIME
+  ============================================================ */
 
   const generateTimeSlots = () => {
-    const slots = [];
+    const slots: {
+      value: string;
+      label: string;
+    }[] = [];
+
     const startHour = 6;
     const endHour = 24;
-    
-    for (let i = startHour; i < endHour; i++) {
+
+    for (
+      let i = startHour;
+      i < endHour;
+      i++
+    ) {
       const start = i;
       const end = i + 1;
-      const startStr = start.toString().padStart(2, '0') + ':00';
-      const endStr = end.toString().padStart(2, '0') + ':59';
+
+      const startStr =
+        start
+          .toString()
+          .padStart(2, '0') + ':00';
+
+      const endStr =
+        end
+          .toString()
+          .padStart(2, '0') + ':59';
+
       slots.push({
         value: `${startStr}-${endStr}`,
-        label: `${startStr} - ${endStr}`
+        label: `${startStr} - ${endStr}`,
       });
     }
+
     return slots;
   };
 
-  const timeSlots = generateTimeSlots();
+  const timeSlots =
+    generateTimeSlots();
 
-  const getDisplayTime = (timeSlot: string) => {
-    const [start, end] = timeSlot.split('-');
+  const getDisplayTime = (
+    timeSlot: string
+  ) => {
+    const [start, end] =
+      timeSlot.split('-');
+
     return `${start} - ${end}`;
   };
 
+  /* ============================================================
+     RENDER
+  ============================================================ */
+
   return (
-    <div className={`${styles.searchBarContainer} ${className}`}>
+    <div
+      className={`${styles.searchBarContainer} ${className}`}
+    >
       <div className={styles.searchBar}>
-        {/* Hotel Search with Dropdown */}
-        <div className={styles.searchSection} ref={hotelDropdownRef}>
-          <div className={styles.inputWrapper}>
-            <MapPin size={18} className={styles.icon} />
+
+        {/* ======================================================
+            HOTEL
+        ====================================================== */}
+
+        <div
+          className={`
+            ${styles.searchSection}
+            ${styles.hotelSection}
+          `}
+          ref={hotelDropdownRef}
+        >
+          <div
+            className={styles.inputWrapper}
+          >
+            <MapPin
+              size={18}
+              className={styles.icon}
+            />
+
             <input
               ref={hotelInputRef}
               type="text"
               value={searchTerm}
-              onChange={handleHotelInputChange}
-              onFocus={handleHotelInputFocus}
+              onChange={
+                handleHotelInputChange
+              }
+              onFocus={
+                handleHotelInputFocus
+              }
               placeholder={placeholder}
-              className={styles.hotelInput}
+              className={
+                styles.hotelInput
+              }
               autoComplete="off"
             />
+
             {showHotelDropdown && (
-              <div className={styles.hotelDropdown}>
-                <div className={styles.hotelDropdownHeader}>
-                  <span>{filteredHotels.length} Hotels</span>
-                  <button 
-                    className={styles.closeDropdownBtn}
-                    onClick={() => setShowHotelDropdown(false)}
+              <div
+                ref={
+                  hotelDropdownContentRef
+                }
+                className={`
+                  ${styles.hotelDropdown}
+                  ${styles[hotelPlacement]}
+                `}
+              >
+                <div
+                  className={
+                    styles.hotelDropdownHeader
+                  }
+                >
+                  <span>
+                    {filteredHotels.length}{' '}
+                    Hotels
+                  </span>
+
+                  <button
+                    type="button"
+                    className={
+                      styles.closeDropdownBtn
+                    }
+                    onClick={() =>
+                      setShowHotelDropdown(
+                        false
+                      )
+                    }
                   >
                     ×
                   </button>
                 </div>
-                <ul className={styles.hotelList}>
-                  {filteredHotels.map((hotelItem, index) => (
-                    <li 
-                      key={index}
-                      className={`${styles.hotelItem} ${hotelItem === hotel ? styles.active : ''}`}
-                      onClick={() => handleHotelSelect(hotelItem)}
+
+                <ul
+                  className={
+                    styles.hotelList
+                  }
+                >
+                  {filteredHotels.map(
+                    (
+                      hotelItem,
+                      index
+                    ) => (
+                      <li
+                        key={index}
+                        className={`
+                          ${styles.hotelItem}
+                          ${
+                            hotelItem ===
+                            hotel
+                              ? styles.active
+                              : ''
+                          }
+                        `}
+                        onClick={() =>
+                          handleHotelSelect(
+                            hotelItem
+                          )
+                        }
+                      >
+                        <Search
+                          size={14}
+                          className={
+                            styles.searchIcon
+                          }
+                        />
+
+                        <span>
+                          {hotelItem}
+                        </span>
+                      </li>
+                    )
+                  )}
+
+                  {filteredHotels.length ===
+                    0 && (
+                    <div
+                      className={
+                        styles.noResults
+                      }
                     >
-                      <Search size={14} className={styles.searchIcon} />
-                      <span>{hotelItem}</span>
-                    </li>
-                  ))}
-                  {filteredHotels.length === 0 && (
-                    <div className={styles.noResults}>
-                      <span>No hotels found</span>
+                      No hotels found
                     </div>
                   )}
                 </ul>
@@ -404,61 +1084,256 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div
+          className={styles.divider}
+        />
 
-        {/* Single Date Selection */}
-        <div className={styles.searchSection}>
-          <div className={styles.dateWrapper} ref={calendarRef}>
-            <div className={styles.dateDisplay} onClick={() => {
-                setShowCalendar(prev => !prev);
-                setShowTimeSelection(false);
-                setIsGuestDropdownOpen(false);
-                setShowHotelDropdown(false);
-              }}>
-              <Calendar size={18} className={styles.icon} />
-              <div className={styles.dateRange}>
-                <span className={styles.dateText}>{displayDate}</span>
-                <span className={styles.dateLabel}>Dine Out</span>
+        {/* ======================================================
+            DATE
+        ====================================================== */}
+
+        <div
+          className={`
+            ${styles.searchSection}
+            ${styles.dateSection}
+          `}
+        >
+          <div
+            className={styles.dateWrapper}
+            ref={calendarRef}
+          >
+            <div
+              className={
+                styles.dateDisplay
+              }
+              onClick={() => {
+                const nextState =
+                  !showCalendar;
+
+                setShowCalendar(
+                  nextState
+                );
+
+                setShowTimeSelection(
+                  false
+                );
+
+                setIsGuestDropdownOpen(
+                  false
+                );
+
+                setShowHotelDropdown(
+                  false
+                );
+
+                if (nextState) {
+                  /*
+                   * Start with ABOVE. After the dropdown is rendered,
+                   * the layout effect measures the actual viewport space
+                   * and switches to BELOW only when necessary.
+                   */
+                  setCalendarPlacement(
+                    'above'
+                  );
+                }
+              }}
+            >
+              <Calendar
+                size={18}
+                className={styles.icon}
+              />
+
+              <div
+                className={
+                  styles.dateRange
+                }
+              >
+                <span
+                  className={
+                    styles.dateText
+                  }
+                >
+                  {displayDate}
+                </span>
+
+                <span
+                  className={
+                    styles.dateLabel
+                  }
+                >
+                  Dine Out
+                </span>
               </div>
-              <ChevronDown size={16} className={`${styles.chevron} ${showCalendar ? styles.rotated : ''}`} />
+
+              <ChevronDown
+                size={16}
+                className={`
+                  ${styles.chevron}
+                  ${
+                    showCalendar
+                      ? styles.rotated
+                      : ''
+                  }
+                `}
+              />
             </div>
-            
+
             {showCalendar && (
-              <div className={styles.calendarDropdown}>
-                <div className={styles.quickSelect}>
-                  <QuickSelectButton label="Today" daysToAdd={0} />
-                  <QuickSelectButton label="Tomorrow" daysToAdd={1} />
-                  <QuickSelectButton label="+2 Days" daysToAdd={2} />
-                  <QuickSelectButton label="+3 Days" daysToAdd={3} />
+              <div
+                ref={
+                  calendarDropdownRef
+                }
+                className={`
+                  ${styles.calendarDropdown}
+                  ${styles[calendarPlacement]}
+                `}
+              >
+                <div
+                  className={
+                    styles.quickSelect
+                  }
+                >
+                  <QuickSelectButton
+                    label="Today"
+                    daysToAdd={0}
+                  />
+
+                  <QuickSelectButton
+                    label="Tomorrow"
+                    daysToAdd={1}
+                  />
+
+                  <QuickSelectButton
+                    label="+2 Days"
+                    daysToAdd={2}
+                  />
+
+                  <QuickSelectButton
+                    label="+3 Days"
+                    daysToAdd={3}
+                  />
                 </div>
 
-                <div className={styles.calendarHeader}>
-                  <button className={styles.navButton} onClick={goToPreviousMonth}>
+                <div
+                  className={
+                    styles.calendarHeader
+                  }
+                >
+                  <button
+                    type="button"
+                    className={
+                      styles.navButton
+                    }
+                    onClick={
+                      goToPreviousMonth
+                    }
+                  >
                     ‹
                   </button>
-                  <span>{monthNames[currentMonth]} {currentYear}</span>
-                  <button className={styles.navButton} onClick={goToNextMonth}>
+
+                  <span>
+                    {
+                      monthNames[
+                        currentMonth
+                      ]
+                    }{' '}
+                    {currentYear}
+                  </span>
+
+                  <button
+                    type="button"
+                    className={
+                      styles.navButton
+                    }
+                    onClick={
+                      goToNextMonth
+                    }
+                  >
                     ›
                   </button>
                 </div>
 
-                <div className={styles.calendarGrid}>
-                  {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map(day => (
-                    <div key={day} className={styles.weekday}>{day}</div>
-                  ))}
+                <div
+                  className={
+                    styles.calendarGrid
+                  }
+                >
+                  {[
+                    'S',
+                    'M',
+                    'T',
+                    'W',
+                    'T',
+                    'F',
+                    'S',
+                  ].map(
+                    (
+                      day,
+                      index
+                    ) => (
+                      <div
+                        key={`${day}-${index}`}
+                        className={
+                          styles.weekday
+                        }
+                      >
+                        {day}
+                      </div>
+                    )
+                  )}
+
                   {generateCalendarDays()}
                 </div>
 
-                <div className={styles.calendarFooter}>
-                  <div className={styles.legend}>
-                    <span className={`${styles.legendDot} ${styles.todayDot}`}></span>
-                    <span>Today</span>
-                    <span className={`${styles.legendDot} ${styles.selectedDot}`}></span>
-                    <span>Selected</span>
-                    <span className={`${styles.legendDot} ${styles.availableDot}`}></span>
-                    <span>Available</span>
-                    <span className={`${styles.legendDot} ${styles.pastDot}`}></span>
-                    <span>Past</span>
+                <div
+                  className={
+                    styles.calendarFooter
+                  }
+                >
+                  <div
+                    className={
+                      styles.legend
+                    }
+                  >
+                    <span>
+                      <span
+                        className={`
+                          ${styles.legendDot}
+                          ${styles.todayDot}
+                        `}
+                      />
+                      Today
+                    </span>
+
+                    <span>
+                      <span
+                        className={`
+                          ${styles.legendDot}
+                          ${styles.selectedDot}
+                        `}
+                      />
+                      Selected
+                    </span>
+
+                    <span>
+                      <span
+                        className={`
+                          ${styles.legendDot}
+                          ${styles.availableDot}
+                        `}
+                      />
+                      Available
+                    </span>
+
+                    <span>
+                      <span
+                        className={`
+                          ${styles.legendDot}
+                          ${styles.pastDot}
+                        `}
+                      />
+                      Past
+                    </span>
                   </div>
                 </div>
               </div>
@@ -466,137 +1341,449 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div
+          className={styles.divider}
+        />
 
-        {/* Time Selection */}
-        <div className={styles.searchSection}>
-          <div className={styles.timeWrapper} ref={timeDropdownRef}>
-            <div 
-              className={styles.timeDisplay}
+        {/* ======================================================
+            TIME
+        ====================================================== */}
+
+        <div
+          className={`
+            ${styles.searchSection}
+            ${styles.timeSection}
+          `}
+        >
+          <div
+            className={
+              styles.timeWrapper
+            }
+            ref={timeDropdownRef}
+          >
+            <div
+              className={
+                styles.timeDisplay
+              }
               onClick={() => {
-                setShowTimeSelection(prev => !prev);
+                const nextState =
+                  !showTimeSelection;
+
+                setShowTimeSelection(
+                  nextState
+                );
+
                 setShowCalendar(false);
-                setIsGuestDropdownOpen(false);
-                setShowHotelDropdown(false);
+                setIsGuestDropdownOpen(
+                  false
+                );
+                setShowHotelDropdown(
+                  false
+                );
+
+                if (nextState) {
+                  setTimePlacement(
+                    'above'
+                  );
+                }
               }}
             >
-              <Clock size={18} className={styles.icon} />
-              <span className={styles.timeLabel}>{getDisplayTime(selectedTime)}</span>
-              <ChevronDown size={16} className={`${styles.chevron} ${showTimeSelection ? styles.rotated : ''}`} />
+              <Clock
+                size={18}
+                className={styles.icon}
+              />
+
+              <span
+                className={
+                  styles.timeLabel
+                }
+              >
+                {getDisplayTime(
+                  selectedTime
+                )}
+              </span>
+
+              <ChevronDown
+                size={16}
+                className={`
+                  ${styles.chevron}
+                  ${
+                    showTimeSelection
+                      ? styles.rotated
+                      : ''
+                  }
+                `}
+              />
             </div>
-            
+
             {showTimeSelection && (
-              <div className={styles.timeDropdown}>
-                <div className={styles.timeHeader}>
-                  <span>Select Time Slot</span>
+              <div
+                ref={
+                  timeDropdownContentRef
+                }
+                className={`
+                  ${styles.timeDropdown}
+                  ${styles[timePlacement]}
+                `}
+              >
+                <div
+                  className={
+                    styles.timeHeader
+                  }
+                >
+                  Select Time Slot
                 </div>
-                <div className={styles.timeOptions}>
-                  {timeSlots.map((slot) => (
-                    <button
-                      key={slot.value}
-                      className={`${styles.timeOption} ${selectedTime === slot.value ? styles.active : ''}`}
-                      onClick={() => {
-                        setSelectedTime(slot.value);
-                        setShowTimeSelection(false);
-                      }}
-                    >
-                      <span className={styles.timeOptionLabel}>{slot.label}</span>
-                    </button>
-                  ))}
+
+                <div
+                  className={
+                    styles.timeOptions
+                  }
+                >
+                  {timeSlots.map(
+                    (slot) => (
+                      <button
+                        type="button"
+                        key={slot.value}
+                        className={`
+                          ${styles.timeOption}
+                          ${
+                            selectedTime ===
+                            slot.value
+                              ? styles.active
+                              : ''
+                          }
+                        `}
+                        onClick={() => {
+                          setSelectedTime(
+                            slot.value
+                          );
+
+                          setShowTimeSelection(
+                            false
+                          );
+                        }}
+                      >
+                        <span
+                          className={
+                            styles.timeOptionLabel
+                          }
+                        >
+                          {slot.label}
+                        </span>
+                      </button>
+                    )
+                  )}
                 </div>
               </div>
             )}
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div
+          className={styles.divider}
+        />
 
-        {/* Guest & Room Selection */}
-        <div className={styles.searchSection}>
-          <div className={styles.guestWrapper} ref={guestDropdownRef}>
-            <div 
-              className={styles.guestDisplay}
+        {/* ======================================================
+            GUEST / TABLE
+        ====================================================== */}
+
+        <div
+          className={`
+            ${styles.searchSection}
+            ${styles.guestSection}
+          `}
+        >
+          <div
+            className={
+              styles.guestWrapper
+            }
+            ref={guestDropdownRef}
+          >
+            <div
+              className={
+                styles.guestDisplay
+              }
               onClick={() => {
-                setIsGuestDropdownOpen(prev => !prev);
+                const nextState =
+                  !isGuestDropdownOpen;
+
+                setIsGuestDropdownOpen(
+                  nextState
+                );
+
                 setShowCalendar(false);
-                setShowTimeSelection(false);
-                setShowHotelDropdown(false);
+                setShowTimeSelection(
+                  false
+                );
+                setShowHotelDropdown(
+                  false
+                );
+
+                if (nextState) {
+                  setGuestPlacement(
+                    'above'
+                  );
+                }
               }}
             >
-              <Users size={18} className={styles.icon} />
-              <span className={styles.guestText}>{totalGuests} Guest{totalGuests > 1 ? 's' : ''}</span>
-              <span className={styles.roomText}>{totalRooms} Room{totalRooms > 1 ? 's' : ''}</span>
-              <ChevronDown size={16} className={`${styles.chevron} ${isGuestDropdownOpen ? styles.rotated : ''}`} />
+              <Users
+                size={18}
+                className={styles.icon}
+              />
+
+              <span
+                className={
+                  styles.guestText
+                }
+              >
+                {totalGuests}{' '}
+                Guest
+                {totalGuests > 1
+                  ? 's'
+                  : ''}
+              </span>
+
+              <span
+                className={
+                  styles.roomText
+                }
+              >
+                {totalRooms}{' '}
+                Table
+                {totalRooms > 1
+                  ? 's'
+                  : ''}
+              </span>
+
+              <ChevronDown
+                size={16}
+                className={`
+                  ${styles.chevron}
+                  ${
+                    isGuestDropdownOpen
+                      ? styles.rotated
+                      : ''
+                  }
+                `}
+              />
             </div>
-            
+
             {isGuestDropdownOpen && (
-              <div className={styles.guestDropdown}>
-                <div className={styles.roomsContainer}>
-                  {roomDetails.map((room, index) => (
-                    <div key={room.id} className={styles.roomCard}>
-                      <div className={styles.roomHeader}>
-                        <span className={styles.roomTitle}>Table {index + 1}</span>
-                        {roomDetails.length > 1 && (
-                          <button 
-                            className={styles.removeRoomBtn}
-                            onClick={() => removeRoom(room.id)}
-                            aria-label="Remove Table"
+              <div
+                ref={
+                  guestDropdownContentRef
+                }
+                className={`
+                  ${styles.guestDropdown}
+                  ${styles[guestPlacement]}
+                `}
+              >
+                <div
+                  className={
+                    styles.roomsContainer
+                  }
+                >
+                  {roomDetails.map(
+                    (
+                      room,
+                      index
+                    ) => (
+                      <div
+                        key={room.id}
+                        className={
+                          styles.roomCard
+                        }
+                      >
+                        <div
+                          className={
+                            styles.roomHeader
+                          }
+                        >
+                          <span
+                            className={
+                              styles.roomTitle
+                            }
                           >
-                            <Trash2 size={16} />
-                          </button>
-                        )}
-                      </div>
-                      
-                      <div className={styles.roomControls}>
-                        <div className={styles.controlGroup}>
-                          <div className={styles.controlLabel}>
-                            <User size={14} />
-                            <span>Adults</span>
+                            Table{' '}
+                            {index + 1}
+                          </span>
+
+                          {roomDetails.length >
+                            1 && (
+                            <button
+                              type="button"
+                              className={
+                                styles.removeRoomBtn
+                              }
+                              onClick={() =>
+                                removeRoom(
+                                  room.id
+                                )
+                              }
+                              aria-label="Remove Table"
+                            >
+                              <Trash2
+                                size={16}
+                              />
+                            </button>
+                          )}
+                        </div>
+
+                        <div
+                          className={
+                            styles.roomControls
+                          }
+                        >
+                          {/* Adults */}
+                          <div
+                            className={
+                              styles.controlGroup
+                            }
+                          >
+                            <div
+                              className={
+                                styles.controlLabel
+                              }
+                            >
+                              <User
+                                size={14}
+                              />
+
+                              <span>
+                                Adults
+                              </span>
+                            </div>
+
+                            <div
+                              className={
+                                styles.controlButtons
+                              }
+                            >
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  updateAdults(
+                                    room.id,
+                                    -1
+                                  )
+                                }
+                                disabled={
+                                  room.adults <=
+                                  1
+                                }
+                              >
+                                <Minus
+                                  size={14}
+                                />
+                              </button>
+
+                              <span>
+                                {
+                                  room.adults
+                                }
+                              </span>
+
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  updateAdults(
+                                    room.id,
+                                    1
+                                  )
+                                }
+                                disabled={
+                                  room.adults >=
+                                  10
+                                }
+                              >
+                                <Plus
+                                  size={14}
+                                />
+                              </button>
+                            </div>
                           </div>
-                          <div className={styles.controlButtons}>
-                            <button 
-                              onClick={() => updateAdults(room.id, -1)} 
-                              disabled={room.adults <= 1}
+
+                          {/* Children */}
+                          <div
+                            className={
+                              styles.controlGroup
+                            }
+                          >
+                            <div
+                              className={
+                                styles.controlLabel
+                              }
                             >
-                              <Minus size={14} />
-                            </button>
-                            <span>{room.adults}</span>
-                            <button 
-                              onClick={() => updateAdults(room.id, 1)} 
-                              disabled={room.adults >= 10}
+                              <UserPlus
+                                size={14}
+                              />
+
+                              <span>
+                                Child (0 - 12 yrs)
+                              </span>
+                            </div>
+
+                            <div
+                              className={
+                                styles.controlButtons
+                              }
                             >
-                              <Plus size={14} />
-                            </button>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  updateChildren(
+                                    room.id,
+                                    -1
+                                  )
+                                }
+                                disabled={
+                                  room.children <=
+                                  0
+                                }
+                              >
+                                <Minus
+                                  size={14}
+                                />
+                              </button>
+
+                              <span>
+                                {
+                                  room.children
+                                }
+                              </span>
+
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  updateChildren(
+                                    room.id,
+                                    1
+                                  )
+                                }
+                                disabled={
+                                  room.children >=
+                                  10
+                                }
+                              >
+                                <Plus
+                                  size={14}
+                                />
+                              </button>
+                            </div>
                           </div>
                         </div>
-                        
-                        <div className={styles.controlGroup}>
-                          <div className={styles.controlLabel}>
-                            <UserPlus size={14} />
-                            <span>Child (0 - 12 yrs)</span>
-                          </div>
-                          <div className={styles.controlButtons}>
-                            <button 
-                              onClick={() => updateChildren(room.id, -1)} 
-                              disabled={room.children <= 0}
-                            >
-                              <Minus size={14} />
-                            </button>
-                            <span>{room.children}</span>
-                            <button 
-                              onClick={() => updateChildren(room.id, 1)} 
-                              disabled={room.children >= 10}
-                            >
-                              <Plus size={14} />
-                            </button>
-                          </div>
-                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
-                
-                <button className={styles.addRoomBtn} onClick={addRoom}>
+
+                <button
+                  type="button"
+                  className={
+                    styles.addRoomBtn
+                  }
+                  onClick={addRoom}
+                >
                   <Plus size={16} />
                   ADD MORE TABLES
                 </button>
@@ -605,10 +1792,21 @@ const SearchBarDineOut: React.FC<SearchBarDineOutProps> = ({
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div
+          className={styles.divider}
+        />
 
-        {/* Book Now Button */}
-        <button className={styles.bookButton} onClick={handleSearch}>
+        {/* ======================================================
+            BOOK NOW
+        ====================================================== */}
+
+        <button
+          type="button"
+          className={
+            styles.bookButton
+          }
+          onClick={handleSearch}
+        >
           BOOK NOW
         </button>
       </div>

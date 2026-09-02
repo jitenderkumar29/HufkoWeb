@@ -16,6 +16,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   flex-wrap: wrap;
+  overflow: visible;
 
   &:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -33,46 +34,24 @@
   min-width: 150px;
   padding: 8px 8px;
   position: relative;
+  z-index: 10;
   overflow: visible;
-  z-index: 1;
 
   @media (max-width: 768px) {
     min-width: 120px;
     flex: 1 1 45%;
+    z-index: 20;
   }
 
   @media (max-width: 480px) {
     min-width: 100%;
     flex: 1 1 100%;
+    z-index: 30;
   }
 }
 
-// Give date section higher z-index
-.searchSection:has(.dateWrapper) {
-  position: relative;
+.hotelSection, .dateSection, .timeSection, .guestSection {
   z-index: 50;
-  overflow: visible;
-}
-
-// Time section
-.searchSection:has(.timeWrapper) {
-  position: relative;
-  z-index: 50;
-  overflow: visible;
-}
-
-// Guest section
-.searchSection:has(.guestWrapper) {
-  position: relative;
-  z-index: 50;
-  overflow: visible;
-}
-
-// Hotel section
-.searchSection:has(.inputWrapper) {
-  position: relative;
-  z-index: 50;
-  overflow: visible;
 }
 
 .divider {
@@ -86,7 +65,9 @@
   }
 }
 
-// Hotel Input with Dropdown
+/* =========================================
+   Hotel Input with Dropdown
+========================================= */
 .inputWrapper {
   display: flex;
   align-items: center;
@@ -124,21 +105,56 @@
   }
 }
 
-// Hotel Dropdown Styles
-.hotelDropdown {
+/* =========================================
+   Dropdowns - Shared Base
+========================================= */
+.hotelDropdown,
+.calendarDropdown,
+.timeDropdown,
+.guestDropdown {
   position: absolute;
-  top: calc(100% + 4px);
+  z-index: 3000;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* =========================================
+   Dropdown Positioning Classes (Space-Aware)
+========================================= */
+.above {
+  top: auto;
+  bottom: calc(100% + 8px);
+  margin: 0;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.below {
+  top: calc(100% + 8px);
+  bottom: auto;
+  margin: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   Responsive dropdown positioning
+   IMPORTANT:
+   Do not force dropdowns below on mobile.
+   Placement is calculated in the component from real viewport
+   space, so the dropdown opens above when possible and below
+   only when there is not enough room above.
+========================================================= */
+
+/* =========================================
+   Hotel Dropdown Inner Styles
+========================================= */
+.hotelDropdown {
   left: -8px;
   right: -8px;
-  background: #ffffff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   padding: 8px 0;
-  z-index: 2000;
   min-width: 255px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
   max-height: 300px;
   overflow-y: auto;
-  animation: slideDown 0.2s ease-out;
 
   @media (max-width: 768px) {
     left: 0;
@@ -245,14 +261,14 @@
   font-size: 13px;
 }
 
-// Date Selection - Single Day
+/* =========================================
+   Date Selection
+========================================= */
 .dateWrapper {
   position: relative;
   cursor: pointer;
   padding: 1px 0px;
   width: 100%;
-  z-index: 1000;
-  // isolation: isolate;
 
   .dateDisplay {
     display: flex;
@@ -315,22 +331,14 @@
   }
 }
 
-// COMPACT CALENDAR DROPDOWN - SMALLER SIZE (same as Premiere)
+/* Calendar Dropdown */
 .calendarDropdown {
-  position: absolute;
-  top: calc(100% + 4px);
-  bottom: auto;
   left: 50%;
   right: auto;
   transform: translateX(-50%);
-  background: #ffffff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   padding: 12px 14px;
-  z-index: 3000;
   min-width: 280px;
   max-width: 320px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  // border-radius: 12px;
   margin: 0;
   clear: both;
 
@@ -530,13 +538,13 @@
   }
 }
 
-// Time Selection
+/* =========================================
+   Time Selection
+========================================= */
 .timeWrapper {
   position: relative;
   cursor: pointer;
   width: 100%;
-  z-index: 900;
-  isolation: isolate;
 
   .timeDisplay {
     display: flex;
@@ -580,29 +588,20 @@
   }
 }
 
-// Time Dropdown - Positioned directly below time section
+/* Time Dropdown */
 .timeDropdown {
-  position: absolute;
-  top: calc(100% + 4px);
-  bottom: auto;
   left: 50%;
   right: auto;
   transform: translateX(-50%);
-  background: #ffffff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   padding: 16px;
-  z-index: 3000;
   min-width: 255px;
   max-width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
   max-height: 400px;
   overflow-y: auto;
   margin: 0;
   clear: both;
 
   @media (max-width: 480px) {
-    top: calc(100% + 4px);
-    bottom: auto;
     min-width: unset;
     width: 100%;
     left: 0;
@@ -717,11 +716,12 @@
   }
 }
 
-// Guest Selection
+/* =========================================
+   Guest Selection
+========================================= */
 .guestWrapper {
   position: relative;
   cursor: pointer;
-  z-index: 50;
 
   .guestDisplay {
     display: flex;
@@ -761,18 +761,13 @@
   }
 }
 
+/* Guest Dropdown */
 .guestDropdown {
-  position: absolute;
-  top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   padding: 16px 20px;
-  z-index: 3000;
   min-width: 380px;
   max-width: 420px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
   max-height: 500px;
   overflow-y: auto;
   margin: 0;
@@ -984,7 +979,9 @@
   }
 }
 
-// Book Now Button
+/* =========================================
+   Book Now Button
+========================================= */
 .bookButton {
   padding: 16px 28px;
   background: $primary-color !important;
@@ -1019,7 +1016,9 @@
   }
 }
 
-// Responsive Design
+/* =========================================
+   Responsive Design
+========================================= */
 @media (max-width: 1024px) {
   .searchBar {
     padding: 8px;
@@ -1043,18 +1042,6 @@
   .searchSection {
     flex: 1 1 45%;
     padding: 4px;
-  }
-
-  .calendarDropdown {
-    min-width: 260px;
-    max-width: 280px;
-  }
-
-  .guestDropdown {
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 300px;
-    max-width: 340px;
   }
 
   .bookButton {
@@ -1127,23 +1114,6 @@
     width: 100%;
   }
 
-  .calendarDropdown {
-    min-width: 90vw;
-    max-width: 95vw;
-    padding: 10px 12px;
-  }
-
-  .guestDropdown {
-    left: 0;
-    right: 0;
-    transform: none;
-    min-width: unset;
-    width: 100%;
-    padding: 12px 14px;
-    max-height: 400px;
-    border-radius: 12px;
-  }
-
   .calendarGrid {
     .day {
       min-height: 24px;
@@ -1167,24 +1137,44 @@
   }
 }
 
-// Animations
-@keyframes slideDown {
+/* =========================================
+   Animations
+========================================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
-
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes slideDownMobile {
+@keyframes slideDown {
   from {
     opacity: 0;
+    transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpLeft {
+  from {
+    opacity: 0;
+    transform: translateY(10px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
   }
 }
 
@@ -1193,52 +1183,42 @@
     opacity: 0;
     transform: translateY(-10px) translateX(-50%);
   }
-
   to {
     opacity: 1;
     transform: translateY(0) translateX(-50%);
   }
 }
 
-.calendarDropdown {
+/* Apply animations */
+.hotelDropdown.above {
+  animation: slideUp 0.2s ease-out;
+}
+
+.calendarDropdown.above,
+.timeDropdown.above {
+  animation: slideUpLeft 0.2s ease-out;
+}
+
+.hotelDropdown.below {
   animation: slideDown 0.2s ease-out;
 }
 
-.timeDropdown {
-  animation: slideDown 0.25s ease-out;
-
-  @media (max-width: 480px) {
-    animation: slideDownMobile 0.25s ease-out;
-  }
+.calendarDropdown.below,
+.timeDropdown.below {
+  animation: slideDownLeft 0.2s ease-out;
 }
 
-.guestDropdown {
+.guestDropdown.above {
+  animation: slideUpLeft 0.25s ease-out;
+}
+
+.guestDropdown.below {
   animation: slideDownLeft 0.25s ease-out;
-
-  @media (max-width: 480px) {
-    animation: slideDownMobile 0.25s ease-out;
-  }
 }
 
-.hotelDropdown {
-  animation: slideDown 0.25s ease-out;
-}
-
-// Scrollbar styling
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #b8860b;
-  border-radius: 3px;
-}
-
+/* =========================================
+   Quick Select Buttons
+========================================= */
 .quickSelect {
   display: flex;
   align-items: center;
