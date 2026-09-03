@@ -8,7 +8,7 @@ import React, {
   useCallback,
 } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import styles from "./FoodDineOutCard.module.scss";
 
@@ -20,6 +20,7 @@ export interface FoodDineOutItem {
   fallbackImage?: string;
   link: string;
   alt?: string;
+  dineoutSpecialCategoryID?: string;
 }
 
 export interface FoodDineOutCardProps {
@@ -49,6 +50,7 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
   onViewAllClick,
   children,
 }) => {
+  const router = useRouter();
   const [itemsPerView, setItemsPerView] = useState(5);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -59,7 +61,6 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
   const autoPlayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const totalItems = items.length;
-
   const showHeader = !!(title || viewAllText);
 
   const getItemsPerView = useCallback(() => {
@@ -135,20 +136,12 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
     [maxIndex, itemsPerView]
   );
 
-  /*
-   * Previous
-   * Scrolls back by 1 card
-   */
   const goToPrevSlide = () => {
     if (!isMultiItem) return;
     const newIndex = Math.max(0, currentIndex - 1);
     scrollToIndex(newIndex);
   };
 
-  /*
-   * Next
-   * Scrolls forward by 1 card
-   */
   const goToNextSlide = () => {
     if (!isMultiItem) return;
     const newIndex = Math.min(maxIndex, currentIndex + 1);
@@ -194,11 +187,34 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
   }, []);
 
   const handleItemClick = (item: FoodDineOutItem, index: number) => {
-    if (onItemClick) onItemClick(item, index);
+    // Call the onItemClick prop if provided
+    if (onItemClick) {
+      onItemClick(item, index);
+    }
+    
+    // Update URL without page navigation
+    const params = new URLSearchParams(window.location.search);
+    
+    if (item.dineoutSpecialCategoryID) {
+      params.set('dineoutCategory', item.dineoutSpecialCategoryID);
+      params.set('foodCategory', 'dineout_special');
+      params.set('category', 'food');
+    }
+    
+    // Use replace instead of push to avoid adding to history
+    router.replace(`?${params.toString()}`, { scroll: false });
   };
 
-  const handleViewAllClick = () => {
-    if (onViewAllClick) onViewAllClick();
+  const handleViewAllClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onViewAllClick) {
+      onViewAllClick();
+    } else {
+      const params = new URLSearchParams(window.location.search);
+      params.set('foodCategory', 'all_sub_header');
+      params.delete('dineoutCategory');
+      router.replace(`?${params.toString()}`, { scroll: false });
+    }
   };
 
   return (
@@ -214,14 +230,14 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
               {children}
             </div>
             {viewAllLink && viewAllText && (
-              <Link
-                href={viewAllLink}
+              <a
+                href="#"
                 className={styles.viewAll}
                 onClick={handleViewAllClick}
               >
                 {viewAllText}
                 <ChevronRight size={16} className={styles.viewAllIcon} />
-              </Link>
+              </a>
             )}
           </div>
         )}
@@ -246,10 +262,10 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
                     maxWidth: `${100 / itemsPerView}%`,
                   }}
                 >
-                  <Link
-                    href={item.link}
+                  <div
                     className={styles.cardLink}
                     onClick={() => handleItemClick(item, index)}
+                    style={{ cursor: 'pointer' }}
                   >
                     <div className={styles.card}>
                       <div className={styles.imageWrapper}>
@@ -280,7 +296,7 @@ const FoodDineOutCard: React.FC<FoodDineOutCardProps> = ({
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>

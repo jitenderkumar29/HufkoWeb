@@ -43,6 +43,8 @@ const FranchiseDetailsPage = dynamic(
   { ssr: false }
 );
 
+
+
 // Map routes to components
 const routeMap: Record<string, React.ComponentType> = {
   '/': HomePage,

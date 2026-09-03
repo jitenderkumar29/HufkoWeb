@@ -113,12 +113,10 @@ import HeroBannerLeftContent from '../../HeroBanner/HeroBannerLeftContent/HeroBa
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 import HorizontalSliderOneLine2 from '../../ItemListDesigns/HorizontalSliderOneLine2/HorizontalSliderOneLine2';
 import SubCategoryItemsList from '../SubCategoryItemsList/SubCategoryItemsList';
-import FoodDineOutCard from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
-import { FoodDineOutCollections } from '@/app/data/HeroBannerwise/FoodHero';
+import FoodDineOutCard, { FoodDineOutItem } from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
 import VideoPlayerSlide from '@/components/FoodDelivery/VideoPlayer/VideoPlayerSlide/VideoPlayerSlide';
 import SearchBarDineOut from '@/components/SearchBar/SearchBarDineOut/SearchBarDineOut';
-import FoodDineOutDiscover from '@/components/FoodDelivery/FoodDesigns/FoodDineOutDiscover/FoodDineOutDiscover';
-import { DineoutItemsList, DiningDataItems, FoodCategoryItemsListData, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
+import { DineoutItemsList, FoodCategoryItemsListData, FoodDineOutSpecialCollections, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
 import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBarOrderNow';
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
@@ -312,32 +310,41 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         // Navigate to restaurant details page
     };
 
-    // Generate location-based title with all available address parts
     // Generate location-based title with locality and country
     const getLocationBasedTitle = (baseTitle: string): string => {
-        // Get location parts from state
-        const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
-        const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
-        const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+    // Get location parts from state
+    const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+    const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+    const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
 
-        // Priority: locality > city, then add country
-        let locationString = '';
-        if (locality) {
-            locationString = country ? `${locality}, ${country}` : locality;
-        } else if (city) {
-            locationString = country ? `${city}, ${country}` : city;
-        } else if (country) {
-            locationString = country;
-        }
+    // Priority: locality > city, then add country
+    let locationString = '';
+    if (locality) {
+        locationString = country ? `${locality}, ${country}` : locality;
+    } else if (city) {
+        locationString = country ? `${city}, ${country}` : city;
+    } else if (country) {
+        locationString = country;
+    }
 
-        // Return formatted title
-        if (locationString) {
-            return `Food Delivery Restaurants in ${locationString}`;
-        }
+    // Return formatted title using baseTitle
+    if (locationString) {
+        return `${baseTitle} in ${locationString}`;
+    }
 
-        // Fallback
-        return "Food Delivery Restaurants";
+    // Fallback - use baseTitle only
+    return baseTitle;
+};
+
+    const handleItemClick = (item: FoodDineOutItem, index: number) => {
+        // This will be called by the card's onClick handler
+        // The card already handles the URL update internally
+        console.log('Dineout category clicked:', item.title, item.dineoutSpecialCategoryID);
+
+        // You can add additional logic here if needed
+        // The card will handle the URL update automatically
     };
+
 
     // Render the main content based on category
     const renderMainContent = () => {
@@ -1359,7 +1366,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                             />
                             <OrderNowItemsListCard
                                 items={OrderNowItemsList}
-                                title={getLocationBasedTitle("Food Delivery Restaurants in")}
+                                title={getLocationBasedTitle("Food Delivery Restaurants")}
                                 variant="5col"
                                 showOffers={true}
                                 onItemClick={(item) => console.log('Clicked:', item)}
@@ -1389,13 +1396,13 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                         </div>
                         <div className={styles.dineOutCard}>
                             <FoodDineOutCard
-                                items={FoodDineOutCollections}
+                                items={FoodDineOutSpecialCollections}
                                 title="Dineout collections category nearby me"
                                 viewAllLink="/collections"
                                 viewAllText="View All"
                                 autoPlayInterval={3000}
                                 showArrows={true}
-                                onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
+                                onItemClick={handleItemClick}
                             />
                         </div>
                         {/* <div className={styles.foodDineOutDiscover}>
@@ -1408,9 +1415,10 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                         </div> */}
                         <DineOutItemsListCard
                             items={DineoutItemsList}
-                            title="Top collections dineout restaurants nearby me"
+                            title={getLocationBasedTitle("Top collections dineout restaurants")}
+                            // title="Top collections dineout restaurants nearby me"
                             onItemClick={(item) => console.log('Clicked:', item.name)}
-                             columns={4}
+                            columns={4}
                         />
                     </>
                 );

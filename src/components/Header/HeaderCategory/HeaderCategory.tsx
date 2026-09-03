@@ -1,6 +1,8 @@
 // components/Header/HeaderCategory.tsx
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import styles from './HeaderCategory.module.scss';
 import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faHandshake, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +10,7 @@ import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories, groceryCategoriesSubHeader } from '@/app/data/Categorywise/GroceryCategories';
 import HeroBannerAll from '@/components/HomePage/HeroBannerAll/HeroBannerAll';
 import { ShopingHeroBannerData } from '@/app/data/HeroBannerwise/ShopingHero';
-import { FoodDineOutCollections, FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
+import { DineoutHeroBannerData, FoodHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
 import { GroceryHeroBannerData } from '@/app/data/HeroBannerwise/GroceryHero';
 import { FlowerHeroBannerData } from '@/app/data/HeroBannerwise/FlowerHero';
 import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
@@ -27,35 +29,49 @@ import GroceryProductList from '@/components/Grocery/GroceryProductList/GroceryP
 import { WholesaleCategories, WholesaleCategoriesList, wholesaleCategoriesSubHeader } from '@/app/data/Categorywise/WholesaleCategories';
 import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
 import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
-import { FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
+import { DineoutItemsList, DineoutSpecialItemsList, FoodDineOutSpecialCollections, FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
 import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
 import DownloadApp from '@/components/HomePage/DownloadApp/DownloadApp';
 import FranchiseHufkoSlide from '@/components/HomePage/FranchiseHufko/FranchiseHufkoSlide';
 import PoweringSlides from '@/components/HomePage/PoweringSlides/PoweringSlides';
-import SubSubHeader from '../SubSubHeader/SubSubHeader';
-import FashionRoundCarousel from '@/components/Shopping/ItemListDesigns/FashionRoundCarousel/FashionRoundCarousel';
-import HeroBannerSlide from '@/components/Shopping/HeroBanner/HeroBannerSlide/HeroBannerSlide';
-import TopBrandsOnOffer from '@/components/Shopping/ItemListDesigns/TopBrandsOnOffer/TopBrandsOnOffer';
 import HeroBannerHalfSlide from '@/components/Shopping/HeroBanner/HeroBannerHalfSlide/HeroBannerHalfSlide';
-import FashionFullSlideGrid from '@/components/Shopping/HeroBanner/FashionFullSlideGrid/FashionFullSlideGrid';
-import BankOfferSlide from '@/components/Shopping/HeroBanner/BankOfferSlide/BankOfferSlide';
 import HufkoPrime, { defaultBenefits } from '@/components/HomePage/HufkoPrime/HufkoPrime';
 import { ArrowRight, Clock, IndianRupee, Shield, Users } from 'lucide-react';
-import VerticalScroll from '@/components/Shopping/ItemListDesigns/VerticalScroll/VerticalScroll';
 import ShopByMainCategory from '@/components/Shopping/ShopByItemcategory/ShopByMainCategory/ShopByMainCategory';
 import HeroBannerLeftContent from '@/components/Shopping/HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent';
 import ProductCategoryCardHalfDynamic from '@/components/Shopping/ItemListDesigns/ProductCategoryCardHalfDynamic/ProductCategoryCardHalfDynamic';
 import CustomerTestimonial from '@/components/Shopping/ItemListDesigns/CustomerTestimonial/CustomerTestimonial';
 import CategoryListCard from '@/components/Shopping/ItemListDesigns/CategoryListCard/CategoryListCard';
-import FoodDineOutCard from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
+import FoodDineOutCard, { FoodDineOutItem } from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
+import FoodRoundCarousel from '@/components/FoodDelivery/FoodDesigns/FoodRoundCarousel/FoodRoundCarousel';
+import FoodBanner from '@/components/FoodDelivery/FoodDesigns/FoodBanner/FoodBanner';
+import DineOutItemsListCard from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 
 interface CategoryItem {
   id: string;
   name: string;
   icon: IconDefinition;
 }
+
+const STORAGE_KEYS = {
+  SELECTED_COUNTRY: 'address_selection_country',
+  SELECTED_CITY: 'address_selection_city',
+  SELECTED_STATE: 'address_selection_state',
+  SELECTED_LOCALITY: 'address_selection_locality',
+  SELECTED_PINCODE: 'address_selection_pincode',
+  SELECTED_FULL_ADDRESS: 'address_selection_full_address',
+};
+
+const getFromStorage = (key: string): string | null => {
+  try {
+    return localStorage.getItem(key);
+  } catch (error) {
+    console.error('Error reading from localStorage:', error);
+    return null;
+  }
+};
 
 // Category to sub-header mapping
 const categoryToSubHeaderMapping: Record<string, string> = {
@@ -76,21 +92,19 @@ const categoryToSubHeaderMapping: Record<string, string> = {
   'auto_accessories': 'auto_accessories_sub_header',
 };
 
-// Food category mapping - maps sub-header IDs to ShopByMainCategory category values
+// Food category mapping
 const foodCategoryMapping: Record<string, string> = {
   'all_sub_header': 'all',
   'order_now_sub_header': 'order_now_food',
   'dine_out_sub_header': 'dine_out_food',
   'popular_sub_header': 'popular_food',
   'offers_sub_header': 'offers_food',
-  // Meal Types
   'breakfast_sub_header': 'breakfast_food',
   'lunch_sub_header': 'lunch_food',
   'dinner_sub_header': 'dinner_food',
   'snacks_sub_header': 'snacks_food',
   'street_food_sub_header': 'street_food',
   'fast_food_sub_header': 'fast_food',
-  // Indian Cuisine
   'north_indian_sub_header': 'north_indian_food',
   'south_indian_sub_header': 'south_indian_food',
   'punjabi_sub_header': 'punjabi_food',
@@ -100,7 +114,6 @@ const foodCategoryMapping: Record<string, string> = {
   'bengali_sub_header': 'bengali_food',
   'hyderabadi_sub_header': 'hyderabadi_food',
   'kashmiri_sub_header': 'kashmiri_food',
-  // Asian & International
   'chinese_sub_header': 'chinese_food',
   'thai_sub_header': 'thai_food',
   'japanese_sub_header': 'japanese_food',
@@ -108,7 +121,6 @@ const foodCategoryMapping: Record<string, string> = {
   'italian_sub_header': 'italian_food',
   'mexican_sub_header': 'mexican_food',
   'continental_sub_header': 'continental_food',
-  // Main Courses
   'biryani_sub_header': 'biryani_food',
   'pizza_sub_header': 'pizza_food',
   'burger_sub_header': 'burger_food',
@@ -119,7 +131,6 @@ const foodCategoryMapping: Record<string, string> = {
   'noodles_sub_header': 'noodles_food',
   'fried_rice_sub_header': 'fried_rice_food',
   'thali_sub_header': 'thali_food',
-  // Non-Veg
   'chicken_sub_header': 'chicken_food',
   'mutton_sub_header': 'mutton_food',
   'fish_seafood_sub_header': 'fish_seafood_food',
@@ -127,7 +138,6 @@ const foodCategoryMapping: Record<string, string> = {
   'kebabs_sub_header': 'kebabs_food',
   'bbq_grill_sub_header': 'bbq_grill_food',
   'tandoori_sub_header': 'tandoori_food',
-  // Veg & Healthy
   'pure_veg_sub_header': 'pure_veg_food',
   'healthy_meals_sub_header': 'healthy_meals_food',
   'salads_sub_header': 'salads_food',
@@ -135,7 +145,6 @@ const foodCategoryMapping: Record<string, string> = {
   'protein_meals_sub_header': 'protein_meals_food',
   'vegan_sub_header': 'vegan_food',
   'jain_food_sub_header': 'jain_food',
-  // Bakery & Desserts
   'bakery_sub_header': 'bakery_food',
   'cakes_sub_header': 'cakes_food',
   'pastries_sub_header': 'pastries_food',
@@ -143,7 +152,6 @@ const foodCategoryMapping: Record<string, string> = {
   'desserts_sub_header': 'desserts_food',
   'brownies_sub_header': 'brownies_food',
   'cookies_sub_header': 'cookies_food',
-  // Beverages
   'tea_sub_header': 'tea_food',
   'coffee_sub_header': 'coffee_food',
   'milkshakes_sub_header': 'milkshakes_food',
@@ -151,7 +159,6 @@ const foodCategoryMapping: Record<string, string> = {
   'juices_sub_header': 'juices_food',
   'soft_drinks_sub_header': 'soft_drinks_food',
   'mocktails_sub_header': 'mocktails_food',
-  // Quick Bites
   'maggi_sub_header': 'maggi_food',
   'momos_sub_header': 'momos_food',
   'fries_sub_header': 'fries_food',
@@ -167,18 +174,24 @@ const foodCategoryMapping: Record<string, string> = {
 const HeaderCategory: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const [activeTab, setActiveTab] = useState<string>('home');
-  
+  const searchParams = useSearchParams();
+
   // Shopping states
   const [selectedShoppingCategory, setSelectedShoppingCategory] = useState<string>('all');
   const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('all');
   const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSubHeaderItem, setSelectedSubHeaderItem] = useState<SubHeaderItem | null>(null);
-  
-  // Food states - SEPARATE from shopping
+
+  // Food states
   const [selectedFoodCategory, setSelectedFoodCategory] = useState<string>('all_sub_header');
   const [selectedFoodCategoryValue, setSelectedFoodCategoryValue] = useState<string>('all');
+
+  // State for selected dineout special category
+  const [selectedDineoutCategory, setSelectedDineoutCategory] = useState<FoodDineOutItem | null>(null);
+
+  // Active tab state
+  const [activeTab, setActiveTab] = useState<string>('home');
 
   // All categories including home
   const allCategories: CategoryItem[] = [
@@ -195,36 +208,31 @@ const HeaderCategory: React.FC = () => {
   // Categories to display in tabs (excluding home)
   const displayCategories = allCategories.filter(cat => cat.id !== 'home');
 
-  // Reset all categories to home
-  const resetToHome = () => {
-    setActiveTab('home');
-    setSelectedShoppingCategory('all');
-    setSelectedElectronicsSubCategory('all');
-    setSelectedHomeDecorSubCategory('all');
-    setSelectedFoodCategory('all_sub_header');
-    setSelectedFoodCategoryValue('all');
+  // Get values from URL params
+  const categoryParam = searchParams?.get('category') || null;
+  const shoppingParam = searchParams?.get('shoppingCategory') || null;
+  const electronicsParam = searchParams?.get('electronicsSubCategory') || null;
+  const homeDecorParam = searchParams?.get('homeDecorSubCategory') || null;
+  const foodParam = searchParams?.get('foodCategory') || null;
+  const dineoutParam = searchParams?.get('dineoutCategory') || null;
+  // State for address information from localStorage
+  const [selectedCity, setSelectedCity] = useState<string>('');
+  const [selectedCountry, setSelectedCountry] = useState<string>('');
+  const [selectedState, setSelectedState] = useState<string>('');
+  const [selectedLocality, setSelectedLocality] = useState<string>('');
 
-    // Clear URL parameters
-    router.push('/', { scroll: false });
-  };
+  // Update state when URL params change
+  useEffect(() => {
+    console.log('URL params changed:', { categoryParam, foodParam, dineoutParam, shoppingParam });
 
-  // Get category from URL and update state
-  const updateCategoryFromURL = () => {
-    const params = new URLSearchParams(window.location.search);
-    const categoryParam = params.get('category');
-    const shoppingParam = params.get('shoppingCategory');
-    const electronicsParam = params.get('electronicsSubCategory');
-    const homeDecorParam = params.get('homeDecorSubCategory');
-    const foodParam = params.get('foodCategory');
-
-    // Update main tab
+    // Update active tab
     if (categoryParam && allCategories.some(cat => cat.id === categoryParam)) {
       setActiveTab(categoryParam);
     } else {
       setActiveTab('home');
     }
 
-    // Update shopping category (using ID)
+    // Update shopping category
     if (shoppingParam) {
       setSelectedShoppingCategory(shoppingParam);
     } else {
@@ -234,12 +242,28 @@ const HeaderCategory: React.FC = () => {
     // Update food category
     if (foodParam) {
       setSelectedFoodCategory(foodParam);
-      // Set the corresponding category value for ShopByMainCategory
       const categoryValue = foodCategoryMapping[foodParam] || 'all';
       setSelectedFoodCategoryValue(categoryValue);
     } else {
       setSelectedFoodCategory('all_sub_header');
       setSelectedFoodCategoryValue('all');
+    }
+
+    // Update dineout category
+    if (dineoutParam) {
+      const category = FoodDineOutSpecialCollections.find(
+        item => item.dineoutSpecialCategoryID === dineoutParam
+      );
+      if (category) {
+        console.log('Found dineout category:', category.title);
+        setSelectedDineoutCategory(category);
+        setSelectedFoodCategory('dineout_special');
+        setActiveTab('food');
+      } else {
+        setSelectedDineoutCategory(null);
+      }
+    } else {
+      setSelectedDineoutCategory(null);
     }
 
     // Update electronics subcategory
@@ -255,110 +279,107 @@ const HeaderCategory: React.FC = () => {
     } else {
       setSelectedHomeDecorSubCategory('all');
     }
-  };
+  }, [categoryParam, foodParam, dineoutParam, shoppingParam, electronicsParam, homeDecorParam]);
 
-  // Initial load and URL change handling
-  useEffect(() => {
-    updateCategoryFromURL();
-  }, []);
+  // Reset all categories to home
+  const resetToHome = () => {
+    setActiveTab('home');
+    setSelectedShoppingCategory('all');
+    setSelectedElectronicsSubCategory('all');
+    setSelectedHomeDecorSubCategory('all');
+    setSelectedFoodCategory('all_sub_header');
+    setSelectedFoodCategoryValue('all');
+    setSelectedDineoutCategory(null);
+    router.replace('/', { scroll: false });
+  };
 
   // Listen for logo click event
   useEffect(() => {
     const handleLogoClick = () => {
       resetToHome();
     };
-
     window.addEventListener('logoClick', handleLogoClick);
-
     return () => {
       window.removeEventListener('logoClick', handleLogoClick);
     };
   }, []);
 
-  // Handle popstate event (back/forward browser buttons)
-  useEffect(() => {
-    const handlePopState = () => {
-      updateCategoryFromURL();
-    };
-
-    window.addEventListener('popstate', handlePopState);
-
-    return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, []);
-
-  // Also listen for URL changes via Next.js router
-  useEffect(() => {
-    const handleRouteChange = () => {
-      updateCategoryFromURL();
-    };
-
-    // Listen for route changes
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
-
-  // Handle category change and update URL
+  // Handle category change
   const handleCategoryChange = (categoryId: string) => {
     if (categoryId === activeTab) return;
 
     setActiveTab(categoryId);
 
-    // Reset subcategories when changing tabs
     if (categoryId !== 'shopping') {
       setSelectedShoppingCategory('all');
       setSelectedElectronicsSubCategory('all');
       setSelectedHomeDecorSubCategory('all');
     }
-    
+
     if (categoryId !== 'food') {
       setSelectedFoodCategory('all_sub_header');
       setSelectedFoodCategoryValue('all');
+      setSelectedDineoutCategory(null);
     }
 
-    // Update URL with query parameter
     const params = new URLSearchParams(window.location.search);
     params.set('category', categoryId);
 
-    // Remove shopping-related params if not on shopping tab
     if (categoryId !== 'shopping') {
       params.delete('shoppingCategory');
       params.delete('electronicsSubCategory');
       params.delete('homeDecorSubCategory');
     }
-    
-    // Remove food-related params if not on food tab
+
     if (categoryId !== 'food') {
       params.delete('foodCategory');
+      params.delete('dineoutCategory');
     }
 
-    router.push(`?${params.toString()}`, { scroll: false });
+    router.replace(`?${params.toString()}`, { scroll: false });
   };
 
   // Handle food subcategory selection
   const handleFoodSubCategorySelect = (item: SubHeaderItem) => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedFoodCategory(categoryId);
-    
-    // Set the corresponding category value for ShopByMainCategory
+    setSelectedDineoutCategory(null);
+
     const categoryValue = foodCategoryMapping[categoryId] || 'all';
     setSelectedFoodCategoryValue(categoryValue);
 
-    // Update URL with food category
     const params = new URLSearchParams(window.location.search);
     params.set('foodCategory', categoryId);
+    params.delete('dineoutCategory');
 
-    router.push(`?${params.toString()}`, { scroll: false });
+    router.replace(`?${params.toString()}`, { scroll: false });
     console.log('Selected food category:', item, 'Category value:', categoryValue);
   };
 
-  // Check if a specific food category is selected
-  const isFoodCategorySelected = (categoryId: string) => {
-    return selectedFoodCategory === categoryId;
+  // Handle dineout category click - update state and URL
+  const handleDineoutCategoryClick = (item: FoodDineOutItem, index: number) => {
+    console.log('Dineout category clicked:', item.title, item.dineoutSpecialCategoryID);
+
+    // Update URL
+    const params = new URLSearchParams(window.location.search);
+    if (item.dineoutSpecialCategoryID) {
+      params.set('dineoutCategory', item.dineoutSpecialCategoryID);
+      params.set('foodCategory', 'dineout_special');
+      params.set('category', 'food');
+    }
+    router.replace(`?${params.toString()}`, { scroll: false });
+  };
+
+  // Handle back from dineout special view
+  const handleBackFromDineoutSpecial = () => {
+    setSelectedDineoutCategory(null);
+    setSelectedFoodCategory('all_sub_header');
+    setSelectedFoodCategoryValue('all');
+
+    const params = new URLSearchParams(window.location.search);
+    params.delete('dineoutCategory');
+    params.set('foodCategory', 'all_sub_header');
+    router.replace(`?${params.toString()}`, { scroll: false });
   };
 
   // Handle shopping subcategory selection
@@ -366,11 +387,9 @@ const HeaderCategory: React.FC = () => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedShoppingCategory(categoryId);
 
-    // Update URL with shopping category
     const params = new URLSearchParams(window.location.search);
     params.set('shoppingCategory', categoryId);
 
-    // Reset subcategories when main category changes
     if (categoryId !== 'electronics_sub_header') {
       setSelectedElectronicsSubCategory('all');
       params.delete('electronicsSubCategory');
@@ -380,10 +399,8 @@ const HeaderCategory: React.FC = () => {
       params.delete('homeDecorSubCategory');
     }
 
-    router.push(`?${params.toString()}`, { scroll: false });
-    console.log('Selected shopping category:', item);
+    router.replace(`?${params.toString()}`, { scroll: false });
 
-    // Pass the category to ShopByMainCategory component
     setSelectedCategory(item.category || categoryId);
     setSelectedSubHeaderItem(item);
   };
@@ -393,11 +410,9 @@ const HeaderCategory: React.FC = () => {
     const subCategoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedElectronicsSubCategory(subCategoryId);
 
-    // Update URL with electronics subcategory
     const params = new URLSearchParams(window.location.search);
     params.set('electronicsSubCategory', subCategoryId);
-    router.push(`?${params.toString()}`, { scroll: false });
-    console.log('Selected electronics sub-category:', item);
+    router.replace(`?${params.toString()}`, { scroll: false });
   };
 
   // Handle home decor subcategory selection
@@ -405,33 +420,27 @@ const HeaderCategory: React.FC = () => {
     const subCategoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedHomeDecorSubCategory(subCategoryId);
 
-    // Update URL with home decor subcategory
     const params = new URLSearchParams(window.location.search);
     params.set('homeDecorSubCategory', subCategoryId);
-    router.push(`?${params.toString()}`, { scroll: false });
-    console.log('Selected home decor sub-category:', item);
+    router.replace(`?${params.toString()}`, { scroll: false });
   };
 
-  // Check if a specific shopping category is selected (using ID)
+  // Check if a specific shopping category is selected
   const isShoppingCategorySelected = (categoryId: string) => {
     return selectedShoppingCategory === categoryId;
   };
 
   // Handle category click from AllCategoryOne
   const handleShoppingCategoryClick = (category: { id: string; name: string }) => {
-    // First, switch to shopping tab if not already
     if (activeTab !== 'shopping') {
       setActiveTab('shopping');
     }
 
-    // Get the corresponding sub-header ID
     const subHeaderId = categoryToSubHeaderMapping[category.id];
 
     if (subHeaderId) {
-      // Update the shopping category state
       setSelectedShoppingCategory(subHeaderId);
 
-      // Find the sub-header item to set as selected
       const subHeaderItem = shoppingCategoriesSubHeader.find(
         item => item.id === subHeaderId || item.name.toLowerCase().replace(/\s+/g, '_') === subHeaderId
       );
@@ -441,28 +450,227 @@ const HeaderCategory: React.FC = () => {
         setSelectedCategory(subHeaderItem.category || category.id);
       }
 
-      // Update URL
       const params = new URLSearchParams(window.location.search);
       params.set('category', 'shopping');
       params.set('shoppingCategory', subHeaderId);
 
-      // Reset subcategories
       setSelectedElectronicsSubCategory('all');
       params.delete('electronicsSubCategory');
       setSelectedHomeDecorSubCategory('all');
       params.delete('homeDecorSubCategory');
 
-      router.push(`?${params.toString()}`, { scroll: false });
-
-      console.log('Category clicked:', category.name, '-> Sub-header:', subHeaderId);
+      router.replace(`?${params.toString()}`, { scroll: false });
     } else {
-      // If no mapping found, default to 'all'
       setSelectedShoppingCategory('all');
       const params = new URLSearchParams(window.location.search);
       params.set('category', 'shopping');
       params.set('shoppingCategory', 'all');
-      router.push(`?${params.toString()}`, { scroll: false });
+      router.replace(`?${params.toString()}`, { scroll: false });
     }
+  };
+
+  // Generate location-based title for dineout
+  const getLocationBasedTitleDineout = (baseTitle: string): string => {
+    const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+    const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+    const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+
+    let locationString = '';
+    if (locality) {
+      locationString = country ? `${locality}, ${country}` : locality;
+    } else if (city) {
+      locationString = country ? `${city}, ${country}` : city;
+    } else if (country) {
+      locationString = country;
+    }
+
+    if (locationString) {
+      return `${baseTitle} in ${locationString}`;
+    }
+    return baseTitle;
+  };
+
+  // Render Dineout Special Category Page Content
+  const renderDineoutSpecialCategoryPage = () => {
+    const categories = FoodDineOutSpecialCollections.map(item => ({
+      id: item.id.toString(),
+      name: item.title,
+      imageUrl: item.imageUrl,
+      url: item.link,
+      dineoutSpecialCategoryID: item.dineoutSpecialCategoryID,
+    }));
+
+    const handleCategoryClick = (item: any) => {
+      if (item.dineoutSpecialCategoryID) {
+        handleDineoutCategoryClick(item, 0);
+      } else {
+        router.push(item.url);
+      }
+    };
+
+    // Get the selected category name
+    const categoryName = selectedDineoutCategory?.title || '';
+    const categoryPlaceCount = selectedDineoutCategory?.placeCount || '';
+
+    // Build the title with category name
+    const getTitleWithCategory = () => {
+      const baseTitle = "";
+      const locationPart = getLocationBasedTitleDineout(baseTitle);
+
+      // If category name exists, append it
+      if (categoryName) {
+        return `${categoryName} Restaurants ${locationPart}`;
+      }
+      return locationPart;
+    };
+
+    return (
+      <div className={styles.dineoutSpecialPageContainer}>
+        {/* Optional: Show category header */}
+         <FoodRoundCarousel
+        categories={categories}
+        title=""
+        cardWidth={150}
+        cardHeight={150}
+        cardGap={15}
+        showScrollbar={false}
+        showArrows={true}
+        imageScale={1.1}
+        onCategoryClick={handleCategoryClick}
+        fixedSize={true}
+        selectedCategoryId={selectedDineoutCategory?.dineoutSpecialCategoryID || null}
+        highlightColor="#530605"
+        itemsPerView={{
+          mobile: 3,
+          tablet: 4,
+          desktop: 5,
+          largeDesktop: 8,
+        }}
+      />
+        <div className={styles.dineoutHeroBanner}>
+          <FoodBanner
+            banners={DineoutHeroBannerData}
+            minHeight={200}
+            maxHeight={600}
+          />
+        </div>
+         <div className={styles.dineoutItemsListCard}>
+        <DineOutItemsListCard
+          items={DineoutSpecialItemsList}
+          title={getTitleWithCategory()}
+          onItemClick={(item) => console.log('Clicked:', item.name)}
+          columns={4}
+        />
+        </div>
+      </div>
+    );
+  };
+
+  // Render food content
+  const renderFoodContent = () => {
+    // If a dineout special category is selected, show the DineoutSpecialCategoryPage content
+    if (selectedDineoutCategory && selectedFoodCategory === 'dineout_special') {
+      console.log('Rendering Dineout Special Category Page');
+      return renderDineoutSpecialCategoryPage();
+    }
+
+    // Default food content
+    return (
+      <>
+        {selectedFoodCategory === "all_sub_header" && (
+          <div className={styles.SubCategory}>
+            <HeroBannerLeftContent
+              banners={FoodHeroBannerLeftContent}
+              defaultAlign="left"
+            />
+            <div className={styles.categoryGap}>
+              <AllCategory categories={FoodsCategories} />
+            </div>
+            <WelcomeVideoHufko
+              title="Premium food delivery app"
+              titleHighlight="World's #1"
+              subtitle="Enjoy fast online ordering on the Hufko app"
+              videoSrc="/videos/delivery_by_hufko.mp4"
+              logoSrc="/icons/logo_video.png"
+              appStoreLink="/"
+              playStoreLink="/"
+              className="custom-hero"
+              showLogo={false}
+              showAppStore={true}
+              showPlayStore={true}
+              muted={true}
+            />
+            <div className={styles.dineOutCard}>
+              <FoodDineOutCard
+                items={FoodDineOutSpecialCollections}
+                title="Dine Out Collections Nearby You"
+                viewAllLink="/collections"
+                viewAllText="View All"
+                autoPlayInterval={3000}
+                showArrows={true}
+                onItemClick={handleDineoutCategoryClick}
+              />
+            </div>
+            <HufkoPrime
+              benefits={defaultBenefits}
+              onMoreClick={() => console.log('More clicked!')}
+            />
+            <DownloadApp />
+            <FranchiseHufkoSlide
+              badgeText="World's Largest Instant Delivery App Platform"
+              badgeIcon={<Shield size={16} />}
+              heading="Own a World's Largest #1"
+              highlightText="Ultra Premium Restaurant Franchise"
+              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+              franchiseCategory="food_beverage"
+              detailsPagePath="/franchise-details"
+              stats={[
+                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
+                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
+                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
+              ]}
+              buttons={[
+                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
+                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
+              ]}
+              images={[
+                { src: "/products/Premium_Restaurant_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                { src: "/products/Premium_Restaurant_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                { src: "/products/Premium_Restaurant_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                { src: "/products/Premium_Restaurant_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+              ]}
+              badges={[
+                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
+                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
+              ]}
+              backgroundColor="#055346"
+              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+              overlayOpacity={0.35}
+              className="custom-class"
+              showWave={true}
+              waveColor="white"
+              autoPlayInterval={3000}
+              showDots={true}
+              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
+              onSlideChange={(index) => console.log('Slide changed to:', index)}
+            >
+              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
+            </FranchiseHufkoSlide>
+          </div>
+        )}
+
+        {selectedFoodCategory !== "all_sub_header" && selectedFoodCategory !== "dineout_special" && (
+          <div className={styles.electronicsSubCategory}>
+            <ShopByMainCategory
+              category={selectedFoodCategoryValue}
+              selectedItem={selectedSubHeaderItem}
+              subHeaderItem={selectedSubHeaderItem}
+            />
+          </div>
+        )}
+      </>
+    );
   };
 
   return (
@@ -554,104 +762,10 @@ const HeaderCategory: React.FC = () => {
           <div className={styles.allCategory}>
             <SubHeader
               items={foodCategoriesSubHeader}
-              defaultActive="all_sub_header"
+              defaultActive={selectedDineoutCategory ? 'dineout_special' : selectedFoodCategory}
               onSelect={handleFoodSubCategorySelect}
             />
-            
-            {/* All Category - Default View */}
-            {selectedFoodCategory === "all_sub_header" && (
-              <div className={styles.SubCategory}>
-                <HeroBannerLeftContent
-                  banners={FoodHeroBannerLeftContent}
-                  defaultAlign="left"
-                />
-                <div className={styles.categoryGap}>
-                  <AllCategory categories={FoodsCategories} />
-                </div>
-                <WelcomeVideoHufko
-                  title="Premium food delivery app"
-                  titleHighlight="World's #1"
-                  subtitle="Enjoy fast online ordering on the Hufko app"
-                  videoSrc="/videos/delivery_by_hufko.mp4"
-                  logoSrc="/icons/logo_video.png"
-                  appStoreLink="/"
-                  playStoreLink="/"
-                  className="custom-hero"
-                  showLogo={false}
-                  showAppStore={true}
-                  showPlayStore={true}
-                  muted={true}
-                />
-                <div className={styles.dineOutCard}>
-                  <FoodDineOutCard
-                    items={FoodDineOutCollections}
-                    title="Dine Out Collections Nearby You"
-                    viewAllLink="/collections"
-                    viewAllText="View All"
-                    autoPlayInterval={3000}
-                    showArrows={true}
-                    onItemClick={(item, index) => console.log('Clicked:', item.title, index)}
-                  />
-                </div>
-                <HufkoPrime
-                  benefits={defaultBenefits}
-                  onMoreClick={() => console.log('More clicked!')}
-                />
-                <DownloadApp />
-                <FranchiseHufkoSlide
-                  badgeText="World's Largest Instant Delivery App Platform"
-                  badgeIcon={<Shield size={16} />}
-                  heading="Own a World's Largest #1"
-                  highlightText="Ultra Premium Restaurant Franchise"
-                  description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-                  franchiseCategory="food_beverage"
-                  detailsPagePath="/franchise-details"
-                  stats={[
-                    { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
-                    { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
-                    { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
-                  ]}
-                  buttons={[
-                    { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
-                    { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
-                  ]}
-                  images={[
-                    { src: "/products/Premium_Restaurant_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
-                    { src: "/products/Premium_Restaurant_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
-                    { src: "/products/Premium_Restaurant_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
-                    { src: "/products/Premium_Restaurant_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
-                  ]}
-                  badges={[
-                    { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
-                    { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
-                  ]}
-                  backgroundColor="#055346"
-                  gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
-                  overlayOpacity={0.35}
-                  className="custom-class"
-                  showWave={true}
-                  waveColor="white"
-                  autoPlayInterval={3000}
-                  showDots={true}
-                  onButtonClick={(index) => console.log(`Button ${index} clicked`)}
-                  onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
-                  onSlideChange={(index) => console.log('Slide changed to:', index)}
-                >
-                  <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
-                </FranchiseHufkoSlide>
-              </div>
-            )}
-
-            {/* Dynamic Food Categories - using the mapped category value */}
-            {selectedFoodCategory !== "all_sub_header" && (
-              <div className={styles.electronicsSubCategory}>
-                <ShopByMainCategory
-                  category={selectedFoodCategoryValue}
-                  selectedItem={selectedSubHeaderItem}
-                  subHeaderItem={selectedSubHeaderItem}
-                />
-              </div>
-            )}
+            {renderFoodContent()}
           </div>
         )}
 
@@ -664,7 +778,6 @@ const HeaderCategory: React.FC = () => {
               onSelect={(item) => console.log(item.name)}
             />
             <HeroBannerAll banners={GroceryHeroBannerData} height={360} />
-            {/* <HeroBannerAll banners={GroceryHeroBannerData} /> */}
             <div className={styles.categoryGap}>
               <AllCategory categories={GroceryCategories} />
             </div>
@@ -737,7 +850,6 @@ const HeaderCategory: React.FC = () => {
         {/* Shopping Section */}
         {activeTab === "shopping" && (
           <div className={styles.allCategory}>
-            {/* Main Shopping Categories */}
             <SubHeader
               key={`shopping-${selectedShoppingCategory}`}
               items={shoppingCategoriesSubHeader}
@@ -746,10 +858,9 @@ const HeaderCategory: React.FC = () => {
               onSelect={handleShoppingSubCategorySelect}
             />
 
-            {/* All Category - Default View */}
             {isShoppingCategorySelected("all") && (
               <div className={styles.electronicsSubCategory}>
-                <HeroBannerAll banners={ShopingHeroBannerData}  height={375} />
+                <HeroBannerAll banners={ShopingHeroBannerData} height={375} />
                 <div className={styles.categoryGap}>
                   <AllCategoryOne
                     categories={ShopingCategories}
@@ -776,7 +887,6 @@ const HeaderCategory: React.FC = () => {
                   cardWidth={200}
                   showArrow={true}
                 />
-
                 <FranchiseHufkoSlide
                   badgeText="World's Largest Instant Delivery App Platform"
                   badgeIcon={<Shield size={16} />}
@@ -817,7 +927,7 @@ const HeaderCategory: React.FC = () => {
                 </FranchiseHufkoSlide>
               </div>
             )}
-            {/* Electronics Sub-Sub Categories */}
+
             {isShoppingCategorySelected("electronics_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -838,7 +948,6 @@ const HeaderCategory: React.FC = () => {
               </div>
             )}
 
-            {/* Home Decor Sub-Sub Categories */}
             {isShoppingCategorySelected("home_kitchen_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -849,7 +958,6 @@ const HeaderCategory: React.FC = () => {
               </div>
             )}
 
-            {/* Home Decor Sub-Sub Categories */}
             {isShoppingCategorySelected("home_decor_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -860,7 +968,6 @@ const HeaderCategory: React.FC = () => {
               </div>
             )}
 
-            {/* Home Men's Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("mens_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -871,7 +978,6 @@ const HeaderCategory: React.FC = () => {
               </div>
             )}
 
-            {/* Home Women's Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("women_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -882,7 +988,6 @@ const HeaderCategory: React.FC = () => {
               </div>
             )}
 
-            {/* Home Kids' Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("kids_fashion_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -893,7 +998,6 @@ const HeaderCategory: React.FC = () => {
               </div>
             )}
 
-            {/* Home Kids' Fashion Sub-Sub Categories */}
             {isShoppingCategorySelected("women_beauty_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -913,6 +1017,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+
             {isShoppingCategorySelected("baby_toys_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -922,6 +1027,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+
             {isShoppingCategorySelected("books_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -931,6 +1037,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+
             {isShoppingCategorySelected("auto_accessories_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -940,6 +1047,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+
             {isShoppingCategorySelected("jewellery_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -949,6 +1057,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+
             {isShoppingCategorySelected("appliances_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -958,6 +1067,7 @@ const HeaderCategory: React.FC = () => {
                 />
               </div>
             )}
+
             {isShoppingCategorySelected("mobiles_tablets_sub_header") && (
               <div className={styles.electronicsSubCategory}>
                 <ShopByMainCategory
@@ -978,7 +1088,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={FlowerHeroBannerData}  height={360} />
+            <HeroBannerAll banners={FlowerHeroBannerData} height={360} />
             <div className={styles.categoryGap}>
               <AllCategory categories={FlowersCategories} />
             </div>
@@ -1147,7 +1257,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={CareHeroBannerData}  height={360} />
+            <HeroBannerAll banners={CareHeroBannerData} height={360} />
             <div className={styles.categoryGap}>
               <AllCategory categories={CareCategories} />
             </div>
@@ -1214,7 +1324,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={PharmaHeroBannerData}  height={375} />
+            <HeroBannerAll banners={PharmaHeroBannerData} height={375} />
             <div className={styles.categoryGap}>
               <AllCategoryOne categories={PharmaCategories} />
             </div>
@@ -1281,7 +1391,7 @@ const HeaderCategory: React.FC = () => {
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
             />
-            <HeroBannerAll banners={WholesaleHeroBannerData}  height={375} />
+            <HeroBannerAll banners={WholesaleHeroBannerData} height={375} />
             <div className={styles.categoryGap}>
               <AllCategoryOne categories={WholesaleCategoriesList} />
             </div>
