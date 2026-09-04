@@ -270,107 +270,112 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
 
     // Header Component
     // Header Component
-const RestaurantHeader = () => (
-    <div className={styles.restaurantHeader}>
-        <div className={styles.leftHeading}>
-            <div className={styles.restaurantHeading}>
-                <h1 className={styles.restaurantName}>{restaurant.name}</h1>
-                <div className={styles.restaurantRating}>
-                    <span className={styles.badge}>
-                        {restaurant.rating}<span className={styles.star}> ★</span> {restaurant.category}
-                    </span>
-                </div>
-            </div>
-            <div className={styles.restaurantCuisine}>
-                <div className={styles.cuisineTags}>
-                    {restaurant.cuisine.map((item, index) => (
-                        <span key={index} className={styles.cuisineTag}>
-                            {item}
-                            {index < restaurant.cuisine.length - 1 && <span className={styles.cuisineSeparator}>•</span>}
+    const RestaurantHeader = () => (
+        <div className={styles.restaurantHeader}>
+            <div className={styles.leftHeading}>
+                <div className={styles.restaurantHeading}>
+                    <h1 className={styles.restaurantName}>{restaurant.name}</h1>
+                    <div className={styles.restaurantRating}>
+                        <span className={styles.badge}>
+                            {restaurant.rating}<span className={styles.star}> ★</span> {restaurant.category}
                         </span>
-                    ))}
+                    </div>
+                </div>
+                <div className={styles.restaurantCuisine}>
+                    <div className={styles.cuisineTags}>
+                        {restaurant.cuisine.map((item, index) => (
+                            <span key={index} className={styles.cuisineTag}>
+                                {item}
+                                {index < restaurant.cuisine.length - 1 && <span className={styles.cuisineSeparator}>•</span>}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.restaurantAddress}>
+                    <div className={styles.addressText}>
+                        <div>
+                            <FontAwesomeIcon icon={faLocationDot} className={styles.locationIcon} />
+                            {restaurant.location}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className={styles.restaurantAddress}>
-                <div className={styles.addressText}>
+
+            <div className={styles.rightHeading}>
+                <div className={styles.openNowBadge}>
+                    <span className={styles.openNowDot}></span>
+                    <span>Open now</span>
+                </div>
+
+                <div className={styles.shareButton} onClick={handleShare}>
+                    <FontAwesomeIcon icon={faShareAlt} className={styles.shareIcon} />
+                    <span>Share</span>
+                </div>
+
+                <div className={styles.familyFriendly}>
+                    <span>👩 Women Friendly</span>
+                </div>
+
+                <div
+                    className={styles.coupleFriendly}
+                    onMouseEnter={() => setShowFeatures(true)}
+                    onMouseLeave={() => setShowFeatures(false)}
+                >
+                    <span>{restaurant.commonFeature}</span>
+                    {showFeatures && (
+                        <div
+                            className={styles.coupleFriendlyDetails}
+                            onMouseEnter={() => setShowFeatures(true)}
+                            onMouseLeave={() => setShowFeatures(false)}
+                        >
+                            <ul className={styles.featuresList}>
+                                {RESTAURANT_FEATURES.map((feature, index) => (
+                                    <li key={index} className={styles.featureItem}>
+                                        <FontAwesomeIcon icon={faCheck} className={styles.featureIcon} />
+                                        {feature}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+
+                <div className={styles.viewsMap} onClick={scrollToLocationOptions}>
+                    <div className={styles.mapBadge}>
+                        <Image
+                            src={mapIcon2}
+                            alt="Map Icon"
+                            className={styles.mapIcon2}
+                            height={30}
+                            width={30}
+                        />
+                    </div>
+                    <div>View Map</div>
+                </div>
+
+                <div
+                    className={styles.reviews}
+                    onMouseEnter={() => setOpenRatingId(restaurant.id)}
+                    onMouseLeave={() => setOpenRatingId(null)}
+                >
                     <div>
-                        <FontAwesomeIcon icon={faLocationDot} className={styles.locationIcon} />
-                        {restaurant.location}
+                        <span className={styles.ratingTotal}>
+                            <div>{restaurant.ratingCategory}</div>
+                            <div>{restaurant.totalRatings} Ratings</div>
+                        </span>
                     </div>
+                    <div className={styles.ratingBadge}>{restaurant.reviewScore}</div>
                 </div>
-            </div>
-        </div>
-
-        <div className={styles.rightHeading}>
-            <div className={styles.shareButton} onClick={handleShare}>
-                <FontAwesomeIcon icon={faShareAlt} className={styles.shareIcon} />
-                <span>Share</span>
-            </div>
-
-            <div className={styles.familyFriendly}>
-                <span>👩 Women Friendly</span>
-            </div>
-
-            <div
-                className={styles.coupleFriendly}
-                onMouseEnter={() => setShowFeatures(true)}
-                onMouseLeave={() => setShowFeatures(false)}
-            >
-                <span>{restaurant.commonFeature}</span>
-                {showFeatures && (
-                    <div
-                        className={styles.coupleFriendlyDetails}
-                        onMouseEnter={() => setShowFeatures(true)}
-                        onMouseLeave={() => setShowFeatures(false)}
-                    >
-                        <ul className={styles.featuresList}>
-                            {RESTAURANT_FEATURES.map((feature, index) => (
-                                <li key={index} className={styles.featureItem}>
-                                    <FontAwesomeIcon icon={faCheck} className={styles.featureIcon} />
-                                    {feature}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                {openRatingId === restaurant.id && (
+                    <RatingCard
+                        reviewScore={restaurant.reviewScore}
+                        totalRatings={restaurant.totalRatings}
+                        breakdown={restaurant.breakdown}
+                    />
                 )}
             </div>
-
-            <div className={styles.viewsMap} onClick={scrollToLocationOptions}>
-                <div className={styles.mapBadge}>
-                    <Image
-                        src={mapIcon2}
-                        alt="Map Icon"
-                        className={styles.mapIcon2}
-                        height={30}
-                        width={30}
-                    />
-                </div>
-                <div>View Map</div>
-            </div>
-
-            <div
-                className={styles.reviews}
-                onMouseEnter={() => setOpenRatingId(restaurant.id)}
-                onMouseLeave={() => setOpenRatingId(null)}
-            >
-                <div>
-                    <span className={styles.ratingTotal}>
-                        <div>{restaurant.ratingCategory}</div>
-                        <div>{restaurant.totalRatings} Ratings</div>
-                    </span>
-                </div>
-                <div className={styles.ratingBadge}>{restaurant.reviewScore}</div>
-            </div>
-            {openRatingId === restaurant.id && (
-                <RatingCard
-                    reviewScore={restaurant.reviewScore}
-                    totalRatings={restaurant.totalRatings}
-                    breakdown={restaurant.breakdown}
-                />
-            )}
         </div>
-    </div>
-);
+    );
 
     const RatingCard = ({
         reviewScore,
@@ -603,16 +608,16 @@ const RestaurantHeader = () => (
                 <BackButton />
                 <RestaurantCard />
                 <DineOutRestDetailsTabs
-                activeTabId="overview"
-                onTabChange={(tabId) => console.log('Tab changed:', tabId)}
-                restaurantData={{
-                    cuisine: restaurant.cuisine,
-                    name: restaurant.name,
-                    location: restaurant.location,
-                    rating: restaurant.rating,
-                    category: restaurant.category,
-                }}
-            />
+                    activeTabId="overview"
+                    onTabChange={(tabId) => console.log('Tab changed:', tabId)}
+                    restaurantData={{
+                        cuisine: restaurant.cuisine,
+                        name: restaurant.name,
+                        location: restaurant.location,
+                        rating: restaurant.rating,
+                        category: restaurant.category,
+                    }}
+                />
             </div>
             <div className={styles.restaurantTabNavigationBar}>
                 {/* <RestaurantTabNavigationBar /> */}
