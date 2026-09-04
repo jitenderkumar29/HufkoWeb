@@ -371,3 +371,34 @@
   text-align: center;
   color: #666;
 }
+
+// Add to HeaderCategory.module.scss
+
+.restaurantDetailsContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.backToResultsButton {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #0066cc;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #004d99;
+  }
+}
+
+.dineoutItemsListCard {
+  margin-top: 20px;
+}

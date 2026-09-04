@@ -47,7 +47,8 @@ import CategoryListCard from '@/components/Shopping/ItemListDesigns/CategoryList
 import FoodDineOutCard, { FoodDineOutItem } from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
 import FoodRoundCarousel from '@/components/FoodDelivery/FoodDesigns/FoodRoundCarousel/FoodRoundCarousel';
 import FoodBanner from '@/components/FoodDelivery/FoodDesigns/FoodBanner/FoodBanner';
-import DineOutItemsListCard from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
+import DineOutItemsListCard, { DineOutItemInterface } from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
+import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/DineOutRestDetails';
 
 interface CategoryItem {
   id: string;
@@ -190,6 +191,10 @@ const HeaderCategory: React.FC = () => {
   // State for selected dineout special category
   const [selectedDineoutCategory, setSelectedDineoutCategory] = useState<FoodDineOutItem | null>(null);
 
+  // State for showing restaurant details
+  const [showRestaurantDetails, setShowRestaurantDetails] = useState<boolean>(false);
+  const [selectedRestaurantId, setSelectedRestaurantId] = useState<string | null>(null);
+
   // Active tab state
   const [activeTab, setActiveTab] = useState<string>('home');
 
@@ -215,6 +220,7 @@ const HeaderCategory: React.FC = () => {
   const homeDecorParam = searchParams?.get('homeDecorSubCategory') || null;
   const foodParam = searchParams?.get('foodCategory') || null;
   const dineoutParam = searchParams?.get('dineoutCategory') || null;
+
   // State for address information from localStorage
   const [selectedCity, setSelectedCity] = useState<string>('');
   const [selectedCountry, setSelectedCountry] = useState<string>('');
@@ -259,6 +265,9 @@ const HeaderCategory: React.FC = () => {
         setSelectedDineoutCategory(category);
         setSelectedFoodCategory('dineout_special');
         setActiveTab('food');
+        // Reset restaurant details when navigating to a category
+        setShowRestaurantDetails(false);
+        setSelectedRestaurantId(null);
       } else {
         setSelectedDineoutCategory(null);
       }
@@ -290,6 +299,8 @@ const HeaderCategory: React.FC = () => {
     setSelectedFoodCategory('all_sub_header');
     setSelectedFoodCategoryValue('all');
     setSelectedDineoutCategory(null);
+    setShowRestaurantDetails(false);
+    setSelectedRestaurantId(null);
     router.replace('/', { scroll: false });
   };
 
@@ -309,6 +320,8 @@ const HeaderCategory: React.FC = () => {
     if (categoryId === activeTab) return;
 
     setActiveTab(categoryId);
+    setShowRestaurantDetails(false);
+    setSelectedRestaurantId(null);
 
     if (categoryId !== 'shopping') {
       setSelectedShoppingCategory('all');
@@ -344,6 +357,8 @@ const HeaderCategory: React.FC = () => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedFoodCategory(categoryId);
     setSelectedDineoutCategory(null);
+    setShowRestaurantDetails(false);
+    setSelectedRestaurantId(null);
 
     const categoryValue = foodCategoryMapping[categoryId] || 'all';
     setSelectedFoodCategoryValue(categoryValue);
@@ -356,11 +371,13 @@ const HeaderCategory: React.FC = () => {
     console.log('Selected food category:', item, 'Category value:', categoryValue);
   };
 
-  // Handle dineout category click - update state and URL
+  // Handle dineout category click
   const handleDineoutCategoryClick = (item: FoodDineOutItem, index: number) => {
     console.log('Dineout category clicked:', item.title, item.dineoutSpecialCategoryID);
+    
+    setShowRestaurantDetails(false);
+    setSelectedRestaurantId(null);
 
-    // Update URL
     const params = new URLSearchParams(window.location.search);
     if (item.dineoutSpecialCategoryID) {
       params.set('dineoutCategory', item.dineoutSpecialCategoryID);
@@ -370,16 +387,21 @@ const HeaderCategory: React.FC = () => {
     router.replace(`?${params.toString()}`, { scroll: false });
   };
 
-  // Handle back from dineout special view
-  const handleBackFromDineoutSpecial = () => {
-    setSelectedDineoutCategory(null);
-    setSelectedFoodCategory('all_sub_header');
-    setSelectedFoodCategoryValue('all');
+  // Handle dineout item click - show restaurant details
+  const handleDineoutItemClick = (item: DineOutItemInterface) => {
+    console.log('Restaurant clicked:', item.name, 'ID:', item.id);
+    setSelectedRestaurantId(String(item.id));
+    setShowRestaurantDetails(true);
+    // Scroll to top when showing details
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-    const params = new URLSearchParams(window.location.search);
-    params.delete('dineoutCategory');
-    params.set('foodCategory', 'all_sub_header');
-    router.replace(`?${params.toString()}`, { scroll: false });
+  // Handle back from restaurant details
+  const handleBackFromRestaurantDetails = () => {
+    console.log('Back to results');
+    setShowRestaurantDetails(false);
+    setSelectedRestaurantId(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Handle shopping subcategory selection
@@ -490,8 +512,52 @@ const HeaderCategory: React.FC = () => {
     return baseTitle;
   };
 
+  // Generate location-based title
+  const getLocationBasedTitle = (baseTitle: string): string => {
+    const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+    const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+    const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+
+    let locationString = '';
+    if (locality) {
+      locationString = country ? `${locality}, ${country}` : locality;
+    } else if (city) {
+      locationString = country ? `${city}, ${country}` : city;
+    } else if (country) {
+      locationString = country;
+    }
+
+    if (locationString) {
+      return `${baseTitle} in ${locationString}`;
+    }
+    return baseTitle;
+  };
+
+  // Render Restaurant Details
+  const renderRestaurantDetails = () => {
+    if (!selectedRestaurantId) return null;
+    
+    console.log('Rendering Restaurant Details for ID:', selectedRestaurantId);
+    return (
+      <div className={styles.restaurantDetailsContainer}>
+        {/* <button 
+          className={styles.backToResultsButton}
+          onClick={handleBackFromRestaurantDetails}
+        >
+          ← Back to results
+        </button> */}
+        <DineOutRestDetails id={selectedRestaurantId} />
+      </div>
+    );
+  };
+
   // Render Dineout Special Category Page Content
   const renderDineoutSpecialCategoryPage = () => {
+    // If showing restaurant details, render that instead
+    if (showRestaurantDetails && selectedRestaurantId) {
+      return renderRestaurantDetails();
+    }
+
     const categories = FoodDineOutSpecialCollections.map(item => ({
       id: item.id.toString(),
       name: item.title,
@@ -510,7 +576,6 @@ const HeaderCategory: React.FC = () => {
 
     // Get the selected category name
     const categoryName = selectedDineoutCategory?.title || '';
-    const categoryPlaceCount = selectedDineoutCategory?.placeCount || '';
 
     // Build the title with category name
     const getTitleWithCategory = () => {
@@ -526,27 +591,26 @@ const HeaderCategory: React.FC = () => {
 
     return (
       <div className={styles.dineoutSpecialPageContainer}>
-        {/* Optional: Show category header */}
-         <FoodRoundCarousel
-        categories={categories}
-        title=""
-        cardWidth={150}
-        cardHeight={150}
-        cardGap={15}
-        showScrollbar={false}
-        showArrows={true}
-        imageScale={1.1}
-        onCategoryClick={handleCategoryClick}
-        fixedSize={true}
-        selectedCategoryId={selectedDineoutCategory?.dineoutSpecialCategoryID || null}
-        highlightColor="#530605"
-        itemsPerView={{
-          mobile: 3,
-          tablet: 4,
-          desktop: 5,
-          largeDesktop: 8,
-        }}
-      />
+        <FoodRoundCarousel
+          categories={categories}
+          title=""
+          cardWidth={150}
+          cardHeight={150}
+          cardGap={15}
+          showScrollbar={false}
+          showArrows={true}
+          imageScale={1.1}
+          onCategoryClick={handleCategoryClick}
+          fixedSize={true}
+          selectedCategoryId={selectedDineoutCategory?.dineoutSpecialCategoryID || null}
+          highlightColor="#530605"
+          itemsPerView={{
+            mobile: 3,
+            tablet: 4,
+            desktop: 5,
+            largeDesktop: 8,
+          }}
+        />
         <div className={styles.dineoutHeroBanner}>
           <FoodBanner
             banners={DineoutHeroBannerData}
@@ -554,13 +618,13 @@ const HeaderCategory: React.FC = () => {
             maxHeight={600}
           />
         </div>
-         <div className={styles.dineoutItemsListCard}>
-        <DineOutItemsListCard
-          items={DineoutSpecialItemsList}
-          title={getTitleWithCategory()}
-          onItemClick={(item) => console.log('Clicked:', item.name)}
-          columns={4}
-        />
+        <div className={styles.dineoutItemsListCard}>
+          <DineOutItemsListCard
+            items={DineoutSpecialItemsList}
+            title={getTitleWithCategory()}
+            onItemClick={handleDineoutItemClick}
+            columns={4}
+          />
         </div>
       </div>
     );
@@ -568,13 +632,17 @@ const HeaderCategory: React.FC = () => {
 
   // Render food content
   const renderFoodContent = () => {
-    // If a dineout special category is selected, show the DineoutSpecialCategoryPage content
+    // FIRST: Check if we're showing restaurant details
+    if (showRestaurantDetails && selectedRestaurantId) {
+      return renderRestaurantDetails();
+    }
+
+    // SECOND: If a dineout special category is selected, show the DineoutSpecialCategoryPage content
     if (selectedDineoutCategory && selectedFoodCategory === 'dineout_special') {
-      console.log('Rendering Dineout Special Category Page');
       return renderDineoutSpecialCategoryPage();
     }
 
-    // Default food content
+    // THIRD: Default food content
     return (
       <>
         {selectedFoodCategory === "all_sub_header" && (
@@ -609,6 +677,14 @@ const HeaderCategory: React.FC = () => {
                 autoPlayInterval={3000}
                 showArrows={true}
                 onItemClick={handleDineoutCategoryClick}
+              />
+            </div>
+            <div className={styles.dineoutItemsListCard}>
+              <DineOutItemsListCard
+                items={DineoutItemsList}
+                title={getLocationBasedTitle("Top collections dineout restaurants")}
+                onItemClick={handleDineoutItemClick}
+                columns={4}
               />
             </div>
             <HufkoPrime

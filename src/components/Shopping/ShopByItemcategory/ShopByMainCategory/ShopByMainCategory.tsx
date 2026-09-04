@@ -121,7 +121,8 @@ import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBa
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
 import OrderNowItemsListCard, { RestaurantItemFoodInterface } from '@/components/FoodDelivery/FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard';
-import DineOutItemsListCard from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
+import DineOutItemsListCard, { DineOutItemInterface } from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
+import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/DineOutRestDetails';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -178,6 +179,10 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     // State for selected category and view mode
     const [selectedCategory, setSelectedCategory] = React.useState<CategoryItem | null>(null);
     const [showSubCategoryView, setShowSubCategoryView] = React.useState(false);
+
+    // State for showing restaurant details
+    const [showRestaurantDetails, setShowRestaurantDetails] = useState<boolean>(false);
+    const [selectedRestaurantId, setSelectedRestaurantId] = useState<string | null>(null);
 
     // State for address information from localStorage
     const [selectedCity, setSelectedCity] = useState<string>('');
@@ -246,6 +251,8 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         console.log('Category clicked:', item);
         setSelectedCategory(item);
         setShowSubCategoryView(true);
+        setShowRestaurantDetails(false);
+        setSelectedRestaurantId(null);
 
         setTimeout(() => {
             const contentElement = document.getElementById('category-content');
@@ -262,6 +269,25 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     const handleBackToMainView = () => {
         setShowSubCategoryView(false);
         setSelectedCategory(null);
+        setShowRestaurantDetails(false);
+        setSelectedRestaurantId(null);
+    };
+
+    // Handle back from restaurant details
+    const handleBackFromRestaurantDetails = () => {
+        console.log('Back to results from ShopByMainCategory');
+        setShowRestaurantDetails(false);
+        setSelectedRestaurantId(null);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // Handle dineout item click - show restaurant details
+    const handleDineoutItemClick = (item: DineOutItemInterface) => {
+        console.log('Restaurant clicked from ShopByMainCategory:', item.name, 'ID:', item.id);
+        setSelectedRestaurantId(String(item.id));
+        setShowRestaurantDetails(true);
+        // Scroll to top when showing details
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     // Handle generic category click for navigation
@@ -312,29 +338,29 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
 
     // Generate location-based title with locality and country
     const getLocationBasedTitle = (baseTitle: string): string => {
-    // Get location parts from state
-    const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
-    const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
-    const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+        // Get location parts from state
+        const locality = selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+        const city = selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+        const country = selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
 
-    // Priority: locality > city, then add country
-    let locationString = '';
-    if (locality) {
-        locationString = country ? `${locality}, ${country}` : locality;
-    } else if (city) {
-        locationString = country ? `${city}, ${country}` : city;
-    } else if (country) {
-        locationString = country;
-    }
+        // Priority: locality > city, then add country
+        let locationString = '';
+        if (locality) {
+            locationString = country ? `${locality}, ${country}` : locality;
+        } else if (city) {
+            locationString = country ? `${city}, ${country}` : city;
+        } else if (country) {
+            locationString = country;
+        }
 
-    // Return formatted title using baseTitle
-    if (locationString) {
-        return `${baseTitle} in ${locationString}`;
-    }
+        // Return formatted title using baseTitle
+        if (locationString) {
+            return `${baseTitle} in ${locationString}`;
+        }
 
-    // Fallback - use baseTitle only
-    return baseTitle;
-};
+        // Fallback - use baseTitle only
+        return baseTitle;
+    };
 
     const handleItemClick = (item: FoodDineOutItem, index: number) => {
         // This will be called by the card's onClick handler
@@ -345,10 +371,32 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         // The card will handle the URL update automatically
     };
 
+    // Render Restaurant Details
+    const renderRestaurantDetails = () => {
+        if (!selectedRestaurantId) return null;
+
+        console.log('Rendering Restaurant Details for ID:', selectedRestaurantId);
+        return (
+            <div className={styles.restaurantDetailsContainer}>
+                {/* <button
+                    className={styles.backToResultsButton}
+                    onClick={handleBackFromRestaurantDetails}
+                >
+                    ← Back to results
+                </button> */}
+                <DineOutRestDetails id={selectedRestaurantId} />
+            </div>
+        );
+    };
 
     // Render the main content based on category
     const renderMainContent = () => {
         const carouselData = getCurrentCarouselData();
+
+        // Check if we're showing restaurant details
+        if (showRestaurantDetails && selectedRestaurantId) {
+            return renderRestaurantDetails();
+        }
 
         switch (category) {
             case 'electronics':
@@ -1369,7 +1417,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 title={getLocationBasedTitle("Food Delivery Restaurants")}
                                 variant="5col"
                                 showOffers={true}
-                                onItemClick={(item) => console.log('Clicked:', item)}
+                                onItemClick={handleItemFoodClick}
                             />
                         </div>
                     </>
@@ -1405,19 +1453,10 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 onItemClick={handleItemClick}
                             />
                         </div>
-                        {/* <div className={styles.foodDineOutDiscover}>
-                            <FoodDineOutDiscover
-                                items={DiningDataItems}
-                                title="Discover best restaurants on Dineout"
-                                // subtitle="Curated picks just for you"
-                                onSelect={handleAction}
-                            />
-                        </div> */}
                         <DineOutItemsListCard
                             items={DineoutItemsList}
                             title={getLocationBasedTitle("Top collections dineout restaurants")}
-                            // title="Top collections dineout restaurants nearby me"
-                            onItemClick={(item) => console.log('Clicked:', item.name)}
+                            onItemClick={handleDineoutItemClick}
                             columns={4}
                         />
                     </>
