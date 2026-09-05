@@ -1,15 +1,26 @@
 'use client';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './DineOutRestDetailsTabs.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+    faList,
+    faUtensils,
+    faStar,
+    faImage,
+    faBook,
+    faChevronDown,
+    faClock,
+    faLocationDot,
+    faPhone,
+    faEnvelope,
+    faGlobe,
+    faThumbsUp,
+    faUser,
     faInfoCircle,
     faShoppingBag,
-    faStar,
     faCamera,
     faClipboardList,
     faCalendarCheck,
-    faChevronDown,
     faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -43,40 +54,7 @@ interface DineOutRestDetailsTabsProps {
     };
 }
 
-const restaurentDummyImages = [
-  "./products/44d2068bb86bb7dc8a0a9a2b2a735e67.jpeg",
-  "/products/44d5c61d18d31c3f585ce8d53a6ad855.jpeg",
-  "/products/ad602487725baa27e3b484c14dbe41f2.jpeg",
-  "/products/3e934b44d095bc2cd92e21ccfc8d3ec2.jpg",
-  "/products/558952cc07fa4a3d9f6e1e02c25467e7.jpg",
-  "/products/959efb74d0b20696a1052d2183090da7.jpg",
-  "/products/abac42bc23fe1bf46b1c5350867e4a8f.jpg",
-  "/products/fa2236bc99952c2de3fb9675e97d5989.jpg",
-  "/products/477baf9c3c38dd0df40e6153de1e79a1.jpg",
-  "/products/c1ba536f8903cdc9cb2880f7d8d4b862.jpeg",
-  "/products/29d1b5096fd85674097a619240d6cc23.jpg",
-  "/products/913d58c585e2696e78f3fe78517ac713.jpg",
-  "/products/3abc6de7523f7bc54d7f1075c54160f2.jpg",
-  "/products/951effdee8d490dfa5202a635a4beaed.jpg",
-  "/products/432f87390f1cd45f448affc85ef412c9.jpg",
-  "/products/38694f72ea3660f273988af1e3a7c513.jpg",
-  "/products/0f05e1723f7b0782c4f39e839bd99d6b.jpg",
-  "/products/5c2cb4c377d477cc7f1c09918846abca.jpg",
-  "/products/e000ce927731205809597c98bd0ac87d.jpg",
-  "/products/a4d40de9e6e140d53ec67f78b35de73d.jpg",
-  "/products/d6e5609d063b958111307130ebb57c03.jpg",
-  "/products/d97cf77213e2e13a8829c958c9ef3c76.jpg",
-  "/products/c60ce471fbdd328d8d724328ecc2ea3f.jpg",
-  "/products/2da59374990669c1ce98b824c6c83b01.jpeg",
-  "/products/323977ba9f70eb683f0823ec35953881.jpg",
-  "/products/2b4275a5ef09b21ca0e8158e1bfdf07c.jpg",
-  "/products/484492bcc4100818a664beb9c6392a9c.jpg",
-  "/products/5e8fb92d7645f10eb62caceaffe87d7c.jpg",
-  "/products/5e8fb92d7645f10eb62caceaffe87d7c1.jpg",
-  "/products/5e8fb92d7645f10eb62caceaffe87d7c2.jpg"
-];
-
-// Overview Content Component
+// Overview Content with Tab Switching
 const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
     const [activeOfferTab, setActiveOfferTab] = useState<'booking' | 'walkin'>('booking');
 
@@ -85,16 +63,16 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
             return (
                 <>
                     <div className={styles.sideOfferCard}>
-                        <div className={styles.sideOfferBadge}>RESTAURANT OFFER</div>
+                        <div className={styles.sideOfferBadge}>WALK-IN OFFER</div>
                         <div className={styles.sideOfferIconWrapper}>
-                            <img
-                                src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/offer_25202605.png"
-                                alt="Deal Icon"
+                            <img 
+                                src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/offer_25202605.png" 
+                                alt="Deal Icon" 
                                 className={styles.sideOfferIcon}
                             />
                             <div className={styles.sideOfferTextWrapper}>
-                                <p className={styles.sideOfferBrand}>40% Off On Entire Bill.</p>
-                                <span className={styles.sideOfferDescSmall}>Book & Pay to Claim</span>
+                                <p className={styles.sideOfferBrand}>PRIME</p>
+                                <p className={styles.sideOfferDesc}>40% Off On Entire Bill.</p>
                             </div>
                         </div>
                     </div>
@@ -104,9 +82,9 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                             <div className={styles.sideOfferCarouselItem}>
                                 <div className={styles.sideOfferPaymentCard}>
                                     <div className={styles.sideOfferPaymentLogo}>
-                                        <img
-                                            src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_25_logo_indusind_full_28thJuly.png"
-                                            alt="IndusInd"
+                                        <img 
+                                            src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_25_logo_indusind_full_28thJuly.png" 
+                                            alt="IndusInd" 
                                             className={styles.sideOfferPaymentLogoImg}
                                         />
                                     </div>
@@ -131,13 +109,14 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                     <div className={styles.sideOfferCard}>
                         <div className={styles.sideOfferBadge}>WALK-IN OFFER</div>
                         <div className={styles.sideOfferIconWrapper}>
-                            <img
-                                src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/offer_25202605.png"
-                                alt="Deal Icon"
+                            <img 
+                                src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/offer_25202605.png" 
+                                alt="Deal Icon" 
                                 className={styles.sideOfferIcon}
                             />
                             <div className={styles.sideOfferTextWrapper}>
-                                <p className={styles.sideOfferBrand}>Flat 20% Off</p>
+                                <p className={styles.sideOfferBrand}>PRIME</p>
+                                <p className={styles.sideOfferDesc}>Flat 20% Off</p>
                                 <span className={styles.sideOfferDescSmall}>Book & Pay to Claim</span>
                             </div>
                         </div>
@@ -148,9 +127,9 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                             <div className={styles.sideOfferCarouselItem}>
                                 <div className={styles.sideOfferPaymentCard}>
                                     <div className={styles.sideOfferPaymentLogo}>
-                                        <img
-                                            src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_25_logo_indusind_full_28thJuly.png"
-                                            alt="IndusInd"
+                                        <img 
+                                            src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_25_logo_indusind_full_28thJuly.png" 
+                                            alt="IndusInd" 
                                             className={styles.sideOfferPaymentLogoImg}
                                         />
                                     </div>
@@ -173,9 +152,9 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
     };
 
     return (
-        <div className={styles.overviewWrapper}>
+        <div className={styles.tabContentWrapper}>
             {/* Left Column - 70% */}
-            <div className={styles.overviewLeft}>
+            <div className={styles.tabContentLeft}>
                 {/* Dining Offers Section */}
                 <div className={styles.offersSection}>
                     <h3 className={styles.sectionTitle}>Dining Offers</h3>
@@ -245,8 +224,7 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                 </div> */}
 
                 {/* Menu Section */}
-                {/* Menu Section */}
-                <div className={styles.menuSection}>
+                {/* <div className={styles.menuSection}>
                     <div className={styles.menuHeader}>
                         <h3 className={styles.sectionTitle}>Menu</h3>
                         <a href="#" className={styles.seeAllLink}>See all menus <FontAwesomeIcon icon={faArrowRight} /></a>
@@ -278,24 +256,20 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                     </div>
                     <div className={styles.menuPages}>
                         <div className={styles.menuPageCard}>
-                            <div className={styles.menuPageImage}>
-                                <img src="/products/restaurant_menu_1.png" alt="Food Menu" />
-                            </div>
+                            <div className={styles.menuPageImage}>🍽️</div>
                             <h4>Food</h4>
                             <p>16 pages</p>
                         </div>
                         <div className={styles.menuPageCard}>
-                            <div className={styles.menuPageImage}>
-                                <img src="/products/restaurant_menu_2.png" alt="Beverages Menu" />
-                            </div>
+                            <div className={styles.menuPageImage}>🥤</div>
                             <h4>Beverages</h4>
                             <p>1 page</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Average Cost Section */}
-                <div className={styles.costSection}>
+                {/* <div className={styles.costSection}>
                     <div className={styles.knownForSection}>
                         <h4 className={styles.knownForTitle}>People Say This Place Is Known For</h4>
                         <p className={styles.knownForTags}>Ambience, Service, Portion Size, Food, Packaging, Value for Money</p>
@@ -308,57 +282,58 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                         <span>Cash and Cards accepted</span>
                         <span>Digital payments accepted</span>
                     </div>
-                </div>
+                </div> */}
 
                 {/* More Info Section */}
-                <div className={styles.moreInfoSection}>
+                {/* <div className={styles.moreInfoSection}>
                     <h3 className={styles.sectionTitle}>More Info</h3>
                     <div className={styles.moreInfoGrid}>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Lunch</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Dinner</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Home delivery</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Takeaway available</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Wheelchair accessible</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Stags allowed</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Less noisy</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Step-free entry</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Parking available</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Free parking</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Work friendly</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Smoking area</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Wifi</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Indoor seating</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Kid friendly</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Family friendly</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Low-intensity music</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Large group seating</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Vegetarian friendly</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Lunch</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Dinner</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Home delivery</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Takeaway available</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Wheelchair accessible</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Stags allowed</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Less noisy</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Step-free entry</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Parking available</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Free parking</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Work friendly</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Smoking area</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Wifi</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Indoor seating</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Kid friendly</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Family friendly</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Low-intensity music</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Large group seating</div>
+                        <div className={styles.moreInfoItem}><span>✓</span> Vegetarian friendly</div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Right Column - 30% */}
-            <div className={styles.overviewRight}>
+            <div className={styles.tabContentRight}>
                 <div className={styles.offersForYou}>
                     <h3 className={styles.offersForYouTitle}>Offers For You</h3>
-
+                    
                     {/* Tabs Row */}
                     <div className={styles.sideOfferTabs}>
-                        <div
-                            className={`${styles.sideOfferTab} ${activeOfferTab === 'booking' ? styles.activeTab : styles.nonactiveTab}`}
+                        <div 
+                            className={`${styles.sideOfferTab} ${activeOfferTab === 'booking' ? styles.activeTab : ''}`}
                             onClick={() => setActiveOfferTab('booking')}
                         >
                             <span className={styles.sideOfferTabLabel}>BOOKING OFFER</span>
                             <span className={styles.sideOfferTabDiscount}>(Upto 40% Off)</span>
                         </div>
-                        <div
-                            className={`${styles.sideOfferTab} ${activeOfferTab === 'walkin' ? styles.activeTab : styles.nonactiveTab}`}
+                        <div 
+                            className={`${styles.sideOfferTab} ${activeOfferTab === 'walkin' ? styles.activeTab : ''}`}
                             onClick={() => setActiveOfferTab('walkin')}
                         >
                             <span className={styles.sideOfferTabLabel}>WALK-IN OFFER</span>
                             <span className={styles.sideOfferTabDiscount}>(Upto 20% Off)</span>
                         </div>
                     </div>
+
                     {/* Dynamic Content Based on Active Tab */}
                     {renderOfferContent()}
 
@@ -379,6 +354,7 @@ const OrderOnlineContent = () => (
         <p className={styles.contentText}>
             Order your favorite dishes online and get them delivered to your doorstep.
         </p>
+    
     </div>
 );
 
@@ -392,72 +368,33 @@ const ReviewsContent = () => (
                 <span className={styles.ratingCount}>3,145 Reviews</span>
             </div>
         </div>
+       
     </div>
 );
 
-const filters = ['All (52)', 'Food (41)', 'Ambience (8)'];
-
-const PhotosContent = ({ restaurant }: { restaurant?: any }) => {
-  const [activeTab, setActiveTab] = useState('All');
-
-  return (
-    <div className={styles.photosContainer}>
-      <h2 className={styles.photosHeading}>{restaurant?.name} Photos</h2>
-
-      <div className={styles.photosTabsContainer}>
-        {filters.map((filter) => {
-          const label = filter.split(' ')[0];
-          const isActive = activeTab === label;
-          return (
-            <button
-              key={filter}
-              onClick={() => setActiveTab(label)}
-              className={`${styles.photosTabButton} ${isActive ? styles.photosActiveTab : ''}`}
-            >
-              {filter}
-            </button>
-          );
-        })}
-      </div>
-
-      <div className={styles.photosGrid}>
-        {restaurentDummyImages.map((src, index) => (
-          <div key={index} className={styles.photosImageWrapper}>
-            <img src={src} alt="Gallery" loading="lazy" className={styles.photosImage} />
-          </div>
-        ))}
-      </div>
-
-      <div className={styles.photosPagination}>
-        <div className={styles.photosShowingText}>Showing 1-30 of 52 images</div>
-        <div className={styles.photosControls}>
-          <a href="#1" className={`${styles.photosPageNum} ${styles.photosActiveNum}`}>1</a>
-          <a href="#2" className={styles.photosPageNum}>2</a>
-          <a href="#next" className={styles.photosPageNum}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20" viewBox="0 0 20 20">
-              <path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
+const PhotosContent = () => (
+    <div className={styles.tabContent}>
+        <h3 className={styles.contentTitle}>Photo Gallery</h3>
+   
     </div>
-  );
-};
-
+);
 
 const MenuContent = () => (
     <div className={styles.tabContent}>
         <h3 className={styles.contentTitle}>Our Menu</h3>
+       
+        
     </div>
 );
 
 const BookTableContent = () => (
     <div className={styles.tabContent}>
         <h3 className={styles.contentTitle}>Book a Table</h3>
+        
     </div>
 );
 
-// Main Component
+// Custom tabs with content
 const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
     onTabChange,
     activeTabId = 'overview',
@@ -465,109 +402,96 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
     restaurantData,
 }) => {
     const [activeTab, setActiveTab] = useState<string>(activeTabId);
-    const tabRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
     const customTabs: TabItem[] = [
         { id: 'overview', label: 'Overview', icon: faInfoCircle, content: <OverviewContent restaurant={restaurantData} /> },
         { id: 'order-online', label: 'Order Online', icon: faShoppingBag, count: 5, content: <OrderOnlineContent /> },
         { id: 'reviews', label: 'Reviews', icon: faStar, count: 42, content: <ReviewsContent /> },
-        { id: 'photos', label: 'Photos', icon: faCamera, count: 128, content: <PhotosContent restaurant={restaurantData}/> },
+        { id: 'photos', label: 'Photos', icon: faCamera, count: 128, content: <PhotosContent /> },
         { id: 'menu', label: 'Menu', icon: faClipboardList, content: <MenuContent /> },
         { id: 'book-table', label: 'Book a Table', icon: faCalendarCheck, content: <BookTableContent /> },
     ];
 
-    // Scroll-based active tab detection
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY + 150;
-
-            let activeSection = customTabs[0]?.id || 'overview';
-
-            for (const tab of customTabs) {
-                const element = tabRefs.current[tab.id];
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    const elementTop = rect.top + window.scrollY;
-
-                    if (scrollPosition >= elementTop - 100) {
-                        activeSection = tab.id;
-                    }
-                }
-            }
-
-            if (activeSection !== activeTab) {
-                setActiveTab(activeSection);
-                if (onTabChange) {
-                    onTabChange(activeSection);
-                }
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        setTimeout(handleScroll, 100);
-
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [activeTab, onTabChange, customTabs]);
-
     const handleTabClick = (tabId: string) => {
         setActiveTab(tabId);
+        setIsDropdownOpen(false);
         if (onTabChange) {
             onTabChange(tabId);
         }
-
-        const element = tabRefs.current[tabId];
-        if (element) {
-            const headerOffset = 120;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
     };
+
+    const activeTabData = customTabs.find((tab) => tab.id === activeTab);
 
     return (
         <div className={`${styles.tabsContainer} ${className}`}>
-            {/* Navigation Bar - Hotel Style */}
-            <nav className={styles.tabNav}>
-                {customTabs.map((tab) => (
-                    <a
-                        key={tab.id}
-                        href={`#${tab.id}`}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            handleTabClick(tab.id);
-                        }}
-                        className={`${styles.tabLink} ${activeTab === tab.id ? styles.active : ''}`}
-                    >
-                        {tab.icon && <FontAwesomeIcon icon={tab.icon} className={styles.tabIcon} />}
-                        <span className={styles.tabLabel}>{tab.label}</span>
-                        {tab.count !== undefined && tab.count > 0 && (
-                            <span className={styles.tabCount}>{tab.count}</span>
-                        )}
-                    </a>
-                ))}
-            </nav>
+            <div className={styles.tabsNavigation}>
+                <div className={styles.desktopTabs}>
+                    {customTabs.map((tab) => (
+                        <button
+                            key={tab.id}
+                            className={`${styles.tabButton} ${activeTab === tab.id ? styles.active : ''}`}
+                            onClick={() => handleTabClick(tab.id)}
+                            aria-label={`Tab: ${tab.label}`}
+                        >
+                            {tab.icon && <FontAwesomeIcon icon={tab.icon} className={styles.tabIcon} />}
+                            <span className={styles.tabLabel}>{tab.label}</span>
+                            {tab.count !== undefined && tab.count > 0 && (
+                                <span className={styles.tabCount}>{tab.count}</span>
+                            )}
+                        </button>
+                    ))}
+                </div>
 
-            {/* Content Sections */}
-            <main className={styles.mainContentBody}>
-                {customTabs.map((tab) => (
-                    <section
-                        key={tab.id}
-                        id={tab.id}
-                        ref={(el) => {
-                            tabRefs.current[tab.id] = el;
-                        }}
-                        className={`${styles.section} ${activeTab === tab.id ? styles.activeSection : ''}`}
+                <div className={styles.mobileDropdown}>
+                    <button
+                        className={styles.dropdownButton}
+                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        aria-expanded={isDropdownOpen}
+                        aria-label="Toggle tabs menu"
                     >
-                        <div className={styles.sectionContent}>
-                            {tab.content}
+                        <span className={styles.dropdownButtonContent}>
+                            {activeTabData?.icon && (
+                                <FontAwesomeIcon icon={activeTabData.icon} className={styles.dropdownIcon} />
+                            )}
+                            <span className={styles.dropdownLabel}>{activeTabData?.label}</span>
+                        </span>
+                        <FontAwesomeIcon
+                            icon={faChevronDown}
+                            className={`${styles.dropdownChevron} ${isDropdownOpen ? styles.chevronOpen : ''}`}
+                        />
+                    </button>
+
+                    {isDropdownOpen && (
+                        <div className={styles.dropdownMenu}>
+                            {customTabs.map((tab) => (
+                                <button
+                                    key={tab.id}
+                                    className={`${styles.dropdownItem} ${activeTab === tab.id ? styles.dropdownItemActive : ''}`}
+                                    onClick={() => handleTabClick(tab.id)}
+                                >
+                                    {tab.icon && <FontAwesomeIcon icon={tab.icon} className={styles.dropdownItemIcon} />}
+                                    <span className={styles.dropdownItemLabel}>{tab.label}</span>
+                                    {tab.count !== undefined && tab.count > 0 && (
+                                        <span className={styles.dropdownItemCount}>{tab.count}</span>
+                                    )}
+                                </button>
+                            ))}
                         </div>
-                    </section>
+                    )}
+                </div>
+            </div>
+
+            <div className={styles.tabContentWrapper}>
+                {customTabs.map((tab) => (
+                    <div
+                        key={tab.id}
+                        className={`${styles.tabPane} ${activeTab === tab.id ? styles.tabPaneActive : ''}`}
+                    >
+                        {tab.content}
+                    </div>
                 ))}
-            </main>
+            </div>
         </div>
     );
 };

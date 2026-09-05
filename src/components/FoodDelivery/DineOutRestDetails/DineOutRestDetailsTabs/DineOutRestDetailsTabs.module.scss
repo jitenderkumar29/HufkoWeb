@@ -4,24 +4,29 @@
     width: 100%;
     background-color: $white;
     border-radius: 12px;
-    box-shadow: $card-shadow;
-    overflow: hidden;
+    // margin: 0rem 2rem; 
+    // overflow: hidden;
 }
 
-.tabsNavigation {
-    width: 100%;
-    background-color: $white;
-    border-bottom: 2px solid $gray-200;
-    position: relative;
-}
+/* ============================================ */
+/* NAVIGATION - HOTEL STYLE */
+/* ============================================ */
 
-/* Desktop Tabs */
-.desktopTabs {
+.tabNav {
     display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 0 16px;
+    gap: 3.5rem;
     overflow-x: auto;
+    padding: 1rem 2.5rem;
+    background-color: #fff;
+    position: sticky;
+    top: 145px;
+    z-index: 100;
+    white-space: nowrap;
+    font-size: 17px;
+    border-top: 1px solid var(--border-color, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #e0e0e0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
     scrollbar-width: none;
     -ms-overflow-style: none;
 
@@ -30,58 +35,38 @@
     }
 }
 
-.tabButton {
+.tabLink {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 0.25rem;
+    transition: color 0.3s ease;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 14px 20px;
-    background: transparent;
-    border: none;
-    border-bottom: 3px solid transparent;
-    color: $gray-600;
-    font-size: 15px;
-    font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    position: relative;
-    font-family: inherit;
 
     &:hover {
-        color: $primary-color;
-        background-color: $gray-50;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &:focus-visible {
-        outline: 2px solid $secondary-color;
-        outline-offset: -2px;
-        border-radius: 4px;
+        color: #0071f3;
+        font-weight: bold;
     }
 
     &.active {
-        color: $primary-color;
-        border-bottom-color: $primary-color;
-        font-weight: 600;
-
-        &:hover {
-            background-color: transparent;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background-color: $primary-color;
-            border-radius: 2px 2px 0 0;
-        }
+        color: #0071f3;
+        font-weight: bold;
     }
+}
+
+.tabLink.active::after,
+.tabLink:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #0071f3;
 }
 
 .tabIcon {
@@ -98,8 +83,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: $gray-200;
-    color: $gray-700;
+    background-color: #e0e0e0;
+    color: #555;
     font-size: 11px;
     font-weight: 600;
     padding: 1px 8px;
@@ -108,233 +93,44 @@
     height: 20px;
     line-height: 1;
 
-    .tabButton.active & {
-        background-color: rgba($primary-color, 0.15);
-        color: $primary-color;
+    .tabLink.active & {
+        background-color: rgba(0, 113, 243, 0.15);
+        color: #0071f3;
     }
 
-    .tabButton:hover & {
-        background-color: $gray-300;
+    .tabLink:hover & {
+        background-color: #d0d0d0;
     }
 }
 
-/* Mobile Dropdown */
-.mobileDropdown {
-    display: none;
-    position: relative;
-    padding: 8px 16px;
-}
+/* ============================================ */
+/* MAIN CONTENT */
+/* ============================================ */
 
-.dropdownButton {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.mainContentBody {
+    background-color: $background-gray;
     width: 100%;
-    padding: 12px 16px;
-    background-color: $white;
-    border: 1.5px solid $gray-300;
-    border-radius: 8px;
-    color: $gray-800;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: inherit;
-
-    &:hover {
-        border-color: $secondary-color;
-        background-color: $gray-50;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &:focus-visible {
-        outline: 2px solid $secondary-color;
-        outline-offset: 2px;
-    }
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.dropdownButtonContent {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.section {
+    padding: 1rem 0;
+    animation: fadeIn 0.6s ease-in;
+    scroll-margin-top: 120px;
 }
 
-.dropdownIcon {
-    font-size: 18px;
-    color: $secondary-color;
-}
-
-.dropdownLabel {
-    color: $gray-800;
-}
-
-.dropdownChevron {
-    font-size: 14px;
-    color: $gray-600;
-    transition: transform 0.3s ease;
-
-    &.chevronOpen {
-        transform: rotate(180deg);
-    }
-}
-
-.dropdownMenu {
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 16px;
-    right: 16px;
-    background-color: $white;
-    border: 1px solid $gray-300;
-    border-radius: 8px;
-    box-shadow: $box-shadow;
-    z-index: 100;
-    max-height: 400px;
-    overflow-y: auto;
-    animation: dropdownSlideDown 0.25s ease forwards;
-    transform-origin: top center;
-
-    &::-webkit-scrollbar {
-        width: 4px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: $gray-100;
-        border-radius: 2px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: $gray-400;
-        border-radius: 2px;
-
-        &:hover {
-            background: $gray-500;
-        }
-    }
-}
-
-@keyframes dropdownSlideDown {
-    from {
-        opacity: 0;
-        transform: scaleY(0.95) translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scaleY(1) translateY(0);
-    }
-}
-
-.dropdownItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 12px 16px;
-    background: transparent;
-    border: none;
-    color: $gray-700;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: inherit;
-
-    &:first-child {
-        border-radius: 8px 8px 0 0;
-    }
-
-    &:last-child {
-        border-radius: 0 0 8px 8px;
-    }
-
-    &:hover {
-        background-color: $gray-50;
-        color: $primary-color;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &:focus-visible {
-        outline: 2px solid $secondary-color;
-        outline-offset: -2px;
-    }
-
-    &:not(:last-child) {
-        border-bottom: 1px solid $gray-100;
-    }
-
-    &.dropdownItemActive {
-        background-color: rgba($primary-color, 0.08);
-        color: $primary-color;
-        font-weight: 600;
-
-        &:hover {
-            background-color: rgba($primary-color, 0.12);
-        }
-    }
-}
-
-.dropdownItemIcon {
-    font-size: 16px;
-    color: inherit;
-    flex-shrink: 0;
-}
-
-.dropdownItemLabel {
-    color: inherit;
-    flex: 1;
-    text-align: left;
-}
-
-.dropdownItemCount {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $gray-200;
-    color: $gray-700;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 1px 8px;
+.sectionContent {
+    // background: $white;
     border-radius: 12px;
-    min-width: 20px;
-    height: 20px;
-    line-height: 1;
-
-    .dropdownItemActive & {
-        background-color: rgba($primary-color, 0.15);
-        color: $primary-color;
-    }
-}
-
-/* Tab Content - FIXED WIDTH */
-.tabContentWrapper {
-    padding: 24px;
-    background-color: $white;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-.tabPane {
-    display: none;
-    animation: fadeIn 0.3s ease;
-    width: 100%;
-
-    &.tabPaneActive {
-        display: block;
-        padding: 1rem 1.5rem;
-    }
+    // padding: 24px;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(12px);
     }
 
     to {
@@ -343,681 +139,49 @@
     }
 }
 
-/* Overview Content */
-.tabContent {
-    width: 100%;
-}
-
-.contentTitle {
-    font-size: 20px;
-    font-weight: 600;
-    color: $gray-900;
-    margin-bottom: 12px;
-}
-
-.contentText {
-    font-size: 15px;
-    line-height: 1.7;
-    color: $gray-700;
-    margin-bottom: 20px;
-}
-
-.contentFeatures {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
-}
-
-.featureItem {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    background-color: $gray-50;
-    border-radius: 8px;
-    font-size: 14px;
-    color: $gray-700;
-
-    &:hover {
-        background-color: $gray-100;
-    }
-}
-
-.featureIcon {
-    color: $secondary-color;
-    font-size: 16px;
-}
-
-/* Order Online */
-.orderOptions {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-}
-
-.orderCard {
-    background-color: $gray-50;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: translateY(-4px);
-        box-shadow: $card-shadow-hover;
-    }
-}
-
-.orderCardIcon {
-    font-size: 40px;
-    margin-bottom: 8px;
-}
-
-.orderCard h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: $gray-800;
-    margin-bottom: 4px;
-}
-
-.orderCard p {
-    font-size: 14px;
-    color: $gray-600;
-    margin-bottom: 12px;
-}
-
-.orderButton {
-    background-color: $secondary-color;
-    color: $white;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background-color: $primary-color;
-        transform: scale(1.02);
-    }
-}
-
-/* Reviews */
-.reviewsHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.ratingSummary {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.ratingScore {
-    font-size: 28px;
-    font-weight: 700;
-    color: $primary-color;
-}
-
-.ratingStars {
-    color: $gold-color;
-    font-size: 20px;
-}
-
-.ratingCount {
-    font-size: 14px;
-    color: $gray-600;
-}
-
-.reviewsList {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.reviewItem {
-    padding: 16px;
-    border: 1px solid $gray-200;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        border-color: $gray-300;
-        box-shadow: $box-shadow-light-1;
-    }
-}
-
-.reviewerInfo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
-}
-
-.reviewerAvatar {
-    width: 40px;
-    height: 40px;
-    background-color: $gray-200;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $gray-600;
-    font-size: 18px;
-}
-
-.reviewerName {
-    font-weight: 600;
-    color: $gray-800;
-}
-
-.reviewDate {
-    font-size: 13px;
-    color: $gray-500;
-}
-
-.reviewStars {
-    color: $gold-color;
-    font-size: 16px;
-    margin-bottom: 6px;
-}
-
-.reviewText {
-    font-size: 14px;
-    color: $gray-700;
-    line-height: 1.6;
-    margin-bottom: 8px;
-}
-
-.reviewHelpful {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: transparent;
-    border: none;
-    color: $gray-600;
-    font-size: 13px;
-    cursor: pointer;
-    padding: 4px 10px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background-color: $gray-100;
-        color: $secondary-color;
-    }
-}
-
-.viewAllReviews {
-    background: transparent;
-    border: 1px solid $secondary-color;
-    color: $secondary-color;
-    padding: 10px 24px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: center;
-
-    &:hover {
-        background-color: $secondary-color;
-        color: $white;
-    }
-}
-
-/* Photos */
-.photoGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 16px;
-    margin-top: 12px;
-}
-
-.photoItem {
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: translateY(-4px);
-    }
-
-    span {
-        display: block;
-        margin-top: 8px;
-        font-size: 13px;
-        color: $gray-700;
-    }
-}
-
-.photoPlaceholder {
-    width: 100%;
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, $gray-100, $gray-200);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background: linear-gradient(135deg, $gray-200, $gray-300);
-    }
-}
-
-/* Menu */
-.menuCategories {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.menuCategoryBtn {
-    padding: 8px 16px;
-    border: 1px solid $gray-300;
-    border-radius: 50px;
-    background: transparent;
-    color: $gray-700;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        border-color: $secondary-color;
-        color: $secondary-color;
-    }
-
-    &.active {
-        background-color: $secondary-color;
-        color: $white;
-        border-color: $secondary-color;
-    }
-}
-
-.menuItems {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.menuItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    border: 1px solid $gray-200;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        border-color: $gray-300;
-        box-shadow: $box-shadow-light-1;
-    }
-}
-
-.menuItemInfo {
-    flex: 1;
-
-    h4 {
-        font-size: 16px;
-        font-weight: 600;
-        color: $gray-800;
-    }
-
-    p {
-        font-size: 14px;
-        color: $gray-600;
-        margin: 4px 0;
-    }
-}
-
-.menuItemPrice {
-    font-size: 16px;
-    font-weight: 600;
-    color: $primary-color;
-}
-
-.menuItemAdd {
-    background-color: $secondary-color;
-    color: $white;
-    border: none;
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background-color: $primary-color;
-        transform: scale(1.05);
-    }
-}
-
-/* Booking Form */
-.bookingForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    max-width: 600px;
-    margin-top: 12px;
-}
-
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    label {
-        font-size: 14px;
-        font-weight: 500;
-        color: $gray-700;
-    }
-}
-
-.formInput {
-    padding: 10px 14px;
-    border: 1px solid $gray-300;
-    border-radius: 8px;
-    font-size: 14px;
-    color: $gray-800;
-    font-family: inherit;
-    transition: all 0.3s ease;
-
-    &:focus {
-        outline: none;
-        border-color: $secondary-color;
-        box-shadow: 0 0 0 3px rgba($secondary-color, 0.1);
-    }
-
-    &:hover {
-        border-color: $gray-400;
-    }
-}
-
-.formGroup:last-child {
-    grid-column: 1 / -1;
-}
-
-.bookTableBtn {
-    grid-column: 1 / -1;
-    background-color: $secondary-color;
-    color: $white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background-color: $primary-color;
-        transform: translateY(-2px);
-        box-shadow: $box-shadow-light-1;
-    }
-}
-
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-    .desktopTabs {
-        gap: 2px;
-        padding: 0 12px;
-    }
-
-    .tabButton {
-        padding: 12px 16px;
-        font-size: 14px;
-        gap: 6px;
-    }
-
-    .tabIcon {
-        font-size: 15px;
-    }
-
-    .tabContentWrapper {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .desktopTabs {
-        display: none;
-    }
-
-    .mobileDropdown {
-        display: block;
-    }
-
-    .tabsContainer {
-        border-radius: 8px;
-    }
-
-    .tabContentWrapper {
-        padding: 16px;
-    }
-
-    .contentTitle {
-        font-size: 18px;
-    }
-
-    .contentFeatures {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .orderOptions {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-
-    .reviewsHeader {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .photoGrid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    .bookingForm {
-        grid-template-columns: 1fr;
-    }
-
-    .formGroup:last-child {
-        grid-column: 1;
-    }
-
-    .bookTableBtn {
-        grid-column: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .dropdownButton {
-        padding: 10px 14px;
-        font-size: 14px;
-    }
-
-    .dropdownIcon {
-        font-size: 16px;
-    }
-
-    .dropdownMenu {
-        left: 12px;
-        right: 12px;
-        max-height: 300px;
-    }
-
-    .dropdownItem {
-        padding: 10px 14px;
-        font-size: 13px;
-    }
-
-    .dropdownItemIcon {
-        font-size: 14px;
-    }
-
-    .dropdownItemCount {
-        font-size: 10px;
-        padding: 1px 6px;
-        min-width: 18px;
-        height: 18px;
-    }
-
-    .tabContentWrapper {
-        padding: 12px;
-    }
-
-    .contentTitle {
-        font-size: 16px;
-    }
-
-    .contentFeatures {
-        grid-template-columns: 1fr;
-    }
-
-    .orderOptions {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .photoGrid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-
-    .menuCategories {
-        gap: 6px;
-    }
-
-    .menuCategoryBtn {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-
-    .menuItem {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .menuItemAdd {
-        align-self: flex-start;
-    }
-
-    .ratingScore {
-        font-size: 24px;
-    }
-
-    .ratingStars {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 360px) {
-    .dropdownButton {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-
-    .dropdownIcon {
-        font-size: 14px;
-    }
-
-    .dropdownMenu {
-        left: 8px;
-        right: 8px;
-    }
-
-    .dropdownItem {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-
-    .orderOptions {
-        grid-template-columns: 1fr;
-    }
-
-    .photoGrid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    }
-}
-
-/* Tablet Landscape */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .desktopTabs {
-        gap: 0;
-        padding: 0 8px;
-    }
-
-    .tabButton {
-        padding: 10px 14px;
-        font-size: 13px;
-        gap: 5px;
-    }
-
-    .tabIcon {
-        font-size: 14px;
-    }
-
-    .tabCount {
-        font-size: 10px;
-        padding: 1px 6px;
-        min-width: 18px;
-        height: 18px;
-    }
-}
-
 /* ============================================ */
 /* OVERVIEW TAB CONTENT STYLES */
 /* ============================================ */
 
-/* Overview Tab Content - Two Column Layout */
-.tabContentWrapper {
+.overviewWrapper {
     display: flex;
-    gap: 32px;
+    gap: 20px;
     width: 100%;
     max-width: 100%;
-    padding: 0;
     box-sizing: border-box;
 }
 
-.tabContentLeft {
+.overviewLeft {
     flex: 0 0 70%;
     max-width: 70%;
-    padding-right: 0;
     box-sizing: border-box;
 }
 
-.tabContentRight {
-    flex: 0 0 30%;
-    max-width: 30%;
-    padding-left: 0;
+.overviewRight {
+    flex: 0 0 calc(30% - 20px);
+    max-width: calc(30% - 20px);
     box-sizing: border-box;
 }
 
 /* Dining Offers Section */
 .offersSection {
-    margin-bottom: 32px;
+    margin-bottom: 1.5rem;
+    background: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .sectionTitle {
     font-size: 20px;
     font-weight: 600;
-    color: $gray-900;
+    color: #1a1a1a;
     margin-bottom: 4px;
 }
 
 .sectionSubtitle {
     font-size: 14px;
-    color: $gray-600;
+    color: #6c757d;
     margin-bottom: 16px;
 }
 
@@ -1032,24 +196,24 @@
     padding: 16px;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid $gray-300;
+    border: 1px solid #dee2e6;
 
     &:hover {
         transform: translateY(-2px);
-        box-shadow: $box-shadow-light-1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     &.highlightedOffer {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: $white;
+        color: #fff;
 
         .offerTitle {
-            color: $white;
+            color: #fff;
         }
     }
 
     &.noHighlightedOffer {
-        color: $black;
+        color: #000;
     }
 }
 
@@ -1059,7 +223,7 @@
     opacity: 0.87;
     margin-bottom: 8px;
     letter-spacing: 0.5px;
-    color: $blue;
+    color: #007bff;
 }
 
 .offerBody {
@@ -1172,7 +336,11 @@
 
 /* Menu Section */
 .menuSection {
-    margin-bottom: 32px;
+    margin-bottom: 1.5rem;
+    background: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .menuHeader {
@@ -1230,7 +398,9 @@
     color: $gray-700;
     text-decoration: none;
     transition: all 0.3s ease;
-
+    border: 1px solid $border-color;
+    padding: 6px 12px;
+    border-radius: 50px;
     &:hover {
         color: $secondary-color;
     }
@@ -1238,7 +408,7 @@
 
 .cuisineDot {
     color: #D6A600;
-    font-size: 8px;
+    font-size: 15px;
 }
 
 .menuPages {
@@ -1256,13 +426,34 @@
     cursor: pointer;
 
     &:hover {
-        transform: translateY(-4px);
-        box-shadow: $card-shadow-hover;
+        // transform: translateY(-4px);
+        // box-shadow: $card-shadow-hover;
     }
 
     .menuPageImage {
-        font-size: 40px;
-        margin-bottom: 8px;
+        width: 130px;
+        height: 170px;
+        margin: 0 auto 12px;
+        border-radius: 12px;
+        overflow: visible;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+
+            &:hover {
+                scale: 1.05;
+                transition: all 0.3s ease-in-out;
+                box-shadow: $card-shadow-hover;
+            }
+        }
     }
 
     h4 {
@@ -1281,9 +472,13 @@
 
 /* Cost Section */
 .costSection {
-    margin-bottom: 32px;
+    margin-bottom: 1.5rem;
     padding-bottom: 24px;
     border-bottom: 1px solid $gray-200;
+    background: $white;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
 }
 
 .knownForSection {
@@ -1291,7 +486,7 @@
 }
 
 .knownForTitle {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     color: $gray-800;
     margin-bottom: 8px;
@@ -1300,24 +495,24 @@
 .knownForTags {
     font-size: 14px;
     color: $gray-600;
-    line-height: 1.6;
+    // line-height: 1s.6;
 }
 
 .costAmount {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600;
-    color: $gray-900;
+    color: $gray-600;
     margin: 8px 0 4px;
 }
 
 .costNote {
-    font-size: 14px;
+    font-size: 12px;
     color: $gray-500;
     margin-bottom: 4px;
 }
 
 .costHelp {
-    font-size: 14px;
+    font-size: 12px;
     color: $gray-500;
     text-decoration: underline;
     cursor: pointer;
@@ -1330,7 +525,7 @@
 
 .paymentMethods {
     display: flex;
-    gap: 20px;
+    flex-direction: column;   
     flex-wrap: wrap;
 
     span {
@@ -1341,7 +536,11 @@
 
 /* More Info Section */
 .moreInfoSection {
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
+    background: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .moreInfoGrid {
@@ -1365,31 +564,45 @@
     }
 }
 
+.checkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;       /* Adjust size */
+  height: 20px;      /* Adjust size */
+  background-color: #28a745; /* The green color from the image */
+  color: $white !important;
+  border-radius: 50%; /* Makes it a circle */
+  font-size: 14px;    /* Adjust checkmark size */
+  font-weight: bold;
+  line-height: 1;
+}
+
 /* ============================================ */
 /* OFFERS FOR YOU - RIGHT SIDEBAR */
 /* ============================================ */
 
 .offersForYou {
     background: $white;
-    border: 1px solid $gray-200;
+    border: 1px solid #dee2e6;
     border-radius: 12px;
     padding: 20px;
     position: sticky;
-    top: 20px;
+    top: 120px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: $box-shadow-light-1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .offersForYouTitle {
     font-size: 18px;
     font-weight: 600;
-    color: $gray-900;
+    color: #1a1a1a;
     margin-bottom: 16px;
     padding-bottom: 12px;
-    border-bottom: 2px solid $gray-200;
+    border-bottom: 2px solid #dee2e6;
 }
 
 /* Side Offer Tabs */
@@ -1413,7 +626,9 @@
 
     &.activeTab {
         background: $white;
-        box-shadow: $box-shadow-light-1;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
+        border: 1px solid #FFE2DB;
+
     }
 
     &:hover {
@@ -1425,13 +640,13 @@
     display: block;
     font-size: 11px;
     font-weight: 700;
-    color: $primary-color;
+    color: #0071f3;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     margin-bottom: 2px;
 
     .activeTab & {
-        color: $primary-color;
+        color: #0071f3;
     }
 }
 
@@ -1439,24 +654,24 @@
     display: block;
     font-size: 12px;
     font-weight: 600;
-    color: $gray-800;
+    color: #333;
 
     .activeTab & {
-        color: $gray-900;
+        color: #1a1a1a;
     }
 }
 
 /* Side Offer Cards */
 .sideOfferCard {
-    background: $gray-50;
+    background: #f8f9fa;
     border-radius: 10px;
     padding: 14px 16px;
     margin-bottom: 12px;
     transition: all 0.3s ease;
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: $box-shadow-light-1;
+        // transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     &:last-child {
@@ -1467,7 +682,7 @@
 .sideOfferBadge {
     font-size: 11px;
     font-weight: 700;
-    color: $primary-color;
+    color: #0071f3;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-bottom: 8px;
@@ -1492,20 +707,20 @@
 .sideOfferBrand {
     font-size: 16px;
     font-weight: 700;
-    color: $gray-900;
+    color: #1a1a1a;
     margin: 0;
 }
 
 .sideOfferDesc {
     font-size: 14px;
     font-weight: 500;
-    color: $gray-800;
+    color: #333;
     margin: 2px 0;
 }
 
 .sideOfferDescSmall {
     font-size: 12px;
-    color: $gray-500;
+    color: #6c757d;
     margin: 2px 0;
 }
 
@@ -1525,7 +740,7 @@
     padding: 8px 12px;
     background: $white;
     border-radius: 8px;
-    border: 1px solid $gray-200;
+    border: 1px solid #dee2e6;
 }
 
 .sideOfferPaymentLogo {
@@ -1551,13 +766,13 @@
 .sideOfferPaymentValue {
     font-size: 14px;
     font-weight: 600;
-    color: $gray-800;
+    color: #333;
     margin: 0;
 }
 
 .sideOfferPaymentName {
     font-size: 12px;
-    color: $gray-500;
+    color: #6c757d;
 }
 
 .sideOfferCarouselDots {
@@ -1571,11 +786,11 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: $gray-300;
+    background: #dee2e6;
     transition: all 0.3s ease;
 
     &.activeDot {
-        background: $secondary-color;
+        background: #0071f3;
         width: 18px;
         border-radius: 3px;
     }
@@ -1587,15 +802,15 @@
     gap: 10px;
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid $gray-200;
+    border-top: 1px solid #FFF6F4;
 }
 
 .sideBookNowBtn {
     flex: 1;
     padding: 12px 16px;
     background: $white;
-    color: $secondary-color;
-    border: 1.5px solid $secondary-color;
+    color: $green;
+    border: 1.5px solid $green;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
@@ -1603,16 +818,16 @@
     transition: all 0.3s ease;
 
     &:hover {
-        background: $gray-50;
+        background: #f8f9fa;
         transform: translateY(-2px);
-        box-shadow: $box-shadow-light-1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 }
 
 .sidePayBillBtn {
     flex: 1;
     padding: 12px 16px;
-    background: $secondary-color;
+    background: $green;
     color: $white;
     border: none;
     border-radius: 8px;
@@ -1622,10 +837,69 @@
     transition: all 0.3s ease;
 
     &:hover {
-        background: $primary-color;
+        background: $green-dark;
         transform: translateY(-2px);
-        box-shadow: $box-shadow-light-1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
+}
+
+/* ============================================ */
+/* OTHER TAB CONTENT STYLES */
+/* ============================================ */
+
+
+.tabContent {
+    width: 100%;
+    background-color: $white;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+}
+
+.contentTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.contentText {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 20px;
+}
+
+/* Reviews */
+.reviewsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ratingSummary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ratingScore {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0071f3;
+}
+
+.ratingStars {
+    color: #ffc107;
+    font-size: 20px;
+}
+
+.ratingCount {
+    font-size: 14px;
+    color: #6c757d;
 }
 
 /* ============================================ */
@@ -1633,60 +907,81 @@
 /* ============================================ */
 
 @media (max-width: 1024px) {
-    .tabContentWrapper {
+    .tabNav {
+        gap: 2rem;
+        padding: 0.75rem 1rem;
+        font-size: 15px;
+        top: 80px;
+    }
+
+    .overviewWrapper {
         flex-direction: column;
         gap: 24px;
-        padding: 0;
     }
 
-    .tabContentLeft {
+    .overviewLeft {
         flex: 1;
         max-width: 100%;
-        padding-right: 0;
     }
 
-    .tabContentRight {
+    .overviewRight {
         flex: 1;
         max-width: 100%;
-        padding-left: 0;
     }
 
     .offersForYou {
         position: static;
         width: 100%;
     }
+
+    .mainContentBody {
+        padding: 0 16px;
+    }
 }
 
 @media (max-width: 768px) {
-    .tabContentWrapper {
+    .tabNav {
+        gap: 1.5rem;
+        padding: 0.75rem 0.75rem;
+        font-size: 14px;
+        top: 70px;
+        gap: 1.25rem;
+    }
+
+    .tabLink {
+        font-size: 14px;
+    }
+
+    .tabIcon {
+        font-size: 14px;
+    }
+
+    .tabCount {
+        font-size: 10px;
+        padding: 1px 6px;
+        min-width: 18px;
+        height: 18px;
+    }
+
+    .mainContentBody {
+        padding: 0 12px;
+    }
+
+    .section {
+        padding: 1rem 0;
+        scroll-margin-top: 80px;
+    }
+
+    .sectionContent {
+        padding: 16px;
+    }
+
+    .overviewWrapper {
         gap: 16px;
-        padding: 0;
     }
 
     .offersGrid {
         grid-template-columns: 1fr;
-    }
-
-    .reservationHeader {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .reservationControls {
-        flex-direction: column;
-    }
-
-    .menuPages {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .moreInfoGrid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .paymentMethods {
-        flex-direction: column;
-        gap: 4px;
     }
 
     .offersForYou {
@@ -1705,23 +1000,57 @@
     .sidePayBillBtn {
         width: 100%;
     }
+
+    .tabLink.active::after,
+    .tabLink:hover::after {
+        bottom: -3px;
+    }
 }
 
 @media (max-width: 480px) {
-    .menuPages {
-        grid-template-columns: 1fr;
+    .tabNav {
+        gap: 1rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 13px;
+        top: 60px;
     }
 
-    .moreInfoGrid {
-        grid-template-columns: 1fr;
+    .tabLink {
+        font-size: 13px;
+        gap: 4px;
+    }
+
+    .tabIcon {
+        font-size: 12px;
+    }
+
+    .tabCount {
+        font-size: 9px;
+        padding: 1px 5px;
+        min-width: 16px;
+        height: 16px;
+    }
+
+    .mainContentBody {
+        padding: 0 8px;
+    }
+
+    .section {
+        padding: 1rem 0;
+        scroll-margin-top: 70px;
+    }
+
+    .sectionContent {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .sectionTitle {
+        font-size: 18px;
     }
 
     .offerCard {
         padding: 12px;
-    }
-
-    .reservationSection {
-        padding: 16px;
     }
 
     .sideOfferPaymentCard {
@@ -1734,4 +1063,158 @@
         align-items: center;
         text-align: center;
     }
+
+    .offersForYou {
+        padding: 12px;
+    }
+
+    .offersForYouTitle {
+        font-size: 16px;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tabNav {
+        gap: 2.5rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 15px;
+    }
+
+    .offersGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.photosContainer {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: $white;
+  color: #1C1C1C;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+}
+
+.photosHeading {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #1C1C1C;
+}
+
+.photosTabsContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.photosTabButton {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  border: 1px solid #E0E0E0;
+  background-color: $white;
+  color: #1C1C1C;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+}
+
+.photosActiveTab {
+  background-color: #E23744;
+  color: $white !important;
+  border-color: #E23744;
+
+  &:hover {
+    background-color: #E23744;
+  }
+}
+
+.photosGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.photosImageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: $background-gray;
+
+  &:hover .photosImage {
+    transform: scale(1.05);
+  }
+}
+
+.photosImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photosPagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+}
+
+.photosShowingText {
+  font-size: 14px;
+  color: #696969;
+}
+
+.photosControls {
+  display: flex;
+  gap: 8px;
+}
+
+.photosPageNum {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #E0E0E0;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #1C1C1C;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover:not(.photosActiveNum) {
+    background-color: #f8f8f8;
+  }
+}
+
+.photosActiveNum {
+  background-color: #1C1C1C;
+  color: $white;
+  border-color: #1C1C1C;
+}
+
+/* Responsive adjustments for Photos */
+@media (max-width: 900px) {
+  .photosGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .photosGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

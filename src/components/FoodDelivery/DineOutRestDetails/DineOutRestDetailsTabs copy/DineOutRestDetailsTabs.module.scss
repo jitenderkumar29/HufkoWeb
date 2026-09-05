@@ -1,0 +1,1739 @@
+@use "../../../../styles/variables.scss" as *;
+
+.tabsContainer {
+    width: 100%;
+    background-color: $white;
+    border-radius: 12px;
+    box-shadow: $card-shadow;
+    overflow: hidden;
+    
+}
+
+.tabsNavigation {
+    width: 100%;
+    background-color: $white;
+    border-bottom: 2px solid $gray-200;
+    position: relative;
+}
+
+/* Desktop Tabs */
+.desktopTabs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: $gray-600;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    position: relative;
+    font-family: inherit;
+
+    &:hover {
+        color: $primary-color;
+        background-color: $gray-50;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $secondary-color;
+        outline-offset: -2px;
+        border-radius: 4px;
+    }
+
+    &.active {
+        color: $primary-color;
+        border-bottom-color: $primary-color;
+        font-weight: 600;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: $primary-color;
+            border-radius: 2px 2px 0 0;
+        }
+    }
+}
+
+.tabIcon {
+    font-size: 16px;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.tabLabel {
+    color: inherit;
+}
+
+.tabCount {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-200;
+    color: $gray-700;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 8px;
+    border-radius: 12px;
+    min-width: 20px;
+    height: 20px;
+    line-height: 1;
+
+    .tabButton.active & {
+        background-color: rgba($primary-color, 0.15);
+        color: $primary-color;
+    }
+
+    .tabButton:hover & {
+        background-color: $gray-300;
+    }
+}
+
+/* Mobile Dropdown */
+.mobileDropdown {
+    display: none;
+    position: relative;
+    padding: 8px 16px;
+}
+
+.dropdownButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: $white;
+    border: 1.5px solid $gray-300;
+    border-radius: 8px;
+    color: $gray-800;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+
+    &:hover {
+        border-color: $secondary-color;
+        background-color: $gray-50;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $secondary-color;
+        outline-offset: 2px;
+    }
+}
+
+.dropdownButtonContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdownIcon {
+    font-size: 18px;
+    color: $secondary-color;
+}
+
+.dropdownLabel {
+    color: $gray-800;
+}
+
+.dropdownChevron {
+    font-size: 14px;
+    color: $gray-600;
+    transition: transform 0.3s ease;
+
+    &.chevronOpen {
+        transform: rotate(180deg);
+    }
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 16px;
+    right: 16px;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    z-index: 100;
+    max-height: 400px;
+    overflow-y: auto;
+    animation: dropdownSlideDown 0.25s ease forwards;
+    transform-origin: top center;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $gray-100;
+        border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $gray-400;
+        border-radius: 2px;
+
+        &:hover {
+            background: $gray-500;
+        }
+    }
+}
+
+@keyframes dropdownSlideDown {
+    from {
+        opacity: 0;
+        transform: scaleY(0.95) translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: $gray-700;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+
+    &:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 8px 8px;
+    }
+
+    &:hover {
+        background-color: $gray-50;
+        color: $primary-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $secondary-color;
+        outline-offset: -2px;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $gray-100;
+    }
+
+    &.dropdownItemActive {
+        background-color: rgba($primary-color, 0.08);
+        color: $primary-color;
+        font-weight: 600;
+
+        &:hover {
+            background-color: rgba($primary-color, 0.12);
+        }
+    }
+}
+
+.dropdownItemIcon {
+    font-size: 16px;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+.dropdownItemLabel {
+    color: inherit;
+    flex: 1;
+    text-align: left;
+}
+
+.dropdownItemCount {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-200;
+    color: $gray-700;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 8px;
+    border-radius: 12px;
+    min-width: 20px;
+    height: 20px;
+    line-height: 1;
+
+    .dropdownItemActive & {
+        background-color: rgba($primary-color, 0.15);
+        color: $primary-color;
+    }
+}
+
+/* Tab Content - FIXED WIDTH */
+.tabContentWrapper {
+    padding: 24px;
+    background-color: $white;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+}
+
+.tabPane {
+    display: none;
+    animation: fadeIn 0.3s ease;
+    width: 100%;
+
+    &.tabPaneActive {
+        display: block;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Overview Content */
+.tabContent {
+    width: 100%;
+}
+
+.contentTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 12px;
+}
+
+.contentText {
+    font-size: 15px;
+    line-height: 1.7;
+    color: $gray-700;
+    margin-bottom: 20px;
+}
+
+.contentFeatures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background-color: $gray-50;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $gray-700;
+
+    &:hover {
+        background-color: $gray-100;
+    }
+}
+
+.featureIcon {
+    color: $secondary-color;
+    font-size: 16px;
+}
+
+/* Order Online */
+.orderOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.orderCard {
+    background-color: $gray-50;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $card-shadow-hover;
+    }
+}
+
+.orderCardIcon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.orderCard h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-800;
+    margin-bottom: 4px;
+}
+
+.orderCard p {
+    font-size: 14px;
+    color: $gray-600;
+    margin-bottom: 12px;
+}
+
+.orderButton {
+    background-color: $secondary-color;
+    color: $white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $primary-color;
+        transform: scale(1.02);
+    }
+}
+
+/* Reviews */
+.reviewsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ratingSummary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ratingScore {
+    font-size: 28px;
+    font-weight: 700;
+    color: $primary-color;
+}
+
+.ratingStars {
+    color: $gold-color;
+    font-size: 20px;
+}
+
+.ratingCount {
+    font-size: 14px;
+    color: $gray-600;
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reviewItem {
+    padding: 16px;
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $gray-300;
+        box-shadow: $box-shadow-light-1;
+    }
+}
+
+.reviewerInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.reviewerAvatar {
+    width: 40px;
+    height: 40px;
+    background-color: $gray-200;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray-600;
+    font-size: 18px;
+}
+
+.reviewerName {
+    font-weight: 600;
+    color: $gray-800;
+}
+
+.reviewDate {
+    font-size: 13px;
+    color: $gray-500;
+}
+
+.reviewStars {
+    color: $gold-color;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.reviewText {
+    font-size: 14px;
+    color: $gray-700;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.reviewHelpful {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    color: $gray-600;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $gray-100;
+        color: $secondary-color;
+    }
+}
+
+.viewAllReviews {
+    background: transparent;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $white;
+    }
+}
+
+/* Photos */
+.photoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.photoItem {
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    span {
+        display: block;
+        margin-top: 8px;
+        font-size: 13px;
+        color: $gray-700;
+    }
+}
+
+.photoPlaceholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, $gray-100, $gray-200);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, $gray-200, $gray-300);
+    }
+}
+
+/* Menu */
+.menuCategories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.menuCategoryBtn {
+    padding: 8px 16px;
+    border: 1px solid $gray-300;
+    border-radius: 50px;
+    background: transparent;
+    color: $gray-700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $secondary-color;
+        color: $secondary-color;
+    }
+
+    &.active {
+        background-color: $secondary-color;
+        color: $white;
+        border-color: $secondary-color;
+    }
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid $gray-200;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $gray-300;
+        box-shadow: $box-shadow-light-1;
+    }
+}
+
+.menuItemInfo {
+    flex: 1;
+
+    h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: $gray-800;
+    }
+
+    p {
+        font-size: 14px;
+        color: $gray-600;
+        margin: 4px 0;
+    }
+}
+
+.menuItemPrice {
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-color;
+}
+
+.menuItemAdd {
+    background-color: $secondary-color;
+    color: $white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $primary-color;
+        transform: scale(1.05);
+    }
+}
+
+/* Booking Form */
+.bookingForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 600px;
+    margin-top: 12px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        color: $gray-700;
+    }
+}
+
+.formInput {
+    padding: 10px 14px;
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $gray-800;
+    font-family: inherit;
+    transition: all 0.3s ease;
+
+    &:focus {
+        outline: none;
+        border-color: $secondary-color;
+        box-shadow: 0 0 0 3px rgba($secondary-color, 0.1);
+    }
+
+    &:hover {
+        border-color: $gray-400;
+    }
+}
+
+.formGroup:last-child {
+    grid-column: 1 / -1;
+}
+
+.bookTableBtn {
+    grid-column: 1 / -1;
+    background-color: $secondary-color;
+    color: $white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $primary-color;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-light-1;
+    }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .desktopTabs {
+        gap: 2px;
+        padding: 0 12px;
+    }
+
+    .tabButton {
+        padding: 12px 16px;
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .tabIcon {
+        font-size: 15px;
+    }
+
+    .tabContentWrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktopTabs {
+        display: none;
+    }
+
+    .mobileDropdown {
+        display: block;
+    }
+
+    .tabsContainer {
+        border-radius: 8px;
+    }
+
+    .tabContentWrapper {
+        padding: 16px;
+    }
+
+    .contentTitle {
+        font-size: 18px;
+    }
+
+    .contentFeatures {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .orderOptions {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .reviewsHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .photoGrid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .bookingForm {
+        grid-template-columns: 1fr;
+    }
+
+    .formGroup:last-child {
+        grid-column: 1;
+    }
+
+    .bookTableBtn {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdownButton {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .dropdownIcon {
+        font-size: 16px;
+    }
+
+    .dropdownMenu {
+        left: 12px;
+        right: 12px;
+        max-height: 300px;
+    }
+
+    .dropdownItem {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .dropdownItemIcon {
+        font-size: 14px;
+    }
+
+    .dropdownItemCount {
+        font-size: 10px;
+        padding: 1px 6px;
+        min-width: 18px;
+        height: 18px;
+    }
+
+    .tabContentWrapper {
+        padding: 12px;
+    }
+
+    .contentTitle {
+        font-size: 16px;
+    }
+
+    .contentFeatures {
+        grid-template-columns: 1fr;
+    }
+
+    .orderOptions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photoGrid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .menuCategories {
+        gap: 6px;
+    }
+
+    .menuCategoryBtn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .menuItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .menuItemAdd {
+        align-self: flex-start;
+    }
+
+    .ratingScore {
+        font-size: 24px;
+    }
+
+    .ratingStars {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .dropdownButton {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .dropdownIcon {
+        font-size: 14px;
+    }
+
+    .dropdownMenu {
+        left: 8px;
+        right: 8px;
+    }
+
+    .dropdownItem {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .orderOptions {
+        grid-template-columns: 1fr;
+    }
+
+    .photoGrid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .desktopTabs {
+        gap: 0;
+        padding: 0 8px;
+    }
+
+    .tabButton {
+        padding: 10px 14px;
+        font-size: 13px;
+        gap: 5px;
+    }
+
+    .tabIcon {
+        font-size: 14px;
+    }
+
+    .tabCount {
+        font-size: 10px;
+        padding: 1px 6px;
+        min-width: 18px;
+        height: 18px;
+    }
+}
+
+/* ============================================ */
+/* OVERVIEW TAB CONTENT STYLES */
+/* ============================================ */
+
+/* Overview Tab Content - Two Column Layout */
+.tabContentWrapper {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tabContentLeft {
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.tabContentRight {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+/* Dining Offers Section */
+.offersSection {
+    margin-bottom: 32px;
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 4px;
+}
+
+.sectionSubtitle {
+    font-size: 14px;
+    color: $gray-600;
+    margin-bottom: 16px;
+}
+
+.offersGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.offerCard {
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid $gray-300;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-light-1;
+    }
+
+    &.highlightedOffer {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: $white;
+
+        .offerTitle {
+            color: $white;
+        }
+    }
+
+    &.noHighlightedOffer {
+        color: $black;
+    }
+}
+
+.offerTitle {
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.87;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    color: $blue;
+}
+
+.offerBody {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.offerSubTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.offerDesc {
+    font-size: 12px;
+    opacity: 0.87;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Reservation Section */
+.reservationSection {
+    background: $gray-50;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.reservationHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .sectionTitle {
+        margin-bottom: 0;
+    }
+}
+
+.reservationBadge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #538CEE 0%, #1155CB 100%);
+    color: $white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.reservationControls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.reservationSelect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $white;
+    border: 1px solid $gray-300;
+    border-radius: 8px;
+    padding: 10px 14px;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $secondary-color;
+    }
+
+    span {
+        font-size: 14px;
+        color: $gray-800;
+    }
+}
+
+.selectIcon {
+    font-size: 12px;
+    color: $gray-500;
+}
+
+.bookTableBtn {
+    width: 100%;
+    padding: 12px;
+    background: $secondary-color;
+    color: $white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: $primary-color;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-light-1;
+    }
+}
+
+/* Menu Section */
+.menuSection {
+    margin-bottom: 32px;
+}
+
+.menuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .sectionTitle {
+        margin-bottom: 0;
+    }
+}
+
+.seeAllLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $secondary-color;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    svg {
+        font-size: 12px;
+    }
+}
+
+.cuisineSection {
+    margin-bottom: 16px;
+}
+
+.cuisineTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #674B00;
+    margin-bottom: 10px;
+}
+
+.cuisineTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cuisineTag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: $gray-700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.cuisineDot {
+    color: #D6A600;
+    font-size: 8px;
+}
+
+.menuPages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+.menuPageCard {
+    background: $gray-50;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $card-shadow-hover;
+    }
+
+    .menuPageImage {
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: $gray-800;
+        margin: 4px 0;
+    }
+
+    p {
+        font-size: 13px;
+        color: $gray-600;
+        margin: 0;
+    }
+}
+
+/* Cost Section */
+.costSection {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray-200;
+}
+
+.knownForSection {
+    margin-bottom: 20px;
+}
+
+.knownForTitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: $gray-800;
+    margin-bottom: 8px;
+}
+
+.knownForTags {
+    font-size: 14px;
+    color: $gray-600;
+    line-height: 1.6;
+}
+
+.costAmount {
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray-900;
+    margin: 8px 0 4px;
+}
+
+.costNote {
+    font-size: 14px;
+    color: $gray-500;
+    margin-bottom: 4px;
+}
+
+.costHelp {
+    font-size: 14px;
+    color: $gray-500;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 12px;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    span {
+        font-size: 14px;
+        color: $gray-700;
+    }
+}
+
+/* More Info Section */
+.moreInfoSection {
+    margin-bottom: 16px;
+}
+
+.moreInfoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px 20px;
+    margin-top: 12px;
+}
+
+.moreInfoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: $gray-700;
+    padding: 6px 0;
+
+    span {
+        color: $success-color;
+        font-weight: 600;
+    }
+}
+
+/* ============================================ */
+/* OFFERS FOR YOU - RIGHT SIDEBAR */
+/* ============================================ */
+
+.offersForYou {
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: 12px;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: $box-shadow-light-1;
+}
+
+.offersForYouTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $gray-200;
+}
+
+/* Side Offer Tabs */
+.sideOfferTabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    background: #FFF5F3;
+    border-radius: 10px;
+    padding: 4px;
+    border: 1px solid #FFE2DB;
+}
+
+.sideOfferTab {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.activeTab {
+        background: $white;
+        box-shadow: $box-shadow-light-1;
+    }
+
+    &:hover {
+        background: $white;
+    }
+}
+
+.sideOfferTabLabel {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+
+    .activeTab & {
+        color: $primary-color;
+    }
+}
+
+.sideOfferTabDiscount {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: $gray-800;
+
+    .activeTab & {
+        color: $gray-900;
+    }
+}
+
+/* Side Offer Cards */
+.sideOfferCard {
+    background: $gray-50;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-light-1;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sideOfferBadge {
+    font-size: 11px;
+    font-weight: 700;
+    color: $primary-color;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.sideOfferIconWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.sideOfferIcon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.sideOfferTextWrapper {
+    flex: 1;
+}
+
+.sideOfferBrand {
+    font-size: 16px;
+    font-weight: 700;
+    color: $gray-900;
+    margin: 0;
+}
+
+.sideOfferDesc {
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray-800;
+    margin: 2px 0;
+}
+
+.sideOfferDescSmall {
+    font-size: 12px;
+    color: $gray-500;
+    margin: 2px 0;
+}
+
+/* Side Offer Carousel */
+.sideOfferCarousel {
+    margin-top: 4px;
+}
+
+.sideOfferCarouselItem {
+    padding: 4px 0;
+}
+
+.sideOfferPaymentCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: $white;
+    border-radius: 8px;
+    border: 1px solid $gray-200;
+}
+
+.sideOfferPaymentLogo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sideOfferPaymentLogoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sideOfferPaymentText {
+    flex: 1;
+}
+
+.sideOfferPaymentValue {
+    font-size: 14px;
+    font-weight: 600;
+    color: $gray-800;
+    margin: 0;
+}
+
+.sideOfferPaymentName {
+    font-size: 12px;
+    color: $gray-500;
+}
+
+.sideOfferCarouselDots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.sideOfferDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $gray-300;
+    transition: all 0.3s ease;
+
+    &.activeDot {
+        background: $secondary-color;
+        width: 18px;
+        border-radius: 3px;
+    }
+}
+
+/* Side Offer Actions */
+.sideOfferActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $gray-200;
+}
+
+.sideBookNowBtn {
+    flex: 1;
+    padding: 12px 16px;
+    background: $white;
+    color: $secondary-color;
+    border: 1.5px solid $secondary-color;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: $gray-50;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-light-1;
+    }
+}
+
+.sidePayBillBtn {
+    flex: 1;
+    padding: 12px 16px;
+    background: $secondary-color;
+    color: $white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: $primary-color;
+        transform: translateY(-2px);
+        box-shadow: $box-shadow-light-1;
+    }
+}
+
+/* ============================================ */
+/* RESPONSIVE STYLES */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+    .tabContentWrapper {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0;
+    }
+
+    .tabContentLeft {
+        flex: 1;
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .tabContentRight {
+        flex: 1;
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .offersForYou {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabContentWrapper {
+        gap: 16px;
+        padding: 0;
+    }
+
+    .offersGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .reservationHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reservationControls {
+        flex-direction: column;
+    }
+
+    .menuPages {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .moreInfoGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .paymentMethods {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .offersForYou {
+        padding: 16px;
+    }
+
+    .sideOfferTabs {
+        flex-direction: column;
+    }
+
+    .sideOfferActions {
+        flex-direction: column;
+    }
+
+    .sideBookNowBtn,
+    .sidePayBillBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menuPages {
+        grid-template-columns: 1fr;
+    }
+
+    .moreInfoGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .offerCard {
+        padding: 12px;
+    }
+
+    .reservationSection {
+        padding: 16px;
+    }
+
+    .sideOfferPaymentCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sideOfferIconWrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

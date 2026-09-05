@@ -100,16 +100,16 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
             name: 'Pride Plaza Hotel Aerocity New Delhi',
             cuisine: ['North Indian', 'Mughlai', 'Chinese', 'Kebab', 'Biryani', 'Seafood', 'Desserts', 'Beverages'],
             rating: 5,
-            category: 'Hotel',
-            location: 'Aerocity | 4 km drive to Indira Gandhi International Airport',
+            category: 'Restaurant',
+            location: 'H.No. 1, Main Street, Connaught Place, New Delhi, Delhi - 110001',
             mainImg: '/products/3a0c19201c21e22020282042432116443e2c29595122262262212f21.jpg',
             thumbnails: [
                 '/products/a0c191ce00280443116443e2c2959516610f.jpg',
                 '/products/a32ca888bad40b4f8f5212b357c0a0cd.jpg',
                 '/products/27d28de2dac3f71e995e7a7e01381f41.jpg',
             ],
-            oldPrice: '₹15,00',
-            newPrice: '₹1,200',
+            oldPrice: '₹2,000',
+            newPrice: '₹1,800',
             taxes: '+₹432 taxes & fees per night',
             ratingCategory: 'Excellent',
             totalRatings: 4145,
@@ -286,7 +286,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         {restaurant.cuisine.map((item, index) => (
                             <span key={index} className={styles.cuisineTag}>
                                 {item}
-                                {index < restaurant.cuisine.length - 1 && <span className={styles.cuisineSeparator}>•</span>}
+                               {index < restaurant.cuisine.length - 1 && <span className={styles.cuisineSeparator}>★</span>}
                             </span>
                         ))}
                     </div>
@@ -312,9 +312,9 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                     <span>Share</span>
                 </div>
 
-                <div className={styles.familyFriendly}>
+                {/* <div className={styles.familyFriendly}>
                     <span>👩 Women Friendly</span>
-                </div>
+                </div> */}
 
                 <div
                     className={styles.coupleFriendly}
@@ -350,7 +350,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                             width={30}
                         />
                     </div>
-                    <div>View Map</div>
+                    <div>Direction</div>
                 </div>
 
                 <div
@@ -543,7 +543,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                                 <FontAwesomeIcon icon={faHome} className={styles.guestIcon} />
                                 <span>1 x Table</span>|
                                 <FontAwesomeIcon icon={faUser} className={styles.guestIcon} />
-                                <span>1 x Guest</span>
+                                <span>2 x Guest</span>
                             </div>
                             <div className={styles.amenitiesService}>
                                 <ul className={styles.breakFast}>
@@ -582,7 +582,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
 
                         <div className={styles.bookTableCoupon}>
                             <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
-                                Apply Coupon{' '}
+                                Pay Bill{' '}
                                 <FontAwesomeIcon icon={faChevronDown} />
                             </button>
                         </div>
@@ -605,8 +605,10 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     return (
         <>
             <div className={styles.mainContentBody}>
-                <BackButton />
+                {/* <BackButton /> */}
                 <RestaurantCard />
+                </div>
+                <div className={styles.tabsnavigator}>
                 <DineOutRestDetailsTabs
                     activeTabId="overview"
                     onTabChange={(tabId) => console.log('Tab changed:', tabId)}
@@ -618,7 +620,8 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         category: restaurant.category,
                     }}
                 />
-            </div>
+                </div>
+            
             <div className={styles.restaurantTabNavigationBar}>
                 {/* <RestaurantTabNavigationBar /> */}
             </div>

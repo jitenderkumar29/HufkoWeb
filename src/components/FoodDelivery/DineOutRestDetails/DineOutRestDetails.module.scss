@@ -3,7 +3,13 @@
 .mainContentBody {
   margin: 0 auto;
   font-family: Arial, sans-serif;
+  background-color: $background-gray;
   padding: 1rem 1.5rem;
+  
+}
+
+.tabsnavigator{
+  // margin-top: 2rem;
 }
 
 .restaurantTabNavigationBar {
@@ -39,6 +45,7 @@
 .restaurantRating {
   display: flex;
   align-items: center;
+  margin-top: 8px;
 }
 
 .restaurantName {
@@ -50,7 +57,7 @@
 
 .badge {
   color: $white;
-  background-color: $primary-color;
+  background-color: $green;
   padding: 2px 10px;
   border-radius: 50px;
   font-size: 15px;
@@ -101,7 +108,9 @@
   cursor: pointer;
   transition: background-color 0.2s;
   color: $gray-800;
-  background-color: $white;
+  background-color: $background-orange-100;
+  width: 150px;
+  justify-content: center;
 
   &:hover {
     border-color: $primary-color;
@@ -122,7 +131,7 @@
   border-radius: 50px;
   font-size: 14px;
   margin-top: 12px;
-  background-color: $white;
+  background-color: $background-orange-100;
 
   &:hover {
     border-color: $primary-color;
@@ -140,7 +149,9 @@
   margin-top: 12px;
   cursor: default;
   position: relative;
-  background-color: $white;
+  background-color: $background-orange-100;
+  width: 150px;
+  justify-content: center;
 
   &:hover {
     border-color: $primary-color;
@@ -157,12 +168,14 @@
   gap: 5px;
   font-size: 15px;
   cursor: pointer;
-  background-color: $white;
+  background-color: $background-orange-100;
   transition: all 0.2s;
+  width: 150px;
+  justify-content: center;
 
   &:hover {
     border-color: $secondary-color;
-    background-color: $gray-50;
+    // background-color: $gray-50;
   }
 }
 
@@ -189,7 +202,9 @@
   font-size: 15px;
   cursor: default;
   position: relative;
-  background-color: $white;
+  background-color: $background-orange-100;
+  width: 150px;
+  justify-content: center;
 
   &:hover {
     border-color: $secondary-color;
@@ -333,7 +348,8 @@
   padding: 1px 15px;
   background-color: $white;
   border-radius: 8px;
-  margin: 16px 0;
+  box-shadow: $box-shadow-light-1;
+//   margin: 16px 0;
 }
 
 .card {
@@ -343,7 +359,8 @@
   overflow: hidden;
   margin: 16px 0;
   flex-direction: column;
-//   box-shadow: $card-shadow;
+  // box-shadow: $card-shadow;
+  padding: 1rem 1rem;
 }
 
 /* Image Section - Grid Layout */
@@ -411,30 +428,25 @@
 }
 
 .thumbnailItem:hover .thumbnail {
-  transform: scale(1.05);
+  // transform: scale(1.05);
 }
 
 /* ALL PHOTOS Button */
 .viewAllPhotos {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  color: $white;
-  border: none;
-  padding: 8px 0;
-  border-radius: 0 0 8px 8px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
-  z-index: 2;
-  text-align: center;
-  backdrop-filter: blur(2px);
+      color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    background: #000000b3;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: 60;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.9);
+    // background: rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -558,9 +570,9 @@ gap : 10px;
 }
 
 .selectRoomButton {
-  background: $secondary-color;
+  background: $green;
   color: $white;
-  padding: 9px 16px;
+  padding: 15px 16px;
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
@@ -576,7 +588,7 @@ gap : 10px;
   white-space: nowrap;
 
   &:hover {
-    background: $primary-color;
+    background: $green-dark;
     // transform: translateY(-1px);
     box-shadow: $box-shadow-light-1;
   }
@@ -598,12 +610,13 @@ gap : 10px;
   color: $gray-500;
   font-size: 18px;
   margin-bottom: -2px;
+  color: $red;
 }
 
 .discountPrice {
   font-size: 27px;
   font-weight: 700;
-  color: $primary-color;
+  color: $black;
 }
 
 .taxes {
@@ -628,7 +641,7 @@ gap : 10px;
   padding: 8px;
   max-width: 420px;
   font-family: Arial, sans-serif;
-  box-shadow: $box-shadow-light-1;
+  // box-shadow: $box-shadow-light-1;
   transition: all 0.2s;
 
   &:hover {
@@ -997,7 +1010,7 @@ gap : 10px;
 
 .cuisineSeparator {
     margin: 0 6px;
-    color: $gray-400;
+    color: $gray-500;
     font-weight: 300;
 }
 
@@ -1014,7 +1027,7 @@ gap : 10px;
 
 .locationIcon {
     font-size: 20px;
-    color: $secondary-color;
+    color: $green;
     margin-right: 5px;
 }
 
@@ -1058,6 +1071,8 @@ gap : 10px;
     color: #2E7D32;
     cursor: default;
     transition: all 0.3s ease;
+    width: 150px;
+    justify-content: center;
 
     &:hover {
         background-color: #C8E6C9;
