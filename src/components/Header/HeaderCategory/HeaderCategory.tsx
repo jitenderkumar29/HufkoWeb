@@ -29,7 +29,7 @@ import GroceryProductList from '@/components/Grocery/GroceryProductList/GroceryP
 import { WholesaleCategories, WholesaleCategoriesList, wholesaleCategoriesSubHeader } from '@/app/data/Categorywise/WholesaleCategories';
 import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
 import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
-import { DineoutItemsList, DineoutSpecialItemsList, FoodDineOutSpecialCollections, FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
+import { DineoutSpecialItemsList, FoodAllCategoryItemsListData, FoodDineOutSpecialCollections, FoodsCategories, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
 import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
@@ -49,6 +49,7 @@ import FoodRoundCarousel from '@/components/FoodDelivery/FoodDesigns/FoodRoundCa
 import FoodBanner from '@/components/FoodDelivery/FoodDesigns/FoodBanner/FoodBanner';
 import DineOutItemsListCard, { DineOutItemInterface } from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/DineOutRestDetails';
+import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 
 interface CategoryItem {
   id: string;
@@ -374,7 +375,7 @@ const HeaderCategory: React.FC = () => {
   // Handle dineout category click
   const handleDineoutCategoryClick = (item: FoodDineOutItem, index: number) => {
     console.log('Dineout category clicked:', item.title, item.dineoutSpecialCategoryID);
-    
+
     setShowRestaurantDetails(false);
     setSelectedRestaurantId(null);
 
@@ -385,6 +386,11 @@ const HeaderCategory: React.FC = () => {
       params.set('category', 'food');
     }
     router.replace(`?${params.toString()}`, { scroll: false });
+  };
+
+  const handleFoodCategoryClick = (category: any) => {
+    console.log('Selected category:', category);
+    // Navigate to category page or filter products
   };
 
   // Handle dineout item click - show restaurant details
@@ -536,7 +542,7 @@ const HeaderCategory: React.FC = () => {
   // Render Restaurant Details
   const renderRestaurantDetails = () => {
     if (!selectedRestaurantId) return null;
-    
+
     console.log('Rendering Restaurant Details for ID:', selectedRestaurantId);
     return (
       <div className={styles.restaurantDetailsContainer}>
@@ -573,6 +579,8 @@ const HeaderCategory: React.FC = () => {
         router.push(item.url);
       }
     };
+
+
 
     // Get the selected category name
     const categoryName = selectedDineoutCategory?.title || '';
@@ -679,14 +687,22 @@ const HeaderCategory: React.FC = () => {
                 onItemClick={handleDineoutCategoryClick}
               />
             </div>
-            <div className={styles.dineoutItemsListCard}>
+            <FoodCategoryList
+              categories={FoodAllCategoryItemsListData}
+              title="Food delivery selection nearby me"
+              onCategoryClick={handleFoodCategoryClick}
+              itemsPerView={5}
+              autoPlay={true}
+              showArrows={true}
+            />
+            {/* <div className={styles.dineoutItemsListCard}>
               <DineOutItemsListCard
                 items={DineoutItemsList}
                 title={getLocationBasedTitle("Top collections dineout restaurants")}
                 onItemClick={handleDineoutItemClick}
                 columns={4}
               />
-            </div>
+            </div> */}
             <HufkoPrime
               benefits={defaultBenefits}
               onMoreClick={() => console.log('More clicked!')}

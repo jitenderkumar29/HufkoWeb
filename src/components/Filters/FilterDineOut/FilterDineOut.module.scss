@@ -1,0 +1,550 @@
+.filterWrapper {
+  position: relative;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.filterChipsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+  z-index: 99;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  user-select: none;
+  min-height: 40px;
+  
+  &:hover {
+    background: #f5f5f5;
+    border-color: #c0c0c0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  &:active {
+    transform: translateY(0px);
+  }
+  
+  svg {
+    flex-shrink: 0;
+  }
+  
+  .chipIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.filterButton {
+  background: #f8f8f8;
+  border-color: #d0d0d0;
+  font-weight: 600;
+  color: #1a1a1a;
+  position: relative;
+  
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.filterBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff6b35;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0 6px;
+  margin-left: 4px;
+}
+
+.activeChip {
+  background: #ff6b35;
+  color: #ffffff;
+  border-color: #ff6b35;
+  
+  &:hover {
+    background: #e85a2a;
+    border-color: #e85a2a;
+  }
+  
+  svg {
+    color: #ffffff;
+  }
+  
+  .chipIcon svg {
+    color: #ffffff;
+  }
+}
+
+.sortWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sortChip {
+  background: #f8f8f8;
+  border-color: #d0d0d0;
+  
+  .chevronIcon {
+    transition: transform 0.25s ease;
+    
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.sortDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 220px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  z-index: 9900;
+  animation: slideDown 0.2s ease;
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+.sortOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  color: #1a1a1a;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  text-align: left;
+  
+  &:hover {
+    background: #f5f5f5;
+  }
+  
+  &.activeSort {
+    background: #f0f7ff;
+    color: #ff6b35;
+    font-weight: 600;
+  }
+  
+  .checkMark {
+    color: #ff6b35;
+    font-weight: 700;
+    margin-left: 12px;
+  }
+}
+
+// Modal Styles
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.25s ease;
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.modalContent {
+  background: #ffffff;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0;
+  
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    color: #1a1a1a;
+  }
+}
+
+.modalBody {
+  padding: 16px 24px 24px;
+  overflow-y: auto;
+  flex: 1;
+  
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 4px;
+  }
+}
+
+.modalFilterItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+  background: #f8f8f8;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #f0f0f0;
+  }
+  
+  &.activeFilterItem {
+    background: #fff0eb;
+    border-color: #ff6b35;
+    color: #ff6b35;
+    
+    .modalFilterIcon svg {
+      color: #ff6b35;
+    }
+  }
+  
+  .modalFilterIcon {
+    display: flex;
+    align-items: center;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+      color: #666;
+    }
+  }
+  
+  .modalCheckMark {
+    margin-left: auto;
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.modalFooter {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  border-top: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+.clearAllBtn,
+.applyBtn {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.clearAllBtn {
+  background: #f5f5f5;
+  color: #666;
+  
+  &:hover {
+    background: #ebebeb;
+  }
+}
+
+.applyBtn {
+  background: #ff6b35;
+  color: #ffffff;
+  
+  &:hover {
+    background: #e85a2a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0px);
+  }
+}
+
+// Tablet and smaller devices
+@media (max-width: 1024px) {
+  .filterChipsContainer {
+    gap: 6px;
+    padding: 10px 12px;
+  }
+  
+  .filterChip {
+    font-size: 13px;
+    padding: 6px 14px;
+    min-height: 36px;
+  }
+}
+
+// Mobile devices
+@media (max-width: 768px) {
+  .filterChipsContainer {
+    gap: 6px;
+    padding: 8px 12px;
+  }
+  
+  .filterChip {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-height: 32px;
+    border-radius: 16px;
+  }
+  
+  .filterButton {
+    padding: 6px 12px;
+    
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  .sortChip {
+    padding: 6px 12px;
+    
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  .sortDropdown {
+    min-width: 180px;
+    left: -8px;
+  }
+  
+  .sortOption {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+  
+  .modalContent {
+    max-height: 70vh;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .modalHeader {
+    padding: 16px 20px 12px;
+    
+    h3 {
+      font-size: 18px;
+    }
+  }
+  
+  .modalBody {
+    padding: 12px 16px 16px;
+  }
+  
+  .modalFilterItem {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  .modalFooter {
+    padding: 12px 16px 16px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .clearAllBtn,
+  .applyBtn {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+}
+
+// Small mobile devices
+@media (max-width: 480px) {
+  .filterChipsContainer {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+  
+  .filterChip {
+    font-size: 11px;
+    padding: 4px 10px;
+    min-height: 28px;
+    border-radius: 14px;
+    gap: 4px;
+    
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+    
+    .chipIcon svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  
+  .filterBadge {
+    font-size: 10px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+  }
+  
+  .sortDropdown {
+    min-width: 160px;
+    left: -12px;
+  }
+  
+  .sortOption {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .modalContent {
+    max-height: 65vh;
+  }
+  
+  .modalFilterItem {
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}
+
+// Touch-friendly for mobile
+@media (hover: none) and (pointer: coarse) {
+  .filterChip {
+    min-height: 44px;
+  }
+  
+  .sortOption {
+    padding: 12px 16px;
+  }
+  
+  .modalFilterItem {
+    padding: 16px;
+  }
+}
+
+// Desktop large screens
+@media (min-width: 1440px) {
+  .filterChipsContainer {
+    padding: 16px 24px;
+    gap: 12px;
+  }
+  
+  .filterChip {
+    font-size: 15px;
+    padding: 10px 20px;
+    min-height: 44px;
+    border-radius: 24px;
+  }
+}

@@ -2456,7 +2456,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/87eaef59996ca008a519054014accbaa_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF  with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2472,7 +2472,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/16d5cd13fbc13bcfece4d4333fb2e6ef_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2488,7 +2488,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/58a17094c90bda526c23ce87e6a99b94_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2503,7 +2503,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.1 km",
     imageUrl: "/products/15ecea5e19d35b31311d398fcb1436f0_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2518,7 +2520,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/8fbf0b59a34748767bd336e4443b02e6_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2534,7 +2536,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/3ad7a12bd1f6fbf993708a3a8498369f_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2550,7 +2552,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/5f54f91d785c7650cc9fcc9e21d5b0d7_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2566,7 +2568,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/5ae165fe31bfc309916514906ae1215e_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2581,7 +2583,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.2 km",
     imageUrl: "/products/e490f3f36511b032662db78bd5d26b94_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2596,7 +2600,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/e6cbcb3162c11adcf58677f1c4110d9b_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 25% OFF' }
+      { type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2612,7 +2616,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/3224c047011af9a297160dd0605d1352_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2628,7 +2632,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/46e428b78f369f8fa533cfe29029d0e1_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2644,7 +2648,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/b6ed07abc6618d2da3e7b3f77dee08e9_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2660,7 +2664,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/e490f3f36511b032662db78bd5d26b94_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2676,7 +2680,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/82f5c6f79a5efe5f68711d4d36867ed1_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2692,7 +2696,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/d6f6c9e0c6a03bc48652027071348399_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2707,7 +2711,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.3 km",
     imageUrl: "/products/6571354415b0cc7ade3dbb9b7cc0196b_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2722,7 +2728,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/4ef5bc43798cd514cb76981062613228_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2737,7 +2743,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "3.6 km",
     imageUrl: "/products/5577eaf787eeea959511cda33d412165_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2752,7 +2760,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/b6da1f34658eb0532c1e4ce648cf1e5f_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2768,7 +2776,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/51aa6cb08e9977a96432be5718b80bad_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2784,7 +2792,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/3b5813a98f6a12478c57f26ef7a074ca_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2799,7 +2807,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "26.6 km",
     imageUrl: "/products/ae3cb4694435378f86051e09c6674d5a_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2814,7 +2824,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/f72a3abd1110818fd9d30e620c5a3398_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2830,7 +2840,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/76922e3fa04a181726896bd9949206f7_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2845,7 +2855,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.3 km",
     imageUrl: "/products/33cab35b72c7bfd1d1641ce440bb068f_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2860,7 +2872,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/04066b907d3bb1c9fb0845d9819fb06c_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 30% OFF' }
+      { type: 'walk-in', title: 'Flat 30% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2876,7 +2888,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/3a91d85b5b19ac7044deb68ee188a982_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2891,7 +2903,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "12.6 km",
     imageUrl: "/products/51aa6cb08e9977a96432be5718b80bad_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2905,7 +2919,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.2 km",
     imageUrl: "/products/1895341b9f30e057e45dd23c26f0e63a_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2920,7 +2936,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/2901fd0cb7ebe4c2f46b04821808c206_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2935,7 +2951,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/0f3f29119d3dffb43a5238affd1c6f58_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2949,7 +2967,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "23.1 km",
     imageUrl: "/products/ff84da744bbfba795df60a537dbff851_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2963,7 +2983,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/aaba16c78861b3c4c64ecb9543d2fc94_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -2978,7 +3000,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/a9c1b655d9e5b1a9e653c479929ef5f7_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -2993,7 +3015,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "2.6 km",
     imageUrl: "/products/a8b4e71ea15bb56ca9120737edfe4d8c_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3008,7 +3032,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/c377011fdc30e6b24096753e1fe54104_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3024,7 +3048,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/7e15debd6a621bc114f1959ab19a0b66_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3039,7 +3063,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "17.2 km",
     imageUrl: "/products/d9362ce5f7431f8a8c7f0c4aeb5f77aa_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3054,7 +3080,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/64f9a36ad23ae37fd09f368d29008333_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3070,7 +3096,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/c241d41057f58bbe08a8debbf190307c_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3086,7 +3112,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/14e6cc1af3acfec0dd270e879cdd187e_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3101,7 +3127,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "4.7 km",
     imageUrl: "/products/4ea18b30e1f3ef14a4d9b0047034f35e_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3116,7 +3144,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/fe22fce98e7a3842526f357a0cdfad37_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3131,7 +3159,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "16.7 km",
     imageUrl: "/products/d9362ce5f7431f8a8c7f0c4aeb5f77aa_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3146,7 +3176,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/bc07772aab20dbdfdc4013d901866888_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3161,7 +3191,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "11.9 km",
     imageUrl: "/products/6b0fe55bf28069b5b52e157f4a83fe4e_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3176,7 +3208,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/a8b4e71ea15bb56ca9120737edfe4d8c_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 30% OFF' }
+      { type: 'walk-in', title: 'Flat 30% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3191,7 +3223,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "22 km",
     imageUrl: "/products/206628f971d8b6b7756316e5fdd32102_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3206,7 +3240,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/6c4b51925d77411f0ee3a2c7fe69e8a9_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3221,7 +3255,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "21.5 km",
     imageUrl: "/products/e38d09f470604b7f756720d79c797e7b_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3236,7 +3272,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/721eb71bb62fc3e31934fa5b9adf0cf4_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3251,7 +3287,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "20.2 km",
     imageUrl: "/products/a2c69501977ef437d1e3f99a94b77bf1_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3266,7 +3304,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/1d4023ee4e325720057c8ec91681d546_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3282,7 +3320,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/2f7135285527a48a76cad69eaa33b0f3_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3297,7 +3335,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "4.6 km",
     imageUrl: "/products/6b0fe55bf28069b5b52e157f4a83fe4e_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3311,7 +3351,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "18.8 km",
     imageUrl: "/products/867d915dad8e8f2c0e638dd60c88792a_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3326,7 +3368,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/a9a1f99309422d93d0f1cee96393d0f9_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3342,7 +3384,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/b482d990f728163e5d5c0996c56d931a_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3357,7 +3399,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "4.1 km",
     imageUrl: "/products/c036fabc-36f2-4e52-896c-fbda9ad2cab1_o2_featured_v2.png",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3371,7 +3415,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "10.8 km",
     imageUrl: "/products/0b9002a1058ddd3d22e2f050de9575e6_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3386,7 +3432,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/624276488eb8fe83a44b80977f307b8d_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3402,7 +3448,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/f2956a4ab1765e6b70b437ece935f2c0_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3417,7 +3463,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "6.1 km",
     imageUrl: "/products/08ac5d8f000f429eaf5f9780af647a8c_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3431,7 +3479,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "4.7 km",
     imageUrl: "/products/146f5159cacf46f520ae9b23bc2b47ca_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3446,7 +3496,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/7bfc819dd28271b31e3dad0d8caa3dda_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3462,7 +3512,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/20b12b311d6bdec919a8a1f5796fd44d_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3478,7 +3528,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/e6a5cee2b070f39a35e707a16c8da410_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3493,7 +3543,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "17.6 km",
     imageUrl: "/products/64d096642bae1d130c1df8dfb7bf0ec5_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3507,7 +3559,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/e6a5cee2b070f39a35e707a16c8da410_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3522,7 +3576,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/cc3fb86515c76efa82bcbe18f7ed3048_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3538,7 +3592,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/08ac5d8f000f429eaf5f9780af647a8c_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3554,7 +3608,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/41e4c0bb5277eb4de9edff584071ab6c_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3570,7 +3624,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/347f890247f0cdc51900942d2c073aa3_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3585,7 +3639,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "11.2 km",
     imageUrl: "/products/4827f038886ea3c34f9e44277dc74ed5_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3599,7 +3655,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "7.4 km",
     imageUrl: "/products/a213a3fa819983beaa68b9d07421cae2_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3613,7 +3671,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "15.6 km",
     imageUrl: "/products/c3232f3d33629cd0f08a225c4f0b4087_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3628,7 +3688,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/2eec8d63c5c77876f646e5e7fcc007a3_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3643,7 +3703,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "29 km",
     imageUrl: "/products/b825e7129c44700dbdf29400358d1005_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3658,7 +3720,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/e6a5cee2b070f39a35e707a16c8da410_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3673,7 +3735,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "25.8 km",
     imageUrl: "/products/64d096642bae1d130c1df8dfb7bf0ec5_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3688,7 +3752,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/8c858975f605d5e0158f9c0979daf86d_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3704,7 +3768,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/1df9e1af1c3b6ea990a6a4951e5f163f_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3719,7 +3783,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "6.9 km",
     imageUrl: "/products/e329ccd7b57c5ccf74b695a56e5bf973_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3733,7 +3799,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "18.8 km",
     imageUrl: "/products/e1217a7667725d16deb705dcbd90c16a_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3748,7 +3816,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/a213a3fa819983beaa68b9d07421cae2_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3763,7 +3831,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "13.9 km",
     imageUrl: "/products/4827f038886ea3c34f9e44277dc74ed5_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3778,7 +3848,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/d6fe066d268119676c51a4b95083154c_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3793,7 +3863,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "10.8 km",
     imageUrl: "/products/e6a5cee2b070f39a35e707a16c8da410_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3808,7 +3880,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/b7b75c686c33bee4b65aefd24ace0e11_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3824,7 +3896,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/641805035bf4c19fec75450b6990232a_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3839,7 +3911,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "8.3 km",
     imageUrl: "/products/35d067a5973db23b4357c4fc95f675b2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3853,7 +3927,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "18.7 km",
     imageUrl: "/products/dc4e272d56d13f56a9ff3459eba84ae2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3868,7 +3944,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/279fc22f9c26fb1b35a4d745736fdf35_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 20% OFF' }
+      { type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3884,7 +3960,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/263e1983baaebae40eaaad05c65b9d8a_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3899,7 +3975,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "8.7 km",
     imageUrl: "/products/228302983c266215997219fac0f083a6_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3913,7 +3991,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "38.3 km",
     imageUrl: "/products/f2956a4ab1765e6b70b437ece935f2c0_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3928,7 +4008,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/e18d0f5c69a10613ec1bd7d02b54dcdb_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3944,7 +4024,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/a0b4a924606dcde51580be136d2b4221_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3960,7 +4040,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/04a3f0372eba87702e4c8f1bba68e381_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -3975,7 +4055,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "5 km",
     imageUrl: "/products/e1e59307a8114182fb131b90e96bd525_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -3990,7 +4072,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/0d4ee9a0beb509c240ff678171e83f60_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4005,7 +4087,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "9.3 km",
     imageUrl: "/products/6a5f390c8af6a698dde66add8a744bec_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4020,7 +4104,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/dc557d0b26c3e566346797a68c731612_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4036,7 +4120,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/191e8adc341e09bd1beec312062e480e_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4052,7 +4136,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/269f168ca3811e8009151bd7257c65d7_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 30% OFF' }
+      { type: 'walk-in', title: 'Flat 30% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4067,7 +4151,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "10.8 km",
     imageUrl: "/products/e39aa094f9760ed00ce468103f3f49c8_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4082,7 +4168,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/8cec7fa783fdd3c0f87bde9990828f50_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4098,7 +4184,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/e812c0d46693549ed8024e2d7be878ef_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4114,7 +4200,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/361842564c5a9b3fda3b99d1bda7f69b_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4130,7 +4216,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/62aeeb238f2a532104a46498611ab4f1_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4146,7 +4232,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/35d067a5973db23b4357c4fc95f675b2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 25% OFF' }
+      { type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4161,7 +4247,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "18.9 km",
     imageUrl: "/products/64606c3b0f0e0b6d072720516a376813_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4176,7 +4264,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/5d60ef7cfffadb34642dcd3615caba0d_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4191,7 +4279,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "11.2 km",
     imageUrl: "/products/e1e59307a8114182fb131b90e96bd525_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4206,7 +4296,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/806bda47e95e298915eb12a5a029ed49_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 15% OFF' }
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4221,7 +4311,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "8.7 km",
     imageUrl: "/products/ef709d5eceee2de61bf2ec91e3bc4ac5_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4236,7 +4328,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/1b844c3177efc3506ab8710e5849c8d1_o2_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4251,7 +4343,9 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     distance: "18.2 km",
     imageUrl: "/products/634ef0a4f506629c9a0c5e549e1eabcb_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4266,7 +4360,7 @@ export const DineoutItemsList: DineOutItemInterface[] = [
     imageUrl: "/products/0ca36205830eb8b9f9ab5c7804a945dd_featured_v2.jpg",
     isTableBooking: true,
     offers: [
-      { type: 'walk-in', title: 'Flat 10% OFF' }
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
     ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
@@ -4558,7 +4652,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.2 km",
     imageUrl: "/products/d31eccf55ea690d6d27d8dadba6eca91.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4572,7 +4666,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "2.5 km",
     imageUrl: "/products/3187523125crop187523125.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4586,7 +4680,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/27d28de2dac3f71e995e7a7e01381f41.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4600,7 +4694,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/e9fdf93ae208cfc3b6ef714005e1812d.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4614,7 +4710,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.5 km",
     imageUrl: "/products/44ed3047e1b86ebd07e0d4c431b1e1f9.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4628,7 +4724,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.5 km",
     imageUrl: "/products/b5f9ce99e757534196e67599cd620f27.jpeg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4642,7 +4738,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/a32ca888bad40b4f8f5212b357c0a0cd.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4656,7 +4752,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/grammar_room.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 25% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4670,7 +4766,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/ad95cd6b50bd72e06cca927c3d996e19.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 30% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 30% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4684,7 +4780,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/ad95cd6b50bd72e06cca927c3d996e191.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4698,7 +4794,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/ad95cd6b50bd72e06cca1927c3d996e191.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4712,7 +4810,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "7.0 km",
     imageUrl: "/products/e3d969e58210d3083bf4bc035fec98da.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4726,7 +4824,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/f58f0e6de0aa01965ceda8dfd56752d0.jpeg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4740,7 +4838,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "10.0 km",
     imageUrl: "/products/ca4fabd7ce0831958534e702e6c99e38_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4754,7 +4852,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c19ce00280443116443ec219595661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4768,7 +4866,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19ce00280443116443ec29595661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4782,7 +4880,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19ce00280443116443ec295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4796,7 +4894,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c191ce00280443116443ec295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4810,7 +4908,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c191ce00280443116443ec2959511661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4824,7 +4922,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "7.0 km",
     imageUrl: "/products/a0c191ce002804431116443ec2959511661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4838,7 +4936,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/a0c191ce0028044131116443ec2959511661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4852,7 +4952,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c191ce002804431164431ec295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4866,7 +4966,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/a0c191ce00280443116443e1c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4880,7 +4980,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/a0c191ce0021801443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4894,7 +4994,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/a0c191ce002180443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4908,7 +5010,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.5 km",
     imageUrl: "/products/a0c191ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4922,7 +5024,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "2.0 km",
     imageUrl: "/products/a0c191ce002804431164413e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4936,7 +5038,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c2915951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4950,7 +5052,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c191ce002804431116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 18% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 18% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4964,7 +5066,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "10.0 km",
     imageUrl: "/products/a0c191ce002804413116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4978,7 +5082,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "15.0 km",
     imageUrl: "/products/a0c1911ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -4992,7 +5096,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "7.0 km",
     imageUrl: "/products/a0c191ce002804431164431e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5006,7 +5112,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c191ce002804431164143e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5020,7 +5128,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/a0c191ce0028044131164431e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5034,7 +5142,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/a0c1911c1e00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5048,7 +5156,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c191ce002804431164413e02c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5062,7 +5170,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.0 km",
     imageUrl: "/products/a0c191ce002804431016443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5076,7 +5184,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c191ce002804403116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5090,7 +5198,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c1910ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5104,7 +5212,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c1910ce00280443116443e2c2905951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 18% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 18% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5118,7 +5226,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c191c0e00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5132,7 +5240,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/a0c191c0e00280443116443e2c2095951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5146,7 +5254,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c2959516610f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5160,7 +5268,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "16.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c29595166010f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5174,7 +5282,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c2959510661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5188,7 +5296,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "7.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c2950951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5202,7 +5310,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/a0c191ce00280443116443e20c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 25% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5216,7 +5324,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "15.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c2095951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5230,7 +5338,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c191ce00280443116443e020c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5244,7 +5352,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "2.0 km",
     imageUrl: "/products/a0c191ce002804431164430e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5258,7 +5366,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/a0c191ce00280443116443e2c2905951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5272,7 +5380,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c191ce002804043116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5286,7 +5396,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c191ce002804431164403e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5300,7 +5410,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "9.0 km",
     imageUrl: "/products/a0c191ce000280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5314,7 +5424,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "10.0 km",
     imageUrl: "/products/a0c191c0e002804431164043e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 18% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 18% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5328,7 +5438,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c191ce002080443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5342,7 +5452,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/a0c1091ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5356,7 +5466,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c1901ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5370,7 +5480,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/0a0c191ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5384,7 +5494,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c1910ce002804043116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5398,7 +5508,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a00c191ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5412,7 +5522,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "14.0 km",
     imageUrl: "/products/a200c191ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5426,7 +5538,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a02c191ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5440,7 +5552,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c1291ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5454,7 +5568,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/a0c19201ce00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5468,7 +5582,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "10.0 km",
     imageUrl: "/products/a0c19201ce002280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5482,7 +5596,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c19201c2e00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5496,7 +5610,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e00280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5510,7 +5624,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "14.0 km",
     imageUrl: "/products/a0c19201c21e200280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5524,7 +5638,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c19201c21e2002804413116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5538,7 +5652,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "13.0 km",
     imageUrl: "/products/a0c192012c21e2002804413116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5552,7 +5666,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/a0c19201c21e2200280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5566,7 +5680,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "18.0 km",
     imageUrl: "/products/a0c19201c21e22020280443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5580,7 +5694,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c19201c21e220202820443116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5594,7 +5708,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c19201c21e2202028204243116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 25% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5608,7 +5722,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5622,7 +5736,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c19201c21e220202820424321126443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5636,7 +5750,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "6.0 km",
     imageUrl: "/products/a0c19201c21e220202820424321164243e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 18% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 18% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5650,7 +5764,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "15.0 km",
     imageUrl: "/products/a0c19201c21e220202820424321164423e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5664,7 +5780,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "12.0 km",
     imageUrl: "/products/a0c19201c21e220202820424321164423e22c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5678,7 +5794,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e220202820424232116443e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5692,7 +5808,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/a0c19201c21e22020282042431164432e2c295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5706,7 +5822,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "15.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c2925951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5720,7 +5836,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c2295951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 18% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 18% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5734,7 +5850,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "20.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c29252951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5748,7 +5864,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "10.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c2952951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5762,7 +5878,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c292522951661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 25% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5776,7 +5892,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "7.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c292529521661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5790,7 +5906,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c2959512661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5804,7 +5920,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c29595122661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5818,7 +5934,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c295951222661f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5832,7 +5948,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c2959512226261f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 25% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5846,7 +5962,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c29595122262261f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5860,7 +5976,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c295951222622621f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5874,7 +5990,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "5.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c2959512226226221f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5888,7 +6004,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "8.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c29595122262262212f.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 12% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 12% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5902,7 +6018,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "10.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c29595122262262212f2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5916,7 +6032,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "4.0 km",
     imageUrl: "/products/a0c19201c21e22020282042432116443e2c29595122262262212f21.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5930,7 +6046,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "2.0 km",
     imageUrl: "/products/3a0c19201c21e22020282042432116443e2c29595122262262212f21.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5944,7 +6060,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "937 m",
     imageUrl: "/products/a30c19201c21e22020282042432116443e2c29595122262262212f21.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5958,7 +6074,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.2 km",
     imageUrl: "/products/a03c19201c21e22020282042432116443e2c29595122262262212f21.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5972,7 +6088,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1 km",
     imageUrl: "/products/a03c319201c21e22020282042432116443e2c29595122262262212f21.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -5986,7 +6102,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.1 km",
     imageUrl: "/products/15ece3a5e19d35b31311d398fcb1436f0_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6000,7 +6118,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1 km",
     imageUrl: "/products/8fbf0b359a34748767bd336e4443b02e6_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6014,7 +6132,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.4 km",
     imageUrl: "/products/35f54f91d785c7650cc9fcc9e21d5b0d7_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6028,7 +6146,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.4 km",
     imageUrl: "/products/53ae165fe31bfc309916514906ae1215e_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6042,7 +6160,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.2 km",
     imageUrl: "/products/e4930f3f36511b032662db78bd5d26b94_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6056,7 +6176,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.4 km",
     imageUrl: "/products/e36cbcb3162c11adcf58677f1c4110d9b_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 25% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6070,7 +6190,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.4 km",
     imageUrl: "/products/32324c047011af9a297160dd0605d1352_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 15% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6084,7 +6204,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.2 km",
     imageUrl: "/products/46e3428b78f369f8fa533cfe29029d0e1_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6098,7 +6218,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "997 m",
     imageUrl: "/products/e49330f3f36511b032662db78bd5d26b94_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6112,7 +6232,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.5 km",
     imageUrl: "/products/82f53c6f79a5efe5f68711d4d36867ed1_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6126,7 +6246,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.4 km",
     imageUrl: "/products/d6f6c39e0c6a03bc48652027071348399_o2_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6140,7 +6260,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.3 km",
     imageUrl: "/products/65713354415b0cc7ade3dbb9b7cc0196b_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6154,7 +6276,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.1 km",
     imageUrl: "/products/4ef5bc433798cd514cb76981062613228_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6168,7 +6290,9 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "3.6 km",
     imageUrl: "/products/5577eaf3787eeea959511cda33d412165_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6182,7 +6306,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.1 km",
     imageUrl: "/products/b6da1f34658eb30532c1e4ce648cf1e5f_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 20% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 20% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6196,7 +6320,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.3 km",
     imageUrl: "/products/3b5813a98f6a124378c57f26ef7a074ca_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6210,7 +6334,7 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.3 km",
     imageUrl: "/products/f72a33abd1110818fd9d30e620c5a3398_featured_v2.jpg",
     isTableBooking: true,
-    offers: [{ type: 'walk-in', title: 'Flat 10% OFF' }],
+    offers: [{ type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
   },
@@ -6224,8 +6348,144 @@ export const DineoutSpecialItemsList: DineOutItemInterface[] = [
     distance: "1.3 km",
     imageUrl: "/products/33cab35b72c7bfd1d16341ce440bb068f_featured_v2.jpg",
     isTableBooking: true,
-    offers: [],
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
     bankOffers: [],
     extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  }
+];
+
+export const FoodAllCategoryItemsListData: FoodCategoryInterface[] = [
+  // Street Food
+  {
+    id: '1',
+    name: 'Street Food',
+    image: '/products/street_food_001_1734567890123.png',
+    slug: 'street-food',
+    cuisine: 'Street Food, Fast Food'
+  },
+  {
+    id: '2',
+    name: 'Fast Food',
+    image: '/products/fast_food_002_1734567890124.png',
+    slug: 'fast-food',
+    cuisine: 'Fast Food, American'
+  },
+
+  // Indian Cuisine
+  {
+    id: '3',
+    name: 'North Indian',
+    image: '/products/north_indian_003_1734567890125.png',
+    slug: 'north-indian',
+    cuisine: 'North Indian, Mughlai'
+  },
+  {
+    id: '4',
+    name: 'South Indian',
+    image: '/products/south_indian_004_1734567890126.png',
+    slug: 'south-indian',
+    cuisine: 'South Indian, Tamil'
+  },
+  {
+    id: '5',
+    name: 'Punjabi',
+    image: '/products/punjabi_005_1734567890127.png',
+    slug: 'punjabi',
+    cuisine: 'Punjabi, North Indian'
+  },
+  {
+    id: '6',
+    name: 'Gujarati',
+    image: '/products/gujarati_006_1734567890128.png',
+    slug: 'gujarati',
+    cuisine: 'Gujarati, Indian'
+  },
+  {
+    id: '7',
+    name: 'Rajasthani',
+    image: '/products/rajasthani_007_1734567890129.png',
+    slug: 'rajasthani',
+    cuisine: 'Rajasthani, Indian'
+  },
+  {
+    id: '8',
+    name: 'Maharashtrian',
+    image: '/products/maharashtrian_008_1734567890130.png',
+    slug: 'maharashtrian',
+    cuisine: 'Maharashtrian, Indian'
+  },
+  {
+    id: '9',
+    name: 'Bengali',
+    image: '/products/bengali_009_1734567890131.png',
+    slug: 'bengali',
+    cuisine: 'Bengali, Indian'
+  },
+  {
+    id: '10',
+    name: 'Hyderabadi',
+    image: '/products/hyderabadi_010_1734567890132.png',
+    slug: 'hyderabadi',
+    cuisine: 'Hyderabadi, Mughlai'
+  },
+  {
+    id: '11',
+    name: 'Kashmiri',
+    image: '/products/kashmiri_011_1734567890133.png',
+    slug: 'kashmiri',
+    cuisine: 'Kashmiri, Indian'
+  },
+
+  // Asian & International
+  {
+    id: '12',
+    name: 'Chinese',
+    image: '/products/chinese_012_1734567890134.png',
+    slug: 'chinese',
+    cuisine: 'Chinese, Asian'
+  },
+  {
+    id: '13',
+    name: 'Thai',
+    image: '/products/thai_013_1734567890135.png',
+    slug: 'thai',
+    cuisine: 'Thai, Asian'
+  },
+  {
+    id: '14',
+    name: 'Japanese',
+    image: '/products/japanese_014_1734567890136.png',
+    slug: 'japanese',
+    cuisine: 'Japanese, Asian'
+  },
+  {
+    id: '15',
+    name: 'Korean',
+    image: '/products/korean_015_1734567890137.png',
+    slug: 'korean',
+    cuisine: 'Korean, Asian'
+  },
+  {
+    id: '16',
+    name: 'Italian',
+    image: '/products/italian_016_1734567890138.png',
+    slug: 'italian',
+    cuisine: 'Italian, European'
+  },
+  {
+    id: '17',
+    name: 'Mexican',
+    image: '/products/mexican_017_1734567890139.png',
+    slug: 'mexican',
+    cuisine: 'Mexican, Latin American'
+  },
+  {
+    id: '18',
+    name: 'Continental',
+    image: '/products/continental_018_1734567890140.png',
+    slug: 'continental',
+    cuisine: 'Continental, European'
   }
 ];

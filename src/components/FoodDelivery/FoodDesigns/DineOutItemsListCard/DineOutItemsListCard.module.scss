@@ -16,6 +16,7 @@
         sans-serif;
 
     color: #1f1f1f;
+    z-index: 10;
 }
 
 /* =========================================
@@ -374,7 +375,7 @@
 
     padding: 5px 8px;
 
-    color: #087443;
+    color: $green;
 
     background: #d8f8eb;
 
@@ -398,9 +399,9 @@
 .moreOffers {
     flex-shrink: 0;
 
-    color: #ffffff;
+    color: $green;
 
-    background: #169c67;
+    // background: #169c67;
 
     margin: -5px -8px -5px 0; // Adjusted margins for bigger padding
 
@@ -409,7 +410,7 @@
     border-radius: 0 4px 4px 0;
 
     font-size: 15px; // Increased from 8px
-    font-weight: 700;
+    font-weight: 500;
 }
 
 /* =========================================
@@ -569,4 +570,83 @@
     .showMoreContainer {
         display: none;
     }
+}
+
+// Add to your existing SCSS file
+
+/* =========================================
+   ADDITIONAL OFFERS (New)
+========================================= */
+
+.additionalOffers {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #f8fafc;
+  border-radius: 4px;
+  border-left: 3px solid #087443;
+}
+
+.additionalOffer {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #4a5568;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+/* =========================================
+   OFFER ROW - Updated with better styling
+========================================= */
+
+.offerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 24px;
+  padding: 5px 8px;
+  color: #087443;
+  background: #d8f8eb;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 600;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  
+  &:hover {
+    background: #c8f0e0;
+  }
+}
+
+.offerText {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.moreOffers {
+  flex-shrink: 0;
+  color: $green;
+//   background: #169c67;
+  margin: -5px -8px -5px 0;
+  padding: 6px 8px;
+  border-radius: 0 4px 4px 0;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  
+  .offerRow:hover & {
+    // background: #0e7a4e;
+  }
 }

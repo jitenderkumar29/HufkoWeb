@@ -123,6 +123,7 @@ import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/Food
 import OrderNowItemsListCard, { RestaurantItemFoodInterface } from '@/components/FoodDelivery/FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard';
 import DineOutItemsListCard, { DineOutItemInterface } from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/DineOutRestDetails';
+import FilterDineOut from '@/components/Filters/FilterDineOut/FilterDineOut';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -388,6 +389,18 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
             </div>
         );
     };
+
+     const handleFilterDineOutChange = (filters: string[]) => {
+    console.log('Active filters:', filters);
+    // Apply filters to your restaurant list
+    // Example: fetchRestaurants({ filters });
+  };
+
+  const handleSortDineOutChange = (sort: string) => {
+    console.log('Selected sort:', sort);
+    // Apply sorting to your restaurant list
+    // Example: fetchRestaurants({ sort });
+  };
 
     // Render the main content based on category
     const renderMainContent = () => {
@@ -1453,6 +1466,10 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                                 onItemClick={handleItemClick}
                             />
                         </div>
+                        <FilterDineOut
+                            onFilterChange={handleFilterDineOutChange}
+                            onSortChange={handleSortDineOutChange}
+                        />
                         <DineOutItemsListCard
                             items={DineoutItemsList}
                             title={getLocationBasedTitle("Top collections dineout restaurants")}

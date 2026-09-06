@@ -11,6 +11,8 @@ import {
     faCalendarCheck,
     faChevronDown,
     faArrowRight,
+    faStore,
+    faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 export interface TabItem {
@@ -44,132 +46,100 @@ interface DineOutRestDetailsTabsProps {
 }
 
 const restaurentDummyImages = [
-  "./products/44d2068bb86bb7dc8a0a9a2b2a735e67.jpeg",
-  "/products/44d5c61d18d31c3f585ce8d53a6ad855.jpeg",
-  "/products/ad602487725baa27e3b484c14dbe41f2.jpeg",
-  "/products/3e934b44d095bc2cd92e21ccfc8d3ec2.jpg",
-  "/products/558952cc07fa4a3d9f6e1e02c25467e7.jpg",
-  "/products/959efb74d0b20696a1052d2183090da7.jpg",
-  "/products/abac42bc23fe1bf46b1c5350867e4a8f.jpg",
-  "/products/fa2236bc99952c2de3fb9675e97d5989.jpg",
-  "/products/477baf9c3c38dd0df40e6153de1e79a1.jpg",
-  "/products/c1ba536f8903cdc9cb2880f7d8d4b862.jpeg",
-  "/products/29d1b5096fd85674097a619240d6cc23.jpg",
-  "/products/913d58c585e2696e78f3fe78517ac713.jpg",
-  "/products/3abc6de7523f7bc54d7f1075c54160f2.jpg",
-  "/products/951effdee8d490dfa5202a635a4beaed.jpg",
-  "/products/432f87390f1cd45f448affc85ef412c9.jpg",
-  "/products/38694f72ea3660f273988af1e3a7c513.jpg",
-  "/products/0f05e1723f7b0782c4f39e839bd99d6b.jpg",
-  "/products/5c2cb4c377d477cc7f1c09918846abca.jpg",
-  "/products/e000ce927731205809597c98bd0ac87d.jpg",
-  "/products/a4d40de9e6e140d53ec67f78b35de73d.jpg",
-  "/products/d6e5609d063b958111307130ebb57c03.jpg",
-  "/products/d97cf77213e2e13a8829c958c9ef3c76.jpg",
-  "/products/c60ce471fbdd328d8d724328ecc2ea3f.jpg",
-  "/products/2da59374990669c1ce98b824c6c83b01.jpeg",
-  "/products/323977ba9f70eb683f0823ec35953881.jpg",
-  "/products/2b4275a5ef09b21ca0e8158e1bfdf07c.jpg",
-  "/products/484492bcc4100818a664beb9c6392a9c.jpg",
-  "/products/5e8fb92d7645f10eb62caceaffe87d7c.jpg",
-  "/products/5e8fb92d7645f10eb62caceaffe87d7c1.jpg",
-  "/products/5e8fb92d7645f10eb62caceaffe87d7c2.jpg"
+    "./products/44d2068bb86bb7dc8a0a9a2b2a735e67.jpeg",
+    "/products/44d5c61d18d31c3f585ce8d53a6ad855.jpeg",
+    "/products/ad602487725baa27e3b484c14dbe41f2.jpeg",
+    "/products/3e934b44d095bc2cd92e21ccfc8d3ec2.jpg",
+    "/products/558952cc07fa4a3d9f6e1e02c25467e7.jpg",
+    "/products/959efb74d0b20696a1052d2183090da7.jpg",
+    "/products/abac42bc23fe1bf46b1c5350867e4a8f.jpg",
+    "/products/fa2236bc99952c2de3fb9675e97d5989.jpg",
+    "/products/477baf9c3c38dd0df40e6153de1e79a1.jpg",
+    "/products/c1ba536f8903cdc9cb2880f7d8d4b862.jpeg",
+    "/products/29d1b5096fd85674097a619240d6cc23.jpg",
+    "/products/913d58c585e2696e78f3fe78517ac713.jpg",
+    "/products/3abc6de7523f7bc54d7f1075c54160f2.jpg",
+    "/products/951effdee8d490dfa5202a635a4beaed.jpg",
+    "/products/432f87390f1cd45f448affc85ef412c9.jpg",
+    "/products/38694f72ea3660f273988af1e3a7c513.jpg",
+    "/products/0f05e1723f7b0782c4f39e839bd99d6b.jpg",
+    "/products/5c2cb4c377d477cc7f1c09918846abca.jpg",
+    "/products/e000ce927731205809597c98bd0ac87d.jpg",
+    "/products/a4d40de9e6e140d53ec67f78b35de73d.jpg",
+    "/products/d6e5609d063b958111307130ebb57c03.jpg",
+    "/products/d97cf77213e2e13a8829c958c9ef3c76.jpg",
+    "/products/c60ce471fbdd328d8d724328ecc2ea3f.jpg",
+    "/products/2da59374990669c1ce98b824c6c83b01.jpeg",
+    "/products/323977ba9f70eb683f0823ec35953881.jpg",
+    "/products/2b4275a5ef09b21ca0e8158e1bfdf07c.jpg",
+    "/products/484492bcc4100818a664beb9c6392a9c.jpg",
+    "/products/5e8fb92d7645f10eb62caceaffe87d7c.jpg",
+    "/products/5e8fb92d7645f10eb62caceaffe87d7c1.jpg",
+    "/products/5e8fb92d7645f10eb62caceaffe87d7c2.jpg"
 ];
 
 // Overview Content Component
 const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
     const [activeOfferTab, setActiveOfferTab] = useState<'booking' | 'walkin'>('booking');
 
+    // Updated renderOfferContent with improved styling
     const renderOfferContent = () => {
-        if (activeOfferTab === 'booking') {
-            return (
-                <>
-                    <div className={styles.sideOfferCard}>
-                        <div className={styles.sideOfferBadge}>RESTAURANT OFFER</div>
-                        <div className={styles.sideOfferIconWrapper}>
+        return (
+            <div className={styles.offerContentWrapper}>
+                <div className={styles.offerCard}>
+                    <h4 className={styles.offerTypeTitle}>
+                        {activeOfferTab === "booking"
+                            ? "RESTAURANT OFFER"
+                            : "WALK-IN OFFER"}
+                    </h4>
+
+                    <div className={styles.offerMainContent}>
+                        <div className={styles.offerIcon}>
                             <img
                                 src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/offer_25202605.png"
                                 alt="Deal Icon"
                                 className={styles.sideOfferIcon}
                             />
-                            <div className={styles.sideOfferTextWrapper}>
-                                <p className={styles.sideOfferBrand}>40% Off On Entire Bill.</p>
-                                <span className={styles.sideOfferDescSmall}>Book & Pay to Claim</span>
-                            </div>
+                        </div>
+
+                        <div className={styles.offerDetails}>
+                            <h4 className={styles.offerTitle}>
+                                {activeOfferTab === "booking"
+                                    ? "40% Off On Entire Bill."
+                                    : "Flat 20% Off"}
+                            </h4>
+
+                            {activeOfferTab === "booking" && (
+                                <span className={styles.offerDescription}>
+                                    Book & Pay to Claim
+                                </span>
+                            )}
                         </div>
                     </div>
-                    <div className={styles.sideOfferCard}>
-                        <div className={styles.sideOfferBadge}>ADD-ON OFFERS</div>
-                        <div className={styles.sideOfferCarousel}>
-                            <div className={styles.sideOfferCarouselItem}>
-                                <div className={styles.sideOfferPaymentCard}>
-                                    <div className={styles.sideOfferPaymentLogo}>
-                                        <img
-                                            src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_25_logo_indusind_full_28thJuly.png"
-                                            alt="IndusInd"
-                                            className={styles.sideOfferPaymentLogoImg}
-                                        />
-                                    </div>
-                                    <div className={styles.sideOfferPaymentText}>
-                                        <p className={styles.sideOfferPaymentValue}>Upto 20% off</p>
-                                        <span className={styles.sideOfferPaymentName}>with IndusInd</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.sideOfferCarouselDots}>
-                                <span className={`${styles.sideOfferDot} ${styles.activeDot}`}></span>
-                                <span className={styles.sideOfferDot}></span>
-                                <span className={styles.sideOfferDot}></span>
-                            </div>
+
+                    <div className={styles.addOnTitle}>
+                        ADD-ON OFFERS
+                    </div>
+
+                    <div className={styles.addOnOffer}>
+                        <div className={styles.addOnBankLogo}>
+                            IndusInd Bank
+                        </div>
+
+                        <div className={styles.addOnText}>
+                            <strong>Upto 20% off</strong>
+                            <span>with IndusInd</span>
                         </div>
                     </div>
-                </>
-            );
-        } else {
-            return (
-                <>
-                    <div className={styles.sideOfferCard}>
-                        <div className={styles.sideOfferBadge}>WALK-IN OFFER</div>
-                        <div className={styles.sideOfferIconWrapper}>
-                            <img
-                                src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/offer_25202605.png"
-                                alt="Deal Icon"
-                                className={styles.sideOfferIcon}
-                            />
-                            <div className={styles.sideOfferTextWrapper}>
-                                <p className={styles.sideOfferBrand}>Flat 20% Off</p>
-                                <span className={styles.sideOfferDescSmall}>Book & Pay to Claim</span>
-                            </div>
-                        </div>
+
+                    <div className={styles.offerDots}>
+                        <span className={`${styles.offerDot} ${styles.active}`} />
+                        <span className={styles.offerDot} />
+                        <span className={styles.offerDot} />
                     </div>
-                    <div className={styles.sideOfferCard}>
-                        <div className={styles.sideOfferBadge}>ADD-ON OFFERS</div>
-                        <div className={styles.sideOfferCarousel}>
-                            <div className={styles.sideOfferCarouselItem}>
-                                <div className={styles.sideOfferPaymentCard}>
-                                    <div className={styles.sideOfferPaymentLogo}>
-                                        <img
-                                            src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_25_logo_indusind_full_28thJuly.png"
-                                            alt="IndusInd"
-                                            className={styles.sideOfferPaymentLogoImg}
-                                        />
-                                    </div>
-                                    <div className={styles.sideOfferPaymentText}>
-                                        <p className={styles.sideOfferPaymentValue}>Upto 20% off</p>
-                                        <span className={styles.sideOfferPaymentName}>with IndusInd</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.sideOfferCarouselDots}>
-                                <span className={`${styles.sideOfferDot} ${styles.activeDot}`}></span>
-                                <span className={styles.sideOfferDot}></span>
-                                <span className={styles.sideOfferDot}></span>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            );
-        }
+                </div>
+            </div>
+        );
     };
 
     return (
@@ -219,32 +189,6 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                     </div>
                 </div>
 
-                {/* Table Reservation Section */}
-                {/* <div className={styles.reservationSection}>
-                    <div className={styles.reservationHeader}>
-                        <h3 className={styles.sectionTitle}>Table reservation</h3>
-                        <div className={styles.reservationBadge}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 16 17" fill="none">
-                                <path fillRule="evenodd" clipRule="evenodd" d="M9.04079 1.18164C8.64572 0.270833 7.35428 0.270833 6.95921 1.18164C6.66851 1.85182 5.82962 2.07664 5.24284 1.64163C4.44538 1.05042 3.32696 1.69625 3.44014 2.68261C3.52342 3.40838 2.9093 4.02261 2.18367 3.93931C1.1975 3.82612 0.55178 4.94474 1.14288 5.74235C1.57781 6.32924 1.35303 7.16829 0.682979 7.45904C-0.22766 7.85419 -0.22766 9.14586 0.682979 9.54101C1.35303 9.83176 1.57781 10.6708 1.14288 11.2577C0.55178 12.0553 1.1975 13.1739 2.18367 13.0607C2.9093 12.9774 3.52342 13.5917 3.44014 14.3174C3.32696 15.3038 4.44538 15.9496 5.24284 15.3584C5.82962 14.9234 6.66851 15.1482 6.95921 15.8184C7.35428 16.7292 8.64572 16.7292 9.04079 15.8184C9.33149 15.1482 10.1704 14.9234 10.7572 15.3584C11.5546 15.9496 12.673 15.3038 12.5599 14.3174C12.4766 13.5917 13.0907 12.9774 13.8163 13.0607C14.8025 13.1739 15.4482 12.0553 14.8571 11.2577C14.4222 10.6708 14.647 9.83176 15.317 9.54101C16.2277 9.14586 16.2277 7.85419 15.317 7.45904C14.647 7.16829 14.4222 6.32924 14.8571 5.74235C15.4482 4.94474 14.8025 3.82612 13.8163 3.93931C13.0907 4.02261 12.4766 3.40838 12.5599 2.68261C12.673 1.69625 11.5546 1.05042 10.7572 1.64163C10.1704 2.07664 9.33149 1.85182 9.04079 1.18164ZM7.43199 6.76503C7.43199 7.41264 6.90696 7.93777 6.25947 7.93777C5.61197 7.93777 5.08694 7.41264 5.08694 6.76503C5.08694 6.11741 5.61197 5.59229 6.25947 5.59229C6.90696 5.59229 7.43199 6.11741 7.43199 6.76503ZM5.09802 11.0651C5.09802 10.852 5.18335 10.6585 5.32145 10.5178L10.0096 5.82814C10.1405 5.7291 10.304 5.67047 10.4806 5.67047C10.9124 5.67047 11.2622 6.02034 11.2622 6.4523C11.2622 6.62886 11.2036 6.79239 11.1059 6.92139L6.4158 11.6124C6.27445 11.7518 6.08163 11.8404 5.86797 11.8469C5.44196 11.8404 5.09802 11.4931 5.09802 11.0651ZM10.1679 9.50142C9.52039 9.50142 8.99536 10.0266 8.99536 10.6742C8.99536 11.3218 9.52039 11.8469 10.1679 11.8469C10.8154 11.8469 11.3404 11.3218 11.3404 10.6742C11.3404 10.0266 10.8154 9.50142 10.1679 9.50142Z" fill="url(#paint0_linear)"></path>
-                                <defs><linearGradient id="paint0_linear" x1="0" y1="16.5015" x2="16" y2="16.5015" gradientUnits="userSpaceOnUse"><stop stopColor="#538CEE" /><stop offset="1" stopColor="#1155CB" /></linearGradient></defs>
-                            </svg>
-                            <span>Flat 10% OFF + 3 more offers</span>
-                        </div>
-                    </div>
-                    <div className={styles.reservationControls}>
-                        <div className={styles.reservationSelect}>
-                            <span>Today</span>
-                            <FontAwesomeIcon icon={faChevronDown} className={styles.selectIcon} />
-                        </div>
-                        <div className={styles.reservationSelect}>
-                            <span>1 guest</span>
-                            <FontAwesomeIcon icon={faChevronDown} className={styles.selectIcon} />
-                        </div>
-                    </div>
-                    <button className={styles.bookTableBtn}>Book a table</button>
-                </div> */}
-
-                {/* Menu Section */}
                 {/* Menu Section */}
                 <div className={styles.menuSection}>
                     <div className={styles.menuHeader}>
@@ -337,11 +281,12 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                 </div>
             </div>
 
-            {/* Right Column - 30% */}
+            {/* Right Column - 30% - Updated with improved styling */}
             <div className={styles.overviewRight}>
                 <div className={styles.offersForYou}>
                     <h3 className={styles.offersForYouTitle}>Offers For You</h3>
 
+                    {/* Tabs Row */}
                     {/* Tabs Row */}
                     <div className={styles.sideOfferTabs}>
                         <div
@@ -359,6 +304,7 @@ const OverviewContent = ({ restaurant }: { restaurant?: any }) => {
                             <span className={styles.sideOfferTabDiscount}>(Upto 20% Off)</span>
                         </div>
                     </div>
+
                     {/* Dynamic Content Based on Active Tab */}
                     {renderOfferContent()}
 
@@ -398,62 +344,61 @@ const ReviewsContent = () => (
 const filters = ['All (52)', 'Food (41)', 'Ambience (8)'];
 
 const PhotosContent = ({ restaurant }: { restaurant?: any }) => {
-  const [activeTab, setActiveTab] = useState('All');
+    const [activeTab, setActiveTab] = useState('All');
 
-  return (
-    <div className={styles.photosContainer}>
-      <h2 className={styles.photosHeading}>{restaurant?.name} Photos</h2>
+    return (
+        <div className={styles.photosContainer}>
+            <h2 className={styles.photosHeading}>{restaurant?.name} Photos</h2>
 
-      <div className={styles.photosTabsContainer}>
-        {filters.map((filter) => {
-          const label = filter.split(' ')[0];
-          const isActive = activeTab === label;
-          return (
-            <button
-              key={filter}
-              onClick={() => setActiveTab(label)}
-              className={`${styles.photosTabButton} ${isActive ? styles.photosActiveTab : ''}`}
-            >
-              {filter}
-            </button>
-          );
-        })}
-      </div>
+            <div className={styles.photosTabsContainer}>
+                {filters.map((filter) => {
+                    const label = filter.split(' ')[0];
+                    const isActive = activeTab === label;
+                    return (
+                        <button
+                            key={filter}
+                            onClick={() => setActiveTab(label)}
+                            className={`${styles.photosTabButton} ${isActive ? styles.photosActiveTab : ''}`}
+                        >
+                            {filter}
+                        </button>
+                    );
+                })}
+            </div>
 
-      <div className={styles.photosGrid}>
-        {restaurentDummyImages.map((src, index) => (
-          <div key={index} className={styles.photosImageWrapper}>
-            <img src={src} alt="Gallery" loading="lazy" className={styles.photosImage} />
-          </div>
-        ))}
-      </div>
+            <div className={styles.photosGrid}>
+                {restaurentDummyImages.map((src, index) => (
+                    <div key={index} className={styles.photosImageWrapper}>
+                        <img src={src} alt="Gallery" loading="lazy" className={styles.photosImage} />
+                    </div>
+                ))}
+            </div>
 
-      <div className={styles.photosPagination}>
-        <div className={styles.photosShowingText}>Showing 1-30 of 52 images</div>
-        <div className={styles.photosControls}>
-          <a href="#1" className={`${styles.photosPageNum} ${styles.photosActiveNum}`}>1</a>
-          <a href="#2" className={styles.photosPageNum}>2</a>
-          <a href="#next" className={styles.photosPageNum}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20" viewBox="0 0 20 20">
-              <path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z"></path>
-            </svg>
-          </a>
+            <div className={styles.photosPagination}>
+                <div className={styles.photosShowingText}>Showing 1-30 of 52 images</div>
+                <div className={styles.photosControls}>
+                    <a href="#1" className={`${styles.photosPageNum} ${styles.photosActiveNum}`}>1</a>
+                    <a href="#2" className={styles.photosPageNum}>2</a>
+                    <a href="#next" className={styles.photosPageNum}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6.98 15.94c-0.3-0.28-0.3-0.76 0-1.060l4.46-4.46-4.46-4.48c-0.3-0.28-0.3-0.76 0-1.060s0.76-0.28 1.060 0l5 5c0.28 0.3 0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-
-const MenuContent = () => (
+const SimilarRestaurantsContent = () => (
     <div className={styles.tabContent}>
-        <h3 className={styles.contentTitle}>Our Menu</h3>
+        <h3 className={styles.contentTitle}>Similar Restaurants</h3>
     </div>
 );
 
-const BookTableContent = () => (
+const LocationContent = () => (
     <div className={styles.tabContent}>
-        <h3 className={styles.contentTitle}>Book a Table</h3>
+        <h3 className={styles.contentTitle}>Location</h3>
     </div>
 );
 
@@ -471,9 +416,9 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
         { id: 'overview', label: 'Overview', icon: faInfoCircle, content: <OverviewContent restaurant={restaurantData} /> },
         { id: 'order-online', label: 'Order Online', icon: faShoppingBag, count: 5, content: <OrderOnlineContent /> },
         { id: 'reviews', label: 'Reviews', icon: faStar, count: 42, content: <ReviewsContent /> },
-        { id: 'photos', label: 'Photos', icon: faCamera, count: 128, content: <PhotosContent restaurant={restaurantData}/> },
-        { id: 'menu', label: 'Menu', icon: faClipboardList, content: <MenuContent /> },
-        { id: 'book-table', label: 'Book a Table', icon: faCalendarCheck, content: <BookTableContent /> },
+        { id: 'photos', label: 'Photos', icon: faCamera, count: 128, content: <PhotosContent restaurant={restaurantData} /> },
+        { id: 'similar-restaurants', label: 'Similar Restaurants', icon: faStore, content: <SimilarRestaurantsContent /> },
+        { id: 'location', label: 'Location', icon: faMapMarkerAlt, content: <LocationContent /> },
     ];
 
     // Scroll-based active tab detection

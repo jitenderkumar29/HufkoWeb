@@ -40,13 +40,12 @@ const DineOutItemsListCard: React.FC<DineOutItemsListCardProps> = ({
   title = '',
   onItemClick,
   className = '',
-  columns = 3, // Default to 3 columns
+  columns = 3,
 }) => {
   const getRatingClass = (rating: number) => {
     if (rating >= 4.5) return styles.ratingExcellent;
     if (rating >= 4) return styles.ratingGood;
     if (rating >= 3) return styles.ratingAverage;
-
     return styles.ratingPoor;
   };
 
@@ -58,7 +57,6 @@ const DineOutItemsListCard: React.FC<DineOutItemsListCardProps> = ({
         </h2>
       )}
 
-      {/* Render ALL items, no slicing */}
       <div 
         className={styles.gridContainer}
         style={{ 
@@ -66,11 +64,15 @@ const DineOutItemsListCard: React.FC<DineOutItemsListCardProps> = ({
         }}
       >
         {items.map((item) => {
+          // Get the first offer as primary
           const primaryOffer = item.offers?.[0];
-          const remainingOffers = Math.max(
-            0,
-            (item.offers?.length || 0) - 1
-          );
+          
+          // Calculate remaining offers (all offers except the first one)
+          const remainingOffers = 2;
+          // const remainingOffers = item.offers?.length > 1 ? item.offers.length - 1 : 0;
+          
+          // Get remaining offers details for display
+          const remainingOfferTitles = item.offers?.slice(1).map(offer => offer.title) || [];
 
           return (
             <article
@@ -153,6 +155,7 @@ const DineOutItemsListCard: React.FC<DineOutItemsListCardProps> = ({
                   </div>
                 )}
 
+                {/* Primary Offer */}
                 {primaryOffer && (
                   <div className={styles.offerRow}>
                     <span className={styles.offerText}>
@@ -166,6 +169,22 @@ const DineOutItemsListCard: React.FC<DineOutItemsListCardProps> = ({
                     )}
                   </div>
                 )}
+
+                {/* Display Additional Offers if there are more */}
+                {/* {remainingOffers > 0 && (
+                  <div className={styles.additionalOffers}>
+                    {remainingOfferTitles.slice(0, 2).map((title, index) => (
+                      <div key={index} className={styles.additionalOffer}>
+                        • {title}
+                      </div>
+                    ))}
+                    {remainingOffers > 2 && (
+                      <div className={styles.additionalOffer}>
+                        • +{remainingOffers - 2} more offers
+                      </div>
+                    )}
+                  </div>
+                )} */}
 
                 {item.bankOffers?.[0] && (
                   <div className={styles.bankOfferRow}>

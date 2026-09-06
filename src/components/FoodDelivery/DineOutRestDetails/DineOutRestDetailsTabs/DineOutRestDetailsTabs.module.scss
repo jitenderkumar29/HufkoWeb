@@ -4,8 +4,6 @@
     width: 100%;
     background-color: $white;
     border-radius: 12px;
-    // margin: 0rem 2rem; 
-    // overflow: hidden;
 }
 
 /* ============================================ */
@@ -121,10 +119,7 @@
 }
 
 .sectionContent {
-    // background: $white;
     border-radius: 12px;
-    // padding: 24px;
-    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 @keyframes fadeIn {
@@ -158,9 +153,7 @@
 }
 
 .overviewRight {
-    flex: 0 0 calc(30% - 20px);
-    max-width: calc(30% - 20px);
-    box-sizing: border-box;
+    width: 100%;
 }
 
 /* Dining Offers Section */
@@ -243,95 +236,6 @@
     opacity: 0.87;
     margin: 0;
     line-height: 1.4;
-}
-
-/* Reservation Section */
-.reservationSection {
-    background: $gray-50;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 32px;
-}
-
-.reservationHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
-
-    .sectionTitle {
-        margin-bottom: 0;
-    }
-}
-
-.reservationBadge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #538CEE 0%, #1155CB 100%);
-    color: $white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-
-    svg {
-        flex-shrink: 0;
-    }
-}
-
-.reservationControls {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.reservationSelect {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: $white;
-    border: 1px solid $gray-300;
-    border-radius: 8px;
-    padding: 10px 14px;
-    flex: 1;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        border-color: $secondary-color;
-    }
-
-    span {
-        font-size: 14px;
-        color: $gray-800;
-    }
-}
-
-.selectIcon {
-    font-size: 12px;
-    color: $gray-500;
-}
-
-.bookTableBtn {
-    width: 100%;
-    padding: 12px;
-    background: $secondary-color;
-    color: $white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background: $primary-color;
-        transform: translateY(-2px);
-        box-shadow: $box-shadow-light-1;
-    }
 }
 
 /* Menu Section */
@@ -425,11 +329,6 @@
     transition: all 0.3s ease;
     cursor: pointer;
 
-    &:hover {
-        // transform: translateY(-4px);
-        // box-shadow: $card-shadow-hover;
-    }
-
     .menuPageImage {
         width: 130px;
         height: 170px;
@@ -440,7 +339,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
 
         img {
             width: 100%;
@@ -495,7 +393,6 @@
 .knownForTags {
     font-size: 14px;
     color: $gray-600;
-    // line-height: 1s.6;
 }
 
 .costAmount {
@@ -525,7 +422,7 @@
 
 .paymentMethods {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     flex-wrap: wrap;
 
     span {
@@ -536,7 +433,6 @@
 
 /* More Info Section */
 .moreInfoSection {
-    // margin-bottom: 16px;
     background: $white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 1rem;
@@ -565,17 +461,17 @@
 }
 
 .checkIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;       /* Adjust size */
-  height: 20px;      /* Adjust size */
-  background-color: #28a745; /* The green color from the image */
-  color: $white !important;
-  border-radius: 50%; /* Makes it a circle */
-  font-size: 14px;    /* Adjust checkmark size */
-  font-weight: bold;
-  line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #28a745;
+    color: $white !important;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
 }
 
 /* ============================================ */
@@ -583,115 +479,178 @@
 /* ============================================ */
 
 .offersForYou {
-    background: $white;
-    border: 1px solid #dee2e6;
-    border-radius: 12px;
-    padding: 20px;
-    position: sticky;
-    top: 120px;
     width: 100%;
-    max-width: 100%;
+    min-height: 570px;
+    padding: 24px 24px 36px;
+    border: 1px solid #d6d6d6;
+    border-radius: 28px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(250, 249, 247, 0.96) 100%
+    );
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 120px;
 }
 
 .offersForYouTitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #dee2e6;
+    margin: 0 0 24px;
+    color: #1f2933;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-/* Side Offer Tabs */
+/* ===========================
+   OFFER TABS
+=========================== */
+
 .sideOfferTabs {
+    position: relative;
     display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-    background: #FFF5F3;
-    border-radius: 10px;
-    padding: 4px;
-    border: 1px solid #FFE2DB;
+    align-items: flex-end;
+    width: 100%;
+    height: 82px;
+    margin-top: 10px;
+    z-index: 2;
 }
 
 .sideOfferTab {
+    position: relative;
     flex: 1;
-    padding: 10px 12px;
-    border-radius: 8px;
-    text-align: center;
+    height: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    user-select: none;
     transition: all 0.3s ease;
-
-    &.activeTab {
-        background: $white;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
-        border: 1px solid #FFE2DB;
-
-    }
-
-    &:hover {
-        background: $white;
-    }
+    box-sizing: border-box;
 }
 
 .sideOfferTabLabel {
-    display: block;
-    font-size: 11px;
+    color: #343b43;
+    font-size: 18px;
     font-weight: 700;
-    color: #0071f3;
     letter-spacing: 0.3px;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-
-    .activeTab & {
-        color: #0071f3;
-    }
+    line-height: 1.3;
 }
 
 .sideOfferTabDiscount {
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    color: #333;
-
-    .activeTab & {
-        color: #1a1a1a;
-    }
+    margin-top: 3px;
+    color: #59616a;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-/* Side Offer Cards */
-.sideOfferCard {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
-
-    &:hover {
-        // transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
+/* Active Tab */
+.activeTab {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 250, 247, 0.98),
+        rgba(255, 246, 240, 0.8)
+    );
+    border: 1px solid #f1c9bb;
+    border-bottom: none;
+    border-radius: 30px 30px 0 0;
+    z-index: 3;
 }
 
-.sideOfferBadge {
-    font-size: 11px;
+.activeTab .sideOfferTabDiscount {
+    color: #e94a20;
+}
+
+/* Non Active Tab */
+.nonactiveTab {
+    background: transparent;
+    border-bottom: 1px solid #f1c9bb;
+}
+
+/* First non-active tab (left) */
+// .nonactiveTab:first-child {
+//     border-radius: 0 0 30px 0 ;
+// }
+
+// /* Last non-active tab (right) */
+// .nonactiveTab:last-child {
+//     border-radius: 0 0  0 30px;
+// }
+
+.nonactiveTab:hover {
+    background: rgba(255, 248, 244, 0.7);
+}
+
+/* ===========================
+   OFFER CONTENT
+=========================== */
+
+.offerContentWrapper {
+    position: relative;
+    margin-top: -1px;
+    min-height: 286px;
+    padding: 20px;
+    border: 1px solid #f1c9bb;
+    border-top: none;
+    border-radius: 0 0 34px 34px;
+    background: repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent 38px,
+        rgba(225, 180, 150, 0.16) 39px,
+        rgba(225, 180, 150, 0.16) 41px,
+        transparent 42px,
+        transparent 78px
+    ),
+    linear-gradient(
+        180deg,
+        rgba(255, 253, 251, 0.92),
+        rgba(255, 255, 255, 0.85)
+    );
+    box-sizing: border-box;
+}
+
+.offerCard {
+    position: relative;
+    // min-height: 270px;
+    padding: 26px 20px 18px;
+    border: 1px solid #d7d7d7;
+    border-radius: 32px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(248, 248, 248, 0.98) 100%
+    );
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+}
+
+.offerTypeTitle {
+    margin: 0;
+    text-align: center;
+    color: #99451f;
+    font-size: 15px;
     font-weight: 700;
-    color: #0071f3;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     text-transform: uppercase;
-    margin-bottom: 8px;
 }
 
-.sideOfferIconWrapper {
+.offerMainContent {
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
+    gap: 18px;
+    margin: 24px 0 22px;
+}
+
+.offerIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sideOfferIcon {
@@ -700,153 +659,156 @@
     flex-shrink: 0;
 }
 
-.sideOfferTextWrapper {
-    flex: 1;
+.offerDetails {
+    display: flex;
+    flex-direction: column;
 }
 
-.sideOfferBrand {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1a1a1a;
+.offerTitle {
     margin: 0;
-}
-
-.sideOfferDesc {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-    margin: 2px 0;
-}
-
-.sideOfferDescSmall {
-    font-size: 12px;
-    color: #6c757d;
-    margin: 2px 0;
-}
-
-/* Side Offer Carousel */
-.sideOfferCarousel {
-    margin-top: 4px;
-}
-
-.sideOfferCarouselItem {
-    padding: 4px 0;
-}
-
-.sideOfferPaymentCard {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 12px;
-    background: $white;
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-}
-
-.sideOfferPaymentLogo {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.sideOfferPaymentLogoImg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.sideOfferPaymentText {
-    flex: 1;
-}
-
-.sideOfferPaymentValue {
-    font-size: 14px;
+    color: #2f3943;
+    font-size: 22px;
     font-weight: 600;
-    color: #333;
-    margin: 0;
+    line-height: 1.3;
 }
 
-.sideOfferPaymentName {
-    font-size: 12px;
-    color: #6c757d;
+.offerDescription {
+    margin-top: 3px;
+    color: #555d66;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
-.sideOfferCarouselDots {
+.addOnTitle {
+    position: relative;
+    margin: 18px 0 16px;
+    padding-top: 8px;
+    text-align: center;
+    color: #99451f;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.addOnTitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 110px;
+    height: 1px;
+    transform: translateX(-50%);
+    background: #e9c8b9;
+}
+
+.addOnOffer {
     display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.addOnBankLogo {
+    width: 78px;
+    min-width: 78px;
+    height: 32px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 6px;
-    margin-top: 8px;
+    border-radius: 5px;
+    background: #92342e;
+    color: #ffffff;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 700;
 }
 
-.sideOfferDot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #dee2e6;
-    transition: all 0.3s ease;
-
-    &.activeDot {
-        background: #0071f3;
-        width: 18px;
-        border-radius: 3px;
-    }
-}
-
-/* Side Offer Actions */
-.sideOfferActions {
+.addOnText {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+}
+
+.addOnText strong {
+    color: #3b424a;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.addOnText span {
+    margin-top: 2px;
+    color: #555d66;
+    font-size: 15px;
+}
+
+.offerDots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
     margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid #FFF6F4;
+}
+
+.offerDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #cfd3d6;
+}
+
+.offerDot.active {
+    background: #e94a20;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.sideOfferActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.sideBookNowBtn,
+.sidePayBillBtn {
+    width: 100%;
+    min-height: 62px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .sideBookNowBtn {
-    flex: 1;
-    padding: 12px 16px;
-    background: $white;
-    color: $green;
-    border: 1.5px solid $green;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border: 1.5px solid #ff4b20;
+    background: #ffffff;
+    color: #e84920;
+}
 
-    &:hover {
-        background: #f8f9fa;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
+.sideBookNowBtn:hover {
+    background: #fff6f2;
+    transform: translateY(-1px);
 }
 
 .sidePayBillBtn {
-    flex: 1;
-    padding: 12px 16px;
-    background: $green;
-    color: $white;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border: 1px solid #ff4b20;
+    background: #ff4820;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(255, 72, 32, 0.16);
+}
 
-    &:hover {
-        background: $green-dark;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
+.sidePayBillBtn:hover {
+    background: #eb3e19;
+    transform: translateY(-1px);
 }
 
 /* ============================================ */
 /* OTHER TAB CONTENT STYLES */
 /* ============================================ */
-
 
 .tabContent {
     width: 100%;
@@ -903,8 +865,149 @@
 }
 
 /* ============================================ */
+/* PHOTOS TAB */
+/* ============================================ */
+
+.photosContainer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: $white;
+    color: #1C1C1C;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+}
+
+.photosHeading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #1C1C1C;
+}
+
+.photosTabsContainer {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.photosTabButton {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    border: 1px solid #E0E0E0;
+    background-color: $white;
+    color: #1C1C1C;
+
+    &:hover {
+        background-color: #f8f8f8;
+    }
+}
+
+.photosActiveTab {
+    background-color: #E23744;
+    color: $white !important;
+    border-color: #E23744;
+
+    &:hover {
+        background-color: #E23744;
+    }
+}
+
+.photosGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.photosImageWrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: $background-gray;
+
+    &:hover .photosImage {
+        transform: scale(1.05);
+    }
+}
+
+.photosImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photosPagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+}
+
+.photosShowingText {
+    font-size: 14px;
+    color: #696969;
+}
+
+.photosControls {
+    display: flex;
+    gap: 8px;
+}
+
+.photosPageNum {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #E0E0E0;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #1C1C1C;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover:not(.photosActiveNum) {
+        background-color: #f8f8f8;
+    }
+}
+
+.photosActiveNum {
+    background-color: #1C1C1C;
+    color: $white;
+    border-color: #1C1C1C;
+}
+
+/* ============================================ */
 /* RESPONSIVE STYLES */
 /* ============================================ */
+
+@media (max-width: 1200px) {
+    .offersForYou {
+        padding: 22px 20px 32px;
+    }
+
+    .sideOfferTabLabel {
+        font-size: 16px;
+    }
+
+    .sideOfferTabDiscount {
+        font-size: 14px;
+    }
+
+    .offerTitle {
+        font-size: 20px;
+    }
+}
 
 @media (max-width: 1024px) {
     .tabNav {
@@ -985,25 +1088,72 @@
     }
 
     .offersForYou {
-        padding: 16px;
+        min-height: auto;
+        padding: 20px 16px 24px;
+        border-radius: 22px;
+    }
+
+    .offersForYouTitle {
+        font-size: 21px;
     }
 
     .sideOfferTabs {
-        flex-direction: column;
+        height: 72px;
+    }
+
+    .sideOfferTab {
+        height: 70px;
+    }
+
+    .sideOfferTabLabel {
+        font-size: 14px;
+    }
+
+    .sideOfferTabDiscount {
+        font-size: 13px;
+    }
+
+    .activeTab {
+        border-radius: 24px 24px 0 0;
+    }
+
+    .offerContentWrapper {
+        min-height: auto;
+        padding: 14px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .offerCard {
+        min-height: auto;
+        padding: 22px 16px 18px;
+        border-radius: 25px;
+    }
+
+    .offerMainContent {
+        gap: 14px;
+    }
+
+    .offerTitle {
+        font-size: 18px;
     }
 
     .sideOfferActions {
-        flex-direction: column;
+        gap: 10px;
     }
 
     .sideBookNowBtn,
     .sidePayBillBtn {
-        width: 100%;
+        min-height: 56px;
+        font-size: 16px;
     }
 
     .tabLink.active::after,
     .tabLink:hover::after {
         bottom: -3px;
+    }
+
+    .photosGrid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -1053,15 +1203,24 @@
         padding: 12px;
     }
 
-    .sideOfferPaymentCard {
-        flex-direction: column;
-        text-align: center;
+    .sideOfferTabs {
+        height: 68px;
     }
 
-    .sideOfferIconWrapper {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .sideOfferTab {
+        height: 66px;
+    }
+
+    .sideOfferTabLabel {
+        font-size: 12px;
+    }
+
+    .sideOfferTabDiscount {
+        font-size: 11px;
+    }
+
+    .sideOfferActions {
+        grid-template-columns: 1fr;
     }
 
     .offersForYou {
@@ -1070,6 +1229,10 @@
 
     .offersForYouTitle {
         font-size: 16px;
+    }
+
+    .photosGrid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1086,135 +1249,50 @@
     }
 }
 
+/* ============================================ */
+/* REDUCED MOTION */
+/* ============================================ */
 
-.photosContainer {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: $white;
-  color: #1C1C1C;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  border-radius: 12px;
+@media (prefers-reduced-motion: reduce) {
+    .section,
+    .offerCard,
+    .sideOfferTab,
+    .sideBookNowBtn,
+    .sidePayBillBtn,
+    .photosImage {
+        animation: none;
+        transition: none;
+    }
+
+    .offerCard:hover,
+    .menuPageCard:hover {
+        transform: none;
+    }
 }
 
-.photosHeading {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 0 20px 0;
-  color: #1C1C1C;
-}
+/* ============================================ */
+/* PRINT */
+/* ============================================ */
 
-.photosTabsContainer {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
-}
+@media print {
+    .tabNav {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
 
-.photosTabButton {
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  font-family: inherit;
-  transition: all 0.2s ease;
-  border: 1px solid #E0E0E0;
-  background-color: $white;
-  color: #1C1C1C;
+    .tabLink.active::after,
+    .tabLink:hover::after {
+        display: none;
+    }
 
-  &:hover {
-    background-color: #f8f8f8;
-  }
-}
+    .offersForYou {
+        position: static;
+        border: 1px solid #ddd;
+    }
 
-.photosActiveTab {
-  background-color: #E23744;
-  color: $white !important;
-  border-color: #E23744;
-
-  &:hover {
-    background-color: #E23744;
-  }
-}
-
-.photosGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.photosImageWrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 6px;
-  overflow: hidden;
-  background-color: $background-gray;
-
-  &:hover .photosImage {
-    transform: scale(1.05);
-  }
-}
-
-.photosImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.photosPagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #f0f0f0;
-  padding-top: 16px;
-}
-
-.photosShowingText {
-  font-size: 14px;
-  color: #696969;
-}
-
-.photosControls {
-  display: flex;
-  gap: 8px;
-}
-
-.photosPageNum {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid #E0E0E0;
-  background: $white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #1C1C1C;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:hover:not(.photosActiveNum) {
-    background-color: #f8f8f8;
-  }
-}
-
-.photosActiveNum {
-  background-color: #1C1C1C;
-  color: $white;
-  border-color: #1C1C1C;
-}
-
-/* Responsive adjustments for Photos */
-@media (max-width: 900px) {
-  .photosGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .photosGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .sideBookNowBtn,
+    .sidePayBillBtn {
+        display: none;
+    }
 }
