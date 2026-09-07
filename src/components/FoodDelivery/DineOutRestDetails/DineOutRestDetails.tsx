@@ -575,7 +575,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                     <div className={styles.bookTableCard} onClick={() => setBankOffers(true)}>
                         <div className={styles.bookTableCoupon}>
                             <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
-                                Book a Table{' '}
+                                Book Table{' '}
                                 <FontAwesomeIcon icon={faChevronDown} />
                             </button>
                         </div>
@@ -583,6 +583,13 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         <div className={styles.bookTableCoupon}>
                             <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
                                 Pay Bill{' '}
+                                <FontAwesomeIcon icon={faChevronDown} />
+                            </button>
+                        </div>
+
+                        <div className={styles.bookTableCoupon}>
+                            <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
+                                Order Now{' '}
                                 <FontAwesomeIcon icon={faChevronDown} />
                             </button>
                         </div>
