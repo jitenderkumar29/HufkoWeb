@@ -139,7 +139,8 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
         >
           {displayItems.map((item) => {
             const primaryOffer = item.offers?.[0];
-            const remainingOffers = item.offers?.length ? item.offers.length - 1 : 0;
+            const remainingOffers = 3;
+            // const remainingOffers = item.offers?.length ? item.offers.length - 1 : 0;
 
             return (
               <article

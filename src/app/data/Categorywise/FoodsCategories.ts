@@ -6372,6 +6372,13 @@ export const FoodAllCategoryItemsListData: FoodCategoryInterface[] = [
     slug: 'fast-food',
     cuisine: 'Fast Food, American'
   },
+  {
+    id: '19',
+    name: 'After Noon Food',
+    image: '/products/after_noon_food_002_1734567890124.png',
+    slug: 'fast-food',
+    cuisine: 'Fast Food, American'
+  },
 
   // Indian Cuisine
   {
