@@ -1,0 +1,798 @@
+// BookTablePopUp.module.scss
+@use "../../../../styles/variables.scss" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: fadeIn 0.3s ease;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.popup {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 20px 20px 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  // Scrollbar styling
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+  }
+}
+
+// Header
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(2, 6, 12, 0.75);
+  font-size: 20px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #02060c;
+  }
+}
+
+.headerText {
+  flex: 1;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #02060c;
+  margin: 0;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(2, 6, 12, 0.65);
+  margin: 2px 0 0;
+  font-weight: 400;
+}
+
+// Sections
+.section {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #02060c;
+  margin: 0 0 12px;
+}
+
+// Guest Grid
+.guestGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.guestCell {
+  background: #f1f3f6;
+  border: 1.5px solid transparent;
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #02060c;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-width: 36px;
+  text-align: center;
+
+  &:hover {
+    background: #e5e8ed;
+  }
+
+  &.selected {
+    background: #e8edf5;
+    border-color: #02060c;
+    font-weight: 600;
+    padding: 5px 13px;
+  }
+}
+
+// Date Scroll
+.dateScroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+.dateCell {
+  background: #f1f3f6;
+  border: 1.5px solid transparent;
+  border-radius: 30px;
+  padding: 6px 14px;
+  text-align: center;
+  min-width: 60px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: #e5e8ed;
+  }
+
+  &.selected {
+    background: #e8edf5;
+    border-color: #02060c;
+    padding: 5px 13px;
+  }
+
+  .day {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(2, 6, 12, 0.65);
+  }
+
+  .dateNum {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #02060c;
+    margin-top: 1px;
+  }
+
+  &.selected .day {
+    color: #02060c;
+    font-weight: 600;
+  }
+}
+
+// Slot Selection
+.slotHint {
+  font-size: 14px;
+  color: rgba(2, 6, 12, 0.55);
+  margin: 0 0 14px;
+  font-weight: 400;
+}
+
+.slotGroup {
+  border-top: 1px solid #eceff3;
+  padding-top: 14px;
+  margin-top: 14px;
+
+  &:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.slotGroupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 4px 0;
+  user-select: none;
+
+  &:hover .slotGroupName {
+    color: #02060c;
+  }
+}
+
+.slotGroupLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slotGroupIcon {
+  width: 36px;
+  height: 36px;
+  background: #f1f3f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #02060c;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.slotGroupName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #02060c;
+}
+
+.slotGroupTime {
+  font-size: 13px;
+  color: rgba(2, 6, 12, 0.5);
+  font-weight: 400;
+  margin-top: 1px;
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: rgba(2, 6, 12, 0.5);
+  font-size: 14px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #02060c;
+  }
+}
+
+.slotGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 12px;
+}
+
+.slotCell {
+  background: #f1f3f6;
+  border: 1.5px solid transparent;
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #02060c;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: #e5e8ed;
+  }
+
+  &.selected {
+    background: #e8edf5;
+    border-color: #02060c;
+    font-weight: 600;
+    padding: 5px 13px;
+  }
+}
+
+.noSlots {
+  font-size: 14px;
+  color: rgba(2, 6, 12, 0.4);
+  padding: 12px 0 8px;
+  text-align: center;
+}
+
+// Offer Selection
+.offerTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #02060c;
+  margin: 0 0 12px;
+}
+
+.offerCard {
+  background: #fafbfc;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #eceff3;
+}
+
+.offerCategory {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(2, 6, 12, 0.4);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.offerItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f3f6;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.radioInput {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+
+  &:checked {
+    border-color: #02060c;
+    background: #02060c;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+  }
+
+  &:hover {
+    border-color: #9ca3af;
+  }
+
+  &:checked:hover {
+    border-color: #02060c;
+  }
+}
+
+.offerLabel {
+  flex: 1;
+  cursor: pointer;
+}
+
+.offerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.offerName {
+  font-size: 15px;
+  font-weight: 500;
+  color: #02060c;
+}
+
+.offerFee {
+  font-size: 13px;
+  color: rgba(2, 6, 12, 0.6);
+  font-weight: 400;
+}
+
+.offerSubtext {
+  font-size: 13px;
+  color: rgba(2, 6, 12, 0.4);
+  margin-top: 2px;
+}
+
+.offerFooter {
+  font-size: 13px;
+  color: rgba(2, 6, 12, 0.45);
+  text-align: center;
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid #f1f3f6;
+}
+
+// Footer
+.footer {
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.proceedButton {
+  width: 100%;
+  background: #1a8d3f;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #157a36;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26, 141, 63, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ========== RESPONSIVE ==========
+
+// Tablets & small laptops
+@media (max-width: 768px) {
+  .popup {
+    max-width: 100%;
+    border-radius: 24px;
+    padding: 16px 16px 12px;
+    max-height: 85vh;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .sectionTitle {
+    font-size: 15px;
+  }
+
+  .guestCell {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .dateCell {
+    padding: 5px 12px;
+    min-width: 54px;
+
+    .day {
+      font-size: 12px;
+    }
+    .dateNum {
+      font-size: 13px;
+    }
+  }
+
+  .slotGroupName {
+    font-size: 15px;
+  }
+
+  .slotCell {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+
+  .offerName {
+    font-size: 14px;
+  }
+
+  .proceedButton {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+// Mobile
+@media (max-width: 480px) {
+  .overlay {
+    padding: 8px;
+    align-items: flex-end;
+  }
+
+  .popup {
+    border-radius: 20px 20px 0 0;
+    max-height: 92vh;
+    padding: 14px 14px 10px;
+    animation: slideUpMobile 0.3s ease;
+
+    @keyframes slideUpMobile {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .header {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .backButton {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .section {
+    margin-bottom: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .guestGrid {
+    gap: 4px;
+  }
+
+  .guestCell {
+    font-size: 12px;
+    padding: 4px 10px;
+    min-width: 30px;
+
+    &.selected {
+      padding: 3px 9px;
+    }
+  }
+
+  .dateScroll {
+    gap: 4px 6px;
+  }
+
+  .dateCell {
+    padding: 4px 10px;
+    min-width: 48px;
+
+    .day {
+      font-size: 11px;
+    }
+    .dateNum {
+      font-size: 12px;
+    }
+
+    &.selected {
+      padding: 3px 9px;
+    }
+  }
+
+  .slotHint {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .slotGroup {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .slotGroupLeft {
+    gap: 10px;
+  }
+
+  .slotGroupIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .slotGroupName {
+    font-size: 14px;
+  }
+
+  .slotGroupTime {
+    font-size: 12px;
+  }
+
+  .slotGrid {
+    gap: 4px;
+    padding-top: 8px;
+  }
+
+  .slotCell {
+    font-size: 12px;
+    padding: 4px 10px;
+
+    &.selected {
+      padding: 3px 9px;
+    }
+  }
+
+  .offerTitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .offerCard {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .offerCategory {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .offerItem {
+    padding: 6px 0;
+    gap: 10px;
+  }
+
+  .radioInput {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+
+    &:checked::after {
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  .offerName {
+    font-size: 13px;
+  }
+
+  .offerFee {
+    font-size: 12px;
+  }
+
+  .offerFooter {
+    font-size: 12px;
+    padding-top: 10px;
+    margin-top: 6px;
+  }
+
+  .proceedButton {
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 40px;
+  }
+
+  .footer {
+    padding-top: 4px;
+  }
+}
+
+// Very small phones
+@media (max-width: 360px) {
+  .popup {
+    padding: 12px 10px 8px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .guestCell {
+    font-size: 11px;
+    padding: 3px 8px;
+    min-width: 26px;
+  }
+
+  .dateCell {
+    padding: 3px 8px;
+    min-width: 42px;
+
+    .day {
+      font-size: 10px;
+    }
+    .dateNum {
+      font-size: 11px;
+    }
+  }
+
+  .slotCell {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .offerName {
+    font-size: 12px;
+  }
+}
+
+// Landscape phones
+@media (max-height: 600px) and (orientation: landscape) {
+  .popup {
+    max-height: 92vh;
+    padding: 12px 16px 10px;
+  }
+
+  .section {
+    margin-bottom: 10px;
+  }
+
+  .guestGrid {
+    gap: 4px;
+  }
+
+  .guestCell {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+
+  .dateScroll {
+    gap: 4px;
+  }
+
+  .dateCell {
+    padding: 3px 10px;
+    min-width: 44px;
+
+    .day {
+      font-size: 11px;
+    }
+    .dateNum {
+      font-size: 12px;
+    }
+  }
+
+  .slotGrid {
+    gap: 4px;
+    padding-top: 6px;
+  }
+
+  .slotCell {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+
+  .offerCard {
+    padding: 10px;
+  }
+
+  .proceedButton {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

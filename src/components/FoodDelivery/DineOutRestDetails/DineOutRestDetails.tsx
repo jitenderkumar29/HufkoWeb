@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import styles from './DineOutRestDetails.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,6 +34,7 @@ import Link from 'next/link';
 import mapIcon2 from '../../../../public/icons/mapIcon2.png';
 import yesBankImage from '../../../../public/icons/yesBank.png';
 import DineOutRestDetailsTabs from './DineOutRestDetailsTabs/DineOutRestDetailsTabs';
+import BookTablePopUp from './BookTablePopUp/BookTablePopUp'; // Import the popup component
 
 // Types
 export interface RestaurantRoom {
@@ -85,6 +87,9 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     const [restaurant, setRestaurant] = useState<RestaurantDataInterface | null>(null);
     const [showFeatures, setShowFeatures] = useState<boolean | null>(false);
     const [bankOffers, setBankOffers] = useState<boolean | null>(false);
+    
+    // State for Book Table Popup
+    const [isBookTableOpen, setIsBookTableOpen] = useState(false);
 
     // Default values (replacing useDineOutSearch context)
     const location = "Delhi, India";
@@ -169,6 +174,24 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         }
     };
 
+    // Book Table handler - opens the popup
+    const bookTableHandler = () => {
+        setIsBookTableOpen(true);
+    };
+
+    // Handle proceed from popup
+    const handleBookTableProceed = (bookingData: any) => {
+        console.log('Booking data:', bookingData);
+        // Here you can handle the booking logic
+        // e.g., API call, navigation, etc.
+        alert(`Table booked for ${bookingData.guests} guests at ${bookingData.slot} on ${bookingData.date.day} ${bookingData.date.date}`);
+    };
+
+    // Handle popup close
+    const handleBookTableClose = () => {
+        setIsBookTableOpen(false);
+    };
+
     const scrollToLocationOptions = () => {
         const locationSection = document.getElementById('location');
         if (locationSection) {
@@ -226,7 +249,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         ],
         totalPhotos: 33,
     };
-    2025
+
     // Updated logic to cycle through main image and thumbnails
     const allImages = [restaurant.mainImg, ...restaurant.thumbnails];
 
@@ -269,7 +292,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     };
 
     // Header Component
-    // Header Component
     const RestaurantHeader = () => (
         <div className={styles.restaurantHeader}>
             <div className={styles.leftHeading}>
@@ -311,10 +333,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                     <FontAwesomeIcon icon={faShareAlt} className={styles.shareIcon} />
                     <span>Share</span>
                 </div>
-
-                {/* <div className={styles.familyFriendly}>
-                    <span>👩 Women Friendly</span>
-                </div> */}
 
                 <div
                     className={styles.coupleFriendly}
@@ -572,9 +590,9 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         </div>
                     </div>
 
-                    <div className={styles.bookTableCard} onClick={() => setBankOffers(true)}>
+                    <div className={styles.bookTableCard}>
                         <div className={styles.bookTableCoupon}>
-                            <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
+                            <button className={styles.selectRoomButton} onClick={bookTableHandler}>
                                 Book Table{' '}
                                 <FontAwesomeIcon icon={faChevronDown} />
                             </button>
@@ -599,8 +617,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         <OfferCard />
                     </div>
 
-
-
                     <div className={styles.bankOfferCard}>
                         <ElitePackage />
                     </div>
@@ -612,13 +628,18 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     return (
         <>
             <div className={styles.mainContentBody}>
-                {/* <BackButton /> */}
                 <RestaurantCard />
-                </div>
-                <div className={styles.tabsnavigator}>
+            </div>
+            <div className={styles.tabsnavigator}>
                 <DineOutRestDetailsTabs
                     activeTabId="overview"
-                    onTabChange={(tabId) => console.log('Tab changed:', tabId)}
+                    onTabChange={(tabId) => {
+                        console.log('Tab changed:', tabId);
+                        // If "Book a Table" tab is clicked, open the popup
+                        if (tabId === 'book-table') {
+                            setIsBookTableOpen(true);
+                        }
+                    }}
                     restaurantData={{
                         cuisine: restaurant.cuisine,
                         name: restaurant.name,
@@ -627,8 +648,17 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         category: restaurant.category,
                     }}
                 />
-                </div>
-            
+            </div>
+
+            {/* Book Table Popup */}
+            {/* <BookTablePopUp
+                isOpen={isBookTableOpen}
+                onClose={handleBookTableClose}
+                restaurantName={restaurant.name}
+                location={restaurant.location}
+                onProceed={handleBookTableProceed}
+            /> */}
+
             <div className={styles.restaurantTabNavigationBar}>
                 {/* <RestaurantTabNavigationBar /> */}
             </div>

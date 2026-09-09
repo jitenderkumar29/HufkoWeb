@@ -2048,6 +2048,7 @@
     background: #ffffff;
     min-height: 100vh;
     width: 100%;
+    padding: 1rem;
 }
 
 /* Sidebar - Sticky and scrollable */
@@ -2613,34 +2614,71 @@
 }
 
 .modalContent {
-    background: white;
+    padding: 24px;
+     background: white;
     border-radius: 16px;
     max-width: 1000px;
     width: 100%;
-    max-height: 85vh;
+    max-height: 100vh;
     overflow-y: auto;
     position: relative;
-    padding: 24px;
     animation: slideUp 0.3s ease;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     border: 10px solid #87B7EB;
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
     &::-webkit-scrollbar {
-        width: 6px;
+        width: 0px;
+        background: transparent;
     }
+    
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
 
     &::-webkit-scrollbar-track {
-        background: #f0f0f0;
-        border-radius: 10px;
+        background: transparent;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 10px;
+        background: transparent;
+    }
+}
+
+/* Hide scrollbar for OrderOnlineModalUltraPremium */
+.modalContentUltra {
+    background: white;
+    border-radius: 16px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 10px solid #9ce7cc !important;
+    // border: 10px solid #87B7EB;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
     }
 
-    &::-webkit-scrollbar-thumb:hover {
-        background: #aaa;
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
     }
 }
 
@@ -3039,7 +3077,7 @@
 //Order Online Header - Now scrollable with page
 .orderOnlineHeaderBanner {
     background: #ffffff;
-    padding: 1rem 0px;
+    // padding: 1rem 0px;
     border-bottom: 8px solid #f1f1f6;
     width: 100%;
 }
@@ -3054,6 +3092,11 @@
 
 .restaurantInfo {
     flex: 1;
+}
+.restaurantInfoRight {
+    flex: 1;
+    align-items: end;
+    justify-content: end;
 }
 
 .restaurantName {
@@ -3076,7 +3119,8 @@
 
 .locationInfo {
     display: flex;
-    align-items: center;
+    align-items: end;
+    justify-content: end;
     gap: 6px;
     margin-bottom: 6px;
 }
@@ -3101,7 +3145,8 @@
 /* Rating Section */
 .ratingSection {
     display: flex;
-    align-items: center;
+    align-items: end;
+    justify-content: end;
     gap: 4px;
     margin-bottom: 6px;
     flex-wrap: wrap;
@@ -3204,6 +3249,8 @@
 
 .dealCard {
     display: flex;
+     flex: 1;
+     min-width: 0;
     align-items: center;
     gap: 12px;
     background: #f9fafb;
@@ -3212,6 +3259,13 @@
     margin-bottom: 8px;
     border: 1px solid #e8e8e8;
     width: 250px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+      &:hover {
+        border-color: #d0d0d0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
 }
 
 .dealCard:last-child {
@@ -3245,7 +3299,7 @@
 // }
 
 .dealSubtext {
-    font-size: 11px;
+    font-size: 12px;
     color: #686b78;
     margin: 2px 0 0 0;
 }
@@ -3329,7 +3383,7 @@
 .restaurantCoverImage {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 250px;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 16px;
@@ -3558,8 +3612,8 @@
     align-items: center;
     gap: 10px;
     background: #ffffff;
-    padding: 8px 10px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 20px;
     border: 1px solid #e8e8e8;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -3594,7 +3648,7 @@
 // }
 
 .dealTitle {
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 600;
     color: #1a1a1a;
     margin: 0;
@@ -3728,7 +3782,7 @@
     padding: 20px 30px;
     min-width: 0;
     max-width: 900px;
-    overflow-y: auto;
+    // overflow-y: auto;
     max-height: calc(100vh - 10px);
 }
 
@@ -4153,7 +4207,7 @@
 }
 
 .dealTitle {
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 600;
     color: #1a1a1a;
     margin: 0;
@@ -4164,10 +4218,10 @@
 }
 
 .dealSubtext {
-    font-size: 10px;
+    font-size: 12px;
     color: #686b78;
     margin: 1px 0 0 0;
-    font-weight: 400;
+    font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -4263,3 +4317,254 @@
 .orderOnlineItem{
     margin-bottom: 0.5rem;
 }
+
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Outer Modal Container */
+.modalContentUltra {
+    position: relative;
+    background: #ffffff;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 100vh; /* Changed from 100vh to 90vh */
+    overflow: visible;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Inner Scrollable Content */
+.modalScrollContent {
+    max-height: 100vh; /* Changed from 100vh to 90vh */
+    overflow-y: auto;
+    border-radius: 16px;
+    
+    /* HIDE SCROLLBAR - Firefox */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* HIDE SCROLLBAR - Chrome, Safari, Opera */
+.modalScrollContent::-webkit-scrollbar {
+    display: none;
+}
+
+/* Close Button */
+.modalCloseUltraBtn {
+    position: absolute;
+    top: -5px;
+    right: -50px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modalCloseUltraBtn:hover {
+    background: #ffffff;
+    border-color: #999;
+    transform: scale(1.1);
+}
+
+/* Header Row */
+.dealsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+/* Navigation Buttons Group */
+.dealsNavButtons {
+    display: flex;
+    gap: 8px;
+}
+
+//Filter Button
+.categoryList {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 13px;
+    padding-bottom: 3px;
+    align-items: center;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.staticCategoryList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    
+    /* Enable horizontal scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    /* Add padding so shadows/borders aren't cut off on the right */
+    // padding-bottom: 5px; 
+    
+    /* Hide scrollbar on Firefox */
+    scrollbar-width: thin; 
+    scrollbar-color: #c1c1c1 #f1f1f1; 
+}
+
+/* Show scrollbar on Webkit browsers (Chrome, Safari, Edge) */
+.staticCategoryList::-webkit-scrollbar {
+    height: 6px; /* Height of horizontal scrollbar */
+}
+
+.staticCategoryList::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.staticCategoryList::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 10px;
+}
+
+.staticCategoryList::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
+}
+
+/* --- Existing static item styles (Keep these as they are) --- */
+.staticItem {
+    display: flex;
+    flex-shrink: 0; /* Prevents items from shrinking when scrolling */
+    border: 1px solid $border-color;
+    padding: 8px 12px;
+    border-radius: 50px;
+}
+
+.staticBox {
+    display: flex;
+}
+
+.staticLabel {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.hiddenInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Track Wrapper (holds the track and icon) */
+.trackWrapper {
+    position: relative;
+    width: 40px; /* Width of the toggle track */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Gray Track (Right side) */
+/* The Gray Track */
+.track {
+    width: 100%;
+    height: 12px;
+    background-color: #E5E7EB;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* The Icon (Left side by default - OFF state) */
+.iconContainer {
+    position: absolute;
+    left: 0; /* Starts on the left side of the track */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: left 0.3s ease; /* Smooth sliding animation */
+}
+
+/* Hover effect */
+.staticPill:hover {
+    border-color: #9CA3AF;
+}
+
+/* --- ON STATE (Checkbox Checked) --- */
+/* Track turns green/red */
+.hiddenInput:checked + .staticPill .track {
+    background-color: #007A33; /* Green for Veg (Change to #D32F2F for Non-Veg) */
+    opacity: 0.3; /* Makes the track slightly transparent */
+}
+
+/* Move icon to the right side of the track */
+.hiddenInput:checked + .staticPill .iconContainer {
+    left: calc(100% - 20px); /* Moves icon to the right (20px is width of icon) */
+}
+
+.bestsellerWrapper {
+    display: flex;
+}
+
+.bestsellerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 999px;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1F2937;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bestsellerText:hover {
+    border-color: #9CA3AF;
+}
+
+.hiddenInput:checked + .staticPill {
+    border-color: #007A33;
+}
+
+.categoryButton {
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid #D1D5DB;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+

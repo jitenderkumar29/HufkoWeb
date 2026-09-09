@@ -24,6 +24,7 @@ import Image from 'next/image';
 import { FaChevronDown, FaRegClock, FaStar } from 'react-icons/fa';
 import { MdDeliveryDining } from 'react-icons/md';
 import { IoLocationOutline } from 'react-icons/io5';
+import OrderOnlineUltraPremiumContent from '../OrderOnlineUltraPremiumContent/OrderOnlineUltraPremiumContent';
 
 export interface TabItem {
     id: string;
@@ -83,6 +84,53 @@ const OrderOnlineModal = ({
                     ✕
                 </button>
                 {children}
+            </div>
+        </div>
+    );
+};
+
+const OrderOnlineModalUltraPremium = ({
+    isOpen,
+    onClose,
+    children
+}: {
+    isOpen: boolean;
+    onClose: () => void;
+    children: React.ReactNode;
+}) => {
+    // Lock body scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
+    if (!isOpen) return null;
+
+    return (
+        <div className={styles.modalOverlay} onClick={onClose}>
+            <div
+                className={styles.modalContentUltra}
+                onClick={(e) => e.stopPropagation()}
+            >
+                {/* Close Button */}
+                <button
+                    className={styles.modalCloseUltraBtn}
+                    onClick={onClose}
+                    aria-label="Close modal"
+                >
+                    ✕
+                </button>
+
+                {/* Inner Scrollable Content (Only this scrolls) */}
+                <div className={styles.modalScrollContent}>
+                    {children}
+                </div>
             </div>
         </div>
     );
@@ -394,680 +442,682 @@ const OrderOnlineContent = () => {
         "Fried Rice and Noodles (4)", "Accompaniments (7)", "Desserts and Beverages (4)"
     ];
 
-const menuData = [
-    {
-        category: "Today's Exclusive Dishes (1)",
-        items: [
-            {
-                name: "Dal Makhani",
-                desc: "Creamy and buttery Dal Makhani slow-cooked overnight with black lentils and kidney beans, finished with fresh butter and cream.",
-                type: "veg",
-                img: "/products/028c52fee52f05670233532ed4c9585b.jpeg",
-                rating: 4.8,
-                totalRatings: 324,
-                customisable: true,
-                price: 349
-            }
-        ]
-    },
-    {
-        category: "Combos (4)",
-        items: [
-            {
-                name: "Paneer Naan with Gravy Combo",
-                desc: "Soft paneer stuffed naan served with rich and creamy gravy, accompanied by fresh salad and pickle.",
-                type: "veg",
-                img: "/products/1fe0fc9e89f9f855c493ab42222fa92d.jpeg",
-                rating: 4.6,
-                totalRatings: 189,
-                customisable: true,
-                price: 299
-            },
-            {
-                name: "Onion Naan with Gravy Combo",
-                desc: "Fluffy naan loaded with caramelized onions, served with flavorful gravy and mint chutney.",
-                type: "veg",
-                img: "/products/0d0f1760c936b8b0e708f0f4b3041f57.jpeg",
-                rating: 4.5,
-                totalRatings: 156,
-                customisable: true,
-                price: 269
-            },
-            {
-                name: "Chicken Naan with Gravy Combo",
-                desc: "Tandoor-baked naan stuffed with spiced minced chicken, served with rich chicken gravy and salad.",
-                type: "non-veg",
-                img: "/products/0d0f1760c936b8b0e708f0f4b3041f571.jpeg",
-                rating: 4.7,
-                totalRatings: 234,
-                customisable: true,
-                price: 349
-            },
-            {
-                name: "Keema Naan with Gravy Combo",
-                desc: "[Chef's Special] Premium naan stuffed with flavorful minced lamb keema, served with signature gravy and raita.",
-                type: "non-veg",
-                img: "/products/711fbe1b30e557278513c39a3f81788a.jpeg",
-                rating: 4.9,
-                totalRatings: 412,
-                customisable: true,
-                price: 449
-            }
-        ]
-    },
-    {
-        category: "Soups and Salads (19)",
-        items: [
-            {
-                name: "Veg Sweet Corn Soup",
-                desc: "Creamy soup with sweet corn kernels, fresh vegetables, and a hint of black pepper.",
-                type: "veg",
-                img: "/products/988dc404663063dde160a0dc223b2eff.jpeg",
-                rating: 4.3,
-                totalRatings: 87,
-                customisable: false,
-                price: 149
-            },
-            {
-                name: "Veg Hot and Sour Soup",
-                desc: "Classic Indo-Chinese soup with mixed vegetables, tofu, and a perfect balance of hot and sour flavors.",
-                type: "veg",
-                img: "/products/1ebe5c2e985b75ec702aa9b717e329f7.jpeg",
-                rating: 4.4,
-                totalRatings: 92,
-                customisable: false,
-                price: 169
-            },
-            {
-                name: "Veg Manchow Soup",
-                desc: "Spicy and tangy soup with finely chopped vegetables, flavored with garlic and soy sauce.",
-                type: "veg",
-                img: "/products/bb8fe59f3c891d5aee7df764193c75f6.jpeg",
-                rating: 4.5,
-                totalRatings: 105,
-                customisable: false,
-                price: 179
-            },
-            {
-                name: "Veg Clear Soup",
-                desc: "Light and refreshing clear vegetable broth with seasonal vegetables and herbs.",
-                type: "veg",
-                img: "/products/8ebcd3b47fcb11e21a7efa3f2bc1bf76.jpeg",
-                rating: 4.2,
-                totalRatings: 78,
-                customisable: false,
-                price: 129
-            },
-            {
-                name: "Veg Lemon Coriander Soup",
-                desc: "Zesty lemon and fresh coriander soup with vegetables, perfect for a light appetizer.",
-                type: "veg",
-                img: "/products/bc01d0ee47a98270d771a6acda3cbd84.jpeg",
-                rating: 4.6,
-                totalRatings: 134,
-                customisable: false,
-                price: 159
-            },
-            {
-                name: "Veg Beijing Soup",
-                desc: "Authentic Chinese soup with exotic vegetables, mushrooms, and a rich umami broth.",
-                type: "veg",
-                img: "/products/9315bd9e73440e755f1bf0871e1467c0.jpeg",
-                rating: 4.1,
-                totalRatings: 63,
-                customisable: false,
-                price: 189
-            },
-            {
-                name: "Cream of Mushroom Soup",
-                desc: "Rich and creamy soup made with fresh mushrooms, garlic, and aromatic herbs.",
-                type: "veg",
-                img: "/products/fd7ae90db0b122d5daaf7cf5791f01ad2.jpeg",
-                rating: 4.7,
-                totalRatings: 156,
-                customisable: true,
-                price: 199
-            },
-            {
-                name: "Non Veg Sweet Corn Soup",
-                desc: "Hearty sweet corn soup with tender chicken pieces and crunchy corn kernels.",
-                type: "non-veg",
-                img: "/products/988dc404663063dde160a0dc223b2eff.jpeg",
-                rating: 4.3,
-                totalRatings: 95,
-                customisable: false,
-                price: 189
-            },
-            {
-                name: "Chicken Hot and Sour Soup",
-                desc: "Spicy and tangy soup with shredded chicken, mushrooms, and bamboo shoots.",
-                type: "non-veg",
-                img: "/products/1ebe5c2e985b75ec702aa9b717e329f7.jpeg",
-                rating: 4.5,
-                totalRatings: 118,
-                customisable: false,
-                price: 209
-            },
-            {
-                name: "Non Veg Manchow Soup",
-                desc: "Hearty Manchow soup with minced chicken, vegetables, and crispy noodles.",
-                type: "non-veg",
-                img: "/products/fd7ae90db0b122d5daaf7cf5791f01ad.jpeg",
-                rating: 4.4,
-                totalRatings: 89,
-                customisable: false,
-                price: 219
-            },
-            {
-                name: "Chicken Clear Soup",
-                desc: "Light and clear chicken broth with shredded chicken and fresh vegetables.",
-                type: "non-veg",
-                img: "/products/fd7ae90db0b122d5daaf7cf5791f01ad1.jpeg",
-                rating: 4.2,
-                totalRatings: 72,
-                customisable: false,
-                price: 169
-            },
-            {
-                name: "Non Veg Lemon Coriander Soup",
-                desc: "Tangy lemon and coriander soup with tender chicken pieces and vegetables.",
-                type: "non-veg",
-                img: "/products/3524a9feb30d5f9fb9d87c8642c2f405.jpeg",
-                rating: 4.6,
-                totalRatings: 142,
-                customisable: false,
-                price: 199
-            },
-            {
-                name: "Chicken Beijing Soup",
-                desc: "Exotic Chinese soup with shredded chicken, mushrooms, and spicy broth.",
-                type: "non-veg",
-                img: "/products/0a10d03200a293735beae79bd888a61d.jpeg",
-                rating: 4.3,
-                totalRatings: 81,
-                customisable: false,
-                price: 229
-            },
-            {
-                name: "Cream of Chicken Soup",
-                desc: "Luxurious creamy chicken soup with tender chicken pieces and aromatic herbs.",
-                type: "non-veg",
-                img: "/products/0a10d03200a293735beae79bd888a61d1.jpeg",
-                rating: 4.8,
-                totalRatings: 203,
-                customisable: true,
-                price: 249
-            },
-            {
-                name: "Coleslaw Salad",
-                desc: "Crisp and refreshing salad with shredded cabbage, carrots, and creamy dressing.",
-                type: "veg",
-                img: "/products/0a10d03200a293735beae79bd888a61d2.jpeg",
-                rating: 4.1,
-                totalRatings: 56,
-                customisable: true,
-                price: 149
-            },
-            {
-                name: "Fresh Garden Salad",
-                desc: "Fresh garden vegetables with lettuce, tomatoes, cucumber, and zesty dressing.",
-                type: "veg",
-                img: "/products/ed1d378970e55b413a1e7c9d9e15154a.jpeg",
-                rating: 4.2,
-                totalRatings: 67,
-                customisable: true,
-                price: 159
-            },
-            {
-                name: "Veg Crispy Salad",
-                desc: "Crispy mixed vegetables with a tangy dressing, topped with crunchy noodles.",
-                type: "veg",
-                img: "/products/44001147ad1ba6319f66475ee1b0c086.jpeg",
-                rating: 4.4,
-                totalRatings: 94,
-                customisable: true,
-                price: 179
-            },
-            {
-                name: "Chicken Crispy Salad",
-                desc: "Fresh garden salad with crispy fried chicken, vegetables, and oriental dressing.",
-                type: "non-veg",
-                img: "/products/c5779f51c9ac9ca7327fd68cb14ab9b9.jpeg",
-                rating: 4.5,
-                totalRatings: 112,
-                customisable: true,
-                price: 219
-            },
-            {
-                name: "Chicken Tikka Salad",
-                desc: "Grilled chicken tikka pieces served on a bed of fresh greens with mint dressing.",
-                type: "non-veg",
-                img: "/products/c5779f51c9ac9ca7327fd68cb14ab9b91.jpeg",
-                rating: 4.7,
-                totalRatings: 178,
-                customisable: true,
-                price: 259
-            }
-        ]
-    },
-    {
-        category: "Starters (72)",
-        items: [
-            {
-                name: "Paneer Tikka",
-                desc: "Marinated paneer cubes grilled to perfection with aromatic Indian spices, served with mint chutney.",
-                type: "veg",
-                img: "/products/8a67c9071bb5eed463cca7c7de6aa362.jpeg",
-                rating: 4.8,
-                totalRatings: 567,
-                customisable: true,
-                price: 349
-            },
-            {
-                name: "Afghani Paneer Tikka",
-                desc: "[Chef's Special] Soft paneer marinated in creamy Afghani spices, grilled in tandoor until golden.",
-                type: "veg",
-                img: "/products/f409f86f4bcd36bbc07e59af62f1402d.jpeg",
-                rating: 4.9,
-                totalRatings: 423,
-                customisable: true,
-                price: 399
-            },
-            {
-                name: "Tandoori Stuffed Aloo",
-                desc: "[Chef's Special] Baby potatoes stuffed with spiced paneer and nuts, char-grilled in tandoor.",
-                type: "veg",
-                img: "/products/ce99e934a34ac17b7322403fad69f160.jpeg",
-                rating: 4.6,
-                totalRatings: 289,
-                customisable: true,
-                price: 299
-            },
-            {
-                name: "Assorted Platter",
-                desc: "A delightful assortment of our best veg starters - paneer tikka, hara bhara kebab, and more.",
-                type: "veg",
-                img: "/products/75588d11d5f43281f6d89a571eeaf560.jpeg",
-                rating: 4.7,
-                totalRatings: 345,
-                customisable: false,
-                price: 599
-            },
-            {
-                name: "Spinach Corn Roll",
-                desc: "[Chef's Special] Crispy rolls stuffed with creamy spinach and sweet corn, served with mint chutney.",
-                type: "veg",
-                img: "/products/eeaf9d04ef45046dc361cd54d04abacf.jpeg",
-                rating: 4.5,
-                totalRatings: 234,
-                customisable: true,
-                price: 279
-            },
-            {
-                name: "Chilli Paneer",
-                desc: "Paneer tossed in a spicy chilli sauce with bell peppers and onions, perfect Indo-Chinese starter.",
-                type: "veg",
-                img: "/products/6c269607b78facd2e1ee23125b6bc428.jpeg",
-                rating: 4.6,
-                totalRatings: 456,
-                customisable: true,
-                price: 329
-            },
-            {
-                name: "Tandoori Chicken",
-                desc: "[Chef's Special] Succulent chicken marinated in yogurt and tandoori spices, grilled to perfection.",
-                type: "non-veg",
-                img: "/products/c9f65aa5dcfe4a2edfffbc11a0622444.jpeg",
-                rating: 4.9,
-                totalRatings: 789,
-                customisable: true,
-                price: 449
-            },
-            {
-                name: "Tangri Chicken",
-                desc: "Chicken drumsticks marinated in aromatic spices and grilled in tandoor until juicy and tender.",
-                type: "non-veg",
-                img: "/products/8dbd32fc412c637c060a20f708b3b858.jpeg",
-                rating: 4.7,
-                totalRatings: 512,
-                customisable: true,
-                price: 399
-            },
-            {
-                name: "Chicken Seekh Kebab",
-                desc: "Minced chicken kebab infused with fresh herbs and spices, grilled to perfection.",
-                type: "non-veg",
-                img: "/products/d264892b757995a1e03047f2e6475108.jpeg",
-                rating: 4.6,
-                totalRatings: 398,
-                customisable: true,
-                price: 399
-            },
-            {
-                name: "Mutton Seekh Kebab",
-                desc: "[Chef's Special] Premium minced mutton kebab with aromatic spices, grilled over charcoal.",
-                type: "non-veg",
-                img: "/products/05fd847bd5c365f086443d69371878ba.jpeg",
-                rating: 4.8,
-                totalRatings: 267,
-                customisable: true,
-                price: 499
-            },
-            {
-                name: "Afghani Fish Tikka [7 Pieces]",
-                desc: "[Chef's Special] Fresh fish marinated in Afghani spices and grilled to perfection, served with salad.",
-                type: "non-veg",
-                img: "/products/75af0eb486b10db6b1a5aa557d2a0547.jpeg",
-                rating: 4.9,
-                totalRatings: 345,
-                customisable: true,
-                price: 599
-            }
-        ]
-    },
-    {
-        category: "Main Course (48)",
-        items: [
-            {
-                name: "Baba's Butter Paneer",
-                desc: "[Chef's Special] Rich and creamy paneer curry cooked with fresh butter, tomatoes, and aromatic spices.",
-                type: "veg",
-                img: "/products/094b4b1bf680add85f42dc3ca2383dda.jpeg",
-                rating: 4.9,
-                totalRatings: 678,
-                customisable: true,
-                price: 449
-            },
-            {
-                name: "Kadhai Paneer",
-                desc: "Paneer cooked with bell peppers in a tangy and spicy kadhai masala, garnished with fresh coriander.",
-                type: "veg",
-                img: "/products/83b408de5d0baefcdb6266e7e1c22289.jpeg",
-                rating: 4.7,
-                totalRatings: 534,
-                customisable: true,
-                price: 429
-            },
-            {
-                name: "Baba's Butter Chicken",
-                desc: "[Chef's Special] Signature butter chicken in a rich and creamy tomato gravy, a true classic.",
-                type: "non-veg",
-                img: "/products/6646faed2f82486ac7fe6a680e7e6876.jpeg",
-                rating: 4.9,
-                totalRatings: 892,
-                customisable: true,
-                price: 549
-            },
-            {
-                name: "Babas Special Mutton",
-                desc: "[Chef's Special] Tender mutton pieces slow-cooked in a rich and aromatic gravy with secret spices.",
-                type: "non-veg",
-                img: "/products/9fbcca69c9e3d022bf040498fa8f6323.jpeg",
-                rating: 4.8,
-                totalRatings: 456,
-                customisable: true,
-                price: 649
-            },
-            {
-                name: "Baba's Butter Fish",
-                desc: "[Chef's Special] Fresh fish fillets in a rich butter gravy with aromatic spices, chef's signature.",
-                type: "non-veg",
-                img: "/products/9f19082459d69fa7322db894c5c62132.jpeg",
-                rating: 4.7,
-                totalRatings: 389,
-                customisable: true,
-                price: 599
-            }
-        ]
-    },
-    {
-        category: "Breads (12)",
-        items: [
-            {
-                name: "Tandoori Roti",
-                desc: "Traditional Indian whole wheat bread baked in a tandoor, served hot with butter.",
-                type: "veg",
-                img: "/products/6e2b7acb9048dbc31dd8c94b503ed41a.jpeg",
-                rating: 4.4,
-                totalRatings: 234,
-                customisable: false,
-                price: 49
-            },
-            {
-                name: "Butter Roti",
-                desc: "Soft and flaky whole wheat roti brushed with generous amount of fresh butter.",
-                type: "veg",
-                img: "/products/2e5f13eb3fa0e0bb054d512378728742.jpeg",
-                rating: 4.5,
-                totalRatings: 189,
-                customisable: false,
-                price: 69
-            },
-            {
-                name: "Lachha Paratha",
-                desc: "Layered flaky paratha from Punjab, cooked with butter and served hot.",
-                type: "veg",
-                img: "/products/e6f7b8eae434ca6080ff8806a6f848f7.jpeg",
-                rating: 4.6,
-                totalRatings: 312,
-                customisable: true,
-                price: 89
-            },
-            {
-                name: "Butter Naan",
-                desc: "Soft and fluffy naan bread brushed with butter, baked in tandoor until golden.",
-                type: "veg",
-                img: "/products/b8433b7401f7c5dfff2544c312882036.jpeg",
-                rating: 4.7,
-                totalRatings: 456,
-                customisable: true,
-                price: 79
-            },
-            {
-                name: "Garlic Naan",
-                desc: "[Chef's Special] Naan topped with fresh garlic and butter, baked to perfection.",
-                type: "veg",
-                img: "/products/7dbe4669f46e28e923bffd6367736607.jpeg",
-                rating: 4.8,
-                totalRatings: 523,
-                customisable: true,
-                price: 99
-            }
-        ]
-    },
-    {
-        category: "Rice and Biryani (6)",
-        items: [
-            {
-                name: "Steamed Rice",
-                desc: "Perfectly steamed long-grain basmati rice, light and fluffy.",
-                type: "veg",
-                img: "/products/59617507b52962400544dec2d0f94625.jpeg",
-                rating: 4.3,
-                totalRatings: 167,
-                customisable: false,
-                price: 149
-            },
-            {
-                name: "Jeera Rice",
-                desc: "Fragrant basmati rice tempered with cumin seeds and ghee, simple yet flavorful.",
-                type: "veg",
-                img: "/products/0a347c31cd67b562c06d1e638f09ab45.jpeg",
-                rating: 4.5,
-                totalRatings: 234,
-                customisable: true,
-                price: 199
-            },
-            {
-                name: "Chicken Firdous Biryani",
-                desc: "Layered biryani with tender chicken pieces, saffron-infused rice, and aromatic spices.",
-                type: "non-veg",
-                img: "/products/ef1a1138ea39c79af116d4c8920ddc33.jpg",
-                rating: 4.9,
-                totalRatings: 678,
-                customisable: true,
-                price: 499
-            },
-            {
-                name: "Mutton Biryani",
-                desc: "Royal mutton biryani with succulent meat pieces, slow-cooked with fragrant spices and rice.",
-                type: "non-veg",
-                img: "/products/40e67f621a92618d7552bb1db12160bf.jpeg",
-                rating: 4.8,
-                totalRatings: 534,
-                customisable: true,
-                price: 599
-            }
-        ]
-    },
-    {
-        category: "Fried Rice and Noodles (4)",
-        items: [
-            {
-                name: "Veg Fried Rice",
-                desc: "Basmati rice tossed with fresh vegetables and flavorful spices, Indo-Chinese style.",
-                type: "veg",
-                img: "/products/8064020f7688994a3cb5629f1fc5318e.jpeg",
-                rating: 4.4,
-                totalRatings: 289,
-                customisable: true,
-                price: 229
-            },
-            {
-                name: "Veg Noodles",
-                desc: "Stir-fried hakka noodles with fresh vegetables, soy sauce, and aromatic spices.",
-                type: "veg",
-                img: "/products/3bcf0a23df4616af41e388496c737565.jpeg",
-                rating: 4.3,
-                totalRatings: 245,
-                customisable: true,
-                price: 229
-            },
-            {
-                name: "Chicken Fried Rice",
-                desc: "Classic fried rice with tender chicken pieces, vegetables, and soy-based sauce.",
-                type: "non-veg",
-                img: "/products/3bcf0a23df4616af41e388496c7375651.jpeg",
-                rating: 4.6,
-                totalRatings: 367,
-                customisable: true,
-                price: 299
-            },
-            {
-                name: "Chicken Noodles",
-                desc: "Stir-fried noodles with juicy chicken chunks and mixed vegetables in savory sauce.",
-                type: "non-veg",
-                img: "/products/3bcf0a23df4616af41e388496c7375652.jpeg",
-                rating: 4.5,
-                totalRatings: 321,
-                customisable: true,
-                price: 299
-            }
-        ]
-    },
-    {
-        category: "Accompaniments (7)",
-        items: [
-            {
-                name: "Boondi Raita",
-                desc: "Refreshing yogurt raita with crispy boondi pearls, seasoned with roasted cumin powder.",
-                type: "veg",
-                img: "/products/1f06280512fd69951d1fa80c555c921e1.jpeg",
-                rating: 4.2,
-                totalRatings: 123,
-                customisable: false,
-                price: 89
-            },
-            {
-                name: "Cucumber Raita",
-                desc: "Fresh yogurt raita with grated cucumber, mint, and mild spices.",
-                type: "veg",
-                img: "/products/1f06280512fd69951d1fa80c555c921e2.jpeg",
-                rating: 4.3,
-                totalRatings: 145,
-                customisable: false,
-                price: 89
-            },
-            {
-                name: "Pineapple Raita",
-                desc: "Sweet and savory raita with fresh pineapple chunks and roasted cumin.",
-                type: "veg",
-                img: "/products/1f06280512fd69951d1fa80c555c921e.jpeg",
-                rating: 4.4,
-                totalRatings: 167,
-                customisable: true,
-                price: 99
-            },
-            {
-                name: "Mixed Raita",
-                desc: "Assorted vegetable raita with cucumber, tomato, and onions in thick yogurt.",
-                type: "veg",
-                img: "/products/25c78deb5b85b1cc936b602564627b46.jpeg",
-                rating: 4.5,
-                totalRatings: 189,
-                customisable: true,
-                price: 109
-            },
-            {
-                name: "Masala Papad",
-                desc: "Crispy papad topped with finely chopped onions, tomatoes, and chat masala.",
-                type: "veg",
-                img: "/products/e379cd837d134d7e93021acd2b94d6fb.jpeg",
-                rating: 4.1,
-                totalRatings: 98,
-                customisable: false,
-                price: 59
-            }
-        ]
-    },
-    {
-        category: "Desserts and Beverages (4)",
-        items: [
-            {
-                name: "Gulab Jamun [2 Pieces]",
-                desc: "Classic Indian dessert - soft milk dumplings soaked in rose-flavored sugar syrup.",
-                type: "veg",
-                img: "/products/d864c1bc8ccb5260607ef94429a18077.jpeg",
-                rating: 4.8,
-                totalRatings: 567,
-                customisable: false,
-                price: 149
-            },
-            {
-                name: "Coke [250 ml]",
-                desc: "Chilled Coca-Cola served in a 250ml bottle, perfect to refresh your meal.",
-                type: "veg",
-                img: "/products/d7f4f193ede0ce82ff1f53c499836c5d.jpeg",
-                rating: 4.1,
-                totalRatings: 234,
-                customisable: false,
-                price: 69
-            },
-            {
-                name: "Thums Up [250 ml]",
-                desc: "Classic Thums Up cola 250ml bottle - bold and refreshing.",
-                type: "veg",
-                img: "/products/d7f4f193ede0ce82ff1f53c499836c5d1.jpeg",
-                rating: 4.2,
-                totalRatings: 256,
-                customisable: false,
-                price: 69
-            },
-            {
-                name: "Sprite [250 ml]",
-                desc: "Lemon-lime flavored carbonated soft drink 250ml, crisp and refreshing.",
-                type: "veg",
-                img: "/products/d7f4f193ede0ce82ff1f53c499836c5d2.jpeg",
-                rating: 4.0,
-                totalRatings: 189,
-                customisable: false,
-                price: 69
-            }
-        ]
-    }
-];
+    const categoriesFilter = ["All", "Bestseller", "Burgers", "Chicken", "Sides"];
 
-    
+    const menuData = [
+        {
+            category: "Today's Exclusive Dishes (1)",
+            items: [
+                {
+                    name: "Dal Makhani",
+                    desc: "Creamy and buttery Dal Makhani slow-cooked overnight with black lentils and kidney beans, finished with fresh butter and cream.",
+                    type: "veg",
+                    img: "/products/028c52fee52f05670233532ed4c9585b.jpeg",
+                    rating: 4.8,
+                    totalRatings: 324,
+                    customisable: true,
+                    price: 349
+                }
+            ]
+        },
+        {
+            category: "Combos (4)",
+            items: [
+                {
+                    name: "Paneer Naan with Gravy Combo",
+                    desc: "Soft paneer stuffed naan served with rich and creamy gravy, accompanied by fresh salad and pickle.",
+                    type: "veg",
+                    img: "/products/1fe0fc9e89f9f855c493ab42222fa92d.jpeg",
+                    rating: 4.6,
+                    totalRatings: 189,
+                    customisable: true,
+                    price: 299
+                },
+                {
+                    name: "Onion Naan with Gravy Combo",
+                    desc: "Fluffy naan loaded with caramelized onions, served with flavorful gravy and mint chutney.",
+                    type: "veg",
+                    img: "/products/0d0f1760c936b8b0e708f0f4b3041f57.jpeg",
+                    rating: 4.5,
+                    totalRatings: 156,
+                    customisable: true,
+                    price: 269
+                },
+                {
+                    name: "Chicken Naan with Gravy Combo",
+                    desc: "Tandoor-baked naan stuffed with spiced minced chicken, served with rich chicken gravy and salad.",
+                    type: "non-veg",
+                    img: "/products/0d0f1760c936b8b0e708f0f4b3041f571.jpeg",
+                    rating: 4.7,
+                    totalRatings: 234,
+                    customisable: true,
+                    price: 349
+                },
+                {
+                    name: "Keema Naan with Gravy Combo",
+                    desc: "[Chef's Special] Premium naan stuffed with flavorful minced lamb keema, served with signature gravy and raita.",
+                    type: "non-veg",
+                    img: "/products/711fbe1b30e557278513c39a3f81788a.jpeg",
+                    rating: 4.9,
+                    totalRatings: 412,
+                    customisable: true,
+                    price: 449
+                }
+            ]
+        },
+        {
+            category: "Soups and Salads (19)",
+            items: [
+                {
+                    name: "Veg Sweet Corn Soup",
+                    desc: "Creamy soup with sweet corn kernels, fresh vegetables, and a hint of black pepper.",
+                    type: "veg",
+                    img: "/products/988dc404663063dde160a0dc223b2eff.jpeg",
+                    rating: 4.3,
+                    totalRatings: 87,
+                    customisable: false,
+                    price: 149
+                },
+                {
+                    name: "Veg Hot and Sour Soup",
+                    desc: "Classic Indo-Chinese soup with mixed vegetables, tofu, and a perfect balance of hot and sour flavors.",
+                    type: "veg",
+                    img: "/products/1ebe5c2e985b75ec702aa9b717e329f7.jpeg",
+                    rating: 4.4,
+                    totalRatings: 92,
+                    customisable: false,
+                    price: 169
+                },
+                {
+                    name: "Veg Manchow Soup",
+                    desc: "Spicy and tangy soup with finely chopped vegetables, flavored with garlic and soy sauce.",
+                    type: "veg",
+                    img: "/products/bb8fe59f3c891d5aee7df764193c75f6.jpeg",
+                    rating: 4.5,
+                    totalRatings: 105,
+                    customisable: false,
+                    price: 179
+                },
+                {
+                    name: "Veg Clear Soup",
+                    desc: "Light and refreshing clear vegetable broth with seasonal vegetables and herbs.",
+                    type: "veg",
+                    img: "/products/8ebcd3b47fcb11e21a7efa3f2bc1bf76.jpeg",
+                    rating: 4.2,
+                    totalRatings: 78,
+                    customisable: false,
+                    price: 129
+                },
+                {
+                    name: "Veg Lemon Coriander Soup",
+                    desc: "Zesty lemon and fresh coriander soup with vegetables, perfect for a light appetizer.",
+                    type: "veg",
+                    img: "/products/bc01d0ee47a98270d771a6acda3cbd84.jpeg",
+                    rating: 4.6,
+                    totalRatings: 134,
+                    customisable: false,
+                    price: 159
+                },
+                {
+                    name: "Veg Beijing Soup",
+                    desc: "Authentic Chinese soup with exotic vegetables, mushrooms, and a rich umami broth.",
+                    type: "veg",
+                    img: "/products/9315bd9e73440e755f1bf0871e1467c0.jpeg",
+                    rating: 4.1,
+                    totalRatings: 63,
+                    customisable: false,
+                    price: 189
+                },
+                {
+                    name: "Cream of Mushroom Soup",
+                    desc: "Rich and creamy soup made with fresh mushrooms, garlic, and aromatic herbs.",
+                    type: "veg",
+                    img: "/products/fd7ae90db0b122d5daaf7cf5791f01ad2.jpeg",
+                    rating: 4.7,
+                    totalRatings: 156,
+                    customisable: true,
+                    price: 199
+                },
+                {
+                    name: "Non Veg Sweet Corn Soup",
+                    desc: "Hearty sweet corn soup with tender chicken pieces and crunchy corn kernels.",
+                    type: "non-veg",
+                    img: "/products/988dc404663063dde160a0dc223b2eff.jpeg",
+                    rating: 4.3,
+                    totalRatings: 95,
+                    customisable: false,
+                    price: 189
+                },
+                {
+                    name: "Chicken Hot and Sour Soup",
+                    desc: "Spicy and tangy soup with shredded chicken, mushrooms, and bamboo shoots.",
+                    type: "non-veg",
+                    img: "/products/1ebe5c2e985b75ec702aa9b717e329f7.jpeg",
+                    rating: 4.5,
+                    totalRatings: 118,
+                    customisable: false,
+                    price: 209
+                },
+                {
+                    name: "Non Veg Manchow Soup",
+                    desc: "Hearty Manchow soup with minced chicken, vegetables, and crispy noodles.",
+                    type: "non-veg",
+                    img: "/products/fd7ae90db0b122d5daaf7cf5791f01ad.jpeg",
+                    rating: 4.4,
+                    totalRatings: 89,
+                    customisable: false,
+                    price: 219
+                },
+                {
+                    name: "Chicken Clear Soup",
+                    desc: "Light and clear chicken broth with shredded chicken and fresh vegetables.",
+                    type: "non-veg",
+                    img: "/products/fd7ae90db0b122d5daaf7cf5791f01ad1.jpeg",
+                    rating: 4.2,
+                    totalRatings: 72,
+                    customisable: false,
+                    price: 169
+                },
+                {
+                    name: "Non Veg Lemon Coriander Soup",
+                    desc: "Tangy lemon and coriander soup with tender chicken pieces and vegetables.",
+                    type: "non-veg",
+                    img: "/products/3524a9feb30d5f9fb9d87c8642c2f405.jpeg",
+                    rating: 4.6,
+                    totalRatings: 142,
+                    customisable: false,
+                    price: 199
+                },
+                {
+                    name: "Chicken Beijing Soup",
+                    desc: "Exotic Chinese soup with shredded chicken, mushrooms, and spicy broth.",
+                    type: "non-veg",
+                    img: "/products/0a10d03200a293735beae79bd888a61d.jpeg",
+                    rating: 4.3,
+                    totalRatings: 81,
+                    customisable: false,
+                    price: 229
+                },
+                {
+                    name: "Cream of Chicken Soup",
+                    desc: "Luxurious creamy chicken soup with tender chicken pieces and aromatic herbs.",
+                    type: "non-veg",
+                    img: "/products/0a10d03200a293735beae79bd888a61d1.jpeg",
+                    rating: 4.8,
+                    totalRatings: 203,
+                    customisable: true,
+                    price: 249
+                },
+                {
+                    name: "Coleslaw Salad",
+                    desc: "Crisp and refreshing salad with shredded cabbage, carrots, and creamy dressing.",
+                    type: "veg",
+                    img: "/products/0a10d03200a293735beae79bd888a61d2.jpeg",
+                    rating: 4.1,
+                    totalRatings: 56,
+                    customisable: true,
+                    price: 149
+                },
+                {
+                    name: "Fresh Garden Salad",
+                    desc: "Fresh garden vegetables with lettuce, tomatoes, cucumber, and zesty dressing.",
+                    type: "veg",
+                    img: "/products/ed1d378970e55b413a1e7c9d9e15154a.jpeg",
+                    rating: 4.2,
+                    totalRatings: 67,
+                    customisable: true,
+                    price: 159
+                },
+                {
+                    name: "Veg Crispy Salad",
+                    desc: "Crispy mixed vegetables with a tangy dressing, topped with crunchy noodles.",
+                    type: "veg",
+                    img: "/products/44001147ad1ba6319f66475ee1b0c086.jpeg",
+                    rating: 4.4,
+                    totalRatings: 94,
+                    customisable: true,
+                    price: 179
+                },
+                {
+                    name: "Chicken Crispy Salad",
+                    desc: "Fresh garden salad with crispy fried chicken, vegetables, and oriental dressing.",
+                    type: "non-veg",
+                    img: "/products/c5779f51c9ac9ca7327fd68cb14ab9b9.jpeg",
+                    rating: 4.5,
+                    totalRatings: 112,
+                    customisable: true,
+                    price: 219
+                },
+                {
+                    name: "Chicken Tikka Salad",
+                    desc: "Grilled chicken tikka pieces served on a bed of fresh greens with mint dressing.",
+                    type: "non-veg",
+                    img: "/products/c5779f51c9ac9ca7327fd68cb14ab9b91.jpeg",
+                    rating: 4.7,
+                    totalRatings: 178,
+                    customisable: true,
+                    price: 259
+                }
+            ]
+        },
+        {
+            category: "Starters (72)",
+            items: [
+                {
+                    name: "Paneer Tikka",
+                    desc: "Marinated paneer cubes grilled to perfection with aromatic Indian spices, served with mint chutney.",
+                    type: "veg",
+                    img: "/products/8a67c9071bb5eed463cca7c7de6aa362.jpeg",
+                    rating: 4.8,
+                    totalRatings: 567,
+                    customisable: true,
+                    price: 349
+                },
+                {
+                    name: "Afghani Paneer Tikka",
+                    desc: "[Chef's Special] Soft paneer marinated in creamy Afghani spices, grilled in tandoor until golden.",
+                    type: "veg",
+                    img: "/products/f409f86f4bcd36bbc07e59af62f1402d.jpeg",
+                    rating: 4.9,
+                    totalRatings: 423,
+                    customisable: true,
+                    price: 399
+                },
+                {
+                    name: "Tandoori Stuffed Aloo",
+                    desc: "[Chef's Special] Baby potatoes stuffed with spiced paneer and nuts, char-grilled in tandoor.",
+                    type: "veg",
+                    img: "/products/ce99e934a34ac17b7322403fad69f160.jpeg",
+                    rating: 4.6,
+                    totalRatings: 289,
+                    customisable: true,
+                    price: 299
+                },
+                {
+                    name: "Assorted Platter",
+                    desc: "A delightful assortment of our best veg starters - paneer tikka, hara bhara kebab, and more.",
+                    type: "veg",
+                    img: "/products/75588d11d5f43281f6d89a571eeaf560.jpeg",
+                    rating: 4.7,
+                    totalRatings: 345,
+                    customisable: false,
+                    price: 599
+                },
+                {
+                    name: "Spinach Corn Roll",
+                    desc: "[Chef's Special] Crispy rolls stuffed with creamy spinach and sweet corn, served with mint chutney.",
+                    type: "veg",
+                    img: "/products/eeaf9d04ef45046dc361cd54d04abacf.jpeg",
+                    rating: 4.5,
+                    totalRatings: 234,
+                    customisable: true,
+                    price: 279
+                },
+                {
+                    name: "Chilli Paneer",
+                    desc: "Paneer tossed in a spicy chilli sauce with bell peppers and onions, perfect Indo-Chinese starter.",
+                    type: "veg",
+                    img: "/products/6c269607b78facd2e1ee23125b6bc428.jpeg",
+                    rating: 4.6,
+                    totalRatings: 456,
+                    customisable: true,
+                    price: 329
+                },
+                {
+                    name: "Tandoori Chicken",
+                    desc: "[Chef's Special] Succulent chicken marinated in yogurt and tandoori spices, grilled to perfection.",
+                    type: "non-veg",
+                    img: "/products/c9f65aa5dcfe4a2edfffbc11a0622444.jpeg",
+                    rating: 4.9,
+                    totalRatings: 789,
+                    customisable: true,
+                    price: 449
+                },
+                {
+                    name: "Tangri Chicken",
+                    desc: "Chicken drumsticks marinated in aromatic spices and grilled in tandoor until juicy and tender.",
+                    type: "non-veg",
+                    img: "/products/8dbd32fc412c637c060a20f708b3b858.jpeg",
+                    rating: 4.7,
+                    totalRatings: 512,
+                    customisable: true,
+                    price: 399
+                },
+                {
+                    name: "Chicken Seekh Kebab",
+                    desc: "Minced chicken kebab infused with fresh herbs and spices, grilled to perfection.",
+                    type: "non-veg",
+                    img: "/products/d264892b757995a1e03047f2e6475108.jpeg",
+                    rating: 4.6,
+                    totalRatings: 398,
+                    customisable: true,
+                    price: 399
+                },
+                {
+                    name: "Mutton Seekh Kebab",
+                    desc: "[Chef's Special] Premium minced mutton kebab with aromatic spices, grilled over charcoal.",
+                    type: "non-veg",
+                    img: "/products/05fd847bd5c365f086443d69371878ba.jpeg",
+                    rating: 4.8,
+                    totalRatings: 267,
+                    customisable: true,
+                    price: 499
+                },
+                {
+                    name: "Afghani Fish Tikka [7 Pieces]",
+                    desc: "[Chef's Special] Fresh fish marinated in Afghani spices and grilled to perfection, served with salad.",
+                    type: "non-veg",
+                    img: "/products/75af0eb486b10db6b1a5aa557d2a0547.jpeg",
+                    rating: 4.9,
+                    totalRatings: 345,
+                    customisable: true,
+                    price: 599
+                }
+            ]
+        },
+        {
+            category: "Main Course (48)",
+            items: [
+                {
+                    name: "Baba's Butter Paneer",
+                    desc: "[Chef's Special] Rich and creamy paneer curry cooked with fresh butter, tomatoes, and aromatic spices.",
+                    type: "veg",
+                    img: "/products/094b4b1bf680add85f42dc3ca2383dda.jpeg",
+                    rating: 4.9,
+                    totalRatings: 678,
+                    customisable: true,
+                    price: 449
+                },
+                {
+                    name: "Kadhai Paneer",
+                    desc: "Paneer cooked with bell peppers in a tangy and spicy kadhai masala, garnished with fresh coriander.",
+                    type: "veg",
+                    img: "/products/83b408de5d0baefcdb6266e7e1c22289.jpeg",
+                    rating: 4.7,
+                    totalRatings: 534,
+                    customisable: true,
+                    price: 429
+                },
+                {
+                    name: "Baba's Butter Chicken",
+                    desc: "[Chef's Special] Signature butter chicken in a rich and creamy tomato gravy, a true classic.",
+                    type: "non-veg",
+                    img: "/products/6646faed2f82486ac7fe6a680e7e6876.jpeg",
+                    rating: 4.9,
+                    totalRatings: 892,
+                    customisable: true,
+                    price: 549
+                },
+                {
+                    name: "Babas Special Mutton",
+                    desc: "[Chef's Special] Tender mutton pieces slow-cooked in a rich and aromatic gravy with secret spices.",
+                    type: "non-veg",
+                    img: "/products/9fbcca69c9e3d022bf040498fa8f6323.jpeg",
+                    rating: 4.8,
+                    totalRatings: 456,
+                    customisable: true,
+                    price: 649
+                },
+                {
+                    name: "Baba's Butter Fish",
+                    desc: "[Chef's Special] Fresh fish fillets in a rich butter gravy with aromatic spices, chef's signature.",
+                    type: "non-veg",
+                    img: "/products/9f19082459d69fa7322db894c5c62132.jpeg",
+                    rating: 4.7,
+                    totalRatings: 389,
+                    customisable: true,
+                    price: 599
+                }
+            ]
+        },
+        {
+            category: "Breads (12)",
+            items: [
+                {
+                    name: "Tandoori Roti",
+                    desc: "Traditional Indian whole wheat bread baked in a tandoor, served hot with butter.",
+                    type: "veg",
+                    img: "/products/6e2b7acb9048dbc31dd8c94b503ed41a.jpeg",
+                    rating: 4.4,
+                    totalRatings: 234,
+                    customisable: false,
+                    price: 49
+                },
+                {
+                    name: "Butter Roti",
+                    desc: "Soft and flaky whole wheat roti brushed with generous amount of fresh butter.",
+                    type: "veg",
+                    img: "/products/2e5f13eb3fa0e0bb054d512378728742.jpeg",
+                    rating: 4.5,
+                    totalRatings: 189,
+                    customisable: false,
+                    price: 69
+                },
+                {
+                    name: "Lachha Paratha",
+                    desc: "Layered flaky paratha from Punjab, cooked with butter and served hot.",
+                    type: "veg",
+                    img: "/products/e6f7b8eae434ca6080ff8806a6f848f7.jpeg",
+                    rating: 4.6,
+                    totalRatings: 312,
+                    customisable: true,
+                    price: 89
+                },
+                {
+                    name: "Butter Naan",
+                    desc: "Soft and fluffy naan bread brushed with butter, baked in tandoor until golden.",
+                    type: "veg",
+                    img: "/products/b8433b7401f7c5dfff2544c312882036.jpeg",
+                    rating: 4.7,
+                    totalRatings: 456,
+                    customisable: true,
+                    price: 79
+                },
+                {
+                    name: "Garlic Naan",
+                    desc: "[Chef's Special] Naan topped with fresh garlic and butter, baked to perfection.",
+                    type: "veg",
+                    img: "/products/7dbe4669f46e28e923bffd6367736607.jpeg",
+                    rating: 4.8,
+                    totalRatings: 523,
+                    customisable: true,
+                    price: 99
+                }
+            ]
+        },
+        {
+            category: "Rice and Biryani (6)",
+            items: [
+                {
+                    name: "Steamed Rice",
+                    desc: "Perfectly steamed long-grain basmati rice, light and fluffy.",
+                    type: "veg",
+                    img: "/products/59617507b52962400544dec2d0f94625.jpeg",
+                    rating: 4.3,
+                    totalRatings: 167,
+                    customisable: false,
+                    price: 149
+                },
+                {
+                    name: "Jeera Rice",
+                    desc: "Fragrant basmati rice tempered with cumin seeds and ghee, simple yet flavorful.",
+                    type: "veg",
+                    img: "/products/0a347c31cd67b562c06d1e638f09ab45.jpeg",
+                    rating: 4.5,
+                    totalRatings: 234,
+                    customisable: true,
+                    price: 199
+                },
+                {
+                    name: "Chicken Firdous Biryani",
+                    desc: "Layered biryani with tender chicken pieces, saffron-infused rice, and aromatic spices.",
+                    type: "non-veg",
+                    img: "/products/ef1a1138ea39c79af116d4c8920ddc33.jpg",
+                    rating: 4.9,
+                    totalRatings: 678,
+                    customisable: true,
+                    price: 499
+                },
+                {
+                    name: "Mutton Biryani",
+                    desc: "Royal mutton biryani with succulent meat pieces, slow-cooked with fragrant spices and rice.",
+                    type: "non-veg",
+                    img: "/products/40e67f621a92618d7552bb1db12160bf.jpeg",
+                    rating: 4.8,
+                    totalRatings: 534,
+                    customisable: true,
+                    price: 599
+                }
+            ]
+        },
+        {
+            category: "Fried Rice and Noodles (4)",
+            items: [
+                {
+                    name: "Veg Fried Rice",
+                    desc: "Basmati rice tossed with fresh vegetables and flavorful spices, Indo-Chinese style.",
+                    type: "veg",
+                    img: "/products/8064020f7688994a3cb5629f1fc5318e.jpeg",
+                    rating: 4.4,
+                    totalRatings: 289,
+                    customisable: true,
+                    price: 229
+                },
+                {
+                    name: "Veg Noodles",
+                    desc: "Stir-fried hakka noodles with fresh vegetables, soy sauce, and aromatic spices.",
+                    type: "veg",
+                    img: "/products/3bcf0a23df4616af41e388496c737565.jpeg",
+                    rating: 4.3,
+                    totalRatings: 245,
+                    customisable: true,
+                    price: 229
+                },
+                {
+                    name: "Chicken Fried Rice",
+                    desc: "Classic fried rice with tender chicken pieces, vegetables, and soy-based sauce.",
+                    type: "non-veg",
+                    img: "/products/3bcf0a23df4616af41e388496c7375651.jpeg",
+                    rating: 4.6,
+                    totalRatings: 367,
+                    customisable: true,
+                    price: 299
+                },
+                {
+                    name: "Chicken Noodles",
+                    desc: "Stir-fried noodles with juicy chicken chunks and mixed vegetables in savory sauce.",
+                    type: "non-veg",
+                    img: "/products/3bcf0a23df4616af41e388496c7375652.jpeg",
+                    rating: 4.5,
+                    totalRatings: 321,
+                    customisable: true,
+                    price: 299
+                }
+            ]
+        },
+        {
+            category: "Accompaniments (7)",
+            items: [
+                {
+                    name: "Boondi Raita",
+                    desc: "Refreshing yogurt raita with crispy boondi pearls, seasoned with roasted cumin powder.",
+                    type: "veg",
+                    img: "/products/1f06280512fd69951d1fa80c555c921e1.jpeg",
+                    rating: 4.2,
+                    totalRatings: 123,
+                    customisable: false,
+                    price: 89
+                },
+                {
+                    name: "Cucumber Raita",
+                    desc: "Fresh yogurt raita with grated cucumber, mint, and mild spices.",
+                    type: "veg",
+                    img: "/products/1f06280512fd69951d1fa80c555c921e2.jpeg",
+                    rating: 4.3,
+                    totalRatings: 145,
+                    customisable: false,
+                    price: 89
+                },
+                {
+                    name: "Pineapple Raita",
+                    desc: "Sweet and savory raita with fresh pineapple chunks and roasted cumin.",
+                    type: "veg",
+                    img: "/products/1f06280512fd69951d1fa80c555c921e.jpeg",
+                    rating: 4.4,
+                    totalRatings: 167,
+                    customisable: true,
+                    price: 99
+                },
+                {
+                    name: "Mixed Raita",
+                    desc: "Assorted vegetable raita with cucumber, tomato, and onions in thick yogurt.",
+                    type: "veg",
+                    img: "/products/25c78deb5b85b1cc936b602564627b46.jpeg",
+                    rating: 4.5,
+                    totalRatings: 189,
+                    customisable: true,
+                    price: 109
+                },
+                {
+                    name: "Masala Papad",
+                    desc: "Crispy papad topped with finely chopped onions, tomatoes, and chat masala.",
+                    type: "veg",
+                    img: "/products/e379cd837d134d7e93021acd2b94d6fb.jpeg",
+                    rating: 4.1,
+                    totalRatings: 98,
+                    customisable: false,
+                    price: 59
+                }
+            ]
+        },
+        {
+            category: "Desserts and Beverages (4)",
+            items: [
+                {
+                    name: "Gulab Jamun [2 Pieces]",
+                    desc: "Classic Indian dessert - soft milk dumplings soaked in rose-flavored sugar syrup.",
+                    type: "veg",
+                    img: "/products/d864c1bc8ccb5260607ef94429a18077.jpeg",
+                    rating: 4.8,
+                    totalRatings: 567,
+                    customisable: false,
+                    price: 149
+                },
+                {
+                    name: "Coke [250 ml]",
+                    desc: "Chilled Coca-Cola served in a 250ml bottle, perfect to refresh your meal.",
+                    type: "veg",
+                    img: "/products/d7f4f193ede0ce82ff1f53c499836c5d.jpeg",
+                    rating: 4.1,
+                    totalRatings: 234,
+                    customisable: false,
+                    price: 69
+                },
+                {
+                    name: "Thums Up [250 ml]",
+                    desc: "Classic Thums Up cola 250ml bottle - bold and refreshing.",
+                    type: "veg",
+                    img: "/products/d7f4f193ede0ce82ff1f53c499836c5d1.jpeg",
+                    rating: 4.2,
+                    totalRatings: 256,
+                    customisable: false,
+                    price: 69
+                },
+                {
+                    name: "Sprite [250 ml]",
+                    desc: "Lemon-lime flavored carbonated soft drink 250ml, crisp and refreshing.",
+                    type: "veg",
+                    img: "/products/d7f4f193ede0ce82ff1f53c499836c5d2.jpeg",
+                    rating: 4.0,
+                    totalRatings: 189,
+                    customisable: false,
+                    price: 69
+                }
+            ]
+        }
+    ];
+
+
     const deals = [
         {
             icon: "/products/d07196b25b85d1fd9951e10c255ab737.png",
@@ -1175,21 +1225,7 @@ const menuData = [
                             </span>
                         </div>
 
-                        <div className={styles.locationInfo}>
-                            <IoLocationOutline className={styles.locationIcon} />
-                            <span className={styles.locationText}>Outlet Sahid Nagar</span>
-                            <span className={styles.deliveryStatus}>Does not deliver</span>
-                        </div>
 
-                        {/* Rating Section */}
-                        <div className={styles.ratingSection}>
-                            <div className={styles.ratingBadge}>
-                                <FaStar className={styles.starIcon} />
-                                <span className={styles.ratingValue}>4.6</span>
-                                <span className={styles.ratingCount}>(3.0K+ ratings)</span>
-                            </div>
-                            <span className={styles.priceRange}>· ₹500 for two</span>
-                        </div>
 
                         {/* Opening Hours */}
                         <div className={styles.openingHours}>
@@ -1206,16 +1242,33 @@ const menuData = [
                             </span>
                         </div>
                     </div>
+                    <div className={styles.restaurantInfoRight}>
+                        {/* Rating Section */}
+                        <div className={styles.ratingSection}>
+                            <div className={styles.ratingBadge}>
+                                <FaStar className={styles.starIcon} />
+                                <span className={styles.ratingValue}>4.6</span>
+                                <span className={styles.ratingCount}>(3.0K+ ratings)</span>
+                            </div>
+                            <span className={styles.priceRange}>· ₹500 for two</span>
+                        </div>
+                        <div className={styles.locationInfo}>
+                            <IoLocationOutline className={styles.locationIcon} />
+                            <span className={styles.locationText}>Outlet Sahid Nagar</span>
+                            <span className={styles.deliveryStatus}>Does not deliver</span>
+                        </div>
+                    </div>
 
 
                 </div>
 
                 {/* Deals Section */}
                 <div className={styles.dealsSection}>
-                    <h3 className={styles.dealsTitle}>Deals for you</h3>
+                    {/* Header Row: Title on left, Buttons on right */}
+                    <div className={styles.dealsHeader}>
+                        <h3 className={styles.dealsTitle}>Deals for you</h3>
 
-                    <div className={styles.dealsWrapper}>
-                        {deals.length > dealsPerView && (
+                        <div className={styles.dealsNavButtons}>
                             <button
                                 className={`${styles.dealNavBtn} ${styles.dealNavPrev} ${currentDealIndex === 0 ? styles.dealNavDisabled : ''}`}
                                 onClick={handlePrevDeal}
@@ -1226,8 +1279,22 @@ const menuData = [
                                     <path d="M15 18l-6-6 6-6" />
                                 </svg>
                             </button>
-                        )}
 
+                            <button
+                                className={`${styles.dealNavBtn} ${styles.dealNavNext} ${currentDealIndex >= maxIndex ? styles.dealNavDisabled : ''}`}
+                                onClick={handleNextDeal}
+                                disabled={currentDealIndex >= maxIndex}
+                                aria-label="Next deals"
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M9 18l6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Deals Grid (No buttons here now) */}
+                    <div className={styles.dealsWrapper}>
                         <div className={styles.dealsGrid} ref={dealsContainerRef}>
                             {deals.slice(currentDealIndex, currentDealIndex + dealsPerView).map((deal, index) => (
                                 <div key={index} className={styles.dealCard}>
@@ -1241,19 +1308,6 @@ const menuData = [
                                 </div>
                             ))}
                         </div>
-
-                        {deals.length > dealsPerView && (
-                            <button
-                                className={`${styles.dealNavBtn} ${styles.dealNavNext} ${currentDealIndex >= maxIndex ? styles.dealNavDisabled : ''}`}
-                                onClick={handleNextDeal}
-                                disabled={currentDealIndex >= maxIndex}
-                                aria-label="Next deals"
-                            >
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M9 18l6-6-6-6" />
-                                </svg>
-                            </button>
-                        )}
                     </div>
                 </div>
 
@@ -1271,6 +1325,82 @@ const menuData = [
                             <FaChevronDown className={styles.searchIcon} />
                         </button>
                     </div>
+
+                    <div className={styles.categoryList}>
+
+                            {/* --- Wrapped Static Buttons with Scrollbar --- */}
+                            <div className={styles.staticCategoryList}>
+
+                                {/* Veg Option */}
+                                <div className={styles.staticItem}>
+                                    <div className={styles.staticBox}>
+                                        <label className={styles.staticLabel}>
+                                            <input type="checkbox" aria-label="Enable veg option" className={styles.hiddenInput} />
+                                            <span className={styles.staticPill}>
+
+                                                {/* Track wrapper (contains track and icon) */}
+                                                <div className={styles.trackWrapper}>
+                                                    <span className={styles.track}></span>
+                                                    <div className={styles.iconContainer}>
+                                                        <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="1" y="1" width="18" height="18" rx="4" stroke="#007A33" strokeWidth="2" fill="white" />
+                                                            <circle cx="10" cy="10" r="5" fill="#007A33" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {/* Non-Veg Option */}
+                                <div className={styles.staticItem}>
+                                    <div className={styles.staticBox}>
+                                        <label className={styles.staticLabel}>
+                                            <input type="checkbox" aria-label="Enable non veg option" className={styles.hiddenInput} />
+                                            <span className={styles.staticPill}>
+
+                                                {/* Track wrapper (contains track and icon) */}
+                                                <div className={styles.trackWrapper}>
+                                                    <span className={styles.track}></span>
+                                                    <div className={styles.iconContainer}>
+                                                        <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect x="1" y="1" width="18" height="18" rx="4" stroke="#D32F2F" strokeWidth="2" fill="white" />
+                                                            <path d="M10 5L15 15H5L10 5Z" fill="#D32F2F" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                {/* Bestseller Text
+                                <div className={styles.staticItem}>
+                                    <div className={styles.bestsellerWrapper}>
+                                        <div className={styles.bestsellerText}>Bestseller</div>
+                                    </div>
+                                </div> */}
+
+                            </div>
+
+                            {/* Existing Dynamic Categories */}
+                            {categoriesFilter.map((category) => (
+                                <button
+                                    key={category}
+                                    type="button"
+                                    onClick={() => setActiveCategory(category)}
+                                    className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`}
+                                >
+                                    {category}
+                                </button>
+                            ))}
+
+                            {/* End staticCategoryList */}
+
+                        </div>
                 </div>
             </div>
 
@@ -1299,12 +1429,12 @@ const menuData = [
                                     <div key={idx} className={styles.orderOnlineMenuItem}>
                                         <div className={styles.orderOnlineItemCenter}>
                                             <div className={styles.orderOnlineItem}>
-                                                        {item.type === 'veg' ? (
-                                                            <VegIcon />
-                                                        ) : (
-                                                            <NonVegIcon />
-                                                        )}
-                                                    </div>
+                                                {item.type === 'veg' ? (
+                                                    <VegIcon />
+                                                ) : (
+                                                    <NonVegIcon />
+                                                )}
+                                            </div>
                                             <h4 className={styles.orderOnlineItemName}>{item.name}</h4>
                                             {item.desc && (
                                                 <p className={styles.orderOnlineItemDesc}>
@@ -1374,6 +1504,7 @@ const menuData = [
         </div>
     );
 };
+
 
 
 const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpenOrderModal?: () => void }) => {
@@ -2325,22 +2456,22 @@ const SimilarRestaurantsContent = () => {
 };
 
 const OptionsRestaurantsContent = () => {
-    
+
     const handleDineOutOptionsItemClick = (item: DineOutItemInterface) => {
         console.log("Clicked item:", item);
     };
 
-    return(
-    <div className={styles.tabContent}>
-        <h2 className={styles.contentTitle}>Options Restaurants in Fine Dining</h2>
-         {/* <DineOutItemsHorizontal
+    return (
+        <div className={styles.tabContent}>
+            <DineOutItemsHorizontal
                 items={DineoutOptionsItemsList}
                 title="Options Restaurants in Fine Dining"
                 onItemClick={handleDineOutOptionsItemClick}
                 maxItems={10}
-            /> */}
-    </div>
-)};
+            />
+        </div>
+    )
+};
 
 
 
@@ -2353,6 +2484,7 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
 }) => {
     const [activeTab, setActiveTab] = useState<string>(activeTabId);
     const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+    const [isOrderUltraModalOpen, setIsOrderUltraModalOpen] = useState(false);
     const [isScrolling, setIsScrolling] = useState(false);
     const tabRefs = useRef<{ [key: string]: HTMLElement | null }>({});
     const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -2361,6 +2493,7 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
         { id: 'overview', label: 'Book Table', icon: faInfoCircle, content: <OverviewContent restaurant={restaurantData} onOpenOrderModal={() => setIsOrderModalOpen(true)} /> },
         { id: 'about', label: 'About', icon: faBuilding, content: <AboutContent restaurant={restaurantData} /> },
         { id: 'order-online', label: 'Order Online', icon: faShoppingBag, content: <OrderOnlineContent /> },
+        { id: 'ultra-order-online', label: 'Ultra Order Online', icon: faShoppingBag, content: <OrderOnlineUltraPremiumContent /> },
         { id: 'menu', label: 'Menu', icon: faUtensils, content: <MenuContent restaurant={restaurantData} onOpenOrderModal={() => setIsOrderModalOpen(true)} /> },
         { id: 'reviews', label: 'Reviews', icon: faStar, content: <ReviewsContent /> },
         { id: 'photos', label: 'Photos', icon: faCamera, content: <PhotosContent restaurant={restaurantData} /> },
@@ -2372,15 +2505,14 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
     // Scroll-based active tab detection
     useEffect(() => {
         const handleScroll = () => {
-            // Skip scroll detection if user just clicked a tab
             if (isScrolling) return;
 
             const scrollPosition = window.scrollY + 150;
             let activeSection = customTabs[0]?.id || 'overview';
 
             for (const tab of customTabs) {
-                // Skip order-online tab for scroll detection
-                if (tab.id === 'order-online') continue;
+                // Skip order-online and ultra-order-online tabs for scroll detection
+                if (tab.id === 'order-online' || tab.id === 'ultra-order-online') continue;
 
                 const element = tabRefs.current[tab.id];
                 if (element) {
@@ -2393,7 +2525,7 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
                 }
             }
 
-            if (activeSection !== activeTab && activeSection !== 'order-online') {
+            if (activeSection !== activeTab && activeSection !== 'order-online' && activeSection !== 'ultra-order-online') {
                 setActiveTab(activeSection);
                 if (onTabChange) {
                     onTabChange(activeSection);
@@ -2402,42 +2534,50 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
         };
 
         window.addEventListener('scroll', handleScroll);
-        // Initial check
         setTimeout(handleScroll, 100);
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, [activeTab, onTabChange, customTabs, isScrolling]);
 
     const handleTabClick = (tabId: string) => {
-        // Set scrolling flag to prevent scroll detection from overriding
         setIsScrolling(true);
 
-        // Clear any existing timeout
         if (scrollTimeoutRef.current) {
             clearTimeout(scrollTimeoutRef.current);
         }
 
-        // If "order-online" tab is clicked, open modal instead of scrolling
+        // If "order-online" tab is clicked, open regular modal
         if (tabId === 'order-online') {
             setIsOrderModalOpen(true);
             setActiveTab(tabId);
             if (onTabChange) {
                 onTabChange(tabId);
             }
-            // Reset scrolling flag after a delay
             scrollTimeoutRef.current = setTimeout(() => {
                 setIsScrolling(false);
             }, 500);
             return;
         }
 
-        // Update active tab immediately
+        // If "ultra-order-online" tab is clicked, open Ultra Premium modal
+        if (tabId === 'ultra-order-online') {
+            setIsOrderUltraModalOpen(true);
+            setActiveTab(tabId);
+            if (onTabChange) {
+                onTabChange(tabId);
+            }
+            scrollTimeoutRef.current = setTimeout(() => {
+                setIsScrolling(false);
+            }, 500);
+            return;
+        }
+
+        // For other tabs, scroll to section
         setActiveTab(tabId);
         if (onTabChange) {
             onTabChange(tabId);
         }
 
-        // Scroll to the section
         const element = tabRefs.current[tabId];
         if (element) {
             const headerOffset = 200;
@@ -2450,7 +2590,6 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
             });
         }
 
-        // Reset scrolling flag after scroll animation completes
         scrollTimeoutRef.current = setTimeout(() => {
             setIsScrolling(false);
         }, 800);
@@ -2464,6 +2603,16 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
             }
         };
     }, []);
+
+    const handleAddToCart = (item: any) => {
+        console.log('Added to cart:', item);
+        // Your cart logic here
+    };
+
+    const handleViewMenu = () => {
+        console.log('View full menu clicked');
+        // Navigation or modal logic
+    };
 
     return (
         <div className={`${styles.tabsContainer} ${className}`}>
@@ -2491,8 +2640,8 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
             {/* Content Sections */}
             <main className={styles.mainContentBody}>
                 {customTabs.map((tab) => {
-                    // Skip rendering order-online section
-                    if (tab.id === 'order-online') {
+                    // Skip rendering order-online and ultra-order-online sections
+                    if (tab.id === 'order-online' || tab.id === 'ultra-order-online') {
                         return (
                             <section
                                 key={tab.id}
@@ -2522,15 +2671,26 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
                 })}
             </main>
 
-            {/* Order Online Modal */}
-            <OrderOnlineModal
+            {/* Order Online Modal - Regular */}
+            <OrderOnlineModalUltraPremium
                 isOpen={isOrderModalOpen}
                 onClose={() => setIsOrderModalOpen(false)}
             >
                 <OrderOnlineContent />
-            </OrderOnlineModal>
+            </OrderOnlineModalUltraPremium>
+
+            {/* Order Online Modal - Ultra Premium */}
+            <OrderOnlineModalUltraPremium
+                isOpen={isOrderUltraModalOpen}
+                onClose={() => setIsOrderUltraModalOpen(false)}
+            >
+                <OrderOnlineUltraPremiumContent
+                    restaurantName="Burger King"
+                />
+            </OrderOnlineModalUltraPremium>
         </div>
     );
 };
+
 
 export default DineOutRestDetailsTabs;

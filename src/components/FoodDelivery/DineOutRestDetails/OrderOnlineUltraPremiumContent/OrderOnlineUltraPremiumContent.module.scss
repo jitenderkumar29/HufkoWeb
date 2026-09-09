@@ -1,0 +1,1088 @@
+@use "../../../../styles/variables.scss" as *;
+.orderOnlineUltraPremiumContent {
+    width: 100%;
+    min-height: 100vh;
+    background: #f7f7f7;
+    color: #1d1d1f;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   RESTAURANT HEADER
+========================================================= */
+
+.restaurantHeader {
+    background: #ffffff;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.restaurantTitleRow {
+    padding: 22px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
+
+.restaurantMeta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    gap: 7px;
+    margin-top: 9px;
+    font-size: 13px;
+    color: #666;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    svg {
+        color: #f59e0b;
+    }
+}
+
+.cuisineText {
+    margin: 8px 0 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.deliveryInfo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+.outlet {
+    color: $black;
+}
+
+.favoriteButton {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #e8e8e8;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #e63946;
+        border-color: #e63946;
+        transform: translateY(-2px);
+    }
+}
+
+/* =========================================================
+   BANNER
+========================================================= */
+
+.bannerWrapper {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    // background: #ddd;
+}
+
+.bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    //  background: #ddd;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bannerOverlay {
+    position: absolute;
+    inset: 0;
+    // background: linear-gradient(
+    //     90deg,
+    //     rgba(0, 0, 0, 0.65),
+    //     rgba(0, 0, 0, 0.1),
+    //     rgba(0, 0, 0, 0)
+    // );
+}
+
+.bannerContent {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #ffffff;
+
+    span {
+        display: block;
+        font-size: 13px;
+        opacity: 0.85;
+    }
+
+    strong {
+        display: block;
+        margin-top: 3px;
+        font-size: 18px;
+    }
+}
+
+.logoCircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #d7232e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* =========================================================
+   RESTAURANT INFO
+========================================================= */
+
+.restaurantInfoCard {
+    margin-top: 14px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 20px;
+    border: 1px solid #eeeeee;
+}
+
+.statusRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.openStatus {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #14804a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+.deliveryTime {
+    display: flex;
+    flex-direction: row !important;
+    font-size: 13px;
+    color: #666;
+}
+
+.infoDivider {
+    height: 1px;
+    background: #eeeeee;
+    margin: 14px 0;
+}
+
+.address {
+    span {
+        font-size: 13px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    p {
+        margin: 6px 0 0;
+        color: #777;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.sectionHeader {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.sliderButtons {
+    display: flex;
+    gap: 7px;
+
+    button {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid #e4e4e4;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background: #f5f5f5;
+        }
+    }
+}
+
+/* =========================================================
+   OFFERS
+========================================================= */
+
+.offerGrid {
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-top: 14px;
+    padding: 2px 2px 12px 3px !important;
+    margin-left: 3px;
+
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.offerCard {
+    flex: 0 0 calc((100% - 24px) / 3);
+
+    min-width: 0;
+    min-height: 82px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+    border: 1px solid #dedede;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    scroll-snap-align: start;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        border-color: #d7232e;
+        // transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    }
+}
+
+.offerIcon {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.offerImage {
+    width: 48px;
+    height: 48px;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.offerContent {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    strong {
+        width: 100%;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        font-size: 15px;
+        font-weight: 800;
+
+        color: #252525;
+    }
+
+    span {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 600;
+        color: $gray-600;
+    }
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.searchSection {
+    margin-top: 10px;
+}
+
+.searchBox {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #dedede;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    gap: 10px;
+    transition: all 0.2s ease;
+
+    &:focus-within {
+        border-color: #777;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+    }
+
+    svg {
+        color: #777;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background: transparent;
+    }
+
+    button {
+        border: none;
+        background: transparent;
+        padding: 4px;
+        cursor: pointer;
+        display: flex;
+    }
+}
+
+.categoryList {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 13px;
+    padding-bottom: 3px;
+    align-items: center;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.categoryButton {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid #D1D5DB;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.activeCategory {
+    border-color: #007A33;
+    color: #007A33;
+    font-weight: 600;
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menuSection {
+    margin-top: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+}
+
+.menuSectionTitle {
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    span {
+        display: block;
+        margin-top: 3px;
+        color: #999;
+        font-size: 11px;
+    }
+}
+
+.foodList {
+    border-top: 1px solid #eeeeee;
+}
+
+.foodCard {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #eeeeee;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.foodInfo {
+    flex: 1;
+    min-width: 0;
+
+    h3 {
+        margin: 8px 0 6px;
+        font-size: 16px;
+        font-weight: 650;
+        color: #242424;
+    }
+
+    p {
+        margin: 8px 0 0;
+        max-width: 680px;
+        font-size: 12px;
+        line-height: 1.55;
+        color: #777;
+    }
+}
+
+.foodTypeRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.foodType {
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+    }
+}
+
+.veg {
+    border-color: #16a34a;
+
+    span {
+        background: #16a34a;
+    }
+}
+
+.nonveg {
+    border-color: #dc2626;
+
+    span {
+        background: #dc2626;
+    }
+}
+
+.recommendedBadge {
+    font-size: 9px;
+    color: #d7232e;
+    font-weight: 600;
+    background: #fff2f2;
+    padding: 3px 7px;
+    border-radius: 20px;
+}
+
+.foodRating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #138a43;
+    font-size: 12px;
+    font-weight: 600;
+
+    svg {
+        fill: currentColor;
+    }
+}
+
+.price {
+    display: block;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+.foodImageSection {
+    width: 150px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foodImageWrapper {
+    width: 145px;
+    height: 115px;
+    position: relative;
+}
+
+.foodImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.addButton {
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 34px;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #14804a;
+    border: 1px solid #d5d5d5;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #14804a;
+        color: #ffffff;
+        border-color: #14804a;
+    }
+}
+
+.quantityControl {
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    transform: translateX(-50%);
+    width: 105px;
+    height: 34px;
+    background: #14804a;
+    color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    button {
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        width: 32px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    span {
+        font-size: 13px;
+        font-weight: 700;
+    }
+}
+
+.customizable {
+    margin-top: 22px;
+    font-size: 9px;
+    color: #999;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.emptyState {
+    padding: 55px 20px;
+    text-align: center;
+    color: #777;
+
+    svg {
+        color: #bbb;
+    }
+
+    h3 {
+        margin: 12px 0 5px;
+        color: #333;
+    }
+
+    p {
+        margin: 0;
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   FLOATING CART
+========================================================= */
+
+.floatingCart {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 30;
+    height: 52px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 30px;
+    background: #14804a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(20, 128, 74, 0.3);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.cartCount {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #14804a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.cartText {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1240px;
+    }
+
+    .bannerWrapper {
+        height: 300px;
+    }
+
+    .foodCard {
+        padding: 22px 26px;
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .offerGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bannerWrapper {
+        height: 230px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+    .orderOnlineUltraPremiumContent {
+        padding: 10px;
+    }
+
+    .restaurantTitleRow {
+        padding: 18px 16px;
+
+        h1 {
+            font-size: 23px;
+        }
+    }
+
+    .bannerWrapper {
+        height: 190px;
+    }
+
+    .bannerContent {
+        left: 16px;
+        bottom: 16px;
+
+        strong {
+            font-size: 14px;
+        }
+    }
+
+    .restaurantInfoCard {
+        padding: 15px;
+    }
+
+    .offerGrid {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding-bottom: 5px;
+
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .offerCard {
+        min-width: 230px;
+    }
+
+    .foodCard {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .foodInfo {
+        h3 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 11px;
+            line-height: 1.45;
+        }
+    }
+
+    .foodImageSection {
+        width: 115px;
+        min-width: 115px;
+    }
+
+    .foodImageWrapper {
+        width: 110px;
+        height: 90px;
+    }
+
+    .addButton {
+        width: 85px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .quantityControl {
+        width: 90px;
+        height: 30px;
+    }
+
+    .customizable {
+        margin-top: 19px;
+    }
+
+    .floatingCart {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+    .restaurantMeta {
+        flex-wrap: wrap;
+    }
+
+    .foodCard {
+        gap: 8px;
+    }
+
+    .foodImageSection {
+        width: 105px;
+        min-width: 105px;
+    }
+
+    .foodImageWrapper {
+        width: 100px;
+        height: 82px;
+    }
+
+    .foodInfo {
+        h3 {
+            font-size: 13px;
+        }
+
+        p {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+
+/* --- New Scrollable Container for Static Buttons --- */
+.staticCategoryList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    
+    /* Enable horizontal scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    /* Add padding so shadows/borders aren't cut off on the right */
+    // padding-bottom: 5px; 
+    
+    /* Hide scrollbar on Firefox */
+    scrollbar-width: thin; 
+    scrollbar-color: #c1c1c1 #f1f1f1; 
+}
+
+/* Show scrollbar on Webkit browsers (Chrome, Safari, Edge) */
+.staticCategoryList::-webkit-scrollbar {
+    height: 6px; /* Height of horizontal scrollbar */
+}
+
+.staticCategoryList::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.staticCategoryList::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 10px;
+}
+
+.staticCategoryList::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
+}
+
+/* --- Existing static item styles (Keep these as they are) --- */
+.staticItem {
+    display: flex;
+    flex-shrink: 0; /* Prevents items from shrinking when scrolling */
+}
+
+.staticBox {
+    display: flex;
+}
+
+.staticLabel {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.hiddenInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* --- Updated Static Pill Styles with Toggle Behavior --- */
+.staticPill {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 999px;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Track Wrapper (holds the track and icon) */
+.trackWrapper {
+    position: relative;
+    width: 40px; /* Width of the toggle track */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Gray Track (Right side) */
+/* The Gray Track */
+.track {
+    width: 100%;
+    height: 12px;
+    background-color: #E5E7EB;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+/* The Icon (Left side by default - OFF state) */
+.iconContainer {
+    position: absolute;
+    left: 0; /* Starts on the left side of the track */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: left 0.3s ease; /* Smooth sliding animation */
+}
+
+/* Hover effect */
+.staticPill:hover {
+    border-color: #9CA3AF;
+}
+
+/* --- ON STATE (Checkbox Checked) --- */
+/* Track turns green/red */
+.hiddenInput:checked + .staticPill .track {
+    background-color: #007A33; /* Green for Veg (Change to #D32F2F for Non-Veg) */
+    opacity: 0.3; /* Makes the track slightly transparent */
+}
+
+/* Move icon to the right side of the track */
+.hiddenInput:checked + .staticPill .iconContainer {
+    left: calc(100% - 20px); /* Moves icon to the right (20px is width of icon) */
+}
+
+.bestsellerWrapper {
+    display: flex;
+}
+
+.bestsellerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 999px;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1F2937;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bestsellerText:hover {
+    border-color: #9CA3AF;
+}
+
+.hiddenInput:checked + .staticPill {
+    border-color: #007A33;
+}
+
