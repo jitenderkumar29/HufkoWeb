@@ -18,7 +18,7 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import DineOutItemsHorizontal from '../../FoodDesigns/DineOutItemsHorizontal/DineOutItemsHorizontal';
-import { DineoutItemsList } from '@/app/data/Categorywise/FoodsCategories';
+import { DineoutItemsList, DineoutOptionsItemsList } from '@/app/data/Categorywise/FoodsCategories';
 import { DineOutItemInterface } from '../../FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import Image from 'next/image';
 import { FaChevronDown, FaRegClock, FaStar } from 'react-icons/fa';
@@ -2311,6 +2311,7 @@ const SimilarRestaurantsContent = () => {
         console.log("Clicked item:", item);
     };
 
+
     return (
         <div className={styles.tabContent}>
             <DineOutItemsHorizontal
@@ -2323,11 +2324,23 @@ const SimilarRestaurantsContent = () => {
     );
 };
 
-const OptionsRestaurantsContent = () => (
+const OptionsRestaurantsContent = () => {
+    
+    const handleDineOutOptionsItemClick = (item: DineOutItemInterface) => {
+        console.log("Clicked item:", item);
+    };
+
+    return(
     <div className={styles.tabContent}>
-        <h3 className={styles.contentTitle}>Options Restaurants Content</h3>
+        <h2 className={styles.contentTitle}>Options Restaurants in Fine Dining</h2>
+         {/* <DineOutItemsHorizontal
+                items={DineoutOptionsItemsList}
+                title="Options Restaurants in Fine Dining"
+                onItemClick={handleDineOutOptionsItemClick}
+                maxItems={10}
+            /> */}
     </div>
-);
+)};
 
 
 

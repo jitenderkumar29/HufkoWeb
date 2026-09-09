@@ -6496,3 +6496,326 @@ export const FoodAllCategoryItemsListData: FoodCategoryInterface[] = [
     cuisine: 'Continental, European'
   }
 ];
+
+export const DineoutOptionsItemsList: DineOutItemInterface[] = [
+  {
+    id: 101,
+    name: "MKT",
+    rating: 4.3,
+    cuisines: ["Asian", "European", "Japanese", "North Indian", "Mexican", "Thai", "Pizza", "Pasta"],
+    priceForTwo: 5000,
+    location: "Chanakyapuri, New Delhi",
+    distance: "5 km",
+    imageUrl: "/products/e1e59307a8114182fb131b90e96bd525_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 102,
+    name: "FIO Cookhouse and Bar",
+    rating: 4.5,
+    cuisines: ["European", "Modern Indian", "Italian", "Pizza", "North Indian", "Seafood", "Desserts", "Beverages"],
+    priceForTwo: 4500,
+    location: "Nehru Place, New Delhi",
+    distance: "9.2 km",
+    imageUrl: "/products/0d4ee9a0beb509c240ff678171e83f60_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 103,
+    name: "The Sunday House",
+    rating: 4.3,
+    cuisines: ["Asian", "Mediterranean", "North Indian", "Pizza", "Pasta", "Sushi"],
+    priceForTwo: 2400,
+    location: "Punjabi Bagh, New Delhi",
+    distance: "9.3 km",
+    imageUrl: "/products/6a5f390c8af6a698dde66add8a744bec_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 104,
+    name: "Sufiaana By Cherish",
+    rating: 4.5,
+    cuisines: ["North Indian", "Biryani", "Kebab"],
+    priceForTwo: 2000,
+    location: "Ashok Vihar Phase 2, New Delhi",
+    distance: "8.7 km",
+    imageUrl: "/products/dc557d0b26c3e566346797a68c731612_o2_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 105,
+    name: "Unico",
+    rating: 4.9,
+    cuisines: ["Pizza", "Italian", "Pasta", "Salad", "Burger", "Sandwich"],
+    priceForTwo: 3000,
+    location: "DLF Phase 5, Gurgaon",
+    distance: "21.5 km",
+    imageUrl: "/products/191e8adc341e09bd1beec312062e480e_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 106,
+    name: "The Record Room",
+    rating: 3.9,
+    cuisines: ["North Indian", "Chinese", "Pizza", "Middle Eastern", "Thai", "Pasta", "Fast Food", "Salad"],
+    priceForTwo: 2600,
+    location: "Hauz Khas Village, New Delhi",
+    distance: "8.1 km",
+    imageUrl: "/products/269f168ca3811e8009151bd7257c65d7_o2_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 30% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 107,
+    name: "Flow Brew & Dine",
+    rating: 4.4,
+    cuisines: ["European", "Asian", "Japanese", "Pasta", "Pizza", "North Indian", "Desserts", "Beverages"],
+    priceForTwo: 3500,
+    location: "Saket, New Delhi",
+    distance: "10.8 km",
+    imageUrl: "/products/e39aa094f9760ed00ce468103f3f49c8_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 108,
+    name: "Zaffran By Kasbah",
+    rating: 4.7,
+    cuisines: ["North Indian", "Mughlai", "Biryani"],
+    priceForTwo: 2500,
+    location: "Lala Lajpat Rai Marg, New Delhi",
+    distance: "8 km",
+    imageUrl: "/products/8cec7fa783fdd3c0f87bde9990828f50_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 109,
+    name: "Open Tap 29",
+    rating: 4.4,
+    cuisines: ["Bar Food", "Oriental", "Continental", "Fast Food", "North Indian", "Beverages"],
+    priceForTwo: 2000,
+    location: "Sector 29, Gurgaon",
+    distance: "22.6 km",
+    imageUrl: "/products/e812c0d46693549ed8024e2d7be878ef_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 110,
+    name: "Noya",
+    rating: 4.8,
+    cuisines: ["Asian", "Chinese"],
+    priceForTwo: 3000,
+    location: "Lala Lajpat Rai Marg, New Delhi",
+    distance: "8 km",
+    imageUrl: "/products/361842564c5a9b3fda3b99d1bda7f69b_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 111,
+    name: "The Barbeque Company",
+    rating: 4.0,
+    cuisines: ["BBQ", "North Indian", "Fast Food", "Desserts", "Beverages"],
+    priceForTwo: 2800,
+    location: "Sector 75, Noida",
+    distance: "17.5 km",
+    imageUrl: "/products/62aeeb238f2a532104a46498611ab4f1_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 112,
+    name: "W Va Bien",
+    rating: 3.9,
+    cuisines: ["Asian", "North Indian", "Continental", "Sushi", "Italian", "Biryani", "Desserts", "Beverages"],
+    priceForTwo: 3500,
+    location: "Rajinder Nagar, New Delhi",
+    distance: "3.2 km",
+    imageUrl: "/products/35d067a5973db23b4357c4fc95f675b2_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 25% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 113,
+    name: "Quaff Brewing Co.",
+    rating: 4.4,
+    cuisines: ["North Indian", "Chinese", "Pizza", "Pasta"],
+    priceForTwo: 3000,
+    location: "DLF Cyber City, Gurgaon",
+    distance: "18.9 km",
+    imageUrl: "/products/64606c3b0f0e0b6d072720516a376813_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 114,
+    name: "Breakin' Brew",
+    rating: 4.7,
+    cuisines: ["Cafe", "Coffee", "Chinese", "Continental", "Italian", "Pasta", "North Indian", "Desserts"],
+    priceForTwo: 1800,
+    location: "Karkardooma, New Delhi",
+    distance: "9.2 km",
+    imageUrl: "/products/5d60ef7cfffadb34642dcd3615caba0d_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 115,
+    name: "Zetu",
+    rating: 3.9,
+    cuisines: [],
+    priceForTwo: 8000,
+    location: "Mehrauli, New Delhi",
+    distance: "11.2 km",
+    imageUrl: "/products/e1e59307a8114182fb131b90e96bd525_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 116,
+    name: "Glori",
+    rating: 4.4,
+    cuisines: ["Turkish", "Italian", "Asian", "North Indian", "Pizza", "Pasta", "Sushi", "Mexican"],
+    priceForTwo: 2500,
+    location: "Mayapuri Phase 1, New Delhi",
+    distance: "8.9 km",
+    imageUrl: "/products/806bda47e95e298915eb12a5a029ed49_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 15% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 117,
+    name: "Echoes",
+    rating: 4.5,
+    cuisines: ["Pizza", "Burger", "Momos", "Coffee", "Pasta", "Shake", "Chinese", "North Indian"],
+    priceForTwo: 1200,
+    location: "Kailash Colony, New Delhi",
+    distance: "8.7 km",
+    imageUrl: "/products/ef709d5eceee2de61bf2ec91e3bc4ac5_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 118,
+    name: "Indie Fusion",
+    rating: 4.1,
+    cuisines: ["North Indian", "Chinese", "Healthy Food", "Pizza", "Fast Food", "Desserts", "Coffee", "Beverages"],
+    priceForTwo: 2000,
+    location: "Karkardooma, New Delhi",
+    distance: "9.1 km",
+    imageUrl: "/products/1b844c3177efc3506ab8710e5849c8d1_o2_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 119,
+    name: "NAO - Next Asian Outing",
+    rating: 4.5,
+    cuisines: ["Asian", "Desserts", "Beverages", "Chinese", "Japanese", "Thai", "Korean", "Sushi"],
+    priceForTwo: 2000,
+    location: "Sector 98, Noida",
+    distance: "18.2 km",
+    imageUrl: "/products/634ef0a4f506629c9a0c5e549e1eabcb_o2_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  },
+  {
+    id: 120,
+    name: "Pankh",
+    rating: 4.2,
+    cuisines: ["North Indian", "Modern Indian"],
+    priceForTwo: 2800,
+    location: "Punjabi Bagh, New Delhi",
+    distance: "9 km",
+    imageUrl: "/products/0ca36205830eb8b9f9ab5c7804a945dd_featured_v2.jpg",
+    isTableBooking: true,
+    offers: [
+      { type: 'walk-in', title: 'Flat 10% OFF with Bank Offer' }
+    ],
+    bankOffers: [],
+    extraOffers: ["Get extra ₹75 off using PAYTMUPI"]
+  }
+];
