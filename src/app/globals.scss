@@ -31,6 +31,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('/fonts/AmazonEmber-Heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('/fonts/AmazonEmber-Heavy.woff2') format('woff2'),
+       url('/fonts/AmazonEmber-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -61,3 +77,4 @@ body {
 .font-bold {
   font-weight: 700;
 }
+

@@ -25,6 +25,9 @@ import { FaChevronDown, FaRegClock, FaStar } from 'react-icons/fa';
 import { MdDeliveryDining } from 'react-icons/md';
 import { IoLocationOutline } from 'react-icons/io5';
 import OrderOnlineUltraPremiumContent from '../OrderOnlineUltraPremiumContent/OrderOnlineUltraPremiumContent';
+import OutletsAroundYou, { Outlet } from '../OrderOnlineUltraPremiumContent/OutletsAroundYou/OutletsAroundYou';
+import OpenCloseTime from '../OrderOnlineUltraPremiumContent/OpenCloseTime/OpenCloseTime';
+import BookTablePopUp from '../BookTablePopUp/BookTablePopUp';
 
 export interface TabItem {
     id: string;
@@ -169,11 +172,22 @@ const restaurentDummyImages = [
     "/products/5e8fb92d7645f10eb62caceaffe87d7c2.jpg"
 ];
 
+type OverviewContentProps = {
+    restaurant?: any;
+    onOpenOrderModal?: () => void;
+};
 // Overview Content Component
-const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpenOrderModal?: () => void }) => {
-    const [activeOfferTab, setActiveOfferTab] = useState<'booking' | 'walkin'>('booking');
+const OverviewContent = ({
+    restaurant,
+    onOpenOrderModal,
+}: OverviewContentProps) => {
+    const [activeOfferTab, setActiveOfferTab] = useState<"booking" | "walkin">(
+        "booking"
+    );
+    const [isBookTableOpen, setIsBookTableOpen] = useState(false);
 
-    // Updated renderOfferContent with improved styling
+    /* ---------------- Offer content ---------------- */
+
     const renderOfferContent = () => {
         return (
             <div className={styles.offerContentWrapper}>
@@ -208,9 +222,7 @@ const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; o
                         </div>
                     </div>
 
-                    <div className={styles.addOnTitle}>
-                        ADD-ON OFFERS
-                    </div>
+                    <div className={styles.addOnTitle}>ADD-ON OFFERS</div>
 
                     <div className={styles.addOnOffer}>
                         <div className={styles.addOnBankLogo}>
@@ -224,7 +236,9 @@ const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; o
                     </div>
 
                     <div className={styles.offerDots}>
-                        <span className={`${styles.offerDot} ${styles.active}`} />
+                        <span
+                            className={`${styles.offerDot} ${styles.active}`}
+                        />
                         <span className={styles.offerDot} />
                         <span className={styles.offerDot} />
                     </div>
@@ -233,6 +247,8 @@ const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; o
         );
     };
 
+    /* ---------------- Render ---------------- */
+
     return (
         <div className={styles.overviewWrapper}>
             {/* Left Column - 70% */}
@@ -240,48 +256,106 @@ const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; o
                 {/* Dining Offers Section */}
                 <div className={styles.offersSection}>
                     <h3 className={styles.sectionTitle}>Dining Offers</h3>
-                    <p className={styles.sectionSubtitle}>Tap on any offer to know more</p>
+                    <p className={styles.sectionSubtitle}>
+                        Tap on any offer to know more
+                    </p>
+
                     <div className={styles.offersGrid}>
-                        <div className={`${styles.offerCard} ${styles.highlightedOffer}`}>
-                            <h4 className={styles.offerTitle}>PRE-BOOK OFFER</h4>
+                        <div
+                            className={`${styles.offerCard} ${styles.highlightedOffer}`}
+                        >
+                            <h4 className={styles.offerTitle}>
+                                PRE-BOOK OFFER
+                            </h4>
                             <div className={styles.offerBody}>
-                                <h5 className={styles.offerSubTitle}>Flat 10% OFF</h5>
-                                <p className={styles.offerDesc}>Valid from 1PM to 11:55PM today<br />Booking required</p>
+                                <h5 className={styles.offerSubTitle}>
+                                    Flat 10% OFF
+                                </h5>
+                                <p className={styles.offerDesc}>
+                                    Valid from 1PM to 11:55PM today
+                                    <br />
+                                    Booking required
+                                </p>
                             </div>
                         </div>
-                        <div className={`${styles.offerCard} ${styles.noHighlightedOffer}`}>
-                            <h4 className={styles.offerTitle}>INSTANT OFFER</h4>
+
+                        <div
+                            className={`${styles.offerCard} ${styles.noHighlightedOffer}`}
+                        >
+                            <h4 className={styles.offerTitle}>
+                                INSTANT OFFER
+                            </h4>
                             <div className={styles.offerBody}>
-                                <h5 className={styles.offerSubTitle}>Flat 10% OFF</h5>
-                                <p className={styles.offerDesc}>on bill payments</p>
+                                <h5 className={styles.offerSubTitle}>
+                                    Flat 10% OFF
+                                </h5>
+                                <p className={styles.offerDesc}>
+                                    on bill payments
+                                </p>
                             </div>
                         </div>
-                        <div className={`${styles.offerCard} ${styles.noHighlightedOffer}`}>
+
+                        <div
+                            className={`${styles.offerCard} ${styles.noHighlightedOffer}`}
+                        >
                             <h4 className={styles.offerTitle}>SURPRISE</h4>
                             <div className={styles.offerBody}>
-                                <h5 className={styles.offerSubTitle}>Get a scratch card</h5>
-                                <p className={styles.offerDesc}>after every transaction</p>
+                                <h5 className={styles.offerSubTitle}>
+                                    Get a scratch card
+                                </h5>
+                                <p className={styles.offerDesc}>
+                                    after every transaction
+                                </p>
                             </div>
                         </div>
-                        <div className={`${styles.offerCard} ${styles.noHighlightedOffer}`}>
-                            <h4 className={styles.offerTitle}>EXCLUSIVE OFFER</h4>
+
+                        <div
+                            className={`${styles.offerCard} ${styles.noHighlightedOffer}`}
+                        >
+                            <h4 className={styles.offerTitle}>
+                                EXCLUSIVE OFFER
+                            </h4>
                             <div className={styles.offerBody}>
-                                <h5 className={styles.offerSubTitle}>FLAT ₹175 OFF</h5>
-                                <p className={styles.offerDesc}>valid on your next dining payment</p>
+                                <h5 className={styles.offerSubTitle}>
+                                    FLAT ₹175 OFF
+                                </h5>
+                                <p className={styles.offerDesc}>
+                                    valid on your next dining payment
+                                </p>
                             </div>
                         </div>
-                        <div className={`${styles.offerCard} ${styles.noHighlightedOffer}`}>
-                            <h4 className={styles.offerTitle}>BANK OFFER</h4>
+
+                        <div
+                            className={`${styles.offerCard} ${styles.noHighlightedOffer}`}
+                        >
+                            <h4 className={styles.offerTitle}>
+                                BANK OFFER
+                            </h4>
                             <div className={styles.offerBody}>
-                                <h5 className={styles.offerSubTitle}>25% OFF for up to ₹5,000 using RBL Bank LUMIÈRE Credit Card</h5>
-                                <p className={styles.offerDesc}>and more with other banks</p>
+                                <h5 className={styles.offerSubTitle}>
+                                    25% OFF for up to ₹5,000 using RBL Bank
+                                    LUMIÈRE Credit Card
+                                </h5>
+                                <p className={styles.offerDesc}>
+                                    and more with other banks
+                                </p>
                             </div>
                         </div>
-                        <div className={`${styles.offerCard} ${styles.noHighlightedOffer}`}>
-                            <h4 className={styles.offerTitle}>CASHBACK OFFER</h4>
+
+                        <div
+                            className={`${styles.offerCard} ${styles.noHighlightedOffer}`}
+                        >
+                            <h4 className={styles.offerTitle}>
+                                CASHBACK OFFER
+                            </h4>
                             <div className={styles.offerBody}>
-                                <h5 className={styles.offerSubTitle}>Get Flat ₹200 Cashback</h5>
-                                <p className={styles.offerDesc}>on minimum bill of ₹1,000 • Valid on all payment methods</p>
+                                <h5 className={styles.offerSubTitle}>
+                                    Get Flat ₹200 Cashback
+                                </h5>
+                                <p className={styles.offerDesc}>
+                                    on minimum bill of ₹1,000 • Valid on all
+                                    payment methods
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -290,50 +364,122 @@ const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; o
                 {/* More Info Section */}
                 <div className={styles.moreInfoSection}>
                     <h3 className={styles.sectionTitle}>More Info</h3>
+
                     <div className={styles.moreInfoGrid}>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Lunch</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Dinner</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Home delivery</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Takeaway available</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Wheelchair accessible</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Stags allowed</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Less noisy</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Step-free entry</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Parking available</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Free parking</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Work friendly</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Smoking area</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Wifi</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Indoor seating</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Kid friendly</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Family friendly</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Low-intensity music</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Large group seating</div>
-                        <div className={styles.moreInfoItem}><span className={styles.checkIcon}>✓</span> Vegetarian friendly</div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Lunch
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Dinner
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Home
+                            delivery
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span>{" "}
+                            Takeaway available
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span>{" "}
+                            Wheelchair accessible
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Stags
+                            allowed
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Less
+                            noisy
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span>{" "}
+                            Step-free entry
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span>{" "}
+                            Parking available
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Free
+                            parking
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Work
+                            friendly
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Smoking
+                            area
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Wifi
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Indoor
+                            seating
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Kid
+                            friendly
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Family
+                            friendly
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span>{" "}
+                            Low-intensity music
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span> Large
+                            group seating
+                        </div>
+                        <div className={styles.moreInfoItem}>
+                            <span className={styles.checkIcon}>✓</span>{" "}
+                            Vegetarian friendly
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Right Column - 30% - Updated with improved styling */}
+            {/* Right Column - 30% */}
             <div className={styles.overviewRight}>
                 <div className={styles.offersForYou}>
-                    <h3 className={styles.offersForYouTitle}>Table Reservation</h3>
+                    <h3 className={styles.offersForYouTitle}>
+                        Table Reservation
+                    </h3>
 
                     {/* Tabs Row */}
                     <div className={styles.sideOfferTabs}>
                         <div
-                            className={`${styles.sideOfferTab} ${activeOfferTab === 'booking' ? styles.activeTab : styles.nonactiveTab}`}
-                            onClick={() => setActiveOfferTab('booking')}
+                            className={`${styles.sideOfferTab} ${activeOfferTab === "booking"
+                                ? styles.activeTab
+                                : styles.nonactiveTab
+                                }`}
+                            onClick={() => setActiveOfferTab("booking")}
                         >
-                            <span className={styles.sideOfferTabLabel}>BOOKING OFFER</span>
-                            <span className={styles.sideOfferTabDiscount}>(Upto 40% Off)</span>
+                            <span className={styles.sideOfferTabLabel}>
+                                BOOKING OFFER
+                            </span>
+                            <span className={styles.sideOfferTabDiscount}>
+                                (Upto 40% Off)
+                            </span>
                         </div>
+
                         <div
-                            className={`${styles.sideOfferTab} ${activeOfferTab === 'walkin' ? styles.activeTab : styles.nonactiveTab}`}
-                            onClick={() => setActiveOfferTab('walkin')}
+                            className={`${styles.sideOfferTab} ${activeOfferTab === "walkin"
+                                ? styles.activeTab
+                                : styles.nonactiveTab
+                                }`}
+                            onClick={() => setActiveOfferTab("walkin")}
                         >
-                            <span className={styles.sideOfferTabLabel}>WALK-IN OFFER</span>
-                            <span className={styles.sideOfferTabDiscount}>(Upto 20% Off)</span>
+                            <span className={styles.sideOfferTabLabel}>
+                                WALK-IN OFFER
+                            </span>
+                            <span className={styles.sideOfferTabDiscount}>
+                                (Upto 20% Off)
+                            </span>
                         </div>
                     </div>
 
@@ -342,14 +488,40 @@ const OverviewContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; o
 
                     {/* Action Buttons */}
                     <div className={styles.sideOfferActions}>
-                        <button className={styles.sideBookNowBtn}>Book Table</button>
-                        <button className={styles.sidePayBillBtn}>Pay Bill</button>
+                        <button
+                            type="button"
+                            className={styles.sideBookNowBtn}
+                            onClick={() => setIsBookTableOpen(true)}
+                        >
+                            Book Table
+                        </button>
+
+                        <button
+                            type="button"
+                            className={styles.sidePayBillBtn}
+                        >
+                            Pay Bill
+                        </button>
                     </div>
                 </div>
             </div>
+
+            {/* Render popup outside overviewWrapper */}
+            {isBookTableOpen && (
+                <BookTablePopUp
+                    restaurantName="Book table"
+                    restaurantLocation="Shubham Soup Wala, Rithala"
+                    onBack={() => setIsBookTableOpen(false)}
+                    onProceed={(bookingData) => {
+                        console.log('Booking Data:', bookingData);
+                        setIsBookTableOpen(false);
+                    }}
+                />
+            )}
         </div>
     );
 };
+
 
 interface AboutContentProps {
     restaurant?: {
@@ -435,6 +607,7 @@ const NonVegIcon = () => (
 const OrderOnlineContent = () => {
     const [activeCategory, setActiveCategory] = useState("Today's Exclusive Dishes (1)");
     const [searchTerm, setSearchTerm] = useState('');
+    const [cart, setCart] = useState<Record<string, number>>({});
 
     const categories = [
         "Today's Exclusive Dishes (1)", "Combos (4)", "Soups and Salads (19)",
@@ -1157,6 +1330,81 @@ const OrderOnlineContent = () => {
         }
     ];
 
+    const currentOutlet: Outlet = {
+        id: "current",
+        name: "Epicuria Food Mall, Nehru Place",
+        rating: 4.3,
+        deliveryTime: "40-45 MINS",
+        distanceKm: 9.1,
+        isCurrent: true,
+        notice: "This location is outside the outlet's delivery area",
+    };
+
+    const otherOutlets: Outlet[] = [
+        {
+            id: "o1",
+            name: "Pacific Mall, Jasola",
+            rating: 4.3,
+            deliveryTime: "25-30 mins",
+            distanceKm: 4.7,
+        },
+        {
+            id: "o2",
+            name: "Jasola, Shaheen bagh",
+            rating: 4.2,
+            deliveryTime: "25-30 mins",
+            distanceKm: 5.0,
+        },
+        {
+            id: "o3",
+            name: "Delhi, Lajpat Nagar2",
+            rating: 4.3,
+            deliveryTime: "40-45 mins",
+            distanceKm: 10.6,
+        },
+        {
+            id: "o4",
+            name: "Saket, Saket",
+            rating: 4.3,
+            deliveryTime: "55-65 mins",
+            distanceKm: 13.1,
+        },
+        {
+            id: "o5",
+            name: "DMRC Metro Station, Chattarpur",
+            rating: 4.2,
+            deliveryTime: "50-60 mins",
+            distanceKm: 15.4,
+        },
+        {
+            id: "o6",
+            name: "Khanpur ext., South Delhi, Village Khanpur colony",
+            rating: 4.1,
+            deliveryTime: "40-45 mins",
+            distanceKm: 9.1,
+            state: "unavailable",
+            notice: "Not accepting orders for this outlet in your location",
+        },
+        {
+            id: "o7",
+            name: "Mall Road, GTB Nagar",
+            rating: 4.3,
+            deliveryTime: "40-45 mins",
+            distanceKm: 45.6,
+            state: "unavailable",
+            notice: "Does not deliver to this location",
+        },
+        {
+            id: "o8",
+            name: "PVR Anupam, Saket",
+            rating: 4.2,
+            deliveryTime: "45-50 mins",
+            distanceKm: 11.4,
+            state: "closed",
+            notice: "Currently closed for delivery",
+        },
+    ];
+
     const getFilteredItems = () => {
         const categoryData = menuData.find(cat => cat.category === activeCategory);
         if (!categoryData) return [];
@@ -1197,6 +1445,27 @@ const OrderOnlineContent = () => {
         setCurrentDealIndex((prev) => Math.min(maxIndex, prev + 1));
     };
 
+    const addToCart = (itemName: string) => {
+        setCart((prev) => ({
+            ...prev,
+            [itemName]: (prev[itemName] || 0) + 1,
+        }));
+    };
+
+    const removeFromCart = (itemName: string) => {
+        setCart((prev) => {
+            const current = prev[itemName] || 0;
+            if (current <= 1) {
+                const next = { ...prev };
+                delete next[itemName];
+                return next;
+            }
+            return { ...prev, [itemName]: current - 1 };
+        });
+    };
+
+    const cartCount = Object.values(cart).reduce((sum, q) => sum + q, 0);
+
 
     return (
         <div className={styles.orderOnlineTabContent}>
@@ -1228,34 +1497,94 @@ const OrderOnlineContent = () => {
 
 
                         {/* Opening Hours */}
-                        <div className={styles.openingHours}>
+                        <div className={styles.statusRow}>
+                            <div className={styles.openStatus}>
+                                <span className={styles.statusDot} />
+                                Open Now
+                            </div>
+                            <span>•</span>
+
+                            <OpenCloseTime
+                                trigger={
+                                    <span className={styles.deliveryTime}>
+                                        Closes 12:00 am
+                                    </span>
+                                }
+                            />
+                        </div>
+                        {/* <div className={styles.openingHours}>
                             <FaRegClock className={styles.clockIcon} />
                             <span className={styles.openStatus}>Open now</span>
                             <span className={styles.closingTime}>· Closes 11:30 pm</span>
-                        </div>
+                        </div> */}
 
                         {/* Delivery Alert */}
-                        <div className={styles.deliveryAlert}>
+                        {/* <div className={styles.deliveryAlert}>
                             <MdDeliveryDining className={styles.deliveryIcon} />
                             <span className={styles.deliveryAlertText}>
                                 This location is outside the outlet's delivery area
                             </span>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={styles.restaurantInfoRight}>
                         {/* Rating Section */}
                         <div className={styles.ratingSection}>
                             <div className={styles.ratingBadge}>
-                                <FaStar className={styles.starIcon} />
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 20 20"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="10"
+                                        cy="10"
+                                        r="9"
+                                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                                    />
+                                    <path
+                                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                                        fill="white"
+                                    />
+                                    <defs>
+                                        <linearGradient
+                                            id="StoreRating20_svg__paint0_linear_32982_71567"
+                                            x1="10"
+                                            y1="1"
+                                            x2="10"
+                                            y2="19"
+                                            gradientUnits="userSpaceOnUse"
+                                        >
+                                            <stop stopColor="#21973B" />
+                                            <stop offset="1" stopColor="#128540" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                {/* <FaStar className={styles.starIcon} /> */}
                                 <span className={styles.ratingValue}>4.6</span>
                                 <span className={styles.ratingCount}>(3.0K+ ratings)</span>
                             </div>
-                            <span className={styles.priceRange}>· ₹500 for two</span>
+                            <span className={styles.priceRange}><span>•  </span>₹500 for two</span>
                         </div>
                         <div className={styles.locationInfo}>
-                            <IoLocationOutline className={styles.locationIcon} />
-                            <span className={styles.locationText}>Outlet Sahid Nagar</span>
-                            <span className={styles.deliveryStatus}>Does not deliver</span>
+                            <OutletsAroundYou
+                                currentOutlet={currentOutlet}
+                                otherOutlets={otherOutlets}
+                                onSelect={(outlet) => {
+                                    // handle outlet switch
+                                    console.log("Selected outlet:", outlet);
+                                }}
+                                trigger={
+                                    <>
+                                        <span className={styles.outlet}>Outlet:</span>{" "}
+                                        Nehru Place
+                                    </>
+                                }
+                            />
+                            {/* <IoLocationOutline className={styles.locationIcon} />
+                            <span className={styles.locationText}>Outlet: Sahid Nagar</span> */}
+                            {/* <span className={styles.deliveryStatus}>Does not deliver</span> */}
                         </div>
                     </div>
 
@@ -1328,80 +1657,82 @@ const OrderOnlineContent = () => {
 
                     <div className={styles.categoryList}>
 
-                            {/* --- Wrapped Static Buttons with Scrollbar --- */}
-                            <div className={styles.staticCategoryList}>
+                        {/* --- Wrapped Static Buttons with Scrollbar --- */}
+                        <div className={styles.staticCategoryList}>
 
-                                {/* Veg Option */}
-                                <div className={styles.staticItem}>
-                                    <div className={styles.staticBox}>
-                                        <label className={styles.staticLabel}>
-                                            <input type="checkbox" aria-label="Enable veg option" className={styles.hiddenInput} />
-                                            <span className={styles.staticPill}>
+                            {/* Veg Option */}
+                            <div className={styles.staticItem}>
+                                <div className={styles.staticBox}>
+                                    <label className={styles.staticLabel}>
+                                        <input type="checkbox" aria-label="Enable veg option" className={styles.hiddenInput} />
+                                        <span className={styles.staticPill}>
 
-                                                {/* Track wrapper (contains track and icon) */}
-                                                <div className={styles.trackWrapper}>
-                                                    <span className={styles.track}></span>
-                                                    <div className={styles.iconContainer}>
-                                                        <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect x="1" y="1" width="18" height="18" rx="4" stroke="#007A33" strokeWidth="2" fill="white" />
-                                                            <circle cx="10" cy="10" r="5" fill="#007A33" />
-                                                        </svg>
-                                                    </div>
+                                            {/* Track wrapper (contains track and icon) */}
+                                            <div className={styles.trackWrapper}>
+                                                <span className={styles.track}></span>
+                                                <div className={styles.iconContainer}>
+                                                    <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="1" y="1" width="18" height="18" rx="4" stroke="#007A33" strokeWidth="2" fill="white" />
+                                                        <circle cx="10" cy="10" r="5" fill="#007A33" />
+                                                    </svg>
                                                 </div>
+                                            </div>
 
-                                            </span>
-                                        </label>
-                                    </div>
+                                        </span>
+                                    </label>
                                 </div>
+                            </div>
 
-                                {/* Non-Veg Option */}
-                                <div className={styles.staticItem}>
-                                    <div className={styles.staticBox}>
-                                        <label className={styles.staticLabel}>
-                                            <input type="checkbox" aria-label="Enable non veg option" className={styles.hiddenInput} />
-                                            <span className={styles.staticPill}>
+                            {/* Non-Veg Option */}
+                            <div className={styles.staticItem}>
+                                <div className={styles.staticBox}>
+                                    <label className={styles.staticLabel}>
+                                        <input type="checkbox" aria-label="Enable non veg option" className={styles.hiddenInput} />
+                                        <span className={styles.staticPill}>
 
-                                                {/* Track wrapper (contains track and icon) */}
-                                                <div className={styles.trackWrapper}>
-                                                    <span className={styles.track}></span>
-                                                    <div className={styles.iconContainer}>
-                                                        <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect x="1" y="1" width="18" height="18" rx="4" stroke="#D32F2F" strokeWidth="2" fill="white" />
-                                                            <path d="M10 5L15 15H5L10 5Z" fill="#D32F2F" />
-                                                        </svg>
-                                                    </div>
+                                            {/* Track wrapper (contains track and icon) */}
+                                            <div className={styles.trackWrapper}>
+                                                <span className={styles.track}></span>
+                                                <div className={styles.iconContainer}>
+                                                    <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect x="1" y="1" width="18" height="18" rx="4" stroke="#D32F2F" strokeWidth="2" fill="white" />
+                                                        <path d="M10 5L15 15H5L10 5Z" fill="#D32F2F" />
+                                                    </svg>
                                                 </div>
+                                            </div>
 
-                                            </span>
-                                        </label>
-                                    </div>
+                                        </span>
+                                    </label>
                                 </div>
+                            </div>
 
-                                {/* Bestseller Text
+                            {/* Bestseller Text
                                 <div className={styles.staticItem}>
                                     <div className={styles.bestsellerWrapper}>
                                         <div className={styles.bestsellerText}>Bestseller</div>
                                     </div>
                                 </div> */}
 
-                            </div>
-
-                            {/* Existing Dynamic Categories */}
-                            {categoriesFilter.map((category) => (
-                                <button
-                                    key={category}
-                                    type="button"
-                                    onClick={() => setActiveCategory(category)}
-                                    className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`}
-                                >
-                                    {category}
-                                </button>
-                            ))}
-
-                            {/* End staticCategoryList */}
-
                         </div>
+
+                        {/* Existing Dynamic Categories */}
+                        {categoriesFilter.map((category) => (
+                            <button
+                                key={category}
+                                type="button"
+                                onClick={() => setActiveCategory(category)}
+                                className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`}
+                            >
+                                {category}
+                            </button>
+                        ))}
+
+                        {/* End staticCategoryList */}
+
+                    </div>
                 </div>
+
+
             </div>
 
             {/* Body Section - Sidebar + Main Content */}
@@ -1436,14 +1767,6 @@ const OrderOnlineContent = () => {
                                                 )}
                                             </div>
                                             <h4 className={styles.orderOnlineItemName}>{item.name}</h4>
-                                            {item.desc && (
-                                                <p className={styles.orderOnlineItemDesc}>
-                                                    {item.desc}
-                                                    {item.desc.includes('read more') && (
-                                                        <span className={styles.orderOnlineReadMore}> read more</span>
-                                                    )}
-                                                </p>
-                                            )}
                                             <div className={styles.priceMenu}>
                                                 <span className={styles.reviewCount}>
                                                     ₹{item.price}
@@ -1458,6 +1781,16 @@ const OrderOnlineContent = () => {
                                                     ({item.totalRatings}+)
                                                 </span>
                                             </div>
+                                            {item.desc && (
+                                                <p className={styles.orderOnlineItemDesc}>
+                                                    {item.desc}
+                                                    {item.desc.includes('read more') && (
+                                                        <span className={styles.orderOnlineReadMore}> read more</span>
+                                                    )}
+                                                </p>
+                                            )}
+
+
                                         </div>
 
                                         {item.img && (
@@ -1475,7 +1808,13 @@ const OrderOnlineContent = () => {
                                                             <NonVegIcon />
                                                         )}
                                                     </div>
-                                                    <button
+                                                    <AddControl
+                                                        item={item}
+                                                        qty={cart[item.name] || 0}
+                                                        onAdd={addToCart}
+                                                        onRemove={removeFromCart}
+                                                    />
+                                                    {/* <button
                                                         type="button"
                                                         className={styles.addButton}
                                                         onClick={(e) => {
@@ -1483,7 +1822,7 @@ const OrderOnlineContent = () => {
                                                         }}
                                                     >
                                                         ADD
-                                                    </button>
+                                                    </button> */}
                                                 </div>
                                                 {item.customisable && (
                                                     <span className={styles.customisableBadge}>
@@ -1501,9 +1840,92 @@ const OrderOnlineContent = () => {
                     </div>
                 </div>
             </div>
+            {/* 👇 bottom cart here */}
+            {cartCount > 0 && (
+                <button
+                    type="button"
+                    className={styles.bottomCart}
+                    onClick={() => {
+                        // router.push("/cart");
+                    }}
+                >
+                    <span className={styles.bottomCartLeft}>
+                        {cartCount} item{cartCount > 1 ? "s" : ""} added
+                    </span>
+                    <span className={styles.bottomCartRight}>
+                        <span>View Cart</span>
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                            className={styles.cartIcon}
+                        >
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                    </span>
+                </button>
+            )}
         </div>
     );
 };
+
+type AddControlProps = {
+    item: { name: string };
+    qty: number;
+    onAdd: (name: string) => void;
+    onRemove: (name: string) => void;
+};
+
+function AddControl({ item, qty, onAdd, onRemove }: AddControlProps) {
+    if (qty === 0) {
+        return (
+            <button
+                type="button"
+                className={styles.addButton}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    onAdd(item.name);
+                }}
+                aria-label={`Add ${item.name} to cart`}
+            >
+                ADD
+            </button>
+        );
+    }
+
+    return (
+        <div
+            className={styles.quantityControl}
+            onClick={(e) => e.stopPropagation()}
+        >
+            <button
+                type="button"
+                onClick={() => onRemove(item.name)}
+                aria-label={`Remove one ${item.name}`}
+            >
+                −
+            </button>
+
+            <span>{qty}</span>
+
+            <button
+                type="button"
+                onClick={() => onAdd(item.name)}
+                aria-label={`Add one more ${item.name}`}
+            >
+                +
+            </button>
+        </div>
+    );
+}
 
 
 

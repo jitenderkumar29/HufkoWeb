@@ -13,13 +13,7 @@ import {
     faHome,
     faArrowRight,
     faUtensils,
-    faClock,
     faStar,
-    faWifi,
-    faParking,
-    faWheelchair,
-    faCreditCard,
-    faGift,
     faConciergeBell,
     faShuffle,
     faMugHot,
@@ -30,11 +24,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 import mapIcon2 from '../../../../public/icons/mapIcon2.png';
 import yesBankImage from '../../../../public/icons/yesBank.png';
 import DineOutRestDetailsTabs from './DineOutRestDetailsTabs/DineOutRestDetailsTabs';
-import BookTablePopUp from './BookTablePopUp/BookTablePopUp'; // Import the popup component
+import BookTablePopUp from './BookTablePopUp/BookTablePopUp';
 
 // Types
 export interface RestaurantRoom {
@@ -85,29 +78,39 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [openRatingId, setOpenRatingId] = useState<number | null>(null);
     const [restaurant, setRestaurant] = useState<RestaurantDataInterface | null>(null);
-    const [showFeatures, setShowFeatures] = useState<boolean | null>(false);
-    const [bankOffers, setBankOffers] = useState<boolean | null>(false);
-    
+    const [showFeatures, setShowFeatures] = useState<boolean>(false);
+
     // State for Book Table Popup
     const [isBookTableOpen, setIsBookTableOpen] = useState(false);
 
-    // Default values (replacing useDineOutSearch context)
-    const location = "Delhi, India";
+    // Default values
+    const location = 'Delhi, India';
     const date = new Date();
-    const time = "19:00";
+    const time = '19:00';
     const guestCount = 2;
     const childCount = 0;
 
-    // Mock restaurant data - replace with actual data source
+    // Mock restaurant data
     const restaurantData: RestaurantDataInterface[] = [
         {
             id: 1,
             name: 'Pride Plaza Hotel Aerocity New Delhi',
-            cuisine: ['North Indian', 'Mughlai', 'Chinese', 'Kebab', 'Biryani', 'Seafood', 'Desserts', 'Beverages'],
+            cuisine: [
+                'North Indian',
+                'Mughlai',
+                'Chinese',
+                'Kebab',
+                'Biryani',
+                'Seafood',
+                'Desserts',
+                'Beverages',
+            ],
             rating: 5,
             category: 'Restaurant',
-            location: 'H.No. 1, Main Street, Connaught Place, New Delhi, Delhi - 110001',
-            mainImg: '/products/3a0c19201c21e22020282042432116443e2c29595122262262212f21.jpg',
+            location:
+                'H.No. 1, Main Street, Connaught Place, New Delhi, Delhi - 110001',
+            mainImg:
+                '/products/3a0c19201c21e22020282042432116443e2c29595122262262212f21.jpg',
             thumbnails: [
                 '/products/a0c191ce00280443116443e2c2959516610f.jpg',
                 '/products/a32ca888bad40b4f8f5212b357c0a0cd.jpg',
@@ -152,21 +155,14 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         'Wheelchair Access',
     ] as const;
 
-    const customTabs = [
-        { id: 'overview', label: 'Overview', icon: faList },
-        { id: 'order-online', label: 'Order Online', icon: faUtensils, count: 5 },
-        { id: 'reviews', label: 'Reviews', icon: faStar, count: 42 },
-        { id: 'photos', label: 'Photos', icon: faImage, count: 128 },
-        { id: 'menu', label: 'Menu', icon: faUtensils },
-        { id: 'book-table', label: 'Book a Table', icon: faBook },
-    ];
-
     const scrollToTableOptions = () => {
         const tableOptionsSection = document.getElementById('table-options');
         if (tableOptionsSection) {
             const offset = 150;
-            const elementPosition = tableOptionsSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            const elementPosition =
+                tableOptionsSection.getBoundingClientRect().top;
+            const offsetPosition =
+                elementPosition + window.pageYOffset - offset;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth',
@@ -174,30 +170,14 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         }
     };
 
-    // Book Table handler - opens the popup
-    const bookTableHandler = () => {
-        setIsBookTableOpen(true);
-    };
-
-    // Handle proceed from popup
-    const handleBookTableProceed = (bookingData: any) => {
-        console.log('Booking data:', bookingData);
-        // Here you can handle the booking logic
-        // e.g., API call, navigation, etc.
-        alert(`Table booked for ${bookingData.guests} guests at ${bookingData.slot} on ${bookingData.date.day} ${bookingData.date.date}`);
-    };
-
-    // Handle popup close
-    const handleBookTableClose = () => {
-        setIsBookTableOpen(false);
-    };
-
     const scrollToLocationOptions = () => {
         const locationSection = document.getElementById('location');
         if (locationSection) {
             const offset = 150;
-            const elementPosition = locationSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            const elementPosition =
+                locationSection.getBoundingClientRect().top;
+            const offsetPosition =
+                elementPosition + window.pageYOffset - offset;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth',
@@ -206,13 +186,13 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     };
 
     const handleSetRestaurant = (restaurantId: string) => {
-        const id = Number(restaurantId);
-        if (isNaN(id)) {
+        const idNum = Number(restaurantId);
+        if (isNaN(idNum)) {
             console.error('Invalid restaurant ID');
             setRestaurant(null);
             return;
         }
-        const foundRestaurant = restaurantData.find((r) => r.id === id);
+        const foundRestaurant = restaurantData.find((r) => r.id === idNum);
         setRestaurant(foundRestaurant || null);
     };
 
@@ -241,7 +221,8 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         price: 15868,
         discountPrice: 5885,
         taxes: 730,
-        mainImage: 'https://www.ahstatic.com/photos/9470_roskc_01_p_1024x768.jpg',
+        mainImage:
+            'https://www.ahstatic.com/photos/9470_roskc_01_p_1024x768.jpg',
         thumbnails: [
             'https://www.ahstatic.com/photos/a248_ho_00_p_2048x1536.jpg',
             'https://www.ahstatic.com/photos/a248_ro_01_p_2048x1536.jpg',
@@ -250,7 +231,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         totalPhotos: 33,
     };
 
-    // Updated logic to cycle through main image and thumbnails
     const allImages = [restaurant.mainImg, ...restaurant.thumbnails];
 
     const nextImage = () => {
@@ -277,7 +257,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     };
 
     const handleShare = () => {
-        // Share functionality
         if (navigator.share) {
             navigator.share({
                 title: restaurant.name,
@@ -285,7 +264,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                 url: window.location.href,
             });
         } else {
-            // Fallback - copy to clipboard
             navigator.clipboard.writeText(window.location.href);
             alert('Link copied to clipboard!');
         }
@@ -296,19 +274,35 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         <div className={styles.restaurantHeader}>
             <div className={styles.leftHeading}>
                 <div className={styles.restaurantHeading}>
-                    <h1 className={styles.restaurantName}>{restaurant.name}</h1>
+                    <h1 className={styles.restaurantName}>
+                        {restaurant.name}
+                    </h1>
                     <div className={styles.restaurantRating}>
                         <span className={styles.badge}>
-                            {restaurant.rating}<span className={styles.star}> ★</span> {restaurant.category}
+                            {restaurant.rating}
+                            <span className={styles.star}> ★</span>{' '}
+                            {restaurant.category}
                         </span>
                     </div>
                 </div>
                 <div className={styles.restaurantCuisine}>
                     <div className={styles.cuisineTags}>
                         {restaurant.cuisine.map((item, index) => (
-                            <span key={index} className={styles.cuisineTag}>
+                            <span
+                                key={index}
+                                className={styles.cuisineTag}
+                            >
                                 {item}
-                               {index < restaurant.cuisine.length - 1 && <span className={styles.cuisineSeparator}>★</span>}
+                                {index <
+                                    restaurant.cuisine.length - 1 && (
+                                    <span
+                                        className={
+                                            styles.cuisineSeparator
+                                        }
+                                    >
+                                        ★
+                                    </span>
+                                )}
                             </span>
                         ))}
                     </div>
@@ -316,7 +310,10 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                 <div className={styles.restaurantAddress}>
                     <div className={styles.addressText}>
                         <div>
-                            <FontAwesomeIcon icon={faLocationDot} className={styles.locationIcon} />
+                            <FontAwesomeIcon
+                                icon={faLocationDot}
+                                className={styles.locationIcon}
+                            />
                             {restaurant.location}
                         </div>
                     </div>
@@ -329,8 +326,14 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                     <span>Open now</span>
                 </div>
 
-                <div className={styles.shareButton} onClick={handleShare}>
-                    <FontAwesomeIcon icon={faShareAlt} className={styles.shareIcon} />
+                <div
+                    className={styles.shareButton}
+                    onClick={handleShare}
+                >
+                    <FontAwesomeIcon
+                        icon={faShareAlt}
+                        className={styles.shareIcon}
+                    />
                     <span>Share</span>
                 </div>
 
@@ -347,18 +350,33 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                             onMouseLeave={() => setShowFeatures(false)}
                         >
                             <ul className={styles.featuresList}>
-                                {RESTAURANT_FEATURES.map((feature, index) => (
-                                    <li key={index} className={styles.featureItem}>
-                                        <FontAwesomeIcon icon={faCheck} className={styles.featureIcon} />
-                                        {feature}
-                                    </li>
-                                ))}
+                                {RESTAURANT_FEATURES.map(
+                                    (feature, index) => (
+                                        <li
+                                            key={index}
+                                            className={
+                                                styles.featureItem
+                                            }
+                                        >
+                                            <FontAwesomeIcon
+                                                icon={faCheck}
+                                                className={
+                                                    styles.featureIcon
+                                                }
+                                            />
+                                            {feature}
+                                        </li>
+                                    )
+                                )}
                             </ul>
                         </div>
                     )}
                 </div>
 
-                <div className={styles.viewsMap} onClick={scrollToLocationOptions}>
+                <div
+                    className={styles.viewsMap}
+                    onClick={scrollToLocationOptions}
+                >
                     <div className={styles.mapBadge}>
                         <Image
                             src={mapIcon2}
@@ -382,7 +400,9 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                             <div>{restaurant.totalRatings} Ratings</div>
                         </span>
                     </div>
-                    <div className={styles.ratingBadge}>{restaurant.reviewScore}</div>
+                    <div className={styles.ratingBadge}>
+                        {restaurant.reviewScore}
+                    </div>
                 </div>
                 {openRatingId === restaurant.id && (
                     <RatingCard
@@ -411,20 +431,36 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                 onMouseLeave={() => setOpenRatingId(null)}
             >
                 <div className={styles.leftRating}>
-                    <div className={styles.scoreRating}>{reviewScore}</div>
-                    <div className={styles.totalRating}>{totalRatings} Ratings</div>
+                    <div className={styles.scoreRating}>
+                        {reviewScore}
+                    </div>
+                    <div className={styles.totalRating}>
+                        {totalRatings} Ratings
+                    </div>
                 </div>
                 <div className={styles.rightRating}>
                     {breakdown.map((item) => (
-                        <div key={item.stars} className={styles.ratingRowRating}>
-                            <span className={styles.starLabelRating}>{item.stars} ★</span>
+                        <div
+                            key={item.stars}
+                            className={styles.ratingRowRating}
+                        >
+                            <span className={styles.starLabelRating}>
+                                {item.stars} ★
+                            </span>
                             <div className={styles.barContainerRating}>
                                 <div
                                     className={styles.barFillRating}
-                                    style={{ width: `${(item.count / totalRatings) * 100}%` }}
+                                    style={{
+                                        width: `${
+                                            (item.count / totalRatings) *
+                                            100
+                                        }%`,
+                                    }}
                                 />
                             </div>
-                            <span className={styles.countRating}>{item.count}</span>
+                            <span className={styles.countRating}>
+                                {item.count}
+                            </span>
                         </div>
                     ))}
                 </div>
@@ -436,12 +472,19 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         return (
             <div className={styles.offerCard}>
                 <div className={styles.offerImage}>
-                    <Image src={yesBankImage} alt="YES Bank Logo" className={styles.yesBankImage} />
+                    <Image
+                        src={yesBankImage}
+                        alt="YES Bank Logo"
+                        className={styles.yesBankImage}
+                    />
                 </div>
                 <div className={styles.offerDetails}>
-                    <div className={styles.offerTitle}>Use HUFKOYES Code</div>
+                    <div className={styles.offerTitle}>
+                        Use HUFKOYES Code
+                    </div>
                     <div className={styles.offerDescription}>
-                        Get ₹ 247 off. Pay using YES Bank Credit Cards to avail the...
+                        Get ₹ 247 off. Pay using YES Bank Credit Cards to
+                        avail the...
                     </div>
                 </div>
                 <div className={styles.moreOffers}>+ 1 more offer</div>
@@ -453,22 +496,36 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         return (
             <div className={styles.offerCard}>
                 <div className={styles.offerDetails}>
-                    <div className={styles.offerTitle}>Premium Package</div>
+                    <div className={styles.offerTitle}>
+                        Premium Package
+                    </div>
                     <div className={styles.offerDescriptionElite}>
-                        <FontAwesomeIcon icon={faUtensils} className={styles.iconElite} />
+                        <FontAwesomeIcon
+                            icon={faUtensils}
+                            className={styles.iconElite}
+                        />
                         20% off on Session of Fine Dining
                     </div>
                     <div className={styles.offerDescriptionElite}>
-                        <FontAwesomeIcon icon={faConciergeBell} className={styles.iconElite} />
+                        <FontAwesomeIcon
+                            icon={faConciergeBell}
+                            className={styles.iconElite}
+                        />
                         20% Discount on Buffet Services
                     </div>
                     <div className={styles.offerDescriptionElite}>
-                        <FontAwesomeIcon icon={faShuffle} className={styles.iconElite} />
+                        <FontAwesomeIcon
+                            icon={faShuffle}
+                            className={styles.iconElite}
+                        />
                         20% off on Two-way Local Transfer
                     </div>
                 </div>
                 <div className={styles.moreOffersElite}>
-                    <FontAwesomeIcon icon={faArrowRight} className={styles.faArrowRightIcon} />
+                    <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className={styles.faArrowRightIcon}
+                    />
                 </div>
             </div>
         );
@@ -477,8 +534,14 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     const BackButton = () => {
         return (
             <div>
-                <button onClick={() => router.back()} className={styles.backButton}>
-                    <FontAwesomeIcon icon={faChevronLeft} className={styles.backIcon} />
+                <button
+                    onClick={() => router.back()}
+                    className={styles.backButton}
+                >
+                    <FontAwesomeIcon
+                        icon={faChevronLeft}
+                        className={styles.backIcon}
+                    />
                     Back to search
                 </button>
                 <span className={styles.placeAddress}>
@@ -501,7 +564,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
             <div className={styles.card}>
                 {/* Left Section - Images */}
                 <div className={styles.imageSection}>
-
                     <div className={styles.galleryWrapper}>
                         {/* Main Image */}
                         <div className={styles.mainImageContainer}>
@@ -529,91 +591,145 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
 
                         {/* Vertical Thumbnails Column */}
                         <div className={styles.thumbnailContainer}>
-                            {restaurant.thumbnails.slice(0, 3).map((thumb, index) => (
-                                <div key={index} className={styles.thumbnailItem}>
-                                    <Image
-                                        src={thumb}
-                                        alt={`Thumbnail ${index + 1}`}
-                                        className={styles.thumbnail}
-                                        onClick={() => setCurrentImageIndex(index + 1)}
-                                        height={160}
-                                        width={200}
-                                        style={{ objectFit: 'cover' }}
-                                    />
-                                    {index === 2 && (
-                                        <button className={styles.viewAllPhotos} onClick={handleGalleryTabNav}>
-                                            ALL PHOTOS
-                                        </button>
-                                    )}
-                                </div>
-                            ))}
+                            {restaurant.thumbnails
+                                .slice(0, 3)
+                                .map((thumb, index) => (
+                                    <div
+                                        key={index}
+                                        className={styles.thumbnailItem}
+                                    >
+                                        <Image
+                                            src={thumb}
+                                            alt={`Thumbnail ${
+                                                index + 1
+                                            }`}
+                                            className={styles.thumbnail}
+                                            onClick={() =>
+                                                setCurrentImageIndex(
+                                                    index + 1
+                                                )
+                                            }
+                                            height={160}
+                                            width={200}
+                                            style={{
+                                                objectFit: 'cover',
+                                            }}
+                                        />
+                                        {index === 2 && (
+                                            <button
+                                                className={
+                                                    styles.viewAllPhotos
+                                                }
+                                                onClick={
+                                                    handleGalleryTabNav
+                                                }
+                                            >
+                                                ALL PHOTOS
+                                            </button>
+                                        )}
+                                    </div>
+                                ))}
                         </div>
                     </div>
-
                 </div>
 
                 {/* Right Section - Details */}
                 <div className={styles.detailsSection}>
                     <div className={styles.detailsSectionText}>
                         <div className={styles.roomInfo}>
-                            <h3 className={styles.roomName}>{table.name}</h3>
+                            <h3 className={styles.roomName}>
+                                {table.name}
+                            </h3>
                             <div className={styles.guestInfo}>
-                                <FontAwesomeIcon icon={faHome} className={styles.guestIcon} />
+                                <FontAwesomeIcon
+                                    icon={faHome}
+                                    className={styles.guestIcon}
+                                />
                                 <span>1 x Table</span>|
-                                <FontAwesomeIcon icon={faUser} className={styles.guestIcon} />
+                                <FontAwesomeIcon
+                                    icon={faUser}
+                                    className={styles.guestIcon}
+                                />
                                 <span>2 x Guest</span>
                             </div>
                             <div className={styles.amenitiesService}>
                                 <ul className={styles.breakFast}>
-                                    <FontAwesomeIcon icon={faMugHot} className={styles.beakFastIcon} />
+                                    <FontAwesomeIcon
+                                        icon={faMugHot}
+                                        className={styles.beakFastIcon}
+                                    />
                                     Free Snacks Included
                                 </ul>
                                 <ul className={styles.cancelRoom}>
                                     <FontAwesomeIcon
                                         icon={faArrowRight}
-                                        className={styles.cancelRoomIcon}
+                                        className={
+                                            styles.cancelRoomIcon
+                                        }
                                     />
-                                    Free Cancellation till 05-sep-2026 22:59
+                                    Free Cancellation till 05-sep-2026
+                                    22:59
                                 </ul>
                             </div>
-
-
                         </div>
 
                         <div className={styles.pricing}>
-                            <div className={styles.originalPrice}>{restaurant.oldPrice}</div>
-                            <div className={styles.discountPrice}>{restaurant.newPrice}</div>
-                            <div className={styles.taxes}>
-                                {restaurant.taxes.split(" per night")[0]}
+                            <div className={styles.originalPrice}>
+                                {restaurant.oldPrice}
                             </div>
-
+                            <div className={styles.discountPrice}>
+                                {restaurant.newPrice}
+                            </div>
+                            <div className={styles.taxes}>
+                                {restaurant.taxes.split(' per night')[0]}
+                            </div>
                         </div>
                     </div>
 
                     <div className={styles.bookTableCard}>
                         <div className={styles.bookTableCoupon}>
-                            <button className={styles.selectRoomButton} onClick={bookTableHandler}>
+                            <button
+                                className={styles.selectRoomButton}
+                                onClick={() => {
+                                    console.log(
+                                        'Book Table clicked - opening popup'
+                                    );
+                                    setIsBookTableOpen(true);
+                                }}
+                            >
                                 Book Table{' '}
-                                <FontAwesomeIcon icon={faChevronDown} />
+                                <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                />
                             </button>
                         </div>
 
                         <div className={styles.bookTableCoupon}>
-                            <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
+                            <button
+                                className={styles.selectRoomButton}
+                                onClick={scrollToTableOptions}
+                            >
                                 Pay Bill{' '}
-                                <FontAwesomeIcon icon={faChevronDown} />
+                                <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                />
                             </button>
                         </div>
 
                         <div className={styles.bookTableCoupon}>
-                            <button className={styles.selectRoomButton} onClick={scrollToTableOptions}>
+                            <button
+                                className={styles.selectRoomButton}
+                                onClick={scrollToTableOptions}
+                            >
                                 Order Now{' '}
-                                <FontAwesomeIcon icon={faChevronDown} />
+                                <FontAwesomeIcon
+                                    icon={faChevronDown}
+                                />
                             </button>
                         </div>
                     </div>
 
-                    <div className={styles.bankOfferCard} onClick={() => setBankOffers(true)}>
+                    <div className={styles.bankOfferCard}>
                         <OfferCard />
                     </div>
 
@@ -635,7 +751,6 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                     activeTabId="overview"
                     onTabChange={(tabId) => {
                         console.log('Tab changed:', tabId);
-                        // If "Book a Table" tab is clicked, open the popup
                         if (tabId === 'book-table') {
                             setIsBookTableOpen(true);
                         }
@@ -650,14 +765,18 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                 />
             </div>
 
-            {/* Book Table Popup */}
-            {/* <BookTablePopUp
-                isOpen={isBookTableOpen}
-                onClose={handleBookTableClose}
-                restaurantName={restaurant.name}
-                location={restaurant.location}
-                onProceed={handleBookTableProceed}
-            /> */}
+            {/* Book Table Popup — now rendered via portal from inside BookTablePopUp */}
+            {isBookTableOpen && (
+                <BookTablePopUp
+                    restaurantName={restaurant.name}
+                    restaurantLocation={restaurant.location}
+                    onBack={() => setIsBookTableOpen(false)}
+                    onProceed={(bookingData) => {
+                        console.log('Booking Data:', bookingData);
+                        setIsBookTableOpen(false);
+                    }}
+                />
+            )}
 
             <div className={styles.restaurantTabNavigationBar}>
                 {/* <RestaurantTabNavigationBar /> */}

@@ -1,314 +1,654 @@
 'use client';
 
-import React, { useState } from 'react';
-import styles from './BookTablePopUp.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import {
-  faChevronLeft,
-  faChevronDown,
-  faChevronUp,
-  faUser,
-  faClock,
-  faUtensils,
-  faMugHot,
-  faSun,
-  faMoon,
-} from '@fortawesome/free-solid-svg-icons';
+    ArrowLeft,
+    ChevronDown,
+    ChevronUp,
+    Moon,
+    Sun,
+} from 'lucide-react';
 
-// Types
-interface TimeSlot {
-  time: string;
-  selected?: boolean;
+import styles from './BookTablePopUp.module.scss';
+
+export type BookingOffer = {
+    id: string;
+    title: string;
+    subtitle?: string;
+    badge?: string;
+    type?: 'exclusive' | 'regular';
+};
+
+export type TimeSlot = {
+    id: string;
+    time: string;
+    discount?: string;
+};
+
+export type BookingDate = {
+    id: string;
+    day: string;
+    date: string;
+    discount?: string;
+    isToday?: boolean;
+};
+
+export type MealSession = {
+    id: string;
+    title: string;
+    timeRange: string;
+    type: 'lunch' | 'dinner';
+    slots: TimeSlot[];
+};
+
+export interface BookTablePopUpProps {
+    restaurantName?: string;
+    restaurantLocation?: string;
+
+    guests?: number[];
+    initialGuests?: number;
+
+    dates?: BookingDate[];
+    sessions?: MealSession[];
+    offers?: BookingOffer[];
+
+    exclusiveMessage?: string;
+
+    onBack?: () => void;
+
+    onProceed?: (data: {
+        guests: number;
+        date: BookingDate | undefined;
+        session: MealSession | undefined;
+        timeSlot: TimeSlot | undefined;
+        offer: BookingOffer | undefined;
+    }) => void;
 }
 
-interface SlotGroup {
-  id: string;
-  name: string;
-  icon: any;
-  timeRange: string;
-  slots: TimeSlot[];
-}
+const DEFAULT_GUESTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-interface Offer {
-  id: string;
-  title: string;
-  fee: string;
-  subtext?: string;
-  category: string;
-}
+const DEFAULT_DATES: BookingDate[] = [
+    {
+        id: '10-sep',
+        day: 'Today',
+        date: '10 Sep',
+        discount: '25% off',
+        isToday: true,
+    },
+    {
+        id: '11-sep',
+        day: 'Fri',
+        date: '11 Sep',
+        discount: '25% off',
+    },
+    {
+        id: '12-sep',
+        day: 'Sat',
+        date: '12 Sep',
+        discount: '25% off',
+    },
+    {
+        id: '13-sep',
+        day: 'Sun',
+        date: '13 Sep',
+        discount: '25% off',
+    },
+    {
+        id: '14-sep',
+        day: 'Mon',
+        date: '14 Sep',
+        discount: '25% off',
+    },
+];
 
-interface BookTablePopUpProps {
-  isOpen: boolean;
-  onClose: () => void;
-  restaurantName?: string;
-  location?: string;
-  onProceed?: (data: any) => void;
-}
+const DEFAULT_SESSIONS: MealSession[] = [
+    {
+        id: 'lunch',
+        title: 'Lunch',
+        timeRange: '04:15 PM to 05:00 PM',
+        type: 'lunch',
+        slots: [
+            {
+                id: '04-15',
+                time: '04:15 PM',
+                discount: '25% off',
+            },
+            {
+                id: '04-30',
+                time: '04:30 PM',
+                discount: '25% off',
+            },
+            {
+                id: '04-45',
+                time: '04:45 PM',
+                discount: '25% off',
+            },
+        ],
+    },
+    {
+        id: 'dinner',
+        title: 'Dinner',
+        timeRange: '05:00 PM to 11:59 PM',
+        type: 'dinner',
+        slots: [
+            {
+                id: '05-00',
+                time: '05:00 PM',
+                discount: '20% off',
+            },
+            {
+                id: '05-30',
+                time: '05:30 PM',
+                discount: '20% off',
+            },
+        ],
+    },
+];
+
+const DEFAULT_OFFERS: BookingOffer[] = [
+    {
+        id: 'exclusive-25',
+        title: 'Flat 25% off on Total Bill',
+        subtitle: 'Redeemable cover charge: ₹25/guest',
+        type: 'exclusive',
+    },
+    {
+        id: 'exclusive-15',
+        title: 'Flat 15% Off on Total Bill',
+        subtitle: 'Redeemable cover charge: ₹25/guest',
+        type: 'exclusive',
+    },
+    {
+        id: 'exclusive-5',
+        title: 'Flat 5% Off On Total Bill',
+        subtitle: 'Redeemable cover charge: ₹25/guest',
+        type: 'exclusive',
+    },
+    {
+        id: 'regular-15',
+        title: 'Flat 15% off on total bill',
+        subtitle: 'Booking Fee: FREE',
+        type: 'regular',
+    },
+];
 
 const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
-  isOpen,
-  onClose,
-  restaurantName = 'The Beer Cafe, Rohini',
-  location = 'Rohini',
-  onProceed,
+    restaurantName = 'Book table',
+    restaurantLocation = 'Shubham Soup Wala, Rithala',
+    guests = DEFAULT_GUESTS,
+    initialGuests = 2,
+    dates = DEFAULT_DATES,
+    sessions = DEFAULT_SESSIONS,
+    offers = DEFAULT_OFFERS,
+    exclusiveMessage = '1 month One plan for ₹1 will be auto-added in the next step.',
+    onBack,
+    onProceed,
 }) => {
-  // State
-  const [selectedGuests, setSelectedGuests] = useState<number>(2);
-  const [selectedDate, setSelectedDate] = useState<number>(0);
-  const [selectedSlot, setSelectedSlot] = useState<string>('12:00 PM');
-  const [selectedOffer, setSelectedOffer] = useState<string>('offer-0');
-  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set(['lunch']));
+    const [mounted, setMounted] = useState(false);
+    const [selectedGuests, setSelectedGuests] = useState(initialGuests);
 
-  // Data
-  const guestOptions = Array.from({ length: 30 }, (_, i) => i + 1);
+    const [selectedDateId, setSelectedDateId] = useState(
+        dates[0]?.id || ''
+    );
 
-  const dates = [
-    { day: 'Today', date: '09 Sep' },
-    { day: 'Thu', date: '10 Sep' },
-    { day: 'Fri', date: '11 Sep' },
-    { day: 'Sat', date: '12 Sep' },
-    { day: 'Sun', date: '13 Sep' },
-    { day: 'Mon', date: '14 Sep' },
-    { day: 'Tue', date: '15 Sep' },
-    { day: 'Wed', date: '16 Sep' },
-    { day: 'Thu', date: '17 Sep' },
-  ];
+    const [activeSessionId, setActiveSessionId] = useState(
+        sessions[0]?.id || ''
+    );
 
-  const slotGroups: SlotGroup[] = [
-    {
-      id: 'breakfast',
-      name: 'Breakfast',
-      icon: faMugHot,
-      timeRange: '11:00 AM to 12:00 PM',
-      slots: [
-        { time: '11:00 AM' },
-        { time: '11:15 AM' },
-        { time: '11:30 AM' },
-        { time: '11:45 AM' },
-      ],
-    },
-    {
-      id: 'lunch',
-      name: 'Lunch',
-      icon: faSun,
-      timeRange: '12:00 PM to 05:00 PM',
-      slots: [
-        { time: '12:00 PM', selected: true },
-        { time: '12:15 PM' },
-        { time: '12:30 PM' },
-        { time: '12:45 PM' },
-        { time: '01:00 PM' },
-        { time: '01:15 PM' },
-        { time: '01:30 PM' },
-        { time: '01:45 PM' },
-        { time: '02:00 PM' },
-        { time: '02:15 PM' },
-        { time: '02:30 PM' },
-        { time: '02:45 PM' },
-        { time: '03:00 PM' },
-        { time: '03:15 PM' },
-        { time: '03:30 PM' },
-        { time: '03:45 PM' },
-        { time: '04:00 PM' },
-        { time: '04:15 PM' },
-        { time: '04:30 PM' },
-        { time: '04:45 PM' },
-      ],
-    },
-    {
-      id: 'dinner',
-      name: 'Dinner',
-      icon: faMoon,
-      timeRange: '05:00 PM to 01:00 AM',
-      slots: [],
-    },
-  ];
+    const [expandedSessionId, setExpandedSessionId] = useState(
+        sessions[0]?.id || ''
+    );
 
-  const offers: Offer[] = [
-    {
-      id: 'offer-0',
-      title: 'Standard table booking',
-      fee: 'FREE',
-      subtext: '',
-      category: 'REGULAR OFFER',
-    },
-  ];
+    const [selectedTimeSlotId, setSelectedTimeSlotId] = useState(
+        sessions[0]?.slots[0]?.id || ''
+    );
 
-  // Handlers
-  const toggleGroup = (groupId: string) => {
-    setExpandedGroups((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(groupId)) {
-        newSet.delete(groupId);
-      } else {
-        newSet.add(groupId);
-      }
-      return newSet;
-    });
-  };
+    const [selectedOfferId, setSelectedOfferId] = useState('');
 
-  const handleGuestSelect = (guest: number) => {
-    setSelectedGuests(guest);
-  };
+    // Mark as mounted (client-side only) to safely use portal
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-  const handleDateSelect = (index: number) => {
-    setSelectedDate(index);
-  };
+    // Lock body scroll while popup is open
+    useEffect(() => {
+        if (!mounted) return;
 
-  const handleSlotSelect = (time: string) => {
-    setSelectedSlot(time);
-  };
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
 
-  const handleOfferSelect = (offerId: string) => {
-    setSelectedOffer(offerId);
-  };
+        return () => {
+            document.body.style.overflow = originalOverflow;
+        };
+    }, [mounted]);
 
-  const handleProceed = () => {
-    if (onProceed) {
-      onProceed({
-        guests: selectedGuests,
-        date: dates[selectedDate],
-        slot: selectedSlot,
-        offer: selectedOffer,
-      });
-    }
-    onClose();
-  };
+    const selectedDate = useMemo(() => {
+        return dates.find((item) => item.id === selectedDateId);
+    }, [dates, selectedDateId]);
 
-  if (!isOpen) return null;
+    const selectedSession = useMemo(() => {
+        return sessions.find((item) => item.id === activeSessionId);
+    }, [sessions, activeSessionId]);
 
-  return (
-    <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.popup} onClick={(e) => e.stopPropagation()}>
-        {/* Header */}
-        <div className={styles.header}>
-          <button className={styles.backButton} onClick={onClose}>
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          <div className={styles.headerText}>
-            <h2 className={styles.title}>Book table</h2>
-            <p className={styles.subtitle}>{restaurantName}</p>
-          </div>
-        </div>
+    const selectedTimeSlot = useMemo(() => {
+        return selectedSession?.slots.find(
+            (item) => item.id === selectedTimeSlotId
+        );
+    }, [selectedSession, selectedTimeSlotId]);
 
-        {/* Guest Selection */}
-        <section className={styles.section}>
-          <h3 className={styles.sectionTitle}>Number of guest(s)</h3>
-          <div className={styles.guestGrid}>
-            {guestOptions.slice(0, 9).map((guest) => (
-              <button
-                key={guest}
-                className={`${styles.guestCell} ${selectedGuests === guest ? styles.selected : ''}`}
-                onClick={() => handleGuestSelect(guest)}
-              >
-                {guest}
-              </button>
-            ))}
-          </div>
-        </section>
+    const selectedOffer = useMemo(() => {
+        return offers.find((item) => item.id === selectedOfferId);
+    }, [offers, selectedOfferId]);
 
-        {/* Date Selection */}
-        <section className={styles.section}>
-          <h3 className={styles.sectionTitle}>When are you visiting?</h3>
-          <div className={styles.dateScroll}>
-            {dates.map((date, index) => (
-              <button
-                key={index}
-                className={`${styles.dateCell} ${selectedDate === index ? styles.selected : ''}`}
-                onClick={() => handleDateSelect(index)}
-              >
-                <span className={styles.day}>{date.day}</span>
-                <span className={styles.dateNum}>{date.date}</span>
-              </button>
-            ))}
-          </div>
-        </section>
+    const exclusiveOffers = offers.filter(
+        (offer) => offer.type === 'exclusive'
+    );
 
-        {/* Slot Selection */}
-        <section className={styles.section}>
-          <p className={styles.slotHint}>Select the time of day to see the offers</p>
+    const regularOffers = offers.filter(
+        (offer) => offer.type === 'regular'
+    );
 
-          {slotGroups.map((group) => (
-            <div key={group.id} className={styles.slotGroup}>
-              <div className={styles.slotGroupHeader} onClick={() => toggleGroup(group.id)}>
-                <div className={styles.slotGroupLeft}>
-                  <div className={styles.slotGroupIcon}>
-                    <FontAwesomeIcon icon={group.icon} />
-                  </div>
-                  <div>
-                    <div className={styles.slotGroupName}>{group.name}</div>
-                    <div className={styles.slotGroupTime}>{group.timeRange}</div>
-                  </div>
-                </div>
-                <button className={styles.expandButton}>
-                  <FontAwesomeIcon
-                    icon={expandedGroups.has(group.id) ? faChevronUp : faChevronDown}
-                  />
-                </button>
-              </div>
+    const handleSessionToggle = (session: MealSession) => {
+        const isOpen = expandedSessionId === session.id;
 
-              {expandedGroups.has(group.id) && group.slots.length > 0 && (
-                <div className={styles.slotGrid}>
-                  {group.slots.map((slot) => (
+        setExpandedSessionId(isOpen ? '' : session.id);
+
+        if (!isOpen) {
+            setActiveSessionId(session.id);
+
+            if (session.slots.length > 0) {
+                setSelectedTimeSlotId(session.slots[0].id);
+            }
+        }
+    };
+
+    const handleProceed = () => {
+        onProceed?.({
+            guests: selectedGuests,
+            date: selectedDate,
+            session: selectedSession,
+            timeSlot: selectedTimeSlot,
+            offer: selectedOffer,
+        });
+    };
+
+    // Don't render on server / before mount
+    if (!mounted) return null;
+
+    const popupContent = (
+        <div className={styles.modalOverlay}>
+            <div
+                className={styles.bookTablePopUp}
+                role="dialog"
+                aria-modal="true"
+            >
+                {/* Header */}
+                <header className={styles.header}>
                     <button
-                      key={slot.time}
-                      className={`${styles.slotCell} ${selectedSlot === slot.time ? styles.selected : ''}`}
-                      onClick={() => handleSlotSelect(slot.time)}
+                        type="button"
+                        className={styles.backButton}
+                        onClick={onBack}
+                        aria-label="Close booking popup"
                     >
-                      {slot.time}
+                        <ArrowLeft size={25} />
                     </button>
-                  ))}
-                </div>
-              )}
 
-              {expandedGroups.has(group.id) && group.slots.length === 0 && (
-                <div className={styles.noSlots}>No time slots available</div>
-              )}
+                    <div className={styles.headerContent}>
+                        <h1>{restaurantName}</h1>
+                        <p>{restaurantLocation}</p>
+                    </div>
+                </header>
+
+                {/* Scrollable Content */}
+                <main className={styles.content}>
+                    {/* Guest Selection */}
+                    {/* <section className={styles.mainCard}>
+                        <h2>Number of guest(s)</h2>
+
+                        <div className={styles.guestsWrapper}>
+                            {guests.map((guest) => (
+                                <button
+                                    key={guest}
+                                    type="button"
+                                    className={`${styles.guestButton} ${
+                                        selectedGuests === guest
+                                            ? styles.active
+                                            : ''
+                                    }`}
+                                    onClick={() =>
+                                        setSelectedGuests(guest)
+                                    }
+                                >
+                                    {guest}
+                                </button>
+                            ))}
+                        </div>
+                    </section> */}
+
+                    {/* Date Selection */}
+                    {/* <section className={styles.mainCard}>
+                        <h2>When are you visiting?</h2>
+
+                        <div className={styles.dateList}>
+                            {dates.map((item) => (
+                                <button
+                                    key={item.id}
+                                    type="button"
+                                    className={`${styles.dateCard} ${
+                                        selectedDateId === item.id
+                                            ? styles.activeDate
+                                            : ''
+                                    }`}
+                                    onClick={() =>
+                                        setSelectedDateId(item.id)
+                                    }
+                                >
+                                    <span className={styles.day}>
+                                        {item.day}
+                                    </span>
+
+                                    <strong className={styles.date}>
+                                        {item.date}
+                                    </strong>
+
+                                    {item.discount && (
+                                        <span
+                                            className={
+                                                styles.discountBadge
+                                            }
+                                        >
+                                            {item.discount}
+                                        </span>
+                                    )}
+                                </button>
+                            ))}
+                        </div>
+
+                        <h3 className={styles.timeHeading}>
+                            Select the time of day to see the offers
+                        </h3>
+
+                        <div className={styles.sessionsWrapper}>
+                            {sessions.map((session) => {
+                                const isExpanded =
+                                    expandedSessionId === session.id;
+
+                                const Icon =
+                                    session.type === 'lunch'
+                                        ? Sun
+                                        : Moon;
+
+                                return (
+                                    <div
+                                        key={session.id}
+                                        className={styles.sessionCard}
+                                    >
+                                        <button
+                                            type="button"
+                                            className={
+                                                styles.sessionHeader
+                                            }
+                                            onClick={() =>
+                                                handleSessionToggle(
+                                                    session
+                                                )
+                                            }
+                                        >
+                                            <div
+                                                className={
+                                                    styles.sessionInfo
+                                                }
+                                            >
+                                                <Icon size={34} />
+
+                                                <div>
+                                                    <h4>
+                                                        {session.title}
+                                                    </h4>
+
+                                                    <p>
+                                                        {
+                                                            session.timeRange
+                                                        }
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            {isExpanded ? (
+                                                <ChevronUp size={20} />
+                                            ) : (
+                                                <ChevronDown size={20} />
+                                            )}
+                                        </button>
+
+                                        {isExpanded && (
+                                            <div
+                                                className={
+                                                    styles.timeSlots
+                                                }
+                                            >
+                                                {session.slots.map(
+                                                    (slot) => (
+                                                        <button
+                                                            key={
+                                                                slot.id
+                                                            }
+                                                            type="button"
+                                                            className={`${
+                                                                styles.timeSlot
+                                                            } ${
+                                                                selectedTimeSlotId ===
+                                                                slot.id
+                                                                    ? styles.selectedTimeSlot
+                                                                    : ''
+                                                            }`}
+                                                            onClick={() => {
+                                                                setActiveSessionId(
+                                                                    session.id
+                                                                );
+                                                                setSelectedTimeSlotId(
+                                                                    slot.id
+                                                                );
+                                                            }}
+                                                        >
+                                                            <strong>
+                                                                {
+                                                                    slot.time
+                                                                }
+                                                            </strong>
+
+                                                            {slot.discount && (
+                                                                <span>
+                                                                    {
+                                                                        slot.discount
+                                                                    }
+                                                                </span>
+                                                            )}
+                                                        </button>
+                                                    )
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </section> */}
+
+                    {/* Booking Options */}
+                    {/* <section className={styles.bookingSection}>
+                        <h2>
+                            Booking option for{' '}
+                            {selectedTimeSlot?.time || 'Select time'}
+                        </h2>
+
+                        {exclusiveOffers.length > 0 && (
+                            <div className={styles.offerCard}>
+                                <div
+                                    className={
+                                        styles.exclusiveHeading
+                                    }
+                                >
+                                    <span className={styles.oneText}>
+                                        one
+                                    </span>
+
+                                    <span>EXCLUSIVE</span>
+                                </div>
+
+                                <div className={styles.offerList}>
+                                    {exclusiveOffers.map(
+                                        (offer) => (
+                                            <label
+                                                key={offer.id}
+                                                className={
+                                                    styles.offerItem
+                                                }
+                                            >
+                                                <input
+                                                    type="radio"
+                                                    name="bookingOffer"
+                                                    checked={
+                                                        selectedOfferId ===
+                                                        offer.id
+                                                    }
+                                                    onChange={() =>
+                                                        setSelectedOfferId(
+                                                            offer.id
+                                                        )
+                                                    }
+                                                />
+
+                                                <span
+                                                    className={
+                                                        styles.customRadio
+                                                    }
+                                                />
+
+                                                <div
+                                                    className={
+                                                        styles.offerContent
+                                                    }
+                                                >
+                                                    <h4>
+                                                        {offer.title}
+                                                    </h4>
+
+                                                    {offer.subtitle && (
+                                                        <p>
+                                                            {
+                                                                offer.subtitle
+                                                            }
+                                                        </p>
+                                                    )}
+                                                </div>
+                                            </label>
+                                        )
+                                    )}
+                                </div>
+
+                                <div
+                                    className={
+                                        styles.exclusiveMessage
+                                    }
+                                >
+                                    {exclusiveMessage}
+                                </div>
+                            </div>
+                        )}
+
+                        {regularOffers.length > 0 && (
+                            <div className={styles.offerCard}>
+                                <div
+                                    className={
+                                        styles.regularHeading
+                                    }
+                                >
+                                    REGULAR OFFER
+                                </div>
+
+                                <div className={styles.offerList}>
+                                    {regularOffers.map(
+                                        (offer) => (
+                                            <label
+                                                key={offer.id}
+                                                className={
+                                                    styles.offerItem
+                                                }
+                                            >
+                                                <input
+                                                    type="radio"
+                                                    name="bookingOffer"
+                                                    checked={
+                                                        selectedOfferId ===
+                                                        offer.id
+                                                    }
+                                                    onChange={() =>
+                                                        setSelectedOfferId(
+                                                            offer.id
+                                                        )
+                                                    }
+                                                />
+
+                                                <span
+                                                    className={
+                                                        styles.customRadio
+                                                    }
+                                                />
+
+                                                <div
+                                                    className={
+                                                        styles.offerContent
+                                                    }
+                                                >
+                                                    <h4>
+                                                        {offer.title}
+                                                    </h4>
+
+                                                    {offer.subtitle && (
+                                                        <p>
+                                                            {
+                                                                offer.subtitle
+                                                            }
+                                                        </p>
+                                                    )}
+                                                </div>
+                                            </label>
+                                        )
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </section> */}
+                    {/* <div className={styles.additionalOffers}>
+                      <p>Coupons & additional offers available during bill payment</p>
+                    </div> */}
+                    
+                </main>
+
+                {/* Sticky Bottom Button */}
+                {/* <div className={styles.bottomAction}>
+                    <button
+                        type="button"
+                        className={`${styles.proceedButton} ${
+                            selectedOfferId
+                                ? styles.proceedActive
+                                : ''
+                        }`}
+                        disabled={!selectedOfferId}
+                        onClick={handleProceed}
+                    >
+                        Proceed
+                    </button>
+                </div> */}
             </div>
-          ))}
-        </section>
-
-        {/* Offer Selection */}
-        <section className={styles.section}>
-          <h4 className={styles.offerTitle}>Booking option for {selectedSlot}</h4>
-          <div className={styles.offerCard}>
-            <div className={styles.offerCategory}>REGULAR OFFER</div>
-            {offers.map((offer) => (
-              <div key={offer.id} className={styles.offerItem}>
-                <input
-                  type="radio"
-                  id={offer.id}
-                  name="offer"
-                  checked={selectedOffer === offer.id}
-                  onChange={() => handleOfferSelect(offer.id)}
-                  className={styles.radioInput}
-                />
-                <label htmlFor={offer.id} className={styles.offerLabel}>
-                  <div className={styles.offerDetails}>
-                    <div className={styles.offerName}>{offer.title}</div>
-                    <div className={styles.offerFee}>Booking Fee: {offer.fee}</div>
-                    {offer.subtext && (
-                      <div className={styles.offerSubtext}>{offer.subtext}</div>
-                    )}
-                  </div>
-                </label>
-              </div>
-            ))}
-            <div className={styles.offerFooter}>
-              Coupons & additional offers available during bill payment
-            </div>
-          </div>
-        </section>
-
-        {/* Proceed Button */}
-        <div className={styles.footer}>
-          <button className={styles.proceedButton} onClick={handleProceed}>
-            Proceed
-          </button>
+            
         </div>
-      </div>
-    </div>
-  );
+    );
+
+    // Render via portal directly on document.body
+    return createPortal(popupContent, document.body);
 };
 
 export default BookTablePopUp;

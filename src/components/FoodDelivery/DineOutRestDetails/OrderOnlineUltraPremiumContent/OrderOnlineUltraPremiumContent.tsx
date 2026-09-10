@@ -6,21 +6,21 @@ import {
     ChevronLeft,
     ChevronRight,
     ChevronUp,
-    Clock3,
-    Flame,
-    Heart,
-    Leaf,
     Minus,
     Plus,
     Search,
     ShoppingBag,
     Star,
-    Tag,
-    Utensils,
     X,
 } from "lucide-react";
 
 import styles from "./OrderOnlineUltraPremiumContent.module.scss";
+import OpenCloseTime from "./OpenCloseTime/OpenCloseTime";
+import OutletsAroundYou, { Outlet } from "./OutletsAroundYou/OutletsAroundYou";
+
+/* =========================================================
+   TYPES
+========================================================= */
 
 interface Offer {
     id: number;
@@ -34,6 +34,7 @@ interface FoodItem {
     name: string;
     price: number;
     rating: number;
+    totalRating: number;
     description: string;
     category: string;
     type: "veg" | "nonveg";
@@ -46,6 +47,94 @@ interface OrderOnlineUltraPremiumContentProps {
     restaurantLogo?: string;
     bannerImage?: string;
 }
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+export function formatCount(n: number): string {
+    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    return String(n);
+}
+
+export function truncateChars(text: string, max: number): string {
+    if (text.length <= max) return text;
+    const cut = text.slice(0, max);
+    const lastSpace = cut.lastIndexOf(" ");
+    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "…";
+}
+
+/* =========================================================
+   FOOD INFO (per-item state for description expand/collapse)
+========================================================= */
+
+type FoodInfoProps = {
+    item: FoodItem;
+    maxChars?: number;
+};
+
+function FoodInfo({ item, maxChars = 130 }: FoodInfoProps) {
+    const [expanded, setExpanded] = useState(false);
+
+    const isLong = item.description.length > maxChars;
+    const shown = expanded
+        ? item.description
+        : truncateChars(item.description, maxChars);
+
+    return (
+        <div className={styles.foodInfo}>
+            <div className={styles.foodTypeRow}>
+                <span
+                    className={`${styles.foodType} ${item.type === "veg" ? styles.veg : styles.nonveg
+                        }`}
+                >
+                    <span />
+                </span>
+
+                {item.recommended && (
+                    <span className={styles.recommendedBadge}>
+                        Recommended
+                    </span>
+                )}
+            </div>
+
+            <h3>{item.name}</h3>
+
+            <strong className={styles.price}>₹{item.price}</strong>
+
+            <div className={styles.foodRating}>
+                <Star size={14} fill="currentColor" />
+                <span>{item.rating}</span>
+                <span className={styles.ratingCount}>
+                    ({formatCount(item.totalRating)})
+                </span>
+            </div>
+
+            <div className={styles.descriptionWrap}>
+                <p
+                    className={`${styles.description} ${expanded ? styles.expanded : ""
+                        }`}
+                >
+                    {shown}
+                    {isLong && (
+                        <button
+                            type="button"
+                            className={styles.moreBtn}
+                            onClick={() => setExpanded((v) => !v)}
+                            aria-expanded={expanded}
+                        >
+                            {expanded ? " less" : " more"}
+                        </button>
+                    )}
+                </p>
+            </div>
+        </div>
+    );
+}
+
+/* =========================================================
+   MAIN COMPONENT
+========================================================= */
 
 const OrderOnlineUltraPremiumContent: React.FC<
     OrderOnlineUltraPremiumContentProps
@@ -60,16 +149,7 @@ const OrderOnlineUltraPremiumContent: React.FC<
         const [activeCategory, setActiveCategory] = useState("All");
         const offerSliderRef = useRef<HTMLDivElement>(null);
 
-        const scrollOffers = (direction: "left" | "right") => {
-            if (!offerSliderRef.current) return;
-
-            const scrollAmount = 320;
-
-            offerSliderRef.current.scrollBy({
-                left: direction === "left" ? -scrollAmount : scrollAmount,
-                behavior: "smooth",
-            });
-        };
+        /* ---------------- Offers ---------------- */
 
         const offers: Offer[] = [
             {
@@ -141,44 +221,48 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 name: "Original Whopper Veg",
                 price: 199,
                 rating: 4.3,
-                description: "Our signature Whopper with crunchy vegetables, lettuce, onions, tomatoes and creamy sauce.",
+                totalRating: 1240,
+                description: "Our Original Whopper with Crunchy Veg Patty, Onions, Lettuce, Tomatoes (Seasonal), Gherkins, Creamy And Smoky Sauces With Xxl Buns. Qty: 285 Gms| Kcal: 681.2 | Carbs 97.1 Gms| Sugar: 23.1 Gms| Fat: 25.4 Gms| Saturated fat: 9.8 Gms| Protein: 15.8 Gms| Sodium: 987.8 Mg Contains: Gluten, Soybean, Milk, Sesame seeds.",
                 category: "Burgers",
                 type: "veg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1568901346375-23c9450c58cd.jpg",
             },
             {
                 id: 2,
                 name: "Crispy Veg Burger",
                 price: 149,
                 rating: 4.2,
-                description: "Crispy vegetable patty with fresh lettuce, tomato and delicious creamy mayo.",
+                totalRating: 876,
+                description: "New Premium Black & White Sesame Bun with Crispy Chicken Patty, Fresh Onion and Signature Sauce. Qty: 125 Gms| Kcal: 359.1 | Carbs 44.3 Gms| Sugar: 7.5 Gms| Fat: 15.1 Gms| Saturated fat: 4.8 Gms| Protein: 11.5 Gms| Sodium: 592.4 Mg Contains: Gluten, Soybean, Milk, Sesame seeds.",
                 category: "Burgers",
                 type: "veg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1550547660-d9450f859349.jpg",
             },
             {
                 id: 3,
                 name: "Veg Whopper Deluxe",
                 price: 249,
                 rating: 4.5,
+                totalRating: 512,
                 description: "A larger-than-life veggie burger loaded with double cheese, fresh veggies, and our special deluxe sauce.",
                 category: "Burgers",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1571091718767-18b5b1457add.jpg",
             },
             {
                 id: 4,
                 name: "Spicy Veg Crunch Burger",
                 price: 169,
                 rating: 4.1,
-                description: "A fiery spicy veg patty with jalapenos, onion rings, and a tangy spicy sauce.",
+                totalRating: 389,
+                description: "Our Best Seller - Crispy Veg Patty, Fresh Onion and Signature Sauce with New Premium Black & White Sesame Bun. Qty: 131 gms | Kcal: 306 Carbs: 47 gms | Sugar: 5 gms | Fat: 10 gms | Saturated fat: 3 gms | Protein: 7 gms | Sodium: 894 mg.",
                 category: "Burgers",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1562565652-a0d8f0c59eb4.jpg",
             },
 
             // --- Burgers (Non-Veg) ---
@@ -187,44 +271,48 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 name: "Original Whopper Chicken",
                 price: 249,
                 rating: 4.4,
-                description: "A delicious flame-grilled chicken burger with fresh vegetables and signature sauce.",
+                totalRating: 1980,
+                description: "Our Original Whopper with Flame Grilled Chicken Patty, Onions, Lettuce, Tomatoes (Seasonal), Gherkins, Creamy And Smoky Sauces With Xxl Buns. Qty: 280 Gms| Kcal: 667.2 | Carbs 59.1 Gms| Sugar: 8.7 Gms| Fat: 36.3 Gms| Saturated fat: 8.1 Gms| Protein: 26.2 Gms| Sodium: 1018.7 Mg Contains: Gluten, Soybean, Milk, Sesame seeds",
                 category: "Burgers",
                 type: "nonveg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1562967916-eb82221dfb92.jpg",
             },
             {
                 id: 6,
                 name: "Crispy Chicken Burger",
                 price: 179,
                 rating: 4.3,
-                description: "Juicy crispy chicken with crunchy lettuce and a rich signature sauce.",
+                totalRating: 1432,
+                description: "New Premium Black & White Sesame Bun with Crispy Chicken Patty, Fresh Onion and Signature Sauce. Qty: 125 Gms| Kcal: 359.1 | Carbs 44.3 Gms| Sugar: 7.5 Gms| Fat: 15.1 Gms| Saturated fat: 4.8 Gms| Protein: 11.5 Gms| Sodium: 592.4 Mg Contains: Gluten, Soybean, Milk, Sesame seeds.",
                 category: "Burgers",
                 type: "nonveg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1561758033-d89a9ad46330.jpg",
             },
             {
                 id: 7,
                 name: "Crispy Double Patty Burger",
                 price: 229,
                 rating: 4.5,
-                description: "Double crispy patties layered with cheese, lettuce and signature dressing.",
+                totalRating: 921,
+                description: "Double up our best selling crispy veg burger, now with new Premium Black & White Sesame Bun Qty: 204 Gms| Kcal: 531.4 | Carbs 70.6 Gms| Sugar: 9.1 Gms| Fat: 22.7 Gms| Saturated fat: 9.2 Gms| Protein: 11.2 Gms| Sodium: 1068 Mg Contains: Gluten, Soybean, Milk, Sesame seeds.",
                 category: "Burgers",
                 type: "nonveg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1594212699903-ec8a3eca50f5.jpg",
             },
             {
                 id: 8,
                 name: "Crispy Chicken Double Patty Burger",
                 price: 259,
                 rating: 4.6,
-                description: "Double chicken patties with cheese, vegetables and delicious burger sauce.",
+                totalRating: 764,
+                description: "Double up our best selling crispy veg burger, now with new Premium Black & White Sesame Bun Qty: 204 Gms| Kcal: 531.4 | Carbs 70.6 Gms| Sugar: 9.1 Gms| Fat: 22.7 Gms| Saturated fat: 9.2 Gms| Protein: 11.2 Gms| Sodium: 1068 Mg Contains: Gluten, Soybean, Milk, Sesame seeds.",
                 category: "Burgers",
                 type: "nonveg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1586190848861-99aa4a171e90.jpg",
             },
 
             // --- Chicken (Non-Veg) ---
@@ -233,33 +321,36 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 name: "5 pc Chicken Nuggets",
                 price: 129,
                 rating: 4.2,
+                totalRating: 2105,
                 description: "Tender, juicy, crispy golden chicken nuggets served with your choice of dipping sauce.",
                 category: "Chicken",
                 type: "nonveg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1562967914-608f82629710.jpg",
             },
             {
                 id: 10,
                 name: "Chicken Popcorn (Regular)",
                 price: 159,
                 rating: 4.3,
-                description: "Bite-sized chicken pieces, perfectly seasoned and fried until golden and crunchy.",
+                totalRating: 1678,
+                description: "The perfect crispy partner. Qty: 72 gms | Kcal: 204 Carbs: 27 gms | Sugar: 0 gms | Fat: 9 gms | Saturated fat: 4 gms | Protein: 4 gms | Sodium: 325 mg.",
                 category: "Chicken",
                 type: "nonveg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1567620832903-9fc6debc209f.jpg",
             },
             {
                 id: 11,
                 name: "Chicken Wrap",
                 price: 189,
                 rating: 4.4,
-                description: "Flame-grilled chicken with crunchy veggies, garlic sauce, and cheese wrapped in a soft tortilla.",
+                totalRating: 845,
+                description: "Qty: 252 Gms | Kcal: 483.8 | Carbs 50.6 Gms | Sugar: 9.3 Gms | Fat: 22.5 Gms | Saturated fat: 8.2 Gms | Protein: 19.8 Gms | Sodium: 1176.5 Mg Contains: Gluten, Soybean , Milk.",
                 category: "Chicken",
                 type: "nonveg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1626700051175-6818013e1d4f.jpg",
             },
 
             // --- Sides (Veg) ---
@@ -268,33 +359,36 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 name: "King Fries",
                 price: 99,
                 rating: 4.1,
-                description: "Golden crispy fries seasoned to perfection and served fresh.",
+                totalRating: 2456,
+                description: "The Perfect Crispy Partner Qty: 156 Gms| Kcal: 455 | Carbs 609.48 Gms| Sugar: 0 Gms| Fat: 19.7 Gms| Saturated fat: 9.31 Gms| Protein: 8 Gms| Sodium: 723.7 Mg Contains: Gluten.",
                 category: "Sides",
                 type: "veg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1573080496219-bb080dd4f877.jpg",
             },
             {
                 id: 13,
                 name: "Peri Peri Fries",
                 price: 129,
                 rating: 4.3,
+                totalRating: 1387,
                 description: "Crispy fries tossed in fiery Peri Peri spice mix for a zesty kick.",
                 category: "Sides",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1630384060421-cb20d0e0649d.jpg",
             },
             {
                 id: 14,
                 name: "Cheesy Loaded Fries",
                 price: 169,
                 rating: 4.5,
+                totalRating: 962,
                 description: "Crispy fries loaded with melted cheese sauce, jalapenos, and a drizzle of creamy mayo.",
                 category: "Sides",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1541592106381-b31e9677c0e5.jpg",
             },
 
             // --- Beverages (Veg) ---
@@ -303,44 +397,48 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 name: "Chocolate Thick Shake",
                 price: 149,
                 rating: 4.6,
-                description: "Rich and creamy chocolate shake topped with chocolate drizzle and whipped cream.",
+                totalRating: 1723,
+                description: "Qty: Gms300 ML| Kcal: 496.08 | Carbs 87.69 Gms| Sugar: 61.44 Gms| Fat: 11.28 Gms| Saturated fat: 7.17 Gms| Protein: 10.95 Gms| Sodium: 10.68 Mg Contains: , Soybean , Milk.",
                 category: "Beverages",
                 type: "veg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1572490122747-3968b75cc699.jpg",
             },
             {
                 id: 16,
                 name: "Vanilla Thick Shake",
                 price: 139,
                 rating: 4.4,
-                description: "Smooth, creamy vanilla shake made with premium vanilla ice cream and fresh milk.",
+                totalRating: 934,
+                description: "Our Signature Black Currant Thick Shake Qty: 300 ML| Kcal: 474 | Carbs 90.9 Gms| Sugar: 68.2 Gms| Fat: 8.8 Gms| Saturated fat: 6 Gms| Protein: 7.9 Gms| Sodium: 150.9 Mg Contains: Soybean, Milk.",
                 category: "Beverages",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1579954115545-a95591f28bfc.jpg",
             },
             {
                 id: 17,
                 name: "Strawberry Shake",
                 price: 159,
                 rating: 4.3,
+                totalRating: 612,
                 description: "Classic strawberry shake blending fresh strawberries and vanilla ice cream.",
                 category: "Beverages",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1553787499-6f9133860278?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1553787499-6f9133860278.jpg",
             },
             {
                 id: 18,
                 name: "Coca-Cola (Fountain)",
                 price: 49,
                 rating: 4.0,
+                totalRating: 3218,
                 description: "Chilled, refreshing Coca-Cola served in a cup with ice. The perfect companion to your burger.",
                 category: "Beverages",
                 type: "veg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1554866585-cd94860890b7.jpg",
             },
 
             // --- Desserts (Veg) ---
@@ -349,26 +447,105 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 name: "Molten Chocolate Cake",
                 price: 129,
                 rating: 4.7,
-                description: "Warm chocolate cake with a gooey, molten chocolate center. Served with vanilla ice cream.",
+                totalRating: 1085,
+                description: "Airy And Creamy Chocolate Mousse Topped With Chocolate Ganache And Choco Chips Qty: 80 Gms| Kcal: 200 | Carbs 35 Gms| Sugar: 25 Gms| Fat: 5.7 Gms| Saturated fat: 4.4 Gms| Protein: 2.2 Gms| Sodium: 67 Mg Contains: Soybean, Milk.",
                 category: "Desserts",
                 type: "veg",
                 recommended: true,
-                image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1606313564200-e75d5e30476c.jpg",
             },
             {
                 id: 20,
                 name: "Sundae (Chocolate)",
                 price: 109,
                 rating: 4.5,
-                description: "Layered vanilla and chocolate soft serve topped with chocolate sauce and crunchy nuts.",
+                totalRating: 741,
+                description: "Made with Kit Kat, enjoy our rich creamy fusion sundae Qty: 128 gms| Kcal: 327 | Carbs: 49 gms| Sugar: 32 gms| Fat: 12 gms| Saturated fat: 10 gms| Protein: 6 gms.",
                 category: "Desserts",
                 type: "veg",
                 recommended: false,
-                image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80",
+                image: "/products/photo-1563805042-7684c019e1cb.jpg",
             },
         ];
 
         const categories = ["All", "Bestseller", "Burgers", "Chicken", "Sides"];
+
+        const currentOutlet: Outlet = {
+            id: "current",
+            name: "Epicuria Food Mall, Nehru Place",
+            rating: 4.3,
+            deliveryTime: "40-45 MINS",
+            distanceKm: 9.1,
+            isCurrent: true,
+            notice: "This location is outside the outlet's delivery area",
+        };
+
+        const otherOutlets: Outlet[] = [
+            {
+                id: "o1",
+                name: "Pacific Mall, Jasola",
+                rating: 4.3,
+                deliveryTime: "25-30 mins",
+                distanceKm: 4.7,
+            },
+            {
+                id: "o2",
+                name: "Jasola, Shaheen bagh",
+                rating: 4.2,
+                deliveryTime: "25-30 mins",
+                distanceKm: 5.0,
+            },
+            {
+                id: "o3",
+                name: "Delhi, Lajpat Nagar2",
+                rating: 4.3,
+                deliveryTime: "40-45 mins",
+                distanceKm: 10.6,
+            },
+            {
+                id: "o4",
+                name: "Saket, Saket",
+                rating: 4.3,
+                deliveryTime: "55-65 mins",
+                distanceKm: 13.1,
+            },
+            {
+                id: "o5",
+                name: "DMRC Metro Station, Chattarpur",
+                rating: 4.2,
+                deliveryTime: "50-60 mins",
+                distanceKm: 15.4,
+            },
+            {
+                id: "o6",
+                name: "Khanpur ext., South Delhi, Village Khanpur colony",
+                rating: 4.1,
+                deliveryTime: "40-45 mins",
+                distanceKm: 9.1,
+                state: "unavailable",
+                notice: "Not accepting orders for this outlet in your location",
+            },
+            {
+                id: "o7",
+                name: "Mall Road, GTB Nagar",
+                rating: 4.3,
+                deliveryTime: "40-45 mins",
+                distanceKm: 45.6,
+                state: "unavailable",
+                notice: "Does not deliver to this location",
+            },
+            {
+                id: "o8",
+                name: "PVR Anupam, Saket",
+                rating: 4.2,
+                deliveryTime: "45-50 mins",
+                distanceKm: 11.4,
+                state: "closed",
+                notice: "Currently closed for delivery",
+            },
+        ];
+
+        /* ---------------- Filtering ---------------- */
 
         const filteredItems = useMemo(() => {
             return foodItems.filter((item) => {
@@ -385,6 +562,8 @@ const OrderOnlineUltraPremiumContent: React.FC<
                 return matchesSearch && matchesCategory;
             });
         }, [searchValue, activeCategory]);
+
+        /* ---------------- Cart ---------------- */
 
         const addToCart = (id: number) => {
             setCart((previous) => ({
@@ -415,9 +594,23 @@ const OrderOnlineUltraPremiumContent: React.FC<
             0
         );
 
+        /* ---------------- Offer scroll ---------------- */
+
+        const scrollOffers = (direction: "left" | "right") => {
+            if (!offerSliderRef.current) return;
+            const scrollAmount = 320;
+            offerSliderRef.current.scrollBy({
+                left: direction === "left" ? -scrollAmount : scrollAmount,
+                behavior: "smooth",
+            });
+        };
+
+        /* ---------------- Render ---------------- */
+
         return (
             <section className={styles.orderOnlineUltraPremiumContent}>
                 <div className={styles.container}>
+                    {/* Banner */}
                     <div className={styles.bannerWrapper}>
                         <img
                             src={
@@ -427,46 +620,54 @@ const OrderOnlineUltraPremiumContent: React.FC<
                             alt={`${restaurantName} banner`}
                             className={styles.bannerImage}
                         />
-
                         <div className={styles.bannerOverlay} />
-
-                        {/* <div className={styles.bannerContent}>
-                            <div className={styles.logoCircle}>
-                                {restaurantLogo ? (
-                                    <img
-                                        src={restaurantLogo}
-                                        alt={restaurantName}
-                                    />
-                                ) : (
-                                    <Utensils size={25} />
-                                )}
-                            </div>
-
-                            <div>
-                                <span>Order Online</span>
-                                <strong>Delicious food delivered fresh</strong>
-                            </div>
-                        </div> */}
                     </div>
+
                     {/* Restaurant Header */}
                     <div className={styles.restaurantHeader}>
                         <div className={styles.restaurantTitleRow}>
                             <div>
                                 <h1>{restaurantName}</h1>
 
-
-
                                 <p className={styles.cuisineText}>
                                     Burgers, Fast Food, American
                                 </p>
-
-
                             </div>
 
                             <div>
                                 <div className={styles.restaurantMeta}>
                                     <span>
-                                        <Star size={14} fill="currentColor" />
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 20 20"
+                                            fill="none"
+                                            aria-hidden="true"
+                                        >
+                                            <circle
+                                                cx="10"
+                                                cy="10"
+                                                r="9"
+                                                fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                                            />
+                                            <path
+                                                d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                                                fill="white"
+                                            />
+                                            <defs>
+                                                <linearGradient
+                                                    id="StoreRating20_svg__paint0_linear_32982_71567"
+                                                    x1="10"
+                                                    y1="1"
+                                                    x2="10"
+                                                    y2="19"
+                                                    gradientUnits="userSpaceOnUse"
+                                                >
+                                                    <stop stopColor="#21973B" />
+                                                    <stop offset="1" stopColor="#128540" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
                                         4.2 (5K+ ratings)
                                     </span>
 
@@ -474,22 +675,25 @@ const OrderOnlineUltraPremiumContent: React.FC<
 
                                     <span>₹300 for two</span>
                                 </div>
+
                                 <div className={styles.deliveryInfo}>
-                                    <span><span className={styles.outlet}>Outlet:</span> Nehru Place</span>
-                                    {/* <Clock3 size={15} />
-                                    <span>25-30 mins</span> */}
+                                    <OutletsAroundYou
+                                        currentOutlet={currentOutlet}
+                                        otherOutlets={otherOutlets}
+                                        onSelect={(outlet) => {
+                                            // handle outlet switch
+                                            console.log("Selected outlet:", outlet);
+                                        }}
+                                        trigger={
+                                            <>
+                                                <span className={styles.outlet}>Outlet:</span>{" "}
+                                                Nehru Place
+                                            </>
+                                        }
+                                    />
                                 </div>
-                                {/* <button
-                                type="button"
-                                className={styles.favoriteButton}
-                                aria-label="Add to favorites"
-                            >
-                                <Heart size={20} />
-                            </button> */}
                             </div>
                         </div>
-
-
                     </div>
 
                     {/* Restaurant Details */}
@@ -497,12 +701,17 @@ const OrderOnlineUltraPremiumContent: React.FC<
                         <div className={styles.statusRow}>
                             <div className={styles.openStatus}>
                                 <span className={styles.statusDot} />
-                                Open
+                                Open Now
                             </div>
+                            <span>•</span>
 
-                            <span className={styles.deliveryTime}>
-                                25-30 min delivery
-                            </span>
+                            <OpenCloseTime
+                                trigger={
+                                    <span className={styles.deliveryTime}>
+                                        Closes 12:00 am
+                                    </span>
+                                }
+                            />
                         </div>
 
                         <div className={styles.infoDivider} />
@@ -513,6 +722,18 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                 Delicious burgers, crispy fries and freshly prepared
                                 fast food delivered to your doorstep.
                             </p>
+
+                            <div className={styles.banner}>
+                                <span className={styles.logoWrap}>
+                                    <h2 className={styles.primeWrap}>PRIME</h2>
+                                </span>
+
+                                <div className={styles.textWrap}>
+                                    <div className={styles.text}>
+                                        Free delivery on orders above ₹199
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -539,10 +760,7 @@ const OrderOnlineUltraPremiumContent: React.FC<
                         </div>
                     </div>
 
-                    <div
-                        className={styles.offerGrid}
-                        ref={offerSliderRef}
-                    >
+                    <div className={styles.offerGrid} ref={offerSliderRef}>
                         {offers.map((offer) => (
                             <button
                                 type="button"
@@ -561,7 +779,6 @@ const OrderOnlineUltraPremiumContent: React.FC<
 
                                 <div className={styles.offerContent}>
                                     <strong>{offer.title}</strong>
-
                                     <span>{offer.subtitle}</span>
                                 </div>
                             </button>
@@ -594,79 +811,117 @@ const OrderOnlineUltraPremiumContent: React.FC<
                         </div>
 
                         <div className={styles.categoryList}>
-
-                            {/* --- Wrapped Static Buttons with Scrollbar --- */}
+                            {/* Veg / Non-Veg toggle pills */}
                             <div className={styles.staticCategoryList}>
-
-                                {/* Veg Option */}
                                 <div className={styles.staticItem}>
                                     <div className={styles.staticBox}>
                                         <label className={styles.staticLabel}>
-                                            <input type="checkbox" aria-label="Enable veg option" className={styles.hiddenInput} />
+                                            <input
+                                                type="checkbox"
+                                                aria-label="Enable veg option"
+                                                className={styles.hiddenInput}
+                                            />
                                             <span className={styles.staticPill}>
-
-                                                {/* Track wrapper (contains track and icon) */}
                                                 <div className={styles.trackWrapper}>
                                                     <span className={styles.track}></span>
-                                                    <div className={styles.iconContainer}>
-                                                        <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect x="1" y="1" width="18" height="18" rx="4" stroke="#007A33" strokeWidth="2" fill="white" />
-                                                            <circle cx="10" cy="10" r="5" fill="#007A33" />
+                                                    <div
+                                                        className={
+                                                            styles.iconContainer
+                                                        }
+                                                    >
+                                                        <svg
+                                                            aria-hidden="true"
+                                                            height="20"
+                                                            width="20"
+                                                            viewBox="0 0 20 20"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <rect
+                                                                x="1"
+                                                                y="1"
+                                                                width="18"
+                                                                height="18"
+                                                                rx="4"
+                                                                stroke="#007A33"
+                                                                strokeWidth="2"
+                                                                fill="white"
+                                                            />
+                                                            <circle
+                                                                cx="10"
+                                                                cy="10"
+                                                                r="5"
+                                                                fill="#007A33"
+                                                            />
                                                         </svg>
                                                     </div>
                                                 </div>
-
                                             </span>
                                         </label>
                                     </div>
                                 </div>
 
-                                {/* Non-Veg Option */}
                                 <div className={styles.staticItem}>
                                     <div className={styles.staticBox}>
                                         <label className={styles.staticLabel}>
-                                            <input type="checkbox" aria-label="Enable non veg option" className={styles.hiddenInput} />
+                                            <input
+                                                type="checkbox"
+                                                aria-label="Enable non veg option"
+                                                className={styles.hiddenInput}
+                                            />
                                             <span className={styles.staticPill}>
-
-                                                {/* Track wrapper (contains track and icon) */}
                                                 <div className={styles.trackWrapper}>
                                                     <span className={styles.track}></span>
-                                                    <div className={styles.iconContainer}>
-                                                        <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect x="1" y="1" width="18" height="18" rx="4" stroke="#D32F2F" strokeWidth="2" fill="white" />
-                                                            <path d="M10 5L15 15H5L10 5Z" fill="#D32F2F" />
+                                                    <div
+                                                        className={
+                                                            styles.iconContainer
+                                                        }
+                                                    >
+                                                        <svg
+                                                            aria-hidden="true"
+                                                            height="20"
+                                                            width="20"
+                                                            viewBox="0 0 20 20"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <rect
+                                                                x="1"
+                                                                y="1"
+                                                                width="18"
+                                                                height="18"
+                                                                rx="4"
+                                                                stroke="#D32F2F"
+                                                                strokeWidth="2"
+                                                                fill="white"
+                                                            />
+                                                            <path
+                                                                d="M10 5L15 15H5L10 5Z"
+                                                                fill="#D32F2F"
+                                                            />
                                                         </svg>
                                                     </div>
                                                 </div>
-
                                             </span>
                                         </label>
                                     </div>
                                 </div>
-
-                                {/* Bestseller Text
-                                <div className={styles.staticItem}>
-                                    <div className={styles.bestsellerWrapper}>
-                                        <div className={styles.bestsellerText}>Bestseller</div>
-                                    </div>
-                                </div> */}
-
                             </div>
 
-                            {/* Existing Dynamic Categories */}
+                            {/* Dynamic categories */}
                             {categories.map((category) => (
                                 <button
                                     key={category}
                                     type="button"
                                     onClick={() => setActiveCategory(category)}
-                                    className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`}
+                                    className={`${styles.categoryButton} ${activeCategory === category
+                                        ? styles.activeCategory
+                                        : ""
+                                        }`}
                                 >
                                     {category}
                                 </button>
                             ))}
-
-                            {/* End staticCategoryList */}
-
                         </div>
                     </div>
 
@@ -701,47 +956,16 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                             className={styles.foodCard}
                                             key={item.id}
                                         >
-                                            <div className={styles.foodInfo}>
-                                                <div className={styles.foodTypeRow}>
-                                                    <span
-                                                        className={`${styles.foodType} ${item.type === "veg"
-                                                            ? styles.veg
-                                                            : styles.nonveg
-                                                            }`}
-                                                    >
-                                                        <span />
-                                                    </span>
+                                            {/* Left: info + description */}
+                                            <FoodInfo item={item} maxChars={165} />
 
-                                                    {item.recommended && (
-                                                        <span
-                                                            className={
-                                                                styles.recommendedBadge
-                                                            }
-                                                        >
-                                                            Recommended
-                                                        </span>
-                                                    )}
-                                                </div>
-
-                                                <h3>{item.name}</h3>
-
-                                                <div className={styles.foodRating}>
-                                                    <Star
-                                                        size={14}
-                                                        fill="currentColor"
-                                                    />
-                                                    <span>{item.rating}</span>
-                                                </div>
-
-                                                <strong className={styles.price}>
-                                                    ₹{item.price}
-                                                </strong>
-
-                                                <p>{item.description}</p>
-                                            </div>
-
+                                            {/* Right: image + add / quantity */}
                                             <div className={styles.foodImageSection}>
-                                                <div className={styles.foodImageWrapper}>
+                                                <div
+                                                    className={
+                                                        styles.foodImageWrapper
+                                                    }
+                                                >
                                                     <img
                                                         src={item.image}
                                                         alt={item.name}
@@ -795,7 +1019,11 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                                     )}
                                                 </div>
 
-                                                <span className={styles.customizable}>
+                                                <span
+                                                    className={
+                                                        styles.customizable
+                                                    }
+                                                >
                                                     Customizable
                                                 </span>
                                             </div>
@@ -818,18 +1046,41 @@ const OrderOnlineUltraPremiumContent: React.FC<
                     </div>
 
                     {/* Floating Cart */}
+                    {/* Sticky bottom cart bar */}
                     {cartCount > 0 && (
                         <button
                             type="button"
-                            className={styles.floatingCart}
+                            className={styles.bottomCart}
+                            aria-label={`Cart details: ${cartCount} item${cartCount > 1 ? "s" : ""} added. Tap to view cart.`}
+                            onClick={() => {
+                                // navigate to cart page
+                                // router.push("/cart");
+                            }}
                         >
-                            <ShoppingBag size={20} />
-
-                            <span className={styles.cartCount}>
-                                {cartCount}
+                            <span className={styles.bottomCartLeft}>
+                                {cartCount} item{cartCount > 1 ? "s" : ""} added
                             </span>
 
-                            <span className={styles.cartText}>View Cart</span>
+                            <span className={styles.bottomCartRight}>
+                                <span>View Cart</span>
+
+                                <svg
+                                    width="14"
+                                    height="14"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    aria-hidden="true"
+                                    className={styles.cartIcon}
+                                >
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </span>
                         </button>
                     )}
                 </div>

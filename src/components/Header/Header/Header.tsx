@@ -277,7 +277,7 @@ const Header = () => {
         <div className={styles.rightSection}>
           <div className={styles.actionButtons}>
             <button className={styles.actionButton}>
-              <span>Offer</span>
+              <span>Company</span>
             </button>
             <button className={styles.loginButton}>
               <span>Login</span>

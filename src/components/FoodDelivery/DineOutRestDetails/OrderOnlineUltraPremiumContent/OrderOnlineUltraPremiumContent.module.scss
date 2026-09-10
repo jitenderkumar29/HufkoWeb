@@ -1,10 +1,52 @@
 @use "../../../../styles/variables.scss" as *;
+
+/* =========================================================
+   PAGE WRAPPER
+   Note: page scroll is handled by html/body in globals.scss.
+   Do NOT set overflow-y: scroll here — the section just grows
+   and the page-level scrollbar handles scrolling.
+========================================================= */
+
 .orderOnlineUltraPremiumContent {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    /* 👈 was min-height: 100vh */
+    max-height: 100vh;
+
+    overflow-x: hidden;
+    /* section scrolls vertically only */
+    overflow-y: scroll;
+    /* 👈 always reserve the vertical scrollbar */
+
     background: #f7f7f7;
     color: #1d1d1f;
     padding: 20px;
+    font-family: "Inter", sans-serif;
+
+    /* ---------- Firefox ---------- */
+    scrollbar-width: auto;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 2px !important;
+    }
+
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+        border: 3px solid #f1f1f1;
+
+        &:hover {
+            background: #a8a8a8;
+        }
+    }
 }
 
 .container {
@@ -15,18 +57,24 @@
 
 /* =========================================================
    RESTAURANT HEADER
+   overflow: hidden REMOVED — was clipping the
+   OpenCloseTime popup. Corner rounding is handled on
+   the banner image itself.
 ========================================================= */
 
 .restaurantHeader {
     background: #ffffff;
     border-radius: 0 0 20px 20px;
-    overflow: hidden;
     border: 1px solid #eeeeee;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+
+    /* stacking context so children (popup) beat the floating cart (z-index: 30) */
+    position: relative;
+    z-index: 10;
 }
 
 .restaurantTitleRow {
-    padding: 22px 24px;
+    padding: 1rem 1.25rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -34,8 +82,8 @@
 
     h1 {
         margin: 0;
-        font-size: 28px;
-        font-weight: 700;
+        font-size: 1.5rem;
+        font-weight: 900 !important;
         line-height: 1.2;
     }
 }
@@ -43,41 +91,61 @@
 .restaurantMeta {
     display: flex;
     align-items: flex-end;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 7px;
     margin-top: 9px;
-    font-size: 13px;
-    color: #666;
+    font-size: 15px;
+    color: $black;
+    font-weight: 900 !important;
 
     span {
         display: flex;
         align-items: center;
         gap: 4px;
+        font-weight: 900 !important;
     }
 
     svg {
-        color: #f59e0b;
+        color: $green;
     }
 }
 
 .cuisineText {
     margin: 8px 0 0;
-    color: #777;
+    color: $red;
     font-size: 13px;
+    font-weight: 900;
 }
 
 .deliveryInfo {
+    /* own stacking context so the popup anchors correctly */
+    position: relative;
+    z-index: 10;
+
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 6px;
     margin-top: 8px;
     font-size: 13px;
     color: #555;
+
+    >span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+    }
 }
 
 .outlet {
     color: $black;
+}
+
+.chevronDown {
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .favoriteButton {
@@ -107,7 +175,6 @@
     height: 260px;
     position: relative;
     overflow: hidden;
-    // background: #ddd;
 }
 
 .bannerImage {
@@ -115,7 +182,6 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    //  background: #ddd;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -123,12 +189,6 @@
 .bannerOverlay {
     position: absolute;
     inset: 0;
-    // background: linear-gradient(
-    //     90deg,
-    //     rgba(0, 0, 0, 0.65),
-    //     rgba(0, 0, 0, 0.1),
-    //     rgba(0, 0, 0, 0)
-    // );
 }
 
 .bannerContent {
@@ -177,6 +237,10 @@
 ========================================================= */
 
 .restaurantInfoCard {
+    /* own stacking context — the second OpenCloseTime trigger lives here */
+    position: relative;
+    z-index: 10;
+
     margin-top: 14px;
     background: #ffffff;
     border-radius: 14px;
@@ -187,7 +251,7 @@
 .statusRow {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
@@ -196,7 +260,7 @@
     align-items: center;
     gap: 6px;
     color: #14804a;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -208,9 +272,10 @@
 }
 
 .deliveryTime {
-    display: flex;
-    flex-direction: row !important;
-    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
     color: #666;
 }
 
@@ -222,15 +287,15 @@
 
 .address {
     span {
-        font-size: 13px;
+        font-size: 17px;
         font-weight: 600;
-        color: #333;
+        color: $black;
     }
 
     p {
         margin: 6px 0 0;
         color: #777;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.5;
     }
 }
@@ -275,6 +340,7 @@
 
 /* =========================================================
    OFFERS
+   Horizontal scroller — vertical is hidden.
 ========================================================= */
 
 .offerGrid {
@@ -286,20 +352,19 @@
     gap: 12px;
 
     margin-top: 14px;
-    padding: 2px 2px 12px 3px !important;
+    padding: 2px 2px 12px 3px;
     margin-left: 3px;
-
 
     overflow-x: auto;
     overflow-y: hidden;
 
-    scroll-behavior: smooth;
-
-    scroll-snap-type: x mandatory;
-
+    /* ---------- Hide scrollbar: Firefox ---------- */
     scrollbar-width: none;
+
+    /* ---------- Hide scrollbar: IE / Edge legacy ---------- */
     -ms-overflow-style: none;
 
+    /* ---------- Hide scrollbar: Chrome / Safari / Edge ---------- */
     &::-webkit-scrollbar {
         display: none;
     }
@@ -335,7 +400,6 @@
 
     &:hover {
         border-color: #d7232e;
-        // transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
     }
 }
@@ -408,7 +472,7 @@
     width: 100%;
     height: 48px;
     border: 1px solid #dedede;
-    background: #ffffff;
+    background: rgba(2, 6, 12, 0.1);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -443,34 +507,60 @@
     }
 }
 
+/* =========================================================
+   CATEGORY LIST
+   Horizontal scroller — vertical is hidden.
+========================================================= */
+
 .categoryList {
     display: flex;
     gap: 10px;
+
     overflow-x: auto;
+    overflow-y: hidden;
+
     margin-top: 13px;
-    padding-bottom: 3px;
+    padding-bottom: 8px;
     align-items: center;
 
-    scrollbar-width: none;
+    scrollbar-width: auto;
+    scrollbar-color: #c1c1c1 #f1f1f1;
 
     &::-webkit-scrollbar {
-        display: none;
+        -webkit-appearance: none;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+        margin: 0 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+
+        &:hover {
+            background: #a8a8a8;
+        }
     }
 }
 
 .categoryButton {
     padding: 10px 16px;
     border-radius: 999px;
-    border: 1px solid #D1D5DB;
-    background-color: #FFFFFF;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
     cursor: pointer;
     font-size: 14px;
     transition: all 0.2s ease;
 }
 
 .activeCategory {
-    border-color: #007A33;
-    color: #007A33;
+    border-color: #007a33;
+    color: #007a33;
     font-weight: 600;
 }
 
@@ -533,17 +623,17 @@
 
     h3 {
         margin: 8px 0 6px;
-        font-size: 16px;
-        font-weight: 650;
-        color: #242424;
+        font-size: 18px;
+        font-weight: 900;
+        color: $black;
     }
 
     p {
         margin: 8px 0 0;
         max-width: 680px;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 1.55;
-        color: #777;
+        color: $gray-800;
     }
 }
 
@@ -556,7 +646,7 @@
 .foodType {
     width: 15px;
     height: 15px;
-    border: 1px solid;
+    border: 2px solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -606,10 +696,20 @@
     }
 }
 
+.ratingCount {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $black;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .price {
     display: block;
     margin-top: 7px;
-    font-size: 14px;
+    margin-bottom: 7px;
+    font-size: 16px;
 }
 
 .foodImageSection {
@@ -621,8 +721,8 @@
 }
 
 .foodImageWrapper {
-    width: 145px;
-    height: 115px;
+    width: 155px;
+    height: 145px;
     position: relative;
 }
 
@@ -635,6 +735,7 @@
 }
 
 .addButton {
+    display: flex;
     position: absolute;
     left: 50%;
     bottom: -14px;
@@ -645,15 +746,18 @@
     background: #ffffff;
     color: #14804a;
     border: 1px solid #d5d5d5;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
-        background: #14804a;
-        color: #ffffff;
+        background: $gray-300;
+        color: #14804a;
         border-color: #14804a;
     }
 }
@@ -692,8 +796,8 @@
 }
 
 .customizable {
-    margin-top: 22px;
-    font-size: 9px;
+    margin-top: 20px;
+    font-size: 12px;
     color: #999;
 }
 
@@ -725,45 +829,67 @@
    FLOATING CART
 ========================================================= */
 
-.floatingCart {
+/* =========================================================
+   STICKY BOTTOM CART BAR
+   Spans the viewport width at the bottom of the page.
+   Because the section (.orderOnlineUltraPremiumContent)
+   is itself a scroll container, we anchor the bar to the
+   section's bottom edge, not the viewport.
+========================================================= */
+
+.bottomCart {
     position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 30;
-    height: 52px;
-    padding: 0 20px;
-    border: none;
-    border-radius: 30px;
-    background: #14804a;
+    left: 0;
+    right: 0;
+    bottom: 10;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 980px;
+    min-height: 56px;
+    padding: 14px 20px;
+    margin: 0 auto;
+
+    background: $cart-green;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(20, 128, 74, 0.3);
-    transition: transform 0.2s ease;
 
-    &:hover {
-        transform: translateY(-3px);
-    }
-}
-
-.cartCount {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #14804a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
+    border: none;
+    border-radius: 0;                /* full-width bar has square edges */
+    font-family: inherit;
+    font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.15);
+
+    transition: background 0.2s ease;
+
+    // &:hover { background: #12793f; }
+    &:active { background: #0f6b37; }
 }
 
-.cartText {
-    font-size: 13px;
-    font-weight: 600;
+.bottomCartLeft {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.bottomCartRight {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.cartIcon {
+    display: block;
 }
 
 /* =========================================================
@@ -833,13 +959,27 @@
     }
 
     .offerGrid {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        padding-bottom: 5px;
+        width: 100%;
 
+        display: flex;
+        align-items: stretch;
+
+        gap: 12px;
+
+        margin-top: 14px;
+        padding: 2px 2px 12px 3px;
+        margin-left: 3px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        /* ---------- Hide scrollbar: Firefox ---------- */
         scrollbar-width: none;
 
+        /* ---------- Hide scrollbar: IE / Edge legacy ---------- */
+        -ms-overflow-style: none;
+
+        /* ---------- Hide scrollbar: Chrome / Safari / Edge ---------- */
         &::-webkit-scrollbar {
             display: none;
         }
@@ -933,48 +1073,50 @@
     }
 }
 
-/* --- New Scrollable Container for Static Buttons --- */
+/* =========================================================
+   STATIC CATEGORY (Veg / Non-Veg pills)
+   Horizontal scroller — vertical is hidden.
+========================================================= */
+
 .staticCategoryList {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    
-    /* Enable horizontal scrolling */
+
     overflow-x: auto;
     overflow-y: hidden;
-    
-    /* Add padding so shadows/borders aren't cut off on the right */
-    // padding-bottom: 5px; 
-    
-    /* Hide scrollbar on Firefox */
-    scrollbar-width: thin; 
-    scrollbar-color: #c1c1c1 #f1f1f1; 
+
+    // padding-bottom: 8px;
+
+    scrollbar-width: auto;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+        margin: 0 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+
+        &:hover {
+            background: #a8a8a8;
+        }
+    }
 }
 
-/* Show scrollbar on Webkit browsers (Chrome, Safari, Edge) */
-.staticCategoryList::-webkit-scrollbar {
-    height: 6px; /* Height of horizontal scrollbar */
-}
-
-.staticCategoryList::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
-
-.staticCategoryList::-webkit-scrollbar-thumb {
-    background: #c1c1c1; 
-    border-radius: 10px;
-}
-
-.staticCategoryList::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8; 
-}
-
-/* --- Existing static item styles (Keep these as they are) --- */
 .staticItem {
     display: flex;
-    flex-shrink: 0; /* Prevents items from shrinking when scrolling */
+    flex-shrink: 0;
 }
 
 .staticBox {
@@ -995,67 +1137,62 @@
     width: 0;
 }
 
-/* --- Updated Static Pill Styles with Toggle Behavior --- */
 .staticPill {
     display: flex;
     align-items: center;
     height: 40px;
     padding: 0 12px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid #d1d5db;
     border-radius: 999px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     transition: border-color 0.3s ease;
     cursor: pointer;
+
+    &:hover {
+        border-color: #9ca3af;
+    }
 }
 
-/* Track Wrapper (holds the track and icon) */
 .trackWrapper {
     position: relative;
-    width: 40px; /* Width of the toggle track */
+    width: 40px;
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* The Gray Track (Right side) */
-/* The Gray Track */
 .track {
     width: 100%;
     height: 12px;
-    background-color: #E5E7EB;
+    background-color: #e5e7eb;
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
 
-/* The Icon (Left side by default - OFF state) */
 .iconContainer {
     position: absolute;
-    left: 0; /* Starts on the left side of the track */
+    left: 0;
     top: 50%;
-    transform: translateY(-50%); /* Vertically centers icon */
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
-    transition: left 0.3s ease; /* Smooth sliding animation */
+    transition: left 0.3s ease;
 }
 
-/* Hover effect */
-.staticPill:hover {
-    border-color: #9CA3AF;
+.hiddenInput:checked+.staticPill .track {
+    background-color: #007a33;
+    opacity: 0.3;
 }
 
-/* --- ON STATE (Checkbox Checked) --- */
-/* Track turns green/red */
-.hiddenInput:checked + .staticPill .track {
-    background-color: #007A33; /* Green for Veg (Change to #D32F2F for Non-Veg) */
-    opacity: 0.3; /* Makes the track slightly transparent */
+.hiddenInput:checked+.staticPill .iconContainer {
+    left: calc(100% - 20px);
 }
 
-/* Move icon to the right side of the track */
-.hiddenInput:checked + .staticPill .iconContainer {
-    left: calc(100% - 20px); /* Moves icon to the right (20px is width of icon) */
+.hiddenInput:checked+.staticPill {
+    border-color: #007a33;
 }
 
 .bestsellerWrapper {
@@ -1068,21 +1205,133 @@
     justify-content: center;
     height: 40px;
     padding: 0 16px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid #d1d5db;
     border-radius: 999px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     font-weight: 600;
     font-size: 14px;
-    color: #1F2937;
+    color: #1f2937;
     cursor: pointer;
     transition: all 0.2s ease;
+
+    &:hover {
+        border-color: #9ca3af;
+    }
 }
 
-.bestsellerText:hover {
-    border-color: #9CA3AF;
+/* =========================================================
+   PRIME BANNER
+========================================================= */
+
+.banner {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 0;
+
+    background: linear-gradient(278deg,
+            rgba(251, 224, 227, 0.9) 6.25%,
+            rgba(255, 255, 255, 0) 93.75%);
+
+    font-family: "Amazon Ember", "Inter", Arial, sans-serif;
 }
 
-.hiddenInput:checked + .staticPill {
-    border-color: #007A33;
+.logoWrap {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
+.primeWrap {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: $red;
+    font-weight: 900;
+}
+
+.logo {
+    display: block;
+    height: 15px;
+    width: 43px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.textWrap {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.text {
+    font-size: 13px;
+    font-weight: 500;
+    color: $red;
+    line-height: 1.3;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   DESCRIPTION (with expand / collapse)
+========================================================= */
+
+.descriptionWrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.description {
+    margin: 0;
+    max-width: 680px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: #777;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    &.expanded {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+}
+
+.moreBtn {
+    display: inline;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 5px;
+    color: $gray-900;
+    font-size: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* =========================================================
+   RATING COUNT
+========================================================= */
+
+.ratingCount {
+    color: #999;
+    font-weight: 500;
+}

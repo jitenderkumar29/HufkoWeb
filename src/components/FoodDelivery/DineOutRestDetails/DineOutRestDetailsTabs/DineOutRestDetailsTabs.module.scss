@@ -1,5 +1,63 @@
 @use "../../../../styles/variables.scss" as *;
 
+/* =========================================================
+   REUSABLE VISIBLE SCROLLBAR MIXINS
+   Use: @include scrollbar-x;  (horizontal)
+        @include scrollbar-y;  (vertical)
+========================================================= */
+
+@mixin scrollbar-x {
+    scrollbar-width: auto;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+        margin: 0 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+
+        &:hover {
+            background: #a8a8a8;
+        }
+    }
+}
+
+@mixin scrollbar-y {
+    scrollbar-width: auto;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+        margin: 8px 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+
+        &:hover {
+            background: #a8a8a8;
+        }
+    }
+}
+
 .tabsContainer {
     width: 100%;
     background-color: $background-gray;
@@ -674,7 +732,7 @@
         }
 
         &:nth-child(4) {
-            background: linear-gradient(to top right,  #f6f4ee 0%,  #f7ecc9 100%);
+            background: linear-gradient(to top right, #f6f4ee 0%, #f7ecc9 100%);
             border-color: #faecbd;
         }
 
@@ -924,10 +982,10 @@
     font-size: 20px;
 }
 
-.ratingCount {
-    font-size: 14px;
-    color: #6c757d;
-}
+// .ratingCount {
+//     font-size: 14px;
+//     color: #6c757d;
+// }
 
 /* ============================================ */
 /* PHOTOS TAB */
@@ -1411,10 +1469,10 @@
     margin-bottom: 4px;
 }
 
-.ratingInfo .ratingCount {
-    font-size: 14px;
-    color: #666;
-}
+// .ratingInfo .ratingCount {
+//     font-size: 14px;
+//     color: #666;
+// }
 
 .ratingBars {
     margin-bottom: 16px;
@@ -2043,7 +2101,7 @@
 /* ============================================ */
 
 .orderOnlineTabContent {
-  display: flex;
+    display: flex;
     flex-direction: column;
     background: #ffffff;
     min-height: 100vh;
@@ -2064,20 +2122,36 @@
     top: 20px;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
-    
-    &::-webkit-scrollbar {
-        width: 4px;
-    }
-    
-    &::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        background: #c1c1c1;
-        border-radius: 4px;
-    }
+
+    @include scrollbar-y;
 }
+
+// .orderOnlineSidebar {
+//     width: 220px;
+//     min-width: 240px;
+//     padding: 16px 0;
+//     border-right: 1px solid #f1f1f6;
+//     background: #ffffff;
+//     flex-shrink: 0;
+//     align-self: flex-start;
+//     position: sticky;
+//     top: 20px;
+//     max-height: calc(100vh - 120px);
+//     overflow-y: auto;
+
+//     &::-webkit-scrollbar {
+//         width: 4px;
+//     }
+
+//     &::-webkit-scrollbar-track {
+//         background: #f1f1f1;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//         background: #c1c1c1;
+//         border-radius: 4px;
+//     }
+// }
 
 .orderOnlineCategoryItem {
     padding: 10px 15px;
@@ -2088,7 +2162,7 @@
     margin: 0;
     border-left: 3px solid transparent;
     font-weight: 500;
-    
+
     &:hover {
         color: #1a1a1a;
         background: #f9fafb;
@@ -2307,26 +2381,26 @@
    Food Image Wrapper
 ---------------------------------- */
 
-.foodImageWrapper {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
-    overflow: visible;
-}
+// .foodImageWrapper {
+//     position: relative;
+//     width: 120px;
+//     height: 120px;
+//     border-radius: 10px;
+//     overflow: visible;
+// }
 
 /* ---------------------------------
    Food Image
 ---------------------------------- */
 
-.orderOnlineItemImage {
-    width: 120px;
-    height: 120px;
-    display: block;
-    object-fit: cover;
-    border-radius: 10px;
-    background: #f5f5f5;
-}
+// .orderOnlineItemImage {
+//     width: 120px;
+//     height: 120px;
+//     display: block;
+//     object-fit: cover;
+//     border-radius: 10px;
+//     background: #f5f5f5;
+// }
 
 /* ---------------------------------
    Veg / Non-Veg Icon
@@ -2389,7 +2463,7 @@
     color: #218838;
 
     transform: translateX(-50%);
-    
+
     box-shadow:
         0 3px 8px rgba(0, 0, 0, 0.18);
 }
@@ -2407,11 +2481,11 @@
 
     width: 100%;
 
-    margin-top: 30px;
+    margin-top: 15px;
 
     color: #8a8a8a;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
 
     line-height: 16px;
@@ -2421,18 +2495,18 @@
     white-space: nowrap;
 }
 
-.orderOnlineItemImage {
-    width: 130px;
-    height: 130px;
-    border-radius: 12px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+// .orderOnlineItemImage {
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 12px;
+//     object-fit: cover;
+//     cursor: pointer;
+//     transition: transform 0.2s ease;
 
-    &:hover {
-        // transform: scale(1.03);
-    }
-}
+//     &:hover {
+//         // transform: scale(1.03);
+//     }
+// }
 
 /* No Results */
 .orderOnlineNoResults {
@@ -2450,13 +2524,13 @@
     .orderOnlineBody {
         flex-direction: column;
     }
-    
+
     .orderOnlineSidebar {
         width: 100%;
         min-width: 100%;
         height: auto;
         max-height: 60px;
-        overflow-y: auto;
+        overflow-y: hidden;
         position: static;
         border-right: none;
         border-bottom: 1px solid #f1f1f6;
@@ -2466,12 +2540,16 @@
         overflow-x: auto;
         gap: 0;
         top: auto;
-        
+        align-self: auto;
+
+        @include scrollbar-x;
+
+        /* override thumb height for the small strip */
         &::-webkit-scrollbar {
-            height: 2px;
+            height: 4px;
         }
     }
-    
+
     .orderOnlineCategoryItem {
         white-space: nowrap;
         padding: 8px 16px;
@@ -2479,19 +2557,19 @@
         border-bottom: 3px solid transparent;
         flex-shrink: 0;
         font-size: 13px;
-        
+
         &:hover {
             background: transparent;
         }
     }
-    
+
     .orderOnlineCategoryActive {
         border-left: none;
         border-bottom-color: #d32f2f;
         background: transparent;
         color: #d32f2f;
     }
-    
+
     .orderOnlineMainContent {
         padding: 16px;
         max-height: none;
@@ -2503,12 +2581,12 @@
     .orderOnlineHeaderBanner {
         padding: 12px 16px;
     }
-    
+
     .restaurantInfoWrapper {
         flex-direction: column;
         gap: 12px;
     }
-    
+
     .dealsSection {
         min-width: 100%;
         max-width: 100%;
@@ -2516,29 +2594,29 @@
         padding-top: 12px;
         margin-top: 8px;
     }
-    
+
     .restaurantCoverImage {
         height: 140px;
     }
-    
+
     .orderOnlineSidebar {
         max-height: 50px;
     }
-    
+
     .orderOnlineMainContent {
         padding: 12px;
     }
-    
+
     .foodImageWrapper {
         width: 100px;
         height: 100px;
     }
-    
+
     .orderOnlineItemImage {
         width: 100px;
         height: 100px;
     }
-    
+
     .addButton {
         width: 60px;
         height: 28px;
@@ -2546,7 +2624,7 @@
         line-height: 28px;
         bottom: -20px;
     }
-    
+
     .customisableBadge {
         margin-top: 26px;
         font-size: 10px;
@@ -2557,28 +2635,28 @@
     .orderOnlineMainContent {
         padding: 8px;
     }
-    
+
     .orderOnlineMenuItem {
         flex-wrap: wrap;
         gap: 12px;
     }
-    
+
     .orderOnlineItemCenter {
         flex: 1;
         min-width: 0;
         padding-right: 8px;
     }
-    
+
     .foodImageWrapper {
         width: 80px;
         height: 80px;
     }
-    
+
     .orderOnlineItemImage {
         width: 80px;
         height: 80px;
     }
-    
+
     .addButton {
         width: 50px;
         height: 24px;
@@ -2586,7 +2664,7 @@
         line-height: 24px;
         bottom: -16px;
     }
-    
+
     .customisableBadge {
         margin-top: 22px;
         font-size: 9px;
@@ -2615,7 +2693,7 @@
 
 .modalContent {
     padding: 24px;
-     background: white;
+    background: white;
     border-radius: 16px;
     max-width: 1000px;
     width: 100%;
@@ -2626,25 +2704,7 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     border: 10px solid #87B7EB;
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-    }
-    
-    /* Hide scrollbar for Firefox */
-    scrollbar-width: none;
-    
-    /* Hide scrollbar for IE and Edge */
-    -ms-overflow-style: none;
-
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: transparent;
-    }
+    @include scrollbar-y;
 }
 
 /* Hide scrollbar for OrderOnlineModalUltraPremium */
@@ -2659,27 +2719,8 @@
     animation: slideUp 0.3s ease;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     border: 10px solid #9ce7cc !important;
-    // border: 10px solid #87B7EB;
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-    }
-    
-    /* Hide scrollbar for Firefox */
-    scrollbar-width: none;
-    
-    /* Hide scrollbar for IE and Edge */
-    -ms-overflow-style: none;
-
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: transparent;
-    }
+    @include scrollbar-y;
 }
 
 .modalCloseBtn {
@@ -2770,15 +2811,15 @@
 .menuItemsWrapper {
     margin: 0.5rem 0;
     padding: 0 4px;
-    
+
     .menuItemsList {
         padding: 0;
     }
-    
+
     @media (max-width: 768px) {
         margin: 16px 0 24px;
     }
-    
+
     @media (max-width: 480px) {
         margin: 12px 0 20px;
     }
@@ -2787,298 +2828,299 @@
 
 //Menu Items List
 .menuItemsList {
-  width: 100%;
-  padding: 20px 0;
-  background: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    background: #ffffff;
 }
 
 .listHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 0 4px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
     gap: 12px;
-  }
+    padding: 0 4px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 }
 
 .listTitle {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  letter-spacing: -0.5px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    letter-spacing: -0.5px;
 
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
 }
 
 .navigationButtons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
 
-  @media (max-width: 480px) {
-    gap: 8px;
-    width: 100%;
-    justify-content: center;
-  }
+    @media (max-width: 480px) {
+        gap: 8px;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .navBtn {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 1.5px solid #e8e8e8;
-  background: #ffffff;
-  color: #333;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  font-size: 14px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1.5px solid #e8e8e8;
+    background: #ffffff;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 14px;
 
-  &:hover {
-    background: $primary-color;
-    border-color: $secondary-color;
-    color: $white;
-    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-//   &:hover:not(.disabled) {
-//     background: #f5f5f5;
-//     border-color: #1a1a1a;
-//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-//   }
+    &:hover {
+        background: $primary-color;
+        border-color: $secondary-color;
+        color: $white;
+        // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
 
-  &:active:not(.disabled) {
-    transform: scale(0.92);
-  }
+    //   &:hover:not(.disabled) {
+    //     background: #f5f5f5;
+    //     border-color: #1a1a1a;
+    //     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    //   }
 
-  &.disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+    &:active:not(.disabled) {
+        transform: scale(0.92);
+    }
 
-  @media (max-width: 480px) {
-    width: 32px;
-    height: 32px;
-    font-size: 12px;
-  }
+    &.disabled {
+        opacity: 0.25;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    @media (max-width: 480px) {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
 }
 
 .itemsContainer {
-  overflow: hidden;
-  position: relative;
-  border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
 }
 
 .itemsWrapper {
-  display: flex;
-  gap: 16px;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  width: 100%;
-  will-change: transform;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    will-change: transform;
 
-  @media (max-width: 1024px) {
-    gap: 14px;
-  }
+    @media (max-width: 1024px) {
+        gap: 14px;
+    }
 
-  @media (max-width: 768px) {
-    gap: 12px;
-  }
+    @media (max-width: 768px) {
+        gap: 12px;
+    }
 
-  @media (max-width: 480px) {
-    gap: 10px;
-  }
+    @media (max-width: 480px) {
+        gap: 10px;
+    }
 }
 
 .menuItem {
-  background: #ffffff;
-  border: 1px solid #f0f0f0;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  min-width: 0;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    min-width: 0;
 
-  &:hover {
-    border-color: #d0d0d0;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-    // transform: translateY(-2px);
-  }
+    &:hover {
+        border-color: #d0d0d0;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+        // transform: translateY(-2px);
+    }
 
-  &:active {
-    transform: scale(0.97);
-  }
+    &:active {
+        transform: scale(0.97);
+    }
 
-  @media (max-width: 480px) {
-    border-radius: 10px;
-  }
+    @media (max-width: 480px) {
+        border-radius: 10px;
+    }
 }
 
 .itemImage {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background: #f5f5f5;
-  flex-shrink: 0;
-
-  img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+    height: 200px;
+    overflow: hidden;
+    background: #f5f5f5;
+    flex-shrink: 0;
 
-  @media (max-width: 768px) {
-    height: 180px;
-  }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 
-  @media (max-width: 480px) {
-    height: 160px;
-  }
+    @media (max-width: 768px) {
+        height: 180px;
+    }
+
+    @media (max-width: 480px) {
+        height: 160px;
+    }
 }
 
 .itemImagePlaceholder {
-  width: 100%;
-  height: 200px;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
+    width: 100%;
+    height: 200px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
 
-  @media (max-width: 768px) {
-    height: 180px;
-    font-size: 36px;
-  }
+    @media (max-width: 768px) {
+        height: 180px;
+        font-size: 36px;
+    }
 
-  @media (max-width: 480px) {
-    height: 160px;
-    font-size: 28px;
-  }
+    @media (max-width: 480px) {
+        height: 160px;
+        font-size: 28px;
+    }
 }
 
 .itemInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 10px 8px 10px;
-  gap: 12px;
-  width: 100%;
-  margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px 8px 10px;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 0.5rem;
 
-  @media (max-width: 480px) {
-    padding: 10px 12px 6px 12px;
-  }
+    @media (max-width: 480px) {
+        padding: 10px 12px 6px 12px;
+    }
 }
 
 .itemName {
-  font-size: 16px;
-  font-weight: 600;
-  color: #1a1a1a;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  letter-spacing: -0.2px;
-  line-height: 1.3;
-  flex: 1;
-  min-width: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -0.2px;
+    line-height: 1.3;
+    flex: 1;
+    min-width: 0;
 
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 
-  @media (max-width: 480px) {
-    font-size: 13px;
-  }
+    @media (max-width: 480px) {
+        font-size: 13px;
+    }
 }
 
 .priceMenu {
-  margin-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .itemRating {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-
-  @media (max-width: 480px) {
-    gap: 4px;
-  }
-
-  .stars {
     display: flex;
-    gap: 2px;
-    color: #ffb800;
-    font-size: 12px;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 
     @media (max-width: 480px) {
-      font-size: 10px;
+        gap: 4px;
     }
 
-    .starIcon {
-      width: 12px;
-      height: 12px;
+    .stars {
+        display: flex;
+        gap: 2px;
+        color: #ffb800;
+        font-size: 12px;
 
-      @media (max-width: 480px) {
-        width: 10px;
-        height: 10px;
-      }
+        @media (max-width: 480px) {
+            font-size: 10px;
+        }
+
+        .starIcon {
+            width: 12px;
+            height: 12px;
+
+            @media (max-width: 480px) {
+                width: 10px;
+                height: 10px;
+            }
+        }
     }
-  }
 
-  .ratingValue {
-    font-size: 14px;
-    font-weight: 700;
-    color: $green;
+    // .ratingValue {
+    //     font-size: 14px;
+    //     font-weight: 700;
+    //     color: $green;
 
-    @media (max-width: 480px) {
-      font-size: 12px;
+    //     @media (max-width: 480px) {
+    //         font-size: 12px;
+    //     }
+    // }
+
+    .reviewCount {
+        font-size: 12px;
+        color: #999;
+        font-weight: 400;
+
+        @media (max-width: 480px) {
+            font-size: 10px;
+        }
     }
-  }
-
-  .reviewCount {
-    font-size: 12px;
-    color: #999;
-    font-weight: 400;
-
-    @media (max-width: 480px) {
-      font-size: 10px;
-    }
-  }
 }
 
 .itemDiscount {
-  font-size: 14px;
-  color: #e23744;
-  font-weight: 600;
-  padding: 4px 16px 12px 16px;
-  letter-spacing: -0.2px;
+    font-size: 14px;
+    color: #e23744;
+    font-weight: 600;
+    padding: 4px 16px 12px 16px;
+    letter-spacing: -0.2px;
 
-  @media (max-width: 480px) {
-    font-size: 12px;
-    padding: 4px 12px 10px 12px;
-  }
+    @media (max-width: 480px) {
+        font-size: 12px;
+        padding: 4px 12px 10px 12px;
+    }
 }
 
 //Order Online Header - Now scrollable with page
 .orderOnlineHeaderBanner {
     background: #ffffff;
     // padding: 1rem 0px;
-    border-bottom: 8px solid #f1f1f6;
+    // border-bottom: 8px solid #f1f1f6;
     width: 100%;
 }
 
@@ -3093,6 +3135,7 @@
 .restaurantInfo {
     flex: 1;
 }
+
 .restaurantInfoRight {
     flex: 1;
     align-items: end;
@@ -3111,11 +3154,11 @@
     margin-bottom: 4px;
 }
 
-.restaurantCuisine {
-    font-size: 14px;
-    color: #686b78;
-    font-weight: 400;
-}
+// .restaurantCuisine {
+//     font-size: 14px;
+//     color: #686b78;
+//     font-weight: 400;
+// }
 
 .locationInfo {
     display: flex;
@@ -3156,9 +3199,10 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    background: #f1f1f6;
+    color: $gray-800;
     padding: 2px 8px;
     border-radius: 12px;
+    margin-right: -8px;
 }
 
 .starIcon {
@@ -3168,19 +3212,20 @@
 }
 
 .ratingValue {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
-    color: $green;
+    color: $gray-800;
 }
 
 .ratingCount {
-    font-size: 13px;
-    color: #686b78;
+    font-size: 15px;
+    font-weight: 600;
+    color: $gray-800;
 }
 
 .priceRange {
-    font-size: 14px;
-    color: #686b78;
+    font-size: 15px;
+    color: $gray-800;
 }
 
 /* Opening Hours */
@@ -3249,20 +3294,20 @@
 
 .dealCard {
     display: flex;
-     flex: 1;
-     min-width: 0;
+    flex: 1;
+    min-width: 0;
     align-items: center;
     gap: 12px;
     background: #f9fafb;
-    padding: 8px 12px;
+    padding: 12px;
     border-radius: 8px;
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
     border: 1px solid #e8e8e8;
     width: 250px;
     transition: all 0.2s ease;
     cursor: pointer;
 
-      &:hover {
+    &:hover {
         border-color: #d0d0d0;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
@@ -3315,7 +3360,7 @@
 .searchWrapper {
     display: flex;
     align-items: center;
-    background: #f1f1f6;
+    background: rgba(2, 6, 12, 0.1);
     border-radius: 24px;
     padding: 0 16px;
     transition: all 0.2s ease;
@@ -3367,7 +3412,7 @@
     .dealsSection {
         // min-width: 220px;
         // max-width: 280px;
-         min-width: 100%;
+        min-width: 100%;
         max-width: 100%;
         border-top: none;
         padding-top: 0;
@@ -3411,7 +3456,7 @@
 .orderOnlineHeaderBanner {
     background: #ffffff;
     // padding: 16px 20px 12px;
-    border-bottom: 8px solid #f1f1f6;
+    // border-bottom: 8px solid #f1f1f6;
     // REMOVE these lines:
     // position: sticky;
     // top: 0;
@@ -3470,7 +3515,7 @@
 
 .restaurantCuisine {
     font-size: 14px;
-    color: #686b78;
+    color: $red;
     font-weight: 400;
 }
 
@@ -3507,35 +3552,35 @@
     flex-wrap: wrap;
 }
 
-.ratingBadge {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: #f1f1f6;
-    padding: 2px 8px;
-    border-radius: 12px;
-}
+// .ratingBadge {
+//     display: flex;
+//     align-items: center;
+//     gap: 4px;
+//     background: #f1f1f6;
+//     padding: 2px 8px;
+//     border-radius: 12px;
+// }
 
 .starIcon {
     color: #3d9b4a;
     font-size: 12px;
 }
 
-.ratingValue {
-    font-size: 14px;
-    font-weight: 600;
-    color: $green;
-}
+// .ratingValue {
+//     font-size: 14px;
+//     font-weight: 600;
+//     color: $green;
+// }
 
-.ratingCount {
-    font-size: 13px;
-    color: #686b78;
-}
+// .ratingCount {
+//     font-size: 13px;
+//     color: #686b78;
+// }
 
-.priceRange {
-    font-size: 14px;
-    color: #686b78;
-}
+// .priceRange {
+//     font-size: 14px;
+//     color: #686b78;
+// }
 
 /* Opening Hours */
 .openingHours {
@@ -3591,8 +3636,8 @@
 .dealsSection {
     // min-width: 220px;
     // max-width: 280px;
-     min-width: 100%;
-        max-width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     padding-top: 0;
     margin-top: 0;
 }
@@ -3617,7 +3662,7 @@
     border: 1px solid #e8e8e8;
     transition: all 0.2s ease;
     cursor: pointer;
-    
+
     &:hover {
         border-color: #d0d0d0;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -3667,19 +3712,19 @@
     border-top: 1px solid #f1f1f6;
 }
 
-.searchWrapper {
-    display: flex;
-    align-items: center;
-    background: #f1f1f6;
-    border-radius: 24px;
-    padding: 0 16px;
-    transition: all 0.2s ease;
-}
+// .searchWrapper {
+//     display: flex;
+//     align-items: center;
+//     background: #f1f1f6;
+//     border-radius: 24px;
+//     padding: 0 16px;
+//     transition: all 0.2s ease;
+// }
 
-.searchWrapper:focus-within {
-    background: #e8e8ed;
-    box-shadow: 0 0 0 2px #3d9b4a;
-}
+// .searchWrapper:focus-within {
+//     background: #e8e8ed;
+//     box-shadow: 0 0 0 2px #3d9b4a;
+// }
 
 .searchInput {
     flex: 1;
@@ -3738,15 +3783,15 @@
 //     top: 380px;
 //     background: #ffffff;
 //     flex-shrink: 0;
-    
+
 //     &::-webkit-scrollbar {
 //         width: 4px;
 //     }
-    
+
 //     &::-webkit-scrollbar-track {
 //         background: #f1f1f1;
 //     }
-    
+
 //     &::-webkit-scrollbar-thumb {
 //         background: #c1c1c1;
 //         border-radius: 4px;
@@ -3762,7 +3807,7 @@
     margin: 0;
     border-left: 3px solid transparent;
     font-weight: 500;
-    
+
     &:hover {
         color: #1a1a1a;
         background: #f9fafb;
@@ -3847,6 +3892,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    margin-bottom: 5px;
 }
 
 .itemRating .starIcon {
@@ -3854,11 +3900,11 @@
     font-size: 12px;
 }
 
-.itemRating .ratingValue {
-    font-size: 13px;
-    font-weight: 500;
-    color: $green;
-}
+// .itemRating .ratingValue {
+//     font-size: 13px;
+//     font-weight: 500;
+//     color: $green;
+// }
 
 .itemRating .reviewCount {
     font-size: 13px;
@@ -3876,15 +3922,15 @@
 
 .foodImageWrapper {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 155px !important;
+    height: 145px;
     border-radius: 10px;
     overflow: visible;
 }
 
 .orderOnlineItemImage {
-    width: 120px;
-    height: 120px;
+    width: 155px !important;
+    height: 145px;
     display: block;
     object-fit: cover;
     border-radius: 10px;
@@ -3934,18 +3980,18 @@
     transform: translateX(-50%) scale(0.96);
 }
 
-/* Customisable Badge */
-.customisableBadge {
-    display: block;
-    width: 100%;
-    margin-top: 4px;
-    color: #8a8a8a;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 16px;
-    text-align: center;
-    white-space: nowrap;
-}
+// /* Customisable Badge */
+// .customisableBadge {
+//     display: block;
+//     width: 100%;
+//     margin-top: 4px;
+//     color: #8a8a8a;
+//     font-size: 11px;
+//     font-weight: 400;
+//     line-height: 16px;
+//     text-align: center;
+//     white-space: nowrap;
+// }
 
 /* No Results */
 .orderOnlineNoResults {
@@ -3964,7 +4010,7 @@
     .orderOnlineBody {
         flex-direction: column;
     }
-    
+
     .orderOnlineSidebar {
         width: 100%;
         min-width: 100%;
@@ -3981,12 +4027,12 @@
         gap: 0;
         top: auto;
         align-self: auto;
-        
+
         &::-webkit-scrollbar {
             height: 2px;
         }
     }
-    
+
     .orderOnlineCategoryItem {
         white-space: nowrap;
         padding: 8px 16px;
@@ -3994,19 +4040,19 @@
         border-bottom: 3px solid transparent;
         flex-shrink: 0;
         font-size: 13px;
-        
+
         &:hover {
             background: transparent;
         }
     }
-    
+
     .orderOnlineCategoryActive {
         border-left: none;
         border-bottom-color: #d32f2f;
         background: transparent;
         color: #d32f2f;
     }
-    
+
     .orderOnlineMainContent {
         padding: 16px;
     }
@@ -4110,16 +4156,16 @@
 //     overflow-x: auto;
 //     padding: 4px 0 8px 0;
 //     scroll-snap-type: x mandatory;
-    
+
 //     &::-webkit-scrollbar {
 //         height: 3px;
 //     }
-    
+
 //     &::-webkit-scrollbar-track {
 //         background: #f1f1f1;
 //         border-radius: 4px;
 //     }
-    
+
 //     &::-webkit-scrollbar-thumb {
 //         background: #c1c1c1;
 //         border-radius: 4px;
@@ -4140,11 +4186,12 @@
     overflow: hidden;
     padding: 2px 0;
     scroll-behavior: smooth;
-    
+
     // Remove scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
+
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -4160,7 +4207,7 @@
 //     border: 1px solid #e8e8e8;
 //     transition: all 0.2s ease;
 //     cursor: pointer;
-    
+
 //     &:hover {
 //         border-color: #d0d0d0;
 //         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -4263,18 +4310,18 @@
     padding: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     z-index: 2;
-    
+
     &:hover:not(.dealNavDisabled) {
         background: $primary-color;
         border-color: $secondary-color;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         color: $white;
     }
-    
+
     &:active:not(.dealNavDisabled) {
         transform: scale(0.92);
     }
-    
+
     svg {
         width: 16px;
         height: 16px;
@@ -4307,14 +4354,14 @@
     text-align: center;
     width: 100%;
     transition: all 0.2s ease;
-    
+
     &:hover {
         color: #b71c1c;
         text-decoration: underline;
     }
 }
 
-.orderOnlineItem{
+.orderOnlineItem {
     margin-bottom: 0.5rem;
 }
 
@@ -4334,22 +4381,21 @@
     position: relative;
     background: #ffffff;
     border-radius: 16px;
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
-    max-height: 100vh; /* Changed from 100vh to 90vh */
+    max-height: 100vh;
+    /* Changed from 100vh to 90vh */
     overflow: visible;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Inner Scrollable Content */
 .modalScrollContent {
-    max-height: 100vh; /* Changed from 100vh to 90vh */
+    max-height: 100vh;
     overflow-y: auto;
     border-radius: 16px;
-    
-    /* HIDE SCROLLBAR - Firefox */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+
+    @include scrollbar-y;
 }
 
 /* HIDE SCROLLBAR - Chrome, Safari, Opera */
@@ -4405,6 +4451,7 @@
     display: flex;
     gap: 10px;
     overflow-x: auto;
+    overflow-y: hidden;
     margin-top: 13px;
     padding-bottom: 3px;
     align-items: center;
@@ -4421,42 +4468,44 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    
+
     /* Enable horizontal scrolling */
     overflow-x: auto;
     overflow-y: hidden;
-    
+
     /* Add padding so shadows/borders aren't cut off on the right */
     // padding-bottom: 5px; 
-    
+
     /* Hide scrollbar on Firefox */
-    scrollbar-width: thin; 
-    scrollbar-color: #c1c1c1 #f1f1f1; 
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
 }
 
 /* Show scrollbar on Webkit browsers (Chrome, Safari, Edge) */
 .staticCategoryList::-webkit-scrollbar {
-    height: 6px; /* Height of horizontal scrollbar */
+    height: 6px;
+    /* Height of horizontal scrollbar */
 }
 
 .staticCategoryList::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
     border-radius: 10px;
 }
 
 .staticCategoryList::-webkit-scrollbar-thumb {
-    background: #c1c1c1; 
+    background: #c1c1c1;
     border-radius: 10px;
 }
 
 .staticCategoryList::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8; 
+    background: #a8a8a8;
 }
 
 /* --- Existing static item styles (Keep these as they are) --- */
 .staticItem {
     display: flex;
-    flex-shrink: 0; /* Prevents items from shrinking when scrolling */
+    flex-shrink: 0;
+    /* Prevents items from shrinking when scrolling */
     border: 1px solid $border-color;
     padding: 8px 12px;
     border-radius: 50px;
@@ -4483,7 +4532,8 @@
 /* Track Wrapper (holds the track and icon) */
 .trackWrapper {
     position: relative;
-    width: 40px; /* Width of the toggle track */
+    width: 40px;
+    /* Width of the toggle track */
     height: 20px;
     display: flex;
     align-items: center;
@@ -4503,14 +4553,17 @@
 /* The Icon (Left side by default - OFF state) */
 .iconContainer {
     position: absolute;
-    left: 0; /* Starts on the left side of the track */
+    left: 0;
+    /* Starts on the left side of the track */
     top: 50%;
-    transform: translateY(-50%); /* Vertically centers icon */
+    transform: translateY(-50%);
+    /* Vertically centers icon */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
-    transition: left 0.3s ease; /* Smooth sliding animation */
+    transition: left 0.3s ease;
+    /* Smooth sliding animation */
 }
 
 /* Hover effect */
@@ -4520,14 +4573,17 @@
 
 /* --- ON STATE (Checkbox Checked) --- */
 /* Track turns green/red */
-.hiddenInput:checked + .staticPill .track {
-    background-color: #007A33; /* Green for Veg (Change to #D32F2F for Non-Veg) */
-    opacity: 0.3; /* Makes the track slightly transparent */
+.hiddenInput:checked+.staticPill .track {
+    background-color: #007A33;
+    /* Green for Veg (Change to #D32F2F for Non-Veg) */
+    opacity: 0.3;
+    /* Makes the track slightly transparent */
 }
 
 /* Move icon to the right side of the track */
-.hiddenInput:checked + .staticPill .iconContainer {
-    left: calc(100% - 20px); /* Moves icon to the right (20px is width of icon) */
+.hiddenInput:checked+.staticPill .iconContainer {
+    left: calc(100% - 20px);
+    /* Moves icon to the right (20px is width of icon) */
 }
 
 .bestsellerWrapper {
@@ -4554,7 +4610,7 @@
     border-color: #9CA3AF;
 }
 
-.hiddenInput:checked + .staticPill {
+.hiddenInput:checked+.staticPill {
     border-color: #007A33;
 }
 
@@ -4568,3 +4624,205 @@
     transition: all 0.2s ease;
 }
 
+.outlet {
+    color: $black;
+}
+
+
+.statusRow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.openStatus {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #14804a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+}
+
+.deliveryTime {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 14px;
+    color: #666;
+}
+
+/* =========================================================
+   FLOATING CART
+========================================================= */
+
+/* =========================================================
+   STICKY BOTTOM CART BAR
+   Spans the viewport width at the bottom of the page.
+   Because the section (.orderOnlineUltraPremiumContent)
+   is itself a scroll container, we anchor the bar to the
+   section's bottom edge, not the viewport.
+========================================================= */
+/* Quantity stepper shown in place of ADD after first click */
+.quantityControl {
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 88px;
+    height: 32px;
+
+    background: #14804a;
+    color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    button {
+        flex: 1;
+        height: 100%;
+
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+    }
+
+    span {
+        font-size: 13px;
+        font-weight: 700;
+        min-width: 16px;
+        text-align: center;
+    }
+}
+
+.cartIcon {
+    display: block;
+}
+
+.bottomCart {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 980px;
+    min-height: 56px;
+    padding: 14px 20px;
+    margin: 0 auto;
+
+    background: $cart-green;
+    color: #ffffff;
+
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+
+    // &:hover { background: #12793f; }
+    &:active { background: #0f6b37; }
+}
+
+.bottomCartLeft {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.bottomCartRight {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+/* =========================================
+   BOOK TABLE MODAL SHELL
+========================================= */
+
+.bookTableBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(0, 0, 0, 0.5);
+    animation: btBackdropIn 0.18s ease-out;
+}
+
+@keyframes btBackdropIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.bookTableModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
+
+    width: 640px;
+    max-width: calc(100vw - 32px);
+    height: 90vh;
+    max-height: 900px;
+
+    overflow: hidden;
+    border-radius: 20px;
+    background: transparent;
+
+    animation: btModalIn 0.18s ease-out;
+}
+
+@keyframes btModalIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@media (max-width: 640px) {
+    .bookTableModal {
+        width: calc(100vw - 16px);
+        height: 92vh;
+        border-radius: 16px;
+    }
+}

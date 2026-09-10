@@ -1,798 +1,1406 @@
-// BookTablePopUp.module.scss
-@use "../../../../styles/variables.scss" as *;
+/* =========================================
+   BOOK TABLE POPUP - FULL SCREEN MODAL
+========================================= */
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 16px;
-  animation: fadeIn 0.3s ease;
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+    width: 1000px;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0 auto;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(244, 245, 249, 0.98) 0%,
+            rgba(236, 238, 244, 0.98) 100%
+        );
+
+    animation: fadeIn 0.25s ease;
+
+    scrollbar-width: thin;
+    scrollbar-color: #c9ced7 transparent;
 }
 
-.popup {
-  background: #ffffff;
-  border-radius: 20px;
-  max-width: 720px;
-  width: 100%;
-  max-height: 100vh;
-  overflow-y: auto;
-  padding: 20px 20px 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  animation: slideUp 0.3s ease;
+.modalOverlay::-webkit-scrollbar {
+    width: 6px;
+}
 
-  @keyframes slideUp {
-    from {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  // Scrollbar styling
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-  &::-webkit-scrollbar-track {
+.modalOverlay::-webkit-scrollbar-track {
     background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #d1d5db;
-    border-radius: 10px;
-  }
 }
 
-// Header
+.modalOverlay::-webkit-scrollbar-thumb {
+    background: #c9ced7;
+    border-radius: 10px;
+}
+
+.bookTablePopUp {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding-bottom: 120px;
+
+    color: #172536;
+
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(214, 218, 230, 0.65),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 4%,
+            rgba(220, 224, 233, 0.6),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #f4f5f9 0%,
+            #eceef4 100%
+        );
+}
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.bookTablePopUp::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.35;
+
+    background:
+        linear-gradient(
+            130deg,
+            transparent 0%,
+            transparent 30%,
+            rgba(203, 208, 220, 0.45) 30%,
+            rgba(203, 208, 220, 0.45) 31%,
+            transparent 31%
+        ),
+        linear-gradient(
+            45deg,
+            transparent 0%,
+            transparent 72%,
+            rgba(214, 218, 228, 0.35) 72%,
+            rgba(214, 218, 228, 0.35) 73%,
+            transparent 73%
+        );
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
 .header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding-bottom: 4px;
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+
+    padding: 28px 28px 18px;
 }
 
 .backButton {
-  background: none;
-  border: none;
-  padding: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(2, 6, 12, 0.75);
-  font-size: 20px;
-  transition: color 0.2s;
+    flex: 0 0 auto;
 
-  &:hover {
-    color: #02060c;
-  }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 38px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    color: #263442;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
-.headerText {
-  flex: 1;
+.backButton:hover {
+    transform: translateX(-3px);
+    color: #f16c37;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #02060c;
-  margin: 0;
-  letter-spacing: -0.3px;
-  line-height: 1.2;
+.backButton:active {
+    transform: scale(0.92);
 }
 
-.subtitle {
-  font-size: 14px;
-  color: rgba(2, 6, 12, 0.65);
-  margin: 2px 0 0;
-  font-weight: 400;
+.headerContent {
+    display: flex;
+    flex-direction: column;
 }
 
-// Sections
-.section {
-  margin-bottom: 20px;
+.headerContent h1 {
+    margin: 0;
 
-  &:last-of-type {
-    margin-bottom: 16px;
-  }
+    color: #172536;
+
+    font-size: 22px;
+    font-weight: 750;
+    line-height: 1.25;
 }
 
-.sectionTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #02060c;
-  margin: 0 0 12px;
-}
+.headerContent p {
+    margin: 4px 0 0;
 
-// Guest Grid
-.guestGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
+    color: #5b6776;
 
-.guestCell {
-  background: #f1f3f6;
-  border: 1.5px solid transparent;
-  border-radius: 30px;
-  padding: 6px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #02060c;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  min-width: 36px;
-  text-align: center;
-
-  &:hover {
-    background: #e5e8ed;
-  }
-
-  &.selected {
-    background: #e8edf5;
-    border-color: #02060c;
+    font-size: 15px;
     font-weight: 600;
-    padding: 5px 13px;
-  }
+    line-height: 1.4;
 }
 
-// Date Scroll
-.dateScroll {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 8px;
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    padding: 20px 24px 40px;
 }
 
-.dateCell {
-  background: #f1f3f6;
-  border: 1.5px solid transparent;
-  border-radius: 30px;
-  padding: 6px 14px;
-  text-align: center;
-  min-width: 60px;
-  cursor: pointer;
-  transition: all 0.15s ease;
+/* =========================================
+   MAIN CARDS
+========================================= */
 
-  &:hover {
-    background: #e5e8ed;
-  }
+.mainCard,
+.bookingSection {
+    width: 100%;
 
-  &.selected {
-    background: #e8edf5;
-    border-color: #02060c;
-    padding: 5px 13px;
-  }
+    border: 1px solid rgba(215, 220, 229, 0.95);
+    border-radius: 28px;
 
-  .day {
-    display: block;
-    font-size: 13px;
-    font-weight: 500;
-    color: rgba(2, 6, 12, 0.65);
-  }
+    background: rgba(255, 255, 255, 0.72);
 
-  .dateNum {
-    display: block;
+    box-shadow:
+        0 8px 28px rgba(31, 42, 60, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.mainCard {
+    margin-bottom: 22px;
+    padding: 26px 20px;
+}
+
+.mainCard h2 {
+    margin: 0 0 20px;
+
+    color: #172536;
+
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+/* =========================================
+   GUEST SELECTION
+========================================= */
+
+.guestsWrapper {
+    display: flex;
+
+    gap: 14px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 2px 1px 8px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.guestsWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.guestButton {
+    flex: 0 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 62px;
+
+    padding: 0;
+
+    border: 1px solid #d5dbe3;
+    border-radius: 18px;
+
+    color: #172536;
+    background: rgba(255, 255, 255, 0.72);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(28, 39, 56, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.guestButton:hover {
+    transform: translateY(-2px);
+
+    border-color: #bec6d0;
+}
+
+.guestButton:active {
+    transform: scale(0.97);
+}
+
+.guestButton.active {
+    border-color: #f16c37;
+
+    color: #e85f2d;
+    background: #fffaf7;
+
+    box-shadow:
+        0 5px 16px rgba(241, 108, 55, 0.12);
+}
+
+/* =========================================
+   DATE SELECTION
+========================================= */
+
+.dateList {
+    display: flex;
+
+    gap: 14px;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 2px 2px 12px;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.dateList::-webkit-scrollbar {
+    display: none;
+}
+
+.dateCard {
+    position: relative;
+
+    flex: 0 0 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 94px;
+
+    padding: 14px 8px 18px;
+
+    border: 1px solid #d7dce4;
+    border-radius: 22px;
+
+    color: #172536;
+    background: rgba(255, 255, 255, 0.6);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(30, 42, 58, 0.03);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.dateCard:hover {
+    transform: translateY(-2px);
+
+    border-color: #c7ced7;
+}
+
+.dateCard:active {
+    transform: scale(0.98);
+}
+
+.dateCard.activeDate {
+    border-color: #f16c37;
+
+    background: #fffaf7;
+
+    box-shadow:
+        0 5px 14px rgba(241, 108, 55, 0.1);
+}
+
+.day {
+    margin-bottom: 8px;
+
+    color: #3b4756;
+
     font-size: 14px;
     font-weight: 600;
-    color: #02060c;
-    margin-top: 1px;
-  }
+    line-height: 1;
+}
 
-  &.selected .day {
-    color: #02060c;
+.date {
+    color: #172536;
+
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+.activeDate .day,
+.activeDate .date {
+    color: #e85f2d;
+}
+
+.discountBadge {
+    position: absolute;
+    bottom: -9px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 48px;
+
+    padding: 4px 7px;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+    background: #2c876d;
+
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   TIME HEADING
+========================================= */
+
+.timeHeading {
+    margin: 22px 0 16px;
+
+    color: #172536;
+
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+/* =========================================
+   SESSION WRAPPER
+========================================= */
+
+.sessionsWrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+/* =========================================
+   SESSION CARD
+========================================= */
+
+.sessionCard {
+    overflow: hidden;
+
+    width: 100%;
+
+    border: 1px solid #dce1e8;
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.sessionCard:hover {
+    border-color: #cfd6df;
+}
+
+.sessionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 86px;
+
+    padding: 18px 20px;
+
+    border: none;
+
+    color: #172536;
+    background: transparent;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.sessionInfo {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    min-width: 0;
+}
+
+.sessionInfo > svg {
+    flex: 0 0 auto;
+
+    color: #4f5965;
+}
+
+.sessionInfo h4 {
+    margin: 0;
+
+    color: #172536;
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.3;
+}
+
+.sessionInfo p {
+    margin: 4px 0 0;
+
+    color: #5f6c7b;
+
+    font-size: 14px;
     font-weight: 600;
-  }
+    line-height: 1.35;
 }
 
-// Slot Selection
-.slotHint {
-  font-size: 14px;
-  color: rgba(2, 6, 12, 0.55);
-  margin: 0 0 14px;
-  font-weight: 400;
+.sessionHeader > svg {
+    flex: 0 0 auto;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 5px;
+
+    border: 1px solid #a5adb7;
+    border-radius: 50%;
+
+    color: #5e6875;
 }
 
-.slotGroup {
-  border-top: 1px solid #eceff3;
-  padding-top: 14px;
-  margin-top: 14px;
+/* =========================================
+   TIME SLOTS
+========================================= */
 
-  &:first-of-type {
-    border-top: none;
-    padding-top: 0;
-    margin-top: 0;
-  }
+.timeSlots {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    padding: 0 20px 20px;
 }
 
-.slotGroupHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 4px 0;
-  user-select: none;
+.timeSlot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  &:hover .slotGroupName {
-    color: #02060c;
-  }
+    min-height: 60px;
+
+    padding: 8px;
+
+    border: 1px solid #d6dce4;
+    border-radius: 12px;
+
+    color: #172536;
+    background: rgba(255, 255, 255, 0.58);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
 }
 
-.slotGroupLeft {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.timeSlot:hover {
+    transform: translateY(-1px);
+
+    border-color: #bec7d1;
 }
 
-.slotGroupIcon {
-  width: 36px;
-  height: 36px;
-  background: #f1f3f6;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #02060c;
-  font-size: 16px;
-  flex-shrink: 0;
+.timeSlot:active {
+    transform: scale(0.98);
 }
 
-.slotGroupName {
-  font-size: 16px;
-  font-weight: 600;
-  color: #02060c;
+.timeSlot strong {
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 1.2;
 }
 
-.slotGroupTime {
-  font-size: 13px;
-  color: rgba(2, 6, 12, 0.5);
-  font-weight: 400;
-  margin-top: 1px;
+.timeSlot span {
+    margin-top: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.expandButton {
-  background: none;
-  border: none;
-  padding: 4px 8px;
-  cursor: pointer;
-  color: rgba(2, 6, 12, 0.5);
-  font-size: 14px;
-  transition: color 0.2s;
+.selectedTimeSlot {
+    border-color: #f16c37;
 
-  &:hover {
-    color: #02060c;
-  }
+    color: #e85f2d;
+    background: #fff8f4;
+
+    box-shadow:
+        0 4px 12px rgba(241, 108, 55, 0.08);
 }
 
-.slotGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding-top: 12px;
+.selectedTimeSlot span {
+    color: #f16c37;
 }
 
-.slotCell {
-  background: #f1f3f6;
-  border: 1.5px solid transparent;
-  border-radius: 30px;
-  padding: 6px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #02060c;
-  cursor: pointer;
-  transition: all 0.15s ease;
+/* =========================================
+   BOOKING SECTION
+========================================= */
 
-  &:hover {
-    background: #e5e8ed;
-  }
+.bookingSection {
+    margin-top: 22px;
 
-  &.selected {
-    background: #e8edf5;
-    border-color: #02060c;
-    font-weight: 600;
-    padding: 5px 13px;
-  }
+    padding: 26px;
 }
 
-.noSlots {
-  font-size: 14px;
-  color: rgba(2, 6, 12, 0.4);
-  padding: 12px 0 8px;
-  text-align: center;
+.bookingSection > h2 {
+    margin: 0 0 20px;
+
+    color: #172536;
+
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.35;
 }
 
-// Offer Selection
-.offerTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #02060c;
-  margin: 0 0 12px;
-}
+/* =========================================
+   OFFER CARD
+========================================= */
 
 .offerCard {
-  background: #fafbfc;
-  border-radius: 16px;
-  padding: 16px;
-  border: 1px solid #eceff3;
+    width: 100%;
+
+    margin-bottom: 22px;
+    padding: 20px;
+
+    border: 1px solid #e0e4ea;
+    border-radius: 26px;
+
+    background: rgba(255, 255, 255, 0.68);
+
+    box-shadow:
+        0 8px 24px rgba(35, 45, 60, 0.04);
 }
 
-.offerCategory {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(2, 6, 12, 0.4);
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
+.offerCard:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   EXCLUSIVE HEADING
+========================================= */
+
+.exclusiveHeading {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 22px;
+
+    color: #697484;
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+.oneText {
+    display: inline-block;
+
+    font-size: 30px;
+    font-weight: 850;
+    line-height: 1;
+
+    text-transform: lowercase;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f58d42,
+            #ec6450,
+            #dd6967
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+/* =========================================
+   REGULAR HEADING
+========================================= */
+
+.regularHeading {
+    margin-bottom: 20px;
+
+    color: #687484;
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+/* =========================================
+   OFFER LIST
+========================================= */
+
+.offerList {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
 }
 
 .offerItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid #f1f3f6;
+    position: relative;
 
-  &:last-of-type {
-    border-bottom: none;
-  }
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    width: 100%;
+
+    cursor: pointer;
 }
 
-.radioInput {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #d1d5db;
-  border-radius: 50%;
-  margin-top: 2px;
-  flex-shrink: 0;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.2s ease;
+.offerItem input {
+    position: absolute;
 
-  &:checked {
-    border-color: #02060c;
-    background: #02060c;
+    width: 1px;
+    height: 1px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #ffffff;
-    }
-  }
+    margin: -1px;
+    padding: 0;
 
-  &:hover {
-    border-color: #9ca3af;
-  }
+    overflow: hidden;
 
-  &:checked:hover {
-    border-color: #02060c;
-  }
+    opacity: 0;
+
+    clip: rect(0, 0, 0, 0);
+
+    pointer-events: none;
 }
 
-.offerLabel {
-  flex: 1;
-  cursor: pointer;
+.customRadio {
+    position: relative;
+
+    flex: 0 0 16px;
+
+    width: 16px;
+    height: 16px;
+
+    margin-top: 5px;
+
+    border: 1.5px solid #9da5ae;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.offerDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.customRadio::after {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #f16c37;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
-.offerName {
-  font-size: 15px;
-  font-weight: 500;
-  color: #02060c;
+.offerItem input:checked + .customRadio {
+    border-color: #f16c37;
+
+    box-shadow:
+        0 0 0 3px rgba(241, 108, 55, 0.1);
 }
 
-.offerFee {
-  font-size: 13px;
-  color: rgba(2, 6, 12, 0.6);
-  font-weight: 400;
+.offerItem input:checked + .customRadio::after {
+    opacity: 1;
+
+    transform: scale(1);
 }
 
-.offerSubtext {
-  font-size: 13px;
-  color: rgba(2, 6, 12, 0.4);
-  margin-top: 2px;
+.offerContent {
+    flex: 1;
+
+    min-width: 0;
 }
 
-.offerFooter {
-  font-size: 13px;
-  color: rgba(2, 6, 12, 0.45);
-  text-align: center;
-  padding-top: 12px;
-  margin-top: 8px;
-  border-top: 1px solid #f1f3f6;
+.offerContent h4 {
+    margin: 0;
+
+    color: #172536;
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.35;
 }
 
-// Footer
-.footer {
-  padding-top: 8px;
-  margin-top: 4px;
+.offerContent p {
+    margin: 3px 0 0;
+
+    color: #172536;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+/* =========================================
+   EXCLUSIVE MESSAGE
+========================================= */
+
+.exclusiveMessage {
+    margin-top: 24px;
+    padding-top: 18px;
+
+    border-top: 1px solid #dde1e7;
+
+    color: #3c4857;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* =========================================
+   BOTTOM ACTION
+========================================= */
+.additionalOffers{
+  margin-top: 10px;
+}
+
+.bottomAction {
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1000000;
+
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 20px 20px 0px 0px;
+
+    padding:
+        16px
+        18px
+        calc(16px + env(safe-area-inset-bottom));
+
+    border-top: 1px solid rgba(220, 224, 231, 0.9);
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 -8px 28px rgba(27, 38, 55, 0.06);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .proceedButton {
-  width: 100%;
-  background: #1a8d3f;
-  color: #ffffff;
-  border: none;
-  border-radius: 50px;
-  padding: 14px;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  &:hover {
-    background: #157a36;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(26, 141, 63, 0.3);
-  }
+    width: 100%;
+    max-width: 920px;
+    min-height: 68px;
 
-  &:active {
-    transform: translateY(0);
-  }
+    margin: 0 auto;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 16px;
+
+    color: #737d8b;
+    background: #d0d3db;
+
+    font-size: 20px;
+    font-weight: 750;
+
+    cursor: not-allowed;
+
+    transition:
+        transform 0.2s ease,
+        color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-// ========== RESPONSIVE ==========
-
-// Tablets & small laptops
-@media (max-width: 768px) {
-  .popup {
-    max-width: 100%;
-    border-radius: 24px;
-    padding: 16px 16px 12px;
-    max-height: 85vh;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
-  .subtitle {
-    font-size: 13px;
-  }
-
-  .sectionTitle {
-    font-size: 15px;
-  }
-
-  .guestCell {
-    font-size: 13px;
-    padding: 5px 12px;
-  }
-
-  .dateCell {
-    padding: 5px 12px;
-    min-width: 54px;
-
-    .day {
-      font-size: 12px;
-    }
-    .dateNum {
-      font-size: 13px;
-    }
-  }
-
-  .slotGroupName {
-    font-size: 15px;
-  }
-
-  .slotCell {
-    font-size: 13px;
-    padding: 5px 12px;
-  }
-
-  .offerName {
-    font-size: 14px;
-  }
-
-  .proceedButton {
-    padding: 12px;
-    font-size: 16px;
-  }
+.proceedButton:disabled {
+    opacity: 1;
 }
 
-// Mobile
-@media (max-width: 480px) {
-  .overlay {
-    padding: 8px;
-    align-items: flex-end;
-  }
+.proceedActive {
+    color: #ffffff;
+    background: #f16c37;
 
-  .popup {
-    border-radius: 20px 20px 0 0;
-    max-height: 92vh;
-    padding: 14px 14px 10px;
-    animation: slideUpMobile 0.3s ease;
+    cursor: pointer;
 
-    @keyframes slideUpMobile {
-      from {
-        transform: translateY(40px);
+    box-shadow:
+        0 8px 20px rgba(241, 108, 55, 0.25);
+}
+
+.proceedActive:hover {
+    transform: translateY(-2px);
+
+    background: #e95f2e;
+}
+
+.proceedActive:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.backButton:focus-visible,
+.guestButton:focus-visible,
+.dateCard:focus-visible,
+.sessionHeader:focus-visible,
+.timeSlot:focus-visible,
+.proceedButton:focus-visible,
+.offerItem:focus-within .customRadio {
+    outline: 3px solid rgba(241, 108, 55, 0.28);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+    from {
         opacity: 0;
-      }
-      to {
-        transform: translateY(0);
+    }
+
+    to {
         opacity: 1;
-      }
     }
-  }
-
-  .header {
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-
-  .backButton {
-    font-size: 18px;
-  }
-
-  .title {
-    font-size: 17px;
-  }
-
-  .subtitle {
-    font-size: 12px;
-  }
-
-  .section {
-    margin-bottom: 14px;
-  }
-
-  .sectionTitle {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .guestGrid {
-    gap: 4px;
-  }
-
-  .guestCell {
-    font-size: 12px;
-    padding: 4px 10px;
-    min-width: 30px;
-
-    &.selected {
-      padding: 3px 9px;
-    }
-  }
-
-  .dateScroll {
-    gap: 4px 6px;
-  }
-
-  .dateCell {
-    padding: 4px 10px;
-    min-width: 48px;
-
-    .day {
-      font-size: 11px;
-    }
-    .dateNum {
-      font-size: 12px;
-    }
-
-    &.selected {
-      padding: 3px 9px;
-    }
-  }
-
-  .slotHint {
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-
-  .slotGroup {
-    padding-top: 10px;
-    margin-top: 10px;
-  }
-
-  .slotGroupLeft {
-    gap: 10px;
-  }
-
-  .slotGroupIcon {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    border-radius: 10px;
-  }
-
-  .slotGroupName {
-    font-size: 14px;
-  }
-
-  .slotGroupTime {
-    font-size: 12px;
-  }
-
-  .slotGrid {
-    gap: 4px;
-    padding-top: 8px;
-  }
-
-  .slotCell {
-    font-size: 12px;
-    padding: 4px 10px;
-
-    &.selected {
-      padding: 3px 9px;
-    }
-  }
-
-  .offerTitle {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .offerCard {
-    padding: 12px;
-    border-radius: 12px;
-  }
-
-  .offerCategory {
-    font-size: 11px;
-    margin-bottom: 8px;
-  }
-
-  .offerItem {
-    padding: 6px 0;
-    gap: 10px;
-  }
-
-  .radioInput {
-    width: 16px;
-    height: 16px;
-    margin-top: 1px;
-
-    &:checked::after {
-      width: 5px;
-      height: 5px;
-    }
-  }
-
-  .offerName {
-    font-size: 13px;
-  }
-
-  .offerFee {
-    font-size: 12px;
-  }
-
-  .offerFooter {
-    font-size: 12px;
-    padding-top: 10px;
-    margin-top: 6px;
-  }
-
-  .proceedButton {
-    padding: 12px;
-    font-size: 15px;
-    border-radius: 40px;
-  }
-
-  .footer {
-    padding-top: 4px;
-  }
 }
 
-// Very small phones
-@media (max-width: 360px) {
-  .popup {
-    padding: 12px 10px 8px;
-  }
+/* =========================================
+   LARGE DESKTOP
+========================================= */
 
-  .title {
-    font-size: 16px;
-  }
+@media (min-width: 1200px) {
+    .header {
+        max-width: 1120px;
 
-  .guestCell {
-    font-size: 11px;
-    padding: 3px 8px;
-    min-width: 26px;
-  }
-
-  .dateCell {
-    padding: 3px 8px;
-    min-width: 42px;
-
-    .day {
-      font-size: 10px;
+        padding-top: 32px;
+        padding-right: 28px;
+        padding-left: 28px;
     }
-    .dateNum {
-      font-size: 11px;
+
+    .content {
+        max-width: 1080px;
     }
-  }
 
-  .slotCell {
-    font-size: 11px;
-    padding: 3px 8px;
-  }
+    .mainCard {
+        padding: 28px 26px;
+    }
 
-  .offerName {
-    font-size: 12px;
-  }
+    .bookingSection {
+        padding: 28px;
+    }
+
+    .proceedButton {
+        max-width: 1080px;
+    }
 }
 
-// Landscape phones
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+    .header {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .content {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .mainCard {
+        padding: 24px 18px;
+    }
+
+    .bookingSection {
+        padding: 24px 20px;
+    }
+
+    .bottomAction {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+    .bookTablePopUp {
+        padding-bottom: 100px;
+    }
+
+    .header {
+        gap: 8px;
+
+        padding: 18px 16px 14px;
+    }
+
+    .backButton {
+        width: 30px;
+        height: 34px;
+    }
+
+    .headerContent h1 {
+        font-size: 19px;
+    }
+
+    .headerContent p {
+        font-size: 13px;
+    }
+
+    .content {
+        padding: 14px 12px 28px;
+    }
+
+    .mainCard,
+    .bookingSection {
+        border-radius: 22px;
+    }
+
+    .mainCard {
+        margin-bottom: 16px;
+
+        padding: 20px 14px;
+    }
+
+    .mainCard h2 {
+        margin-bottom: 18px;
+
+        font-size: 18px;
+    }
+
+    /* Guests */
+
+    .guestsWrapper {
+        gap: 10px;
+    }
+
+    .guestButton {
+        flex-basis: 58px;
+
+        width: 58px;
+        height: 56px;
+
+        border-radius: 16px;
+
+        font-size: 14px;
+    }
+
+    /* Dates */
+
+    .dateList {
+        gap: 10px;
+    }
+
+    .dateCard {
+        flex-basis: 72px;
+
+        min-height: 88px;
+
+        padding:
+            13px
+            7px
+            17px;
+
+        border-radius: 18px;
+    }
+
+    .day {
+        margin-bottom: 7px;
+
+        font-size: 13px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .discountBadge {
+        padding:
+            3px
+            6px;
+
+        font-size: 9px;
+    }
+
+    /* Time */
+
+    .timeHeading {
+        margin-top: 20px;
+        margin-bottom: 14px;
+
+        font-size: 15px;
+    }
+
+    .sessionsWrapper {
+        gap: 12px;
+    }
+
+    .sessionCard {
+        border-radius: 20px;
+    }
+
+    .sessionHeader {
+        min-height: 76px;
+
+        padding: 16px;
+    }
+
+    .sessionInfo {
+        gap: 12px;
+    }
+
+    .sessionInfo > svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sessionInfo h4 {
+        font-size: 16px;
+    }
+
+    .sessionInfo p {
+        font-size: 12px;
+    }
+
+    .sessionHeader > svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .timeSlots {
+        gap: 8px;
+
+        padding:
+            0
+            14px
+            14px;
+    }
+
+    .timeSlot {
+        min-height: 58px;
+
+        padding: 7px;
+
+        border-radius: 11px;
+    }
+
+    .timeSlot strong {
+        font-size: 13px;
+    }
+
+    .timeSlot span {
+        margin-top: 3px;
+
+        font-size: 10px;
+    }
+
+    /* Booking */
+
+    .bookingSection {
+        margin-top: 16px;
+
+        padding: 20px 14px;
+    }
+
+    .bookingSection > h2 {
+        margin-bottom: 18px;
+
+        font-size: 18px;
+    }
+
+    .offerCard {
+        margin-bottom: 16px;
+
+        padding: 16px;
+
+        border-radius: 20px;
+    }
+
+    .exclusiveHeading,
+    .regularHeading {
+        font-size: 16px;
+    }
+
+    .oneText {
+        font-size: 27px;
+    }
+
+    .offerList {
+        gap: 18px;
+    }
+
+    .offerItem {
+        gap: 12px;
+    }
+
+    .offerContent h4 {
+        font-size: 16px;
+    }
+
+    .offerContent p {
+        font-size: 14px;
+    }
+
+    .exclusiveMessage {
+        margin-top: 20px;
+        padding-top: 16px;
+
+        font-size: 13px;
+    }
+
+    /* Bottom Button */
+
+    .bottomAction {
+        padding:
+            12px
+            12px
+            calc(12px + env(safe-area-inset-bottom));
+    }
+
+    .proceedButton {
+        min-height: 58px;
+
+        border-radius: 14px;
+
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+    .header {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .content {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .headerContent h1 {
+        font-size: 18px;
+    }
+
+    .headerContent p {
+        font-size: 12px;
+    }
+
+    .mainCard {
+        padding: 18px 12px;
+    }
+
+    .guestButton {
+        flex-basis: 54px;
+
+        width: 54px;
+        height: 54px;
+    }
+
+    .dateCard {
+        flex-basis: 68px;
+
+        min-height: 84px;
+    }
+
+    .bookingSection {
+        padding: 18px 12px;
+    }
+
+    .offerCard {
+        padding: 14px;
+    }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+    .headerContent h1 {
+        font-size: 17px;
+    }
+
+    .headerContent p {
+        font-size: 11px;
+    }
+
+    .mainCard h2,
+    .bookingSection > h2 {
+        font-size: 17px;
+    }
+
+    .timeSlots {
+        grid-template-columns: 1fr;
+    }
+
+    .timeSlot {
+        min-height: 54px;
+    }
+
+    .offerContent h4 {
+        font-size: 15px;
+    }
+
+    .offerContent p {
+        font-size: 13px;
+    }
+}
+
+/* =========================================
+   LANDSCAPE MOBILE
+========================================= */
+
 @media (max-height: 600px) and (orientation: landscape) {
-  .popup {
-    max-height: 92vh;
-    padding: 12px 16px 10px;
-  }
-
-  .section {
-    margin-bottom: 10px;
-  }
-
-  .guestGrid {
-    gap: 4px;
-  }
-
-  .guestCell {
-    padding: 3px 10px;
-    font-size: 12px;
-  }
-
-  .dateScroll {
-    gap: 4px;
-  }
-
-  .dateCell {
-    padding: 3px 10px;
-    min-width: 44px;
-
-    .day {
-      font-size: 11px;
+    .header {
+        padding-top: 14px;
+        padding-bottom: 10px;
     }
-    .dateNum {
-      font-size: 12px;
+
+    .bookTablePopUp {
+        padding-bottom: 90px;
     }
-  }
 
-  .slotGrid {
-    gap: 4px;
-    padding-top: 6px;
-  }
+    .bottomAction {
+        padding:
+            8px
+            16px
+            calc(8px + env(safe-area-inset-bottom));
+    }
 
-  .slotCell {
-    padding: 3px 10px;
-    font-size: 12px;
-  }
-
-  .offerCard {
-    padding: 10px;
-  }
-
-  .proceedButton {
-    padding: 10px;
-    font-size: 14px;
-  }
+    .proceedButton {
+        min-height: 50px;
+    }
 }

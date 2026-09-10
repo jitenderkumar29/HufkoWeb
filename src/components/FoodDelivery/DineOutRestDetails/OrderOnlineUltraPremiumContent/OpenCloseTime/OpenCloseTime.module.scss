@@ -1,0 +1,228 @@
+/* =========================================================
+   WRAPPER
+========================================================= */
+@use "../../../../../styles/variables.scss" as *;
+.wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* =========================================================
+   TRIGGER
+========================================================= */
+
+.trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    font: inherit;
+    font-size: 13px;
+    color: #555;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+        color: #1d1d1f;
+    }
+}
+
+.chevron {
+    transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+/* =========================================================
+   BACKDROP
+========================================================= */
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    animation: backdropIn 0.18s ease-out;
+}
+
+@keyframes backdropIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   DIALOG — CENTERED ON VIEWPORT
+========================================================= */
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
+
+    width: 392px;
+    max-width: calc(100vw - 24px);
+    max-height: 80vh;
+    overflow-y: auto;
+
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    padding: 20px 20px 4px;
+
+    animation: dialogIn 0.18s ease-out;
+
+    scrollbar-width: thin;
+    scrollbar-color: #dcdcdc transparent;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #dcdcdc;
+        border-radius: 6px;
+    }
+}
+
+.dialogRight {
+    /* no-op — kept for backwards compatibility */
+}
+
+@keyframes dialogIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.01em;
+}
+
+.closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
+    background: #ffffff;
+    color: #555;
+
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+}
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+
+    padding: 14px 0;
+    border-top: 1px solid #f0f0f0;
+
+    font-size: 14px;
+    line-height: 1.45;
+
+    &:first-child {
+        border-top: none;
+    }
+}
+
+.day {
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.time {
+    color: #444;
+}
+
+/* =========================================================
+   TODAY ROW
+========================================================= */
+
+.rowToday {
+    .day,
+    .time {
+        color: #e8663c;
+    }
+
+    .day {
+        font-weight: 700;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+    .dialog {
+        width: calc(100vw - 24px);
+        max-height: 75vh;
+    }
+
+    .row {
+        grid-template-columns: 96px 1fr;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+}
