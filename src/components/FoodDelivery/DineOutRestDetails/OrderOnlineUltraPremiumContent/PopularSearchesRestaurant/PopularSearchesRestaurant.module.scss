@@ -1,0 +1,244 @@
+/* =========================================================
+   POPULAR SEARCHES — collapsible link groups
+========================================================= */
+@use "../../../../../styles/variables.scss" as *;
+
+.section {
+  width: 100%;
+  margin: 32px 0 24px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1c1c1c;
+}
+
+/* ---------- Main title ---------- */
+.sectionTitle {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: #1c1c1c;
+}
+
+/* ---------- Group list ---------- */
+.groupList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ---------- Group ---------- */
+.group {
+  width: 100%;
+}
+
+.groupHeading {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 900;
+  color: $black;
+  line-height: 1.3;
+}
+
+/* ---------- Links as inline flow ---------- */
+.linkList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 15px;       /* horizontal spacing between links */
+  row-gap: 10px;          /* vertical spacing when wrapping */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linkItem {
+  display: inline-flex;
+}
+
+.link {
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d3d3d;
+  text-decoration: underline;
+  text-decoration-color: #b9b9b9;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+
+  &:hover {
+    color: #e8590c;
+    text-decoration-color: #e8590c;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #e8590c;
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+/* ---------- Toggle button ---------- */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 14px;
+  padding: 0;
+  border: none;
+  background: none;
+
+  color: #e8590c;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #c44a08;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #e8590c;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+  .sectionTitle {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .groupList {
+    gap: 24px;
+  }
+
+  .groupHeading {
+    font-size: 14.5px;
+  }
+
+  .link {
+    font-size: 13.5px;
+  }
+
+  .linkList {
+    column-gap: 15px;
+    row-gap: 9px;
+  }
+
+  .toggle {
+    font-size: 13.5px;
+    margin-top: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 640px) {
+  .section {
+    margin: 22px 0 18px;
+  }
+
+  .sectionTitle {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .groupList {
+    gap: 22px;
+  }
+
+  .groupHeading {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .linkList {
+    column-gap: 14px;
+    row-gap: 8px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+
+  .toggle {
+    font-size: 13px;
+    margin-top: 11px;
+  }
+
+  .chevron svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 390px) {
+  .sectionTitle {
+    font-size: 16px;
+  }
+
+  .groupHeading {
+    font-size: 13.5px;
+  }
+
+  .link {
+    font-size: 12.5px;
+  }
+
+  .linkList {
+    column-gap: 12px;
+    row-gap: 7px;
+  }
+
+  .toggle {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+@media (min-width: 1200px) {
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .groupHeading {
+    font-size: 15.5px;
+  }
+
+  .link {
+    font-size: 14.5px;
+  }
+
+  .linkList {
+    column-gap: 15px;
+    row-gap: 11px;
+  }
+
+  .toggle {
+    font-size: 14.5px;
+  }
+}

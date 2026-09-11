@@ -1,14 +1,10 @@
+// DineOutItemsHorizontal.tsx
 import React, { useRef, useState, useEffect } from 'react';
-import {
-  Star,
-  Utensils,
-  ChevronLeft,
-  ChevronRight,
-} from 'lucide-react';
+import { Star, Utensils, ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './DineOutItemsHorizontal.module.scss';
 
 // ============================================================
-// TYPES
+// TYPES (unchanged)
 // ============================================================
 
 export interface DineOutOffer {
@@ -37,11 +33,8 @@ export interface DineOutItemsHorizontalProps {
   title?: string;
   onItemClick?: (item: DineOutItemInterface) => void;
   className?: string;
-  /** Number of cards visible at once (desktop default 3) */
   visibleCards?: number;
-  /** Gap between cards in px */
   gap?: number;
-  /** Maximum number of items to display (default: 10) */
   maxItems?: number;
 }
 
@@ -56,17 +49,15 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
   className = '',
   visibleCards = 3,
   gap = 18,
-  maxItems = 10, // NEW: default to 10 items
+  maxItems = 10,
 }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(false);
   const [cardWidth, setCardWidth] = useState(0);
 
-  // ---- Limit items to maxItems ----
   const displayItems = items.slice(0, maxItems);
 
-  // ---- update scroll buttons ----
   const updateButtons = () => {
     const el = scrollRef.current;
     if (!el) return;
@@ -78,10 +69,11 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
+
     updateButtons();
     el.addEventListener('scroll', updateButtons);
     window.addEventListener('resize', updateButtons);
-    // measure card width after layout
+
     const ro = new ResizeObserver(() => {
       updateButtons();
       if (el.children.length) {
@@ -91,18 +83,21 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
       }
     });
     ro.observe(el);
+
     return () => {
       el.removeEventListener('scroll', updateButtons);
       window.removeEventListener('resize', updateButtons);
       ro.disconnect();
     };
-  }, [displayItems, gap]); // Changed dependency to displayItems
+  }, [displayItems, gap]);
 
-  // ---- scroll helpers ----
   const scroll = (dir: 1 | -1) => {
     const el = scrollRef.current;
     if (!el) return;
-    const w = cardWidth || (el.children[0] as HTMLElement)?.offsetWidth + gap || 300;
+    const w =
+      cardWidth ||
+      (el.children[0] as HTMLElement)?.offsetWidth + gap ||
+      300;
     const target = el.scrollLeft + dir * w * visibleCards;
     el.scrollTo({ left: target, behavior: 'smooth' });
   };
@@ -117,21 +112,37 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
   // ---- render ----
   return (
     <section className={`${styles.dineOutContainer} ${className}`}>
-      {title && <h2 className={styles.sectionTitle}>{title}</h2>}
+      {/* ---------- HEADER ROW (title + nav buttons) ---------- */}
+      {(title || displayItems.length > 0) && (
+        <div className={styles.headerRow}>
+          {title && <h2 className={styles.sectionTitle}>{title}</h2>}
 
+          <div className={styles.navGroup}>
+            <button
+              type="button"
+              className={styles.navButton}
+              onClick={() => scroll(-1)}
+              aria-label="Scroll left"
+              disabled={!showLeft}
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <button
+              type="button"
+              className={styles.navButton}
+              onClick={() => scroll(1)}
+              aria-label="Scroll right"
+              disabled={!showRight}
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* ---------- SCROLL TRACK ---------- */}
       <div className={styles.scrollWrapper}>
-        {/* Left button */}
-        {showLeft && (
-          <button
-            className={`${styles.navButton} ${styles.navLeft}`}
-            onClick={() => scroll(-1)}
-            aria-label="Scroll left"
-          >
-            <ChevronLeft size={24} />
-          </button>
-        )}
-
-        {/* Scrollable track */}
         <div
           className={styles.scrollTrack}
           ref={scrollRef}
@@ -140,7 +151,6 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
           {displayItems.map((item) => {
             const primaryOffer = item.offers?.[0];
             const remainingOffers = 3;
-            // const remainingOffers = item.offers?.length ? item.offers.length - 1 : 0;
 
             return (
               <article
@@ -186,7 +196,9 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
                     <div className={styles.cuisines}>
                       {item.cuisines.slice(0, 2).join(' • ')}
                     </div>
-                    <div className={styles.price}>₹{item.priceForTwo} for two</div>
+                    <div className={styles.price}>
+                      ₹{item.priceForTwo} for two
+                    </div>
                   </div>
 
                   <div className={styles.infoRow}>
@@ -200,39 +212,35 @@ const DineOutItemsHorizontal: React.FC<DineOutItemsHorizontalProps> = ({
                     </div>
                   )}
 
-                  {/* Primary offer */}
                   {primaryOffer && (
                     <div className={styles.offerRow}>
-                      <span className={styles.offerText}>{primaryOffer.title}</span>
+                      <span className={styles.offerText}>
+                        {primaryOffer.title}
+                      </span>
                       {remainingOffers > 0 && (
-                        <span className={styles.moreOffers}>+{remainingOffers} more</span>
+                        <span className={styles.moreOffers}>
+                          +{remainingOffers} more
+                        </span>
                       )}
                     </div>
                   )}
 
                   {item.bankOffers?.[0] && (
-                    <div className={styles.bankOfferRow}>{item.bankOffers[0]}</div>
+                    <div className={styles.bankOfferRow}>
+                      {item.bankOffers[0]}
+                    </div>
                   )}
 
                   {item.extraOffers?.[0] && (
-                    <div className={styles.extraOfferRow}>{item.extraOffers[0]}</div>
+                    <div className={styles.extraOfferRow}>
+                      {item.extraOffers[0]}
+                    </div>
                   )}
                 </div>
               </article>
             );
           })}
         </div>
-
-        {/* Right button */}
-        {showRight && (
-          <button
-            className={`${styles.navButton} ${styles.navRight}`}
-            onClick={() => scroll(1)}
-            aria-label="Scroll right"
-          >
-            <ChevronRight size={24} />
-          </button>
-        )}
       </div>
     </section>
   );

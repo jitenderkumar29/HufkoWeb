@@ -18,7 +18,7 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import DineOutItemsHorizontal from '../../FoodDesigns/DineOutItemsHorizontal/DineOutItemsHorizontal';
-import { DineoutItemsList, DineoutOptionsItemsList } from '@/app/data/Categorywise/FoodsCategories';
+import { DineoutItemsList, DineoutOptionsItemsList, RelatedRestaurantItemsList } from '@/app/data/Categorywise/FoodsCategories';
 import { DineOutItemInterface } from '../../FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import Image from 'next/image';
 import { FaChevronDown, FaRegClock, FaStar } from 'react-icons/fa';
@@ -28,6 +28,8 @@ import OrderOnlineUltraPremiumContent from '../OrderOnlineUltraPremiumContent/Or
 import OutletsAroundYou, { Outlet } from '../OrderOnlineUltraPremiumContent/OutletsAroundYou/OutletsAroundYou';
 import OpenCloseTime from '../OrderOnlineUltraPremiumContent/OpenCloseTime/OpenCloseTime';
 import BookTablePopUp from '../BookTablePopUp/BookTablePopUp';
+import { Tag } from 'lucide-react';
+import RelatedToRestaurant from '../OrderOnlineUltraPremiumContent/RelatedToRestaurant/RelatedToRestaurant';
 
 export interface TabItem {
     id: string;
@@ -1511,6 +1513,7 @@ const OrderOnlineContent = () => {
                                     </span>
                                 }
                             />
+
                         </div>
                         {/* <div className={styles.openingHours}>
                             <FaRegClock className={styles.clockIcon} />
@@ -1586,6 +1589,10 @@ const OrderOnlineContent = () => {
                             <span className={styles.locationText}>Outlet: Sahid Nagar</span> */}
                             {/* <span className={styles.deliveryStatus}>Does not deliver</span> */}
                         </div>
+                        <div className={styles.ratingSection}>
+                            <span className={styles.priceRange}>20-25 mins</span>
+                        </div>
+
                     </div>
 
 
@@ -1940,7 +1947,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$',
+            price: '₹370',
             image: '/products/i4nj_listing.jpeg'
         },
         {
@@ -1951,7 +1958,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: 'Up to 20% off',
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$$',
+            price: '₹650',
             image: '/products/tl4f-listing.jpg'
         },
         {
@@ -1962,7 +1969,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$',
+            price: '₹420',
             image: '/products/a86w-listing.jpg'
         },
         {
@@ -1973,7 +1980,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: 'Up to 40% off',
             cuisine: 'Cambodian',
             isFeatured: true,
-            price: '$$$',
+            price: '₹780',
             image: '/products/s3ar-listing.jpg'
         },
         {
@@ -1984,7 +1991,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Seafood',
             isFeatured: false,
-            price: '$$$',
+            price: '₹890',
             image: '/products/v1mk-listing.jpg'
         },
         {
@@ -1995,7 +2002,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: '50% off selected items',
             cuisine: 'Seafood',
             isFeatured: false,
-            price: '$$$',
+            price: '₹1,250',
             image: '/products/t4fj-listing.jpg'
         },
         {
@@ -2006,7 +2013,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: true,
-            price: '$$',
+            price: '₹380',
             image: '/products/r68j-listing.JPG'
         },
         {
@@ -2017,7 +2024,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$$',
+            price: '₹720',
             image: '/products/tdwk-listing.jpg'
         },
         {
@@ -2028,7 +2035,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$$',
+            price: '₹690',
             image: '/products/phqv-listing.jpg'
         },
         {
@@ -2039,7 +2046,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$',
+            price: '₹340',
             image: '/products/t1dy-listing.jpg'
         },
         {
@@ -2050,7 +2057,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: true,
-            price: '$',
+            price: '₹180',
             image: '/products/u8ct-listing.jpg'
         },
         {
@@ -2061,7 +2068,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Japanese',
             isFeatured: false,
-            price: '$$$',
+            price: '₹950',
             image: '/products/u840-listing.jpg'
         },
         {
@@ -2072,7 +2079,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: null,
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$$',
+            price: '₹450',
             image: '/products/wofh-listing.jpg'
         },
         {
@@ -2083,7 +2090,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: '15% off selected items',
             cuisine: 'Spicy Salad',
             isFeatured: false,
-            price: '$',
+            price: '₹220',
             image: '/products/r944-listing.jpg'
         },
         {
@@ -2094,7 +2101,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
             discount: '15% off',
             cuisine: 'Cambodian',
             isFeatured: false,
-            price: '$',
+            price: '₹160',
             image: '/products/j2hr-listing.jpg'
         }
     ];
@@ -2340,6 +2347,16 @@ const MenuItemsList: React.FC<MenuItemsListProps> = ({
         return -(currentIndex * (itemWidthPercent + gapPercent));
     };
 
+    const renderOfferBadge = (offer?: string) => {
+        if (!offer) return null;
+        return (
+            <div className={styles.offerBadge}>
+                <Tag size={12} className={styles.offerIconBadge} />
+                <span>ITEMS AT {offer}</span>
+            </div>
+        );
+    };
+
     return (
         <div className={`${styles.menuItemsList} ${className}`}>
             {/* Header */}
@@ -2389,16 +2406,30 @@ const MenuItemsList: React.FC<MenuItemsListProps> = ({
                                 maxWidth: getItemWidth(),
                             }}
                         >
-                            {/* Image */}
-                            {item.image ? (
-                                <div className={styles.itemImage}>
-                                    <img src={item.image} alt={item.name} loading="lazy" />
-                                </div>
-                            ) : (
-                                <div className={styles.itemImagePlaceholder}>
-                                    <span>🍽️</span>
-                                </div>
-                            )}
+                            {/* Image wrapper — always rendered, holds the badge */}
+                            <div className={styles.itemImageWrapper}>
+                                {item.image ? (
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        loading="lazy"
+                                        className={styles.itemImage}
+                                    />
+                                ) : (
+                                    <div className={styles.itemImagePlaceholder}>
+                                        <span>🍽️</span>
+                                    </div>
+                                )}
+
+                                {item.price && (
+                                    <div className={styles.offerOverlay}>
+                                        {/* <div className={styles.offerBadge}> */}
+                                        {renderOfferBadge(item.price)}
+                                        {/* </div> */}
+
+                                    </div>
+                                )}
+                            </div>
 
                             {/* Info */}
                             <div className={styles.itemInfo}>
@@ -2415,11 +2446,6 @@ const MenuItemsList: React.FC<MenuItemsListProps> = ({
                                     </span>
                                 </div>
                             </div>
-
-                            {/* Discount */}
-                            {/* {item.discount && (
-                <div className={styles.itemDiscount}>{item.discount}</div>
-              )} */}
                         </div>
                     ))}
                 </div>
@@ -2582,7 +2608,7 @@ const ReviewsContent = () => {
     const paginationNumbers = [1, 2, 3, 4, 5];
 
     return (
-        <div className={styles.tabContent}>
+        <div className={styles.tabContentRating}>
             {/* Left Section */}
             <div className={styles.leftSection}>
                 <div className={styles.overallRating}>
@@ -2617,7 +2643,7 @@ const ReviewsContent = () => {
                 <div className={styles.divider}></div>
 
                 <div className={styles.lastRatings}>
-                    <div className={styles.sectionTitle}>
+                    <div className={styles.sectionTitleRatings}>
                         Last 10 Customer Ratings <span className={styles.subtitle}>(Latest First)</span>
                     </div>
                     <div className={styles.ratingDots}>
@@ -3077,20 +3103,21 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
                     }
 
                     return (
-                        <section
-                            key={tab.id}
-                            id={tab.id}
-                            ref={(el) => {
-                                tabRefs.current[tab.id] = el;
-                            }}
-                            className={`${styles.section} ${activeTab === tab.id ? styles.activeSection : ''}`}
-                        >
-                            <div className={styles.sectionContent}>
-                                {tab.content}
-                            </div>
-                        </section>
+                            <section
+                                key={tab.id}
+                                id={tab.id}
+                                ref={(el) => {
+                                    tabRefs.current[tab.id] = el;
+                                }}
+                                className={`${styles.section} ${activeTab === tab.id ? styles.activeSection : ''}`}
+                            >
+                                <div className={styles.sectionContent}>
+                                    {tab.content}
+                                </div>
+                            </section>
                     );
                 })}
+               
             </main>
 
             {/* Order Online Modal - Regular */}
@@ -3109,6 +3136,7 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
                 <OrderOnlineUltraPremiumContent
                     restaurantName="Burger King"
                 />
+                
             </OrderOnlineModalUltraPremium>
         </div>
     );

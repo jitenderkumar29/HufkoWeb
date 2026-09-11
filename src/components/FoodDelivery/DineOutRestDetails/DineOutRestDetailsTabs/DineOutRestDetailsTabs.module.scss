@@ -109,7 +109,8 @@
     cursor: pointer;
 
     &:hover {
-        color: #0071f3;
+        color: $link-hover-2;
+        // color: #0071f3;
         font-weight: bold;
     }
 
@@ -119,8 +120,7 @@
     }
 }
 
-.tabLink.active::after,
-.tabLink:hover::after {
+.tabLink.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -128,6 +128,18 @@
     width: 100%;
     height: 2px;
     background-color: $gold-color;
+    // background-color: #335FD9;
+}
+
+.tabLink:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: $link-hover-2;
+    // background-color: $gold-color;
 }
 
 .tabIcon {
@@ -235,7 +247,8 @@
 /* Dining Offers Section */
 .offersSection {
     margin-bottom: 1.5rem;
-    background: $white;
+    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background: $white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 1rem;
     border-radius: 12px;
@@ -317,7 +330,7 @@
 /* Menu Section */
 .menuSection {
     // margin-bottom: 1.5rem;
-    background: $white;
+    // background: $white;
     // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     // padding: 1rem;
     border-radius: 12px;
@@ -452,7 +465,7 @@
     margin-bottom: 1.5rem;
     padding-bottom: 24px;
     border-bottom: 1px solid $gray-200;
-    background: $white;
+    // background: $white;
     // padding: 1rem;
     // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border-radius: 12px;
@@ -465,14 +478,15 @@
 
 .knownForTitle {
     font-size: 20px;
-    font-weight: 500;
-    color: $gray-800;
+    font-weight: 600;
+    color: $black;
     margin-bottom: 8px;
 }
 
 .knownForTags {
     font-size: 14px;
-    color: $gray-600;
+    color: $gray-800;
+    font-weight: 500;
 }
 
 .costAmount {
@@ -513,7 +527,8 @@
 
 /* More Info Section */
 .moreInfoSection {
-    background: $white;
+    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background: $white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 1rem;
     border-radius: 12px;
@@ -564,9 +579,10 @@
     padding: 1.25rem;
     border: 1px solid #d6d6d6;
     border-radius: 28px;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.98) 0%,
-            rgba(250, 249, 247, 0.96) 100%);
+    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background: linear-gradient(180deg,
+    //         rgba(255, 255, 255, 0.98) 0%,
+    //         rgba(250, 249, 247, 0.96) 100%);
     box-sizing: border-box;
     overflow: hidden;
     position: sticky;
@@ -626,9 +642,9 @@
 
 /* Active Tab */
 .activeTab {
-    background: linear-gradient(135deg,
-            rgba(255, 250, 247, 0.98),
-            rgba(255, 246, 240, 0.8));
+    // background: linear-gradient(135deg,
+    //         rgba(255, 250, 247, 0.98),
+    //         rgba(255, 246, 240, 0.8));
     border: 1px solid #f1c9bb;
     border-bottom: none;
     border-radius: 30px 30px 0 0;
@@ -671,16 +687,16 @@
     border: 1px solid #f1c9bb;
     border-top: none;
     border-radius: 0 0 34px 34px;
-    background: repeating-linear-gradient(60deg,
-            transparent,
-            transparent 38px,
-            rgba(225, 180, 150, 0.16) 39px,
-            rgba(225, 180, 150, 0.16) 41px,
-            transparent 42px,
-            transparent 78px),
-        linear-gradient(180deg,
-            rgba(255, 253, 251, 0.92),
-            rgba(255, 255, 255, 0.85));
+    // background: repeating-linear-gradient(60deg,
+    //         transparent,
+    //         transparent 38px,
+    //         rgba(225, 180, 150, 0.16) 39px,
+    //         rgba(225, 180, 150, 0.16) 41px,
+    //         transparent 42px,
+    //         transparent 78px),
+    //     linear-gradient(180deg,
+    //         rgba(255, 253, 251, 0.92),
+    //         rgba(255, 255, 255, 0.85));
     box-sizing: border-box;
 }
 
@@ -689,10 +705,10 @@
     padding: 26px 20px 18px;
     border: 1px solid #d7d7d7;
     border-radius: 32px;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.98) 0%,
-            rgba(248, 248, 248, 0.98) 100%);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.03);
+    // background: linear-gradient(180deg,
+    //         rgba(255, 255, 255, 0.98) 0%,
+    //         rgba(248, 248, 248, 0.98) 100%);
+    // box-shadow: 0 5px 16px rgba(0, 0, 0, 0.03);
     box-sizing: border-box;
     transition: all 0.3s ease;
 
@@ -727,7 +743,7 @@
         }
 
         &:nth-child(3) {
-            background: linear-gradient(to top right, #f8f9ff 0%, #c2c8f1 100%);
+            background: linear-gradient(to top right, #f9edf3 0%, #f4c0e9 100%);
             border-color: #672bd133;
         }
 
@@ -737,7 +753,8 @@
         }
 
         &:nth-child(5) {
-            background: linear-gradient(to top right, #f9edf3 0%, #f4c0e9 100%);
+            background: linear-gradient(to top right, #f8f9ff 0%, #c2c8f1 100%);
+
             border-color: #ef4f5f4d;
         }
 
@@ -934,11 +951,24 @@
 
 .tabContent {
     width: 100%;
-    background-color: $white;
+    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background-color: $white;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     color: $black !important;
+}
+
+.tabContentRating {
+    width: 100%;
+    background: linear-gradient(197.24deg, rgb(229, 234, 246) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background-color: $white;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    color: $black !important;
+    display: flex;
+    gap: 24px;
 }
 
 .contentTitle {
@@ -971,11 +1001,7 @@
     gap: 10px;
 }
 
-.ratingScore {
-    font-size: 28px;
-    font-weight: 700;
-    color: #0071f3;
-}
+.ratingScore {}
 
 .ratingStars {
     color: #ffc107;
@@ -993,7 +1019,8 @@
 
 .photosContainer {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: $white;
+    background: linear-gradient(197.24deg, rgb(221, 228, 245) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background-color: $white;
     color: #1C1C1C;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1447,10 +1474,12 @@
 .ratingScore {
     display: flex;
     align-items: baseline;
-    background: $blue-dark;
+    background: $green;
     color: white;
     padding: 12px;
     border-radius: 20px;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .scoreText {
@@ -1525,16 +1554,24 @@
 }
 
 .sectionTitle {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 12px;
     font-weight: 700;
 }
 
+
 .sectionTitle .subtitle {
     font-weight: 500;
     font-size: 17px;
     color: $gray-800;
+}
+
+.sectionTitleRatings {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .ratingDots {
@@ -1595,7 +1632,8 @@
 }
 
 .aiSummary {
-    background: #f7f9fc;
+    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    // background: #f7f9fc;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
@@ -2343,7 +2381,7 @@
 }
 
 .orderOnlineItemName {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: $gray-900;
     margin: 6px 0 0px 0;
@@ -2830,7 +2868,7 @@
 .menuItemsList {
     width: 100%;
     padding: 20px 0;
-    background: #ffffff;
+    // background: #ffffff;
 }
 
 .listHeader {
@@ -2969,6 +3007,7 @@
 }
 
 .itemImage {
+    position: relative;
     width: 100%;
     height: 200px;
     overflow: hidden;
@@ -2992,6 +3031,7 @@
 }
 
 .itemImagePlaceholder {
+    position: relative;
     width: 100%;
     height: 200px;
     background: #f5f5f5;
@@ -3009,6 +3049,77 @@
         height: 160px;
         font-size: 28px;
     }
+}
+
+/* Wrapper is the positioning context — always present */
+.itemImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* keep consistent card height */
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.offerBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.95);
+    // padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a1a1a;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    // @media (min-width: 768px) {
+    //     font-size: 12px;
+    //     padding: 5px 12px;
+    // }
+
+    .offerIcon {
+        color: #e23744;
+        flex-shrink: 0;
+    }
+}
+
+/* Price badge - bottom left corner */
+.offerOverlay {
+    color: #1a1a1a;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    // background: #fffffff2;
+    border-radius: 20px;
+    align-items: center;
+    gap: 4px;
+    // padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    // box-shadow: 0 2px 8px #00000026;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    // z-index: 2;
+
+    // /* Badge design */
+    // background: linear-gradient(135deg, #ff6b35, #f7931e);
+    // color: #fff;
+    // font-weight: 700;
+    // font-size: 0.85rem;
+    // padding: 5px 12px;
+    // border-radius: 20px;
+    // line-height: 1;
+    // white-space: nowrap;
+
+    /* Depth */
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.3px;
+
+    /* Optional subtle border for contrast on light images */
+    // border: 1.5px solid rgba(255, 255, 255, 0.85);
 }
 
 .itemInfo {
@@ -3143,7 +3254,7 @@
 }
 
 .restaurantName {
-    font-size: 20px;
+    font-size: 1.75rem;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 4px 0;
@@ -3428,7 +3539,7 @@
 .restaurantCoverImage {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 300px;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 16px;
@@ -3501,13 +3612,13 @@
     flex: 1;
 }
 
-.restaurantName {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 4px 0;
-    letter-spacing: -0.3px;
-}
+// .restaurantName {
+//     font-size: 24px;
+//     font-weight: 700;
+//     color: #1a1a1a;
+//     margin: 0 0 4px 0;
+//     letter-spacing: -0.3px;
+// }
 
 .restaurantMeta {
     margin-bottom: 4px;
@@ -3868,12 +3979,12 @@
     padding-right: 20px;
 }
 
-.orderOnlineItemName {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 0 0 4px 0;
-}
+// .orderOnlineItemName {
+//     font-size: 18px;
+//     font-weight: 600;
+//     color: #1a1a1a;
+//     margin: 0 0 4px 0;
+// }
 
 .orderOnlineItemDesc {
     font-size: 14px;
@@ -4752,7 +4863,9 @@
     transition: background 0.2s ease;
 
     // &:hover { background: #12793f; }
-    &:active { background: #0f6b37; }
+    &:active {
+        background: #0f6b37;
+    }
 }
 
 .bottomCartLeft {
@@ -4784,8 +4897,13 @@
 }
 
 @keyframes btBackdropIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .bookTableModal {
@@ -4813,6 +4931,7 @@
         opacity: 0;
         transform: translate(-50%, -48%) scale(0.96);
     }
+
     to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
@@ -4824,5 +4943,29 @@
         width: calc(100vw - 16px);
         height: 92vh;
         border-radius: 16px;
+    }
+}
+
+// Hide offer badges in 5-col on smaller screens to save space
+.offerOverlay {
+    .offerBadge {
+        font-size: 9px;
+        padding: 2px 8px;
+
+        @media (min-width: 768px) {
+            font-size: 10px;
+            padding: 3px 10px;
+        }
+
+        @media (min-width: 1536px) {
+            font-size: 11px;
+            padding: 4px 10px;
+        }
+
+        .offerIconBadge {
+            width: 10px;
+            height: 10px;
+            color: $red;
+        }
     }
 }

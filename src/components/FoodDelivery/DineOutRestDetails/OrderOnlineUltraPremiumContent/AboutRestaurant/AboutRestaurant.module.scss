@@ -1,0 +1,217 @@
+/* =========================================================
+   ABOUT RESTAURANT — collapsible info card
+========================================================= */
+@use "../../../../../styles/variables.scss" as *;
+
+.aboutSection {
+  width: 100%;
+  margin: 0px 0;
+//   font-family: Gilroy;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1c1c1c;
+}
+
+/* ---------- Section title ---------- */
+.title {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: #1c1c1c;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 22px 26px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* ---------- Content area ---------- */
+.content {
+  /* Collapsed view: show only the first heading + paragraph */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;      /* heading + paragraph + part of next */
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.content.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+/* ---------- Blocks ---------- */
+.block {
+  & + & {
+    margin-top: 16px;
+  }
+}
+
+.heading {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 900 !important;
+  color: #1c1c1c;
+  line-height: 1.35;
+}
+
+.body {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: $gray-800;
+  font-weight: 500;
+  
+}
+
+/* ---------- Toggle button ---------- */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+
+  color: #e8590c;             /* orange like reference */
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #c44a08;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #e8590c;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  transition: transform 0.2s ease;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 18px 20px 14px;
+  }
+
+  .heading {
+    font-size: 14.5px;
+  }
+
+  .body {
+    font-size: 13.5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 640px) {
+  .aboutSection {
+    margin: 18px 0;
+  }
+
+  .title {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 16px 16px 12px;
+    border-radius: 14px;
+  }
+
+  .heading {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .body {
+    font-size: 13.5px;;
+    line-height: 1.55;
+  }
+
+  .block + .block {
+    margin-top: 14px;
+  }
+
+  .toggle {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+
+  .content {
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 390px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 14px 14px 10px;
+  }
+
+  .heading {
+    font-size: 13.5px;
+  }
+
+  .body {
+    font-size: 12.5px;
+  }
+
+  .toggle {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+@media (min-width: 1200px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 26px 30px 20px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .body {
+    font-size: 13.5px;
+  }
+}

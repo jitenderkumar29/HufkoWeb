@@ -1,0 +1,255 @@
+/* =========================================================
+   DISCLAIMER RESTAURANT — footer info block
+========================================================= */
+@use "../../../../../styles/variables.scss" as *;
+
+.disclaimerSection {
+  width: 100%;
+  margin: 32px 0 24px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1c1c1c;
+}
+
+/* ---------- Disclaimer block ---------- */
+.disclaimerBlock {
+  width: 100%;
+}
+
+.disclaimerTitle {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.1px;
+  color: #1c1c1c;
+}
+
+/* ---------- Bullet list ---------- */
+.pointList {
+  margin: 0;
+  padding-left: 22px;
+  list-style: disc;
+  color: #6b6b6b;
+}
+
+.pointItem {
+  margin: 0 0 10px;
+  padding-left: 4px;
+
+  &::marker {
+    color: #b9b9b9;      /* subtle grey bullets like reference */
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pointText {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+  margin: 22px 0 20px;
+  border: none;
+  border-top: 1px solid $gray-800;
+}
+
+/* ---------- FSSAI row ---------- */
+.fssaiRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.fssaiLogo {
+  width: 60px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+  /* reference shows the FSSAI logo slightly faded/grey */
+  filter: grayscale(0.2);
+  opacity: 0.9;
+}
+
+.fssaiText {
+  margin: 0;
+  font-size: 13.5px;
+  color: #6b6b6b;
+  line-height: 1.4;
+}
+
+/* ---------- Restaurant identity ---------- */
+.restaurantBlock {
+  width: 100%;
+}
+
+.restaurantHead {
+  margin-bottom: 10px;
+}
+
+.restaurantName {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1c1c1c;
+  line-height: 1.3;
+}
+
+.restaurantArea {
+  margin: 3px 0 0;
+  font-size: 13.5px;
+  color: #6b6b6b;
+  line-height: 1.4;
+}
+
+/* ---------- Address row ---------- */
+.addressRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.pinIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #4a4a4a;
+}
+
+.addressText {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+  .disclaimerTitle {
+    font-size: 14.5px;
+  }
+
+  .pointText,
+  .fssaiText,
+  .restaurantArea,
+  .addressText {
+    font-size: 13px;
+  }
+
+  .restaurantName {
+    font-size: 14.5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 640px) {
+  .disclaimerSection {
+    margin: 22px 0 18px;
+  }
+
+  .disclaimerTitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .pointList {
+    padding-left: 18px;
+  }
+
+  .pointItem {
+    margin-bottom: 8px;
+  }
+
+  .pointText {
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .divider {
+    margin: 18px 0 16px;
+  }
+
+  .fssaiRow {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .fssaiLogo {
+    width: 52px;
+    height: 26px;
+  }
+
+  .fssaiText {
+    font-size: 12.5px;
+  }
+
+  .restaurantName {
+    font-size: 14px;
+  }
+
+  .restaurantArea,
+  .addressText {
+    font-size: 12.5px;
+  }
+
+  .addressRow {
+    gap: 6px;
+  }
+
+  .pinIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 390px) {
+  .disclaimerTitle {
+    font-size: 13.5px;
+  }
+
+  .pointText,
+  .fssaiText,
+  .restaurantArea,
+  .addressText {
+    font-size: 12px;
+  }
+
+  .restaurantName {
+    font-size: 13.5px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+@media (min-width: 1200px) {
+  .disclaimerTitle {
+    font-size: 16px;
+  }
+
+  .pointText {
+    font-size: 14px;
+  }
+
+  .fssaiText,
+  .restaurantArea,
+  .addressText {
+    font-size: 14px;
+  }
+
+  .restaurantName {
+    font-size: 15.5px;
+  }
+}

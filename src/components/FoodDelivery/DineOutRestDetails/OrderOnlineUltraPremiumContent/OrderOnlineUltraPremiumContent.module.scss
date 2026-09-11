@@ -82,7 +82,7 @@
 
     h1 {
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         font-weight: 900 !important;
         line-height: 1.2;
     }
@@ -128,7 +128,7 @@
     justify-content: flex-end;
     gap: 6px;
     margin-top: 8px;
-    font-size: 13px;
+    font-size: 15px;
     color: #555;
 
     >span {
@@ -623,7 +623,7 @@
 
     h3 {
         margin: 8px 0 6px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 900;
         color: $black;
     }
@@ -1334,4 +1334,42 @@
 .ratingCount {
     color: #999;
     font-weight: 500;
+}
+
+/* =========================================================
+   VIEW FULL MENU BUTTON
+========================================================= */
+
+.viewFullMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    width: 100%;
+    padding: 16px 20px;
+
+    background: #ffffff;
+    border: none;
+    border-top: 1px solid #eeeeee;
+
+    color: #e8590c;                 /* the orange from your screenshot */
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background 0.2s ease, color 0.2s ease;
+
+    svg {
+        transition: transform 0.2s ease;
+    }
+
+    &:hover {
+        background: #fff8f4;
+    }
+
+    &:active {
+        background: #fff1e8;
+    }
 }

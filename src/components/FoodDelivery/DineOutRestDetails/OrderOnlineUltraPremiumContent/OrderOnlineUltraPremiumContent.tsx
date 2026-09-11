@@ -17,6 +17,12 @@ import {
 import styles from "./OrderOnlineUltraPremiumContent.module.scss";
 import OpenCloseTime from "./OpenCloseTime/OpenCloseTime";
 import OutletsAroundYou, { Outlet } from "./OutletsAroundYou/OutletsAroundYou";
+import RelatedToRestaurant from "./RelatedToRestaurant/RelatedToRestaurant";
+import { aboutRestaurantSections, disclaimerPoints, faqsRestaurantSections, fssaiInfo, popularSearchesRestaurant, RelatedRestaurantItemsList, restaurantIdentity } from "@/app/data/Categorywise/FoodsCategories";
+import AboutRestaurant from "./AboutRestaurant/AboutRestaurant";
+import FAQsRestaurant from "./FAQsRestaurant/FAQsRestaurant";
+import DisclaimerRestaurant from "./DisclaimerRestaurant/DisclaimerRestaurant";
+import PopularSearchesRestaurant from "./PopularSearchesRestaurant/PopularSearchesRestaurant";
 
 /* =========================================================
    TYPES
@@ -148,6 +154,7 @@ const OrderOnlineUltraPremiumContent: React.FC<
         const [isRecommendedOpen, setIsRecommendedOpen] = useState(true);
         const [activeCategory, setActiveCategory] = useState("All");
         const offerSliderRef = useRef<HTMLDivElement>(null);
+        const [showFullMenu, setShowFullMenu] = useState(false);
 
         /* ---------------- Offers ---------------- */
 
@@ -605,6 +612,14 @@ const OrderOnlineUltraPremiumContent: React.FC<
             });
         };
 
+        const INITIAL_LIMIT = 15;
+
+        const visibleItems = showFullMenu
+            ? filteredItems
+            : filteredItems.slice(0, INITIAL_LIMIT);
+
+        const hasMore = filteredItems.length > INITIAL_LIMIT;
+
         /* ---------------- Render ---------------- */
 
         return (
@@ -691,6 +706,9 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                             </>
                                         }
                                     />
+                                </div>
+                                <div className={styles.restaurantMeta}>
+                                    <span className={styles.priceRange}>20-25 mins</span>
                                 </div>
                             </div>
                         </div>
@@ -948,24 +966,15 @@ const OrderOnlineUltraPremiumContent: React.FC<
 
                         {isRecommendedOpen && (
                             <div className={styles.foodList}>
-                                {filteredItems.map((item) => {
+                                {visibleItems.map((item) => {
                                     const quantity = cart[item.id] || 0;
 
                                     return (
-                                        <article
-                                            className={styles.foodCard}
-                                            key={item.id}
-                                        >
-                                            {/* Left: info + description */}
+                                        <article className={styles.foodCard} key={item.id}>
                                             <FoodInfo item={item} maxChars={165} />
 
-                                            {/* Right: image + add / quantity */}
                                             <div className={styles.foodImageSection}>
-                                                <div
-                                                    className={
-                                                        styles.foodImageWrapper
-                                                    }
-                                                >
+                                                <div className={styles.foodImageWrapper}>
                                                     <img
                                                         src={item.image}
                                                         alt={item.name}
@@ -975,28 +984,16 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                                     {quantity === 0 ? (
                                                         <button
                                                             type="button"
-                                                            className={
-                                                                styles.addButton
-                                                            }
-                                                            onClick={() =>
-                                                                addToCart(item.id)
-                                                            }
+                                                            className={styles.addButton}
+                                                            onClick={() => addToCart(item.id)}
                                                         >
                                                             ADD
                                                         </button>
                                                     ) : (
-                                                        <div
-                                                            className={
-                                                                styles.quantityControl
-                                                            }
-                                                        >
+                                                        <div className={styles.quantityControl}>
                                                             <button
                                                                 type="button"
-                                                                onClick={() =>
-                                                                    removeFromCart(
-                                                                        item.id
-                                                                    )
-                                                                }
+                                                                onClick={() => removeFromCart(item.id)}
                                                                 aria-label={`Remove ${item.name}`}
                                                             >
                                                                 <Minus size={15} />
@@ -1006,11 +1003,7 @@ const OrderOnlineUltraPremiumContent: React.FC<
 
                                                             <button
                                                                 type="button"
-                                                                onClick={() =>
-                                                                    addToCart(
-                                                                        item.id
-                                                                    )
-                                                                }
+                                                                onClick={() => addToCart(item.id)}
                                                                 aria-label={`Add another ${item.name}`}
                                                             >
                                                                 <Plus size={15} />
@@ -1019,11 +1012,7 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                                     )}
                                                 </div>
 
-                                                <span
-                                                    className={
-                                                        styles.customizable
-                                                    }
-                                                >
+                                                <span className={styles.customizable}>
                                                     Customizable
                                                 </span>
                                             </div>
@@ -1035,11 +1024,27 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                     <div className={styles.emptyState}>
                                         <Search size={28} />
                                         <h3>No dishes found</h3>
-                                        <p>
-                                            Try searching for another delicious
-                                            item.
-                                        </p>
+                                        <p>Try searching for another delicious item.</p>
                                     </div>
+                                )}
+
+                                {/* View full menu / Show less toggle */}
+                                {hasMore && (
+                                    <button
+                                        type="button"
+                                        className={styles.viewFullMenuButton}
+                                        onClick={() => setShowFullMenu((prev) => !prev)}
+                                    >
+                                        {showFullMenu ? (
+                                            <>
+                                                Show less <ChevronUp size={16} />
+                                            </>
+                                        ) : (
+                                            <>
+                                                View full menu <ChevronDown size={16} />
+                                            </>
+                                        )}
+                                    </button>
                                 )}
                             </div>
                         )}
@@ -1084,6 +1089,42 @@ const OrderOnlineUltraPremiumContent: React.FC<
                         </button>
                     )}
                 </div>
+
+                <RelatedToRestaurant
+                    title="Related to Burger King"
+                    items={RelatedRestaurantItemsList}
+                    onItemClick={(item) => console.log("Clicked:", item.name)}
+                />
+
+                {/* About Restaurant */}
+                <AboutRestaurant
+                    title={`About ${restaurantName}`}
+                    sections={aboutRestaurantSections}
+                    defaultExpanded={false}
+                />
+
+                {/* FAQs */}
+                <FAQsRestaurant
+                    title={`FAQs about ${restaurantName}`}
+                    items={faqsRestaurantSections}
+                />
+
+                {/* Disclaimer / Footer */}
+                <DisclaimerRestaurant
+                    title="Disclaimer"
+                    points={disclaimerPoints}
+                    fssai={fssaiInfo}
+                    restaurant={restaurantIdentity}
+                />
+
+                {/* Popular Searches */}
+                <PopularSearchesRestaurant
+                    title="Popular Searches"
+                    groups={popularSearchesRestaurant}
+                    onLinkClick={(label, group) =>
+                        console.log("Search clicked:", label, "in", group)
+                    }
+                />
             </section>
         );
     };

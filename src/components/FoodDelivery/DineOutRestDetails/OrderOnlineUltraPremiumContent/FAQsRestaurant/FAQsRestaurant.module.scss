@@ -1,0 +1,236 @@
+/* =========================================================
+   FAQS RESTAURANT — accordion section
+========================================================= */
+@use "../../../../../styles/variables.scss" as *;
+
+.faqSection {
+  width: 100%;
+  margin: 24px 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1c1c1c;
+}
+
+/* ---------- Title ---------- */
+.title {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: #1c1c1c;
+}
+
+/* ---------- List ---------- */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- Item (the rounded row) ---------- */
+.item {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: #dcdcdc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  }
+}
+
+.item.open {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Question row ---------- */
+.questionHeading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.questionButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 18px 22px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: #fafafa;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #e8590c;
+    outline-offset: -2px;
+    border-radius: 14px;
+  }
+}
+
+.questionText {
+  flex: 1;
+  min-width: 0;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1c1c1c;
+}
+
+/* ---------- Chevron ---------- */
+.chevron {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8590c;                 /* orange like reference */
+  transition: transform 0.25s ease;
+}
+
+.item.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* ---------- Answer ---------- */
+.answerWrapper {
+  /* Animated collapse using grid-template-rows trick */
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+}
+
+.item.open .answerWrapper {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
+}
+
+.answer {
+  padding: 0 22px 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: $gray-700;
+  font-weight: 400;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 900px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .questionButton {
+    padding: 16px 18px;
+  }
+
+  .questionText {
+    font-size: 14.5px;
+  }
+
+  .answer {
+    padding: 0 18px 16px;
+    font-size: 13.5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 640px) {
+  .faqSection {
+    margin: 18px 0;
+  }
+
+  .title {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .list {
+    gap: 10px;
+  }
+
+  .item {
+    border-radius: 12px;
+  }
+
+  .questionButton {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .questionText {
+    font-size: 13.5px;
+    line-height: 1.4;
+  }
+
+  .chevron svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .answer {
+    padding: 0 16px 14px;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 390px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .questionButton {
+    padding: 13px 14px;
+  }
+
+  .questionText {
+    font-size: 13px;
+  }
+
+  .answer {
+    padding: 0 14px 12px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+@media (min-width: 1200px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .questionButton {
+    padding: 20px 24px;
+  }
+
+  .questionText {
+    font-size: 16px;
+  }
+
+  .answer {
+    padding: 0 24px 20px;
+    font-size: 13.5px;
+  }
+}
