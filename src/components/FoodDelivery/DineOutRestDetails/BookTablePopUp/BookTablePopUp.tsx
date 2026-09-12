@@ -6,8 +6,10 @@ import {
     ArrowLeft,
     ChevronDown,
     ChevronUp,
+    Coffee,
     Moon,
     Sun,
+    X,
 } from 'lucide-react';
 
 import styles from './BookTablePopUp.module.scss';
@@ -38,7 +40,7 @@ export type MealSession = {
     id: string;
     title: string;
     timeRange: string;
-    type: 'lunch' | 'dinner';
+    type: 'lunch' | 'dinner' | 'breakfast';
     slots: TimeSlot[];
 };
 
@@ -56,6 +58,7 @@ export interface BookTablePopUpProps {
     exclusiveMessage?: string;
 
     onBack?: () => void;
+    onClose?: () => void;
 
     onProceed?: (data: {
         guests: number;
@@ -66,64 +69,107 @@ export interface BookTablePopUpProps {
     }) => void;
 }
 
-const DEFAULT_GUESTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// ---- Helpers (must be defined before use) ----
 
-const DEFAULT_DATES: BookingDate[] = [
-    {
-        id: '10-sep',
-        day: 'Today',
-        date: '10 Sep',
-        discount: '25% off',
-        isToday: true,
-    },
-    {
-        id: '11-sep',
-        day: 'Fri',
-        date: '11 Sep',
-        discount: '25% off',
-    },
-    {
-        id: '12-sep',
-        day: 'Sat',
-        date: '12 Sep',
-        discount: '25% off',
-    },
-    {
-        id: '13-sep',
-        day: 'Sun',
-        date: '13 Sep',
-        discount: '25% off',
-    },
-    {
-        id: '14-sep',
-        day: 'Mon',
-        date: '14 Sep',
-        discount: '25% off',
-    },
-];
+const generateDefaultDates = (count: number = 5): BookingDate[] => {
+    const dates: BookingDate[] = [];
+    const today = new Date();
+
+    const monthNames = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+    ];
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+    for (let i = 0; i < count; i++) {
+        const currentDate = new Date(today);
+        currentDate.setDate(today.getDate() + i);
+
+        const day = i === 0 ? 'Today' : dayNames[currentDate.getDay()];
+        const dateStr = `${currentDate.getDate()} ${monthNames[currentDate.getMonth()]}`;
+        const id = `${currentDate.getDate()}-${monthNames[currentDate.getMonth()].toLowerCase()}`;
+
+        dates.push({
+            id,
+            day,
+            date: dateStr,
+            discount: '25% off',
+            ...(i === 0 && { isToday: true }),
+        });
+    }
+
+    return dates;
+};
+
+// ---- Defaults ----
+
+const DEFAULT_GUESTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+const DEFAULT_DATES: BookingDate[] = generateDefaultDates(10);
 
 const DEFAULT_SESSIONS: MealSession[] = [
     {
+        id: 'breakfast',
+        title: 'Breakfast',
+        timeRange: '05:00 AM to 11:45 AM',
+        type: 'breakfast',
+        slots: [
+            { id: '05-00', time: '05:00 AM', discount: '35% off' },
+            { id: '05-15', time: '05:15 AM', discount: '35% off' },
+            { id: '05-30', time: '05:30 AM', discount: '35% off' },
+            { id: '05-45', time: '05:45 AM', discount: '35% off' },
+            { id: '06-00', time: '06:00 AM', discount: '35% off' },
+            { id: '06-15', time: '06:15 AM', discount: '35% off' },
+            { id: '06-30', time: '06:30 AM', discount: '35% off' },
+            { id: '06-45', time: '06:45 AM', discount: '35% off' },
+            { id: '07-00', time: '07:00 AM', discount: '35% off' },
+            { id: '07-15', time: '07:15 AM', discount: '35% off' },
+            { id: '07-30', time: '07:30 AM', discount: '35% off' },
+            { id: '07-45', time: '07:45 AM', discount: '35% off' },
+            { id: '08-00', time: '08:00 AM', discount: '35% off' },
+            { id: '08-15', time: '08:15 AM', discount: '35% off' },
+            { id: '08-30', time: '08:30 AM', discount: '35% off' },
+            { id: '08-45', time: '08:45 AM', discount: '35% off' },
+            { id: '09-00', time: '09:00 AM', discount: '35% off' },
+            { id: '09-15', time: '09:15 AM', discount: '35% off' },
+            { id: '09-30', time: '09:30 AM', discount: '35% off' },
+            { id: '09-45', time: '09:45 AM', discount: '35% off' },
+            { id: '10-00', time: '10:00 AM', discount: '35% off' },
+            { id: '10-15', time: '10:15 AM', discount: '35% off' },
+            { id: '10-30', time: '10:30 AM', discount: '35% off' },
+            { id: '10-45', time: '10:45 AM', discount: '35% off' },
+            { id: '11-00', time: '11:00 AM', discount: '35% off' },
+            { id: '11-15', time: '11:15 AM', discount: '35% off' },
+            { id: '11-30', time: '11:30 AM', discount: '35% off' },
+            { id: '11-45', time: '11:45 AM', discount: '35% off' },
+        ],
+    },
+    {
         id: 'lunch',
         title: 'Lunch',
-        timeRange: '04:15 PM to 05:00 PM',
+        timeRange: '12:00 PM to 04:45 PM',
         type: 'lunch',
         slots: [
-            {
-                id: '04-15',
-                time: '04:15 PM',
-                discount: '25% off',
-            },
-            {
-                id: '04-30',
-                time: '04:30 PM',
-                discount: '25% off',
-            },
-            {
-                id: '04-45',
-                time: '04:45 PM',
-                discount: '25% off',
-            },
+            { id: '12-00', time: '12:00 PM', discount: '35% off' },
+            { id: '12-15', time: '12:15 PM', discount: '35% off' },
+            { id: '12-30', time: '12:30 PM', discount: '35% off' },
+            { id: '12-45', time: '12:45 PM', discount: '35% off' },
+            { id: '01-00', time: '01:00 PM', discount: '35% off' },
+            { id: '01-15', time: '01:15 PM', discount: '35% off' },
+            { id: '01-30', time: '01:30 PM', discount: '35% off' },
+            { id: '01-45', time: '01:45 PM', discount: '35% off' },
+            { id: '02-00', time: '02:00 PM', discount: '35% off' },
+            { id: '02-15', time: '02:15 PM', discount: '35% off' },
+            { id: '02-30', time: '02:30 PM', discount: '35% off' },
+            { id: '02-45', time: '02:45 PM', discount: '35% off' },
+            { id: '03-00', time: '03:00 PM', discount: '35% off' },
+            { id: '03-15', time: '03:15 PM', discount: '35% off' },
+            { id: '03-30', time: '03:30 PM', discount: '35% off' },
+            { id: '03-45', time: '03:45 PM', discount: '35% off' },
+            { id: '04-00', time: '04:00 PM', discount: '35% off' },
+            { id: '04-15', time: '04:15 PM', discount: '35% off' },
+            { id: '04-30', time: '04:30 PM', discount: '35% off' },
+            { id: '04-45', time: '04:45 PM', discount: '35% off' },
         ],
     },
     {
@@ -132,16 +178,34 @@ const DEFAULT_SESSIONS: MealSession[] = [
         timeRange: '05:00 PM to 11:59 PM',
         type: 'dinner',
         slots: [
-            {
-                id: '05-00',
-                time: '05:00 PM',
-                discount: '20% off',
-            },
-            {
-                id: '05-30',
-                time: '05:30 PM',
-                discount: '20% off',
-            },
+            { id: '05-00', time: '05:00 PM', discount: '35% off' },
+            { id: '05-15', time: '05:15 PM', discount: '35% off' },
+            { id: '05-30', time: '05:30 PM', discount: '35% off' },
+            { id: '05-45', time: '05:45 PM', discount: '35% off' },
+            { id: '06-00', time: '06:00 PM', discount: '35% off' },
+            { id: '06-15', time: '06:15 PM', discount: '35% off' },
+            { id: '06-30', time: '06:30 PM', discount: '35% off' },
+            { id: '06-45', time: '06:45 PM', discount: '35% off' },
+            { id: '07-00', time: '07:00 PM', discount: '35% off' },
+            { id: '07-15', time: '07:15 PM', discount: '35% off' },
+            { id: '07-30', time: '07:30 PM', discount: '35% off' },
+            { id: '07-45', time: '07:45 PM', discount: '35% off' },
+            { id: '08-00', time: '08:00 PM', discount: '35% off' },
+            { id: '08-15', time: '08:15 PM', discount: '35% off' },
+            { id: '08-30', time: '08:30 PM', discount: '35% off' },
+            { id: '08-45', time: '08:45 PM', discount: '35% off' },
+            { id: '09-00', time: '09:00 PM', discount: '35% off' },
+            { id: '09-15', time: '09:15 PM', discount: '35% off' },
+            { id: '09-30', time: '09:30 PM', discount: '35% off' },
+            { id: '09-45', time: '09:45 PM', discount: '35% off' },
+            { id: '10-00', time: '10:00 PM', discount: '35% off' },
+            { id: '10-15', time: '10:15 PM', discount: '35% off' },
+            { id: '10-30', time: '10:30 PM', discount: '35% off' },
+            { id: '10-45', time: '10:45 PM', discount: '35% off' },
+            { id: '11-00', time: '11:00 PM', discount: '35% off' },
+            { id: '11-15', time: '11:15 PM', discount: '35% off' },
+            { id: '11-30', time: '11:30 PM', discount: '35% off' },
+            { id: '11-45', time: '11:45 PM', discount: '35% off' },
         ],
     },
 ];
@@ -173,6 +237,8 @@ const DEFAULT_OFFERS: BookingOffer[] = [
     },
 ];
 
+// ---- Component ----
+
 const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
     restaurantName = 'Book table',
     restaurantLocation = 'Shubham Soup Wala, Rithala',
@@ -183,6 +249,7 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
     offers = DEFAULT_OFFERS,
     exclusiveMessage = '1 month One plan for ₹1 will be auto-added in the next step.',
     onBack,
+    onClose,
     onProceed,
 }) => {
     const [mounted, setMounted] = useState(false);
@@ -263,6 +330,14 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
         }
     };
 
+    const handleClose = () => {
+        if (onClose) {
+            onClose();
+        } else {
+            onBack?.();
+        }
+    };
+
     const handleProceed = () => {
         onProceed?.({
             guests: selectedGuests,
@@ -289,7 +364,7 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                         type="button"
                         className={styles.backButton}
                         onClick={onBack}
-                        aria-label="Close booking popup"
+                        aria-label="Go back"
                     >
                         <ArrowLeft size={25} />
                     </button>
@@ -298,12 +373,21 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                         <h1>{restaurantName}</h1>
                         <p>{restaurantLocation}</p>
                     </div>
+
+                    <button
+                        type="button"
+                        className={styles.closeButton}
+                        onClick={handleClose}
+                        aria-label="Close booking popup"
+                    >
+                        <X size={22} />
+                    </button>
                 </header>
 
                 {/* Scrollable Content */}
                 <main className={styles.content}>
                     {/* Guest Selection */}
-                    {/* <section className={styles.mainCard}>
+                    <section className={styles.mainCard}>
                         <h2>Number of guest(s)</h2>
 
                         <div className={styles.guestsWrapper}>
@@ -311,11 +395,10 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                 <button
                                     key={guest}
                                     type="button"
-                                    className={`${styles.guestButton} ${
-                                        selectedGuests === guest
-                                            ? styles.active
-                                            : ''
-                                    }`}
+                                    className={`${styles.guestButton} ${selectedGuests === guest
+                                        ? styles.active
+                                        : ''
+                                        }`}
                                     onClick={() =>
                                         setSelectedGuests(guest)
                                     }
@@ -324,10 +407,10 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                 </button>
                             ))}
                         </div>
-                    </section> */}
+                    </section>
 
                     {/* Date Selection */}
-                    {/* <section className={styles.mainCard}>
+                    <section className={styles.mainCard}>
                         <h2>When are you visiting?</h2>
 
                         <div className={styles.dateList}>
@@ -335,11 +418,10 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                 <button
                                     key={item.id}
                                     type="button"
-                                    className={`${styles.dateCard} ${
-                                        selectedDateId === item.id
-                                            ? styles.activeDate
-                                            : ''
-                                    }`}
+                                    className={`${styles.dateCard} ${selectedDateId === item.id
+                                        ? styles.activeDate
+                                        : ''
+                                        }`}
                                     onClick={() =>
                                         setSelectedDateId(item.id)
                                     }
@@ -375,9 +457,11 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                     expandedSessionId === session.id;
 
                                 const Icon =
-                                    session.type === 'lunch'
-                                        ? Sun
-                                        : Moon;
+                                    session.type === 'breakfast'
+                                        ? Coffee
+                                        : session.type === 'dinner'
+                                            ? Moon
+                                            : Sun;
 
                                 return (
                                     <div
@@ -435,14 +519,12 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                                                 slot.id
                                                             }
                                                             type="button"
-                                                            className={`${
-                                                                styles.timeSlot
-                                                            } ${
-                                                                selectedTimeSlotId ===
-                                                                slot.id
+                                                            className={`${styles.timeSlot
+                                                                } ${selectedTimeSlotId ===
+                                                                    slot.id
                                                                     ? styles.selectedTimeSlot
                                                                     : ''
-                                                            }`}
+                                                                }`}
                                                             onClick={() => {
                                                                 setActiveSessionId(
                                                                     session.id
@@ -474,10 +556,10 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                 );
                             })}
                         </div>
-                    </section> */}
+                    </section>
 
                     {/* Booking Options */}
-                    {/* <section className={styles.bookingSection}>
+                    <section className={styles.bookingSection}>
                         <h2>
                             Booking option for{' '}
                             {selectedTimeSlot?.time || 'Select time'}
@@ -491,7 +573,7 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                     }
                                 >
                                     <span className={styles.oneText}>
-                                        one
+                                        prime
                                     </span>
 
                                     <span>EXCLUSIVE</span>
@@ -620,30 +702,30 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                 </div>
                             </div>
                         )}
-                    </section> */}
-                    {/* <div className={styles.additionalOffers}>
-                      <p>Coupons & additional offers available during bill payment</p>
-                    </div> */}
-                    
+                        <div className={styles.additionalOffers}>
+                            <p>
+                                Coupons & additional offers available during
+                                bill payment
+                            </p>
+                        </div>
+                    </section>
                 </main>
 
                 {/* Sticky Bottom Button */}
-                {/* <div className={styles.bottomAction}>
+                <div className={styles.bottomAction}>
                     <button
                         type="button"
-                        className={`${styles.proceedButton} ${
-                            selectedOfferId
-                                ? styles.proceedActive
-                                : ''
-                        }`}
+                        className={`${styles.proceedButton} ${selectedOfferId
+                            ? styles.proceedActive
+                            : ''
+                            }`}
                         disabled={!selectedOfferId}
                         onClick={handleProceed}
                     >
                         Proceed
                     </button>
-                </div> */}
+                </div>
             </div>
-            
         </div>
     );
 

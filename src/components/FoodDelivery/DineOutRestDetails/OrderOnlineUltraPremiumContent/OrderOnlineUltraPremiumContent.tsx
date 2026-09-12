@@ -647,7 +647,24 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                 <p className={styles.cuisineText}>
                                     Burgers, Fast Food, American
                                 </p>
+                                <div className={styles.statusRow}>
+                                    <div className={styles.openStatus}>
+                                        <span className={styles.statusDot} />
+                                        Open Now
+                                    </div>
+                                    <span>•</span>
+
+                                    <OpenCloseTime
+                                        trigger={
+                                            <span className={styles.deliveryTime}>
+                                                Closes 12:00 am
+                                            </span>
+                                        }
+                                    />
+                                </div>
+                                
                             </div>
+
 
                             <div>
                                 <div className={styles.restaurantMeta}>
@@ -712,10 +729,21 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                 </div>
                             </div>
                         </div>
+                         <div className={styles.banner}>
+                                <span className={styles.logoWrap}>
+                                    <h2 className={styles.primeWrap}>PRIME</h2>
+                                </span>
+
+                                <div className={styles.textWrap}>
+                                    <div className={styles.text}>
+                                        Free delivery on orders above ₹199
+                                    </div>
+                                </div>
+                            </div>
                     </div>
 
                     {/* Restaurant Details */}
-                    <div className={styles.restaurantInfoCard}>
+                    {/* <div className={styles.restaurantInfoCard}>
                         <div className={styles.statusRow}>
                             <div className={styles.openStatus}>
                                 <span className={styles.statusDot} />
@@ -753,7 +781,7 @@ const OrderOnlineUltraPremiumContent: React.FC<
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Deals */}
                     <div className={styles.sectionHeader}>

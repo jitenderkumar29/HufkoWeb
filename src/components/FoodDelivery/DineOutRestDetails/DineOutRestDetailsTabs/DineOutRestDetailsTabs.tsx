@@ -18,7 +18,7 @@ import {
     faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import DineOutItemsHorizontal from '../../FoodDesigns/DineOutItemsHorizontal/DineOutItemsHorizontal';
-import { DineoutItemsList, DineoutOptionsItemsList, RelatedRestaurantItemsList } from '@/app/data/Categorywise/FoodsCategories';
+import { aboutRestaurantSections, DineoutItemsList, DineoutOptionsItemsList, disclaimerPoints, faqsRestaurantSections, fssaiInfo, popularSearchesRestaurant, RelatedRestaurantItemsList, restaurantIdentity } from '@/app/data/Categorywise/FoodsCategories';
 import { DineOutItemInterface } from '../../FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import Image from 'next/image';
 import { FaChevronDown, FaRegClock, FaStar } from 'react-icons/fa';
@@ -30,6 +30,10 @@ import OpenCloseTime from '../OrderOnlineUltraPremiumContent/OpenCloseTime/OpenC
 import BookTablePopUp from '../BookTablePopUp/BookTablePopUp';
 import { Tag } from 'lucide-react';
 import RelatedToRestaurant from '../OrderOnlineUltraPremiumContent/RelatedToRestaurant/RelatedToRestaurant';
+import AboutRestaurant from '../OrderOnlineUltraPremiumContent/AboutRestaurant/AboutRestaurant';
+import FAQsRestaurant from '../OrderOnlineUltraPremiumContent/FAQsRestaurant/FAQsRestaurant';
+import DisclaimerRestaurant from '../OrderOnlineUltraPremiumContent/DisclaimerRestaurant/DisclaimerRestaurant';
+import PopularSearchesRestaurant from '../OrderOnlineUltraPremiumContent/PopularSearchesRestaurant/PopularSearchesRestaurant';
 
 export interface TabItem {
     id: string;
@@ -550,7 +554,7 @@ const AboutContent = ({ restaurant }: AboutContentProps) => (
         <div className={styles.costSection}>
             <div className={styles.knownForSection}>
                 <h4 className={styles.knownForTitle}>{restaurant?.name}</h4>
-                <p className={styles.knownForTags}>Sakura is a restaurant in Connaught Place, New Delhi serving Japanese, Asian and Thai. Known for Japanese dishes; ideal for family meals and group outings.</p>
+                <p className={styles.knownForTags}>Sakura is a well-known restaurant located in Connaught Place, the heart of New Delhi, serving a delightful blend of Japanese, Asian, and Thai cuisines. It has built a strong reputation, particularly for its authentic Japanese dishes, making it a favourite among lovers of Asian food in the city. The menu features a wide variety of options, including fresh sushi, sashimi, dim sums, noodles, curries, and Thai specialities, all prepared with quality ingredients and traditional techniques. The flavours are carefully balanced to suit both adventurous diners and those new to Asian cuisine.</p>
             </div>
             <h3 className={styles.sectionTitle}>Average Cost</h3>
             <p className={styles.costAmount}>₹2,000 for two people (approx.)</p>
@@ -559,7 +563,7 @@ const AboutContent = ({ restaurant }: AboutContentProps) => (
             <div className={styles.paymentMethods}>
                 <span>Cash and Cards accepted</span>
                 <span>Digital payments accepted</span>
-            </div>
+            </div>Cuisines
         </div>
     </div>
 );
@@ -1880,6 +1884,43 @@ const OrderOnlineContent = () => {
                     </span>
                 </button>
             )}
+
+            <div className={styles.dividerOrderOnline}></div>
+             <RelatedToRestaurant
+                    title="Related to Burger King"
+                    items={RelatedRestaurantItemsList}
+                    onItemClick={(item) => console.log("Clicked:", item.name)}
+                />
+
+                {/* About Restaurant */}
+                <AboutRestaurant
+                    title={`About Burger King`}
+                    sections={aboutRestaurantSections}
+                    defaultExpanded={false}
+                />
+
+                {/* FAQs */}
+                <FAQsRestaurant
+                    title={`FAQs about Burger King`}
+                    items={faqsRestaurantSections}
+                />
+
+                {/* Disclaimer / Footer */}
+                <DisclaimerRestaurant
+                    title="Disclaimer"
+                    points={disclaimerPoints}
+                    fssai={fssaiInfo}
+                    restaurant={restaurantIdentity}
+                />
+
+                {/* Popular Searches */}
+                <PopularSearchesRestaurant
+                    title="Popular Searches"
+                    groups={popularSearchesRestaurant}
+                    onLinkClick={(label, group) =>
+                        console.log("Search clicked:", label, "in", group)
+                    }
+                />
         </div>
     );
 };
@@ -2130,7 +2171,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
                 </div>
 
                 <div className={styles.cuisineSection}>
-                    <h4 className={styles.cuisineTitle}>Cuisines</h4>
+                    <h4 className={styles.cuisineTitle}>Cuisines: View Brochure</h4>
                     <div className={styles.cuisineTags}>
                         {/* {restaurant?.cuisine && restaurant.cuisine.length > 0 ? (
                             restaurant.cuisine.map((item: string, index: number) => (

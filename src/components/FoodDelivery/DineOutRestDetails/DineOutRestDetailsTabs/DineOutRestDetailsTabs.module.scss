@@ -74,7 +74,7 @@
     gap: 3.5rem;
     overflow-x: auto;
     padding: 1rem 2.5rem;
-    background-color: #2B110B;
+    background-color: $brown-color;
     // background-color: #24304C;
     color: $white;
     // background-color: #fff;
@@ -247,7 +247,7 @@
 /* Dining Offers Section */
 .offersSection {
     margin-bottom: 1.5rem;
-    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    background: $background-linear-gradient;
     // background: $white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 1rem;
@@ -478,7 +478,7 @@
 
 .knownForTitle {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     color: $black;
     margin-bottom: 8px;
 }
@@ -490,21 +490,21 @@
 }
 
 .costAmount {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    color: $gray-600;
+    color: $gray-800;
     margin: 8px 0 4px;
 }
 
 .costNote {
-    font-size: 12px;
-    color: $gray-500;
+    font-size: 16px;
+    color: $gray-800;
     margin-bottom: 4px;
 }
 
 .costHelp {
-    font-size: 12px;
-    color: $gray-500;
+    font-size: 16px;
+    color: $gray-800;
     text-decoration: underline;
     cursor: pointer;
     margin-bottom: 12px;
@@ -520,14 +520,14 @@
     flex-wrap: wrap;
 
     span {
-        font-size: 14px;
-        color: $gray-700;
+        font-size: 16px;
+        color: $gray-800;
     }
 }
 
 /* More Info Section */
 .moreInfoSection {
-    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    background: $background-linear-gradient;
     // background: $white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     padding: 1rem;
@@ -579,7 +579,7 @@
     padding: 1.25rem;
     border: 1px solid #d6d6d6;
     border-radius: 28px;
-    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    background: $background-linear-gradient;
     // background: linear-gradient(180deg,
     //         rgba(255, 255, 255, 0.98) 0%,
     //         rgba(250, 249, 247, 0.96) 100%);
@@ -645,20 +645,21 @@
     // background: linear-gradient(135deg,
     //         rgba(255, 250, 247, 0.98),
     //         rgba(255, 246, 240, 0.8));
-    border: 1px solid #f1c9bb;
+    border: 2px solid $gold-color;
+    // border: 1px solid #f1c9bb;
     border-bottom: none;
     border-radius: 30px 30px 0 0;
     z-index: 3;
 }
 
 .activeTab .sideOfferTabDiscount {
-    color: #e94a20;
+    color: $red;
 }
 
 /* Non Active Tab */
 .nonactiveTab {
     background: transparent;
-    border-bottom: 1px solid #f1c9bb;
+    border-bottom: 2px solid $gold-color;
 }
 
 /* First non-active tab (left) */
@@ -684,8 +685,9 @@
     margin-top: -1px;
     min-height: 286px;
     padding: 1rem;
-    border: 1px solid #f1c9bb;
-    border-top: none;
+    border: 2px solid $gold-color;
+    // border: 1px solid #f1c9bb;
+    border-top: none ;
     border-radius: 0 0 34px 34px;
     // background: repeating-linear-gradient(60deg,
     //         transparent,
@@ -703,7 +705,8 @@
 .offerCard {
     position: relative;
     padding: 26px 20px 18px;
-    border: 1px solid #d7d7d7;
+    border: 2px solid $gold-color;
+    // border: 1px solid #d7d7d7;
     border-radius: 32px;
     // background: linear-gradient(180deg,
     //         rgba(255, 255, 255, 0.98) 0%,
@@ -715,8 +718,9 @@
     // First card - Pre-book offer (highlighted)
     &.highlightedOffer {
         background: linear-gradient(to top right, #fff5f5 0%, #f5cece 100%);
-        border-color: #ef4f5f4d;
+        // border-color: #ee1c314d;
         color: $black;
+        border: 2px solid #ee1c314d;
 
         .offerTitle {
             color: $black;
@@ -734,33 +738,39 @@
         // Different backgrounds for each card
         &:nth-child(1) {
             background: linear-gradient(to top right, #fff5f5 0%, #f5cece 100%);
-            border-color: #ef4f5f4d;
+            // border-color: #d00e214d;
+            border: 2px solid #c84e4e;
         }
 
         &:nth-child(2) {
             background: linear-gradient(to top right, #f8f9ff 0%, #c2f6ca 100%);
-            border-color: #672bd133;
+            // border-color: #ee1c314d;
+            border: 2px solid #47c65a
         }
 
         &:nth-child(3) {
             background: linear-gradient(to top right, #f9edf3 0%, #f4c0e9 100%);
-            border-color: #672bd133;
+            // border-color: #9571d433;
+            border: 2px solid #d254b7;
         }
 
         &:nth-child(4) {
             background: linear-gradient(to top right, #f6f4ee 0%, #f7ecc9 100%);
-            border-color: #faecbd;
+            // border-color: #bf9f37;
+            border: 2px solid #bf9f37;
         }
 
         &:nth-child(5) {
             background: linear-gradient(to top right, #f8f9ff 0%, #c2c8f1 100%);
 
-            border-color: #ef4f5f4d;
+            // border-color: #bd404d4d;
+            border: 2px solid #6c7ad7;
         }
 
         &:nth-child(6) {
             background: linear-gradient(to top right, #eef6f8 0%, #d2f0f5 100%);
-            border-color: #dfcfff;
+            // border-color: #8165b9;
+            border: 2px solid #4abdd1;;
         }
     }
 }
@@ -951,7 +961,7 @@
 
 .tabContent {
     width: 100%;
-    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    background: $background-linear-gradient;
     // background-color: $white;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1019,7 +1029,7 @@
 
 .photosContainer {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(197.24deg, rgb(221, 228, 245) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    background: $background-linear-gradient;
     // background-color: $white;
     color: #1C1C1C;
     padding: 1rem;
@@ -1549,6 +1559,12 @@
     margin: 16px 0;
 }
 
+.dividerOrderOnline {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 8px 0 0px 0;
+}
+
 .lastRatings {
     margin-bottom: 16px;
 }
@@ -1632,7 +1648,7 @@
 }
 
 .aiSummary {
-    background: linear-gradient(197.24deg, rgb(194, 212, 255) 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+    background: $background-linear-gradient;
     // background: #f7f9fc;
     border-radius: 8px;
     padding: 16px;
@@ -1752,45 +1768,48 @@
 .dropdownText {
     color: $gray-800;
     font-weight: 600;
-    color: $blue-dark;
+    // color: $blue-dark;
 }
 
 /* Selected text color - turns blue */
 .dropdownSelected {
     font-weight: 600;
-    color: $blue-dark;
+    // color: $;
+    // color: $blue-dark;
     /* This changes the "Most relevant" text to blue */
 }
 
 /* Hover effect on text (optional) */
 .dropdown:hover .dropdownSelected {
-    color: $blue-dark;
+    color: $brown-color;
 }
 
 /* Blue border and text color when a specific option is selected */
 .dropdownActive {
-    border: 1px solid $blue-dark !important;
+    border: 1px solid $brown-color !important;
 }
 
 .dropdownActive .dropdownText {
-    color: $blue-dark;
+    color: $brown-color;
 }
 
 .dropdownActive .chevron {
-    color: $blue-dark;
+    color: $brown-color;
 }
 
 /* Blue border when dropdown is OPEN (applied via JSX) */
 .dropdownOpen {
-    border: 1px solid $blue-dark !important;
+    border: 1px solid $secondary-color !important;
+    // border: 1px solid $blue-dark !important;
 }
 
 .dropdownOpen .dropdownText {
-    color: $blue-dark;
+    color: $brown-color;
+    // color: $blue-dark;
 }
 
 .dropdownOpen .chevron {
-    color: $blue-dark;
+    color: $brown-color;
 }
 
 /* Chevron styles */
@@ -1809,7 +1828,8 @@
 
 /* Change chevron color when open */
 .dropdownOpen .chevron {
-    color: $blue-dark;
+     color: $primary-color$brown-color;
+    // color: $blue-dark;
 }
 
 /* Dropdown Menu */
@@ -1843,7 +1863,8 @@
 
 .sortOptionActive {
     font-weight: 600;
-    color: #1a7fd4;
+    color: $brown-color;
+    // color: #1a7fd4;
 }
 
 /* Add a subtle divider between options (as shown in image) */
@@ -1868,15 +1889,18 @@
 }
 
 .filterChipActive {
-    border-color: #1a7fd4;
-    color: #1a7fd4;
+    border-color: $brown-color;
+    color: $brown-color;
+    // border-color: #1a7fd4;
+    // color: #1a7fd4;
     font-weight: 600;
 }
 
 .filterChipPill {
-    background: #1a7fd4;
+    background: $brown-color;
+    // background: #1a7fd4;
     color: white;
-    border-color: #1a7fd4;
+    border-color: $brown-color;
     border-radius: 4px;
     padding: 6px 16px;
 }
@@ -1907,8 +1931,8 @@
 
 /* Hover state */
 .tagChip:hover {
-    border-color: #1a7fd4;
-    color: #1a7fd4;
+    border-color: $brown-color;
+    color: $brown-color;
 }
 
 /* Green corner on the top right */
@@ -1927,9 +1951,12 @@
 
 /* Active state (matches filterChipActive) */
 .tagChipActive {
-    border-color: #1a7fd4;
-    color: #1a7fd4;
+    border-color: $secondary-color;
+    // border-color: #1a7fd4;
+     color: $brown-color;
+    // color: #1a7fd4;
     font-weight: 600;
+    background-color: $brown-color;
 }
 
 /* Pill state (matches filterChipPill - Blue background) */
@@ -3397,10 +3424,10 @@
 }
 
 .dealsTitle {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: #1a1a1a;
-    margin: 0 0 10px 0;
+    margin: 0 0 0px 0;
 }
 
 .dealCard {
@@ -3753,12 +3780,12 @@
     margin-top: 0;
 }
 
-.dealsTitle {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 0 0 10px 0;
-}
+// .dealsTitle {
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: #1a1a1a;
+//     margin: 0 0 10px 0;
+// }
 
 .dealCard {
     width: 250px;
@@ -4283,12 +4310,12 @@
 //     }
 // }
 
-.dealsTitle {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 0 0 12px 0;
-}
+// .dealsTitle {
+//     font-size: 16px;
+//     font-weight: 600;
+//     color: #1a1a1a;
+//     margin: 0 0 12px 0;
+// }
 
 .dealsGrid {
     display: flex;

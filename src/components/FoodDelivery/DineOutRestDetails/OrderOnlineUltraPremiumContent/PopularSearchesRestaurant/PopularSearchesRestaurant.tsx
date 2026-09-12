@@ -62,7 +62,7 @@ const SearchGroupBlock: React.FC<{
                 onLinkClick?.(link.label, group.heading);
               }}
             >
-              {link.label}
+              {link.label},
             </a>
           </li>
         ))}
