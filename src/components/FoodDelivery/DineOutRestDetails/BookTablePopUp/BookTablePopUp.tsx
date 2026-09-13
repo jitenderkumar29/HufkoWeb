@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
     ArrowLeft,
     ChevronDown,
+    ChevronLeft,
+    ChevronRight,
     ChevronUp,
     Coffee,
     Moon,
@@ -103,9 +105,9 @@ const generateDefaultDates = (count: number = 5): BookingDate[] => {
 
 // ---- Defaults ----
 
-const DEFAULT_GUESTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const DEFAULT_GUESTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-const DEFAULT_DATES: BookingDate[] = generateDefaultDates(10);
+const DEFAULT_DATES: BookingDate[] = generateDefaultDates(15);
 
 const DEFAULT_SESSIONS: MealSession[] = [
     {
@@ -273,6 +275,9 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
 
     const [selectedOfferId, setSelectedOfferId] = useState('');
 
+    const guestsRef = useRef<HTMLDivElement>(null);
+    const datesRef = useRef<HTMLDivElement>(null);
+
     // Mark as mounted (client-side only) to safely use portal
     useEffect(() => {
         setMounted(true);
@@ -348,6 +353,20 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
         });
     };
 
+    const scrollContainer = (
+        ref: React.RefObject<HTMLDivElement | null>,
+        direction: 'left' | 'right'
+    ) => {
+        if (!ref.current) return;
+
+        const scrollAmount = ref.current.clientWidth * 0.8;
+
+        ref.current.scrollBy({
+            left: direction === 'left' ? -scrollAmount : scrollAmount,
+            behavior: 'smooth',
+        });
+    };
+
     // Don't render on server / before mount
     if (!mounted) return null;
 
@@ -388,9 +407,38 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                 <main className={styles.content}>
                     {/* Guest Selection */}
                     <section className={styles.mainCard}>
-                        <h2>Number of guest(s)</h2>
+                        <div className={styles.cardHeader}>
+                            <h2>Number of guest(s)</h2>
 
-                        <div className={styles.guestsWrapper}>
+                            <div className={styles.scrollControls}>
+                                <button
+                                    type="button"
+                                    className={styles.scrollButton}
+                                    onClick={() =>
+                                        scrollContainer(guestsRef, 'left')
+                                    }
+                                    aria-label="Scroll guests left"
+                                >
+                                    <ChevronLeft size={18} />
+                                </button>
+
+                                <button
+                                    type="button"
+                                    className={styles.scrollButton}
+                                    onClick={() =>
+                                        scrollContainer(guestsRef, 'right')
+                                    }
+                                    aria-label="Scroll guests right"
+                                >
+                                    <ChevronRight size={18} />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div
+                            className={styles.guestsWrapper}
+                            ref={guestsRef}
+                        >
                             {guests.map((guest) => (
                                 <button
                                     key={guest}
@@ -411,9 +459,38 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
 
                     {/* Date Selection */}
                     <section className={styles.mainCard}>
-                        <h2>When are you visiting?</h2>
+                        <div className={styles.cardHeader}>
+                            <h2>When are you visiting?</h2>
 
-                        <div className={styles.dateList}>
+                            <div className={styles.scrollControls}>
+                                <button
+                                    type="button"
+                                    className={styles.scrollButton}
+                                    onClick={() =>
+                                        scrollContainer(datesRef, 'left')
+                                    }
+                                    aria-label="Scroll dates left"
+                                >
+                                    <ChevronLeft size={18} />
+                                </button>
+
+                                <button
+                                    type="button"
+                                    className={styles.scrollButton}
+                                    onClick={() =>
+                                        scrollContainer(datesRef, 'right')
+                                    }
+                                    aria-label="Scroll dates right"
+                                >
+                                    <ChevronRight size={18} />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div
+                            className={styles.dateList}
+                            ref={datesRef}
+                        >
                             {dates.map((item) => (
                                 <button
                                     key={item.id}

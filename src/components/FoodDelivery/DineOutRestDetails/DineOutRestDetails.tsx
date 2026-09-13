@@ -28,6 +28,7 @@ import mapIcon2 from '../../../../public/icons/mapIcon2.png';
 import yesBankImage from '../../../../public/icons/yesBank.png';
 import DineOutRestDetailsTabs from './DineOutRestDetailsTabs/DineOutRestDetailsTabs';
 import BookTablePopUp from './BookTablePopUp/BookTablePopUp';
+import BookingFlow from './BookingFlow/BookingFlow';
 
 // Types
 export interface RestaurantRoom {
@@ -295,14 +296,14 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                                 {item}
                                 {index <
                                     restaurant.cuisine.length - 1 && (
-                                    <span
-                                        className={
-                                            styles.cuisineSeparator
-                                        }
-                                    >
-                                        ★
-                                    </span>
-                                )}
+                                        <span
+                                            className={
+                                                styles.cuisineSeparator
+                                            }
+                                        >
+                                            ★
+                                        </span>
+                                    )}
                             </span>
                         ))}
                     </div>
@@ -451,10 +452,9 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                                 <div
                                     className={styles.barFillRating}
                                     style={{
-                                        width: `${
-                                            (item.count / totalRatings) *
+                                        width: `${(item.count / totalRatings) *
                                             100
-                                        }%`,
+                                            }%`,
                                     }}
                                 />
                             </div>
@@ -600,9 +600,8 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                                     >
                                         <Image
                                             src={thumb}
-                                            alt={`Thumbnail ${
-                                                index + 1
-                                            }`}
+                                            alt={`Thumbnail ${index + 1
+                                                }`}
                                             className={styles.thumbnail}
                                             onClick={() =>
                                                 setCurrentImageIndex(
@@ -767,15 +766,24 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
 
             {/* Book Table Popup — now rendered via portal from inside BookTablePopUp */}
             {isBookTableOpen && (
-                <BookTablePopUp
+                <BookingFlow
                     restaurantName={restaurant.name}
                     restaurantLocation={restaurant.location}
-                    onBack={() => setIsBookTableOpen(false)}
-                    onProceed={(bookingData) => {
-                        console.log('Booking Data:', bookingData);
+                    onComplete={(bookingData) => {
+                        console.log('Booking Complete:', bookingData);
                         setIsBookTableOpen(false);
                     }}
+                    onClose={() => setIsBookTableOpen(false)}
                 />
+                // <BookTablePopUp
+                //     restaurantName={restaurant.name}
+                //     restaurantLocation={restaurant.location}
+                //     onBack={() => setIsBookTableOpen(false)}
+                //     onProceed={(bookingData) => {
+                //         console.log('Booking Data:', bookingData);
+                //         setIsBookTableOpen(false);
+                //     }}
+                // />
             )}
 
             <div className={styles.restaurantTabNavigationBar}>

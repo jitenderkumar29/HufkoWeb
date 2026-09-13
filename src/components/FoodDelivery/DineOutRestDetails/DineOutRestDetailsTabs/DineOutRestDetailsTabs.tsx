@@ -16,6 +16,7 @@ import {
     faTag,
     faChevronLeft,
     faChevronRight,
+    faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import DineOutItemsHorizontal from '../../FoodDesigns/DineOutItemsHorizontal/DineOutItemsHorizontal';
 import { aboutRestaurantSections, DineoutItemsList, DineoutOptionsItemsList, disclaimerPoints, faqsRestaurantSections, fssaiInfo, popularSearchesRestaurant, RelatedRestaurantItemsList, restaurantIdentity } from '@/app/data/Categorywise/FoodsCategories';
@@ -1475,7 +1476,7 @@ const OrderOnlineContent = () => {
 
     return (
         <div className={styles.orderOnlineTabContent}>
-            {/* Header Banner - Top Section */}
+            {/* ============================ HEADER BANNER ============================ */}
             <div className={styles.orderOnlineHeaderBanner}>
                 {/* Restaurant Cover Image */}
                 <div className={styles.restaurantCoverImage}>
@@ -1500,8 +1501,6 @@ const OrderOnlineContent = () => {
                             </span>
                         </div>
 
-
-
                         {/* Opening Hours */}
                         <div className={styles.statusRow}>
                             <div className={styles.openStatus}>
@@ -1509,7 +1508,6 @@ const OrderOnlineContent = () => {
                                 Open Now
                             </div>
                             <span>•</span>
-
                             <OpenCloseTime
                                 trigger={
                                     <span className={styles.deliveryTime}>
@@ -1517,22 +1515,9 @@ const OrderOnlineContent = () => {
                                     </span>
                                 }
                             />
-
                         </div>
-                        {/* <div className={styles.openingHours}>
-                            <FaRegClock className={styles.clockIcon} />
-                            <span className={styles.openStatus}>Open now</span>
-                            <span className={styles.closingTime}>· Closes 11:30 pm</span>
-                        </div> */}
-
-                        {/* Delivery Alert */}
-                        {/* <div className={styles.deliveryAlert}>
-                            <MdDeliveryDining className={styles.deliveryIcon} />
-                            <span className={styles.deliveryAlertText}>
-                                This location is outside the outlet's delivery area
-                            </span>
-                        </div> */}
                     </div>
+
                     <div className={styles.restaurantInfoRight}>
                         {/* Rating Section */}
                         <div className={styles.ratingSection}>
@@ -1568,90 +1553,106 @@ const OrderOnlineContent = () => {
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                {/* <FaStar className={styles.starIcon} /> */}
                                 <span className={styles.ratingValue}>4.6</span>
                                 <span className={styles.ratingCount}>(3.0K+ ratings)</span>
                             </div>
-                            <span className={styles.priceRange}><span>•  </span>₹500 for two</span>
+                            <span className={styles.priceRange}>
+                                <span>• </span>₹500 for two
+                            </span>
                         </div>
+
                         <div className={styles.locationInfo}>
                             <OutletsAroundYou
                                 currentOutlet={currentOutlet}
                                 otherOutlets={otherOutlets}
-                                onSelect={(outlet) => {
-                                    // handle outlet switch
-                                    console.log("Selected outlet:", outlet);
+                                onSelect={(outlet: any) => {
+                                    console.log('Selected outlet:', outlet);
                                 }}
                                 trigger={
                                     <>
-                                        <span className={styles.outlet}>Outlet:</span>{" "}
+                                        <span className={styles.outlet}>Outlet:</span>{' '}
                                         Nehru Place
                                     </>
                                 }
                             />
-                            {/* <IoLocationOutline className={styles.locationIcon} />
-                            <span className={styles.locationText}>Outlet: Sahid Nagar</span> */}
-                            {/* <span className={styles.deliveryStatus}>Does not deliver</span> */}
                         </div>
+
                         <div className={styles.ratingSection}>
                             <span className={styles.priceRange}>20-25 mins</span>
                         </div>
-
                     </div>
-
-
                 </div>
 
-                {/* Deals Section */}
+                {/* ============================ DEALS SECTION ============================ */}
                 <div className={styles.dealsSection}>
-                    {/* Header Row: Title on left, Buttons on right */}
                     <div className={styles.dealsHeader}>
                         <h3 className={styles.dealsTitle}>Deals for you</h3>
-
                         <div className={styles.dealsNavButtons}>
                             <button
-                                className={`${styles.dealNavBtn} ${styles.dealNavPrev} ${currentDealIndex === 0 ? styles.dealNavDisabled : ''}`}
+                                className={`${styles.dealNavBtn} ${styles.dealNavPrev} ${
+                                    currentDealIndex === 0 ? styles.dealNavDisabled : ''
+                                }`}
                                 onClick={handlePrevDeal}
                                 disabled={currentDealIndex === 0}
                                 aria-label="Previous deals"
                             >
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                >
                                     <path d="M15 18l-6-6 6-6" />
                                 </svg>
                             </button>
-
                             <button
-                                className={`${styles.dealNavBtn} ${styles.dealNavNext} ${currentDealIndex >= maxIndex ? styles.dealNavDisabled : ''}`}
+                                className={`${styles.dealNavBtn} ${styles.dealNavNext} ${
+                                    currentDealIndex >= maxIndex ? styles.dealNavDisabled : ''
+                                }`}
                                 onClick={handleNextDeal}
                                 disabled={currentDealIndex >= maxIndex}
                                 aria-label="Next deals"
                             >
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                >
                                     <path d="M9 18l6-6-6-6" />
                                 </svg>
                             </button>
                         </div>
                     </div>
 
-                    {/* Deals Grid (No buttons here now) */}
                     <div className={styles.dealsWrapper}>
                         <div className={styles.dealsGrid} ref={dealsContainerRef}>
-                            {deals.slice(currentDealIndex, currentDealIndex + dealsPerView).map((deal, index) => (
-                                <div key={index} className={styles.dealCard}>
-                                    <div className={styles.dealIconWrapper}>
-                                        <img src={deal.icon} alt={deal.title} className={styles.dealIcon} />
+                            {deals
+                                .slice(currentDealIndex, currentDealIndex + dealsPerView)
+                                .map((deal, index) => (
+                                    <div key={index} className={styles.dealCard}>
+                                        <div className={styles.dealIconWrapper}>
+                                            <img
+                                                src={deal.icon}
+                                                alt={deal.title}
+                                                className={styles.dealIcon}
+                                            />
+                                        </div>
+                                        <div className={styles.dealContent}>
+                                            <p className={styles.dealTitle}>{deal.title}</p>
+                                            <p className={styles.dealSubtext}>{deal.subtext}</p>
+                                        </div>
                                     </div>
-                                    <div className={styles.dealContent}>
-                                        <p className={styles.dealTitle}>{deal.title}</p>
-                                        <p className={styles.dealSubtext}>{deal.subtext}</p>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
                         </div>
                     </div>
                 </div>
 
-                {/* Search Bar */}
+                {/* ============================ SEARCH + FILTERS ============================ */}
                 <div className={styles.searchContainer}>
                     <div className={styles.searchWrapper}>
                         <input
@@ -1662,107 +1663,128 @@ const OrderOnlineContent = () => {
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
                         <button className={styles.searchButton}>
-                            <FaChevronDown className={styles.searchIcon} />
+                            <FontAwesomeIcon icon={faChevronDown} className={styles.searchIcon} />
                         </button>
                     </div>
 
                     <div className={styles.categoryList}>
-
-                        {/* --- Wrapped Static Buttons with Scrollbar --- */}
                         <div className={styles.staticCategoryList}>
-
-                            {/* Veg Option */}
+                            {/* Veg toggle */}
                             <div className={styles.staticItem}>
                                 <div className={styles.staticBox}>
                                     <label className={styles.staticLabel}>
-                                        <input type="checkbox" aria-label="Enable veg option" className={styles.hiddenInput} />
+                                        <input
+                                            type="checkbox"
+                                            aria-label="Enable veg option"
+                                            className={styles.hiddenInput}
+                                        />
                                         <span className={styles.staticPill}>
-
-                                            {/* Track wrapper (contains track and icon) */}
                                             <div className={styles.trackWrapper}>
-                                                <span className={styles.track}></span>
+                                                <span className={styles.track} />
                                                 <div className={styles.iconContainer}>
-                                                    <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1" y="1" width="18" height="18" rx="4" stroke="#007A33" strokeWidth="2" fill="white" />
+                                                    <svg
+                                                        aria-hidden="true"
+                                                        height="20"
+                                                        width="20"
+                                                        viewBox="0 0 20 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <rect
+                                                            x="1"
+                                                            y="1"
+                                                            width="18"
+                                                            height="18"
+                                                            rx="4"
+                                                            stroke="#007A33"
+                                                            strokeWidth="2"
+                                                            fill="white"
+                                                        />
                                                         <circle cx="10" cy="10" r="5" fill="#007A33" />
                                                     </svg>
                                                 </div>
                                             </div>
-
                                         </span>
                                     </label>
                                 </div>
                             </div>
 
-                            {/* Non-Veg Option */}
+                            {/* Non-veg toggle */}
                             <div className={styles.staticItem}>
                                 <div className={styles.staticBox}>
                                     <label className={styles.staticLabel}>
-                                        <input type="checkbox" aria-label="Enable non veg option" className={styles.hiddenInput} />
+                                        <input
+                                            type="checkbox"
+                                            aria-label="Enable non veg option"
+                                            className={styles.hiddenInput}
+                                        />
                                         <span className={styles.staticPill}>
-
-                                            {/* Track wrapper (contains track and icon) */}
                                             <div className={styles.trackWrapper}>
-                                                <span className={styles.track}></span>
+                                                <span className={styles.track} />
                                                 <div className={styles.iconContainer}>
-                                                    <svg aria-hidden="true" height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect x="1" y="1" width="18" height="18" rx="4" stroke="#D32F2F" strokeWidth="2" fill="white" />
+                                                    <svg
+                                                        aria-hidden="true"
+                                                        height="20"
+                                                        width="20"
+                                                        viewBox="0 0 20 20"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                        <rect
+                                                            x="1"
+                                                            y="1"
+                                                            width="18"
+                                                            height="18"
+                                                            rx="4"
+                                                            stroke="#D32F2F"
+                                                            strokeWidth="2"
+                                                            fill="white"
+                                                        />
                                                         <path d="M10 5L15 15H5L10 5Z" fill="#D32F2F" />
                                                     </svg>
                                                 </div>
                                             </div>
-
                                         </span>
                                     </label>
                                 </div>
                             </div>
-
-                            {/* Bestseller Text
-                                <div className={styles.staticItem}>
-                                    <div className={styles.bestsellerWrapper}>
-                                        <div className={styles.bestsellerText}>Bestseller</div>
-                                    </div>
-                                </div> */}
-
                         </div>
 
-                        {/* Existing Dynamic Categories */}
                         {categoriesFilter.map((category) => (
                             <button
                                 key={category}
                                 type="button"
                                 onClick={() => setActiveCategory(category)}
-                                className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ""}`}
+                                className={`${styles.categoryButton} ${
+                                    activeCategory === category ? styles.activeCategory : ''
+                                }`}
                             >
                                 {category}
                             </button>
                         ))}
-
-                        {/* End staticCategoryList */}
-
                     </div>
                 </div>
-
-
             </div>
 
-            {/* Body Section - Sidebar + Main Content */}
+            {/* ============================ BODY: SIDEBAR + MENU ============================ */}
             <div className={styles.orderOnlineBody}>
                 {/* Left Sidebar */}
-                <div className={styles.orderOnlineSidebar}>
+                <aside className={styles.orderOnlineSidebar}>
                     {categories.map((cat, idx) => (
                         <p
                             key={idx}
-                            className={`${styles.orderOnlineCategoryItem} ${activeCategory === cat ? styles.orderOnlineCategoryActive : ''}`}
+                            className={`${styles.orderOnlineCategoryItem} ${
+                                activeCategory === cat ? styles.orderOnlineCategoryActive : ''
+                            }`}
                             onClick={() => setActiveCategory(cat)}
                         >
                             {cat}
                         </p>
                     ))}
-                </div>
+                </aside>
 
                 {/* Main Content */}
-                <div className={styles.orderOnlineMainContent}>
+                <section className={styles.orderOnlineMainContent}>
                     <div className={styles.orderOnlineMenuSection}>
                         <h3 className={styles.orderOnlineCategoryHeader}>{activeCategory}</h3>
                         <div className={styles.orderOnlineMenuItems}>
@@ -1771,20 +1793,17 @@ const OrderOnlineContent = () => {
                                     <div key={idx} className={styles.orderOnlineMenuItem}>
                                         <div className={styles.orderOnlineItemCenter}>
                                             <div className={styles.orderOnlineItem}>
-                                                {item.type === 'veg' ? (
-                                                    <VegIcon />
-                                                ) : (
-                                                    <NonVegIcon />
-                                                )}
+                                                {item.type === 'veg' ? <VegIcon /> : <NonVegIcon />}
                                             </div>
                                             <h4 className={styles.orderOnlineItemName}>{item.name}</h4>
                                             <div className={styles.priceMenu}>
-                                                <span className={styles.reviewCount}>
-                                                    ₹{item.price}
-                                                </span>
+                                                <span className={styles.reviewCount}>₹{item.price}</span>
                                             </div>
                                             <div className={styles.itemRating}>
-                                                <FontAwesomeIcon icon={faStar} className={styles.starIcon} />
+                                                <FontAwesomeIcon
+                                                    icon={faStar}
+                                                    className={styles.starIcon}
+                                                />
                                                 <span className={styles.ratingValue}>
                                                     {item.rating.toFixed(1)}
                                                 </span>
@@ -1796,12 +1815,13 @@ const OrderOnlineContent = () => {
                                                 <p className={styles.orderOnlineItemDesc}>
                                                     {item.desc}
                                                     {item.desc.includes('read more') && (
-                                                        <span className={styles.orderOnlineReadMore}> read more</span>
+                                                        <span className={styles.orderOnlineReadMore}>
+                                                            {' '}
+                                                            read more
+                                                        </span>
                                                     )}
                                                 </p>
                                             )}
-
-
                                         </div>
 
                                         {item.img && (
@@ -1813,11 +1833,7 @@ const OrderOnlineContent = () => {
                                                         className={styles.orderOnlineItemImage}
                                                     />
                                                     <div className={styles.orderOnlineItemLeft}>
-                                                        {item.type === 'veg' ? (
-                                                            <VegIcon />
-                                                        ) : (
-                                                            <NonVegIcon />
-                                                        )}
+                                                        {item.type === 'veg' ? <VegIcon /> : <NonVegIcon />}
                                                     </div>
                                                     <AddControl
                                                         item={item}
@@ -1825,15 +1841,6 @@ const OrderOnlineContent = () => {
                                                         onAdd={addToCart}
                                                         onRemove={removeFromCart}
                                                     />
-                                                    {/* <button
-                                                        type="button"
-                                                        className={styles.addButton}
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                        }}
-                                                    >
-                                                        ADD
-                                                    </button> */}
                                                 </div>
                                                 {item.customisable && (
                                                     <span className={styles.customisableBadge}>
@@ -1845,13 +1852,16 @@ const OrderOnlineContent = () => {
                                     </div>
                                 ))
                             ) : (
-                                <div className={styles.orderOnlineNoResults}>No items found for "{searchTerm}"</div>
+                                <div className={styles.orderOnlineNoResults}>
+                                    No items found for &quot{searchTerm}&quot
+                                </div>
                             )}
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-            {/* 👇 bottom cart here */}
+
+            {/* ============================ BOTTOM CART ============================ */}
             {cartCount > 0 && (
                 <button
                     type="button"
@@ -1861,7 +1871,7 @@ const OrderOnlineContent = () => {
                     }}
                 >
                     <span className={styles.bottomCartLeft}>
-                        {cartCount} item{cartCount > 1 ? "s" : ""} added
+                        {cartCount} item{cartCount > 1 ? 's' : ''} added
                     </span>
                     <span className={styles.bottomCartRight}>
                         <span>View Cart</span>
@@ -1885,42 +1895,40 @@ const OrderOnlineContent = () => {
                 </button>
             )}
 
-            <div className={styles.dividerOrderOnline}></div>
-             <RelatedToRestaurant
-                    title="Related to Burger King"
-                    items={RelatedRestaurantItemsList}
-                    onItemClick={(item) => console.log("Clicked:", item.name)}
-                />
+            {/* ============================ BELOW-MENU SECTIONS ============================ */}
+            <div className={styles.dividerOrderOnline} />
 
-                {/* About Restaurant */}
-                <AboutRestaurant
-                    title={`About Burger King`}
-                    sections={aboutRestaurantSections}
-                    defaultExpanded={false}
-                />
+            <RelatedToRestaurant
+                title="Related to Burger King"
+                items={RelatedRestaurantItemsList}
+                onItemClick={(item: any) => console.log('Clicked:', item.name)}
+            />
 
-                {/* FAQs */}
-                <FAQsRestaurant
-                    title={`FAQs about Burger King`}
-                    items={faqsRestaurantSections}
-                />
+            <AboutRestaurant
+                title="About Burger King"
+                sections={aboutRestaurantSections}
+                defaultExpanded={false}
+            />
 
-                {/* Disclaimer / Footer */}
-                <DisclaimerRestaurant
-                    title="Disclaimer"
-                    points={disclaimerPoints}
-                    fssai={fssaiInfo}
-                    restaurant={restaurantIdentity}
-                />
+            <FAQsRestaurant
+                title="FAQs about Burger King"
+                items={faqsRestaurantSections}
+            />
 
-                {/* Popular Searches */}
-                <PopularSearchesRestaurant
-                    title="Popular Searches"
-                    groups={popularSearchesRestaurant}
-                    onLinkClick={(label, group) =>
-                        console.log("Search clicked:", label, "in", group)
-                    }
-                />
+            <DisclaimerRestaurant
+                title="Disclaimer"
+                points={disclaimerPoints}
+                fssai={fssaiInfo}
+                restaurant={restaurantIdentity}
+            />
+
+            <PopularSearchesRestaurant
+                title="Popular Searches"
+                groups={popularSearchesRestaurant}
+                onLinkClick={(label: string, group: any) =>
+                    console.log('Search clicked:', label, 'in', group)
+                }
+            />
         </div>
     );
 };
@@ -2171,7 +2179,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
                 </div>
 
                 <div className={styles.cuisineSection}>
-                    <h4 className={styles.cuisineTitle}>Cuisines: View Brochure</h4>
+                    <h4 className={styles.cuisineTitle}>Cuisines: <span className={styles.menuBrochure}>View Menu Brochure</span></h4>
                     <div className={styles.cuisineTags}>
                         {/* {restaurant?.cuisine && restaurant.cuisine.length > 0 ? (
                             restaurant.cuisine.map((item: string, index: number) => (
@@ -2703,7 +2711,7 @@ const ReviewsContent = () => {
                             { label: "Hospitality", value: 4.8 },
                             { label: "Facilities", value: 4.6 },
                             { label: "Food", value: 4.7 },
-                            { label: "Table", value: 4.6 },
+                            { label: "Restaurant", value: 4.6 },
                             { label: "Cleanliness", value: 4.8 },
                             { label: "Value For Money", value: 4.5 }
                         ].map((cat, idx) => (

@@ -102,9 +102,34 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
- $background-gray: #F3F3F3;
- $background-orange-100: #f6ded8;
- 
- $background-linear-gradient: linear-gradient(197.24deg, #ef99a3 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
- 
+$background-gray: #F3F3F3;
+$background-orange-100: #f6ded8;
+$background-green-light: #C8F9E5;
+$background-green-light-100: #E9FFF5;
 
+$background-linear-gradient: linear-gradient(197.24deg, #3e2114ce 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+// $background-linear-gradient: linear-gradient(197.24deg, #ef99a3 16.45%, rgb(251, 241, 255) 39.26%, rgb(234, 243, 243) 59.99%);
+
+$background-linear-gradient-2: linear-gradient(180deg, rgba(244, 245, 249, 0.98) 0%, rgba(236, 238, 244, 0.98) 100%);
+
+// Orange scale
+$orange-100: #FFF3E0;   // very light peach
+$orange-200: #FFE0B2;
+$orange-300: #FFCC80;
+$orange-400: #FFB74D;
+$orange-500: #FF9800;
+$orange-600: #FB8C00;
+$orange-700: #F57C00;
+$orange-800: #EF6C00;
+$orange-900: #F05B54;   // ✅ updated per your request
+
+// Red scale
+$red-100: #FFF3E0;   // very light peach
+$red-200: #FFE0B2;
+$red-300: #FFCC80;
+$red-400: #FFB74D;
+$red-500: #FF9800;
+$red-600: #FB8C00;
+$red-700: #F57C00;
+$red-800: #EF6C00;
+$red-900: #F05B54;   // ✅ updated per your request
