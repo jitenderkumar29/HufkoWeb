@@ -1,0 +1,529 @@
+// ReviewBookingDetails.module.scss
+@use "../../../../styles/variables.scss" as *;
+
+// ---------- Thin scrollbar mixin ----------
+
+@mixin thin-scrollbar {
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: #c9ced7 transparent;
+
+    // Chrome / Edge / Safari
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c9ced7;
+        border-radius: 10px;
+
+        &:hover {
+            background: #aab1bd;
+        }
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
+
+// ---------- Modal Shell ----------
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+
+    width: 950px;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0 auto;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: $background-linear-gradient-2;
+
+    animation: fadeIn 0.25s ease;
+
+    // ✅ Thin gray scrollbar
+    @include thin-scrollbar;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: $background-linear-gradient-2;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: $gray-900;
+    width: 100%;
+    max-width: 950px;
+    height: 100vh;
+    max-height: 100vh;
+    z-index: 9999;
+
+    // ✅ Thin gray scrollbar (in case container itself scrolls)
+    @include thin-scrollbar;
+}
+
+// Header
+.header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: $white;
+    gap: 16px;
+    box-shadow: $subheader-shadow;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .backButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            color: $gray-900;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        color: $title-color;
+    }
+}
+
+// Content Scroll Area
+.content {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    padding-bottom: 1.5rem;
+
+    // ✅ Thin gray scrollbar
+    @include thin-scrollbar;
+}
+
+// Reusable Card
+.card {
+    background-color: $white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: $subheader-shadow;
+    border: 1px solid $border-light;
+}
+
+// Restaurant Info Section
+.restaurantHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $border-color;
+
+    .restaurantInfo {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .restaurantName {
+        font-size: 20px;
+        font-weight: 700;
+        color: $orange-900;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .restaurantAddress {
+        font-size: 15px;
+        color: $gray-600;
+        line-height: 1.4;
+    }
+
+    .restaurantImage {
+        width: 100px;
+        height: 60px;
+        border-radius: 8px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+}
+
+// Date, Time, Guests Row
+.bookingMeta {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid $border-color;
+
+    .metaItem {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background-color: $border-color;
+        }
+    }
+
+    .metaLabel {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: $gray-600;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            color: $orange-900;
+        }
+    }
+
+    .metaValue {
+        font-size: 16px;
+        font-weight: 700;
+        color: $title-color;
+    }
+}
+
+// User Details in Card
+.userDetails {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .userName {
+        font-size: 16px;
+        font-weight: 600;
+        color: $title-color;
+    }
+
+    .userPhone {
+        font-size: 14px;
+        color: $gray-600;
+    }
+}
+
+// Section Title
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $title-color;
+    margin: 8px 0 12px;
+
+    svg {
+        width: 22px;
+        height: 22px;
+        color: $orange-900;
+    }
+}
+
+// Offers Section
+.offersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.offerBlock {
+    padding: 12px 0;
+
+    &:not(:last-child) {
+        border-bottom: 1px dashed $gray-300;
+    }
+}
+
+.offerLabel {
+    font-size: 15px;
+    font-weight: 600;
+    color: $orange-900;
+    margin-bottom: 8px;
+}
+
+.offerTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: $title-color;
+    margin: 0 0 4px;
+}
+
+.offerSubtext {
+    font-size: 13px;
+    color: $gray-800;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '•';
+            margin-right: 6px;
+            color: $gray-800;
+        }
+    }
+}
+
+// Payment Offer Carousel
+.paymentOfferWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.paymentCard {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: $gray-50;
+    border: 1px solid $border-light;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: $orange-400;
+        background-color: $orange-100;
+    }
+}
+
+.paymentLogoWrapper {
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 1px solid $border-light;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.paymentInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    align-items: start;
+}
+
+.paymentName {
+    font-size: 16px;
+    font-weight: 600;
+    color: $title-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paymentDiscount {
+    font-size: 13px;
+    color: $gray-700;
+}
+
+// Carousel Indicator
+.carouselIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 8px;
+    flex-shrink: 0;
+}
+
+.carouselCount {
+    font-size: 10px;
+    font-weight: 700;
+    color: $gray-900;
+}
+
+.dotsWrapper {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $gray-300;
+    transition: background-color 0.2s;
+
+    &.active {
+        background-color: $orange-900;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+// Contact Details Section
+.contactCard {
+    @extend .card;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.contactHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+
+    .contactName {
+        font-size: 16px;
+        font-weight: 600;
+        color: $title-color;
+    }
+
+    .editButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: $gray-100;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+            color: $gray-700;
+        }
+    }
+}
+
+.contactDetail {
+    font-size: 14px;
+    color: $gray-600;
+}
+
+// Sticky Bottom Action
+.bottomAction {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background-color: $white !important;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+    padding: 1rem !important;
+    // background-color: $white;
+    border-radius: 20px 20px 0 0;
+
+    @media (min-width: $breakpoint-md) {
+        position: sticky;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 16px 0;
+    }
+}
+
+.proceedButton {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: $orange-900;
+    color: $white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+
+    &:hover {
+        background-color: darken($orange-900, 10%);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+// Responsive Adjustments
+@media (min-width: $breakpoint-md) {
+    .container {
+        align-items: center;
+    }
+
+    .header,
+    .content,
+    .bottomAction {
+        width: 100%;
+    }
+
+    .content {
+        background-color: transparent;
+    }
+
+    .bottomAction {
+        // max-width: 600px;
+        margin: 0 auto;
+        position: sticky;
+        bottom: 0;
+    }
+}

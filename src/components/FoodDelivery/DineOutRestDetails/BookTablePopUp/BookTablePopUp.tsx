@@ -9,6 +9,7 @@ import {
     ChevronRight,
     ChevronUp,
     Coffee,
+    Cookie,
     Moon,
     Sun,
     X,
@@ -42,7 +43,7 @@ export type MealSession = {
     id: string;
     title: string;
     timeRange: string;
-    type: 'lunch' | 'dinner' | 'breakfast';
+    type: 'lunch' | 'dinner' | 'breakfast' | 'high-tea';
     slots: TimeSlot[];
 };
 
@@ -71,7 +72,7 @@ export interface BookTablePopUpProps {
     }) => void;
 }
 
-// ---- Helpers (must be defined before use) ----
+// ---- Helpers ----
 
 const generateDefaultDates = (count: number = 5): BookingDate[] => {
     const dates: BookingDate[] = [];
@@ -172,6 +173,26 @@ const DEFAULT_SESSIONS: MealSession[] = [
             { id: '04-15', time: '04:15 PM', discount: '35% off' },
             { id: '04-30', time: '04:30 PM', discount: '35% off' },
             { id: '04-45', time: '04:45 PM', discount: '35% off' },
+        ],
+    },
+    {
+        id: 'high-tea',
+        title: 'High Tea',
+        timeRange: '04:00 PM to 07:00 PM',
+        type: 'high-tea',
+        slots: [
+            { id: '04-00', time: '04:00 PM', discount: '25% off' },
+            { id: '04-15', time: '04:15 PM', discount: '25% off' },
+            { id: '04-30', time: '04:30 PM', discount: '25% off' },
+            { id: '04-45', time: '04:45 PM', discount: '25% off' },
+            { id: '05-00', time: '05:00 PM', discount: '25% off' },
+            { id: '05-15', time: '05:15 PM', discount: '25% off' },
+            { id: '05-30', time: '05:30 PM', discount: '25% off' },
+            { id: '05-45', time: '05:45 PM', discount: '25% off' },
+            { id: '06-00', time: '06:00 PM', discount: '25% off' },
+            { id: '06-15', time: '06:15 PM', discount: '25% off' },
+            { id: '06-30', time: '06:30 PM', discount: '25% off' },
+            { id: '06-45', time: '06:45 PM', discount: '25% off' },
         ],
     },
     {
@@ -278,12 +299,10 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
     const guestsRef = useRef<HTMLDivElement>(null);
     const datesRef = useRef<HTMLDivElement>(null);
 
-    // Mark as mounted (client-side only) to safely use portal
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    // Lock body scroll while popup is open
     useEffect(() => {
         if (!mounted) return;
 
@@ -367,7 +386,6 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
         });
     };
 
-    // Don't render on server / before mount
     if (!mounted) return null;
 
     const popupContent = (
@@ -538,7 +556,9 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
                                         ? Coffee
                                         : session.type === 'dinner'
                                             ? Moon
-                                            : Sun;
+                                            : session.type === 'high-tea'
+                                                ? Cookie
+                                                : Sun;
 
                                 return (
                                     <div
@@ -806,7 +826,6 @@ const BookTablePopUp: React.FC<BookTablePopUpProps> = ({
         </div>
     );
 
-    // Render via portal directly on document.body
     return createPortal(popupContent, document.body);
 };
 

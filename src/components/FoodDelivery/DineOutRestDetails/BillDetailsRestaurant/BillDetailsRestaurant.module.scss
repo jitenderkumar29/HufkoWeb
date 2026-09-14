@@ -6,22 +6,57 @@ $orange-badge: #f97316;
 $offer-border: #fca5a5;
 $offer-bg: #fffbfb;
 
+// ---------- Scrollbar mixin (reusable) ----------
+
+@mixin thin-scrollbar {
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: #c9ced7 transparent;
+
+    // Chrome / Edge / Safari
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c9ced7;
+        border-radius: 10px;
+
+        &:hover {
+            background: #aab1bd;
+        }
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
+
 // ---------- Modal Shell (matches BookTablePopUp) ----------
 
 .modalOverlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 16px;
+    z-index: 999999;
 
-    @media (max-width: $breakpoint-xs) {
-        padding: 0;
-        align-items: flex-end;
-    }
+    width: 950px;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0 auto;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: $background-linear-gradient-2;
+
+    animation: fadeIn 0.25s ease;
+
+    @include thin-scrollbar;
 }
 
 .billPage {
@@ -30,7 +65,6 @@ $offer-bg: #fffbfb;
     max-width: 950px;
     height: 100vh;
     max-height: 100vh;
-    // border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -104,15 +138,8 @@ $offer-bg: #fffbfb;
     flex-direction: column;
     gap: 16px;
 
-    // Custom scrollbar
-    &::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: $gray-300;
-        border-radius: 3px;
-    }
+    // ✅ Thin gray scrollbar
+    @include thin-scrollbar;
 }
 
 .bottomAction {
@@ -275,14 +302,12 @@ $offer-bg: #fffbfb;
 
 .onePlanCard {
     position: relative;
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    padding: 20px 100px 20px 20px; // right padding leaves room for price
+    padding: 20px 100px 20px 20px;
     border-radius: 16px;
 
-    // ✅ White → peach/orange gradient (matches image)
     background: linear-gradient(
         90deg,
         #ffffff 0%,
@@ -290,7 +315,6 @@ $offer-bg: #fffbfb;
         #fde4d8 100%
     );
 
-    // ✅ Decorative Swiggy One watermark bottom-right
     &::after {
         content: '';
         position: absolute;
@@ -298,19 +322,14 @@ $offer-bg: #fffbfb;
         bottom: -20px;
         width: 130px;
         height: 130px;
-        // background-image: url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/dineout/one_primary.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         opacity: 0.9;
         pointer-events: none;
         z-index: 1;
-        // If you don't want the image, use the circle fallback below:
-        // background: rgba(255, 255, 255, 0.7);
-        // border-radius: 50%;
     }
 
-    // ✅ Badge — sits on top-left, subtle inner shadow to feel "lifted"
     .badge {
         position: relative;
         z-index: 3;
@@ -358,7 +377,6 @@ $offer-bg: #fffbfb;
         max-width: 100%;
     }
 
-    // ✅ Price — vertically centered on the right
     .priceTag {
         position: absolute;
         top: 50%;
@@ -398,7 +416,6 @@ $offer-bg: #fffbfb;
         }
     }
 
-    // Mobile tweaks
     @media (max-width: $breakpoint-xs) {
         padding: 16px 80px 16px 16px;
 
@@ -488,7 +505,7 @@ $offer-bg: #fffbfb;
         color: $title-color;
     }
 
-     .primeHeader{
+    .primeHeader{
         color: $orange-900;
         font-weight: 700;
         font-size: 18px;
@@ -582,7 +599,6 @@ $offer-bg: #fffbfb;
 .contactSection {
     display: flex;
     flex-direction: column;
-    // gap: 12px;
 }
 
 .contactCard {
@@ -606,7 +622,7 @@ $offer-bg: #fffbfb;
     flex-direction: column;
     gap: 6px;
     flex: 1;
-    min-width: 0; // allow text truncation
+    min-width: 0;
 
     .contactName {
         font-size: 18px;
@@ -659,8 +675,6 @@ $offer-bg: #fffbfb;
 .termsCard {
     background-color: $white;
     border-radius: 12px;
-    // overflow: hidden;
-    // ✅ subtle, matching the clean look in the image
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
@@ -676,7 +690,6 @@ $offer-bg: #fffbfb;
         transition: max-height 0.5s ease-in, padding 0.3s ease-in;
     }
 
-    // ✅ Use custom bullets with hanging indent so wrapped lines align under text
     ul {
         list-style: none;
         margin: 0;
@@ -695,7 +708,6 @@ $offer-bg: #fffbfb;
         line-height: 1.55;
         letter-spacing: 0.005em;
 
-        // Small dot bullet
         &::before {
             content: '';
             position: absolute;

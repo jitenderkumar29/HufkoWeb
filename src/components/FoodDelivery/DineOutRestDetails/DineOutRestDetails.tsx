@@ -769,21 +769,19 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                 <BookingFlow
                     restaurantName={restaurant.name}
                     restaurantLocation={restaurant.location}
-                    onComplete={(bookingData) => {
-                        console.log('Booking Complete:', bookingData);
+                    onComplete={(bookingData, billDetails) => {
+                        console.log(
+                            "Booking Complete:",
+                            bookingData,
+                            billDetails
+                        );
+
                         setIsBookTableOpen(false);
                     }}
-                    onClose={() => setIsBookTableOpen(false)}
+                    onClose={() => {
+                        setIsBookTableOpen(false);
+                    }}
                 />
-                // <BookTablePopUp
-                //     restaurantName={restaurant.name}
-                //     restaurantLocation={restaurant.location}
-                //     onBack={() => setIsBookTableOpen(false)}
-                //     onProceed={(bookingData) => {
-                //         console.log('Booking Data:', bookingData);
-                //         setIsBookTableOpen(false);
-                //     }}
-                // />
             )}
 
             <div className={styles.restaurantTabNavigationBar}>
