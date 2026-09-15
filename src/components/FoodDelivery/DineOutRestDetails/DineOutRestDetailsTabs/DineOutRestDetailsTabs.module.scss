@@ -386,6 +386,10 @@
     margin-bottom: 10px;
     font-style: italic;
     text-decoration: underline;
+    
+    &:hover{
+        color: $green-dark;
+    }
 }
 
 .cuisineTags {

@@ -28,13 +28,14 @@ import { IoLocationOutline } from 'react-icons/io5';
 import OrderOnlineUltraPremiumContent from '../OrderOnlineUltraPremiumContent/OrderOnlineUltraPremiumContent';
 import OutletsAroundYou, { Outlet } from '../OrderOnlineUltraPremiumContent/OutletsAroundYou/OutletsAroundYou';
 import OpenCloseTime from '../OrderOnlineUltraPremiumContent/OpenCloseTime/OpenCloseTime';
-import BookTablePopUp from '../BookTablePopUp/BookTablePopUp';
+import BookTablePopUp from '../BookingFlow/BookTablePopUp/BookTablePopUp';
 import { Tag } from 'lucide-react';
 import RelatedToRestaurant from '../OrderOnlineUltraPremiumContent/RelatedToRestaurant/RelatedToRestaurant';
 import AboutRestaurant from '../OrderOnlineUltraPremiumContent/AboutRestaurant/AboutRestaurant';
 import FAQsRestaurant from '../OrderOnlineUltraPremiumContent/FAQsRestaurant/FAQsRestaurant';
 import DisclaimerRestaurant from '../OrderOnlineUltraPremiumContent/DisclaimerRestaurant/DisclaimerRestaurant';
 import PopularSearchesRestaurant from '../OrderOnlineUltraPremiumContent/PopularSearchesRestaurant/PopularSearchesRestaurant';
+import ImagePreviewCarousal, { GalleryImage } from '../../FoodDesigns/ImagePreviewCarousal/ImagePreviewCarousal';
 
 export interface TabItem {
     id: string;
@@ -1589,9 +1590,8 @@ const OrderOnlineContent = () => {
                         <h3 className={styles.dealsTitle}>Deals for you</h3>
                         <div className={styles.dealsNavButtons}>
                             <button
-                                className={`${styles.dealNavBtn} ${styles.dealNavPrev} ${
-                                    currentDealIndex === 0 ? styles.dealNavDisabled : ''
-                                }`}
+                                className={`${styles.dealNavBtn} ${styles.dealNavPrev} ${currentDealIndex === 0 ? styles.dealNavDisabled : ''
+                                    }`}
                                 onClick={handlePrevDeal}
                                 disabled={currentDealIndex === 0}
                                 aria-label="Previous deals"
@@ -1608,9 +1608,8 @@ const OrderOnlineContent = () => {
                                 </svg>
                             </button>
                             <button
-                                className={`${styles.dealNavBtn} ${styles.dealNavNext} ${
-                                    currentDealIndex >= maxIndex ? styles.dealNavDisabled : ''
-                                }`}
+                                className={`${styles.dealNavBtn} ${styles.dealNavNext} ${currentDealIndex >= maxIndex ? styles.dealNavDisabled : ''
+                                    }`}
                                 onClick={handleNextDeal}
                                 disabled={currentDealIndex >= maxIndex}
                                 aria-label="Next deals"
@@ -1755,9 +1754,8 @@ const OrderOnlineContent = () => {
                                 key={category}
                                 type="button"
                                 onClick={() => setActiveCategory(category)}
-                                className={`${styles.categoryButton} ${
-                                    activeCategory === category ? styles.activeCategory : ''
-                                }`}
+                                className={`${styles.categoryButton} ${activeCategory === category ? styles.activeCategory : ''
+                                    }`}
                             >
                                 {category}
                             </button>
@@ -1773,9 +1771,8 @@ const OrderOnlineContent = () => {
                     {categories.map((cat, idx) => (
                         <p
                             key={idx}
-                            className={`${styles.orderOnlineCategoryItem} ${
-                                activeCategory === cat ? styles.orderOnlineCategoryActive : ''
-                            }`}
+                            className={`${styles.orderOnlineCategoryItem} ${activeCategory === cat ? styles.orderOnlineCategoryActive : ''
+                                }`}
                             onClick={() => setActiveCategory(cat)}
                         >
                             {cat}
@@ -1987,6 +1984,7 @@ function AddControl({ item, qty, onAdd, onRemove }: AddControlProps) {
 
 const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpenOrderModal?: () => void }) => {
     // Sample menu items data based on the image
+    const [isMenuOpen, setisMenuOpen] = useState(false);
     const menuItems = [
         {
             id: 1,
@@ -2166,6 +2164,120 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
         // Add your navigation or modal logic here
     };
 
+    // --- Menu Brochure Images (Complete List) ---
+const viewMenuBrochureDefaultList: GalleryImage[] = [
+  {
+    id: "1",
+    src: "/products/menu01778661843508.jpg",
+    alt: "Menu page 1",
+  },
+  {
+    id: "2",
+    src: "/products/menu11778661843929.jpg",
+    alt: "Menu page 2",
+  },
+  {
+    id: "3",
+    src: "/products/menu21778661844312.jpg",
+    alt: "Menu page 3",
+  },
+  {
+    id: "4",
+    src: "/products/menu31778661844729.jpg",
+    alt: "Menu page 4",
+  },
+  {
+    id: "5",
+    src: "/products/menu41778661845102.jpg",
+    alt: "Menu page 5",
+  },
+  {
+    id: "6",
+    src: "/products/menu51778661845432.jpg",
+    alt: "Menu page 6",
+  },
+  {
+    id: "7",
+    src: "/products/menu61778661845817.jpg",
+    alt: "Menu page 7",
+  },
+  {
+    id: "8",
+    src: "/products/menu71778661846193.jpg",
+    alt: "Menu page 8",
+  },
+  {
+    id: "9",
+    src: "/products/menu81778661846532.jpg",
+    alt: "Menu page 9",
+  },
+  {
+    id: "10",
+    src: "/products/menu91778661846881.jpg",
+    alt: "Menu page 10",
+  },
+  {
+    id: "11",
+    src: "/products/menu101778661847260.jpg",
+    alt: "Menu page 11",
+  },
+  {
+    id: "12",
+    src: "/products/menu111778661863797.jpg",
+    alt: "Menu page 12",
+  },
+  {
+    id: "13",
+    src: "/products/menu121778661864128.jpg",
+    alt: "Menu page 13",
+  },
+  {
+    id: "14",
+    src: "/products/menu131778661864490.jpg",
+    alt: "Menu page 14",
+  },
+  {
+    id: "15",
+    src: "/products/menu141778661864865.jpg",
+    alt: "Menu page 15",
+  },
+  {
+    id: "16",
+    src: "/products/menu151778661865247.jpg",
+    alt: "Menu page 16",
+  },
+  {
+    id: "17",
+    src: "/products/menu161778661865688.jpg",
+    alt: "Menu page 17",
+  },
+  {
+    id: "18",
+    src: "/products/menu171778661866106.jpg",
+    alt: "Menu page 18",
+  },
+  {
+    id: "19",
+    src: "/products/menu181778661866475.jpg",
+    alt: "Menu page 19",
+  },
+  {
+    id: "20",
+    src: "/products/menu191778661866878.jpg",
+    alt: "Menu page 20",
+  },
+  {
+    id: "21",
+    src: "/products/menu201778661867270.jpg",
+    alt: "Menu page 21",
+  },
+  {
+    id: "22",
+    src: "/products/menu211778661867670.jpg",
+    alt: "Menu page 22",
+  },
+];
+
 
     return (
         <div className={styles.tabContent}>
@@ -2179,7 +2291,7 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
                 </div>
 
                 <div className={styles.cuisineSection}>
-                    <h4 className={styles.cuisineTitle}>Cuisines: <span className={styles.menuBrochure}>View Menu Brochure</span></h4>
+                    <h4 className={styles.cuisineTitle}>Cuisines: <span className={styles.menuBrochure} onClick={() => setisMenuOpen(true)}>View Menu Brochure</span></h4>
                     <div className={styles.cuisineTags}>
                         {/* {restaurant?.cuisine && restaurant.cuisine.length > 0 ? (
                             restaurant.cuisine.map((item: string, index: number) => (
@@ -2275,6 +2387,17 @@ const MenuContent = ({ restaurant, onOpenOrderModal }: { restaurant?: any; onOpe
                         {/* )} */}
                     </div>
                 </div>
+
+                {/* ✅ Move ImagePreviewCarousal OUTSIDE the map loop */}
+                <ImagePreviewCarousal
+                    isOpen={isMenuOpen}
+                    images={viewMenuBrochureDefaultList}
+                    initialIndex={0}
+                    onClose={() => setisMenuOpen(false)}
+                    title="Menu"
+                    // subtitle="Lara Bar & Kitchen"
+                    // categories={["all", "Food", "Beverages"]}
+                />
 
                 {/* Menu Items List - New Component */}
                 <div className={styles.menuItemsWrapper}>
@@ -3152,21 +3275,21 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
                     }
 
                     return (
-                            <section
-                                key={tab.id}
-                                id={tab.id}
-                                ref={(el) => {
-                                    tabRefs.current[tab.id] = el;
-                                }}
-                                className={`${styles.section} ${activeTab === tab.id ? styles.activeSection : ''}`}
-                            >
-                                <div className={styles.sectionContent}>
-                                    {tab.content}
-                                </div>
-                            </section>
+                        <section
+                            key={tab.id}
+                            id={tab.id}
+                            ref={(el) => {
+                                tabRefs.current[tab.id] = el;
+                            }}
+                            className={`${styles.section} ${activeTab === tab.id ? styles.activeSection : ''}`}
+                        >
+                            <div className={styles.sectionContent}>
+                                {tab.content}
+                            </div>
+                        </section>
                     );
                 })}
-               
+
             </main>
 
             {/* Order Online Modal - Regular */}
@@ -3185,7 +3308,7 @@ const DineOutRestDetailsTabs: React.FC<DineOutRestDetailsTabsProps> = ({
                 <OrderOnlineUltraPremiumContent
                     restaurantName="Burger King"
                 />
-                
+
             </OrderOnlineModalUltraPremium>
         </div>
     );

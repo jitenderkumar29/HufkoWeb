@@ -7,15 +7,18 @@ import BookTablePopUp, {
     BookingOffer,
     MealSession,
     TimeSlot,
-} from "../BookTablePopUp/BookTablePopUp";
+} from "./BookTablePopUp/BookTablePopUp";
 
-import BillDetailsRestaurant from "../BillDetailsRestaurant/BillDetailsRestaurant";
+import BillDetailsRestaurant from "./BillDetailsRestaurant/BillDetailsRestaurant";
 
 import ReviewBookingDetails, {
     BookingReviewData,
-} from "../ReviewBookingDetails/ReviewBookingDetails";
+} from "./ReviewBookingDetails/ReviewBookingDetails";
 
-import PaymentOptions from "../PaymentOptions/PaymentOptions";
+import PaymentOptions from "./PaymentOptions/PaymentOptions";
+import AddCardForPayment from "./AddCardForPayment/AddCardForPayment";
+import WalletForPayment from "./WalletForPayment/WalletForPayment";
+import SelectNetBanking from "./SelectNetBanking/SelectNetBanking";
 
 // =====================================================
 // TYPES
@@ -63,58 +66,113 @@ export interface BookingFlowProps {
 }
 
 // =====================================================
-// COMPONENT
+// HELPER COMPONENT: PaymentSubRouter
+// =====================================================
+
+type PaymentView = 'options' | 'addCard' | 'wallet' | 'netbanking';
+
+/**
+ * This component manages the state between the Payment Options list,
+ * the Add Card form, the Wallet selection screen, and the Netbanking
+ * bank selection screen.
+ * It acts as a mini-router for the payment step.
+ */
+const PaymentSubRouter: React.FC<{
+    amount: number;
+    onBack: () => void;
+    onComplete: () => void;
+}> = ({ amount, onBack, onComplete }) => {
+    const [view, setView] = useState<PaymentView>('options');
+
+    // --- View: Add Card ---
+    if (view === 'addCard') {
+        return (
+            <AddCardForPayment
+                amount={amount}
+                onBack={() => setView('options')}
+                onProceed={() => {
+                    console.log("Card added successfully");
+                    onComplete();
+                }}
+            />
+        );
+    }
+
+    // --- View: Wallet ---
+    if (view === 'wallet') {
+        return (
+            <WalletForPayment
+                amount={amount}
+                onBack={() => setView('options')}
+                onLinkWallet={(wallet) => {
+                    console.log(`Linking ${wallet.name}...`);
+                    // Simulate successful linking and payment completion
+                    onComplete();
+                }}
+            />
+        );
+    }
+
+    // --- View: Netbanking ---
+    if (view === 'netbanking') {
+        return (
+            <SelectNetBanking
+                amount={amount}
+                onBack={() => setView('options')}
+                onSelectBank={(bank) => {
+                    console.log(`Selected bank: ${bank.name}`);
+                    // In a real app, this would redirect to the bank's page
+                    // For now, we simulate successful payment completion
+                    onComplete();
+                }}
+            />
+        );
+    }
+
+    // --- View: Main Payment Options ---
+    return (
+        <PaymentOptions
+            amount={amount}
+            onBack={onBack}
+            onAddCard={() => setView('addCard')}
+            onWalletClick={() => setView('wallet')}
+            onNetbankingClick={() => setView('netbanking')}
+        />
+    );
+};
+
+// =====================================================
+// MAIN COMPONENT
 // =====================================================
 
 const BookingFlow: React.FC<BookingFlowProps> = ({
     restaurantName = "Currypatta",
-
     restaurantLocation = "Lohamandi, Agra",
-
     restaurantImage =
         "https://dt4l9bx31tioh.cloudfront.net/eazymedia/restaurant/713841/restaurant06a0428f46c977.jpeg?width=818&height=450&mode=fit&format=auto&quality=80",
-
     restaurantAddress = "Lohamandi, Agra",
-
     coverChargePerGuest = 10,
-
     planPrice = 1,
-
     userName = "Jitender Kumar",
-
     userPhone = "+917042341856",
-
     userEmail = "jitenderkumar2929@gmail.com",
-
     onComplete,
-
     onClose,
 }) => {
     // =================================================
     // STATE
     // =================================================
 
-    const [step, setStep] =
-        useState<BookingStep>("select");
-
-    const [bookingData, setBookingData] =
-        useState<BookingData | null>(null);
-
-    const [billDetails, setBillDetails] =
-        useState<BillDetails | null>(null);
+    const [step, setStep] = useState<BookingStep>("select");
+    const [bookingData, setBookingData] = useState<BookingData | null>(null);
+    const [billDetails, setBillDetails] = useState<BillDetails | null>(null);
 
     // =================================================
     // STEP 1 → STEP 2
     // =================================================
 
-    const handleProceedFromSelect = (
-        data: BookingData
-    ) => {
-        console.log(
-            "🟢 BOOK TABLE → BILL DETAILS",
-            data
-        );
-
+    const handleProceedFromSelect = (data: BookingData) => {
+        console.log("🟢 BOOK TABLE → BILL DETAILS", data);
         setBookingData(data);
         setStep("bill");
     };
@@ -123,18 +181,9 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // STEP 2 → STEP 3
     // =================================================
 
-    const handleProceedFromBill = (
-        details: BillDetails
-    ) => {
-        console.log(
-            "🔥 BILL DETAILS → REVIEW",
-            details
-        );
-
-        // Save bill information
+    const handleProceedFromBill = (details: BillDetails) => {
+        console.log("🔥 BILL DETAILS → REVIEW", details);
         setBillDetails(details);
-
-        // Move to Review screen
         setStep("review");
     };
 
@@ -143,10 +192,7 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // =================================================
 
     const handleProceedFromReview = () => {
-        console.log(
-            "🟢 REVIEW → PAYMENT"
-        );
-
+        console.log("🟢 REVIEW → PAYMENT");
         setStep("payment");
     };
 
@@ -155,10 +201,7 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // =================================================
 
     const handleBackFromBill = () => {
-        console.log(
-            "🔵 BILL → BOOK TABLE"
-        );
-
+        console.log("🔵 BILL → BOOK TABLE");
         setStep("select");
     };
 
@@ -167,10 +210,7 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // =================================================
 
     const handleBackFromReview = () => {
-        console.log(
-            "🔵 REVIEW → BILL DETAILS"
-        );
-
+        console.log("🔵 REVIEW → BILL DETAILS");
         setStep("bill");
     };
 
@@ -179,10 +219,7 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // =================================================
 
     const handleBackFromPayment = () => {
-        console.log(
-            "🔵 PAYMENT → REVIEW"
-        );
-
+        console.log("🔵 PAYMENT → REVIEW");
         setStep("review");
     };
 
@@ -191,155 +228,88 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // =================================================
 
     const handlePaymentComplete = () => {
-        console.log(
-            "🟢 PAYMENT COMPLETED"
-        );
+        console.log("🟢 PAYMENT COMPLETED");
 
-        if (
-            !bookingData ||
-            !billDetails
-        ) {
-            console.error(
-                "❌ Booking data or bill details are missing",
-                {
-                    bookingData,
-                    billDetails,
-                }
-            );
-
+        if (!bookingData || !billDetails) {
+            console.error("❌ Booking data or bill details are missing", {
+                bookingData,
+                billDetails,
+            });
             return;
         }
 
-        onComplete?.(
-            bookingData,
-            billDetails
-        );
+        onComplete?.(bookingData, billDetails);
     };
 
     // =================================================
     // REVIEW DATA
     // =================================================
 
-    const reviewData: BookingReviewData | null =
-        bookingData
-            ? {
-                restaurantName,
-
-                restaurantAddress,
-
-                restaurantImage,
-
-                date: bookingData.date
-                    ? `${bookingData.date.day}, ${bookingData.date.date}`
-                    : "Today",
-
-                time:
-                    bookingData.timeSlot?.time ||
-                    "06:00 PM",
-
-                guests:
-                    bookingData.guests,
-
-                userName,
-
-                userPhone,
-
-                userEmail,
-
-                restaurantOffer:
-                    bookingData.offer
-                        ? {
-                            title:
-                                bookingData.offer.title,
-
-                            subtext:
-                                bookingData.offer.subtitle ||
-                                "Book & Pay to Claim",
-                        }
-                        : undefined,
-
-                paymentOffers: [
-                    {
-                        id: "1",
-
-                        logo:
-                            "https://dt4l9bx31tioh.cloudfront.net/eazymedia/settings/payment/indus-ind-3x.png?format=auto&quality=80",
-
-                        name:
-                            "EazyDiner IndusInd Bank Card",
-
-                        discount:
-                            "25% off upto ₹1000",
-                    },
-
-                    {
-                        id: "2",
-
-                        logo:
-                            "https://via.placeholder.com/100x60?text=Axis",
-
-                        name:
-                            "Axis Bank",
-
-                        discount:
-                            "Flat ₹1000 off",
-                    },
-
-                    {
-                        id: "3",
-
-                        logo:
-                            "https://via.placeholder.com/100x60?text=HDFC",
-
-                        name:
-                            "HDFC Bank Credit Card",
-
-                        discount:
-                            "10% off upto ₹1500",
-                    },
-                ],
-            }
-            : null;
+    const reviewData: BookingReviewData | null = bookingData
+        ? {
+              restaurantName,
+              restaurantAddress,
+              restaurantImage,
+              date: bookingData.date
+                  ? `${bookingData.date.day}, ${bookingData.date.date}`
+                  : "Today",
+              time: bookingData.timeSlot?.time || "06:00 PM",
+              guests: bookingData.guests,
+              userName,
+              userPhone,
+              userEmail,
+              restaurantOffer: bookingData.offer
+                  ? {
+                        title: bookingData.offer.title,
+                        subtext:
+                            bookingData.offer.subtitle ||
+                            "Book & Pay to Claim",
+                    }
+                  : undefined,
+              paymentOffers: [
+                  {
+                      id: "1",
+                      logo: "https://dt4l9bx31tioh.cloudfront.net/eazymedia/settings/payment/indus-ind-3x.png?format=auto&quality=80",
+                      name: "EazyDiner IndusInd Bank Card",
+                      discount: "25% off upto ₹1000",
+                  },
+                  {
+                      id: "2",
+                      logo: "https://via.placeholder.com/100x60?text=Axis",
+                      name: "Axis Bank",
+                      discount: "Flat ₹1000 off",
+                  },
+                  {
+                      id: "3",
+                      logo: "https://via.placeholder.com/100x60?text=HDFC",
+                      name: "HDFC Bank Credit Card",
+                      discount: "10% off upto ₹1500",
+                  },
+              ],
+          }
+        : null;
 
     // =================================================
     // DEBUG
     // =================================================
 
-    console.log(
-        "🔄 BOOKING FLOW RENDER:",
-        {
-            step,
-            bookingData,
-            billDetails,
-        }
-    );
+    console.log("🔄 BOOKING FLOW RENDER:", {
+        step,
+        bookingData,
+        billDetails,
+    });
 
     // =================================================
     // STEP 4: PAYMENT
     // =================================================
 
-    if (
-        step === "payment" &&
-        billDetails
-    ) {
+    if (step === "payment" && billDetails) {
         return (
-            <PaymentOptions
+            <PaymentSubRouter
                 key="payment"
-                amount={
-                    billDetails.totalPay
-                }
-                onBack={
-                    handleBackFromPayment
-                }
-                onAddCard={
-                    handlePaymentComplete
-                }
-                onWalletClick={
-                    handlePaymentComplete
-                }
-                onNetbankingClick={
-                    handlePaymentComplete
-                }
+                amount={billDetails.totalPay}
+                onBack={handleBackFromPayment}
+                onComplete={handlePaymentComplete}
             />
         );
     }
@@ -348,24 +318,15 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // STEP 3: REVIEW
     // =================================================
 
-    if (
-        step === "review" &&
-        reviewData
-    ) {
+    if (step === "review" && reviewData) {
         return (
             <ReviewBookingDetails
                 key="review"
                 data={reviewData}
-                onBack={
-                    handleBackFromReview
-                }
-                onProceed={
-                    handleProceedFromReview
-                }
+                onBack={handleBackFromReview}
+                onProceed={handleProceedFromReview}
                 onEditContact={() => {
-                    console.log(
-                        "Edit contact clicked"
-                    );
+                    console.log("Edit contact clicked");
                 }}
             />
         );
@@ -375,46 +336,21 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     // STEP 2: BILL DETAILS
     // =================================================
 
-    if (
-        step === "bill" &&
-        bookingData
-    ) {
+    if (step === "bill" && bookingData) {
         return (
             <BillDetailsRestaurant
                 key="bill"
-                bookingData={
-                    bookingData
-                }
-                restaurantName={
-                    restaurantName
-                }
-                restaurantLocation={
-                    restaurantLocation
-                }
-                coverChargePerGuest={
-                    coverChargePerGuest
-                }
-                planPrice={
-                    planPrice
-                }
-                userName={
-                    userName
-                }
-                userPhone={
-                    userPhone
-                }
-                userEmail={
-                    userEmail
-                }
-                onBack={
-                    handleBackFromBill
-                }
-                onProceed={
-                    handleProceedFromBill
-                }
-                onClose={
-                    onClose
-                }
+                bookingData={bookingData}
+                restaurantName={restaurantName}
+                restaurantLocation={restaurantLocation}
+                coverChargePerGuest={coverChargePerGuest}
+                planPrice={planPrice}
+                userName={userName}
+                userPhone={userPhone}
+                userEmail={userEmail}
+                onBack={handleBackFromBill}
+                onProceed={handleProceedFromBill}
+                onClose={onClose}
             />
         );
     }
@@ -426,21 +362,11 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
     return (
         <BookTablePopUp
             key="select"
-            restaurantName={
-                restaurantName
-            }
-            restaurantLocation={
-                restaurantLocation
-            }
-            onBack={
-                onClose
-            }
-            onClose={
-                onClose
-            }
-            onProceed={
-                handleProceedFromSelect
-            }
+            restaurantName={restaurantName}
+            restaurantLocation={restaurantLocation}
+            onBack={onClose}
+            onClose={onClose}
+            onProceed={handleProceedFromSelect}
         />
     );
 };

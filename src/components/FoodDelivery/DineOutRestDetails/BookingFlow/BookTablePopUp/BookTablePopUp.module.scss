@@ -1,48 +1,60 @@
 /* =========================================
    BOOK TABLE POPUP - FULL SCREEN MODAL
 ========================================= */
-@use "../../../../styles/variables.scss" as *;
+@use "../../../../../styles/variables.scss" as *;
+
+// ---------- Scrollbar mixin (reusable) ----------
+@mixin thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #c9ced7 transparent;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c9ced7;
+        border-radius: 10px;
+
+        &:hover {
+            background: #aab1bd;
+        }
+    }
+
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
 
 .modalOverlay {
     position: fixed;
     inset: 0;
     z-index: 999999;
 
-    width: 950px;
-    height: 100vh;
-    height: 100dvh;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    background: $background-linear-gradient-2;
+    background-color: rgba(0, 0, 0, 0.5);
 
     animation: fadeIn 0.25s ease;
-
-    scrollbar-width: thin;
-    scrollbar-color: #c9ced7 transparent;
-}
-
-.modalOverlay::-webkit-scrollbar {
-    width: 6px;
-}
-
-.modalOverlay::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.modalOverlay::-webkit-scrollbar-thumb {
-    background: #c9ced7;
-    border-radius: 10px;
 }
 
 .bookTablePopUp {
     position: relative;
 
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    width: 950px;
+    max-width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
 
     padding-bottom: 90px;
 
@@ -64,6 +76,8 @@
             #f4f5f9 0%,
             #eceef4 100%
         );
+
+    @include thin-scrollbar;
 }
 
 /* =========================================

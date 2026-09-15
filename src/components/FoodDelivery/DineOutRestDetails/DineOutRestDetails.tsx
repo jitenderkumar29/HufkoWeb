@@ -27,8 +27,9 @@ import Image from 'next/image';
 import mapIcon2 from '../../../../public/icons/mapIcon2.png';
 import yesBankImage from '../../../../public/icons/yesBank.png';
 import DineOutRestDetailsTabs from './DineOutRestDetailsTabs/DineOutRestDetailsTabs';
-import BookTablePopUp from './BookTablePopUp/BookTablePopUp';
+import BookTablePopUp from './BookingFlow/BookTablePopUp/BookTablePopUp';
 import BookingFlow from './BookingFlow/BookingFlow';
+import ImagePreviewCarousal from '../FoodDesigns/ImagePreviewCarousal/ImagePreviewCarousal';
 
 // Types
 export interface RestaurantRoom {
@@ -83,6 +84,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
 
     // State for Book Table Popup
     const [isBookTableOpen, setIsBookTableOpen] = useState(false);
+    const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
     // Default values
     const location = 'Delhi, India';
@@ -574,16 +576,19 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                                 height={500}
                                 width={600}
                                 style={{ objectFit: 'cover' }}
+                                onClick={() => setIsGalleryOpen(true)}
                             />
                             <button
                                 className={`${styles.navButton} ${styles.prevButton}`}
                                 onClick={prevImage}
+                                aria-label="Previous image"
                             >
                                 <FontAwesomeIcon icon={faChevronLeft} />
                             </button>
                             <button
                                 className={`${styles.navButton} ${styles.nextButton}`}
                                 onClick={nextImage}
+                                aria-label="Next image"
                             >
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </button>
@@ -600,28 +605,20 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                                     >
                                         <Image
                                             src={thumb}
-                                            alt={`Thumbnail ${index + 1
-                                                }`}
+                                            alt={`Thumbnail ${index + 1}`}
                                             className={styles.thumbnail}
-                                            onClick={() =>
-                                                setCurrentImageIndex(
-                                                    index + 1
-                                                )
-                                            }
+                                            onClick={() => setIsGalleryOpen(true)}
+                                            // onClick={() =>
+                                            //     setCurrentImageIndex(index + 1)
+                                            // }
                                             height={160}
                                             width={200}
-                                            style={{
-                                                objectFit: 'cover',
-                                            }}
+                                            style={{ objectFit: 'cover' }}
                                         />
                                         {index === 2 && (
                                             <button
-                                                className={
-                                                    styles.viewAllPhotos
-                                                }
-                                                onClick={
-                                                    handleGalleryTabNav
-                                                }
+                                                className={styles.viewAllPhotos}
+                                                onClick={() => setIsGalleryOpen(true)}
                                             >
                                                 ALL PHOTOS
                                             </button>
@@ -631,6 +628,19 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         </div>
                     </div>
                 </div>
+
+                {/* ✅ Move ImagePreviewCarousal OUTSIDE the map loop */}
+                <ImagePreviewCarousal
+                    isOpen={isGalleryOpen}
+                    images={allImages.map((src, index) => ({
+                        id: String(index),
+                        src,
+                        alt: `Photo ${index + 1}`,
+                    }))}
+                    initialIndex={currentImageIndex}
+                    onClose={() => setIsGalleryOpen(false)}
+                    title="Photos"
+                />
 
                 {/* Right Section - Details */}
                 <div className={styles.detailsSection}>

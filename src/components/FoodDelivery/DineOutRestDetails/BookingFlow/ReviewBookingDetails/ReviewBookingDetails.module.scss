@@ -1,14 +1,11 @@
 // ReviewBookingDetails.module.scss
-@use "../../../../styles/variables.scss" as *;
+@use "../../../../../styles/variables.scss" as *;
 
 // ---------- Thin scrollbar mixin ----------
-
 @mixin thin-scrollbar {
-    // Firefox
     scrollbar-width: thin;
     scrollbar-color: #c9ced7 transparent;
 
-    // Chrome / Edge / Safari
     &::-webkit-scrollbar {
         width: 6px;
         height: 6px;
@@ -34,41 +31,35 @@
 
 // ---------- Modal Shell ----------
 
+// --- Overlay: Full screen semi-transparent black backdrop ---
 .modalOverlay {
     position: fixed;
     inset: 0;
     z-index: 999999;
 
-    width: 950px;
-    height: 100vh;
-    height: 100dvh;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    background: $background-linear-gradient-2;
-
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent black
     animation: fadeIn 0.25s ease;
-
-    // ✅ Thin gray scrollbar
-    @include thin-scrollbar;
 }
 
+// --- Modal Container: Centered, 950px wide, gradient background ---
 .container {
     display: flex;
     flex-direction: column;
+
+    width: 950px;
+    max-width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
     background: $background-linear-gradient-2;
-    min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: $gray-900;
-    width: 100%;
-    max-width: 950px;
-    height: 100vh;
-    max-height: 100vh;
-    z-index: 9999;
+    overflow: hidden;
 
-    // ✅ Thin gray scrollbar (in case container itself scrolls)
     @include thin-scrollbar;
 }
 
@@ -80,8 +71,7 @@
     background-color: $white;
     gap: 16px;
     box-shadow: $subheader-shadow;
-    position: sticky;
-    top: 0;
+    flex-shrink: 0;
     z-index: 10;
 
     .backButton {
@@ -124,17 +114,18 @@
     overflow-y: auto;
     padding-bottom: 1.5rem;
 
-    // ✅ Thin gray scrollbar
     @include thin-scrollbar;
 }
 
 // Reusable Card
 .card {
-    background-color: $white;
+    background: $background-linear-gradient;
+    // background-color: $white;
     border-radius: 12px;
+    border: 1px solid $gray-300;
     padding: 16px;
-    box-shadow: $subheader-shadow;
-    border: 1px solid $border-light;
+    box-shadow: $box-shadow-light;
+    // border: 1px solid $border-light;
 }
 
 // Restaurant Info Section
@@ -265,6 +256,7 @@
     flex-direction: column;
     gap: 0;
     position: relative;
+    
 }
 
 .offerBlock {
@@ -327,6 +319,7 @@
     padding: 12px;
     cursor: pointer;
     transition: all 0.2s ease;
+    
 
     &:hover {
         border-color: $orange-400;
@@ -419,6 +412,7 @@
     flex-direction: column;
     gap: 8px;
     position: relative;
+    
 }
 
 .contactHeader {
@@ -463,23 +457,17 @@
 
 // Sticky Bottom Action
 .bottomAction {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    flex-shrink: 0;
     padding: 16px;
-    background-color: $white !important;
+    background-color: $white;
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
     z-index: 20;
-    padding: 1rem !important;
-    // background-color: $white;
     border-radius: 20px 20px 0 0;
 
     @media (min-width: $breakpoint-md) {
-        position: sticky;
         background-color: transparent;
         box-shadow: none;
-        padding: 16px 0;
+        padding: 16px 20px;
     }
 }
 
@@ -501,29 +489,5 @@
 
     &:active {
         transform: scale(0.98);
-    }
-}
-
-// Responsive Adjustments
-@media (min-width: $breakpoint-md) {
-    .container {
-        align-items: center;
-    }
-
-    .header,
-    .content,
-    .bottomAction {
-        width: 100%;
-    }
-
-    .content {
-        background-color: transparent;
-    }
-
-    .bottomAction {
-        // max-width: 600px;
-        margin: 0 auto;
-        position: sticky;
-        bottom: 0;
     }
 }
