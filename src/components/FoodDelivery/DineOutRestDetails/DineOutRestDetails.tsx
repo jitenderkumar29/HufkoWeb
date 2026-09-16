@@ -30,6 +30,9 @@ import DineOutRestDetailsTabs from './DineOutRestDetailsTabs/DineOutRestDetailsT
 import BookTablePopUp from './BookingFlow/BookTablePopUp/BookTablePopUp';
 import BookingFlow from './BookingFlow/BookingFlow';
 import ImagePreviewCarousal from '../FoodDesigns/ImagePreviewCarousal/ImagePreviewCarousal';
+import PayBillAmount, { OfferPayBillInterface } from './PayBill/PayBillAmount/PayBillAmount';
+import PayBillFlow from './PayBill/PayBillFlow';
+import { BestCoupon } from './PayBill/PayBillSummary/PayBillSummary';
 
 // Types
 export interface RestaurantRoom {
@@ -84,6 +87,7 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
 
     // State for Book Table Popup
     const [isBookTableOpen, setIsBookTableOpen] = useState(false);
+    const [isPayBillOpen, setIsPayBillOpen] = useState(false);
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
     // Default values
@@ -92,6 +96,71 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
     const time = '19:00';
     const guestCount = 2;
     const childCount = 0;
+
+    const handleBillPayBack = () => {
+        console.log("Closing Pay Bill Modal");
+        setIsPayBillOpen(false); // ✅ This actually closes the modal
+    };
+
+    const handleBillPayContinue = (amount: string) => {
+        console.log(`Proceeding with amount: ₹${amount}`);
+        // Add your navigation/payment logic here
+        // router.push('/checkout?amount=' + amount);
+        setIsPayBillOpen(false); // Optional: close modal after continue
+    };
+
+     const bestCoupon: BestCoupon = {
+        bankLogoUrl: '/products/new_coupon_25_logo_hsbc_full_28thJuly.png',
+        saveAmount: 720,
+        couponCode: 'HSBCTAJ1500',
+    };
+
+    // --- Handlers ---
+    const handleClosePayBillFlow = () => {
+        console.log('Closing Pay Bill Flow');
+        setIsPayBillOpen(false);
+    };
+
+    const handleSelectPayment = (finalAmount: number) => {
+        console.log(`Proceeding to payment gateway for ₹${finalAmount}`);
+        // router.push(`/payment?amount=${finalAmount}`);
+        setIsPayBillOpen(false);
+    };
+
+
+    const restaurantOffers: OfferPayBillInterface[] = [
+        {
+            id: 'r1',
+            title: 'RESTAURANT OFFER',
+            value: 'Flat 20% Off',
+            subtitle: 'on total bill',
+            iconUrl: 'https://dt4l9bx31tioh.cloudfront.net/eazymedia/home/icons/flat-off.png?format=auto&quality=80',
+        },
+    ];
+
+    const addonOffers: OfferPayBillInterface[] = [
+        {
+            id: 'a1',
+            title: 'ADD-ON OFFERS',
+            value: '20% Off',
+            subtitle: 'upto ₹500',
+            iconUrl: 'https://dt4l9bx31tioh.cloudfront.net/eazymedia/icons/new_coupon_10June25_logo_indusind_min.png?format=auto&quality=80',
+        },
+        {
+            id: 'a2',
+            title: 'ADD-ON OFFERS',
+            value: '₹1000 Off',
+            subtitle: 'with AXIS',
+            iconUrl: 'https://via.placeholder.com/32', // Replace with actual URL
+        },
+        {
+            id: 'a3',
+            title: 'ADD-ON OFFERS',
+            value: '25% Off',
+            subtitle: 'upto ₹1000',
+            iconUrl: 'https://via.placeholder.com/32', // Replace with actual URL
+        }
+    ];
 
     // Mock restaurant data
     const restaurantData: RestaurantDataInterface[] = [
@@ -158,20 +227,20 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
         'Wheelchair Access',
     ] as const;
 
-    const scrollToTableOptions = () => {
-        const tableOptionsSection = document.getElementById('table-options');
-        if (tableOptionsSection) {
-            const offset = 150;
-            const elementPosition =
-                tableOptionsSection.getBoundingClientRect().top;
-            const offsetPosition =
-                elementPosition + window.pageYOffset - offset;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth',
-            });
-        }
-    };
+    // const scrollToTableOptions = () => {
+    //     const tableOptionsSection = document.getElementById('table-options');
+    //     if (tableOptionsSection) {
+    //         const offset = 150;
+    //         const elementPosition =
+    //             tableOptionsSection.getBoundingClientRect().top;
+    //         const offsetPosition =
+    //             elementPosition + window.pageYOffset - offset;
+    //         window.scrollTo({
+    //             top: offsetPosition,
+    //             behavior: 'smooth',
+    //         });
+    //     }
+    // };
 
     const scrollToLocationOptions = () => {
         const locationSection = document.getElementById('location');
@@ -716,7 +785,12 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         <div className={styles.bookTableCoupon}>
                             <button
                                 className={styles.selectRoomButton}
-                                onClick={scrollToTableOptions}
+                                onClick={() => {
+                                    console.log(
+                                        'Book Table clicked - opening popup'
+                                    );
+                                    setIsPayBillOpen(true);
+                                }}
                             >
                                 Pay Bill{' '}
                                 <FontAwesomeIcon
@@ -728,7 +802,12 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                         <div className={styles.bookTableCoupon}>
                             <button
                                 className={styles.selectRoomButton}
-                                onClick={scrollToTableOptions}
+                            // onClick={() => {
+                            //     console.log(
+                            //         'Book Table clicked - opening popup'
+                            //     );
+                            //     setIsBookTableOpen(true);
+                            // }}
                             >
                                 Order Now{' '}
                                 <FontAwesomeIcon
@@ -793,6 +872,29 @@ const DineOutRestDetails: React.FC<IDProps> = ({ id }) => {
                     }}
                 />
             )}
+
+            {/* Book Table Popup — now rendered via portal from inside BookTablePopUp */}
+            {isPayBillOpen && (
+                <PayBillFlow
+                    restaurantName="Lara Bar & Kitchen"
+                    location="Dhaula Kuan, South Delhi"
+                    restaurantOffers={restaurantOffers}
+                    addonOffers={addonOffers}
+                    bestCoupon={bestCoupon}
+                    onClose={handleClosePayBillFlow}
+                    onSelectPayment={handleSelectPayment}
+                />
+            )}
+            {/* {isPayBillOpen && (
+                <PayBillAmount
+                    restaurantName="Lara Bar & Kitchen"
+                    location="Dhaula Kuan, South Delhi"
+                    restaurantOffers={restaurantOffers}
+                    addonOffers={addonOffers}
+                    onBack={handleBillPayBack}
+                    onContinue={handleBillPayContinue}
+                />
+            )} */}
 
             <div className={styles.restaurantTabNavigationBar}>
                 {/* <RestaurantTabNavigationBar /> */}

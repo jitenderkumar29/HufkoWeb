@@ -55,6 +55,8 @@ $blue: #0000ff;
 $blue-dark: #2757AE;
 $yellow: #ffff00;
 $purple: #800080;
+$orange: #FF4815;
+$orange-dark: #ca3006;
 
 // Title
 $title-color: #111111;
@@ -125,12 +127,12 @@ $orange-800: #EF6C00;
 $orange-900: #F05B54;   // ✅ updated per your request
 
 // Red scale
-$red-100: #FFF3E0;   // very light peach
-$red-200: #FFE0B2;
-$red-300: #FFCC80;
-$red-400: #FFB74D;
-$red-500: #FF9800;
-$red-600: #FB8C00;
-$red-700: #F57C00;
-$red-800: #EF6C00;
-$red-900: #F05B54;   // ✅ updated per your request
+$red-100: #FFEBEE;   // very light peach (backgrounds, subtle hover states)
+$red-200: #FFCDD2;   // light red (borders, disabled states)
+$red-300: #EF9A9A;   // soft red (secondary accents)
+$red-400: #E57373;   // medium light red (hover on primary actions)
+$red-500: #F44336;   // base red (standard alerts, error text)
+$red-600: #E53935;   // medium dark red (active states)
+$red-700: #D32F2F;   // dark red (primary error buttons)
+$red-800: #C62828;   // deeper red (pressed states)
+$red-900: #f70e01;   // ✅ updated per your request (matches $orange-900 for brand consistency)
