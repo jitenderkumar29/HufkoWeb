@@ -19,674 +19,206 @@ export interface FoodCategoryItem {
   // ... other properties
 }
 
-export const FoodsCategories = [
-  // {
-  //   name: "All",
-  //   imageUrl: "/products/all_food.png",
-  //   url: "/"
-  // },
-  {
-    name: "Diet",
-    imageUrl: "/products/diet_food.png",
-    url: "/"
-  },
-  {
-    name: "Pizzas",
-    imageUrl: "/products/pizzas_food.png",
-    url: "/"
-  },
-  {
-    name: "Cakes",
-    imageUrl: "/products/cakes_food.png",
-    url: "/"
-  },
-  {
-    name: "Momos",
-    imageUrl: "/products/momos_food.png",
-    url: "/"
-  },
-  {
-    name: "Rolls",
-    imageUrl: "/products/rolls_food.png",
-    url: "/"
-  },
-  {
-    name: "Burgers",
-    imageUrl: "/products/burgers_food.png",
-    url: "/"
-  },
-  {
-    name: "Chole Bhat",
-    imageUrl: "/products/chole_bhature_food.png",
-    url: "/"
-  },
-  {
-    name: "Salad",
-    imageUrl: "/products/salad_food.png",
-    url: "/"
-  },
-  {
-    name: "Patty",
-    imageUrl: "/products/patty_food.png",
-    url: "/"
-  },
-  {
-    name: "Chinese",
-    imageUrl: "/products/chinese_food.png",
-    url: "/"
-  },
-  {
-    name: "Ice Cream",
-    imageUrl: "/products/ice_cream_food.png",
-    url: "/"
-  },
-  {
-    name: "Appam",
-    imageUrl: "/products/appam_food.png",
-    url: "/"
-  },
-  {
-    name: "Bath",
-    imageUrl: "/products/bath_food.png",
-    url: "/"
-  },
-  {
-    name: "Bonda",
-    imageUrl: "/products/bonda_food.png",
-    url: "/"
-  },
-  {
-    name: "Cutlet",
-    imageUrl: "/products/cutlet_food.png",
-    url: "/"
-  },
-  {
-    name: "Dessert",
-    imageUrl: "/products/dessert_food.png",
-    url: "/"
-  },
-  {
-    name: "Dhokla",
-    imageUrl: "/products/dhokla_food.png",
-    url: "/"
-  },
-  {
-    name: "Dosa",
-    imageUrl: "/products/dosa_food.png",
-    url: "/"
-  },
-  {
-    name: "Dholda",
-    imageUrl: "/products/dholda_food.png",
-    url: "/"
-  },
-  {
-    name: "Gulab Jam.",
-    imageUrl: "/products/gulab_jamun_food.png",
-    url: "/"
-  },
-  {
-    name: "Idli",
-    imageUrl: "/products/idli_food.png",
-    url: "/"
-  },
-  {
-    name: "Biryani",
-    imageUrl: "/products/biryani_food.png",
-    url: "/"
-  },
-  {
-    name: "Thali",
-    imageUrl: "/products/thali_food.png",
-    url: "/"
-  },
-  {
-    name: "Chicken",
-    imageUrl: "/products/chicken_food.png",
-    url: "/"
-  },
-  {
-    name: "Veg Meal",
-    imageUrl: "/products/veg_meal_food.png",
-    url: "/"
-  },
-  {
-    name: "North Indian",
-    imageUrl: "/products/north_indian_food.png",
-    url: "/"
-  },
-  {
-    name: "Paneer",
-    imageUrl: "/products/paneer_food.png",
-    url: "/"
-  },
-  {
-    name: "Fried Rice",
-    imageUrl: "/products/fried_rice_food.png",
-    url: "/"
-  },
-  {
-    name: "Noodles",
-    imageUrl: "/products/noodles_food.png",
-    url: "/"
-  },
-  {
-    name: "Paratha",
-    imageUrl: "/products/paratha_food.png",
-    url: "/"
-  },
-  {
-    name: "Shawarma",
-    imageUrl: "/products/shawarma_food.png",
-    url: "/"
-  },
-  {
-    name: "South Indian",
-    imageUrl: "/products/south_indian_food.png",
-    url: "/"
-  },
-  {
-    name: "Aloo Tikki",
-    imageUrl: "/products/aloo_tikki_food.png",
-    url: "/"
-  },
-  {
-    name: "Pasta",
-    imageUrl: "/products/pasta_food.png",
-    url: "/"
-  },
-  {
-    name: "Pastry",
-    imageUrl: "/products/pastry_food.png",
-    url: "/"
-  },
-  {
-    name: "Pav Bhaji",
-    imageUrl: "/products/pav_bhaji_food.png",
-    url: "/"
-  },
-  {
-    name: "Sandwich",
-    imageUrl: "/products/sandwich_food.png",
-    url: "/"
-  },
-  {
-    name: "Shake",
-    imageUrl: "/products/shake_food.png",
-    url: "/"
-  },
-  {
-    name: "Samosa",
-    imageUrl: "/products/samosa_food.png",
-    url: "/"
-  },
-  {
-    name: "Poori",
-    imageUrl: "/products/poori_food.png",
-    url: "/"
-  },
-  {
-    name: "Bowl",
-    imageUrl: "/products/bowl_food.png",
-    url: "/"
-  },
-  {
-    name: "Poha",
-    imageUrl: "/products/poha_food.png",
-    url: "/"
-  },
-  {
-    name: "Sweets",
-    imageUrl: "/products/sweets_food.png",
-    url: "/"
-  },
-  {
-    name: "Chole Poori",
-    imageUrl: "/products/chole_poori_food.png",
-    url: "/"
-  },
-  {
-    name: "Khichdi",
-    imageUrl: "/products/khichdi_food.png",
-    url: "/"
-  },
-  {
-    name: "Chilli Chick.",
-    imageUrl: "/products/chilli_chicken_food.png",
-    url: "/"
-  },
-  {
-    name: "Tea",
-    imageUrl: "/products/tea_food.png",
-    url: "/"
-  },
-  {
-    name: "Vada Pav",
-    imageUrl: "/products/vada_pav_food.png",
-    url: "/"
-  },
-  {
-    name: "Masala Mag.",
-    imageUrl: "/products/masala_maggi_food.png",
-    url: "/"
-  },
-  {
-    name: "Kulche",
-    imageUrl: "/products/kulche_food.png",
-    url: "/"
-  },
-  {
-    name: "Wings",
-    imageUrl: "/products/wings_food.png",
-    url: "/"
-  },
-  {
-    name: "Aloo Poori",
-    imageUrl: "/products/aloo_poori_food.png",
-    url: "/"
-  },
-  {
-    name: "Omelette",
-    imageUrl: "/products/omelette_food.png",
-    url: "/"
-  },
-  {
-    name: "Non Veg",
-    imageUrl: "/products/non_veg_meal_food.png",
-    url: "/"
-  },
-  {
-    name: "Bread Pak.",
-    imageUrl: "/products/bread_pakoda_food.png",
-    url: "/"
-  },
-  {
-    name: "Coffee",
-    imageUrl: "/products/coffee_food.png",
-    url: "/"
-  },
-  {
-    name: "Poori Bhaji",
-    imageUrl: "/products/poori_bhaji_food.png",
-    url: "/"
-  },
-  {
-    name: "Pulao",
-    imageUrl: "/products/pulao_food.png",
-    url: "/"
-  },
-  {
-    name: "Chur Naan",
-    imageUrl: "/products/chur_chur_naan_food.png",
-    url: "/"
-  },
-  {
-    name: "Kebabs",
-    imageUrl: "/products/kebabs_food.png",
-    url: "/"
-  },
-  {
-    name: "Panipuri",
-    imageUrl: "/products/panipuri_food.png",
-    url: "/"
-  },
-  {
-    name: "Rasmalai",
-    imageUrl: "/products/rasmalai_food.png",
-    url: "/"
-  },
-  {
-    name: "Mutton",
-    imageUrl: "/products/mutton_food.png",
-    url: "/"
-  },
-  {
-    name: "Fish",
-    imageUrl: "/products/fish_food.png",
-    url: "/"
-  },
-  {
-    name: "Pakoda",
-    imageUrl: "/products/pakoda_food.png",
-    url: "/"
-  },
-  {
-    name: "Halwa",
-    imageUrl: "/products/halwa_food.png",
-    url: "/"
-  },
-  {
-    name: "Chop Suey",
-    imageUrl: "/products/chop_suey_food.png",
-    url: "/"
-  },
-  {
-    name: "Korma",
-    imageUrl: "/products/korma_food.png",
-    url: "/"
-  },
-  {
-    name: "Namkeen",
-    imageUrl: "/products/namkeen_food.png",
-    url: "/"
-  },
-  {
-    name: "Mushrooms",
-    imageUrl: "/products/mushrooms_food.png",
-    url: "/"
-  },
-  {
-    name: "Keema",
-    imageUrl: "/products/keema_food.png",
-    url: "/"
-  },
-  {
-    name: "Sundae",
-    imageUrl: "/products/sundae_food.png",
-    url: "/"
-  },
-  {
-    name: "Rasgulla",
-    imageUrl: "/products/rasgulla_food.png",
-    url: "/"
-  },
-  {
-    name: "Butter Chic.",
-    imageUrl: "/products/butter_chicken_food.png",
-    url: "/"
-  },
-  {
-    name: "Raj Kachori",
-    imageUrl: "/products/raj_kachori_food.png",
-    url: "/"
-  },
-  {
-    name: "Chaat",
-    imageUrl: "/products/chaat_food.png",
-    url: "/"
-  },
-  {
-    name: "Uttapam",
-    imageUrl: "/products/uttapam_food.png",
-    url: "/"
-  },
-  {
-    name: "Doughnut",
-    imageUrl: "/products/doughnut_food.png",
-    url: "/"
-  },
-  {
-    name: "Juice",
-    imageUrl: "/products/juice_food.png",
-    url: "/"
-  },
-  {
-    name: "Lassi",
-    imageUrl: "/products/lassi_food.png",
-    url: "/"
-  },
-  {
-    name: "Malai Kofta",
-    imageUrl: "/products/malai_kofta_food.png",
-    url: "/"
-  },
-  {
-    name: "Dahi Balle",
-    imageUrl: "/products/dahi_balle_food.png",
-    url: "/"
-  },
-  {
-    name: "Rajma",
-    imageUrl: "/products/rajma_food.png",
-    url: "/"
-  },
-  {
-    name: "Chicken Ha.",
-    imageUrl: "/products/chicken_handi_food.png",
-    url: "/"
-  },
-  {
-    name: "Cupcake",
-    imageUrl: "/products/cupcake_food.png",
-    url: "/"
-  },
-  {
-    name: "Bhel",
-    imageUrl: "/products/bhel_food.png",
-    url: "/"
-  },
-  {
-    name: "Muffin",
-    imageUrl: "/products/muffin_food.png",
-    url: "/"
-  },
-  {
-    name: "Cookies",
-    imageUrl: "/products/cookies_food.png",
-    url: "/"
-  },
-  {
-    name: "Chicken Ch.",
-    imageUrl: "/products/chicken_cha_food.png",
-    url: "/"
-  },
-  {
-    name: "Paneer Kul.",
-    imageUrl: "/products/paneer_kulche_food.png",
-    url: "/"
-  },
-  {
-    name: "Chaach",
-    imageUrl: "/products/chaach_food.png",
-    url: "/"
-  },
-  {
-    name: "Veg Lollipop",
-    imageUrl: "/products/veg_lollipop_food.png",
-    url: "/"
-  },
-  {
-    name: "Sub",
-    imageUrl: "/products/sub_food.png",
-    url: "/"
-  },
-  {
-    name: "Pancake",
-    imageUrl: "/products/pancake_food.png",
-    url: "/"
-  },
-  {
-    name: "Nihari",
-    imageUrl: "/products/nihari_food.png",
-    url: "/"
-  },
-  {
-    name: "Tacos",
-    imageUrl: "/products/tacos_food.png",
-    url: "/"
-  },
-  {
-    name: "Thepla",
-    imageUrl: "/products/thepla_food.png",
-    url: "/"
-  },
-  {
-    name: "Fafda",
-    imageUrl: "/products/fafda_food.png",
-    url: "/"
-  },
-  {
-    name: "Chocolate",
-    imageUrl: "/products/chocolate_food.png",
-    url: "/"
-  },
-  {
-    name: "Curd Rice",
-    imageUrl: "/products/curd_rice_food.png",
-    url: "/"
-  },
-  {
-    name: "Pudding",
-    imageUrl: "/products/pudding_food.png",
-    url: "/"
-  },
-  {
-    name: "Croissant",
-    imageUrl: "/products/croissant_food.png",
-    url: "/"
-  },
-  {
-    name: "Khandvi",
-    imageUrl: "/products/khandvi_food.png",
-    url: "/"
-  },
-  {
-    name: "Gajak",
-    imageUrl: "/products/gajak_food.png",
-    url: "/"
-  },
-  {
-    name: "Sambar Rice",
-    imageUrl: "/products/sambar_rice_food.png",
-    url: "/"
-  },
-  {
-    name: "Tart",
-    imageUrl: "/products/tart_food.png",
-    url: "/"
-  },
-  {
-    name: "Tiramisu",
-    imageUrl: "/products/tiramisu_food.png",
-    url: "/"
-  },
-  {
-    name: "Pie",
-    imageUrl: "/products/pie_food.png",
-    url: "/"
-  },
-  {
-    name: "Custard",
-    imageUrl: "/products/custard_food.png",
-    url: "/"
-  },
-  {
-    name: "Sev Poori",
-    imageUrl: "/products/sev_poori_food.png",
-    url: "/"
-  },
-  {
-    name: "Mousse",
-    imageUrl: "/products/mousse_food.png",
-    url: "/"
-  },
-  {
-    name: "Dal Kachori",
-    imageUrl: "/products/dal_kachori_food.png",
-    url: "/"
-  },
-  {
-    name: "Jalebi",
-    imageUrl: "/products/jalebi_food.png",
-    url: "/"
-  },
-  {
-    name: "Pyaaj Kach.",
-    imageUrl: "/products/pyaaj_kachori_food.png",
-    url: "/"
-  },
-  {
-    name: "Rajma Rice",
-    imageUrl: "/products/rajma_rice_food.png",
-    url: "/"
-  },
-  {
-    name: "Upma",
-    imageUrl: "/products/upma_food.png",
-    url: "/"
-  },
-  {
-    name: "Manchurian",
-    imageUrl: "/products/manchurian_food.png",
-    url: "/"
-  },
-  {
-    name: "Paneer Pak",
-    imageUrl: "/products/paneer_pakoda_food.png",
-    url: "/"
-  },
-  {
-    name: "Cheesecake",
-    imageUrl: "/products/cheesecake_food.png",
-    url: "/"
-  },
-  {
-    name: "Brownie",
-    imageUrl: "/products/brownie_food.png",
-    url: "/"
-  },
-  {
-    name: "Chaap",
-    imageUrl: "/products/chaap_food.png",
-    url: "/"
-  },
-  {
-    name: "Dal",
-    imageUrl: "/products/dal_food.png",
-    url: "/"
-  },
-  {
-    name: "Waffles",
-    imageUrl: "/products/waffles_food.png",
-    url: "/"
-  },
-  {
-    name: "Aloo Kach.",
-    imageUrl: "/products/aloo_kachori_food.png",
-    url: "/"
-  },
-  {
-    name: "Chole Kul.",
-    imageUrl: "/products/chole_kulche_food.png",
-    url: "/"
-  },
-  {
-    name: "Fries",
-    imageUrl: "/products/fries_food.png",
-    url: "/"
-  },
-  {
-    name: "Cold Coffee",
-    imageUrl: "/products/cold_coffee_food.png",
-    url: "/"
-  },
-  {
-    name: "Soup",
-    imageUrl: "/products/soup_food.png",
-    url: "/"
-  },
-  {
-    name: "Bhurji",
-    imageUrl: "/products/bhurji_food.png",
-    url: "/"
-  },
-  {
-    name: "Khasta Kac.",
-    imageUrl: "/products/khasta_kachori_food.png",
-    url: "/"
-  },
-  {
-    name: "Hot Dog",
-    imageUrl: "/products/hot_dog_food.png",
-    url: "/"
-  },
-  // {
-  //   name: "See All",
-  //   imageUrl: "/products/see_all_food.png",
-  //   url: "/"
-  // }
-];
+export interface FoodCategory {
+  foodId: string;
+  name: string;
+  imageUrl: string;
+  url: string;
+  category: string; 
+}
 
+export const FoodsCategories: FoodCategory[] = [
+
+  // ── Diet & Healthy ──────────────────────────────
+
+  { foodId: "diet",          name: "Diet",           imageUrl: "/products/diet_food.png",             url: "/", category: "Diet" },
+  { foodId: "salad",         name: "Salad",          imageUrl: "/products/salad_food.png",            url: "/", category: "Salad" },
+  { foodId: "bowl",          name: "Bowl",           imageUrl: "/products/bowl_food.png",             url: "/", category: "Bowl" },
+  { foodId: "soup",          name: "Soup",           imageUrl: "/products/soup_food.png",             url: "/", category: "Soup" },
+  { foodId: "khichdi",       name: "Khichdi",        imageUrl: "/products/khichdi_food.png",          url: "/", category: "Khichdi" },
+  { foodId: "curd_rice",     name: "Curd Rice",      imageUrl: "/products/curd_rice_food.png",        url: "/", category: "Curd Rice" },
+
+  // ── Pizzas ──────────────────────────────────────
+
+  { foodId: "pizzas",        name: "Pizzas",         imageUrl: "/products/pizzas_food.png",           url: "/", category: "Pizzas" },
+
+  // ── Burgers ─────────────────────────────────────
+
+  { foodId: "burgers",       name: "Burgers",        imageUrl: "/products/burgers_food.png",          url: "/", category: "Burgers" },
+  { foodId: "fries",         name: "Fries",          imageUrl: "/products/fries_food.png",            url: "/", category: "Fries" },
+  { foodId: "hot_dog",       name: "Hot Dog",        imageUrl: "/products/hot_dog_food.png",          url: "/", category: "Hot Dog" },
+
+  // ── Sandwich ────────────────────────────────────
+
+  { foodId: "sandwich",      name: "Sandwich",       imageUrl: "/products/sandwich_food.png",         url: "/", category: "Sandwich" },
+  { foodId: "sub",           name: "Sub",            imageUrl: "/products/sub_food.png",              url: "/", category: "Sub" },
+
+  // ── Pastas ──────────────────────────────────────
+
+  { foodId: "pasta",         name: "Pasta",          imageUrl: "/products/pasta_food.png",            url: "/", category: "Pasta" },
+
+  // ── Rolls & Wraps ───────────────────────────────
+
+  { foodId: "rolls",         name: "Rolls",          imageUrl: "/products/rolls_food.png",            url: "/", category: "Rolls" },
+  { foodId: "shawarma",      name: "Shawarma",       imageUrl: "/products/shawarma_food.png",         url: "/", category: "Shawarma" },
+  { foodId: "momos",         name: "Momos",          imageUrl: "/products/momos_food.png",            url: "/", category: "Momos" },
+
+  // ── Bakery ──────────────────────────────────────
+
+  { foodId: "pastry",        name: "Pastry",         imageUrl: "/products/pastry_food.png",           url: "/", category: "Pastry" },
+  { foodId: "cupcake",       name: "Cupcake",        imageUrl: "/products/cupcake_food.png",          url: "/", category: "Cupcake" },
+  { foodId: "muffin",        name: "Muffin",         imageUrl: "/products/muffin_food.png",           url: "/", category: "Muffin" },
+  { foodId: "cookies",       name: "Cookies",        imageUrl: "/products/cookies_food.png",          url: "/", category: "Cookies" },
+  { foodId: "croissant",     name: "Croissant",      imageUrl: "/products/croissant_food.png",        url: "/", category: "Croissant" },
+  { foodId: "doughnut",      name: "Doughnut",       imageUrl: "/products/doughnut_food.png",         url: "/", category: "Doughnut" },
+  { foodId: "brownie",       name: "Brownie",        imageUrl: "/products/brownie_food.png",          url: "/", category: "Brownie" },
+  { foodId: "bread_pakoda",  name: "Bread Pak.",     imageUrl: "/products/bread_pakoda_food.png",     url: "/", category: "Bread Pakoda" },
+
+  // ── Cakes ───────────────────────────────────────
+
+  { foodId: "cakes",         name: "Cakes",          imageUrl: "/products/cakes_food.png",            url: "/", category: "Cakes" },
+
+  // ── Desserts ────────────────────────────────────
+
+  { foodId: "dessert",       name: "Dessert",        imageUrl: "/products/dessert_food.png",          url: "/", category: "Dessert" },
+  { foodId: "cheesecake",    name: "Cheesecake",     imageUrl: "/products/cheesecake_food.png",       url: "/", category: "Cheesecake" },
+  { foodId: "tart",          name: "Tart",           imageUrl: "/products/tart_food.png",             url: "/", category: "Tart" },
+  { foodId: "pie",           name: "Pie",            imageUrl: "/products/pie_food.png",              url: "/", category: "Pie" },
+  { foodId: "pudding",       name: "Pudding",        imageUrl: "/products/pudding_food.png",          url: "/", category: "Pudding" },
+  { foodId: "custard",       name: "Custard",        imageUrl: "/products/custard_food.png",          url: "/", category: "Custard" },
+  { foodId: "mousse",        name: "Mousse",         imageUrl: "/products/mousse_food.png",           url: "/", category: "Mousse" },
+  { foodId: "tiramisu",      name: "Tiramisu",       imageUrl: "/products/tiramisu_food.png",         url: "/", category: "Tiramisu" },
+  { foodId: "waffles",       name: "Waffles",        imageUrl: "/products/waffles_food.png",          url: "/", category: "Waffles" },
+  { foodId: "pancake",       name: "Pancake",        imageUrl: "/products/pancake_food.png",          url: "/", category: "Pancake" },
+  { foodId: "chocolate",     name: "Chocolate",      imageUrl: "/products/chocolate_food.png",        url: "/", category: "Chocolate" },
+
+  // ── Ice Cream ───────────────────────────────────
+
+  { foodId: "ice_cream",     name: "Ice Cream",      imageUrl: "/products/ice_cream_food.png",        url: "/", category: "Ice Cream" },
+  { foodId: "sundae",        name: "Sundae",         imageUrl: "/products/sundae_food.png",           url: "/", category: "Sundae" },
+
+  // ── Sweets ──────────────────────────────────────
+
+  { foodId: "sweets",        name: "Sweets",         imageUrl: "/products/sweets_food.png",           url: "/", category: "Sweets" },
+  { foodId: "gulab_jamun",   name: "Gulab Jam.",     imageUrl: "/products/gulab_jamun_food.png",      url: "/", category: "Gulab Jamun" },
+  { foodId: "rasmalai",      name: "Rasmalai",       imageUrl: "/products/rasmalai_food.png",         url: "/", category: "Rasmalai" },
+  { foodId: "rasgulla",      name: "Rasgulla",       imageUrl: "/products/rasgulla_food.png",         url: "/", category: "Rasgulla" },
+  { foodId: "jalebi",        name: "Jalebi",         imageUrl: "/products/jalebi_food.png",           url: "/", category: "Jalebi" },
+  { foodId: "halwa",         name: "Halwa",          imageUrl: "/products/halwa_food.png",            url: "/", category: "Halwa" },
+  { foodId: "gajak",         name: "Gajak",          imageUrl: "/products/gajak_food.png",            url: "/", category: "Gajak" },
+
+  // ── South Indian ────────────────────────────────
+
+  { foodId: "south_indian",  name: "South Indian",   imageUrl: "/products/south_indian_food.png",     url: "/", category: "South Indian" },
+  { foodId: "dosa",          name: "Dosa",           imageUrl: "/products/dosa_food.png",             url: "/", category: "Dosa" },
+  { foodId: "idli",          name: "Idli",           imageUrl: "/products/idli_food.png",             url: "/", category: "Idli" },
+  { foodId: "uttapam",       name: "Uttapam",        imageUrl: "/products/uttapam_food.png",          url: "/", category: "Uttapam" },
+  { foodId: "appam",         name: "Appam",          imageUrl: "/products/appam_food.png",            url: "/", category: "Appam" },
+  { foodId: "upma",          name: "Upma",           imageUrl: "/products/upma_food.png",             url: "/", category: "Upma" },
+  { foodId: "bath",          name: "Bath",           imageUrl: "/products/bath_food.png",             url: "/", category: "Bath" },
+  { foodId: "bonda",         name: "Bonda",          imageUrl: "/products/bonda_food.png",            url: "/", category: "Bonda" },
+  { foodId: "sambar_rice",   name: "Sambar Rice",    imageUrl: "/products/sambar_rice_food.png",      url: "/", category: "Sambar Rice" },
+
+  // ── North Indian ────────────────────────────────
+
+  { foodId: "north_indian",  name: "North Indian",   imageUrl: "/products/north_indian_food.png",     url: "/", category: "North Indian" },
+  { foodId: "paneer",        name: "Paneer",         imageUrl: "/products/paneer_food.png",           url: "/", category: "Paneer" },
+  { foodId: "dal",           name: "Dal",            imageUrl: "/products/dal_food.png",              url: "/", category: "Dal" },
+  { foodId: "rajma",         name: "Rajma",          imageUrl: "/products/rajma_food.png",            url: "/", category: "Rajma" },
+  { foodId: "rajma_rice",    name: "Rajma Rice",     imageUrl: "/products/rajma_rice_food.png",       url: "/", category: "Rajma Rice" },
+  { foodId: "thali",         name: "Thali",          imageUrl: "/products/thali_food.png",            url: "/", category: "Thali" },
+  { foodId: "veg_meal",      name: "Veg Meal",       imageUrl: "/products/veg_meal_food.png",         url: "/", category: "Veg Meal" },
+  { foodId: "pulao",         name: "Pulao",          imageUrl: "/products/pulao_food.png",            url: "/", category: "Pulao" },
+  { foodId: "paratha",       name: "Paratha",        imageUrl: "/products/paratha_food.png",          url: "/", category: "Paratha" },
+  { foodId: "chur_chur_naan",name: "Chur Naan",      imageUrl: "/products/chur_chur_naan_food.png",   url: "/", category: "Chur Chur Naan" },
+  { foodId: "kulche",        name: "Kulche",         imageUrl: "/products/kulche_food.png",           url: "/", category: "Kulche" },
+  { foodId: "paneer_kulche", name: "Paneer Kul.",    imageUrl: "/products/paneer_kulche_food.png",    url: "/", category: "Paneer Kulche" },
+  { foodId: "chole_kulche",  name: "Chole Kul.",     imageUrl: "/products/chole_kulche_food.png",     url: "/", category: "Chole Kulche" },
+  { foodId: "chole_bhature", name: "Chole Bhat",     imageUrl: "/products/chole_bhature_food.png",    url: "/", category: "Chole Bhature" },
+  { foodId: "chole_poori",   name: "Chole Poori",    imageUrl: "/products/chole_poori_food.png",      url: "/", category: "Chole Poori" },
+  { foodId: "poori",         name: "Poori",          imageUrl: "/products/poori_food.png",            url: "/", category: "Poori" },
+  { foodId: "poori_bhaji",   name: "Poori Bhaji",    imageUrl: "/products/poori_bhaji_food.png",      url: "/", category: "Poori Bhaji" },
+  { foodId: "aloo_poori",    name: "Aloo Poori",     imageUrl: "/products/aloo_poori_food.png",       url: "/", category: "Aloo Poori" },
+  { foodId: "malai_kofta",   name: "Malai Kofta",    imageUrl: "/products/malai_kofta_food.png",      url: "/", category: "Malai Kofta" },
+  { foodId: "korma",         name: "Korma",          imageUrl: "/products/korma_food.png",            url: "/", category: "Korma" },
+  { foodId: "nihari",        name: "Nihari",         imageUrl: "/products/nihari_food.png",           url: "/", category: "Nihari" },
+  { foodId: "chaap",         name: "Chaap",          imageUrl: "/products/chaap_food.png",            url: "/", category: "Chaap" },
+
+  // ── Biryani ─────────────────────────────────────
+
+  { foodId: "biryani",       name: "Biryani",        imageUrl: "/products/biryani_food.png",          url: "/", category: "Biryani" },
+  { foodId: "fried_rice",    name: "Fried Rice",     imageUrl: "/products/fried_rice_food.png",       url: "/", category: "Fried Rice" },
+
+  // ── Chinese ─────────────────────────────────────
+
+  { foodId: "chinese",       name: "Chinese",        imageUrl: "/products/chinese_food.png",          url: "/", category: "Chinese" },
+  { foodId: "noodles",       name: "Noodles",        imageUrl: "/products/noodles_food.png",          url: "/", category: "Noodles" },
+  { foodId: "manchurian",    name: "Manchurian",     imageUrl: "/products/manchurian_food.png",       url: "/", category: "Manchurian" },
+  { foodId: "chop_suey",     name: "Chop Suey",      imageUrl: "/products/chop_suey_food.png",        url: "/", category: "Chop Suey" },
+
+  // ── Non-Veg ─────────────────────────────────────
+
+  { foodId: "non_veg",       name: "Non Veg",        imageUrl: "/products/non_veg_meal_food.png",     url: "/", category: "Non Veg" },
+  { foodId: "chicken",       name: "Chicken",        imageUrl: "/products/chicken_food.png",          url: "/", category: "Chicken" },
+  { foodId: "butter_chicken",name: "Butter Chic.",   imageUrl: "/products/butter_chicken_food.png",   url: "/", category: "Butter Chicken" },
+  { foodId: "chicken_handi", name: "Chicken Ha.",    imageUrl: "/products/chicken_handi_food.png",    url: "/", category: "Chicken Handi" },
+  { foodId: "chicken_cha",   name: "Chicken Ch.",    imageUrl: "/products/chicken_cha_food.png",      url: "/", category: "Chicken Chaap" },
+  { foodId: "chilli_chicken",name: "Chilli Chick.",  imageUrl: "/products/chilli_chicken_food.png",   url: "/", category: "Chilli Chicken" },
+  { foodId: "wings",         name: "Wings",          imageUrl: "/products/wings_food.png",            url: "/", category: "Wings" },
+  { foodId: "kebabs",        name: "Kebabs",         imageUrl: "/products/kebabs_food.png",           url: "/", category: "Kebabs" },
+  { foodId: "mutton",        name: "Mutton",         imageUrl: "/products/mutton_food.png",           url: "/", category: "Mutton" },
+  { foodId: "fish",          name: "Fish",           imageUrl: "/products/fish_food.png",             url: "/", category: "Fish" },
+  { foodId: "keema",         name: "Keema",          imageUrl: "/products/keema_food.png",            url: "/", category: "Keema" },
+  { foodId: "omelette",      name: "Omelette",       imageUrl: "/products/omelette_food.png",         url: "/", category: "Omelette" },
+  { foodId: "bhurji",        name: "Bhurji",         imageUrl: "/products/bhurji_food.png",           url: "/", category: "Bhurji" },
+
+  // ── Street Food ─────────────────────────────────
+
+  { foodId: "chaat",         name: "Chaat",          imageUrl: "/products/chaat_food.png",            url: "/", category: "Chaat" },
+  { foodId: "panipuri",      name: "Panipuri",       imageUrl: "/products/panipuri_food.png",         url: "/", category: "Panipuri" },
+  { foodId: "bhel",          name: "Bhel",           imageUrl: "/products/bhel_food.png",             url: "/", category: "Bhel" },
+  { foodId: "sev_poori",     name: "Sev Poori",      imageUrl: "/products/sev_poori_food.png",        url: "/", category: "Sev Poori" },
+  { foodId: "dahi_balle",    name: "Dahi Balle",     imageUrl: "/products/dahi_balle_food.png",       url: "/", category: "Dahi Balle" },
+  { foodId: "vada_pav",      name: "Vada Pav",       imageUrl: "/products/vada_pav_food.png",         url: "/", category: "Vada Pav" },
+  { foodId: "pav_bhaji",     name: "Pav Bhaji",      imageUrl: "/products/pav_bhaji_food.png",        url: "/", category: "Pav Bhaji" },
+  { foodId: "samosa",        name: "Samosa",         imageUrl: "/products/samosa_food.png",           url: "/", category: "Samosa" },
+  { foodId: "pakoda",        name: "Pakoda",         imageUrl: "/products/pakoda_food.png",           url: "/", category: "Pakoda" },
+  { foodId: "paneer_pakoda", name: "Paneer Pak",     imageUrl: "/products/paneer_pakoda_food.png",    url: "/", category: "Paneer Pakoda" },
+  { foodId: "aloo_tikki",    name: "Aloo Tikki",     imageUrl: "/products/aloo_tikki_food.png",       url: "/", category: "Aloo Tikki" },
+  { foodId: "cutlet",        name: "Cutlet",         imageUrl: "/products/cutlet_food.png",           url: "/", category: "Cutlet" },
+  { foodId: "veg_lollipop",  name: "Veg Lollipop",   imageUrl: "/products/veg_lollipop_food.png",     url: "/", category: "Veg Lollipop" },
+  { foodId: "raj_kachori",   name: "Raj Kachori",    imageUrl: "/products/raj_kachori_food.png",      url: "/", category: "Raj Kachori" },
+  { foodId: "dal_kachori",   name: "Dal Kachori",    imageUrl: "/products/dal_kachori_food.png",      url: "/", category: "Dal Kachori" },
+  { foodId: "aloo_kachori",  name: "Aloo Kach.",     imageUrl: "/products/aloo_kachori_food.png",     url: "/", category: "Aloo Kachori" },
+  { foodId: "pyaaj_kachori", name: "Pyaaj Kach.",    imageUrl: "/products/pyaaj_kachori_food.png",    url: "/", category: "Pyaaj Kachori" },
+  { foodId: "khasta_kachori",name: "Khasta Kac.",    imageUrl: "/products/khasta_kachori_food.png",   url: "/", category: "Khasta Kachori" },
+
+  // ── Breakfast & Snacks ──────────────────────────
+
+  { foodId: "poha",          name: "Poha",           imageUrl: "/products/poha_food.png",             url: "/", category: "Poha" },
+  { foodId: "masala_maggi",  name: "Masala Mag.",    imageUrl: "/products/masala_maggi_food.png",     url: "/", category: "Masala Maggi" },
+  { foodId: "namkeen",       name: "Namkeen",        imageUrl: "/products/namkeen_food.png",          url: "/", category: "Namkeen" },
+  { foodId: "mushrooms",     name: "Mushrooms",      imageUrl: "/products/mushrooms_food.png",        url: "/", category: "Mushrooms" },
+
+  // ── Gujarati ────────────────────────────────────
+
+  { foodId: "dhokla",        name: "Dhokla",         imageUrl: "/products/dhokla_food.png",           url: "/", category: "Dhokla" },
+  { foodId: "dholda",        name: "Dholda",         imageUrl: "/products/dholda_food.png",           url: "/", category: "Dholda" },
+  { foodId: "khandvi",       name: "Khandvi",        imageUrl: "/products/khandvi_food.png",          url: "/", category: "Khandvi" },
+  { foodId: "thepla",        name: "Thepla",         imageUrl: "/products/thepla_food.png",           url: "/", category: "Thepla" },
+  { foodId: "fafda",         name: "Fafda",          imageUrl: "/products/fafda_food.png",            url: "/", category: "Fafda" },
+
+  // ── Beverages ───────────────────────────────────
+
+  { foodId: "coffee",        name: "Coffee",         imageUrl: "/products/coffee_food.png",           url: "/", category: "Coffee" },
+  { foodId: "cold_coffee",   name: "Cold Coffee",    imageUrl: "/products/cold_coffee_food.png",      url: "/", category: "Cold Coffee" },
+  { foodId: "tea",           name: "Tea",            imageUrl: "/products/tea_food.png",              url: "/", category: "Tea" },
+  { foodId: "shake",         name: "Shake",          imageUrl: "/products/shake_food.png",            url: "/", category: "Shake" },
+  { foodId: "juice",         name: "Juice",          imageUrl: "/products/juice_food.png",            url: "/", category: "Juice" },
+  { foodId: "lassi",         name: "Lassi",          imageUrl: "/products/lassi_food.png",            url: "/", category: "Lassi" },
+  { foodId: "chaach",        name: "Chaach",         imageUrl: "/products/chaach_food.png",           url: "/", category: "Chaach" },
+
+];
 // export const FoodsCategories = [
 //   {
 //     name: "Masala Bhelpuri",
@@ -7196,5 +6728,1006 @@ export const popularSearchesRestaurant: SearchGroupData[] = [
       { label: "Pastry Palace", href: "/" },
       { label: "Currynama By Seven Seas", href: "/" },
     ],
+  },
+];
+
+export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
+  {
+    id: 1,
+    name: "Subway",
+    category: "Healthy",
+    description: "Customizable sandwiches, salads and wraps.",
+    price: 219,
+    rating: 4.0,
+    isVeg: false,
+    calories: 290,
+    protein: "18g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Sandwich", "Salads", "Healthy Food"],
+    location: "CBD Charmwood",
+    imageUrl: "/products/ca659d30-b1f0-45c0-b303-e6474a7881b0_996761.jpg",
+    offer: "₹150 OFF ABOVE ₹299",
+    isOffer: true,
+      foodCategories: ["diet"],
+    // foodCategories: ["sandwich", "salad", "sub", "diet", "bowl", "cookies"],
+  },
+  {
+    id: 2,
+    name: "Truth Bowl",
+    category: "Healthy",
+    description: "Healthy bowls, snacks and beverages.",
+    price: 249,
+    rating: 4.4,
+    isVeg: true,
+    calories: 320,
+    protein: "18g",
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Snacks", "Beverages"],
+    location: "D & E Sarita Viha",
+    imageUrl: "/products/88d2527e-6071-4847-810a-f026c6c80c68_1246998.jpg",
+    offer: "70% OFF UPTO ₹140",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "salad", "diet", "juice", "shake", "soup", "sandwich", "pasta"],
+  },
+  {
+    id: 3,
+    name: "Salad Days",
+    category: "Healthy",
+    description: "Fresh salads, healthy bowls and snacks.",
+    price: 249,
+    rating: 4.5,
+    isVeg: true,
+    calories: 280,
+    protein: "14g",
+    deliveryTime: "20-25 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Healthy Food", "Snacks"],
+    location: "Jasola",
+    imageUrl: "/products/f2016177-9871-41b3-be66-9f16eb7c6d22_1278348.jpg",
+    offer: "ITEMS AT ₹99",
+    isOffer: true,
+      foodCategories: ["diet"],
+    // foodCategories: ["salad", "bowl", "diet", "sandwich", "soup", "juice", "pasta"],
+  },
+  {
+    id: 4,
+    name: "LunchBox - Meals and Thalis",
+    category: "Thali",
+    description: "Complete meals, thalis and healthy options.",
+    price: 249,
+    rating: 4.2,
+    isVeg: true,
+    calories: 450,
+    protein: "16g",
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["North Indian", "Thalis", "Healthy Food"],
+    location: "Sarita Vihar",
+    imageUrl: "/products/v2z4zcon24k4lvffzdjz.jpg",
+    offer: "70% OFF UPTO ₹140",
+    isOffer: true,
+     foodCategories: ["diet"],
+    // foodCategories: ["thali", "veg_meal", "north_indian", "dal", "paneer", "rajma", "khichdi", "pulao", "paratha", "diet"],
+  },
+  {
+    id: 5,
+    name: "Caterspoint",
+    category: "Healthy",
+    description: "Salads, healthy food and Lebanese.",
+    price: 299,
+    rating: 4.3,
+    isVeg: true,
+    calories: 320,
+    protein: "18g",
+    deliveryTime: "35-45 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Healthy Food", "Lebanese"],
+    location: "Lajpat Nagar",
+    imageUrl: "/products/892652a5-e988-49b8-8398-b2a39e81b43e_402310.jpg",
+    offer: "50% OFF",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "bowl", "diet", "sandwich", "soup", "pasta", "shawarma", "wraps"],
+  },
+  {
+    id: 6,
+    name: "Healthy Cravings",
+    category: "Healthy",
+    description: "Healthy food, salads and Continental.",
+    price: 249,
+    rating: 4.3,
+    isVeg: true,
+    calories: 300,
+    protein: "16g",
+    deliveryTime: "40-45 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Salads", "Continental"],
+    location: "Greater Kailash New",
+    imageUrl: "/products/lwsmmnr4aqmvjogubno1.jpg",
+    offer: "50% OFF",
+    isOffer: true,
+      foodCategories: ["diet"],
+    // foodCategories: ["salad", "bowl", "diet", "sandwich", "soup", "pasta", "sandwich", "juice"],
+  },
+  {
+    id: 7,
+    name: "khichdi Hub",
+    category: "Healthy",
+    description: "Khichdi, North Indian and biryani.",
+    price: 199,
+    rating: 4.3,
+    isVeg: true,
+    calories: 350,
+    protein: "12g",
+    deliveryTime: "40-45 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "North Indian", "Biryani"],
+    location: "Greater Kailash New",
+    imageUrl: "/products/ea80dfd9ba73cf4f61f28c24dd9a1eb9.jpg",
+    offer: "ITEMS AT ₹49",
+    isOffer: true,
+      foodCategories: ["diet"],
+    // foodCategories: ["khichdi", "north_indian", "biryani", "dal", "pulao", "curd_rice", "diet", "thali"],
+  },
+  {
+    id: 8,
+    name: "Friends Restaurant",
+    category: "Healthy",
+    description: "Healthy food, Indian snacks and meals.",
+    price: 199,
+    rating: 4.3,
+    isVeg: true,
+    calories: 380,
+    protein: "14g",
+    deliveryTime: "45-50 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Snacks"],
+    location: "Lajpat Nagar",
+    imageUrl: "/products/cdae0a46-8b2a-4ad5-b3e2-c7692674c59a_1307281.jpg",
+     foodCategories: ["diet"],
+    // foodCategories: ["diet", "thali", "north_indian", "dal", "paneer", "samosa", "sandwich", "salad"],
+  },
+  {
+    id: 9,
+    name: "Between The Bread",
+    category: "Healthy",
+    description: "Healthy food, snacks and Continental.",
+    price: 249,
+    rating: 4.1,
+    isVeg: true,
+    calories: 300,
+    protein: "14g",
+    deliveryTime: "50-60 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Snacks", "Continental"],
+    location: "Lajpat Nagar",
+    imageUrl: "/products/e045808f-c9c8-4359-9d5b-d77c28b5fcc8_959756.sss.jpg",
+    offer: "ITEMS AT ₹129",
+    isOffer: true,
+      foodCategories: ["diet"],
+    // foodCategories: ["sandwich", "sub", "salad", "diet", "bowl", "soup", "pasta", "cookies"],
+  },
+  {
+    id: 10,
+    name: "Mr. Hungry",
+    category: "Indian",
+    description: "Indian, Chinese and healthy food.",
+    price: 199,
+    rating: 3.8,
+    isVeg: true,
+    calories: 420,
+    protein: "14g",
+    deliveryTime: "45-55 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Indian", "Chinese", "Healthy Food"],
+    location: "Greater Kailash 1",
+    imageUrl: "/products/p9rbce3qhknmgzlpqp7v.jpg",
+    offer: "ITEMS AT ₹39",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["north_indian", "chinese", "noodles", "manchurian", "fried_rice", "dal", "thali", "diet", "paratha"],
+  },
+  {
+    id: 11,
+    name: "The Salad Bar",
+    category: "Healthy",
+    description: "Fresh custom salads and grain bowls.",
+    price: 229,
+    rating: 4.5,
+    isVeg: true,
+    calories: 240,
+    protein: "12g",
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Healthy Food", "Continental"],
+    location: "Hauz Khas",
+    imageUrl: "/products/salad_bar_01.jpg",
+    offer: "ITEMS AT ₹129",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "bowl", "diet", "soup", "juice"],
+  },
+  {
+    id: 12,
+    name: "Fit Meal Kitchen",
+    category: "Healthy",
+    description: "Calorie-counted meals and high-protein bowls.",
+    price: 279,
+    rating: 4.4,
+    isVeg: false,
+    calories: 380,
+    protein: "32g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Continental", "High Protein"],
+    location: "Saket",
+    imageUrl: "/products/fit_meal_01.jpg",
+    offer: "₹100 OFF ABOVE ₹399",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "salad", "chicken", "paneer", "soup"],
+  },
+  {
+    id: 13,
+    name: "Green Fork",
+    category: "Healthy",
+    description: "Plant-based salads, wraps and smoothies.",
+    price: 259,
+    rating: 4.3,
+    isVeg: true,
+    calories: 260,
+    protein: "11g",
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Vegan", "Healthy Food"],
+    location: "Vasant Kunj",
+    imageUrl: "/products/green_fork_01.jpg",
+    offer: "50% OFF UPTO ₹100",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "diet", "bowl", "juice", "sandwich"],
+  },
+  {
+    id: 14,
+    name: "EatFit",
+    category: "Healthy",
+    description: "Nutritionist-designed meals for daily fitness.",
+    price: 239,
+    rating: 4.2,
+    isVeg: false,
+    calories: 340,
+    protein: "26g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "High Protein"],
+    location: "Nehru Place",
+    imageUrl: "/products/eatfit_01.jpg",
+    offer: "ITEMS AT ₹99",
+    isOffer: true,
+   foodCategories: ["diet"],
+    // foodCategories: ["diet", "thali", "bowl", "dal", "khichdi", "paneer", "chicken"],
+  },
+  {
+    id: 15,
+    name: "The Bowl Company",
+    category: "Bowls",
+    description: "Wholesome grain and protein bowls.",
+    price: 269,
+    rating: 4.4,
+    isVeg: true,
+    calories: 360,
+    protein: "18g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Continental", "Bowls"],
+    location: "Dwarka",
+    imageUrl: "/products/bowl_company_01.jpg",
+    offer: "60% OFF UPTO ₹120",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "pasta", "soup"],
+  },
+  {
+    id: 16,
+    name: "Protein Chef",
+    category: "Healthy",
+    description: "High-protein meals for fitness enthusiasts.",
+    price: 329,
+    rating: 4.6,
+    isVeg: false,
+    calories: 420,
+    protein: "40g",
+    deliveryTime: "35-40 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "High Protein", "Continental"],
+    location: "Gurugram",
+    imageUrl: "/products/protein_chef_01.jpg",
+    offer: "₹150 OFF ABOVE ₹499",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "chicken", "fish", "omelette", "salad"],
+  },
+  {
+    id: 17,
+    name: "Juice & Salad Co.",
+    category: "Healthy",
+    description: "Cold-pressed juices, smoothies and salads.",
+    price: 189,
+    rating: 4.3,
+    isVeg: true,
+    calories: 180,
+    protein: "6g",
+    deliveryTime: "20-25 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Beverages", "Salads", "Healthy Food"],
+    location: "Golf Course Road",
+    imageUrl: "/products/juice_salad_01.jpg",
+    offer: "ITEMS AT ₹79",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["juice", "salad", "diet", "bowl", "shake"],
+  },
+  {
+    id: 18,
+    name: "Diet Delight",
+    category: "Healthy",
+    description: "Low-calorie Indian meals and snacks.",
+    price: 219,
+    rating: 4.1,
+    isVeg: true,
+    calories: 260,
+    protein: "12g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Low Calorie"],
+    location: "Rohini",
+    imageUrl: "/products/diet_delight_01.jpg",
+    offer: "40% OFF UPTO ₹80",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "khichdi", "dal", "thali", "soup", "salad"],
+  },
+  {
+    id: 19,
+    name: "Nutri Bowl",
+    category: "Bowls",
+    description: "Nutrient-dense bowls with superfoods.",
+    price: 289,
+    rating: 4.5,
+    isVeg: true,
+    calories: 340,
+    protein: "16g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Continental", "Bowls"],
+    location: "Cyber Hub",
+    imageUrl: "/products/nutri_bowl_01.jpg",
+    offer: "50% OFF UPTO ₹100",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "juice", "soup", "mushrooms"],
+  },
+  {
+    id: 20,
+    name: "Slim & Fit Cafe",
+    category: "Healthy",
+    description: "Weight-loss friendly meals and beverages.",
+    price: 229,
+    rating: 4.2,
+    isVeg: true,
+    calories: 240,
+    protein: "14g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Cafe", "Low Calorie"],
+    location: "Malviya Nagar",
+    imageUrl: "/products/slim_fit_01.jpg",
+    offer: "ITEMS AT ₹99",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "salad", "soup", "sandwich", "juice", "bowl"],
+  },
+  {
+    id: 21,
+    name: "The Green Affair",
+    category: "Healthy",
+    description: "Organic salads, wraps and cold-pressed juices.",
+    price: 269,
+    rating: 4.4,
+    isVeg: true,
+    calories: 270,
+    protein: "12g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Organic", "Healthy Food"],
+    location: "Defence Colony",
+    imageUrl: "/products/green_affair_01.jpg",
+    offer: "₹100 OFF ABOVE ₹349",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "diet", "bowl", "juice", "sandwich"],
+  },
+  {
+    id: 22,
+    name: "Keto Kitchen",
+    category: "Healthy",
+    description: "Keto-friendly, low-carb, high-fat meals.",
+    price: 349,
+    rating: 4.3,
+    isVeg: false,
+    calories: 480,
+    protein: "28g",
+    deliveryTime: "35-45 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Keto", "Healthy Food", "Continental"],
+    location: "Vasant Vihar",
+    imageUrl: "/products/keto_kitchen_01.jpg",
+    offer: "₹150 OFF ABOVE ₹599",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "salad", "omelette", "chicken", "fish", "paneer", "mushrooms"],
+  },
+  {
+    id: 23,
+    name: "Whole Foods Kitchen",
+    category: "Healthy",
+    description: "Wholesome, unprocessed meals with whole grains.",
+    price: 259,
+    rating: 4.4,
+    isVeg: true,
+    calories: 360,
+    protein: "16g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Continental", "Organic"],
+    location: "Greater Kailash 2",
+    imageUrl: "/products/whole_foods_01.jpg",
+    offer: "40% OFF UPTO ₹80",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "salad", "khichdi", "soup", "pasta"],
+  },
+  {
+    id: 24,
+    name: "Fit Bowl Express",
+    category: "Bowls",
+    description: "Quick healthy bowls for on-the-go meals.",
+    price: 219,
+    rating: 4.1,
+    isVeg: true,
+    calories: 310,
+    protein: "14g",
+    deliveryTime: "20-25 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Bowls", "Fast Food"],
+    location: "Janakpuri",
+    imageUrl: "/products/fit_bowl_01.jpg",
+    offer: "ITEMS AT ₹89",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "soup", "sandwich"],
+  },
+  {
+    id: 25,
+    name: "Calorie Care",
+    category: "Healthy",
+    description: "Calorie-counted daily meals and tiffins.",
+    price: 249,
+    rating: 4.5,
+    isVeg: true,
+    calories: 320,
+    protein: "18g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Low Calorie"],
+    location: "Andheri",
+    imageUrl: "/products/calorie_care_01.jpg",
+    offer: "₹100 OFF ABOVE ₹399",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "thali", "khichdi", "dal", "bowl", "salad"],
+  },
+  {
+    id: 26,
+    name: "Green Bowl Co.",
+    category: "Bowls",
+    description: "Vegan and vegetarian grain bowls.",
+    price: 279,
+    rating: 4.6,
+    isVeg: true,
+    calories: 330,
+    protein: "15g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Vegan", "Bowls", "Healthy Food"],
+    location: "Bandra",
+    imageUrl: "/products/green_bowl_01.jpg",
+    offer: "50% OFF UPTO ₹120",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "juice", "mushrooms", "soup"],
+  },
+  {
+    id: 27,
+    name: "Protein Point",
+    category: "Healthy",
+    description: "High-protein meals and shakes for gym-goers.",
+    price: 319,
+    rating: 4.4,
+    isVeg: false,
+    calories: 400,
+    protein: "38g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["High Protein", "Healthy Food", "Beverages"],
+    location: "Powai",
+    imageUrl: "/products/protein_point_01.jpg",
+    offer: "₹125 OFF ABOVE ₹449",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "chicken", "fish", "omelette", "shake", "bowl"],
+  },
+  {
+    id: 28,
+    name: "The Detox Kitchen",
+    category: "Healthy",
+    description: "Detox juices, soups and clean meals.",
+    price: 269,
+    rating: 4.3,
+    isVeg: true,
+    calories: 250,
+    protein: "10g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Beverages", "Detox"],
+    location: "Juhu",
+    imageUrl: "/products/detox_kitchen_01.jpg",
+    offer: "40% OFF UPTO ₹90",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["juice", "soup", "salad", "diet", "bowl"],
+  },
+  {
+    id: 29,
+    name: "Balanced Bites",
+    category: "Healthy",
+    description: "Balanced macro meals for everyday wellness.",
+    price: 259,
+    rating: 4.5,
+    isVeg: true,
+    calories: 350,
+    protein: "20g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Continental", "Balanced"],
+    location: "Koramangala",
+    imageUrl: "/products/balanced_bites_01.jpg",
+    offer: "ITEMS AT ₹129",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "salad", "soup", "pasta", "sandwich"],
+  },
+  {
+    id: 30,
+    name: "Fresh Fix",
+    category: "Healthy",
+    description: "Farm-fresh salads and healthy wraps.",
+    price: 229,
+    rating: 4.2,
+    isVeg: true,
+    calories: 280,
+    protein: "13g",
+    deliveryTime: "20-25 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Wraps", "Healthy Food"],
+    location: "Indiranagar",
+    imageUrl: "/products/fresh_fix_01.jpg",
+    offer: "50% OFF UPTO ₹100",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "wraps", "diet", "bowl", "juice"],
+  },
+  {
+    id: 31,
+    name: "Green Leaf",
+    category: "Healthy",
+    description: "Vegetarian salads, soups and grain bowls.",
+    price: 239,
+    rating: 4.3,
+    isVeg: true,
+    calories: 290,
+    protein: "12g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Salads", "Vegetarian"],
+    location: "Whitefield",
+    imageUrl: "/products/green_leaf_01.jpg",
+    offer: "₹100 OFF ABOVE ₹349",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "diet", "bowl", "soup", "khichdi"],
+  },
+  {
+    id: 32,
+    name: "The Healthy Kitchen",
+    category: "Healthy",
+    description: "Wholesome meals with clean ingredients.",
+    price: 269,
+    rating: 4.4,
+    isVeg: false,
+    calories: 360,
+    protein: "24g",
+    deliveryTime: "30-35 mins",
+ cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Continental"],
+    location: "HSR Layout",
+    imageUrl: "/products/healthy_kitchen_01.jpg",
+    offer: "60% OFF UPTO ₹120",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "thali", "bowl", "chicken", "paneer", "dal", "salad"],
+  },
+  {
+    id: 33,
+    name: "Skinny Bowl",
+    category: "Bowls",
+    description: "Low-calorie bowls for mindful eating.",
+    price: 249,
+    rating: 4.5,
+    isVeg: true,
+    calories: 240,
+    protein: "14g",
+    deliveryTime: "25-30 mins",
+ cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Bowls", "Low Calorie"],
+    location: "Marathahalli",
+    imageUrl: "/products/skinny_bowl_01.jpg",
+    offer: "ITEMS AT ₹119",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "soup", "juice"],
+  },
+  {
+    id: 34,
+    name: "Fuel Up",
+    category: "Healthy",
+    description: "Fitness-focused meals and protein shakes.",
+    price: 299,
+    rating: 4.3,
+    isVeg: false,
+    calories: 400,
+    protein: "34g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["High Protein", "Healthy Food", "Beverages"],
+    location: "Electronic City",
+    imageUrl: "/products/fuel_up_01.jpg",
+    offer: "₹125 OFF ABOVE ₹449",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "chicken", "omelette", "shake", "bowl", "salad"],
+  },
+  {
+    id: 35,
+    name: "Vegan Vibe",
+    category: "Healthy",
+    description: "100% vegan meals, bowls and desserts.",
+    price: 279,
+    rating: 4.6,
+    isVeg: true,
+    calories: 320,
+    protein: "13g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Vegan", "Healthy Food", "Continental"],
+    location: "JP Nagar",
+    imageUrl: "/products/vegan_vibe_01.jpg",
+    offer: "50% OFF UPTO ₹120",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "salad", "diet", "juice", "soup", "mushrooms"],
+  },
+  {
+    id: 36,
+    name: "Mindful Meals",
+    category: "Healthy",
+    description: "Mindful, portion-controlled healthy meals.",
+    price: 259,
+    rating: 4.4,
+    isVeg: true,
+    calories: 310,
+    protein: "16g",
+    deliveryTime: "25-30 mins",
+  cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Low Calorie"],
+    location: "Baner",
+    imageUrl: "/products/mindful_meals_01.jpg",
+    offer: "ITEMS AT ₹109",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "thali", "bowl", "khichdi", "dal", "salad"],
+  },
+  {
+    id: 37,
+    name: "Pure Bowls",
+    category: "Bowls",
+    description: "Pure, clean-ingredient bowls and soups.",
+    price: 269,
+    rating: 4.5,
+    isVeg: true,
+    calories: 330,
+    protein: "15g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Bowls", "Continental"],
+    location: "Kalyani Nagar",
+    imageUrl: "/products/pure_bowls_01.jpg",
+    offer: "60% OFF UPTO ₹130",
+    isOffer: true,
+  foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "soup", "pasta"],
+  },
+  {
+    id: 38,
+    name: "Sattvic Kitchen",
+    category: "Healthy",
+    description: "Sattvic, vegetarian, easily digestible meals.",
+    price: 229,
+    rating: 4.3,
+    isVeg: true,
+    calories: 300,
+    protein: "12g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Sattvic", "Indian", "Healthy Food"],
+    location: "Aundh",
+    imageUrl: "/products/sattvic_kitchen_01.jpg",
+    offer: "40% OFF UPTO ₹80",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "khichdi", "thali", "dal", "curd_rice", "salad"],
+  },
+  {
+    id: 39,
+    name: "Morning Fuel",
+    category: "Breakfast",
+    description: "Healthy breakfast bowls and smoothies.",
+    price: 199,
+    rating: 4.4,
+    isVeg: true,
+    calories: 260,
+    protein: "10g",
+    deliveryTime: "20-25 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Breakfast", "Healthy Food", "Beverages"],
+    location: "Kothrud",
+    imageUrl: "/products/morning_fuel_01.jpg",
+    offer: "ITEMS AT ₹99",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "shake", "juice", "poha", "upma", "salad"],
+  },
+  {
+    id: 40,
+    name: "Lite Bite",
+    category: "Healthy",
+    description: "Light, low-oil healthy meals and snacks.",
+    price: 219,
+    rating: 4.2,
+    isVeg: true,
+    calories: 270,
+    protein: "13g",
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Low Calorie"],
+    location: "Viman Nagar",
+    imageUrl: "/products/lite_bite_01.jpg",
+    offer: "50% OFF UPTO ₹100",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "salad", "soup", "sandwich", "khichdi", "bowl"],
+  },
+  {
+    id: 41,
+    name: "Organic Origins",
+    category: "Healthy",
+    description: "Certified organic meals and cold-pressed juices.",
+    price: 299,
+    rating: 4.6,
+    isVeg: true,
+    calories: 310,
+    protein: "14g",
+    deliveryTime: "35-40 mins",
+   cuisines: ["Healthy Food"],
+    // cuisines: ["Organic", "Healthy Food", "Salads"],
+    location: "Alwarpet",
+    imageUrl: "/products/organic_origins_01.jpg",
+    offer: "₹150 OFF ABOVE ₹499",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "salad", "bowl", "juice", "soup", "mushrooms"],
+  },
+  {
+    id: 42,
+    name: "Macro Meals",
+    category: "Healthy",
+    description: "Macro-balanced meals for fitness goals.",
+    price: 289,
+    rating: 4.5,
+    isVeg: false,
+    calories: 380,
+    protein: "30g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["High Protein", "Healthy Food", "Continental"],
+    location: "Adyar",
+    imageUrl: "/products/macro_meals_01.jpg",
+    offer: "₹125 OFF ABOVE ₹449",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "chicken", "fish", "paneer", "salad", "omelette"],
+  },
+  {
+    id: 43,
+    name: "Fresh Start",
+    category: "Healthy",
+    description: "Fresh morning meals, juices and bowls.",
+    price: 209,
+    rating: 4.3,
+    isVeg: true,
+    calories: 250,
+    protein: "11g",
+    deliveryTime: "20-25 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Breakfast", "Healthy Food", "Beverages"],
+    location: "T Nagar",
+    imageUrl: "/products/fresh_start_01.jpg",
+    offer: "ITEMS AT ₹89",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "poha", "upma", "bowl", "juice", "salad"],
+  },
+  {
+    id: 44,
+    name: "Sprout Kitchen",
+    category: "Healthy",
+    description: "Sprouts, salads and plant-based bowls.",
+    price: 239,
+    rating: 4.4,
+    isVeg: true,
+    calories: 280,
+    protein: "15g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Vegetarian", "Bowls"],
+    location: "Anna Nagar",
+    imageUrl: "/products/sprout_kitchen_01.jpg",
+    offer: "50% OFF UPTO ₹110",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "salad", "bowl", "soup", "juice"],
+  },
+  {
+    id: 45,
+    name: "Superfood Studio",
+    category: "Healthy",
+    description: "Superfood-packed smoothies, bowls and meals.",
+    price: 319,
+    rating: 4.6,
+    isVeg: true,
+    calories: 340,
+    protein: "17g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Superfood", "Healthy Food", "Continental"],
+    location: "Velachery",
+    imageUrl: "/products/superfood_studio_01.jpg",
+    offer: "₹150 OFF ABOVE ₹549",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["bowl", "diet", "salad", "juice", "shake", "mushrooms"],
+  },
+  {
+    id: 46,
+    name: "The Wellness Cafe",
+    category: "Healthy",
+    description: "Wellness-focused meals, teas and snacks.",
+    price: 259,
+    rating: 4.5,
+    isVeg: true,
+    calories: 300,
+    protein: "14g",
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Cafe", "Beverages"],
+    location: "Salt Lake",
+    imageUrl: "/products/wellness_cafe_01.jpg",
+    offer: "ITEMS AT ₹119",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "salad", "soup", "sandwich", "tea", "bowl"],
+  },
+  {
+    id: 47,
+    name: "Nutri Nation",
+    category: "Healthy",
+    description: "Nutrition-first meals and healthy snacks.",
+    price: 249,
+    rating: 4.4,
+    isVeg: true,
+    calories: 320,
+    protein: "16g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "Snacks"],
+    location: "Park Street",
+    imageUrl: "/products/nutri_nation_01.jpg",
+    offer: "40% OFF UPTO ₹90",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "salad", "khichdi", "dal", "soup"],
+  },
+  {
+    id: 48,
+    name: "Clean Cravings",
+    category: "Healthy",
+    description: "Clean-ingredient comfort food, made healthy.",
+    price: 269,
+    rating: 4.5,
+    isVeg: false,
+    calories: 360,
+    protein: "22g",
+    deliveryTime: "30-35 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Continental", "Comfort Food"],
+    location: "Banjara Hills",
+    imageUrl: "/products/clean_cravings_01.jpg",
+    offer: "₹100 OFF ABOVE ₹399",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "sandwich", "chicken", "paneer", "salad", "pasta"],
+  },
+  {
+    id: 49,
+    name: "Fit Foodie",
+    category: "Healthy",
+    description: "Fitness-friendly versions of favorite meals.",
+    price: 279,
+    rating: 4.4,
+    isVeg: false,
+    calories: 370,
+    protein: "28g",
+    deliveryTime: "30-35 mins",
+   cuisines: ["Healthy Food"],
+    // cuisines: ["Healthy Food", "Indian", "High Protein"],
+    location: "Hitech City",
+    imageUrl: "/products/fit_foodie_01.jpg",
+    offer: "₹125 OFF ABOVE ₹449",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["diet", "bowl", "chicken", "paneer", "dal", "thali", "salad"],
+  },
+  {
+    id: 50,
+    name: "Daily Dose of Greens",
+    category: "Healthy",
+    description: "Daily greens, salads and cold-pressed juices.",
+    price: 229,
+    rating: 4.6,
+    isVeg: true,
+    calories: 240,
+    protein: "10g",
+    deliveryTime: "25-30 mins",
+     cuisines: ["Healthy Food"],
+    // cuisines: ["Salads", "Healthy Food", "Beverages"],
+    location: "Gachibowli",
+    imageUrl: "/products/daily_dose_greens_01.jpg",
+    offer: "50% OFF UPTO ₹120",
+    isOffer: true,
+    foodCategories: ["diet"],
+    // foodCategories: ["salad", "diet", "bowl", "juice", "soup", "mushrooms"],
   },
 ];

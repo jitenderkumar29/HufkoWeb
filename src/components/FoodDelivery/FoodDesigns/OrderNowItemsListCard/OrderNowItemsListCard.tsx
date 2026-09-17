@@ -6,13 +6,20 @@ import styles from './OrderNowItemsListCard.module.scss';
 export interface RestaurantItemFoodInterface {
   id: string | number;
   name: string;
-  rating: number;
+  category?: string;              // primary/display category (e.g. "High Protein")
+  description?: string;
+  price?: number;                 // avg price or starting price
+  isVeg?: boolean;                // true if pure veg restaurant
+  rating?: number;
+  calories?: number;
   deliveryTime: string;
-  cuisines: string[];
+  cuisines: string[];             // e.g. ["North Indian", "Chinese"]
   location: string;
   imageUrl: string;
+  protein?: string;
   offer?: string;
   isOffer?: boolean;
+  foodCategories?: string[];       // 👈 MULTIPLE foodIds from FoodsCategories
 }
 
 interface OrderNowItemsListCardProps {

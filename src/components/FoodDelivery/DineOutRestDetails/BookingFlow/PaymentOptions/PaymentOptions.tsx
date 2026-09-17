@@ -9,6 +9,7 @@ import {
     Wallet,
     Landmark,
     ChevronRight,
+    X, // ← add this
 } from 'lucide-react';
 
 interface PaymentOptionsProps {
@@ -17,6 +18,7 @@ interface PaymentOptionsProps {
     onAddCard?: () => void;
     onWalletClick?: () => void;
     onNetbankingClick?: () => void;
+    onClose?: () => void; // ← add this
 }
 
 const PaymentOptions: React.FC<PaymentOptionsProps> = ({
@@ -25,6 +27,7 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({
     onAddCard,
     onWalletClick,
     onNetbankingClick,
+    onClose, // ← add this
 }) => {
     const PaymentCard = ({
         icon,
@@ -82,11 +85,7 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({
     };
 
     return (
-        <div
-            className={
-                styles.modalOverlay
-            }
-        >
+        <div className={styles.modalOverlay}>
             <div className={styles.container}>
                 {/* Header */}
                 <header className={styles.header}>
@@ -108,6 +107,16 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({
                             To pay: ₹{amount}
                         </div>
                     </div>
+
+                    {/* Close button */}
+                    <button
+                        type="button"
+                        className={styles.closeButton}
+                        onClick={onClose}
+                        aria-label="Close"
+                    >
+                        <X />
+                    </button>
                 </header>
 
                 {/* Content */}
@@ -144,6 +153,13 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({
                             icon={<Landmark />}
                             title="Netbanking"
                             subtitle="Select from a list of banks"
+                            onClick={onNetbankingClick}
+                        />
+
+                        <PaymentCard
+                            icon={<Wallet />}
+                            title="Hufko Wallet"
+                            subtitle="Available Balance: 3000"
                             onClick={onNetbankingClick}
                         />
                     </section>

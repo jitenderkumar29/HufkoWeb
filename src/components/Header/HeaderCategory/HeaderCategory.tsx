@@ -6,7 +6,6 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import styles from './HeaderCategory.module.scss';
 import { faStore, faUtensils, faBasketShopping, faSeedling, faHandsHelping, IconDefinition, faNotesMedical, faHandshake, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AllCategory from '../../HomePage/AllCategory/AllCategory';
 import { GroceryCategories, groceryCategoriesSubHeader } from '@/app/data/Categorywise/GroceryCategories';
 import HeroBannerAll from '@/components/HomePage/HeroBannerAll/HeroBannerAll';
 import { ShopingHeroBannerData } from '@/app/data/HeroBannerwise/ShopingHero';
@@ -50,6 +49,8 @@ import FoodBanner from '@/components/FoodDelivery/FoodDesigns/FoodBanner/FoodBan
 import DineOutItemsListCard, { DineOutItemInterface } from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/DineOutRestDetails';
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
+import FoodDeliveryItemsList, { FoodDeliveryItem } from '@/components/FoodDelivery/FoodDeliveryItemsList/FoodDeliveryItemsList';
+import AllCategory, { Category as AllCategoryItem, ClickableFoodCategory } from '../../HomePage/AllCategory/AllCategory';
 
 interface CategoryItem {
   id: string;
@@ -189,6 +190,9 @@ const HeaderCategory: React.FC = () => {
   const [selectedFoodCategory, setSelectedFoodCategory] = useState<string>('all_sub_header');
   const [selectedFoodCategoryValue, setSelectedFoodCategoryValue] = useState<string>('all');
 
+  // NEW: selected product-level food category (e.g. "pizzas_food")
+  const [selectedFoodItemCategory, setSelectedFoodItemCategory] = useState<string | null>(null);
+
   // State for selected dineout special category
   const [selectedDineoutCategory, setSelectedDineoutCategory] = useState<FoodDineOutItem | null>(null);
 
@@ -220,6 +224,7 @@ const HeaderCategory: React.FC = () => {
   const electronicsParam = searchParams?.get('electronicsSubCategory') || null;
   const homeDecorParam = searchParams?.get('homeDecorSubCategory') || null;
   const foodParam = searchParams?.get('foodCategory') || null;
+  const foodItemParam = searchParams?.get('foodItemCategory') || null; // NEW
   const dineoutParam = searchParams?.get('dineoutCategory') || null;
 
   // State for address information from localStorage
@@ -230,7 +235,7 @@ const HeaderCategory: React.FC = () => {
 
   // Update state when URL params change
   useEffect(() => {
-    console.log('URL params changed:', { categoryParam, foodParam, dineoutParam, shoppingParam });
+    console.log('URL params changed:', { categoryParam, foodParam, foodItemParam, dineoutParam, shoppingParam });
 
     // Update active tab
     if (categoryParam && allCategories.some(cat => cat.id === categoryParam)) {
@@ -255,6 +260,9 @@ const HeaderCategory: React.FC = () => {
       setSelectedFoodCategory('all_sub_header');
       setSelectedFoodCategoryValue('all');
     }
+
+    // NEW: Update food item (product) category
+    setSelectedFoodItemCategory(foodItemParam);
 
     // Update dineout category
     if (dineoutParam) {
@@ -289,7 +297,7 @@ const HeaderCategory: React.FC = () => {
     } else {
       setSelectedHomeDecorSubCategory('all');
     }
-  }, [categoryParam, foodParam, dineoutParam, shoppingParam, electronicsParam, homeDecorParam]);
+  }, [categoryParam, foodParam, foodItemParam, dineoutParam, shoppingParam, electronicsParam, homeDecorParam]);
 
   // Reset all categories to home
   const resetToHome = () => {
@@ -299,6 +307,7 @@ const HeaderCategory: React.FC = () => {
     setSelectedHomeDecorSubCategory('all');
     setSelectedFoodCategory('all_sub_header');
     setSelectedFoodCategoryValue('all');
+    setSelectedFoodItemCategory(null); // NEW
     setSelectedDineoutCategory(null);
     setShowRestaurantDetails(false);
     setSelectedRestaurantId(null);
@@ -334,6 +343,7 @@ const HeaderCategory: React.FC = () => {
       setSelectedFoodCategory('all_sub_header');
       setSelectedFoodCategoryValue('all');
       setSelectedDineoutCategory(null);
+      setSelectedFoodItemCategory(null); // NEW
     }
 
     const params = new URLSearchParams(window.location.search);
@@ -348,6 +358,7 @@ const HeaderCategory: React.FC = () => {
     if (categoryId !== 'food') {
       params.delete('foodCategory');
       params.delete('dineoutCategory');
+      params.delete('foodItemCategory'); // NEW
     }
 
     router.replace(`?${params.toString()}`, { scroll: false });
@@ -358,6 +369,7 @@ const HeaderCategory: React.FC = () => {
     const categoryId = item.id || item.name.toLowerCase().replace(/\s+/g, '_');
     setSelectedFoodCategory(categoryId);
     setSelectedDineoutCategory(null);
+    setSelectedFoodItemCategory(null); // NEW — clear product selection
     setShowRestaurantDetails(false);
     setSelectedRestaurantId(null);
 
@@ -367,6 +379,7 @@ const HeaderCategory: React.FC = () => {
     const params = new URLSearchParams(window.location.search);
     params.set('foodCategory', categoryId);
     params.delete('dineoutCategory');
+    params.delete('foodItemCategory'); // NEW
 
     router.replace(`?${params.toString()}`, { scroll: false });
     console.log('Selected food category:', item, 'Category value:', categoryValue);
@@ -378,19 +391,54 @@ const HeaderCategory: React.FC = () => {
 
     setShowRestaurantDetails(false);
     setSelectedRestaurantId(null);
+    setSelectedFoodItemCategory(null); // NEW — clear product selection
 
     const params = new URLSearchParams(window.location.search);
     if (item.dineoutSpecialCategoryID) {
       params.set('dineoutCategory', item.dineoutSpecialCategoryID);
       params.set('foodCategory', 'dineout_special');
       params.set('category', 'food');
+      params.delete('foodItemCategory'); // NEW
     }
     router.replace(`?${params.toString()}`, { scroll: false });
   };
 
-  const handleFoodCategoryClick = (category: any) => {
-    console.log('Selected category:', category);
-    // Navigate to category page or filter products
+  // Handle food product category click (e.g. Pizzas, Burgers, Biryani)
+  const handleFoodCategoryClick = (category: ClickableFoodCategory) => {
+    if (!category?.name) return;
+
+    const categoryId =
+      category.foodId ||
+      category.id ||
+      category.name.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+
+    if (category.name.toLowerCase() === 'all') {
+      setSelectedFoodItemCategory(null);
+      const params = new URLSearchParams(window.location.search);
+      params.delete('foodItemCategory');
+      router.replace(`?${params.toString()}`, { scroll: false });
+      return;
+    }
+
+    setSelectedFoodItemCategory(categoryId);
+
+    const params = new URLSearchParams(window.location.search);
+    params.set('category', 'food');
+    params.set('foodCategory', selectedFoodCategory);
+    params.set('foodItemCategory', categoryId);
+    router.replace(`?${params.toString()}`, { scroll: false });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    console.log('Selected food item category:', categoryId);
+  };
+
+  // Handle back from food delivery items list
+  const handleBackFromFoodItemsList = () => {
+    setSelectedFoodItemCategory(null);
+    const params = new URLSearchParams(window.location.search);
+    params.delete('foodItemCategory');
+    router.replace(`?${params.toString()}`, { scroll: false });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Handle dineout item click - show restaurant details
@@ -650,7 +698,22 @@ const HeaderCategory: React.FC = () => {
       return renderDineoutSpecialCategoryPage();
     }
 
-    // THIRD: Default food content
+    // THIRD: If a product-level food category is selected, show the FoodDeliveryItemsList
+    if (selectedFoodItemCategory) {
+      return (
+        <div className={styles.foodDeliveryItemsListContainer}>
+          <FoodDeliveryItemsList
+            foodId={selectedFoodItemCategory}
+            onBack={handleBackFromFoodItemsList}
+            onItemClick={(item: FoodDeliveryItem) =>
+              console.log('Food item clicked:', item)
+            }
+          />
+        </div>
+      );
+    }
+
+    // FOURTH: Default food content
     return (
       <>
         {selectedFoodCategory === "all_sub_header" && (
@@ -660,7 +723,7 @@ const HeaderCategory: React.FC = () => {
               defaultAlign="left"
             />
             <div className={styles.categoryGap}>
-              <AllCategory categories={FoodsCategories} />
+              <AllCategory categories={FoodsCategories} onCategoryClick={handleFoodCategoryClick} />
             </div>
             <WelcomeVideoHufko
               title="Premium food delivery app"

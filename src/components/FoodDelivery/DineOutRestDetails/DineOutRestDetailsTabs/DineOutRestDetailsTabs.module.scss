@@ -403,21 +403,21 @@
     align-items: center;
     gap: 6px;
     font-size: 14px;
-    color: $gray-700;
+    color: $button-red;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid $border-color;
+    border: 1px solid $button-red;
     padding: 6px 12px;
     border-radius: 50px;
     cursor: pointer;
 
     &:hover {
-        color: $secondary-color;
+        color: $button-red-hover;
     }
 }
 
 .cuisineDot {
-    color: #D6A600;
+    color: $gold-color;
     font-size: 15px;
 }
 
@@ -975,10 +975,11 @@
 
 .tabContent {
     width: 100%;
-    background: $background-linear-gradient;
+     background: $background-linear-gradient;
+    box-shadow: $box-shadow-light;
+    border: 1px solid $gray-300;
     // background-color: $white;
     padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     color: $black !important;
 }
@@ -2154,9 +2155,9 @@
 }
 
 .pageBtnActive {
-    background: #1a7fd4;
+    background: $brown-color;
     color: white;
-    border-color: #1a7fd4;
+    border-color: $brown-color;
 }
 
 .pageBtnDisabled {

@@ -1,0 +1,105 @@
+.container {
+//   padding: 20px 24px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  border: none;
+  background: #f2f2f2;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.emptyState {
+  color: #777;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.vegBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+}
+.veg { background: #2e7d32; }
+.nonVeg { background: #c62828; }
+
+.info {
+  padding: 12px;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.restaurant {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 6px;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.price {
+  margin: 6px 0 0;
+  font-weight: 600;
+}

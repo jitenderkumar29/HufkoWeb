@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ChevronLeft, Plus } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, Plus, X } from 'lucide-react'; // ← add X
 import styles from './PayBillAmount.module.scss';
 
 // --- Types ---
@@ -19,13 +19,12 @@ export interface PayBillAmountProps {
     restaurantOffers: OfferPayBillInterface[];
     addonOffers: OfferPayBillInterface[];
     onBack: () => void;
+    onClose?: () => void; // ← add this
     onContinue: (amount: string) => void;
     initialAmount?: string;
 }
 
 // --- Reusable Offer Card Component ---
-// Note: Removed the modalOverlay wrapper from here. 
-// The OfferCard should just be the card itself.
 const OfferCard: React.FC<{
     offer: OfferPayBillInterface;
     totalDots: number;
@@ -45,7 +44,6 @@ const OfferCard: React.FC<{
                 </div>
             </div>
 
-            {/* Dots Indicator */}
             {totalDots > 1 && (
                 <div className={styles.dots}>
                     {Array.from({ length: totalDots }).map((_, idx) => (
@@ -71,16 +69,15 @@ export default function PayBillAmount({
     restaurantOffers = [],
     addonOffers = [],
     onBack,
+    onClose, // ← add this
     onContinue,
     initialAmount = '',
 }: Partial<PayBillAmountProps>) {
     const [amount, setAmount] = useState<string>(initialAmount);
 
-    // Carousel State
     const [restaurantIndex, setRestaurantIndex] = useState(0);
     const [addonIndex, setAddonIndex] = useState(0);
 
-    // Auto-play Carousel (Optional - Comment out if not needed)
     useEffect(() => {
         if (addonOffers.length <= 1) return;
         const interval = setInterval(() => {
@@ -89,9 +86,8 @@ export default function PayBillAmount({
         return () => clearInterval(interval);
     }, [addonOffers.length]);
 
-    // Handle Amount Input
     const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const val = e.target.value.replace(/[^0-9]/g, ''); // Only numbers
+        const val = e.target.value.replace(/[^0-9]/g, '');
         setAmount(val);
     };
 
@@ -101,7 +97,6 @@ export default function PayBillAmount({
         }
     };
 
-    // Safe access to current offers
     const currentRestaurantOffer = restaurantOffers[restaurantIndex] || restaurantOffers[0];
     const currentAddonOffer = addonOffers[addonIndex] || addonOffers[0];
 
@@ -113,10 +108,21 @@ export default function PayBillAmount({
                     <button className={styles.backButton} onClick={onBack} aria-label="Go back">
                         <ArrowLeft />
                     </button>
+
                     <div className={styles.headerInfo}>
                         <h1 className={styles.title}>{restaurantName}</h1>
                         <p className={styles.subtitle}>{location}</p>
                     </div>
+
+                    {/* Close button */}
+                    <button
+                        type="button"
+                        className={styles.closeButton}
+                        onClick={onClose}
+                        aria-label="Close"
+                    >
+                        <X />
+                    </button>
                 </header>
 
                 {/* Content */}
@@ -142,7 +148,6 @@ export default function PayBillAmount({
 
                     {/* Offers Section */}
                     <div className={styles.offersContainer}>
-                        {/* Restaurant Offer (Left) */}
                         {currentRestaurantOffer && (
                             <OfferCard
                                 offer={currentRestaurantOffer}
@@ -152,10 +157,8 @@ export default function PayBillAmount({
                             />
                         )}
 
-                        {/* Plus Icon */}
                         <Plus className={styles.plusIcon} size={24} />
 
-                        {/* Add-on Offers (Right) */}
                         {currentAddonOffer && (
                             <OfferCard
                                 offer={currentAddonOffer}

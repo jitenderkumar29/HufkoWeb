@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { X } from 'lucide-react';
 import styles from './PayBillOptions.module.scss';
 
 // ---------- Types ----------
@@ -204,7 +205,6 @@ function CardSection() {
 }
 
 // ---------- Wallet Section ----------
-// Data derived from the provided HTML structure
 const WALLET_OPTIONS = [
     {
         id: 'mobikwik',
@@ -272,7 +272,6 @@ function WalletSection() {
                             className={`${styles.walletItem} ${isSelected ? styles.selected : ''}`}
                             onClick={() => handleSelect(wallet.id)}
                         >
-                            {/* Top Row: icon+name on LEFT, radio on RIGHT */}
                             <div className={styles.itemHeader}>
                                 <div className={styles.leftGroup}>
                                     <div className={styles.walletIconWrap}>
@@ -288,7 +287,6 @@ function WalletSection() {
                                 </div>
                             </div>
 
-                            {/* Pay button only for the selected wallet, aligned LEFT */}
                             {isSelected && (
                                 <div className={styles.itemFooter}>
                                     <button
@@ -308,9 +306,7 @@ function WalletSection() {
     );
 }
 
-
 // ---------- Net Banking Section ----------
-// Dummy data based on the image structure
 const BANKS_NET_BANKING = [
     {
         id: 'sbi',
@@ -676,7 +672,6 @@ const BANKS_NET_BANKING = [
 
 function NetBankingSection() {
     const [query, setQuery] = useState('');
-    // Default to SBI as shown in the image
     const [selectedBankId, setSelectedBankId] = useState<string>('sbi');
 
     const filteredBanks = BANKS_NET_BANKING.filter((b) =>
@@ -690,7 +685,6 @@ function NetBankingSection() {
     const handlePay = (e: React.MouseEvent, id: string) => {
         e.stopPropagation();
         console.log(`Initiating payment for bank: ${id}`);
-        // TODO: Hook up payment logic
     };
 
     return (
@@ -721,7 +715,6 @@ function NetBankingSection() {
                             className={styles.bankItem}
                             onClick={() => handleSelect(bank.id)}
                         >
-                            {/* Top Row: Icon + Name on left, Radio on right */}
                             <div className={styles.itemHeader}>
                                 <div className={styles.leftGroup}>
                                     <div className={styles.bankIconWrap}>
@@ -737,7 +730,6 @@ function NetBankingSection() {
                                 </div>
                             </div>
 
-                            {/* Pay button only for the selected bank, aligned LEFT */}
                             {isSelected && (
                                 <div className={styles.itemFooter}>
                                     <button
@@ -793,7 +785,6 @@ export default function PayBillOptions({
         onMethodChange?.(method);
     };
 
-    // ---------- Section switcher ----------
     const renderSection = () => {
         switch (selected) {
             case 'upi':
@@ -812,6 +803,16 @@ export default function PayBillOptions({
     return (
         <div className={styles.overlay} onClick={handleOverlayClick}>
             <div className={styles.card}>
+                {/* Close button — top right corner */}
+                <button
+                    type="button"
+                    className={styles.closeButton}
+                    onClick={onClose}
+                    aria-label="Close"
+                >
+                    <X />
+                </button>
+
                 <div className={styles.layout}>
                     {/* ---------- Sidebar ---------- */}
                     <nav className={styles.sidebar}>

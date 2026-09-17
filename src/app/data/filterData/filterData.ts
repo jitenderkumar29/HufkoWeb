@@ -37,12 +37,15 @@ export type IconType =
   | 'crown';
 
 // Extend FilterOption to include iconType
-export interface FilterOption {
+interface FilterOption {
   id: string;
   label: string;
-  count?: number;
-  iconType?: IconType;  // Use string-based icon type
-  icon?: React.ReactNode; // Keep for backward compatibility
+  icon?: React.ReactNode;
+  type?: 'chip' | 'dropdown';      // default 'chip'
+  options?: { id: string; label: string }[];
+  badge?: string;                  // e.g. 'NEW'
+  badgeColor?: string;             // defaults to '#ff5b2e'
+  active?: boolean;
 }
 
 export const SMARTPHONES_ELECTRONICS_FILTERS: FilterGroup[] = [

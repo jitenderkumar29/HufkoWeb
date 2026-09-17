@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, Info } from 'lucide-react';
+import { ArrowLeft, Info, X } from 'lucide-react'; // ← add X
 import styles from './PayBillSummary.module.scss';
 import ApplyCouponSuccess from '../ApplyCouponSuccess/ApplyCouponSuccess';
 
@@ -29,8 +29,9 @@ export interface PayBillSummaryProps {
     paymentSummary: PaymentSummaryData;
     bestCoupon?: BestCoupon;
     onBack: () => void;
+    onClose?: () => void; // ← add this
     onApplyCoupon?: () => void;
-    onRemoveCoupon?: () => void;   // 🆕 optional removal callback
+    onRemoveCoupon?: () => void;
     onViewAllCoupons?: () => void;
     onSelectPayment: () => void;
 }
@@ -55,6 +56,7 @@ export default function PayBillSummary({
     paymentSummary,
     bestCoupon,
     onBack,
+    onClose, // ← add this
     onApplyCoupon,
     onRemoveCoupon,
     onViewAllCoupons,
@@ -63,7 +65,6 @@ export default function PayBillSummary({
     const [isCouponApplied, setIsCouponApplied] = useState(false);
     const [showApplySuccess, setShowApplySuccess] = useState(false);
 
-    // 🔄 Compute the current summary based on whether the coupon is applied
     const currentSummary = useMemo<PaymentSummaryData>(() => {
         if (!isCouponApplied || !bestCoupon) {
             return paymentSummary;
@@ -85,20 +86,28 @@ export default function PayBillSummary({
     const handleApplyCoupon = () => {
         if (!bestCoupon || isCouponApplied) return;
 
-        setIsCouponApplied(true);   // Apply the discount
-        onApplyCoupon?.();          // Notify parent
-        setShowApplySuccess(true);  // Show "Woohoo!" popup
+        setIsCouponApplied(true);
+        onApplyCoupon?.();
+        setShowApplySuccess(true);
     };
 
-    // 🆕 Remove the coupon and reset everything back to the original summary
     const handleRemoveCoupon = () => {
         setIsCouponApplied(false);
         setShowApplySuccess(false);
-        onRemoveCoupon?.();         // Notify parent
+        onRemoveCoupon?.();
     };
 
     const handleSelectPayment = () => {
         onSelectPayment();
+    };
+
+    const handleClose = () => {
+        if (showApplySuccess) return; // don't close while success modal is open
+        if (onClose) {
+            onClose();
+        } else {
+            onBack?.();
+        }
     };
 
     // --- Effects ---
@@ -136,10 +145,21 @@ export default function PayBillSummary({
                             >
                                 <ArrowLeft />
                             </button>
+
                             <div className={styles.headerInfo}>
                                 <h1 className={styles.title}>{restaurantName}</h1>
                                 <p className={styles.subtitle}>{location}</p>
                             </div>
+
+                            {/* Close button */}
+                            <button
+                                type="button"
+                                className={styles.closeButton}
+                                onClick={handleClose}
+                                aria-label="Close"
+                            >
+                                <X />
+                            </button>
                         </header>
 
                         {/* Orange Banner */}
@@ -187,7 +207,6 @@ export default function PayBillSummary({
                                                     </p>
                                                 </div>
 
-                                                {/* 🆕 Conditional: Apply button OR Remove link */}
                                                 {!isCouponApplied ? (
                                                     <button
                                                         className={styles.applyBtn}
@@ -246,7 +265,6 @@ export default function PayBillSummary({
                                         </span>
                                     </div>
 
-                                    {/* Coupon row appears once applied */}
                                     {isCouponApplied && bestCoupon && (
                                         <div className={`${styles.row} ${styles.success}`}>
                                             <span>

@@ -3,7 +3,9 @@ import styles from './AllCategory.module.scss';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-interface Category {
+export interface Category {
+  id?: string;
+  foodId?: string;
   name: string;
   imageUrl: string;
   url: string;
@@ -12,9 +14,18 @@ interface Category {
 interface AllCategoryProps {
   categories: Category[];
   // title?: string;
+  onCategoryClick?: (category: Category) => void;
 }
 
-const AllCategory = ({ categories }: AllCategoryProps) => {
+ export interface ClickableFoodCategory {
+  id?: string;
+  foodId?: string;
+  name: string;
+  imageUrl?: string;   // <-- optional so both AllCategory + FoodCategoryList fit
+  url?: string;
+}
+
+const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [visibleItems, setVisibleItems] = useState(6);
@@ -62,6 +73,18 @@ const AllCategory = ({ categories }: AllCategoryProps) => {
     }
   };
 
+  const handleItemClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    category: Category
+  ) => {
+    // If a custom click handler is provided, prevent default navigation
+    // and delegate to it (so we can render in-app instead of navigating).
+    if (onCategoryClick) {
+      e.preventDefault();
+      onCategoryClick(category);
+    }
+  };
+
   return (
     <div className={styles.allCategoryContainer}>
       {/* <h2 className={styles.sectionTitle}>Shop by Category</h2> */}
@@ -83,6 +106,7 @@ const AllCategory = ({ categories }: AllCategoryProps) => {
               href={category.url}
               className={styles.categoryItem}
               aria-label={category.name}
+              onClick={(e) => handleItemClick(e, category)}
             >
               <div className={styles.categoryImage}>
                 <Image
@@ -96,9 +120,6 @@ const AllCategory = ({ categories }: AllCategoryProps) => {
               </div>
               <div className={styles.categoryName}>
                 {category.name}
-                {/* {category.name.split(' ').map((word, i) => (
-                  <span key={i}>{word}</span>
-                ))} */}
               </div>
             </a>
           ))}

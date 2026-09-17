@@ -81,7 +81,8 @@ const PaymentSubRouter: React.FC<{
     amount: number;
     onBack: () => void;
     onComplete: () => void;
-}> = ({ amount, onBack, onComplete }) => {
+    onClose?: () => void;
+}> = ({ amount, onBack, onComplete, onClose }) => {
     const [view, setView] = useState<PaymentView>('options');
 
     // --- View: Add Card ---
@@ -137,6 +138,7 @@ const PaymentSubRouter: React.FC<{
             onAddCard={() => setView('addCard')}
             onWalletClick={() => setView('wallet')}
             onNetbankingClick={() => setView('netbanking')}
+             onClose={onClose} 
         />
     );
 };
@@ -310,6 +312,7 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
                 amount={billDetails.totalPay}
                 onBack={handleBackFromPayment}
                 onComplete={handlePaymentComplete}
+                onClose={onClose}
             />
         );
     }
@@ -328,6 +331,7 @@ const BookingFlow: React.FC<BookingFlowProps> = ({
                 onEditContact={() => {
                     console.log("Edit contact clicked");
                 }}
+                 onClose={onClose}
             />
         );
     }

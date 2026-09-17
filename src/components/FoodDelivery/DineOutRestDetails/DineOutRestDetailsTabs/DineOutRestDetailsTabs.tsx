@@ -2689,7 +2689,7 @@ const ReviewsContent = () => {
         },
         {
             rating: 5.0,
-            title: "An excellent property",
+            title: "An excellent restaurant",
             author: "abanis n.",
             tripType: "business",
             travelMonth: "Aug 2026",
@@ -2707,7 +2707,7 @@ const ReviewsContent = () => {
         },
         {
             rating: 5.0,
-            title: "Excellent Stay",
+            title: "Excellent Breakfast",
             author: "deepak b.",
             travelMonth: "Jul 2026",
             table: "Deluxe Table with Golf Course or Humayuns Tomb view",
@@ -2715,7 +2715,7 @@ const ReviewsContent = () => {
         },
         {
             rating: 5.0,
-            title: "Excellent Stay",
+            title: "Excellent Lunch",
             author: "viraaj g.",
             tripType: "solo",
             travelMonth: "Jun 2026",
@@ -2729,7 +2729,7 @@ const ReviewsContent = () => {
         },
         {
             rating: 5.0,
-            title: "Excellent Stay",
+            title: "Excellent Dinner",
             author: "bhavana.",
             tripType: "solo",
             travelMonth: "May 2026",
@@ -2738,7 +2738,7 @@ const ReviewsContent = () => {
         },
         {
             rating: 4.0,
-            title: "Good Stay",
+            title: "Good High Tea",
             author: "sadiya k.",
             travelMonth: "Jan 2026",
             table: "Luxury Table with Golf Course or Humayuns Tomb view",
@@ -2746,7 +2746,7 @@ const ReviewsContent = () => {
         },
         {
             rating: 1.0,
-            title: "Terrible Stay",
+            title: "Terrible Dinner",
             author: "abhishek b.",
             travelMonth: "Dec 2025",
             table: "Premier Table - access to residents lounge",

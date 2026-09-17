@@ -1,0 +1,353 @@
+@use "../../../../styles/variables.scss" as *;
+
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 365px;
+  background-color: #1a1a1a;
+  margin-top: 0;
+  overflow: hidden;
+  // border-radius: 20px;
+
+  .swiperContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiperSlide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bannerItem {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    position: relative;
+
+    // Dark gradient overlay so text stays readable over any image
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   inset: 0;
+    //   background: linear-gradient(
+    //     90deg,
+    //     rgba(0, 0, 0, 0.85) 0%,
+    //     rgba(0, 0, 0, 0.65) 40%,
+    //     rgba(0, 0, 0, 0.25) 70%,
+    //     rgba(0, 0, 0, 0.05) 100%
+    //   );
+    //   z-index: 0;
+    // }
+
+    &.rightAlign::before {
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.65) 40%,
+        rgba(0, 0, 0, 0.25) 70%,
+        rgba(0, 0, 0, 0.05) 100%
+      );
+    }
+  }
+
+  .bannerLink {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // ------- Top-left brand row -------
+  .brandRow {
+    position: absolute;
+    top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+  }
+
+  .leftAlign .brandRow {
+    left: 32px;
+  }
+
+  .rightAlign .brandRow {
+    right: 32px;
+  }
+
+  .brandLogo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px;
+  }
+
+  .brandLabel {
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  // ------- Bottom title block -------
+  .bannerContent {
+    position: absolute;
+    bottom: 100px;
+    left: 50px !important;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    max-width: 60%;
+  }
+
+  .leftAlign .bannerContent {
+    left: 32px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .rightAlign .bannerContent {
+    right: 32px;
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 8px 0 0;
+    font-weight: 400;
+  }
+
+  // ------- Navigation arrows -------
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    svg {
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+  }
+
+  .prevButton {
+    left: 15px;
+  }
+
+  .nextButton {
+    right: 15px;
+  }
+
+  // ------- Pagination dots -------
+  .pagination {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+
+    .paginationDot {
+      width: 12px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      &.activeDot {
+        width: 35px;
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+// ------------------- Responsive -------------------
+@media (max-width: 1191px) {
+  .heroBanner {
+    height: 340px;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .brandLabel {
+      font-size: 1.5rem;
+    }
+
+    .bannerContent {
+      bottom: 40px;
+      max-width: 65%;
+    }
+
+    .leftAlign .brandRow,
+    .leftAlign .bannerContent {
+      left: 28px;
+    }
+
+    .rightAlign .brandRow,
+    .rightAlign .bannerContent {
+      right: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBanner {
+    height: 300px;
+    border-radius: 16px;
+
+    .bannerItem {
+      background-position: center right;
+
+      &::before,
+      &.rightAlign::before {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          rgba(0, 0, 0, 0.85) 100%
+        );
+      }
+    }
+
+    .brandRow {
+      top: 18px;
+    }
+
+    .brandLogo {
+      width: 32px;
+      height: 32px;
+    }
+
+    .brandLabel {
+      font-size: 1.25rem;
+    }
+
+    .bannerContent {
+      bottom: 32px;
+      max-width: 90%;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .leftAlign .brandRow,
+    .leftAlign .bannerContent,
+    .rightAlign .brandRow,
+    .rightAlign .bannerContent {
+      left: 20px;
+      right: auto;
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .title {
+      font-size: 1.4rem;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+    }
+
+    .prevButton,
+    .nextButton {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        font-size: 0.9rem;
+      }
+    }
+
+    .pagination {
+      bottom: 10px;
+
+      .paginationDot {
+        width: 10px;
+        height: 3px;
+
+        &.activeDot {
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .heroBanner {
+    height: 240px;
+    border-radius: 14px;
+
+    .brandLogo {
+      width: 26px;
+      height: 26px;
+    }
+
+    .brandLabel {
+      font-size: 1rem;
+    }
+
+    .bannerContent {
+      bottom: 24px;
+      max-width: 95%;
+    }
+
+    .title {
+      font-size: 1.15rem;
+    }
+
+    .subtitle {
+      font-size: 0.78rem;
+    }
+
+    .prevButton,
+    .nextButton {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

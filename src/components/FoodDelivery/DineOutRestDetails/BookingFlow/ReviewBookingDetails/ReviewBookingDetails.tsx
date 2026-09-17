@@ -13,6 +13,7 @@ import {
     Pencil,
     Tag,
     Users,
+    X,
 } from 'lucide-react';
 
 // =====================================================
@@ -53,6 +54,8 @@ interface ReviewBookingDetailsProps {
     onProceed?: () => void;
 
     onEditContact?: () => void;
+
+    onClose?: () => void;
 }
 
 // =====================================================
@@ -66,6 +69,7 @@ const ReviewBookingDetails: React.FC<
     onBack,
     onProceed,
     onEditContact,
+    onClose
 }) => {
         const [
             activeOfferIndex,
@@ -109,6 +113,10 @@ const ReviewBookingDetails: React.FC<
             onProceed?.();
         };
 
+        const handleClose = () => {
+            onClose?.();
+        };
+
         return (
             <div
                 className={
@@ -122,31 +130,29 @@ const ReviewBookingDetails: React.FC<
                 >
                     {/* HEADER */}
 
-                    <header
-                        className={
-                            styles.header
-                        }
-                    >
+                    {/* HEADER */}
+                    <header className={styles.header}>
                         <button
                             type="button"
-                            className={
-                                styles.backButton
-                            }
-                            onClick={
-                                onBack
-                            }
+                            className={styles.backButton}
+                            onClick={onBack}
                             aria-label="Go Back"
                         >
                             <ArrowLeft />
                         </button>
 
-                        <h1
-                            className={
-                                styles.title
-                            }
-                        >
+                        <h1 className={styles.title}>
                             Review Booking Details
                         </h1>
+
+                        <button
+                            type="button"
+                            className={styles.closeButton}
+                            onClick={handleClose}
+                            aria-label="Close"
+                        >
+                            <X />
+                        </button>
                     </header>
 
                     {/* CONTENT */}

@@ -83,6 +83,10 @@ export default function PayBillFlow({
         onSelectPayment(youPaid, paymentMethod);
     };
 
+    const handleCloseFlow = () => {
+        onClose?.();  // parent-provided close (unmounts the flow)
+    };
+
     // --- Render ---
     if (step === 'amount') {
         return (
@@ -94,6 +98,7 @@ export default function PayBillFlow({
                 initialAmount={billAmount}
                 onBack={onClose}
                 onContinue={handleAmountContinue}
+                onClose={onClose}
             />
         );
     }
@@ -108,6 +113,7 @@ export default function PayBillFlow({
                 paymentSummary={paymentSummaryData}
                 bestCoupon={bestCoupon}
                 onBack={handleSummaryBack}
+                onClose={onClose}
                 onApplyCoupon={() => console.log('Coupon applied')}
                 onViewAllCoupons={() => console.log('View all coupons')}
                 onSelectPayment={handleSelectPayment}
@@ -121,7 +127,7 @@ export default function PayBillFlow({
             activeMethod={paymentMethod}
             onMethodChange={setPaymentMethod}
             onGenerateQR={handleGenerateQR}
-            onClose={handleOptionsBack}
+            onClose={handleCloseFlow}
         />
     );
 }

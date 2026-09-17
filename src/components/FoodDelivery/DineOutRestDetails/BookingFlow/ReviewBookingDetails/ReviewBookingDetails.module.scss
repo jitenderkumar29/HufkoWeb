@@ -73,6 +73,7 @@
     box-shadow: $subheader-shadow;
     flex-shrink: 0;
     z-index: 10;
+    position: relative;
 
     .backButton {
         background: none;
@@ -84,6 +85,7 @@
         justify-content: center;
         border-radius: 50%;
         transition: background-color 0.2s;
+        flex-shrink: 0;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.05);
@@ -101,6 +103,36 @@
         font-weight: 700;
         margin: 0;
         color: $title-color;
+        flex: 1;             // take remaining space
+        text-align: left;    // title on the left
+    }
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;          // never shrink
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &:active {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -120,11 +152,11 @@
 // Reusable Card
 .card {
     background: $background-linear-gradient;
+    box-shadow: $box-shadow-light;
     // background-color: $white;
     border-radius: 12px;
     border: 1px solid $gray-300;
     padding: 16px;
-    box-shadow: $box-shadow-light;
     // border: 1px solid $border-light;
 }
 
@@ -135,7 +167,7 @@
     align-items: flex-start;
     gap: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $gray-500;
 
     .restaurantInfo {
         flex: 1;
@@ -154,7 +186,7 @@
 
     .restaurantAddress {
         font-size: 15px;
-        color: $gray-600;
+        color: $black;
         line-height: 1.4;
     }
 
@@ -172,7 +204,7 @@
     display: flex;
     justify-content: space-between;
     padding: 16px 0;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $gray-500;
 
     .metaItem {
         flex: 1;
@@ -189,7 +221,7 @@
             top: 20%;
             height: 60%;
             width: 1px;
-            background-color: $border-color;
+            background-color: $gray-500;
         }
     }
 
@@ -197,8 +229,8 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        font-size: 13px;
-        color: $gray-600;
+        font-size: 14px;
+        color: $gray-800;
 
         svg {
             width: 16px;
@@ -263,7 +295,7 @@
     padding: 12px 0;
 
     &:not(:last-child) {
-        border-bottom: 1px dashed $gray-300;
+        border-bottom: 1px dashed $gray-500;
     }
 }
 

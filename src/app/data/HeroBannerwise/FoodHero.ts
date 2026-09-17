@@ -223,3 +223,16 @@ export const DineoutHeroBannerData = [
     href: "/",
   }
 ];
+
+export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
+  
+   {
+    id: '',
+    title: '',
+    subtitle: '',
+    category: '',
+    discount: '',
+    imgUrl: '/products/DietFoodHeroBanner1.png',
+    align: 'left'
+  }
+  ]

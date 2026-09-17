@@ -190,6 +190,7 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     const [selectedCountry, setSelectedCountry] = useState<string>('');
     const [selectedState, setSelectedState] = useState<string>('');
     const [selectedLocality, setSelectedLocality] = useState<string>('');
+    
 
     const router = useRouter();
 
