@@ -14,6 +14,7 @@ import 'swiper/css/pagination';
 
 export interface BannerItemContent {
   id: string;
+  foodId?: string;        // 👈 added
   title: string;
   subtitle: string;
   category: string;

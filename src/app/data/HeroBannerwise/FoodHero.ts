@@ -225,14 +225,44 @@ export const DineoutHeroBannerData = [
 ];
 
 export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
-  
-   {
-    id: '',
-    title: '',
+  {
+    id: '1',
+    foodId: 'diet',
+    title: 'Premium Quality Diet',
     subtitle: '',
-    category: '',
+    category: 'Diet',
     discount: '',
     imgUrl: '/products/DietFoodHeroBanner1.png',
     align: 'left'
-  }
-  ]
+  },
+  {
+    id: '2',
+    foodId: 'salad',
+    title: 'Premium Quality Salad',
+    subtitle: '',
+    category: 'salad',
+    discount: '',
+    imgUrl: '/products/saladFoodHeroBanner.png',
+    align: 'left'
+  },
+  {
+    id: '3',
+    foodId: 'bowl',
+    title: 'Premium Quality Bowl',
+    subtitle: '',
+    category: 'bowl',
+    discount: '',
+    imgUrl: '/products/bowlFoodHeroBanner.png',
+    align: 'left'
+  },
+  {
+    id: '4',
+    foodId: 'soup',
+    title: 'Premium Quality Soup',
+    subtitle: '',
+    category: 'soup',
+    discount: '',
+    imgUrl: '/products/soupFoodHeroBanner.png',
+    align: 'left'
+  },
+];

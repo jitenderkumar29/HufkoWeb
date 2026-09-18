@@ -60,6 +60,10 @@ const STORAGE_KEYS = {
   SELECTED_FULL_ADDRESS: 'address_selection_full_address',
 } as const;
 
+export const FOOD_DIET_HERO_BANNER_FOOD_IDS = new Set(
+  FoodDietHeroBannerLeftContent.map((b) => b.foodId)
+);
+
 const getFromStorage = (key: string): string | null => {
   try {
     return localStorage.getItem(key);
@@ -210,12 +214,14 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
     onItemClick?.(item as unknown as FoodDeliveryItem);
   };
 
+
   return (
     <div className={styles.container}>
-      {/* Hero banner — only for diet for now; add more cases as needed */}
-      {foodId === 'diet' && (
-        <HeroBannerFoodSimple
-          banners={FoodDietHeroBannerLeftContent}
+      {FOOD_DIET_HERO_BANNER_FOOD_IDS.has(foodId) && (
+        <HeroBannerFood
+          banners={FoodDietHeroBannerLeftContent.filter(
+            (banner) => banner.foodId === foodId
+          )}
           defaultAlign="left"
         />
       )}

@@ -99,7 +99,7 @@ const HeroBannerFood: React.FC<HeroBannerFoodProps> = ({
                         className={styles.brandLogo}
                       />
                     )}
-                    <span className={styles.brandLabel}>{banner.category}</span>
+                    {/* <span className={styles.brandLabel}>{banner.category}</span> */}
                   </div>
 
                   {/* Bottom-left: main title + optional subtitle */}
