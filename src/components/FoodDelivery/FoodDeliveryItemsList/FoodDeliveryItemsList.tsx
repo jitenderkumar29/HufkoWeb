@@ -238,7 +238,7 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
       {filteredRestaurants.length > 0 ? (
         <OrderNowItemsListCard
           items={filteredRestaurants}
-          title={getLocationBasedTitle(`${categoryName} Restaurants`)}
+          title={getLocationBasedTitle(`Explore ${categoryName} Restaurants`)}
           variant="5col"
           showOffers={true}
           onItemClick={handleItemFoodClick}
