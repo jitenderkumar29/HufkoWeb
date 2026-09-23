@@ -258,12 +258,12 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   { id: '14', foodId: 'rolls',       title: 'Premium Quality Delicious',        subtitle: 'Rolls', category: 'Rolls',          discount: '', imgUrl: '/products/rollsFoodHeroBanner.png',     align: 'left' },
   { id: '15', foodId: 'shawarma',    title: 'Premium Quality Delicious',     subtitle: 'Shawarma', category: 'Shawarma',       discount: '', imgUrl: '/products/shawarmaFoodHeroBanner.png',  align: 'left' },
-  { id: '16', foodId: 'momos',       title: 'Premium Quality Momos',        subtitle: '', category: 'Momos',          discount: '', imgUrl: '/products/momosFoodHeroBanner.png',     align: 'left' },
+  { id: '16', foodId: 'momos',       title: 'Premium Quality Delicious',        subtitle: 'Momos', category: 'Momos',          discount: '', imgUrl: '/products/momosFoodHeroBanner.png',     align: 'left' },
 
   // ── Bakery ──────────────────────────────────────
 
-  { id: '17', foodId: 'pastry',      title: 'Premium Quality Pastry',       subtitle: '', category: 'Pastry',         discount: '', imgUrl: '/products/pastryFoodHeroBanner.png',    align: 'left' },
-  { id: '18', foodId: 'cupcake',     title: 'Premium Quality Cupcake',      subtitle: '', category: 'Cupcake',        discount: '', imgUrl: '/products/cupcakeFoodHeroBanner.png',   align: 'left' },
+  { id: '17', foodId: 'pastry',      title: 'Premium Quality Delicious',       subtitle: 'Pastry', category: 'Pastry',         discount: '', imgUrl: '/products/pastryFoodHeroBanner.png',    align: 'left' },
+  { id: '18', foodId: 'cupcake',     title: 'Premium Quality Delicious',      subtitle: 'Cupcake', category: 'Cupcake',        discount: '', imgUrl: '/products/cupcakeFoodHeroBanner.png',   align: 'left' },
   { id: '19', foodId: 'muffin',      title: 'Premium Quality Muffin',       subtitle: '', category: 'Muffin',         discount: '', imgUrl: '/products/muffinFoodHeroBanner.png',    align: 'left' },
   { id: '20', foodId: 'cookies',     title: 'Premium Quality Cookies',      subtitle: '', category: 'Cookies',        discount: '', imgUrl: '/products/cookiesFoodHeroBanner.png',   align: 'left' },
   { id: '21', foodId: 'croissant',   title: 'Premium Quality Croissant',    subtitle: '', category: 'Croissant',      discount: '', imgUrl: '/products/croissantFoodHeroBanner.png', align: 'left' },
