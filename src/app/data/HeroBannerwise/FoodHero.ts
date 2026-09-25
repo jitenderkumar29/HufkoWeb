@@ -267,9 +267,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '19', foodId: 'muffin',      title: 'Premium Quality Delicious',       subtitle: 'Muffin', category: 'Muffin',         discount: '', imgUrl: '/products/muffinFoodHeroBanner.png',    align: 'left' },
   { id: '20', foodId: 'cookies',     title: 'Premium Quality Delicious',      subtitle: 'Cookies', category: 'Cookies',        discount: '', imgUrl: '/products/cookiesFoodHeroBanner.png',   align: 'left' },
   { id: '21', foodId: 'croissant',   title: 'Premium Quality Delicious',    subtitle: 'Croissant', category: 'Croissant',      discount: '', imgUrl: '/products/croissantFoodHeroBanner.png', align: 'left' },
-  { id: '22', foodId: 'doughnut',    title: 'Premium Quality Doughnut',     subtitle: '', category: 'Doughnut',       discount: '', imgUrl: '/products/doughnutFoodHeroBanner.png',  align: 'left' },
-  { id: '23', foodId: 'brownie',     title: 'Premium Quality Brownie',      subtitle: '', category: 'Brownie',        discount: '', imgUrl: '/products/brownieFoodHeroBanner.png',   align: 'left' },
-  { id: '24', foodId: 'bread_pakoda', title: 'Premium Quality Bread Pakoda', subtitle: '', category: 'Bread Pakoda',  discount: '', imgUrl: '/products/breadPakodaFoodHeroBanner.png', align: 'left' },
+  { id: '22', foodId: 'doughnut',    title: 'Premium Quality Delicious',     subtitle: 'Doughnut', category: 'Doughnut',       discount: '', imgUrl: '/products/doughnutFoodHeroBanner.png',  align: 'left' },
+  { id: '23', foodId: 'brownie',     title: 'Premium Quality Delicious',      subtitle: 'Brownie', category: 'Brownie',        discount: '', imgUrl: '/products/brownieFoodHeroBanner.png',   align: 'left' },
+  { id: '24', foodId: 'bread_pakoda', title: 'Premium Quality Delicious', subtitle: 'Bread Pakoda', category: 'Bread Pakoda',  discount: '', imgUrl: '/products/breadPakodaFoodHeroBanner.png', align: 'left' },
 
   // ── Cakes ───────────────────────────────────────
 
