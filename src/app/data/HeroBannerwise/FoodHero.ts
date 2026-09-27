@@ -279,8 +279,8 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   { id: '26', foodId: 'dessert',     title: 'Premium Quality Delicious',      subtitle: 'Dessert', category: 'Dessert',        discount: '', imgUrl: '/products/dessertFoodHeroBanner.png',   align: 'left' },
   { id: '27', foodId: 'cheesecake',  title: 'Premium Quality Delicious',   subtitle: 'Cheesecake', category: 'Cheesecake',     discount: '', imgUrl: '/products/cheesecakeFoodHeroBanner.png', align: 'left' },
-  { id: '28', foodId: 'tart',        title: 'Premium Quality Tart',         subtitle: '', category: 'Tart',           discount: '', imgUrl: '/products/tartFoodHeroBanner.png',      align: 'left' },
-  { id: '29', foodId: 'pie',         title: 'Premium Quality Pie',          subtitle: '', category: 'Pie',            discount: '', imgUrl: '/products/pieFoodHeroBanner.png',       align: 'left' },
+  { id: '28', foodId: 'tart',        title: 'Premium Quality Delicious',         subtitle: 'Tart', category: 'Tart',           discount: '', imgUrl: '/products/tartFoodHeroBanner.png',      align: 'left' },
+  { id: '29', foodId: 'pie',         title: 'Premium Quality Delicious',          subtitle: 'Pie', category: 'Pie',            discount: '', imgUrl: '/products/pieFoodHeroBanner.png',       align: 'left' },
   { id: '30', foodId: 'pudding',     title: 'Premium Quality Pudding',      subtitle: '', category: 'Pudding',        discount: '', imgUrl: '/products/puddingFoodHeroBanner.png',   align: 'left' },
   { id: '31', foodId: 'custard',     title: 'Premium Quality Custard',      subtitle: '', category: 'Custard',        discount: '', imgUrl: '/products/custardFoodHeroBanner.png',   align: 'left' },
   { id: '32', foodId: 'mousse',      title: 'Premium Quality Mousse',       subtitle: '', category: 'Mousse',         discount: '', imgUrl: '/products/mousseFoodHeroBanner.png',    align: 'left' },
