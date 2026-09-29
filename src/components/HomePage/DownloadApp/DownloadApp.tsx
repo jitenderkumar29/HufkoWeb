@@ -22,7 +22,7 @@ const DownloadApp: React.FC = () => {
                 {/* Store Buttons */}
                 <div className={styles['download-app__buttons']}>
                   <a
-                    href="https://link.zomato.com/xqzv/iwz6g6kg"
+                    href="/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles['download-app__store-link']}
@@ -37,7 +37,7 @@ const DownloadApp: React.FC = () => {
                     />
                   </a>
                   <a
-                    href="https://link.zomato.com/xqzv/xigpfha6"
+                    href="/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles['download-app__store-link']}
