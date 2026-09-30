@@ -284,9 +284,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '30', foodId: 'pudding',     title: 'Premium Quality Delicious',      subtitle: 'Pudding', category: 'Pudding',        discount: '', imgUrl: '/products/puddingFoodHeroBanner.png',   align: 'left' },
   { id: '31', foodId: 'custard',     title: 'Premium Quality Delicious',      subtitle: 'Custard', category: 'Custard',        discount: '', imgUrl: '/products/custardFoodHeroBanner.png',   align: 'left' },
   { id: '32', foodId: 'mousse',      title: 'Premium Quality Delicious',       subtitle: 'Mousse', category: 'Mousse',         discount: '', imgUrl: '/products/mousseFoodHeroBanner.png',    align: 'left' },
-  { id: '33', foodId: 'tiramisu',    title: 'Premium Quality Tiramisu',     subtitle: '', category: 'Tiramisu',       discount: '', imgUrl: '/products/tiramisuFoodHeroBanner.png',  align: 'left' },
-  { id: '34', foodId: 'waffles',     title: 'Premium Quality Waffles',      subtitle: '', category: 'Waffles',        discount: '', imgUrl: '/products/wafflesFoodHeroBanner.png',   align: 'left' },
-  { id: '35', foodId: 'pancake',     title: 'Premium Quality Pancake',      subtitle: '', category: 'Pancake',        discount: '', imgUrl: '/products/pancakeFoodHeroBanner.png',   align: 'left' },
+  { id: '33', foodId: 'tiramisu',    title: 'Premium Quality Delicious',     subtitle: 'Tiramisu', category: 'Tiramisu',       discount: '', imgUrl: '/products/tiramisuFoodHeroBanner.png',  align: 'left' },
+  { id: '34', foodId: 'waffles',     title: 'Premium Quality Delicious',      subtitle: 'Waffles', category: 'Waffles',        discount: '', imgUrl: '/products/wafflesFoodHeroBanner.png',   align: 'left' },
+  { id: '35', foodId: 'pancake',     title: 'Premium Quality Delicious',      subtitle: 'Pancake', category: 'Pancake',        discount: '', imgUrl: '/products/pancakeFoodHeroBanner.png',   align: 'left' },
   { id: '36', foodId: 'chocolate',   title: 'Premium Quality Chocolate',    subtitle: '', category: 'Chocolate',      discount: '', imgUrl: '/products/chocolateFoodHeroBanner.png', align: 'left' },
 
   // ── Ice Cream ───────────────────────────────────
