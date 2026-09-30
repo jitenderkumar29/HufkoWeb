@@ -274,7 +274,8 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   // ── Cakes ───────────────────────────────────────
 
   { id: '25', foodId: 'cakes',       title: 'Premium Quality Delicious',        subtitle: 'Cakes', category: 'Cakes',          discount: '', imgUrl: '/products/cakesFoodHeroBanner.png',     align: 'left' },
-
+ 
+  
   // ── Desserts ────────────────────────────────────
 
   { id: '26', foodId: 'dessert',     title: 'Premium Quality Delicious',      subtitle: 'Dessert', category: 'Dessert',        discount: '', imgUrl: '/products/dessertFoodHeroBanner.png',   align: 'left' },
