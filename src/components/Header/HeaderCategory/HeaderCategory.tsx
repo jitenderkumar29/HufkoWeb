@@ -51,6 +51,7 @@ import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/Din
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import FoodDeliveryItemsList, { FoodDeliveryItem } from '@/components/FoodDelivery/FoodDeliveryItemsList/FoodDeliveryItemsList';
 import AllCategory, { Category as AllCategoryItem, ClickableFoodCategory } from '../../HomePage/AllCategory/AllCategory';
+import DownloadAppNew from '@/components/HomePage/DownloadAppNew/DownloadAppNew';
 
 interface CategoryItem {
   id: string;
@@ -770,6 +771,7 @@ const HeaderCategory: React.FC = () => {
               benefits={defaultBenefits}
               onMoreClick={() => console.log('More clicked!')}
             />
+            {/* <DownloadAppNew /> */}
             <DownloadApp />
             <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"

@@ -288,17 +288,17 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '33', foodId: 'tiramisu',    title: 'Premium Quality Delicious',     subtitle: 'Tiramisu', category: 'Tiramisu',       discount: '', imgUrl: '/products/tiramisuFoodHeroBanner.png',  align: 'left' },
   { id: '34', foodId: 'waffles',     title: 'Premium Quality Delicious',      subtitle: 'Waffles', category: 'Waffles',        discount: '', imgUrl: '/products/wafflesFoodHeroBanner.png',   align: 'left' },
   { id: '35', foodId: 'pancake',     title: 'Premium Quality Delicious',      subtitle: 'Pancake', category: 'Pancake',        discount: '', imgUrl: '/products/pancakeFoodHeroBanner.png',   align: 'left' },
-  { id: '36', foodId: 'chocolate',   title: 'Premium Quality Chocolate',    subtitle: '', category: 'Chocolate',      discount: '', imgUrl: '/products/chocolateFoodHeroBanner.png', align: 'left' },
+  { id: '36', foodId: 'chocolate',   title: 'Premium Quality Delicious',    subtitle: 'Chocolate', category: 'Chocolate',      discount: '', imgUrl: '/products/chocolateFoodHeroBanner.png', align: 'left' },
 
   // ── Ice Cream ───────────────────────────────────
 
-  { id: '37', foodId: 'ice_cream',   title: 'Premium Quality Ice Cream',    subtitle: '', category: 'Ice Cream',      discount: '', imgUrl: '/products/iceCreamFoodHeroBanner.png',  align: 'left' },
-  { id: '38', foodId: 'sundae',      title: 'Premium Quality Sundae',       subtitle: '', category: 'Sundae',         discount: '', imgUrl: '/products/sundaeFoodHeroBanner.png',    align: 'left' },
+  { id: '37', foodId: 'ice_cream',   title: 'Premium Quality Delicious',    subtitle: 'Ice Cream', category: 'Ice Cream',      discount: '', imgUrl: '/products/iceCreamFoodHeroBanner.png',  align: 'left' },
+  { id: '38', foodId: 'sundae',      title: 'Premium Quality Delicious',       subtitle: '', category: 'Sundae',         discount: '', imgUrl: '/products/sundaeFoodHeroBanner.png',    align: 'left' },
 
   // ── Sweets ──────────────────────────────────────
 
-  { id: '39', foodId: 'sweets',      title: 'Premium Quality Sweets',       subtitle: '', category: 'Sweets',         discount: '', imgUrl: '/products/sweetsFoodHeroBanner.png',    align: 'left' },
-  { id: '40', foodId: 'gulab_jamun', title: 'Premium Quality Gulab Jamun',  subtitle: '', category: 'Gulab Jamun',    discount: '', imgUrl: '/products/gulabJamunFoodHeroBanner.png', align: 'left' },
+  { id: '39', foodId: 'sweets',      title: 'Premium Quality Delicious',       subtitle: '', category: 'Sweets',         discount: '', imgUrl: '/products/sweetsFoodHeroBanner.png',    align: 'left' },
+  { id: '40', foodId: 'gulab_jamun', title: 'Premium Quality Delicious',  subtitle: 'Gulab Jamun', category: 'Gulab Jamun',    discount: '', imgUrl: '/products/gulabJamunFoodHeroBanner.png', align: 'left' },
   { id: '41', foodId: 'rasmalai',    title: 'Premium Quality Rasmalai',     subtitle: '', category: 'Rasmalai',       discount: '', imgUrl: '/products/rasmalaiFoodHeroBanner.png',  align: 'left' },
   { id: '42', foodId: 'rasgulla',    title: 'Premium Quality Rasgulla',     subtitle: '', category: 'Rasgulla',       discount: '', imgUrl: '/products/rasgullaFoodHeroBanner.png',  align: 'left' },
   { id: '43', foodId: 'jalebi',      title: 'Premium Quality Jalebi',       subtitle: '', category: 'Jalebi',         discount: '', imgUrl: '/products/jalebiFoodHeroBanner.png',    align: 'left' },
