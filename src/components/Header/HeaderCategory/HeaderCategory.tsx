@@ -771,7 +771,6 @@ const HeaderCategory: React.FC = () => {
               benefits={defaultBenefits}
               onMoreClick={() => console.log('More clicked!')}
             />
-            {/* <DownloadAppNew /> */}
             <DownloadApp />
             <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"
@@ -869,6 +868,7 @@ const HeaderCategory: React.FC = () => {
               benefits={defaultBenefits}
               onMoreClick={() => console.log('More clicked!')}
             />
+            <DownloadAppNew />
             <DownloadApp />
             <FranchiseHufkoSlide
               badgeText="World's Largest Instant Delivery App Platform"

@@ -7,9 +7,42 @@
     min-height: 400px;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 2rem;
     background: $white;
+    border-radius: 24px;
 }
+
+/* ============================================
+   FULL BANNER BACKGROUND IMAGE
+============================================ */
+
+.backgroundImage {
+    position: absolute !important;
+    z-index: -3;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+/*
+   Very light overlay keeps the background image
+   soft while maintaining readability of content.
+*/
+.backgroundOverlay {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    background: rgba($white, 0.08);
+    pointer-events: none;
+}
+
+/* ============================================
+   MAIN CONTAINER
+============================================ */
 
 .container {
     position: relative;
@@ -18,14 +51,17 @@
     grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
     align-items: center;
     width: 100%;
-    // max-width: $max-width;
     min-height: 400px;
     margin: 0 auto;
-    // padding: 34px 5.5%;
     box-sizing: border-box;
-    border: 1px solid $gray-800;
-    border-radius: 22px;
+    border: 1px solid rgba($gray-800, 0.75);
+    border-radius: 24px;
+     padding: 2rem 3rem !important;
 }
+
+/* ============================================
+   LEFT CONTENT
+============================================ */
 
 .content {
     position: relative;
@@ -36,6 +72,8 @@
     justify-content: center;
     width: 100%;
     max-width: 610px;
+    padding: 34px 0 34px 5.5%;
+    box-sizing: border-box;
 }
 
 .headingWrapper {
@@ -62,14 +100,11 @@
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -1.5px;
+    column-gap: 8px;
 }
 
 .brandHighlight {
     color: $button-red;
-
-    span {
-        color: $black;
-    }
 }
 
 .headingDark {
@@ -84,6 +119,10 @@
     font-weight: 500;
     line-height: 1.5;
 }
+
+/* ============================================
+   BENEFITS
+============================================ */
 
 .benefits {
     display: flex;
@@ -114,6 +153,10 @@
     box-sizing: border-box;
 }
 
+/* ============================================
+   QR CODE
+============================================ */
+
 .qrSection {
     display: flex;
     align-items: center;
@@ -140,6 +183,10 @@
     object-fit: contain;
 }
 
+/* ============================================
+   QR INFORMATION
+============================================ */
+
 .qrInfo {
     display: flex;
     align-items: center;
@@ -159,7 +206,7 @@
     border-radius: 50%;
 }
 
-.qrInfo div:last-child {
+.qrInfoContent {
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -177,6 +224,10 @@
     font-size: 12px;
     line-height: 1.35;
 }
+
+/* ============================================
+   DOWNLOAD BUTTONS
+============================================ */
 
 .downloadButtons {
     display: flex;
@@ -228,6 +279,10 @@
     background: $button-red;
 }
 
+/* ============================================
+   RIGHT VISUAL
+============================================ */
+
 .visual {
     position: relative;
     align-self: stretch;
@@ -236,6 +291,7 @@
     justify-content: center;
     min-width: 0;
     min-height: 330px;
+    overflow: visible;
 }
 
 .visualGlow {
@@ -247,11 +303,12 @@
     background:
         radial-gradient(
             circle,
-            rgba($orange-300, 0.38) 0%,
-            rgba($orange-200, 0.18) 42%,
+            rgba($orange-300, 0.20) 0%,
+            rgba($orange-200, 0.10) 42%,
             rgba($white, 0) 72%
         );
     filter: blur(10px);
+    pointer-events: none;
 }
 
 .appImageWrapper {
@@ -280,38 +337,21 @@
 }
 
 .visual:hover .appImage {
+    // transform: scale(1.015);
     filter: drop-shadow(0 24px 30px rgba($black, 0.13));
 }
 
-.backgroundGlow {
-    position: absolute;
-    z-index: 0;
-    top: 5%;
-    left: 17%;
-    width: 35%;
-    height: 90%;
-    border-radius: 50%;
-    background: rgba($primary-color-light, 0.18);
-    filter: blur(60px);
-    pointer-events: none;
-}
-
-.backgroundGlowSecondary {
-    position: absolute;
-    z-index: 0;
-    top: 5%;
-    right: 8%;
-    width: 35%;
-    height: 90%;
-    border-radius: 50%;
-    background: rgba($orange-300, 0.18);
-    filter: blur(65px);
-    pointer-events: none;
-}
+/* ============================================
+   XXL
+============================================ */
 
 @media (min-width: $breakpoint-xxl) {
     .container {
-        padding-right: 5%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content {
         padding-left: 5%;
     }
 
@@ -321,10 +361,14 @@
     }
 
     .qrCard {
-        width: 155px;
-        height: 155px;
+        width: 200px;
+        height: 200px;
     }
 }
+
+/* ============================================
+   XL - LAPTOP
+============================================ */
 
 @media (max-width: $breakpoint-xl) {
     .downloadAppBanner {
@@ -335,7 +379,10 @@
     .container {
         min-height: 370px;
         grid-template-columns: 1fr 1fr;
-        padding: 30px 4%;
+    }
+
+    .content {
+        padding: 30px 0 30px 4%;
     }
 
     .smallHeading,
@@ -363,13 +410,17 @@
     }
 
     .appImageWrapper {
-        height: 300px;
+        height: 420px;
     }
 
     .qrInfo {
         display: none;
     }
 }
+
+/* ============================================
+   LG - TABLET / SMALL LAPTOP
+============================================ */
 
 @media (max-width: $breakpoint-lg) {
     .downloadAppBanner {
@@ -378,7 +429,10 @@
 
     .container {
         min-height: 330px;
-        padding: 25px 28px;
+    }
+
+    .content {
+        padding: 25px 0 25px 28px;
     }
 
     .smallHeading {
@@ -424,14 +478,23 @@
     }
 
     .appImageWrapper {
-        height: 265px;
+        height: 350px;
     }
 }
+
+/* ============================================
+   MD - MOBILE
+============================================ */
 
 @media (max-width: $breakpoint-md) {
     .downloadAppBanner {
         min-height: auto;
         border-radius: 16px;
+        padding: 0;
+    }
+
+    .backgroundImage {
+        object-position: center;
     }
 
     .container {
@@ -439,12 +502,12 @@
         flex-direction: column;
         align-items: stretch;
         min-height: auto;
-        padding: 30px 20px 15px;
     }
 
     .content {
         align-items: center;
         max-width: 100%;
+        padding: 30px 20px 15px;
         text-align: center;
     }
 
@@ -513,34 +576,31 @@
 
     .visual {
         width: 100%;
-        min-height: 240px;
-        margin-top: 15px;
+        min-height: 270px;
+        margin-top: 5px;
     }
 
     .appImageWrapper {
         width: 100%;
-        height: 245px;
+        height: 300px;
     }
 
-    .backgroundGlow {
-        left: 5%;
+    .visualGlow {
         width: 90%;
-        height: 45%;
-    }
-
-    .backgroundGlowSecondary {
-        right: 5%;
-        width: 90%;
-        height: 45%;
+        height: 70%;
     }
 }
+
+/* ============================================
+   XS - SMALL MOBILE
+============================================ */
 
 @media (max-width: $breakpoint-xs) {
     .downloadAppBanner {
         border-radius: 14px;
     }
 
-    .container {
+    .content {
         padding: 25px 14px 10px;
     }
 
@@ -584,14 +644,18 @@
     }
 
     .visual {
-        min-height: 205px;
-        margin-top: 12px;
+        min-height: 230px;
+        margin-top: 5px;
     }
 
     .appImageWrapper {
-        height: 210px;
+        height: 250px;
     }
 }
+
+/* ============================================
+   VERY SMALL MOBILE
+============================================ */
 
 @media (max-width: 360px) {
     .smallHeading {
@@ -612,13 +676,17 @@
     }
 
     .visual {
-        min-height: 185px;
+        min-height: 205px;
     }
 
     .appImageWrapper {
-        height: 190px;
+        height: 220px;
     }
 }
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
 
 @media (prefers-reduced-motion: reduce) {
     .downloadButton,

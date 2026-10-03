@@ -293,7 +293,7 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   // ── Ice Cream ───────────────────────────────────
 
   { id: '37', foodId: 'ice_cream',   title: 'Premium Quality Delicious',    subtitle: 'Ice Cream', category: 'Ice Cream',      discount: '', imgUrl: '/products/iceCreamFoodHeroBanner.png',  align: 'left' },
-  { id: '38', foodId: 'sundae',      title: 'Premium Quality Delicious',       subtitle: '', category: 'Sundae',         discount: '', imgUrl: '/products/sundaeFoodHeroBanner.png',    align: 'left' },
+  { id: '38', foodId: 'sundae',      title: 'Premium Quality Delicious',       subtitle: 'Sundae', category: 'Sundae',         discount: '', imgUrl: '/products/sundaeFoodHeroBanner.png',    align: 'left' },
 
   // ── Sweets ──────────────────────────────────────
 

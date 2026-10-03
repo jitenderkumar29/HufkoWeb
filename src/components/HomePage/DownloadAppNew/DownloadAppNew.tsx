@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { CheckCircle2, Download, Smartphone } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import styles from './DownloadAppNew.module.scss';
 
 export interface DownloadAppBenefit {
@@ -12,28 +11,37 @@ export interface DownloadAppBenefit {
 
 export interface DownloadAppNewProps {
   title?: string;
+  brandName?: string;
   highlightedTitle?: string;
   subtitle?: string;
   benefits?: DownloadAppBenefit[];
+
   qrCodeSrc?: string;
   qrCodeAlt?: string;
+
   appShowcaseSrc?: string;
   appShowcaseAlt?: string;
+
+  backgroundImageSrc?: string;
+  backgroundImageAlt?: string;
+
   androidUrl?: string;
   iosUrl?: string;
+
   showDownloadButton?: boolean;
   showQrCode?: boolean;
+
   className?: string;
 }
 
 const defaultBenefits: DownloadAppBenefit[] = [
   {
     id: 'latest-deals',
-    text: 'Latest Deals, Offers etc',
+    text: 'Delicious Food, Great Offers',
   },
   {
-    id: 'price-alerts',
-    text: 'Price Drop Alerts',
+    id: 'food-discovery',
+    text: 'Discover Restaurants Near You',
   },
   {
     id: 'order-updates',
@@ -43,40 +51,63 @@ const defaultBenefits: DownloadAppBenefit[] = [
 
 const DownloadAppNew = ({
   title = 'Scan to Download',
+  brandName = 'HUFKO',
   highlightedTitle = 'App Now!',
   subtitle,
   benefits = defaultBenefits,
+
   qrCodeSrc = '/products/app-download-qr2.png',
-  //   qrCodeSrc = '/icons/download_app__qr_code.png',
-  qrCodeAlt = 'Scan QR code to download the mobile app',
-  appShowcaseSrc = '/products/app-download-showcase1.png',
-  appShowcaseAlt = 'Mobile application preview',
+  qrCodeAlt = 'Scan QR code to download the HUFKO app',
+
+  appShowcaseSrc = '/products/app-download-showcase2.png',
+  appShowcaseAlt = 'HUFKO food delivery mobile application preview',
+
+  backgroundImageSrc = '/products/download-app-bg.png',
+  backgroundImageAlt = '',
+
   androidUrl = '#',
   iosUrl = '#',
+
   showDownloadButton = true,
   showQrCode = true,
+
   className = '',
 }: DownloadAppNewProps) => {
   return (
     <section
       className={`${styles.downloadAppBanner} ${className}`}
-      aria-label="Download mobile application"
+      aria-label="Download HUFKO mobile application"
     >
-      <div className={styles.backgroundGlow} aria-hidden="true" />
-      <div className={styles.backgroundGlowSecondary} aria-hidden="true" />
+      {/* Full banner background image */}
+      <Image
+        src={backgroundImageSrc}
+        alt={backgroundImageAlt}
+        fill
+        priority
+        sizes="100vw"
+        className={styles.backgroundImage}
+        aria-hidden={!backgroundImageAlt}
+      />
+
+      <div className={styles.backgroundOverlay} aria-hidden="true" />
 
       <div className={styles.container}>
+        {/* LEFT CONTENT */}
         <div className={styles.content}>
           <div className={styles.headingWrapper}>
-            <span className={styles.smallHeading}>{title}</span>
+            <span className={styles.smallHeading}>
+              {title}
+            </span>
 
             <h2 className={styles.heading}>
               <span className={styles.brandHighlight}>
-                Hufko <span className={styles.brandHighlightSpan}>{highlightedTitle.replace(' App Now!', '')}</span>
+                {brandName}
               </span>
-              {highlightedTitle.includes(' App Now!') && (
-                <span className={styles.headingDark}> App Now!</span>
-              )}
+
+              <span className={styles.headingDark}>
+                {' '}
+                { highlightedTitle}
+              </span>
             </h2>
 
             {subtitle && (
@@ -86,6 +117,7 @@ const DownloadAppNew = ({
             )}
           </div>
 
+          {/* BENEFITS */}
           <div className={styles.benefits}>
             {benefits.map((benefit) => (
               <div
@@ -102,6 +134,7 @@ const DownloadAppNew = ({
             ))}
           </div>
 
+          {/* QR CODE */}
           {showQrCode && (
             <div className={styles.qrSection}>
               <div className={styles.qrCard}>
@@ -116,40 +149,54 @@ const DownloadAppNew = ({
 
               {/* <div className={styles.qrInfo}>
                 <div className={styles.qrIcon}>
-                  <Smartphone size={18} strokeWidth={2.2} />
+                  <Smartphone
+                    size={18}
+                    strokeWidth={2.2}
+                  />
                 </div>
 
-                <div>
+                <div className={styles.qrInfoContent}>
                   <strong>Scan & Download</strong>
-                  <span>Available on Android & iOS</span>
+
+                  <span>
+                    Available on Android & iOS
+                  </span>
                 </div>
               </div> */}
             </div>
           )}
 
+          {/* DOWNLOAD BUTTONS */}
           {/* {showDownloadButton && (
             <div className={styles.downloadButtons}>
               <Link
                 href={androidUrl}
                 className={styles.downloadButton}
-                aria-label="Download Android application"
+                aria-label="Download HUFKO Android application"
               >
                 <Download size={18} />
-                <span>Download App</span>
+
+                <span>
+                  Download App
+                </span>
               </Link>
 
               <Link
                 href={iosUrl}
                 className={`${styles.downloadButton} ${styles.secondaryButton}`}
-                aria-label="Download iOS application"
+                aria-label="Download HUFKO iOS application"
               >
                 <Smartphone size={18} />
-                <span>Get the App</span>
+
+                <span>
+                  Get the App
+                </span>
               </Link>
             </div>
           )} */}
         </div>
 
+        {/* RIGHT APP SHOWCASE */}
         <div className={styles.visual}>
           <div className={styles.visualGlow} aria-hidden="true" />
 
