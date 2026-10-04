@@ -59,7 +59,7 @@ const DownloadAppNew = ({
   qrCodeSrc = '/products/app-download-qr2.png',
   qrCodeAlt = 'Scan QR code to download the HUFKO app',
 
-  appShowcaseSrc = '/products/app-download-showcase2.png',
+  appShowcaseSrc = '/products/app-download-showcase_1.png',
   appShowcaseAlt = 'HUFKO food delivery mobile application preview',
 
   backgroundImageSrc = '/products/download-app-bg.png',
