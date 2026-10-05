@@ -14,7 +14,7 @@ import { GroceryHeroBannerData } from '@/app/data/HeroBannerwise/GroceryHero';
 import { FlowerHeroBannerData } from '@/app/data/HeroBannerwise/FlowerHero';
 import { CareHeroBannerData } from '@/app/data/HeroBannerwise/CareHero';
 import ShoppingSlides1 from '@/components/Shopping/ShoppingSlides1/ShoppingSlides1';
-import { ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
+import { celebrationStylesItemsList, fashionStylesItemsList, guestlistStylesItemsList, hufkoShaadiStylesItemsList, ShopingSlide1SmartPhoneDeals } from '@/app/data/Shoping/ShopingSlide1';
 import { PharmaHeroBannerData } from '@/app/data/HeroBannerwise/PharmaHero';
 import { categoriesDataCardHalfDynamic, categoriesDataMap, categoriesInternationalFlowerDeliveryData, customerTestimonialDataFlower, homeDecorSubSubCategoriesSubHeader, hottestBrandsWomenFashion, kidsFashionCarouselCategories, menFashionCarouselCategories, ScrollItemWomensBeauty, ShopingCategories, shoppingCategoriesSubHeader, slidesDataFashionFullSlide, slidesHalfFlower, slidesHalfFlowerBouquetsForThem, slidesHalfFlowerGift, slidesHalfFlowerShopByOccasionsRelations, slidesHalfShoppingMenFashion, slidesHalfShoppingWomenBeauty, slidesShoppingKidsFashion, slidesShoppingMenFashion, slidesShoppingWomenBeauty, slidesShoppingWomenFashion, toBrandsKidsFashion, toBrandsMenFashion, toBrandsWomenBeauty, toBrandsWomenFashion, womenBeautyCarouselCategories, womenFashionCarouselCategories } from '@/app/data/Categorywise/ShopingCategories';
 import AllCategoryOne from '@/components/HomePage/AllCategoryOne/AllCategoryOne';
@@ -52,6 +52,7 @@ import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategory
 import FoodDeliveryItemsList, { FoodDeliveryItem } from '@/components/FoodDelivery/FoodDeliveryItemsList/FoodDeliveryItemsList';
 import AllCategory, { Category as AllCategoryItem, ClickableFoodCategory } from '../../HomePage/AllCategory/AllCategory';
 import DownloadAppNew from '@/components/HomePage/DownloadAppNew/DownloadAppNew';
+import FashionStyle from '@/components/Shopping/ItemListDesigns/FashionStyle/FashionStyle';
 
 interface CategoryItem {
   id: string;
@@ -1043,6 +1044,43 @@ const HeaderCategory: React.FC = () => {
                   deals={ShopingSlide1SmartPhoneDeals}
                   cardWidth={200}
                   showArrow={true}
+                />
+                <FashionStyle
+                  title="Styles to celebrate in"
+                  items={fashionStylesItemsList}
+                  showDiscount
+                  showExtraDiscount
+                  showNavigation
+                  autoPlay={false}
+                />
+                <FashionStyle
+                  title="The Big Brand Guestlist"
+                  items={guestlistStylesItemsList}
+                  showDiscount
+                  showExtraDiscount
+                  showNavigation
+                  autoPlay={false}
+                  height={360}
+                  backgroundColor="#FEEEEE"
+                />
+                <FashionStyle
+                   title="Navratri Celebration"
+                  items={celebrationStylesItemsList}
+                  showDiscount
+                  showExtraDiscount
+                  showNavigation
+                  autoPlay={false}
+                  backgroundColor="#C63824"
+                />
+                <FashionStyle
+                   title="Hufko wali Shaadi"
+                  items={hufkoShaadiStylesItemsList}
+                  showDiscount
+                  showExtraDiscount
+                  showNavigation
+                  autoPlay={false}
+                  backgroundColor="#FFF0D8"
+                  height={360}
                 />
                 <FranchiseHufkoSlide
                   badgeText="World's Largest Instant Delivery App Platform"

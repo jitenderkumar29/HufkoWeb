@@ -31,7 +31,7 @@ export const ShopingCategories = [
   {
     id: "home_furniture",
     name: "Home Furniture",
-    imageUrl: "/products/HomeFurniture12.png",
+    imageUrl: "/products/HomeFurniture.png",
     url: "/home_furniture",
   },
   {

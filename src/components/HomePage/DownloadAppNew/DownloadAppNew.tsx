@@ -37,11 +37,11 @@ export interface DownloadAppNewProps {
 const defaultBenefits: DownloadAppBenefit[] = [
   {
     id: 'latest-deals',
-    text: 'Delicious Food, Great Offers',
+    text: 'Enjoy instant delivery, Great Offers',
   },
   {
     id: 'food-discovery',
-    text: 'Discover Restaurants Near You',
+    text: 'Spend maximum, Get rewards & Cashback',
   },
   {
     id: 'order-updates',
