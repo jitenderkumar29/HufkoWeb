@@ -301,9 +301,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '40', foodId: 'gulab_jamun', title: 'Premium Quality Delicious',  subtitle: 'Gulab Jamun', category: 'Gulab Jamun',    discount: '', imgUrl: '/products/gulabJamunFoodHeroBanner.png', align: 'left' },
   { id: '41', foodId: 'rasmalai',    title: 'Premium Quality Delicious',     subtitle: 'Rasmalai', category: 'Rasmalai',       discount: '', imgUrl: '/products/rasmalaiFoodHeroBanner.png',  align: 'left' },
   { id: '42', foodId: 'rasgulla',    title: 'Premium Quality Delicious',     subtitle: 'Rasgulla', category: 'Rasgulla',       discount: '', imgUrl: '/products/rasgullaFoodHeroBanner.png',  align: 'left' },
-  { id: '43', foodId: 'jalebi',      title: 'Premium Quality Jalebi',       subtitle: '', category: 'Jalebi',         discount: '', imgUrl: '/products/jalebiFoodHeroBanner.png',    align: 'left' },
-  { id: '44', foodId: 'halwa',       title: 'Premium Quality Halwa',        subtitle: '', category: 'Halwa',          discount: '', imgUrl: '/products/halwaFoodHeroBanner.png',     align: 'left' },
-  { id: '45', foodId: 'gajak',       title: 'Premium Quality Gajak',        subtitle: '', category: 'Gajak',          discount: '', imgUrl: '/products/gajakFoodHeroBanner.png',     align: 'left' },
+  { id: '43', foodId: 'jalebi',      title: 'Premium Quality Delicious',       subtitle: 'Jalebi', category: 'Jalebi',         discount: '', imgUrl: '/products/jalebiFoodHeroBanner.png',    align: 'left' },
+  { id: '44', foodId: 'halwa',       title: 'Premium Quality Delicious',        subtitle: 'Halwa', category: 'Halwa',          discount: '', imgUrl: '/products/halwaFoodHeroBanner.png',     align: 'left' },
+  { id: '45', foodId: 'gajak',       title: 'Premium Quality Delicious',        subtitle: 'Gajak', category: 'Gajak',          discount: '', imgUrl: '/products/gajakFoodHeroBanner.png',     align: 'left' },
 
   // ── South Indian ────────────────────────────────
 
