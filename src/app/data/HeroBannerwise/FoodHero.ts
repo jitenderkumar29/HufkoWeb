@@ -307,9 +307,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   // ── South Indian ────────────────────────────────
 
-  { id: '46', foodId: 'south_indian', title: 'Premium Quality South Indian', subtitle: '', category: 'South Indian',  discount: '', imgUrl: '/products/southIndianFoodHeroBanner.png', align: 'left' },
-  { id: '47', foodId: 'dosa',        title: 'Premium Quality Dosa',         subtitle: '', category: 'Dosa',           discount: '', imgUrl: '/products/dosaFoodHeroBanner.png',      align: 'left' },
-  { id: '48', foodId: 'idli',        title: 'Premium Quality Idli',         subtitle: '', category: 'Idli',           discount: '', imgUrl: '/products/idliFoodHeroBanner.png',      align: 'left' },
+  { id: '46', foodId: 'south_indian', title: 'Premium Quality Delicious', subtitle: 'South Indian', category: 'South Indian',  discount: '', imgUrl: '/products/southIndianFoodHeroBanner.png', align: 'left' },
+  { id: '47', foodId: 'dosa',        title: 'Premium Quality Delicious',         subtitle: 'Dosa', category: 'Dosa',           discount: '', imgUrl: '/products/dosaFoodHeroBanner.png',      align: 'left' },
+  { id: '48', foodId: 'idli',        title: 'Premium Quality Delicious',         subtitle: 'Idli', category: 'Idli',           discount: '', imgUrl: '/products/idliFoodHeroBanner.png',      align: 'left' },
   { id: '49', foodId: 'uttapam',     title: 'Premium Quality Uttapam',      subtitle: '', category: 'Uttapam',        discount: '', imgUrl: '/products/uttapamFoodHeroBanner.png',   align: 'left' },
   { id: '50', foodId: 'appam',       title: 'Premium Quality Appam',        subtitle: '', category: 'Appam',          discount: '', imgUrl: '/products/appamFoodHeroBanner.png',     align: 'left' },
   { id: '51', foodId: 'upma',        title: 'Premium Quality Upma',         subtitle: '', category: 'Upma',           discount: '', imgUrl: '/products/upmaFoodHeroBanner.png',      align: 'left' },
