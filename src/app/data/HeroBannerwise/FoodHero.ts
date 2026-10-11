@@ -313,8 +313,8 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '49', foodId: 'uttapam',     title: 'Premium Quality Delicious',      subtitle: 'Uttapam', category: 'Uttapam',        discount: '', imgUrl: '/products/uttapamFoodHeroBanner.png',   align: 'left' },
   { id: '50', foodId: 'appam',       title: 'Premium Quality Delicious',        subtitle: 'Appam', category: 'Appam',          discount: '', imgUrl: '/products/appamFoodHeroBanner.png',     align: 'left' },
   { id: '51', foodId: 'upma',        title: 'Premium Quality Delicious',         subtitle: 'Upma', category: 'Upma',           discount: '', imgUrl: '/products/upmaFoodHeroBanner.png',      align: 'left' },
-  { id: '52', foodId: 'bath',        title: 'Premium Quality Bath',         subtitle: '', category: 'Bath',           discount: '', imgUrl: '/products/bathFoodHeroBanner.png',      align: 'left' },
-  { id: '53', foodId: 'bonda',       title: 'Premium Quality Bonda',        subtitle: '', category: 'Bonda',          discount: '', imgUrl: '/products/bondaFoodHeroBanner.png',     align: 'left' },
+  { id: '52', foodId: 'bath',        title: 'Premium Quality Delicious',         subtitle: 'Bath', category: 'Bath',           discount: '', imgUrl: '/products/bathFoodHeroBanner.png',      align: 'left' },
+  { id: '53', foodId: 'bonda',       title: 'Premium Quality Delicious',        subtitle: 'Bonda', category: 'Bonda',          discount: '', imgUrl: '/products/bondaFoodHeroBanner.png',     align: 'left' },
   { id: '54', foodId: 'sambar_rice', title: 'Premium Quality Sambar Rice',  subtitle: '', category: 'Sambar Rice',    discount: '', imgUrl: '/products/sambarRiceFoodHeroBanner.png', align: 'left' },
 
   // ── North Indian ────────────────────────────────
