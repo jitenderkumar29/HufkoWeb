@@ -315,12 +315,12 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '51', foodId: 'upma',        title: 'Premium Quality Delicious',         subtitle: 'Upma', category: 'Upma',           discount: '', imgUrl: '/products/upmaFoodHeroBanner.png',      align: 'left' },
   { id: '52', foodId: 'bath',        title: 'Premium Quality Delicious',         subtitle: 'Bath', category: 'Bath',           discount: '', imgUrl: '/products/bathFoodHeroBanner.png',      align: 'left' },
   { id: '53', foodId: 'bonda',       title: 'Premium Quality Delicious',        subtitle: 'Bonda', category: 'Bonda',          discount: '', imgUrl: '/products/bondaFoodHeroBanner.png',     align: 'left' },
-  { id: '54', foodId: 'sambar_rice', title: 'Premium Quality Sambar Rice',  subtitle: '', category: 'Sambar Rice',    discount: '', imgUrl: '/products/sambarRiceFoodHeroBanner.png', align: 'left' },
+  { id: '54', foodId: 'sambar_rice', title: 'Premium Quality Delicious',  subtitle: 'Sambar Rice', category: 'Sambar Rice',    discount: '', imgUrl: '/products/sambarRiceFoodHeroBanner.png', align: 'left' },
 
   // ── North Indian ────────────────────────────────
 
-  { id: '55', foodId: 'north_indian', title: 'Premium Quality North Indian', subtitle: '', category: 'North Indian',  discount: '', imgUrl: '/products/northIndianFoodHeroBanner.png', align: 'left' },
-  { id: '56', foodId: 'paneer',      title: 'Premium Quality Paneer',       subtitle: '', category: 'Paneer',         discount: '', imgUrl: '/products/paneerFoodHeroBanner.png',    align: 'left' },
+  { id: '55', foodId: 'north_indian', title: 'Premium Quality Delicious', subtitle: 'North Indian', category: 'North Indian',  discount: '', imgUrl: '/products/northIndianFoodHeroBanner.png', align: 'left' },
+  { id: '56', foodId: 'paneer',      title: 'Premium Quality Delicious',       subtitle: 'Paneer', category: 'Paneer',         discount: '', imgUrl: '/products/paneerFoodHeroBanner.png',    align: 'left' },
   { id: '57', foodId: 'dal',         title: 'Premium Quality Dal',          subtitle: '', category: 'Dal',            discount: '', imgUrl: '/products/dalFoodHeroBanner.png',       align: 'left' },
   { id: '58', foodId: 'rajma',       title: 'Premium Quality Rajma',        subtitle: '', category: 'Rajma',          discount: '', imgUrl: '/products/rajmaFoodHeroBanner.png',     align: 'left' },
   { id: '59', foodId: 'rajma_rice',  title: 'Premium Quality Rajma Rice',   subtitle: '', category: 'Rajma Rice',     discount: '', imgUrl: '/products/rajmaRiceFoodHeroBanner.png', align: 'left' },
