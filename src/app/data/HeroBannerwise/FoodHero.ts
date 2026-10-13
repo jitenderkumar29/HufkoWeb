@@ -321,9 +321,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   { id: '55', foodId: 'north_indian', title: 'Premium Quality Delicious', subtitle: 'North Indian', category: 'North Indian',  discount: '', imgUrl: '/products/northIndianFoodHeroBanner.png', align: 'left' },
   { id: '56', foodId: 'paneer',      title: 'Premium Quality Delicious',       subtitle: 'Paneer', category: 'Paneer',         discount: '', imgUrl: '/products/paneerFoodHeroBanner.png',    align: 'left' },
-  { id: '57', foodId: 'dal',         title: 'Premium Quality Dal',          subtitle: '', category: 'Dal',            discount: '', imgUrl: '/products/dalFoodHeroBanner.png',       align: 'left' },
-  { id: '58', foodId: 'rajma',       title: 'Premium Quality Rajma',        subtitle: '', category: 'Rajma',          discount: '', imgUrl: '/products/rajmaFoodHeroBanner.png',     align: 'left' },
-  { id: '59', foodId: 'rajma_rice',  title: 'Premium Quality Rajma Rice',   subtitle: '', category: 'Rajma Rice',     discount: '', imgUrl: '/products/rajmaRiceFoodHeroBanner.png', align: 'left' },
+  { id: '57', foodId: 'dal',         title: 'Premium Quality Delicious',          subtitle: 'Dal', category: 'Dal',            discount: '', imgUrl: '/products/dalFoodHeroBanner.png',       align: 'left' },
+  { id: '58', foodId: 'rajma',       title: 'Premium Quality Delicious',        subtitle: 'Rajma', category: 'Rajma',          discount: '', imgUrl: '/products/rajmaFoodHeroBanner.png',     align: 'left' },
+  { id: '59', foodId: 'rajma_rice',  title: 'Premium Quality Delicious',   subtitle: 'Rajma Rice', category: 'Rajma Rice',     discount: '', imgUrl: '/products/rajmaRiceFoodHeroBanner.png', align: 'left' },
   { id: '60', foodId: 'thali',       title: 'Premium Quality Thali',        subtitle: '', category: 'Thali',          discount: '', imgUrl: '/products/thaliFoodHeroBanner.png',     align: 'left' },
   { id: '61', foodId: 'veg_meal',    title: 'Premium Quality Veg Meal',     subtitle: '', category: 'Veg Meal',       discount: '', imgUrl: '/products/vegMealFoodHeroBanner.png',   align: 'left' },
   { id: '62', foodId: 'pulao',       title: 'Premium Quality Pulao',        subtitle: '', category: 'Pulao',          discount: '', imgUrl: '/products/pulaoFoodHeroBanner.png',     align: 'left' },
