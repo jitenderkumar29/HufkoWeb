@@ -336,7 +336,7 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '69', foodId: 'chole_poori', title: 'Premium Quality Delicious',  subtitle: 'Chole Poori', category: 'Chole Poori',    discount: '', imgUrl: '/products/cholePooriFoodHeroBanner.png', align: 'left' },
   { id: '70', foodId: 'poori',       title: 'Premium Quality Delicious',        subtitle: 'Poori', category: 'Poori',          discount: '', imgUrl: '/products/pooriFoodHeroBanner.png',     align: 'left' },
   { id: '71', foodId: 'poori_bhaji', title: 'Premium Quality Delicious',  subtitle: 'Poori Bhaji', category: 'Poori Bhaji',    discount: '', imgUrl: '/products/pooriBhajiFoodHeroBanner.png', align: 'left' },
-  { id: '72', foodId: 'aloo_poori',  title: 'Premium Quality Aloo Poori',   subtitle: '', category: 'Aloo Poori',     discount: '', imgUrl: '/products/alooPooriFoodHeroBanner.png', align: 'left' },
+  { id: '72', foodId: 'aloo_poori',  title: 'Premium Quality Delicious',   subtitle: 'Aloo Poori', category: 'Aloo Poori',     discount: '', imgUrl: '/products/alooPooriFoodHeroBanner.png', align: 'left' },
   { id: '73', foodId: 'malai_kofta', title: 'Premium Quality Malai Kofta',  subtitle: '', category: 'Malai Kofta',    discount: '', imgUrl: '/products/malaiKoftaFoodHeroBanner.png', align: 'left' },
   { id: '74', foodId: 'korma',       title: 'Premium Quality Korma',        subtitle: '', category: 'Korma',          discount: '', imgUrl: '/products/kormaFoodHeroBanner.png',     align: 'left' },
   { id: '75', foodId: 'nihari',      title: 'Premium Quality Nihari',       subtitle: '', category: 'Nihari',         discount: '', imgUrl: '/products/nihariFoodHeroBanner.png',    align: 'left' },
