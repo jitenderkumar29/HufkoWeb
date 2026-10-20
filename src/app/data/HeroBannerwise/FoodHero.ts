@@ -340,12 +340,12 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '73', foodId: 'malai_kofta', title: 'Premium Quality Delicious',  subtitle: 'Malai Kofta', category: 'Malai Kofta',    discount: '', imgUrl: '/products/malaiKoftaFoodHeroBanner.png', align: 'left' },
   { id: '74', foodId: 'korma',       title: 'Premium Quality Delicious',        subtitle: 'Korma', category: 'Korma',          discount: '', imgUrl: '/products/kormaFoodHeroBanner.png',     align: 'left' },
   { id: '75', foodId: 'nihari',      title: 'Premium Quality Delicious',       subtitle: 'Nihari', category: 'Nihari',         discount: '', imgUrl: '/products/nihariFoodHeroBanner.png',    align: 'left' },
-  { id: '76', foodId: 'chaap',       title: 'Premium Quality Chaap',        subtitle: '', category: 'Chaap',          discount: '', imgUrl: '/products/chaapFoodHeroBanner.png',     align: 'left' },
+  { id: '76', foodId: 'chaap',      title: 'Premium Quality Delicious',        subtitle: 'Chaap', category: 'Chaap',          discount: '', imgUrl: '/products/chaapFoodHeroBanner.png',     align: 'left' },
  
   // ── Biryani ─────────────────────────────────────
 
-  { id: '77', foodId: 'biryani',     title: 'Premium Quality Biryani',      subtitle: '', category: 'Biryani',        discount: '', imgUrl: '/products/biryaniFoodHeroBanner.png',   align: 'left' },
-  { id: '78', foodId: 'fried_rice',  title: 'Premium Quality Fried Rice',   subtitle: '', category: 'Fried Rice',     discount: '', imgUrl: '/products/friedRiceFoodHeroBanner.png', align: 'left' },
+  { id: '77', foodId: 'biryani',     title: 'Premium Quality Delicious',      subtitle: 'Biryani', category: 'Biryani',        discount: '', imgUrl: '/products/biryaniFoodHeroBanner.png',   align: 'left' },
+  { id: '78', foodId: 'fried_rice',  title: 'Premium Quality Delicious',   subtitle: 'Fried Rice', category: 'Fried Rice',     discount: '', imgUrl: '/products/friedRiceFoodHeroBanner.png', align: 'left' },
 
   // ── Chinese ─────────────────────────────────────
 
