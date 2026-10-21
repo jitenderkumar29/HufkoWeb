@@ -349,9 +349,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   // ── Chinese ─────────────────────────────────────
 
-  { id: '79', foodId: 'chinese',     title: 'Premium Quality Chinese',      subtitle: '', category: 'Chinese',        discount: '', imgUrl: '/products/chineseFoodHeroBanner.png',   align: 'left' },
-  { id: '80', foodId: 'noodles',     title: 'Premium Quality Noodles',      subtitle: '', category: 'Noodles',        discount: '', imgUrl: '/products/noodlesFoodHeroBanner.png',   align: 'left' },
-  { id: '81', foodId: 'manchurian',  title: 'Premium Quality Manchurian',   subtitle: '', category: 'Manchurian',     discount: '', imgUrl: '/products/manchurianFoodHeroBanner.png', align: 'left' },
+  { id: '79', foodId: 'chinese',     title: 'Premium Quality Delicious',      subtitle: 'Chinese', category: 'Chinese',        discount: '', imgUrl: '/products/chineseFoodHeroBanner.png',   align: 'left' },
+  { id: '80', foodId: 'noodles',     title: 'Premium Quality Delicious',      subtitle: 'Noodles', category: 'Noodles',        discount: '', imgUrl: '/products/noodlesFoodHeroBanner.png',   align: 'left' },
+  { id: '81', foodId: 'manchurian',  title: 'Premium Quality Delicious',   subtitle: 'Manchurian', category: 'Manchurian',     discount: '', imgUrl: '/products/manchurianFoodHeroBanner.png', align: 'left' },
   { id: '82', foodId: 'chop_suey',   title: 'Premium Quality Chop Suey',    subtitle: '', category: 'Chop Suey',      discount: '', imgUrl: '/products/chopSueyFoodHeroBanner.png',  align: 'left' },
 
   // ── Non-Veg ─────────────────────────────────────
