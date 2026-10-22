@@ -352,12 +352,12 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '79', foodId: 'chinese',     title: 'Premium Quality Delicious',      subtitle: 'Chinese', category: 'Chinese',        discount: '', imgUrl: '/products/chineseFoodHeroBanner.png',   align: 'left' },
   { id: '80', foodId: 'noodles',     title: 'Premium Quality Delicious',      subtitle: 'Noodles', category: 'Noodles',        discount: '', imgUrl: '/products/noodlesFoodHeroBanner.png',   align: 'left' },
   { id: '81', foodId: 'manchurian',  title: 'Premium Quality Delicious',   subtitle: 'Manchurian', category: 'Manchurian',     discount: '', imgUrl: '/products/manchurianFoodHeroBanner.png', align: 'left' },
-  { id: '82', foodId: 'chop_suey',   title: 'Premium Quality Chop Suey',    subtitle: '', category: 'Chop Suey',      discount: '', imgUrl: '/products/chopSueyFoodHeroBanner.png',  align: 'left' },
+  { id: '82', foodId: 'chop_suey',   title: 'Premium Quality Delicious',    subtitle: 'Chop Suey', category: 'Chop Suey',      discount: '', imgUrl: '/products/chopSueyFoodHeroBanner.png',  align: 'left' },
 
   // ── Non-Veg ─────────────────────────────────────
 
-  { id: '83', foodId: 'non_veg',     title: 'Premium Quality Non Veg',      subtitle: '', category: 'Non Veg',        discount: '', imgUrl: '/products/nonVegFoodHeroBanner.png',    align: 'left' },
-  { id: '84', foodId: 'chicken',     title: 'Premium Quality Chicken',      subtitle: '', category: 'Chicken',        discount: '', imgUrl: '/products/chickenFoodHeroBanner.png',   align: 'left' },
+  { id: '83', foodId: 'non_veg',     title: 'Premium Quality Delicious',      subtitle: 'Non Veg', category: 'Non Veg',        discount: '', imgUrl: '/products/nonVegFoodHeroBanner.png',    align: 'left' },
+  { id: '84', foodId: 'chicken',     title: 'Premium Quality Delicious',      subtitle: 'Chicken', category: 'Chicken',        discount: '', imgUrl: '/products/chickenFoodHeroBanner.png',   align: 'left' },
   { id: '85', foodId: 'butter_chicken', title: 'Premium Quality Butter Chicken', subtitle: '', category: 'Butter Chicken', discount: '', imgUrl: '/products/butterChickenFoodHeroBanner.png', align: 'left' },
   { id: '86', foodId: 'chicken_handi', title: 'Premium Quality Chicken Handi', subtitle: '', category: 'Chicken Handi', discount: '', imgUrl: '/products/chickenHandiFoodHeroBanner.png', align: 'left' },
   { id: '87', foodId: 'chicken_cha', title: 'Premium Quality Chicken Chaap', subtitle: '', category: 'Chicken Chaap', discount: '', imgUrl: '/products/chickenChaapFoodHeroBanner.png', align: 'left' },
