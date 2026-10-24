@@ -361,7 +361,7 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '85', foodId: 'butter_chicken', title: 'Premium Quality Delicious', subtitle: 'Butter Chicken', category: 'Butter Chicken', discount: '', imgUrl: '/products/butterChickenFoodHeroBanner.png', align: 'left' },
   { id: '86', foodId: 'chicken_handi', title: 'Premium Quality Delicious', subtitle: 'Chicken Handi', category: 'Chicken Handi', discount: '', imgUrl: '/products/chickenHandiFoodHeroBanner.png', align: 'left' },
   { id: '87', foodId: 'chicken_cha', title: 'Premium Quality Delicious', subtitle: 'Chicken Chaap', category: 'Chicken Chaap', discount: '', imgUrl: '/products/chickenChaapFoodHeroBanner.png', align: 'left' },
-  { id: '88', foodId: 'chilli_chicken', title: 'Premium Quality Chilli Chicken', subtitle: '', category: 'Chilli Chicken', discount: '', imgUrl: '/products/chilliChickenFoodHeroBanner.png', align: 'left' },
+  { id: '88', foodId: 'chilli_chicken', title: 'Premium Quality Delicious', subtitle: 'Chilli Chicken', category: 'Chilli Chicken', discount: '', imgUrl: '/products/chilliChickenFoodHeroBanner.png', align: 'left' },
   { id: '89', foodId: 'wings',       title: 'Premium Quality Wings',        subtitle: '', category: 'Wings',          discount: '', imgUrl: '/products/wingsFoodHeroBanner.png',     align: 'left' },
   { id: '90', foodId: 'kebabs',      title: 'Premium Quality Kebabs',       subtitle: '', category: 'Kebabs',         discount: '', imgUrl: '/products/kebabsFoodHeroBanner.png',    align: 'left' },
   { id: '91', foodId: 'mutton',      title: 'Premium Quality Mutton',       subtitle: '', category: 'Mutton',         discount: '', imgUrl: '/products/muttonFoodHeroBanner.png',    align: 'left' },
