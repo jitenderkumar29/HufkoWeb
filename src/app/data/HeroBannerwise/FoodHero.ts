@@ -367,12 +367,12 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '91', foodId: 'mutton',      title: 'Premium Quality Delicious',       subtitle: 'Mutton', category: 'Mutton',         discount: '', imgUrl: '/products/muttonFoodHeroBanner.png',    align: 'left' },
   { id: '92', foodId: 'fish',        title: 'Premium Quality Delicious',         subtitle: 'Fish', category: 'Fish',           discount: '', imgUrl: '/products/fishFoodHeroBanner.png',      align: 'left' },
   { id: '93', foodId: 'keema',       title: 'Premium Quality Delicious',        subtitle: 'Keema', category: 'Keema',          discount: '', imgUrl: '/products/keemaFoodHeroBanner.png',     align: 'left' },
-  { id: '94', foodId: 'omelette',    title: 'Premium Quality Omelette',     subtitle: '', category: 'Omelette',       discount: '', imgUrl: '/products/omeletteFoodHeroBanner.png',  align: 'left' },
-  { id: '95', foodId: 'bhurji',      title: 'Premium Quality Bhurji',       subtitle: '', category: 'Bhurji',         discount: '', imgUrl: '/products/bhurjiFoodHeroBanner.png',    align: 'left' },
+  { id: '94', foodId: 'omelette',    title: 'Premium Quality Delicious',     subtitle: 'Omelette', category: 'Omelette',       discount: '', imgUrl: '/products/omeletteFoodHeroBanner.png',  align: 'left' },
+  { id: '95', foodId: 'bhurji',      title: 'Premium Quality Delicious',       subtitle: 'Bhurji', category: 'Bhurji',         discount: '', imgUrl: '/products/bhurjiFoodHeroBanner.png',    align: 'left' },
 
   // ── Street Food ─────────────────────────────────
 
-  { id: '96',  foodId: 'chaat',       title: 'Premium Quality Chaat',        subtitle: '', category: 'Chaat',          discount: '', imgUrl: '/products/chaatFoodHeroBanner.png',      align: 'left' },
+  { id: '96',  foodId: 'chaat',       title: 'Premium Quality Delicious',        subtitle: 'Chaat', category: 'Chaat',          discount: '', imgUrl: '/products/chaatFoodHeroBanner.png',      align: 'left' },
   { id: '97',  foodId: 'panipuri',    title: 'Premium Quality Panipuri',     subtitle: '', category: 'Panipuri',       discount: '', imgUrl: '/products/panipuriFoodHeroBanner.png',   align: 'left' },
   { id: '98',  foodId: 'bhel',        title: 'Premium Quality Bhel',         subtitle: '', category: 'Bhel',           discount: '', imgUrl: '/products/bhelFoodHeroBanner.png',       align: 'left' },
   { id: '99',  foodId: 'sev_poori',   title: 'Premium Quality Sev Poori',    subtitle: '', category: 'Sev Poori',      discount: '', imgUrl: '/products/sevPooriFoodHeroBanner.png',   align: 'left' },
