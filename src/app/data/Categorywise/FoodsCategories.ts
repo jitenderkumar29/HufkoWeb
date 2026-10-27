@@ -92736,7 +92736,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
     calories: 1400,
     deliveryTime: "30-35 mins",
     cuisines: ["Chaat", "Street Food", "Platter", "Party"],
-    imageUrl: "/products/",
+    imageUrl: "/products/20dbe2b0674772.JPG",
     protein: "32g",
     offer: "30% OFF UPTO ₹220",
     isOffer: true,
