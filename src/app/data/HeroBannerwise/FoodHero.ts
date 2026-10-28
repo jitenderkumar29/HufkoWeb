@@ -373,9 +373,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   // ── Street Food ─────────────────────────────────
 
   { id: '96',  foodId: 'chaat',       title: 'Premium Quality Delicious',        subtitle: 'Chaat', category: 'Chaat',          discount: '', imgUrl: '/products/chaatFoodHeroBanner.png',      align: 'left' },
-  { id: '97',  foodId: 'panipuri',    title: 'Premium Quality Panipuri',     subtitle: '', category: 'Panipuri',       discount: '', imgUrl: '/products/panipuriFoodHeroBanner.png',   align: 'left' },
-  { id: '98',  foodId: 'bhel',        title: 'Premium Quality Bhel',         subtitle: '', category: 'Bhel',           discount: '', imgUrl: '/products/bhelFoodHeroBanner.png',       align: 'left' },
-  { id: '99',  foodId: 'sev_poori',   title: 'Premium Quality Sev Poori',    subtitle: '', category: 'Sev Poori',      discount: '', imgUrl: '/products/sevPooriFoodHeroBanner.png',   align: 'left' },
+  { id: '97',  foodId: 'panipuri',    title: 'Premium Quality Delicious',     subtitle: 'Panipuri', category: 'Panipuri',       discount: '', imgUrl: '/products/panipuriFoodHeroBanner.png',   align: 'left' },
+  { id: '98',  foodId: 'bhel',        title: 'Premium Quality Delicious',         subtitle: 'Bhel', category: 'Bhel',           discount: '', imgUrl: '/products/bhelFoodHeroBanner.png',       align: 'left' },
+  { id: '99',  foodId: 'sev_poori',   title: 'Premium Quality Delicious',    subtitle: 'Sev Poori', category: 'Sev Pooriz',      discount: '', imgUrl: '/products/sevPooriFoodHeroBanner.png',   align: 'left' },
   { id: '100', foodId: 'dahi_balle',  title: 'Premium Quality Dahi Balle',   subtitle: '', category: 'Dahi Balle',     discount: '', imgUrl: '/products/dahiBalleFoodHeroBanner.png',  align: 'left' },
   { id: '101', foodId: 'vada_pav',    title: 'Premium Quality Vada Pav',     subtitle: '', category: 'Vada Pav',       discount: '', imgUrl: '/products/vadaPavFoodHeroBanner.png',    align: 'left' },
   { id: '102', foodId: 'pav_bhaji',   title: 'Premium Quality Pav Bhaji',    subtitle: '', category: 'Pav Bhaji',      discount: '', imgUrl: '/products/pavBhajiFoodHeroBanner.png',   align: 'left' },
