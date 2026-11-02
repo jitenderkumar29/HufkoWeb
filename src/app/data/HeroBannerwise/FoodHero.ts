@@ -385,9 +385,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '106', foodId: 'aloo_tikki',  title: 'Premium Quality Delicious',   subtitle: 'Aloo Tikki', category: 'Aloo Tikki',     discount: '', imgUrl: '/products/alooTikkiFoodHeroBanner.png',  align: 'left' },
   { id: '107', foodId: 'cutlet',      title: 'Premium Quality Delicious',       subtitle: 'Cutlet', category: 'Cutlet',         discount: '', imgUrl: '/products/cutletFoodHeroBanner.png',     align: 'left' },
   { id: '108', foodId: 'veg_lollipop', title: 'Premium Quality Delicious', subtitle: 'Veg Lollipop', category: 'Veg Lollipop',  discount: '', imgUrl: '/products/vegLollipopFoodHeroBanner.png', align: 'left' },
-  { id: '109', foodId: 'raj_kachori', title: 'Premium Quality Raj Kachori',  subtitle: '', category: 'Raj Kachori',    discount: '', imgUrl: '/products/rajKachoriFoodHeroBanner.png', align: 'left' },
-  { id: '110', foodId: 'dal_kachori', title: 'Premium Quality Dal Kachori',  subtitle: '', category: 'Dal Kachori',    discount: '', imgUrl: '/products/dalKachoriFoodHeroBanner.png', align: 'left' },
-  { id: '111', foodId: 'aloo_kachori', title: 'Premium Quality Aloo Kachori', subtitle: '', category: 'Aloo Kachori',  discount: '', imgUrl: '/products/alooKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '109', foodId: 'raj_kachori', title: 'Premium Quality Delicious',  subtitle: 'Raj Kachori', category: 'Raj Kachori',    discount: '', imgUrl: '/products/rajKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '110', foodId: 'dal_kachori', title: 'Premium Quality Delicious',  subtitle: 'Dal Kachori', category: 'Dal Kachori',    discount: '', imgUrl: '/products/dalKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '111', foodId: 'aloo_kachori', title: 'Premium Quality Delicious', subtitle: 'Aloo Kachori', category: 'Aloo Kachori',  discount: '', imgUrl: '/products/alooKachoriFoodHeroBanner.png', align: 'left' },
   { id: '112', foodId: 'pyaaj_kachori', title: 'Premium Quality Pyaaj Kachori', subtitle: '', category: 'Pyaaj Kachori', discount: '', imgUrl: '/products/pyaajKachoriFoodHeroBanner.png', align: 'left' },
   { id: '113', foodId: 'khasta_kachori', title: 'Premium Quality Khasta Kachori', subtitle: '', category: 'Khasta Kachori', discount: '', imgUrl: '/products/khastaKachoriFoodHeroBanner.png', align: 'left' },
 
