@@ -388,12 +388,12 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '109', foodId: 'raj_kachori', title: 'Premium Quality Delicious',  subtitle: 'Raj Kachori', category: 'Raj Kachori',    discount: '', imgUrl: '/products/rajKachoriFoodHeroBanner.png', align: 'left' },
   { id: '110', foodId: 'dal_kachori', title: 'Premium Quality Delicious',  subtitle: 'Dal Kachori', category: 'Dal Kachori',    discount: '', imgUrl: '/products/dalKachoriFoodHeroBanner.png', align: 'left' },
   { id: '111', foodId: 'aloo_kachori', title: 'Premium Quality Delicious', subtitle: 'Aloo Kachori', category: 'Aloo Kachori',  discount: '', imgUrl: '/products/alooKachoriFoodHeroBanner.png', align: 'left' },
-  { id: '112', foodId: 'pyaaj_kachori', title: 'Premium Quality Pyaaj Kachori', subtitle: '', category: 'Pyaaj Kachori', discount: '', imgUrl: '/products/pyaajKachoriFoodHeroBanner.png', align: 'left' },
-  { id: '113', foodId: 'khasta_kachori', title: 'Premium Quality Khasta Kachori', subtitle: '', category: 'Khasta Kachori', discount: '', imgUrl: '/products/khastaKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '112', foodId: 'pyaaj_kachori', title: 'Premium Quality Delicious', subtitle: 'Pyaaj Kachori', category: 'Pyaaj Kachori', discount: '', imgUrl: '/products/pyaajKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '113', foodId: 'khasta_kachori', title: 'Premium Quality Delicious', subtitle: 'Khasta Kachori', category: 'Khasta Kachori', discount: '', imgUrl: '/products/khastaKachoriFoodHeroBanner.png', align: 'left' },
 
   // ── Breakfast & Snacks ──────────────────────────
 
-  { id: '114', foodId: 'poha',        title: 'Premium Quality Poha',         subtitle: '', category: 'Poha',           discount: '', imgUrl: '/products/pohaFoodHeroBanner.png',       align: 'left' },
+  { id: '114', foodId: 'poha',        title: 'Premium Quality Delicious',         subtitle: 'Poha', category: 'Poha',           discount: '', imgUrl: '/products/pohaFoodHeroBanner.png',       align: 'left' },
   { id: '115', foodId: 'masala_maggi', title: 'Premium Quality Masala Maggi', subtitle: '', category: 'Masala Maggi',  discount: '', imgUrl: '/products/masalaMaggiFoodHeroBanner.png', align: 'left' },
   { id: '116', foodId: 'namkeen',     title: 'Premium Quality Namkeen',      subtitle: '', category: 'Namkeen',        discount: '', imgUrl: '/products/namkeenFoodHeroBanner.png',    align: 'left' },
   { id: '117', foodId: 'mushrooms',   title: 'Premium Quality Mushrooms',    subtitle: '', category: 'Mushrooms',      discount: '', imgUrl: '/products/mushroomsFoodHeroBanner.png',  align: 'left' },
