@@ -394,9 +394,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   // ── Breakfast & Snacks ──────────────────────────
 
   { id: '114', foodId: 'poha',        title: 'Premium Quality Delicious',         subtitle: 'Poha', category: 'Poha',           discount: '', imgUrl: '/products/pohaFoodHeroBanner.png',       align: 'left' },
-  { id: '115', foodId: 'masala_maggi', title: 'Premium Quality Masala Maggi', subtitle: '', category: 'Masala Maggi',  discount: '', imgUrl: '/products/masalaMaggiFoodHeroBanner.png', align: 'left' },
-  { id: '116', foodId: 'namkeen',     title: 'Premium Quality Namkeen',      subtitle: '', category: 'Namkeen',        discount: '', imgUrl: '/products/namkeenFoodHeroBanner.png',    align: 'left' },
-  { id: '117', foodId: 'mushrooms',   title: 'Premium Quality Mushrooms',    subtitle: '', category: 'Mushrooms',      discount: '', imgUrl: '/products/mushroomsFoodHeroBanner.png',  align: 'left' },
+  { id: '115', foodId: 'masala_maggi', title: 'Premium Quality Delicious', subtitle: 'Masala Maggi', category: 'Masala Maggi',  discount: '', imgUrl: '/products/masalaMaggiFoodHeroBanner.png', align: 'left' },
+  { id: '116', foodId: 'namkeen',     title: 'Premium Quality Delicious',      subtitle: 'Namkeen', category: 'Namkeen',        discount: '', imgUrl: '/products/namkeenFoodHeroBanner.png',    align: 'left' },
+  { id: '117', foodId: 'mushrooms',   title: 'Premium Quality Delicious',    subtitle: 'Mushrooms', category: 'Mushrooms',      discount: '', imgUrl: '/products/mushroomsFoodHeroBanner.png',  align: 'left' },
 
   // ── Gujarati ────────────────────────────────────
 
