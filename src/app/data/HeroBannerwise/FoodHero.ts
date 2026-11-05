@@ -400,9 +400,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   // ── Gujarati ────────────────────────────────────
 
-  { id: '118', foodId: 'dhokla',      title: 'Premium Quality Dhokla',       subtitle: '', category: 'Dhokla',         discount: '', imgUrl: '/products/dhoklaFoodHeroBanner.png',     align: 'left' },
-  { id: '119', foodId: 'dholda',      title: 'Premium Quality Dholda',       subtitle: '', category: 'Dholda',         discount: '', imgUrl: '/products/dholdaFoodHeroBanner.png',     align: 'left' },
-  { id: '120', foodId: 'khandvi',     title: 'Premium Quality Khandvi',      subtitle: '', category: 'Khandvi',        discount: '', imgUrl: '/products/khandviFoodHeroBanner.png',    align: 'left' },
+  { id: '118', foodId: 'dhokla',      title: 'Premium Quality Delicious',       subtitle: 'Dhokla', category: 'Dhokla',         discount: '', imgUrl: '/products/dhoklaFoodHeroBanner.png',     align: 'left' },
+  { id: '119', foodId: 'dholda',      title: 'Premium Quality Delicious',       subtitle: 'Dholda', category: 'Dholda',         discount: '', imgUrl: '/products/dholdaFoodHeroBanner.png',     align: 'left' },
+  { id: '120', foodId: 'khandvi',     title: 'Premium Quality Delicious',      subtitle: 'Khandvi', category: 'Khandvi',        discount: '', imgUrl: '/products/khandviFoodHeroBanner.png',    align: 'left' },
   { id: '121', foodId: 'thepla',      title: 'Premium Quality Thepla',       subtitle: '', category: 'Thepla',         discount: '', imgUrl: '/products/theplaFoodHeroBanner.png',     align: 'left' },
   { id: '122', foodId: 'fafda',       title: 'Premium Quality Fafda',        subtitle: '', category: 'Fafda',          discount: '', imgUrl: '/products/fafdaFoodHeroBanner.png',      align: 'left' },
 
