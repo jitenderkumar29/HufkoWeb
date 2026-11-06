@@ -1,7 +1,7 @@
 import { BannerItemContent } from "@/components/Shopping/HeroBanner/HeroBannerLeftContent/HeroBannerLeftContent";
 
 // export const FoodHeroBannerData = [
-  
+
 //   {
 //     id: "5",
 //     title: "",
@@ -104,9 +104,9 @@ import { BannerItemContent } from "@/components/Shopping/HeroBanner/HeroBannerLe
 //   },
 // ];
 
-  export const FoodHeroBannerLeftContent: BannerItemContent[] = [
-  
-   {
+export const FoodHeroBannerLeftContent: BannerItemContent[] = [
+
+  {
     id: '2',
     title: 'Premium Quality Burgers',
     subtitle: 'Grass-fed beef & perfectly seasoned patties',
@@ -133,7 +133,7 @@ import { BannerItemContent } from "@/components/Shopping/HeroBanner/HeroBannerLe
     imgUrl: '/products/FoodHeroBanner1.jpg',
     align: 'right'
   },
-   {
+  {
     id: '4',
     title: 'Authentic Paneer Dishes',
     subtitle: 'Fresh cottage cheese in rich, flavorful gravies',
@@ -151,7 +151,7 @@ import { BannerItemContent } from "@/components/Shopping/HeroBanner/HeroBannerLe
     imgUrl: '/products/FoodHeroBanner5.jpeg',
     align: 'left'
   }
-  ]
+]
 
 //   export const FoodDineOutCollections = [
 //   {
@@ -228,192 +228,194 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
 
   // ── Diet & Healthy ──────────────────────────────
 
-  { id: '1',  foodId: 'diet',        title: 'Premium Quality Delicious',         subtitle: 'Diet', category: 'Diet',           discount: '', imgUrl: '/products/DietFoodHeroBanner1.png',     align: 'left' },
-  { id: '2',  foodId: 'salad',       title: 'Premium Quality Delicious',        subtitle: 'Salad', category: 'Salad',          discount: '', imgUrl: '/products/saladFoodHeroBanner.png',     align: 'left' },
-  { id: '3',  foodId: 'bowl',        title: 'Premium Quality Delicious',         subtitle: 'Bowl', category: 'Bowl',           discount: '', imgUrl: '/products/bowlFoodHeroBanner.png',      align: 'left' },
-  { id: '4',  foodId: 'soup',        title: 'Premium Quality Delicious',         subtitle: 'Soup', category: 'Soup',           discount: '', imgUrl: '/products/soupFoodHeroBanner.png',      align: 'left' },
-  { id: '5',  foodId: 'khichdi',     title: 'Premium Quality Delicious',      subtitle: 'Khichdi', category: 'Khichdi',        discount: '', imgUrl: '/products/khichdiFoodHeroBanner.png',   align: 'left' },
-  { id: '6',  foodId: 'curd_rice',   title: 'Premium Quality Delicious',    subtitle: 'Curd Rice', category: 'Curd Rice',      discount: '', imgUrl: '/products/curdRiceFoodHeroBanner.png',  align: 'left' },
+  { id: '1', foodId: 'diet', title: 'Premium Quality Delicious', subtitle: 'Diet', category: 'Diet', discount: '', imgUrl: '/products/DietFoodHeroBanner1.png', align: 'left' },
+  { id: '2', foodId: 'salad', title: 'Premium Quality Delicious', subtitle: 'Salad', category: 'Salad', discount: '', imgUrl: '/products/saladFoodHeroBanner.png', align: 'left' },
+  { id: '3', foodId: 'bowl', title: 'Premium Quality Delicious', subtitle: 'Bowl', category: 'Bowl', discount: '', imgUrl: '/products/bowlFoodHeroBanner.png', align: 'left' },
+  { id: '4', foodId: 'soup', title: 'Premium Quality Delicious', subtitle: 'Soup', category: 'Soup', discount: '', imgUrl: '/products/soupFoodHeroBanner.png', align: 'left' },
+  { id: '5', foodId: 'khichdi', title: 'Premium Quality Delicious', subtitle: 'Khichdi', category: 'Khichdi', discount: '', imgUrl: '/products/khichdiFoodHeroBanner.png', align: 'left' },
+  { id: '6', foodId: 'curd_rice', title: 'Premium Quality Delicious', subtitle: 'Curd Rice', category: 'Curd Rice', discount: '', imgUrl: '/products/curdRiceFoodHeroBanner.png', align: 'left' },
 
   // ── Pizzas ──────────────────────────────────────
 
-  { id: '7',  foodId: 'pizzas',      title: 'Premium Quality Delicious',       subtitle: 'Pizzas', category: 'Pizzas',         discount: '', imgUrl: '/products/pizzasFoodHeroBanner.png',    align: 'left' },
+  { id: '7', foodId: 'pizzas', title: 'Premium Quality Delicious', subtitle: 'Pizzas', category: 'Pizzas', discount: '', imgUrl: '/products/pizzasFoodHeroBanner.png', align: 'left' },
 
   // ── Burgers ─────────────────────────────────────
 
-  { id: '8',  foodId: 'burgers',     title: 'Premium Quality Delicious',      subtitle: 'Burgers', category: 'Burgers',        discount: '', imgUrl: '/products/burgersFoodHeroBanner.png',   align: 'left' },
-  { id: '9',  foodId: 'fries',       title: 'Premium Quality Delicious',        subtitle: 'Fries', category: 'Fries',          discount: '', imgUrl: '/products/friesFoodHeroBanner.png',     align: 'left' },
-  { id: '10', foodId: 'hot_dog',     title: 'Premium Quality Delicious',      subtitle: 'Hot Dog', category: 'Hot Dog',        discount: '', imgUrl: '/products/hotDogFoodHeroBanner.png',    align: 'left' },
+  { id: '8', foodId: 'burgers', title: 'Premium Quality Delicious', subtitle: 'Burgers', category: 'Burgers', discount: '', imgUrl: '/products/burgersFoodHeroBanner.png', align: 'left' },
+  { id: '9', foodId: 'fries', title: 'Premium Quality Delicious', subtitle: 'Fries', category: 'Fries', discount: '', imgUrl: '/products/friesFoodHeroBanner.png', align: 'left' },
+  { id: '10', foodId: 'hot_dog', title: 'Premium Quality Delicious', subtitle: 'Hot Dog', category: 'Hot Dog', discount: '', imgUrl: '/products/hotDogFoodHeroBanner.png', align: 'left' },
 
   // ── Sandwich ────────────────────────────────────
 
-  { id: '11', foodId: 'sandwich',    title: 'Premium Quality Delicious',     subtitle: 'Sandwich', category: 'Sandwich',       discount: '', imgUrl: '/products/sandwichFoodHeroBanner.png',  align: 'left' },
-  { id: '12', foodId: 'sub',         title: 'Premium Quality Delicious',          subtitle: 'Sub', category: 'Sub',            discount: '', imgUrl: '/products/subFoodHeroBanner.png',       align: 'left' },
+  { id: '11', foodId: 'sandwich', title: 'Premium Quality Delicious', subtitle: 'Sandwich', category: 'Sandwich', discount: '', imgUrl: '/products/sandwichFoodHeroBanner.png', align: 'left' },
+  { id: '12', foodId: 'sub', title: 'Premium Quality Delicious', subtitle: 'Sub', category: 'Sub', discount: '', imgUrl: '/products/subFoodHeroBanner.png', align: 'left' },
 
   // ── Pastas ──────────────────────────────────────
 
-  { id: '13', foodId: 'pasta',       title: 'Premium Quality Delicious',        subtitle: 'Pasta', category: 'Pasta',          discount: '', imgUrl: '/products/pastaFoodHeroBanner.png',     align: 'left' },
+  { id: '13', foodId: 'pasta', title: 'Premium Quality Delicious', subtitle: 'Pasta', category: 'Pasta', discount: '', imgUrl: '/products/pastaFoodHeroBanner.png', align: 'left' },
 
   // ── Rolls & Wraps ───────────────────────────────
 
-  { id: '14', foodId: 'rolls',       title: 'Premium Quality Delicious',        subtitle: 'Rolls', category: 'Rolls',          discount: '', imgUrl: '/products/rollsFoodHeroBanner.png',     align: 'left' },
-  { id: '15', foodId: 'shawarma',    title: 'Premium Quality Delicious',     subtitle: 'Shawarma', category: 'Shawarma',       discount: '', imgUrl: '/products/shawarmaFoodHeroBanner.png',  align: 'left' },
-  { id: '16', foodId: 'momos',       title: 'Premium Quality Delicious',        subtitle: 'Momos', category: 'Momos',          discount: '', imgUrl: '/products/momosFoodHeroBanner.png',     align: 'left' },
+  { id: '14', foodId: 'rolls', title: 'Premium Quality Delicious', subtitle: 'Rolls', category: 'Rolls', discount: '', imgUrl: '/products/rollsFoodHeroBanner.png', align: 'left' },
+  { id: '15', foodId: 'shawarma', title: 'Premium Quality Delicious', subtitle: 'Shawarma', category: 'Shawarma', discount: '', imgUrl: '/products/shawarmaFoodHeroBanner.png', align: 'left' },
+  { id: '16', foodId: 'momos', title: 'Premium Quality Delicious', subtitle: 'Momos', category: 'Momos', discount: '', imgUrl: '/products/momosFoodHeroBanner.png', align: 'left' },
 
   // ── Bakery ──────────────────────────────────────
 
-  { id: '17', foodId: 'pastry',      title: 'Premium Quality Delicious',       subtitle: 'Pastry', category: 'Pastry',         discount: '', imgUrl: '/products/pastryFoodHeroBanner.png',    align: 'left' },
-  { id: '18', foodId: 'cupcake',     title: 'Premium Quality Delicious',      subtitle: 'Cupcake', category: 'Cupcake',        discount: '', imgUrl: '/products/cupcakeFoodHeroBanner.png',   align: 'left' },
-  { id: '19', foodId: 'muffin',      title: 'Premium Quality Delicious',       subtitle: 'Muffin', category: 'Muffin',         discount: '', imgUrl: '/products/muffinFoodHeroBanner.png',    align: 'left' },
-  { id: '20', foodId: 'cookies',     title: 'Premium Quality Delicious',      subtitle: 'Cookies', category: 'Cookies',        discount: '', imgUrl: '/products/cookiesFoodHeroBanner.png',   align: 'left' },
-  { id: '21', foodId: 'croissant',   title: 'Premium Quality Delicious',    subtitle: 'Croissant', category: 'Croissant',      discount: '', imgUrl: '/products/croissantFoodHeroBanner.png', align: 'left' },
-  { id: '22', foodId: 'doughnut',    title: 'Premium Quality Delicious',     subtitle: 'Doughnut', category: 'Doughnut',       discount: '', imgUrl: '/products/doughnutFoodHeroBanner.png',  align: 'left' },
-  { id: '23', foodId: 'brownie',     title: 'Premium Quality Delicious',      subtitle: 'Brownie', category: 'Brownie',        discount: '', imgUrl: '/products/brownieFoodHeroBanner.png',   align: 'left' },
-  { id: '24', foodId: 'bread_pakoda', title: 'Premium Quality Delicious', subtitle: 'Bread Pakoda', category: 'Bread Pakoda',  discount: '', imgUrl: '/products/breadPakodaFoodHeroBanner.png', align: 'left' },
+  { id: '17', foodId: 'pastry', title: 'Premium Quality Delicious', subtitle: 'Pastry', category: 'Pastry', discount: '', imgUrl: '/products/pastryFoodHeroBanner.png', align: 'left' },
+  { id: '18', foodId: 'cupcake', title: 'Premium Quality Delicious', subtitle: 'Cupcake', category: 'Cupcake', discount: '', imgUrl: '/products/cupcakeFoodHeroBanner.png', align: 'left' },
+  { id: '19', foodId: 'muffin', title: 'Premium Quality Delicious', subtitle: 'Muffin', category: 'Muffin', discount: '', imgUrl: '/products/muffinFoodHeroBanner.png', align: 'left' },
+  { id: '20', foodId: 'cookies', title: 'Premium Quality Delicious', subtitle: 'Cookies', category: 'Cookies', discount: '', imgUrl: '/products/cookiesFoodHeroBanner.png', align: 'left' },
+  { id: '21', foodId: 'croissant', title: 'Premium Quality Delicious', subtitle: 'Croissant', category: 'Croissant', discount: '', imgUrl: '/products/croissantFoodHeroBanner.png', align: 'left' },
+  { id: '22', foodId: 'doughnut', title: 'Premium Quality Delicious', subtitle: 'Doughnut', category: 'Doughnut', discount: '', imgUrl: '/products/doughnutFoodHeroBanner.png', align: 'left' },
+  { id: '23', foodId: 'brownie', title: 'Premium Quality Delicious', subtitle: 'Brownie', category: 'Brownie', discount: '', imgUrl: '/products/brownieFoodHeroBanner.png', align: 'left' },
+  { id: '24', foodId: 'bread_pakoda', title: 'Premium Quality Delicious', subtitle: 'Bread Pakoda', category: 'Bread Pakoda', discount: '', imgUrl: '/products/breadPakodaFoodHeroBanner.png', align: 'left' },
 
   // ── Cakes ───────────────────────────────────────
 
-  { id: '25', foodId: 'cakes',       title: 'Premium Quality Delicious',        subtitle: 'Cakes', category: 'Cakes',          discount: '', imgUrl: '/products/cakesFoodHeroBanner.png',     align: 'left' },
- 
-  
+  { id: '25', foodId: 'cakes', title: 'Premium Quality Delicious', subtitle: 'Cakes', category: 'Cakes', discount: '', imgUrl: '/products/cakesFoodHeroBanner.png', align: 'left' },
+
+
   // ── Desserts ────────────────────────────────────
 
-  { id: '26', foodId: 'dessert',     title: 'Premium Quality Delicious',      subtitle: 'Dessert', category: 'Dessert',        discount: '', imgUrl: '/products/dessertFoodHeroBanner.png',   align: 'left' },
-  { id: '27', foodId: 'cheesecake',  title: 'Premium Quality Delicious',   subtitle: 'Cheesecake', category: 'Cheesecake',     discount: '', imgUrl: '/products/cheesecakeFoodHeroBanner.png', align: 'left' },
-  { id: '28', foodId: 'tart',        title: 'Premium Quality Delicious',         subtitle: 'Tart', category: 'Tart',           discount: '', imgUrl: '/products/tartFoodHeroBanner.png',      align: 'left' },
-  { id: '29', foodId: 'pie',         title: 'Premium Quality Delicious',          subtitle: 'Pie', category: 'Pie',            discount: '', imgUrl: '/products/pieFoodHeroBanner.png',       align: 'left' },
-  { id: '30', foodId: 'pudding',     title: 'Premium Quality Delicious',      subtitle: 'Pudding', category: 'Pudding',        discount: '', imgUrl: '/products/puddingFoodHeroBanner.png',   align: 'left' },
-  { id: '31', foodId: 'custard',     title: 'Premium Quality Delicious',      subtitle: 'Custard', category: 'Custard',        discount: '', imgUrl: '/products/custardFoodHeroBanner.png',   align: 'left' },
-  { id: '32', foodId: 'mousse',      title: 'Premium Quality Delicious',       subtitle: 'Mousse', category: 'Mousse',         discount: '', imgUrl: '/products/mousseFoodHeroBanner.png',    align: 'left' },
-  { id: '33', foodId: 'tiramisu',    title: 'Premium Quality Delicious',     subtitle: 'Tiramisu', category: 'Tiramisu',       discount: '', imgUrl: '/products/tiramisuFoodHeroBanner.png',  align: 'left' },
-  { id: '34', foodId: 'waffles',     title: 'Premium Quality Delicious',      subtitle: 'Waffles', category: 'Waffles',        discount: '', imgUrl: '/products/wafflesFoodHeroBanner.png',   align: 'left' },
-  { id: '35', foodId: 'pancake',     title: 'Premium Quality Delicious',      subtitle: 'Pancake', category: 'Pancake',        discount: '', imgUrl: '/products/pancakeFoodHeroBanner.png',   align: 'left' },
-  { id: '36', foodId: 'chocolate',   title: 'Premium Quality Delicious',    subtitle: 'Chocolate', category: 'Chocolate',      discount: '', imgUrl: '/products/chocolateFoodHeroBanner.png', align: 'left' },
+  { id: '26', foodId: 'dessert', title: 'Premium Quality Delicious', subtitle: 'Dessert', category: 'Dessert', discount: '', imgUrl: '/products/dessertFoodHeroBanner.png', align: 'left' },
+  { id: '27', foodId: 'cheesecake', title: 'Premium Quality Delicious', subtitle: 'Cheesecake', category: 'Cheesecake', discount: '', imgUrl: '/products/cheesecakeFoodHeroBanner.png', align: 'left' },
+  { id: '28', foodId: 'tart', title: 'Premium Quality Delicious', subtitle: 'Tart', category: 'Tart', discount: '', imgUrl: '/products/tartFoodHeroBanner.png', align: 'left' },
+  { id: '29', foodId: 'pie', title: 'Premium Quality Delicious', subtitle: 'Pie', category: 'Pie', discount: '', imgUrl: '/products/pieFoodHeroBanner.png', align: 'left' },
+  { id: '30', foodId: 'pudding', title: 'Premium Quality Delicious', subtitle: 'Pudding', category: 'Pudding', discount: '', imgUrl: '/products/puddingFoodHeroBanner.png', align: 'left' },
+  { id: '31', foodId: 'custard', title: 'Premium Quality Delicious', subtitle: 'Custard', category: 'Custard', discount: '', imgUrl: '/products/custardFoodHeroBanner.png', align: 'left' },
+  { id: '32', foodId: 'mousse', title: 'Premium Quality Delicious', subtitle: 'Mousse', category: 'Mousse', discount: '', imgUrl: '/products/mousseFoodHeroBanner.png', align: 'left' },
+  { id: '33', foodId: 'tiramisu', title: 'Premium Quality Delicious', subtitle: 'Tiramisu', category: 'Tiramisu', discount: '', imgUrl: '/products/tiramisuFoodHeroBanner.png', align: 'left' },
+  { id: '34', foodId: 'waffles', title: 'Premium Quality Delicious', subtitle: 'Waffles', category: 'Waffles', discount: '', imgUrl: '/products/wafflesFoodHeroBanner.png', align: 'left' },
+  { id: '35', foodId: 'pancake', title: 'Premium Quality Delicious', subtitle: 'Pancake', category: 'Pancake', discount: '', imgUrl: '/products/pancakeFoodHeroBanner.png', align: 'left' },
+  { id: '36', foodId: 'chocolate', title: 'Premium Quality Delicious', subtitle: 'Chocolate', category: 'Chocolate', discount: '', imgUrl: '/products/chocolateFoodHeroBanner.png', align: 'left' },
 
   // ── Ice Cream ───────────────────────────────────
 
-  { id: '37', foodId: 'ice_cream',   title: 'Premium Quality Delicious',    subtitle: 'Ice Cream', category: 'Ice Cream',      discount: '', imgUrl: '/products/iceCreamFoodHeroBanner.png',  align: 'left' },
-  { id: '38', foodId: 'sundae',      title: 'Premium Quality Delicious',       subtitle: 'Sundae', category: 'Sundae',         discount: '', imgUrl: '/products/sundaeFoodHeroBanner.png',    align: 'left' },
+  { id: '37', foodId: 'ice_cream', title: 'Premium Quality Delicious', subtitle: 'Ice Cream', category: 'Ice Cream', discount: '', imgUrl: '/products/iceCreamFoodHeroBanner.png', align: 'left' },
+  { id: '38', foodId: 'sundae', title: 'Premium Quality Delicious', subtitle: 'Sundae', category: 'Sundae', discount: '', imgUrl: '/products/sundaeFoodHeroBanner.png', align: 'left' },
 
   // ── Sweets ──────────────────────────────────────
 
-  { id: '39', foodId: 'sweets',      title: 'Premium Quality Delicious',       subtitle: 'Sweets', category: 'Sweets',         discount: '', imgUrl: '/products/sweetsFoodHeroBanner.png',    align: 'left' },
-  { id: '40', foodId: 'gulab_jamun', title: 'Premium Quality Delicious',  subtitle: 'Gulab Jamun', category: 'Gulab Jamun',    discount: '', imgUrl: '/products/gulabJamunFoodHeroBanner.png', align: 'left' },
-  { id: '41', foodId: 'rasmalai',    title: 'Premium Quality Delicious',     subtitle: 'Rasmalai', category: 'Rasmalai',       discount: '', imgUrl: '/products/rasmalaiFoodHeroBanner.png',  align: 'left' },
-  { id: '42', foodId: 'rasgulla',    title: 'Premium Quality Delicious',     subtitle: 'Rasgulla', category: 'Rasgulla',       discount: '', imgUrl: '/products/rasgullaFoodHeroBanner.png',  align: 'left' },
-  { id: '43', foodId: 'jalebi',      title: 'Premium Quality Delicious',       subtitle: 'Jalebi', category: 'Jalebi',         discount: '', imgUrl: '/products/jalebiFoodHeroBanner.png',    align: 'left' },
-  { id: '44', foodId: 'halwa',       title: 'Premium Quality Delicious',        subtitle: 'Halwa', category: 'Halwa',          discount: '', imgUrl: '/products/halwaFoodHeroBanner.png',     align: 'left' },
-  { id: '45', foodId: 'gajak',       title: 'Premium Quality Delicious',        subtitle: 'Gajak', category: 'Gajak',          discount: '', imgUrl: '/products/gajakFoodHeroBanner.png',     align: 'left' },
+  { id: '39', foodId: 'sweets', title: 'Premium Quality Delicious', subtitle: 'Sweets', category: 'Sweets', discount: '', imgUrl: '/products/sweetsFoodHeroBanner.png', align: 'left' },
+  { id: '40', foodId: 'gulab_jamun', title: 'Premium Quality Delicious', subtitle: 'Gulab Jamun', category: 'Gulab Jamun', discount: '', imgUrl: '/products/gulabJamunFoodHeroBanner.png', align: 'left' },
+  { id: '41', foodId: 'rasmalai', title: 'Premium Quality Delicious', subtitle: 'Rasmalai', category: 'Rasmalai', discount: '', imgUrl: '/products/rasmalaiFoodHeroBanner.png', align: 'left' },
+  { id: '42', foodId: 'rasgulla', title: 'Premium Quality Delicious', subtitle: 'Rasgulla', category: 'Rasgulla', discount: '', imgUrl: '/products/rasgullaFoodHeroBanner.png', align: 'left' },
+  { id: '43', foodId: 'jalebi', title: 'Premium Quality Delicious', subtitle: 'Jalebi', category: 'Jalebi', discount: '', imgUrl: '/products/jalebiFoodHeroBanner.png', align: 'left' },
+  { id: '44', foodId: 'halwa', title: 'Premium Quality Delicious', subtitle: 'Halwa', category: 'Halwa', discount: '', imgUrl: '/products/halwaFoodHeroBanner.png', align: 'left' },
+  { id: '45', foodId: 'gajak', title: 'Premium Quality Delicious', subtitle: 'Gajak', category: 'Gajak', discount: '', imgUrl: '/products/gajakFoodHeroBanner.png', align: 'left' },
 
   // ── South Indian ────────────────────────────────
 
-  { id: '46', foodId: 'south_indian', title: 'Premium Quality Delicious', subtitle: 'South Indian', category: 'South Indian',  discount: '', imgUrl: '/products/southIndianFoodHeroBanner.png', align: 'left' },
-  { id: '47', foodId: 'dosa',        title: 'Premium Quality Delicious',         subtitle: 'Dosa', category: 'Dosa',           discount: '', imgUrl: '/products/dosaFoodHeroBanner.png',      align: 'left' },
-  { id: '48', foodId: 'idli',        title: 'Premium Quality Delicious',         subtitle: 'Idli', category: 'Idli',           discount: '', imgUrl: '/products/idliFoodHeroBanner.png',      align: 'left' },
-  { id: '49', foodId: 'uttapam',     title: 'Premium Quality Delicious',      subtitle: 'Uttapam', category: 'Uttapam',        discount: '', imgUrl: '/products/uttapamFoodHeroBanner.png',   align: 'left' },
-  { id: '50', foodId: 'appam',       title: 'Premium Quality Delicious',        subtitle: 'Appam', category: 'Appam',          discount: '', imgUrl: '/products/appamFoodHeroBanner.png',     align: 'left' },
-  { id: '51', foodId: 'upma',        title: 'Premium Quality Delicious',         subtitle: 'Upma', category: 'Upma',           discount: '', imgUrl: '/products/upmaFoodHeroBanner.png',      align: 'left' },
-  { id: '52', foodId: 'bath',        title: 'Premium Quality Delicious',         subtitle: 'Bath', category: 'Bath',           discount: '', imgUrl: '/products/bathFoodHeroBanner.png',      align: 'left' },
-  { id: '53', foodId: 'bonda',       title: 'Premium Quality Delicious',        subtitle: 'Bonda', category: 'Bonda',          discount: '', imgUrl: '/products/bondaFoodHeroBanner.png',     align: 'left' },
-  { id: '54', foodId: 'sambar_rice', title: 'Premium Quality Delicious',  subtitle: 'Sambar Rice', category: 'Sambar Rice',    discount: '', imgUrl: '/products/sambarRiceFoodHeroBanner.png', align: 'left' },
+  { id: '46', foodId: 'south_indian', title: 'Premium Quality Delicious', subtitle: 'South Indian', category: 'South Indian', discount: '', imgUrl: '/products/southIndianFoodHeroBanner.png', align: 'left' },
+  { id: '47', foodId: 'dosa', title: 'Premium Quality Delicious', subtitle: 'Dosa', category: 'Dosa', discount: '', imgUrl: '/products/dosaFoodHeroBanner.png', align: 'left' },
+  { id: '48', foodId: 'idli', title: 'Premium Quality Delicious', subtitle: 'Idli', category: 'Idli', discount: '', imgUrl: '/products/idliFoodHeroBanner.png', align: 'left' },
+  { id: '49', foodId: 'uttapam', title: 'Premium Quality Delicious', subtitle: 'Uttapam', category: 'Uttapam', discount: '', imgUrl: '/products/uttapamFoodHeroBanner.png', align: 'left' },
+  { id: '50', foodId: 'appam', title: 'Premium Quality Delicious', subtitle: 'Appam', category: 'Appam', discount: '', imgUrl: '/products/appamFoodHeroBanner.png', align: 'left' },
+  { id: '51', foodId: 'upma', title: 'Premium Quality Delicious', subtitle: 'Upma', category: 'Upma', discount: '', imgUrl: '/products/upmaFoodHeroBanner.png', align: 'left' },
+  { id: '52', foodId: 'bath', title: 'Premium Quality Delicious', subtitle: 'Bath', category: 'Bath', discount: '', imgUrl: '/products/bathFoodHeroBanner.png', align: 'left' },
+  { id: '53', foodId: 'bonda', title: 'Premium Quality Delicious', subtitle: 'Bonda', category: 'Bonda', discount: '', imgUrl: '/products/bondaFoodHeroBanner.png', align: 'left' },
+  { id: '54', foodId: 'sambar_rice', title: 'Premium Quality Delicious', subtitle: 'Sambar Rice', category: 'Sambar Rice', discount: '', imgUrl: '/products/sambarRiceFoodHeroBanner.png', align: 'left' },
 
   // ── North Indian ────────────────────────────────
 
-  { id: '55', foodId: 'north_indian', title: 'Premium Quality Delicious', subtitle: 'North Indian', category: 'North Indian',  discount: '', imgUrl: '/products/northIndianFoodHeroBanner.png', align: 'left' },
-  { id: '56', foodId: 'paneer',      title: 'Premium Quality Delicious',       subtitle: 'Paneer', category: 'Paneer',         discount: '', imgUrl: '/products/paneerFoodHeroBanner.png',    align: 'left' },
-  { id: '57', foodId: 'dal',         title: 'Premium Quality Delicious',          subtitle: 'Dal', category: 'Dal',            discount: '', imgUrl: '/products/dalFoodHeroBanner.png',       align: 'left' },
-  { id: '58', foodId: 'rajma',       title: 'Premium Quality Delicious',        subtitle: 'Rajma', category: 'Rajma',          discount: '', imgUrl: '/products/rajmaFoodHeroBanner.png',     align: 'left' },
-  { id: '59', foodId: 'rajma_rice',  title: 'Premium Quality Delicious',   subtitle: 'Rajma Rice', category: 'Rajma Rice',     discount: '', imgUrl: '/products/rajmaRiceFoodHeroBanner.png', align: 'left' },
-  { id: '60', foodId: 'thali',       title: 'Premium Quality Delicious',        subtitle: 'Thali', category: 'Thali',          discount: '', imgUrl: '/products/thaliFoodHeroBanner.png',     align: 'left' },
-  { id: '61', foodId: 'veg_meal',    title: 'Premium Quality Delicious',     subtitle: 'Veg Meal', category: 'Veg Meal',       discount: '', imgUrl: '/products/vegMealFoodHeroBanner.png',   align: 'left' },
-  { id: '62', foodId: 'pulao',       title: 'Premium Quality Delicious',        subtitle: 'Pulao', category: 'Pulao',          discount: '', imgUrl: '/products/pulaoFoodHeroBanner.png',     align: 'left' },
-  { id: '63', foodId: 'paratha',     title: 'Premium Quality Delicious',      subtitle: 'Paratha', category: 'Paratha',        discount: '', imgUrl: '/products/parathaFoodHeroBanner.png',   align: 'left' },
+  { id: '55', foodId: 'north_indian', title: 'Premium Quality Delicious', subtitle: 'North Indian', category: 'North Indian', discount: '', imgUrl: '/products/northIndianFoodHeroBanner.png', align: 'left' },
+  { id: '56', foodId: 'paneer', title: 'Premium Quality Delicious', subtitle: 'Paneer', category: 'Paneer', discount: '', imgUrl: '/products/paneerFoodHeroBanner.png', align: 'left' },
+  { id: '57', foodId: 'dal', title: 'Premium Quality Delicious', subtitle: 'Dal', category: 'Dal', discount: '', imgUrl: '/products/dalFoodHeroBanner.png', align: 'left' },
+  { id: '58', foodId: 'rajma', title: 'Premium Quality Delicious', subtitle: 'Rajma', category: 'Rajma', discount: '', imgUrl: '/products/rajmaFoodHeroBanner.png', align: 'left' },
+  { id: '59', foodId: 'rajma_rice', title: 'Premium Quality Delicious', subtitle: 'Rajma Rice', category: 'Rajma Rice', discount: '', imgUrl: '/products/rajmaRiceFoodHeroBanner.png', align: 'left' },
+  { id: '60', foodId: 'thali', title: 'Premium Quality Delicious', subtitle: 'Thali', category: 'Thali', discount: '', imgUrl: '/products/thaliFoodHeroBanner.png', align: 'left' },
+  { id: '61', foodId: 'veg_meal', title: 'Premium Quality Delicious', subtitle: 'Veg Meal', category: 'Veg Meal', discount: '', imgUrl: '/products/vegMealFoodHeroBanner.png', align: 'left' },
+  { id: '62', foodId: 'pulao', title: 'Premium Quality Delicious', subtitle: 'Pulao', category: 'Pulao', discount: '', imgUrl: '/products/pulaoFoodHeroBanner.png', align: 'left' },
+  { id: '63', foodId: 'paratha', title: 'Premium Quality Delicious', subtitle: 'Paratha', category: 'Paratha', discount: '', imgUrl: '/products/parathaFoodHeroBanner.png', align: 'left' },
   { id: '64', foodId: 'chur_chur_naan', title: 'Premium Quality Delicious', subtitle: 'Chur Chur Naan', category: 'Chur Chur Naan', discount: '', imgUrl: '/products/churChurNaanFoodHeroBanner.png', align: 'left' },
-  { id: '65', foodId: 'kulche',      title: 'Premium Quality Delicious',       subtitle: 'Kulche', category: 'Kulche',         discount: '', imgUrl: '/products/kulcheFoodHeroBanner.png',    align: 'left' },
+  { id: '65', foodId: 'kulche', title: 'Premium Quality Delicious', subtitle: 'Kulche', category: 'Kulche', discount: '', imgUrl: '/products/kulcheFoodHeroBanner.png', align: 'left' },
   { id: '66', foodId: 'paneer_kulche', title: 'Premium Quality Delicious', subtitle: 'Paneer Kulche', category: 'Paneer Kulche', discount: '', imgUrl: '/products/paneerKulcheFoodHeroBanner.png', align: 'left' },
-  { id: '67', foodId: 'chole_kulche', title: 'Premium Quality Delicious', subtitle: 'Chole Kulche', category: 'Chole Kulche',  discount: '', imgUrl: '/products/choleKulcheFoodHeroBanner.png', align: 'left' },
+  { id: '67', foodId: 'chole_kulche', title: 'Premium Quality Delicious', subtitle: 'Chole Kulche', category: 'Chole Kulche', discount: '', imgUrl: '/products/choleKulcheFoodHeroBanner.png', align: 'left' },
   { id: '68', foodId: 'chole_bhature', title: 'Premium Quality Delicious', subtitle: 'Chole Bhature', category: 'Chole Bhature', discount: '', imgUrl: '/products/choleBhatureFoodHeroBanner.png', align: 'left' },
-  { id: '69', foodId: 'chole_poori', title: 'Premium Quality Delicious',  subtitle: 'Chole Poori', category: 'Chole Poori',    discount: '', imgUrl: '/products/cholePooriFoodHeroBanner.png', align: 'left' },
-  { id: '70', foodId: 'poori',       title: 'Premium Quality Delicious',        subtitle: 'Poori', category: 'Poori',          discount: '', imgUrl: '/products/pooriFoodHeroBanner.png',     align: 'left' },
-  { id: '71', foodId: 'poori_bhaji', title: 'Premium Quality Delicious',  subtitle: 'Poori Bhaji', category: 'Poori Bhaji',    discount: '', imgUrl: '/products/pooriBhajiFoodHeroBanner.png', align: 'left' },
-  { id: '72', foodId: 'aloo_poori',  title: 'Premium Quality Delicious',   subtitle: 'Aloo Poori', category: 'Aloo Poori',     discount: '', imgUrl: '/products/alooPooriFoodHeroBanner.png', align: 'left' },
-  { id: '73', foodId: 'malai_kofta', title: 'Premium Quality Delicious',  subtitle: 'Malai Kofta', category: 'Malai Kofta',    discount: '', imgUrl: '/products/malaiKoftaFoodHeroBanner.png', align: 'left' },
-  { id: '74', foodId: 'korma',       title: 'Premium Quality Delicious',        subtitle: 'Korma', category: 'Korma',          discount: '', imgUrl: '/products/kormaFoodHeroBanner.png',     align: 'left' },
-  { id: '75', foodId: 'nihari',      title: 'Premium Quality Delicious',       subtitle: 'Nihari', category: 'Nihari',         discount: '', imgUrl: '/products/nihariFoodHeroBanner.png',    align: 'left' },
-  { id: '76', foodId: 'chaap',      title: 'Premium Quality Delicious',        subtitle: 'Chaap', category: 'Chaap',          discount: '', imgUrl: '/products/chaapFoodHeroBanner.png',     align: 'left' },
- 
+  { id: '69', foodId: 'chole_poori', title: 'Premium Quality Delicious', subtitle: 'Chole Poori', category: 'Chole Poori', discount: '', imgUrl: '/products/cholePooriFoodHeroBanner.png', align: 'left' },
+  { id: '70', foodId: 'poori', title: 'Premium Quality Delicious', subtitle: 'Poori', category: 'Poori', discount: '', imgUrl: '/products/pooriFoodHeroBanner.png', align: 'left' },
+  { id: '71', foodId: 'poori_bhaji', title: 'Premium Quality Delicious', subtitle: 'Poori Bhaji', category: 'Poori Bhaji', discount: '', imgUrl: '/products/pooriBhajiFoodHeroBanner.png', align: 'left' },
+  { id: '72', foodId: 'aloo_poori', title: 'Premium Quality Delicious', subtitle: 'Aloo Poori', category: 'Aloo Poori', discount: '', imgUrl: '/products/alooPooriFoodHeroBanner.png', align: 'left' },
+  { id: '73', foodId: 'malai_kofta', title: 'Premium Quality Delicious', subtitle: 'Malai Kofta', category: 'Malai Kofta', discount: '', imgUrl: '/products/malaiKoftaFoodHeroBanner.png', align: 'left' },
+  { id: '74', foodId: 'korma', title: 'Premium Quality Delicious', subtitle: 'Korma', category: 'Korma', discount: '', imgUrl: '/products/kormaFoodHeroBanner.png', align: 'left' },
+  { id: '75', foodId: 'nihari', title: 'Premium Quality Delicious', subtitle: 'Nihari', category: 'Nihari', discount: '', imgUrl: '/products/nihariFoodHeroBanner.png', align: 'left' },
+  { id: '76', foodId: 'chaap', title: 'Premium Quality Delicious', subtitle: 'Chaap', category: 'Chaap', discount: '', imgUrl: '/products/chaapFoodHeroBanner.png', align: 'left' },
+
   // ── Biryani ─────────────────────────────────────
 
-  { id: '77', foodId: 'biryani',     title: 'Premium Quality Delicious',      subtitle: 'Biryani', category: 'Biryani',        discount: '', imgUrl: '/products/biryaniFoodHeroBanner.png',   align: 'left' },
-  { id: '78', foodId: 'fried_rice',  title: 'Premium Quality Delicious',   subtitle: 'Fried Rice', category: 'Fried Rice',     discount: '', imgUrl: '/products/friedRiceFoodHeroBanner.png', align: 'left' },
+  { id: '77', foodId: 'biryani', title: 'Premium Quality Delicious', subtitle: 'Biryani', category: 'Biryani', discount: '', imgUrl: '/products/biryaniFoodHeroBanner.png', align: 'left' },
+  { id: '78', foodId: 'fried_rice', title: 'Premium Quality Delicious', subtitle: 'Fried Rice', category: 'Fried Rice', discount: '', imgUrl: '/products/friedRiceFoodHeroBanner.png', align: 'left' },
 
   // ── Chinese ─────────────────────────────────────
 
-  { id: '79', foodId: 'chinese',     title: 'Premium Quality Delicious',      subtitle: 'Chinese', category: 'Chinese',        discount: '', imgUrl: '/products/chineseFoodHeroBanner.png',   align: 'left' },
-  { id: '80', foodId: 'noodles',     title: 'Premium Quality Delicious',      subtitle: 'Noodles', category: 'Noodles',        discount: '', imgUrl: '/products/noodlesFoodHeroBanner.png',   align: 'left' },
-  { id: '81', foodId: 'manchurian',  title: 'Premium Quality Delicious',   subtitle: 'Manchurian', category: 'Manchurian',     discount: '', imgUrl: '/products/manchurianFoodHeroBanner.png', align: 'left' },
-  { id: '82', foodId: 'chop_suey',   title: 'Premium Quality Delicious',    subtitle: 'Chop Suey', category: 'Chop Suey',      discount: '', imgUrl: '/products/chopSueyFoodHeroBanner.png',  align: 'left' },
+  { id: '79', foodId: 'chinese', title: 'Premium Quality Delicious', subtitle: 'Chinese', category: 'Chinese', discount: '', imgUrl: '/products/chineseFoodHeroBanner.png', align: 'left' },
+  { id: '80', foodId: 'noodles', title: 'Premium Quality Delicious', subtitle: 'Noodles', category: 'Noodles', discount: '', imgUrl: '/products/noodlesFoodHeroBanner.png', align: 'left' },
+  { id: '81', foodId: 'manchurian', title: 'Premium Quality Delicious', subtitle: 'Manchurian', category: 'Manchurian', discount: '', imgUrl: '/products/manchurianFoodHeroBanner.png', align: 'left' },
+  { id: '82', foodId: 'chop_suey', title: 'Premium Quality Delicious', subtitle: 'Chop Suey', category: 'Chop Suey', discount: '', imgUrl: '/products/chopSueyFoodHeroBanner.png', align: 'left' },
 
   // ── Non-Veg ─────────────────────────────────────
 
-  { id: '83', foodId: 'non_veg',     title: 'Premium Quality Delicious',      subtitle: 'Non Veg', category: 'Non Veg',        discount: '', imgUrl: '/products/nonVegFoodHeroBanner.png',    align: 'left' },
-  { id: '84', foodId: 'chicken',     title: 'Premium Quality Delicious',      subtitle: 'Chicken', category: 'Chicken',        discount: '', imgUrl: '/products/chickenFoodHeroBanner.png',   align: 'left' },
+  { id: '83', foodId: 'non_veg', title: 'Premium Quality Delicious', subtitle: 'Non Veg', category: 'Non Veg', discount: '', imgUrl: '/products/nonVegFoodHeroBanner.png', align: 'left' },
+  { id: '84', foodId: 'chicken', title: 'Premium Quality Delicious', subtitle: 'Chicken', category: 'Chicken', discount: '', imgUrl: '/products/chickenFoodHeroBanner.png', align: 'left' },
   { id: '85', foodId: 'butter_chicken', title: 'Premium Quality Delicious', subtitle: 'Butter Chicken', category: 'Butter Chicken', discount: '', imgUrl: '/products/butterChickenFoodHeroBanner.png', align: 'left' },
   { id: '86', foodId: 'chicken_handi', title: 'Premium Quality Delicious', subtitle: 'Chicken Handi', category: 'Chicken Handi', discount: '', imgUrl: '/products/chickenHandiFoodHeroBanner.png', align: 'left' },
   { id: '87', foodId: 'chicken_cha', title: 'Premium Quality Delicious', subtitle: 'Chicken Chaap', category: 'Chicken Chaap', discount: '', imgUrl: '/products/chickenChaapFoodHeroBanner.png', align: 'left' },
   { id: '88', foodId: 'chilli_chicken', title: 'Premium Quality Delicious', subtitle: 'Chilli Chicken', category: 'Chilli Chicken', discount: '', imgUrl: '/products/chilliChickenFoodHeroBanner.png', align: 'left' },
-  { id: '89', foodId: 'wings',       title: 'Premium Quality Delicious',        subtitle: 'Wings', category: 'Wings',          discount: '', imgUrl: '/products/wingsFoodHeroBanner.png',     align: 'left' },
-  { id: '90', foodId: 'kebabs',      title: 'Premium Quality Delicious',       subtitle: 'Kebabs', category: 'Kebabs',         discount: '', imgUrl: '/products/kebabsFoodHeroBanner.png',    align: 'left' },
-  { id: '91', foodId: 'mutton',      title: 'Premium Quality Delicious',       subtitle: 'Mutton', category: 'Mutton',         discount: '', imgUrl: '/products/muttonFoodHeroBanner.png',    align: 'left' },
-  { id: '92', foodId: 'fish',        title: 'Premium Quality Delicious',         subtitle: 'Fish', category: 'Fish',           discount: '', imgUrl: '/products/fishFoodHeroBanner.png',      align: 'left' },
-  { id: '93', foodId: 'keema',       title: 'Premium Quality Delicious',        subtitle: 'Keema', category: 'Keema',          discount: '', imgUrl: '/products/keemaFoodHeroBanner.png',     align: 'left' },
-  { id: '94', foodId: 'omelette',    title: 'Premium Quality Delicious',     subtitle: 'Omelette', category: 'Omelette',       discount: '', imgUrl: '/products/omeletteFoodHeroBanner.png',  align: 'left' },
-  { id: '95', foodId: 'bhurji',      title: 'Premium Quality Delicious',       subtitle: 'Bhurji', category: 'Bhurji',         discount: '', imgUrl: '/products/bhurjiFoodHeroBanner.png',    align: 'left' },
+  { id: '89', foodId: 'wings', title: 'Premium Quality Delicious', subtitle: 'Wings', category: 'Wings', discount: '', imgUrl: '/products/wingsFoodHeroBanner.png', align: 'left' },
+  { id: '90', foodId: 'kebabs', title: 'Premium Quality Delicious', subtitle: 'Kebabs', category: 'Kebabs', discount: '', imgUrl: '/products/kebabsFoodHeroBanner.png', align: 'left' },
+  { id: '91', foodId: 'mutton', title: 'Premium Quality Delicious', subtitle: 'Mutton', category: 'Mutton', discount: '', imgUrl: '/products/muttonFoodHeroBanner.png', align: 'left' },
+  { id: '92', foodId: 'fish', title: 'Premium Quality Delicious', subtitle: 'Fish', category: 'Fish', discount: '', imgUrl: '/products/fishFoodHeroBanner.png', align: 'left' },
+  { id: '93', foodId: 'keema', title: 'Premium Quality Delicious', subtitle: 'Keema', category: 'Keema', discount: '', imgUrl: '/products/keemaFoodHeroBanner.png', align: 'left' },
+  { id: '94', foodId: 'omelette', title: 'Premium Quality Delicious', subtitle: 'Omelette', category: 'Omelette', discount: '', imgUrl: '/products/omeletteFoodHeroBanner.png', align: 'left' },
+  { id: '95', foodId: 'bhurji', title: 'Premium Quality Delicious', subtitle: 'Bhurji', category: 'Bhurji', discount: '', imgUrl: '/products/bhurjiFoodHeroBanner.png', align: 'left' },
 
   // ── Street Food ─────────────────────────────────
 
-  { id: '96',  foodId: 'chaat',       title: 'Premium Quality Delicious',        subtitle: 'Chaat', category: 'Chaat',          discount: '', imgUrl: '/products/chaatFoodHeroBanner.png',      align: 'left' },
-  { id: '97',  foodId: 'panipuri',    title: 'Premium Quality Delicious',     subtitle: 'Panipuri', category: 'Panipuri',       discount: '', imgUrl: '/products/panipuriFoodHeroBanner.png',   align: 'left' },
-  { id: '98',  foodId: 'bhel',        title: 'Premium Quality Delicious',         subtitle: 'Bhel', category: 'Bhel',           discount: '', imgUrl: '/products/bhelFoodHeroBanner.png',       align: 'left' },
-  { id: '99',  foodId: 'sev_poori',   title: 'Premium Quality Delicious',    subtitle: 'Sev Poori', category: 'Sev Poori',      discount: '', imgUrl: '/products/sevPooriFoodHeroBanner.png',   align: 'left' },
-  { id: '100', foodId: 'dahi_balle',  title: 'Premium Quality Delicious',   subtitle: 'Dahi Balle', category: 'Dahi Balle',     discount: '', imgUrl: '/products/dahiBalleFoodHeroBanner.png',  align: 'left' },
-  { id: '101', foodId: 'vada_pav',    title: 'Premium Quality Delicious',     subtitle: 'Vada Pav', category: 'Vada Pav',       discount: '', imgUrl: '/products/vadaPavFoodHeroBanner.png',    align: 'left' },
-  { id: '102', foodId: 'pav_bhaji',   title: 'Premium Quality Delicious',    subtitle: 'Pav Bhaji', category: 'Pav Bhaji',      discount: '', imgUrl: '/products/pavBhajiFoodHeroBanner.png',   align: 'left' },
-  { id: '103', foodId: 'samosa',      title: 'Premium Quality Delicious',       subtitle: 'Samosa', category: 'Samosa',         discount: '', imgUrl: '/products/samosaFoodHeroBanner.png',     align: 'left' },
-  { id: '104', foodId: 'pakoda',      title: 'Premium Quality Delicious',       subtitle: 'Pakoda', category: 'Pakoda',         discount: '', imgUrl: '/products/pakodaFoodHeroBanner.png',     align: 'left' },
+  { id: '96', foodId: 'chaat', title: 'Premium Quality Delicious', subtitle: 'Chaat', category: 'Chaat', discount: '', imgUrl: '/products/chaatFoodHeroBanner.png', align: 'left' },
+  { id: '97', foodId: 'panipuri', title: 'Premium Quality Delicious', subtitle: 'Panipuri', category: 'Panipuri', discount: '', imgUrl: '/products/panipuriFoodHeroBanner.png', align: 'left' },
+  { id: '98', foodId: 'bhel', title: 'Premium Quality Delicious', subtitle: 'Bhel', category: 'Bhel', discount: '', imgUrl: '/products/bhelFoodHeroBanner.png', align: 'left' },
+  { id: '99', foodId: 'sev_poori', title: 'Premium Quality Delicious', subtitle: 'Sev Poori', category: 'Sev Poori', discount: '', imgUrl: '/products/sevPooriFoodHeroBanner.png', align: 'left' },
+  { id: '100', foodId: 'dahi_balle', title: 'Premium Quality Delicious', subtitle: 'Dahi Balle', category: 'Dahi Balle', discount: '', imgUrl: '/products/dahiBalleFoodHeroBanner.png', align: 'left' },
+  { id: '101', foodId: 'vada_pav', title: 'Premium Quality Delicious', subtitle: 'Vada Pav', category: 'Vada Pav', discount: '', imgUrl: '/products/vadaPavFoodHeroBanner.png', align: 'left' },
+  { id: '102', foodId: 'pav_bhaji', title: 'Premium Quality Delicious', subtitle: 'Pav Bhaji', category: 'Pav Bhaji', discount: '', imgUrl: '/products/pavBhajiFoodHeroBanner.png', align: 'left' },
+  { id: '103', foodId: 'samosa', title: 'Premium Quality Delicious', subtitle: 'Samosa', category: 'Samosa', discount: '', imgUrl: '/products/samosaFoodHeroBanner.png', align: 'left' },
+  { id: '104', foodId: 'pakoda', title: 'Premium Quality Delicious', subtitle: 'Pakoda', category: 'Pakoda', discount: '', imgUrl: '/products/pakodaFoodHeroBanner.png', align: 'left' },
   { id: '105', foodId: 'paneer_pakoda', title: 'Premium Quality Delicious', subtitle: 'Paneer Pakoda', category: 'Paneer Pakoda', discount: '', imgUrl: '/products/paneerPakodaFoodHeroBanner.png', align: 'left' },
-  { id: '106', foodId: 'aloo_tikki',  title: 'Premium Quality Delicious',   subtitle: 'Aloo Tikki', category: 'Aloo Tikki',     discount: '', imgUrl: '/products/alooTikkiFoodHeroBanner.png',  align: 'left' },
-  { id: '107', foodId: 'cutlet',      title: 'Premium Quality Delicious',       subtitle: 'Cutlet', category: 'Cutlet',         discount: '', imgUrl: '/products/cutletFoodHeroBanner.png',     align: 'left' },
-  { id: '108', foodId: 'veg_lollipop', title: 'Premium Quality Delicious', subtitle: 'Veg Lollipop', category: 'Veg Lollipop',  discount: '', imgUrl: '/products/vegLollipopFoodHeroBanner.png', align: 'left' },
-  { id: '109', foodId: 'raj_kachori', title: 'Premium Quality Delicious',  subtitle: 'Raj Kachori', category: 'Raj Kachori',    discount: '', imgUrl: '/products/rajKachoriFoodHeroBanner.png', align: 'left' },
-  { id: '110', foodId: 'dal_kachori', title: 'Premium Quality Delicious',  subtitle: 'Dal Kachori', category: 'Dal Kachori',    discount: '', imgUrl: '/products/dalKachoriFoodHeroBanner.png', align: 'left' },
-  { id: '111', foodId: 'aloo_kachori', title: 'Premium Quality Delicious', subtitle: 'Aloo Kachori', category: 'Aloo Kachori',  discount: '', imgUrl: '/products/alooKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '106', foodId: 'aloo_tikki', title: 'Premium Quality Delicious', subtitle: 'Aloo Tikki', category: 'Aloo Tikki', discount: '', imgUrl: '/products/alooTikkiFoodHeroBanner.png', align: 'left' },
+  { id: '107', foodId: 'cutlet', title: 'Premium Quality Delicious', subtitle: 'Cutlet', category: 'Cutlet', discount: '', imgUrl: '/products/cutletFoodHeroBanner.png', align: 'left' },
+  { id: '108', foodId: 'veg_lollipop', title: 'Premium Quality Delicious', subtitle: 'Veg Lollipop', category: 'Veg Lollipop', discount: '', imgUrl: '/products/vegLollipopFoodHeroBanner.png', align: 'left' },
+  { id: '109', foodId: 'raj_kachori', title: 'Premium Quality Delicious', subtitle: 'Raj Kachori', category: 'Raj Kachori', discount: '', imgUrl: '/products/rajKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '110', foodId: 'dal_kachori', title: 'Premium Quality Delicious', subtitle: 'Dal Kachori', category: 'Dal Kachori', discount: '', imgUrl: '/products/dalKachoriFoodHeroBanner.png', align: 'left' },
+  { id: '111', foodId: 'aloo_kachori', title: 'Premium Quality Delicious', subtitle: 'Aloo Kachori', category: 'Aloo Kachori', discount: '', imgUrl: '/products/alooKachoriFoodHeroBanner.png', align: 'left' },
   { id: '112', foodId: 'pyaaj_kachori', title: 'Premium Quality Delicious', subtitle: 'Pyaaj Kachori', category: 'Pyaaj Kachori', discount: '', imgUrl: '/products/pyaajKachoriFoodHeroBanner.png', align: 'left' },
   { id: '113', foodId: 'khasta_kachori', title: 'Premium Quality Delicious', subtitle: 'Khasta Kachori', category: 'Khasta Kachori', discount: '', imgUrl: '/products/khastaKachoriFoodHeroBanner.png', align: 'left' },
 
   // ── Breakfast & Snacks ──────────────────────────
 
-  { id: '114', foodId: 'poha',        title: 'Premium Quality Delicious',         subtitle: 'Poha', category: 'Poha',           discount: '', imgUrl: '/products/pohaFoodHeroBanner.png',       align: 'left' },
-  { id: '115', foodId: 'masala_maggi', title: 'Premium Quality Delicious',      subtitle: 'Masala Maggi', category: 'Masala Maggi',  discount: '', imgUrl: '/products/masalaMaggiFoodHeroBanner.png', align: 'left' },
-  { id: '116', foodId: 'namkeen',     title: 'Premium Quality Delicious',      subtitle: 'Namkeen', category: 'Namkeen',        discount: '', imgUrl: '/products/namkeenFoodHeroBanner.png',    align: 'left' },
-  { id: '117', foodId: 'mushrooms',   title: 'Premium Quality Delicious',    subtitle: 'Mushrooms', category: 'Mushrooms',      discount: '', imgUrl: '/products/mushroomsFoodHeroBanner.png',  align: 'left' },
+  { id: '114', foodId: 'poha', title: 'Premium Quality Delicious', subtitle: 'Poha', category: 'Poha', discount: '', imgUrl: '/products/pohaFoodHeroBanner.png', align: 'left' },
+  { id: '115', foodId: 'masala_maggi', title: 'Premium Quality Delicious', subtitle: 'Masala Maggi', category: 'Masala Maggi', discount: '', imgUrl: '/products/masalaMaggiFoodHeroBanner.png', align: 'left' },
+  { id: '116', foodId: 'namkeen', title: 'Premium Quality Delicious', subtitle: 'Namkeen', category: 'Namkeen', discount: '', imgUrl: '/products/namkeenFoodHeroBanner.png', align: 'left' },
+  { id: '117', foodId: 'mushrooms', title: 'Premium Quality Delicious', subtitle: 'Mushrooms', category: 'Mushrooms', discount: '', imgUrl: '/products/mushroomsFoodHeroBanner.png', align: 'left' },
 
   // ── Gujarati ────────────────────────────────────
 
-  { id: '118', foodId: 'dhokla',      title: 'Premium Quality Delicious',       subtitle: 'Dhokla', category: 'Dhokla',         discount: '', imgUrl: '/products/dhoklaFoodHeroBanner.png',     align: 'left' },
-  { id: '119', foodId: 'dholda',      title: 'Premium Quality Delicious',       subtitle: 'Dholda', category: 'Dholda',         discount: '', imgUrl: '/products/dholdaFoodHeroBanner.png',     align: 'left' },
-  { id: '120', foodId: 'khandvi',     title: 'Premium Quality Delicious',      subtitle: 'Khandvi', category: 'Khandvi',        discount: '', imgUrl: '/products/khandviFoodHeroBanner.png',    align: 'left' },
-  { id: '121', foodId: 'thepla',      title: 'Premium Quality Thepla',       subtitle: '', category: 'Thepla',         discount: '', imgUrl: '/products/theplaFoodHeroBanner.png',     align: 'left' },
-  { id: '122', foodId: 'fafda',       title: 'Premium Quality Fafda',        subtitle: '', category: 'Fafda',          discount: '', imgUrl: '/products/fafdaFoodHeroBanner.png',      align: 'left' },
+  { id: '118', foodId: 'dhokla', title: 'Premium Quality Delicious', subtitle: 'Dhokla', category: 'Dhokla', discount: '', imgUrl: '/products/dhoklaFoodHeroBanner.png', align: 'left' },
+  { id: '119', foodId: 'dholda', title: 'Premium Quality Delicious', subtitle: 'Dholda', category: 'Dholda', discount: '', imgUrl: '/products/dholdaFoodHeroBanner.png', align: 'left' },
+  { id: '120', foodId: 'khandvi', title: 'Premium Quality Delicious', subtitle: 'Khandvi', category: 'Khandvi', discount: '', imgUrl: '/products/khandviFoodHeroBanner.png', align: 'left' },
+  { id: '121', foodId: 'thepla', title: 'Premium Quality Delicious', subtitle: 'Thepla', category: 'Thepla', discount: '', imgUrl: '/products/theplaFoodHeroBanner.png', align: 'left' },
+  { id: '122', foodId: 'fafda', title: 'Premium Quality Delicious', subtitle: 'Fafda', category: 'Fafda', discount: '', imgUrl: '/products/fafdaFoodHeroBanner.png', align: 'left' },
 
   // ── Beverages ───────────────────────────────────
 
-  { id: '123', foodId: 'coffee',      title: 'Premium Quality Coffee',       subtitle: '', category: 'Coffee',         discount: '', imgUrl: '/products/coffeeFoodHeroBanner.png',     align: 'left' },
-  { id: '124', foodId: 'cold_coffee', title: 'Premium Quality Cold Coffee',  subtitle: '', category: 'Cold Coffee',    discount: '', imgUrl: '/products/coldCoffeeFoodHeroBanner.png', align: 'left' },
-  { id: '125', foodId: 'tea',         title: 'Premium Quality Tea',          subtitle: '', category: 'Tea',            discount: '', imgUrl: '/products/teaFoodHeroBanner.png',        align: 'left' },
-  { id: '126', foodId: 'shake',       title: 'Premium Quality Shake',        subtitle: '', category: 'Shake',          discount: '', imgUrl: '/products/shakeFoodHeroBanner.png',      align: 'left' },
-  { id: '127', foodId: 'juice',       title: 'Premium Quality Juice',        subtitle: '', category: 'Juice',          discount: '', imgUrl: '/products/juiceFoodHeroBanner.png',      align: 'left' },
-  { id: '128', foodId: 'lassi',       title: 'Premium Quality Lassi',        subtitle: '', category: 'Lassi',          discount: '', imgUrl: '/products/lassiFoodHeroBanner.png',      align: 'left' },
-  { id: '129', foodId: 'chaach',      title: 'Premium Quality Chaach',       subtitle: '', category: 'Chaach',         discount: '', imgUrl: '/products/chaachFoodHeroBanner.png',     align: 'left' },
-
+  { id: '123', foodId: 'coffee', title: 'Premium Quality Delicious', subtitle: 'Coffee', category: 'Coffee', discount: '', imgUrl: '/products/coffeeFoodHeroBanner.png', align: 'left' },
+  { id: '124', foodId: 'cold_coffee', title: 'Premium Quality Cold Coffee', subtitle: '', category: 'Cold Coffee', discount: '', imgUrl: '/products/coldCoffeeFoodHeroBanner.png', align: 'left' },
+  { id: '125', foodId: 'tea', title: 'Premium Quality Tea', subtitle: '', category: 'Tea', discount: '', imgUrl: '/products/teaFoodHeroBanner.png', align: 'left' },
+  { id: '126', foodId: 'shake', title: 'Premium Quality Shake', subtitle: '', category: 'Shake', discount: '', imgUrl: '/products/shakeFoodHeroBanner.png', align: 'left' },
+  { id: '127', foodId: 'juice', title: 'Premium Quality Juice', subtitle: '', category: 'Juice', discount: '', imgUrl: '/products/juiceFoodHeroBanner.png', align: 'left' },
+  { id: '128', foodId: 'lassi', title: 'Premium Quality Lassi', subtitle: '', category: 'Lassi', discount: '', imgUrl: '/products/lassiFoodHeroBanner.png', align: 'left' },
+  { id: '129', foodId: 'chaach', title: 'Premium Quality Chaach', subtitle: '', category: 'Chaach', discount: '', imgUrl: '/products/chaachFoodHeroBanner.png', align: 'left' },
+  { id: '130', foodId: 'mocktail', title: 'Premium Quality Mocktail', subtitle: '', category: 'Mocktail', discount: '', imgUrl: '/products/mocktailFoodHeroBanner.png', align: 'left' },
+  { id: '131', foodId: 'smoothie', title: 'Premium Quality Smoothie', subtitle: '', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
+  { id: '132', foodId: 'buttermilk', title: 'Premium Quality Buttermilk', subtitle: '', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
 ];

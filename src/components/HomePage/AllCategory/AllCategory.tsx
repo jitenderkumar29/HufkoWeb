@@ -56,7 +56,7 @@ const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
   const scrollLeft = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
-        left: -500,
+        left: -1200,
         behavior: 'smooth',
       });
       setActiveIndex(Math.max(0, activeIndex - 1));
@@ -66,7 +66,7 @@ const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
   const scrollRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
-        left: 500,
+        left: 1200,
         behavior: 'smooth',
       });
       setActiveIndex(Math.min(categories.length - visibleItems, activeIndex + 1));
