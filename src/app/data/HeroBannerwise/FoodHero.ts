@@ -409,9 +409,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   // ── Beverages ───────────────────────────────────
 
   { id: '123', foodId: 'coffee', title: 'Premium Quality Delicious', subtitle: 'Coffee', category: 'Coffee', discount: '', imgUrl: '/products/coffeeFoodHeroBanner.png', align: 'left' },
-  { id: '124', foodId: 'cold_coffee', title: 'Premium Quality Cold Coffee', subtitle: '', category: 'Cold Coffee', discount: '', imgUrl: '/products/coldCoffeeFoodHeroBanner.png', align: 'left' },
-  { id: '125', foodId: 'tea', title: 'Premium Quality Tea', subtitle: '', category: 'Tea', discount: '', imgUrl: '/products/teaFoodHeroBanner.png', align: 'left' },
-  { id: '126', foodId: 'shake', title: 'Premium Quality Shake', subtitle: '', category: 'Shake', discount: '', imgUrl: '/products/shakeFoodHeroBanner.png', align: 'left' },
+  { id: '124', foodId: 'cold_coffee', title: 'Premium Quality Delicious', subtitle: 'Cold Coffee', category: 'Cold Coffee', discount: '', imgUrl: '/products/coldCoffeeFoodHeroBanner.png', align: 'left' },
+  { id: '125', foodId: 'tea', title: 'Premium Quality Delicious', subtitle: 'Tea', category: 'Tea', discount: '', imgUrl: '/products/teaFoodHeroBanner.png', align: 'left' },
+  { id: '126', foodId: 'shake', title: 'Premium Quality Delicious', subtitle: 'Shake', category: 'Shake', discount: '', imgUrl: '/products/shakeFoodHeroBanner.png', align: 'left' },
   { id: '127', foodId: 'juice', title: 'Premium Quality Juice', subtitle: '', category: 'Juice', discount: '', imgUrl: '/products/juiceFoodHeroBanner.png', align: 'left' },
   { id: '128', foodId: 'lassi', title: 'Premium Quality Lassi', subtitle: '', category: 'Lassi', discount: '', imgUrl: '/products/lassiFoodHeroBanner.png', align: 'left' },
   { id: '129', foodId: 'chaach', title: 'Premium Quality Chaach', subtitle: '', category: 'Chaach', discount: '', imgUrl: '/products/chaachFoodHeroBanner.png', align: 'left' },
