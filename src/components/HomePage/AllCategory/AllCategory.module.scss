@@ -51,8 +51,10 @@
 
 .categoryItem {
   min-width: 100px;
-  height: 140px;
-  // height: auto;
+  // height: 160px;
+  max-height: 160px;
+  height: auto !important;
+
   display: flex;
   flex-direction: column;
   align-items: center;
