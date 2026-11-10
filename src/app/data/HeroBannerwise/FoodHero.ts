@@ -415,7 +415,7 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '127', foodId: 'juice', title: 'Premium Quality Delicious', subtitle: 'Juice', category: 'Juice', discount: '', imgUrl: '/products/juiceFoodHeroBanner.png', align: 'left' },
   { id: '128', foodId: 'lassi', title: 'Premium Quality Delicious', subtitle: 'Lassi', category: 'Lassi', discount: '', imgUrl: '/products/lassiFoodHeroBanner.png', align: 'left' },
   { id: '129', foodId: 'chaach', title: 'Premium Quality Delicious', subtitle: 'Chaach', category: 'Chaach', discount: '', imgUrl: '/products/chaachFoodHeroBanner.png', align: 'left' },
-  { id: '130', foodId: 'mocktail', title: 'Premium Quality Mocktail', subtitle: '', category: 'Mocktail', discount: '', imgUrl: '/products/mocktailFoodHeroBanner.png', align: 'left' },
-  { id: '131', foodId: 'smoothie', title: 'Premium Quality Smoothie', subtitle: '', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
-  { id: '132', foodId: 'buttermilk', title: 'Premium Quality Buttermilk', subtitle: '', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
+  { id: '130', foodId: 'mocktail', title: 'Premium Quality Delicious', subtitle: 'Mocktail', category: 'Mocktail', discount: '', imgUrl: '/products/mocktailFoodHeroBanner.png', align: 'left' },
+  { id: '131', foodId: 'smoothie', title: 'Premium Quality Delicious', subtitle: 'Smoothie', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
+  { id: '132', foodId: 'buttermilk', title: 'Premium Quality Delicious', subtitle: 'Buttermilk', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
 ];
