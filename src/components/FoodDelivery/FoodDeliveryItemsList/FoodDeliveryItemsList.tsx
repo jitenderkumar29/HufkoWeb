@@ -1,26 +1,35 @@
+
 // components/FoodDelivery/FoodDesigns/FoodDeliveryItemsList/FoodDeliveryItemsList.tsx
+
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
 import styles from './FoodDeliveryItemsList.module.scss';
+
 import {
   FoodDietHeroBannerLeftContent,
 } from '@/app/data/HeroBannerwise/FoodHero';
+
 import HeroBannerFood from '../HeroBannerFoodDesign/HeroBannerFood/HeroBannerFood';
+
 import FilterDineOut, {
   FilterOption,
 } from '@/components/Filters/FilterDineOut/FilterDineOut';
+
 import OrderNowItemsListCard, {
   RestaurantItemFoodInterface,
 } from '../FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard';
+
 import {
   ItemsListFoodDeliveryAll,
 } from '@/app/data/Categorywise/FoodsCategories';
+
 import {
   filterRestaurantsByFoodId,
   getFoodCategoryName,
 } from '@/components/Filters/foodFilters/foodFilters';
-import HeroBannerFoodSimple from '../HeroBannerFoodDesign/HeroBannerFoodSimple/HeroBannerFoodSimple';
+
+// ---------- Interfaces ----------
 
 export interface FoodDeliveryItem {
   id: string;
@@ -40,6 +49,12 @@ export interface FoodCategoryMeta {
   url?: string;
 }
 
+export interface FoodNavigationCategory {
+  foodId?: string;
+  id?: string;
+  name?: string;
+}
+
 interface FoodDeliveryItemsListProps {
   foodId: string;
   category?: FoodCategoryMeta;
@@ -47,9 +62,13 @@ interface FoodDeliveryItemsListProps {
   title?: string;
   onBack?: () => void;
   onItemClick?: (item: FoodDeliveryItem) => void;
+
+  // Previous / Next navigation
+  navigationCategories?: FoodNavigationCategory[];
+  onNavigateCategory?: (foodId: string) => void;
 }
 
-// ---------- Module-level helpers ----------
+// ---------- Module-level Helpers ----------
 
 const STORAGE_KEYS = {
   SELECTED_COUNTRY: 'address_selection_country',
@@ -61,7 +80,7 @@ const STORAGE_KEYS = {
 } as const;
 
 export const FOOD_DIET_HERO_BANNER_FOOD_IDS = new Set(
-  FoodDietHeroBannerLeftContent.map((b) => b.foodId)
+  FoodDietHeroBannerLeftContent.map((banner) => banner.foodId)
 );
 
 const getFromStorage = (key: string): string | null => {
@@ -77,7 +96,7 @@ const getTitleForCategory = (foodId: string): string =>
   foodId
     .replace(/_food$/, '')
     .replace(/_/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 
 // ---------- Component ----------
 
@@ -88,36 +107,111 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
   title,
   onBack,
   onItemClick,
+  navigationCategories = [],
+  onNavigateCategory,
 }) => {
-  // State for address information from localStorage
+  // ---------- Address State ----------
+
   const [selectedCity, setSelectedCity] = useState<string>('');
   const [selectedCountry, setSelectedCountry] = useState<string>('');
   const [selectedState, setSelectedState] = useState<string>('');
   const [selectedLocality, setSelectedLocality] = useState<string>('');
 
-  // 👇 Load address info from localStorage on mount (client-side only)
+  // Load address information from localStorage
   useEffect(() => {
-    setSelectedCity(getFromStorage(STORAGE_KEYS.SELECTED_CITY) ?? '');
-    setSelectedCountry(getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) ?? '');
-    setSelectedState(getFromStorage(STORAGE_KEYS.SELECTED_STATE) ?? '');
-    setSelectedLocality(getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) ?? '');
+    setSelectedCity(
+      getFromStorage(STORAGE_KEYS.SELECTED_CITY) ?? ''
+    );
+
+    setSelectedCountry(
+      getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) ?? ''
+    );
+
+    setSelectedState(
+      getFromStorage(STORAGE_KEYS.SELECTED_STATE) ?? ''
+    );
+
+    setSelectedLocality(
+      getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) ?? ''
+    );
   }, []);
 
-  const heading =
-    title ?? `${category?.name ?? getTitleForCategory(foodId)} Delivery Near You`;
+  // ---------- Category Heading ----------
 
-  // 👇 CORE: filter restaurants based on the clicked foodId
-  // Uses `items` prop if provided, otherwise falls back to the full dataset.
+  const heading =
+    title ??
+    `${category?.name ?? getTitleForCategory(foodId)} Delivery Near You`;
+
+  const categoryName = useMemo(
+    () =>
+      category?.name ??
+      getFoodCategoryName(foodId) ??
+      getTitleForCategory(foodId),
+    [foodId, category]
+  );
+
+  // ---------- Previous / Next Category Navigation ----------
+
+  const navigableCategories = useMemo(() => {
+    return navigationCategories
+      .map((item) => ({
+        foodId: item.foodId || item.id || '',
+        name: item.name || '',
+      }))
+      .filter(
+        (item) =>
+          item.foodId &&
+          item.name.toLowerCase() !== 'all'
+      );
+  }, [navigationCategories]);
+
+  // Find currently selected category index
+  const currentCategoryIndex = useMemo(() => {
+    return navigableCategories.findIndex(
+      (item) => item.foodId === foodId
+    );
+  }, [navigableCategories, foodId]);
+
+  // Previous category
+  const previousCategory =
+    currentCategoryIndex > 0
+      ? navigableCategories[currentCategoryIndex - 1]
+      : null;
+
+  // Next category
+  const nextCategory =
+    currentCategoryIndex >= 0 &&
+    currentCategoryIndex < navigableCategories.length - 1
+      ? navigableCategories[currentCategoryIndex + 1]
+      : null;
+
+  // Navigate to previous category
+  const handlePreviousCategory = () => {
+    if (!previousCategory || !onNavigateCategory) return;
+
+    onNavigateCategory(previousCategory.foodId);
+  };
+
+  // Navigate to next category
+  const handleNextCategory = () => {
+    if (!nextCategory || !onNavigateCategory) return;
+
+    onNavigateCategory(nextCategory.foodId);
+  };
+
+  // ---------- Restaurant Filtering ----------
+
   const filteredRestaurants = useMemo(() => {
-    const source = (items as unknown as RestaurantItemFoodInterface[]) ?? ItemsListFoodDeliveryAll;
+    const source =
+      (items as unknown as RestaurantItemFoodInterface[]) ??
+      ItemsListFoodDeliveryAll;
+
     return filterRestaurantsByFoodId(source, foodId);
   }, [foodId, items]);
 
-  // Get the human-readable category name (e.g. "Pizzas" from "pizzas")
-  const categoryName = useMemo(
-    () => category?.name ?? getFoodCategoryName(foodId) ?? getTitleForCategory(foodId),
-    [foodId, category]
-  );
+  console.log('foodId in FoodDeliveryItemsList:', foodId);
+
+  // ---------- Filter Handlers ----------
 
   const handleFilterDineOutChange = (filters: string[]) => {
     console.log('Active toggle filters:', filters);
@@ -131,8 +225,15 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
     filterId: string,
     optionId: string | null
   ) => {
-    console.log('Dropdown changed:', filterId, '→', optionId);
+    console.log(
+      'Dropdown changed:',
+      filterId,
+      '→',
+      optionId
+    );
   };
+
+  // ---------- Filter Options ----------
 
   const dineOutCustomFilters: FilterOption[] = [
     {
@@ -184,21 +285,42 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
         { id: 'above_1000', label: 'Above ₹1000' },
       ],
     },
+     {
+      id: 'premium',
+      label: 'Premium',
+      badge: '',
+      badgeColor: '#ff5b2e',
+    },
   ];
+
+  // ---------- Location Based Title ----------
 
   const getLocationBasedTitle = (baseTitle: string): string => {
     const locality =
-      selectedLocality || getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) || '';
+      selectedLocality ||
+      getFromStorage(STORAGE_KEYS.SELECTED_LOCALITY) ||
+      '';
+
     const city =
-      selectedCity || getFromStorage(STORAGE_KEYS.SELECTED_CITY) || '';
+      selectedCity ||
+      getFromStorage(STORAGE_KEYS.SELECTED_CITY) ||
+      '';
+
     const country =
-      selectedCountry || getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) || '';
+      selectedCountry ||
+      getFromStorage(STORAGE_KEYS.SELECTED_COUNTRY) ||
+      '';
 
     let locationString = '';
+
     if (locality) {
-      locationString = country ? `${locality}, ${country}` : locality;
+      locationString = country
+        ? `${locality}, ${country}`
+        : locality;
     } else if (city) {
-      locationString = country ? `${city}, ${country}` : city;
+      locationString = country
+        ? `${city}, ${country}`
+        : city;
     } else if (country) {
       locationString = country;
     }
@@ -206,17 +328,28 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
     if (locationString) {
       return `${baseTitle} in ${locationString}`;
     }
+
     return baseTitle;
   };
 
-  const handleItemFoodClick = (item: RestaurantItemFoodInterface) => {
+  // ---------- Restaurant Click ----------
+
+  const handleItemFoodClick = (
+    item: RestaurantItemFoodInterface
+  ) => {
     console.log('Selected restaurant:', item.name);
-    onItemClick?.(item as unknown as FoodDeliveryItem);
+
+    onItemClick?.(
+      item as unknown as FoodDeliveryItem
+    );
   };
 
+  // ---------- Render ----------
 
   return (
     <div className={styles.container}>
+
+      {/* Food Diet Hero Banner */}
       {FOOD_DIET_HERO_BANNER_FOOD_IDS.has(foodId) && (
         <HeroBannerFood
           banners={FoodDietHeroBannerLeftContent.filter(
@@ -226,7 +359,60 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
         />
       )}
 
-      {/* Filters always visible */}
+      {/* Previous / Next Category Overlay Navigation */}
+      {currentCategoryIndex !== -1 && onNavigateCategory && (
+        <div className={styles.categoryNavigationOverlay}>
+
+          {/* Previous Button */}
+          <button
+            type="button"
+            className={styles.categoryNavigationButton}
+            onClick={handlePreviousCategory}
+            disabled={!previousCategory}
+            aria-label="Previous food category"
+            title={
+              previousCategory
+                ? `Previous: ${previousCategory.name}`
+                : 'No previous category'
+            }
+          >
+            <span className={styles.navigationArrow}>
+              ‹
+            </span>
+
+            <span className={styles.navigationButtonText}>
+              Previous
+              {/* {previousCategory?.name || 'Previous'} */}
+            </span>
+          </button>
+
+          {/* Next Button */}
+          <button
+            type="button"
+            className={styles.categoryNavigationButton}
+            onClick={handleNextCategory}
+            disabled={!nextCategory}
+            aria-label="Next food category"
+            title={
+              nextCategory
+                ? `Next: ${nextCategory.name}`
+                : 'No next category'
+            }
+          >
+            <span className={styles.navigationButtonText}>
+              Next
+               {/* {nextCategory?.name || 'Next'} */}
+            </span>
+
+            <span className={styles.navigationArrow}>
+              ›
+            </span>
+          </button>
+
+        </div>
+      )}
+
+      {/* Filters */}
       <FilterDineOut
         customFilters={dineOutCustomFilters}
         onFilterChange={handleFilterDineOutChange}
@@ -234,20 +420,24 @@ const FoodDeliveryItemsList: React.FC<FoodDeliveryItemsListProps> = ({
         onDropdownChange={handleDropdownDineOutChange}
       />
 
-      {/* 👇 Restaurant list — automatically filtered by foodId */}
+      {/* Restaurant List */}
       {filteredRestaurants.length > 0 ? (
         <OrderNowItemsListCard
           items={filteredRestaurants}
-          title={getLocationBasedTitle(`Explore ${categoryName} Restaurants`)}
+          title={getLocationBasedTitle(
+            `Explore ${categoryName} Restaurants`
+          )}
           variant="5col"
           showOffers={true}
           onItemClick={handleItemFoodClick}
         />
       ) : (
         <p className={styles.emptyState}>
-          No restaurants available in <strong>{heading}</strong> yet.
+          No restaurants available in{' '}
+          <strong>{heading}</strong> yet.
         </p>
       )}
+
     </div>
   );
 };

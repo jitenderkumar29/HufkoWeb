@@ -443,6 +443,25 @@ const HeaderCategory: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleFoodCategoryNavigation = (categoryId: string) => {
+  setSelectedFoodItemCategory(categoryId);
+
+  const params = new URLSearchParams(window.location.search);
+
+  params.set('category', 'food');
+  params.set('foodCategory', selectedFoodCategory);
+  params.set('foodItemCategory', categoryId);
+
+  router.replace(`?${params.toString()}`, {
+    scroll: false,
+  });
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
   // Handle dineout item click - show restaurant details
   const handleDineoutItemClick = (item: DineOutItemInterface) => {
     console.log('Restaurant clicked:', item.name, 'ID:', item.id);
@@ -706,11 +725,20 @@ const HeaderCategory: React.FC = () => {
         <div className={styles.foodDeliveryItemsListContainer}>
           <FoodDeliveryItemsList
             foodId={selectedFoodItemCategory}
+            navigationCategories={FoodsCategories}
+            onNavigateCategory={handleFoodCategoryNavigation}
             onBack={handleBackFromFoodItemsList}
             onItemClick={(item: FoodDeliveryItem) =>
               console.log('Food item clicked:', item)
             }
           />
+          {/* <FoodDeliveryItemsList
+            foodId={selectedFoodItemCategory}
+            onBack={handleBackFromFoodItemsList}
+            onItemClick={(item: FoodDeliveryItem) =>
+              console.log('Food item clicked:', item)
+            }
+          /> */}
         </div>
       );
     }
@@ -1064,7 +1092,7 @@ const HeaderCategory: React.FC = () => {
                   backgroundColor="#FEEEEE"
                 />
                 <FashionStyle
-                   title="Navratri Celebration"
+                  title="Navratri Celebration"
                   items={celebrationStylesItemsList}
                   showDiscount
                   showExtraDiscount
@@ -1073,7 +1101,7 @@ const HeaderCategory: React.FC = () => {
                   backgroundColor="#C63824"
                 />
                 <FashionStyle
-                   title="Hufko wali Shaadi"
+                  title="Hufko wali Shaadi"
                   items={hufkoShaadiStylesItemsList}
                   showDiscount
                   showExtraDiscount

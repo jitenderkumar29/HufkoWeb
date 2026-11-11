@@ -103,3 +103,102 @@
   margin: 6px 0 0;
   font-weight: 600;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+// Previous / Next overlay
+.categoryNavigationOverlay {
+  position: absolute;
+  top: 415px;
+  right: 15px;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  pointer-events: none;
+}
+
+.categoryNavigationButton {
+  pointer-events: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  min-width: 105px;
+  height: 44px;
+  padding: 0 13px;
+
+  border: 1px solid rgba(83, 6, 5, 0.18);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #530605;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover:not(:disabled) {
+    background: #530605;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(83, 6, 5, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+.navigationArrow {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+  // z-index: 999;
+}
+
+.navigationButtonText {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+@media (max-width: 576px) {
+  .categoryNavigationOverlay {
+    top: 8px;
+    right: 8px;
+    gap: 6px;
+  }
+
+  .categoryNavigationButton {
+    min-width: 38px;
+    height: 36px;
+    padding: 0 10px;
+    gap: 3px;
+    font-size: 11px;
+  }
+
+  .navigationArrow {
+    font-size: 22px;
+  }
+}
