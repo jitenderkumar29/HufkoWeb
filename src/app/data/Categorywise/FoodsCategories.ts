@@ -73343,7 +73343,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 3695,
-    name: "Beef Nihari House",
+    name: "Nihari House",
     category: "Nihari",
     description: "Beef nihari, slow-cooked beef shank, spicy gravy, bone marrow",
     price: 449,
