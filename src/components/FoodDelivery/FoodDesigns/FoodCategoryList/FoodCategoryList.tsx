@@ -28,6 +28,7 @@ export interface FoodCategoryInterface {
   cuisine?: string;
   imageUrl?: string;
   url?: string;
+  dineoutSpecialCategoryID?: string;
 }
 
 interface FoodCategoryListProps {
