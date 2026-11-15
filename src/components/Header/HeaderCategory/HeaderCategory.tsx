@@ -104,7 +104,7 @@ const foodCategoryMapping: Record<string, string> = {
   'order_now_sub_header': 'order_now_food',
   'dine_out_sub_header': 'dine_out_food',
   'popular_sub_header': 'popular_food',
-  'offers_sub_header': 'offers_food',
+  'healthy_diet_sub_header': 'healthy_diet_food',
   'breakfast_sub_header': 'breakfast_food',
   'lunch_sub_header': 'lunch_food',
   'dinner_sub_header': 'dinner_food',

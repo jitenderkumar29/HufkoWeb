@@ -293,7 +293,8 @@ export const foodCategoriesSubHeader: SubHeaderItem[] = [
   { name: "Order Now", id: "order_now_sub_header", url: "/order-now", category: "order_now_food" },
   { name: "Dine Out", id: "dine_out_sub_header", url: "/dine-out", category: "dine_out_food" },
   { name: "Nightlife", id: "nightlife_sub_header", url: "/nightlife", category: "nightlife_food" },
-  { name: "Offers", id: "offers_sub_header", url: "/offers", category: "offers_food" },
+  { name: "Healthy Diet", id: "healthy_diet_sub_header", url: "/healthy-diet", category: "healthy_diet_food" },
+  { name: "Rail Restro", id: "rail_restro_sub_header", url: "/rail-restro", category: "rail_restro_food" },
 
   // Meal Types
   { name: "Breakfast", id: "breakfast_sub_header", url: "/breakfast", category: "breakfast_food" },
@@ -4194,16 +4195,7 @@ export const FoodDineOutSpecialCollections = [
   link: '/ncr/odia-food',
   alt: 'Odia Food',
   dineoutSpecialCategoryID: 'odia_food',
-},
-{
-  id: 33,
-  title: 'Temple Prasad',
-  placeCount: '31 Places',
-  imageUrl: '/products/17522365133.png',
-  link: '/ncr/temple-prasad',
-  alt: 'Temple Prasad',
-  dineoutSpecialCategoryID: 'temple_prasad',
-},
+}
 ];
 
 export const DineoutSpecialItemsList: DineOutItemInterface[] = [
@@ -6078,7 +6070,31 @@ export const FoodAllCategoryItemsListData: FoodCategoryInterface[] = [
     slug: 'continental',
     cuisine: 'Continental, European',
     dineoutSpecialCategoryID: 'continental'
-  }
+  },
+ {
+  id: '19',
+  name: 'Jain Food',
+  image: '/products/17522365131.png',
+  slug: 'jain-food',
+  cuisine: 'Jain Food, Indian',
+  dineoutSpecialCategoryID: 'jain_food',
+},
+{
+  id: '20',
+  name: 'Odia Food',
+  image: '/products/175223651321.png',
+  slug: 'odia-food',
+  cuisine: 'Odia, Indian',
+  dineoutSpecialCategoryID: 'odia_food',
+},
+{
+  id: '19',
+  name: 'Temple Prasad',
+  image: '/products/17522365133.png',
+  slug: 'temple-prasad',
+  cuisine: 'Temple Prasad, Indian',
+  dineoutSpecialCategoryID: 'temple_prasad',
+},
 ];
 // export const FoodAllCategoryItemsListData: FoodCategoryInterface[] = [
 //   // Street Food
@@ -126614,4 +126630,68 @@ export const ItemsListFoodDeliveryAllSelection: RestaurantItemFoodInterface[] = 
       "street_food",
     ],
   },
+];
+
+export const DietFoodsCategories: FoodCategory[] = [
+
+  // ── Main Diet & Healthy Categories ─────────────────────
+
+  { foodId: "chicken", name: "Chicken", imageUrl: "/products/chicken_food.png", url: "/", category: "CHICKEN_DIET" },
+  { foodId: "salad", name: "Salad", imageUrl: "/products/salad_food.png", url: "/", category: "SALAD_DIET" },
+  { foodId: "mutton", name: "Mutton", imageUrl: "/products/mutton_food.png", url: "/", category: "MUTTON_DIET" },
+  { foodId: "kebabs", name: "Kebabs", imageUrl: "/products/kebabs_food.png", url: "/", category: "KEBABS_DIET" },
+  { foodId: "healthy-snacks", name: "Snacks", imageUrl: "/products/healthy_snacks_food.png", url: "/", category: "SNACKS_DIET" },
+  { foodId: "low-calorie", name: "Low Calorie", imageUrl: "/products/low_calorie_food_diet.png", url: "/", category: "LOW_CALORIE_DIET" },
+  { foodId: "vegan", name: "Vegan", imageUrl: "/products/vegan_food_diet.png", url: "/", category: "VEGAN_DIET" },
+  { foodId: "protein-rich", name: "Protein Rich", imageUrl: "/products/protein_food_diet.png", url: "/", category: "PROTEIN_RICH_DIET" },
+
+  // ── Additional Food Categories ─────────────────────────
+
+  { foodId: "dessert", name: "Dessert", imageUrl: "/products/dessert_food.png", url: "/", category: "DESSERT_DIET" },
+  { foodId: "veg-meal", name: "Veg Meal", imageUrl: "/products/veg_meal_food.png", url: "/", category: "VEG_MEAL_DIET" },
+  { foodId: "bowl", name: "Bowl", imageUrl: "/products/bowl_food_diet.png", url: "/", category: "BOWL_DIET" },
+  { foodId: "sweets", name: "Sweets", imageUrl: "/products/sweets_food.png", url: "/", category: "SWEETS_DIET" },
+  { foodId: "khichdi", name: "Khichdi", imageUrl: "/products/khichdi_food.png", url: "/", category: "KHICHDI_DIET" },
+  { foodId: "sundae", name: "Sundae", imageUrl: "/products/sundae_food.png", url: "/", category: "SUNDAE_DIET" },
+  { foodId: "juice", name: "Juice", imageUrl: "/products/juice_food.png", url: "/", category: "JUICE_DIET" },
+  { foodId: "lassi", name: "Lassi", imageUrl: "/products/lassi_food.png", url: "/", category: "LASSI_DIET" },
+  { foodId: "curd-rice", name: "Curd Rice", imageUrl: "/products/curd_rice_food.png", url: "/", category: "CURD_RICE_DIET" },
+  { foodId: "pudding", name: "Pudding", imageUrl: "/products/pudding_food.png", url: "/", category: "PUDDING_DIET" },
+  { foodId: "custard", name: "Custard", imageUrl: "/products/custard_food.png", url: "/", category: "CUSTARD_DIET" },
+  { foodId: "soup", name: "Soup", imageUrl: "/products/soup_food.png", url: "/", category: "SOUP_DIET" },
+  { foodId: "brownie", name: "Brownie", imageUrl: "/products/brownie_food.png", url: "/", category: "BROWNIE_DIET" },
+  { foodId: "waffles", name: "Waffles", imageUrl: "/products/waffles_food.png", url: "/", category: "WAFFLES_DIET" },
+  { foodId: "cold-coffee", name: "Cold Coffee", imageUrl: "/products/cold_coffee_food.png", url: "/", category: "COLD_COFFEE_DIET" },
+
+  // ── Additional Diet-Specific Categories ────────────────
+
+  { foodId: "grilled-chicken", name: "Grilled Chicken", imageUrl: "/products/grilled_chicken_diet.png", url: "/", category: "GRILLED_CHICKEN_DIET" },
+  { foodId: "steamed-fish", name: "Steamed Fish", imageUrl: "/products/steamed_fish_diet.png", url: "/", category: "STEAMED_FISH_DIET" },
+  { foodId: "quinoa-bowl", name: "Quinoa Bowl", imageUrl: "/products/quinoa_bowl_diet.png", url: "/", category: "QUINOA_BOWL_DIET" },
+  { foodId: "avocado-toast", name: "Avocado Toast", imageUrl: "/products/avocado_toast_diet.png", url: "/", category: "AVOCADO_TOAST_DIET" },
+  { foodId: "green-smoothie", name: "Green Smoothie", imageUrl: "/products/green_smoothie_diet.png", url: "/", category: "GREEN_SMOOTHIE_DIET" },
+  { foodId: "oatmeal", name: "Oatmeal", imageUrl: "/products/oatmeal_diet.png", url: "/", category: "OATMEAL_DIET" },
+  { foodId: "greek-yogurt", name: "Greek Yogurt", imageUrl: "/products/greek_yogurt_diet.png", url: "/", category: "GREEK_YOGURT_DIET" },
+  { foodId: "egg-white-omelette", name: "Egg White", imageUrl: "/products/egg_white_omelette_diet.png", url: "/", category: "EGG_WHITE_DIET" },
+  { foodId: "tuna-salad", name: "Tuna Salad", imageUrl: "/products/tuna_salad_diet.png", url: "/", category: "TUNA_SALAD_DIET" },
+  { foodId: "lentil-soup", name: "Lentil Soup", imageUrl: "/products/lentil_soup_diet.png", url: "/", category: "LENTIL_SOUP_DIET" },
+  { foodId: "cottage-cheese", name: "Cottage Cheese", imageUrl: "/products/cottage_cheese_diet.png", url: "/", category: "COTTAGE_CHEESE_DIET" },
+  { foodId: "sprouts-salad", name: "Sprouts Salad", imageUrl: "/products/sprouts_salad_diet.png", url: "/", category: "SPROUTS_SALAD_DIET" },
+  { foodId: "brown-rice-bowl", name: "Brown Rice", imageUrl: "/products/brown_rice_bowl_diet.png", url: "/", category: "BROWN_RICE_DIET" },
+  { foodId: "steamed-veggies", name: "Steamed Veg", imageUrl: "/products/steamed_veggies_diet.png", url: "/", category: "STEAMED_VEG_DIET" },
+  { foodId: "fruit-bowl", name: "Fruit Bowl", imageUrl: "/products/fruit_bowl_diet.png", url: "/", category: "FRUIT_BOWL_DIET" },
+  { foodId: "detox-water", name: "Detox Water", imageUrl: "/products/detox_water_diet.png", url: "/", category: "DETOX_WATER_DIET" },
+  { foodId: "herbal-tea", name: "Herbal Tea", imageUrl: "/products/herbal_tea_diet.png", url: "/", category: "HERBAL_TEA_DIET" },
+  { foodId: "protein-bar", name: "Protein Bar", imageUrl: "/products/protein_bar_diet.png", url: "/", category: "PROTEIN_BAR_DIET" },
+  { foodId: "boiled-eggs", name: "Boiled Eggs", imageUrl: "/products/boiled_eggs_diet.png", url: "/", category: "BOILED_EGGS_DIET" },
+  { foodId: "hummus-plate", name: "Hummus Plate", imageUrl: "/products/hummus_plate_diet.png", url: "/", category: "HUMMUS_PLATE_DIET" },
+  { foodId: "sushi-rolls", name: "Sushi Rolls", imageUrl: "/products/sushi_rolls_diet.png", url: "/", category: "SUSHI_ROLLS_DIET" },
+  { foodId: "tofu-stir-fry", name: "Tofu Stir Fry", imageUrl: "/products/tofu_stir_fry_diet.png", url: "/", category: "TOFU_STIR_FRY_DIET" },
+  { foodId: "chia-pudding", name: "Chia Pudding", imageUrl: "/products/chia_pudding_diet.png", url: "/", category: "CHIA_PUDDING_DIET" },
+  { foodId: "millet-bowl", name: "Millet Bowl", imageUrl: "/products/millet_bowl_diet.png", url: "/", category: "MILLET_BOWL_DIET" },
+
+  // ── See All ────────────────────────────────────────────
+
+  // { foodId: "see-all", name: "See All", imageUrl: "/products/see_all_food.png", url: "/", category: "SeeAll" },
+
 ];

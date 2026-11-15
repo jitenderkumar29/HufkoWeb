@@ -17,13 +17,23 @@ interface AllCategoryProps {
   onCategoryClick?: (category: Category) => void;
 }
 
- export interface ClickableFoodCategory {
+export interface ClickableFoodCategory {
   id?: string;
   foodId?: string;
   name: string;
-  imageUrl?: string;   // <-- optional so both AllCategory + FoodCategoryList fit
+  imageUrl?: string; // <-- optional so both AllCategory + FoodCategoryList fit
   url?: string;
 }
+
+// --- Max words helper ---
+const MAX_WORDS = 50;
+
+const truncateWords = (text: string = '', maxWords: number): string => {
+  if (!text) return '';
+  const words = text.trim().split(/\s+/);
+  if (words.length <= maxWords) return text;
+  return words.slice(0, maxWords).join(' ') + '…';
+};
 
 const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -69,7 +79,9 @@ const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
         left: 1200,
         behavior: 'smooth',
       });
-      setActiveIndex(Math.min(categories.length - visibleItems, activeIndex + 1));
+      setActiveIndex(
+        Math.min(categories.length - visibleItems, activeIndex + 1)
+      );
     }
   };
 
@@ -106,6 +118,7 @@ const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
               href={category.url}
               className={styles.categoryItem}
               aria-label={category.name}
+              title={category.name}
               onClick={(e) => handleItemClick(e, category)}
             >
               <div className={styles.categoryImage}>
@@ -119,7 +132,7 @@ const AllCategory = ({ categories, onCategoryClick }: AllCategoryProps) => {
                 />
               </div>
               <div className={styles.categoryName}>
-                {category.name}
+                {truncateWords(category.name, MAX_WORDS)}
               </div>
             </a>
           ))}

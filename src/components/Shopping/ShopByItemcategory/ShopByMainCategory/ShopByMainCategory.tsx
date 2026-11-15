@@ -116,7 +116,7 @@ import SubCategoryItemsList from '../SubCategoryItemsList/SubCategoryItemsList';
 import FoodDineOutCard, { FoodDineOutItem } from '@/components/FoodDelivery/FoodDesigns/FoodDineOutCard/FoodDineOutCard';
 import VideoPlayerSlide from '@/components/FoodDelivery/VideoPlayer/VideoPlayerSlide/VideoPlayerSlide';
 import SearchBarDineOut from '@/components/SearchBar/SearchBarDineOut/SearchBarDineOut';
-import { DineoutItemsList, FoodCategoryItemsListData, FoodDineOutSpecialCollections, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
+import { DietFoodsCategories, DineoutItemsList, FoodCategoryItemsListData, FoodDineOutSpecialCollections, FoodsCategories, OrderNowItemsList, TopBrandsDataFood } from '@/app/data/Categorywise/FoodsCategories';
 import SearchBarOrderNow from '@/components/SearchBar/SearchBarOrderNow/SearchBarOrderNow';
 import FoodCategoryList from '@/components/FoodDelivery/FoodDesigns/FoodCategoryList/FoodCategoryList';
 import TopBrandsFood, { TopBrandInterface } from '@/components/FoodDelivery/FoodDesigns/TopBrandsFood/TopBrandsFood';
@@ -124,6 +124,9 @@ import OrderNowItemsListCard, { RestaurantItemFoodInterface } from '@/components
 import DineOutItemsListCard, { DineOutItemInterface } from '@/components/FoodDelivery/FoodDesigns/DineOutItemsListCard/DineOutItemsListCard';
 import DineOutRestDetails from '@/components/FoodDelivery/DineOutRestDetails/DineOutRestDetails';
 import FilterDineOut from '@/components/Filters/FilterDineOut/FilterDineOut';
+import { FoodHeroBannerLeftContent, HealthyDietHeroBannerLeftContent } from '@/app/data/HeroBannerwise/FoodHero';
+import AllCategory, { ClickableFoodCategory } from '@/components/HomePage/AllCategory/AllCategory';
+import FoodDeliveryItemsList from '@/components/FoodDelivery/FoodDeliveryItemsList/FoodDeliveryItemsList';
 
 interface ShopByMainCategoryProps {
     category?: string;
@@ -190,7 +193,8 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     const [selectedCountry, setSelectedCountry] = useState<string>('');
     const [selectedState, setSelectedState] = useState<string>('');
     const [selectedLocality, setSelectedLocality] = useState<string>('');
-    
+    const [selectedFoodItemCategory, setSelectedFoodItemCategory] = useState<string | null>(null);
+
 
     const router = useRouter();
 
@@ -326,6 +330,81 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         // Navigate to category page or filter products
     };
 
+    // Navigate between food categories inside FoodDeliveryItemsList
+    const handleFoodCategoryNavigation = (foodId: string) => {
+        if (!foodId) return;
+
+        setSelectedFoodItemCategory(foodId);
+
+        const params = new URLSearchParams(window.location.search);
+
+        params.set('category', 'food');
+        params.set('foodCategory', 'healthy_diet_food');
+        params.set('foodItemCategory', foodId);
+
+        router.replace(`?${params.toString()}`, {
+            scroll: false,
+        });
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+
+        console.log('Navigated to food category:', foodId);
+    };
+
+    // Back to Healthy Diet categories
+    const handleBackFromFoodItemsList = () => {
+        setSelectedFoodItemCategory(null);
+
+        const params = new URLSearchParams(window.location.search);
+        params.delete('foodItemCategory');
+
+        router.replace(`?${params.toString()}`, { scroll: false });
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    const handleDietFoodCategoryClick = (
+        category: ClickableFoodCategory
+    ) => {
+        // if (!category?.name) return;
+
+        // const categoryId =
+        //     category.foodId ||
+        //     category.id ||
+        //     category.name
+        //         .toLowerCase()
+        //         .replace(/[^a-z0-9]+/g, '_')
+        //         .replace(/^_|_$/g, '');
+
+        // const params = new URLSearchParams(window.location.search);
+
+        // if (category.name.toLowerCase() === 'all') {
+        //     handleBackFromFoodItemsList();
+        //     return;
+        // }
+
+        // setSelectedFoodItemCategory(categoryId);
+
+        // params.set('category', 'food');
+        // params.set('foodCategory', 'healthy_diet_food');
+        // params.set('foodItemCategory', categoryId);
+
+        // router.replace(`?${params.toString()}`, { scroll: false });
+
+        // window.scrollTo({
+        //     top: 0,
+        //     behavior: 'smooth',
+        // });
+
+        // console.log('Selected diet category:', categoryId);
+    };
+
     const handleBrandClick = (brand: TopBrandInterface) => {
         console.log('Selected brand:', brand.name);
         console.log('Delivery time:', brand.deliveryTime);
@@ -391,17 +470,17 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
         );
     };
 
-     const handleFilterDineOutChange = (filters: string[]) => {
-    console.log('Active filters:', filters);
-    // Apply filters to your restaurant list
-    // Example: fetchRestaurants({ filters });
-  };
+    const handleFilterDineOutChange = (filters: string[]) => {
+        console.log('Active filters:', filters);
+        // Apply filters to your restaurant list
+        // Example: fetchRestaurants({ filters });
+    };
 
-  const handleSortDineOutChange = (sort: string) => {
-    console.log('Selected sort:', sort);
-    // Apply sorting to your restaurant list
-    // Example: fetchRestaurants({ sort });
-  };
+    const handleSortDineOutChange = (sort: string) => {
+        console.log('Selected sort:', sort);
+        // Apply sorting to your restaurant list
+        // Example: fetchRestaurants({ sort });
+    };
 
     // Render the main content based on category
     const renderMainContent = () => {
@@ -1480,6 +1559,56 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </>
                 );
 
+            case 'healthy_diet_food':
+                return (
+                    <>
+                        <HeroBannerLeftContent
+                            banners={HealthyDietHeroBannerLeftContent}
+                            defaultAlign="left"
+                        />
+                        <div className={styles.categoryGap}>
+                            <AllCategory categories={DietFoodsCategories} onCategoryClick={handleDietFoodCategoryClick} />
+                        </div>
+                        {/* <div className={styles.videoPlayerSlide}>
+                            <VideoPlayerSlide
+                                src="/videos/DINEOUT.mp4"
+                                poster="/"
+                                aspectRatio="21:9"
+                            />
+                        </div>
+                        <div className={styles.searchBarDineOut}>
+                            <SearchBarDineOut
+                                hotelName=""
+                                guests={1}
+                                rooms={1}
+                                onSearch={handleSearch}
+                                placeholder="Find restaurant nearby me"
+                            />
+                        </div>
+                        <div className={styles.dineOutCard}>
+                            <FoodDineOutCard
+                                items={FoodDineOutSpecialCollections}
+                                title="Dineout collections category nearby me"
+                                viewAllLink="/collections"
+                                viewAllText="View All"
+                                autoPlayInterval={3000}
+                                showArrows={true}
+                                onItemClick={handleItemClick}
+                            />
+                        </div>
+                        <FilterDineOut
+                            onFilterChange={handleFilterDineOutChange}
+                            onSortChange={handleSortDineOutChange}
+                        />
+                        <DineOutItemsListCard
+                            items={DineoutItemsList}
+                            title={getLocationBasedTitle("Top collections dineout restaurants")}
+                            onItemClick={handleDineoutItemClick}
+                            columns={4}
+                        /> */}
+                    </>
+                );
+
             case 'all':
             default:
                 return (
@@ -1498,7 +1627,38 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
     };
 
     // Determine if we should show the subcategory view
-    const shouldShowSubCategoryView = showSubCategoryView && selectedCategory && category !== 'all';
+    // const shouldShowSubCategoryView = showSubCategoryView && selectedCategory && category !== 'all';
+
+    // ========================================
+    // FOOD ITEMS LIST VIEW
+    // ========================================
+
+    if (selectedFoodItemCategory) {
+        return (
+            <div className={styles.shopByMainCategory}>
+                <div className={styles.foodDeliveryItemsListContainer}>
+                    <FoodDeliveryItemsList
+                        foodId={selectedFoodItemCategory}
+                        navigationCategories={FoodsCategories}
+                        onNavigateCategory={handleFoodCategoryNavigation}
+                        onBack={handleBackFromFoodItemsList}
+                        onItemClick={(item) => {
+                            console.log('Food item clicked:', item);
+                        }}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    // ========================================
+    // MAIN CATEGORY VIEW
+    // ========================================
+
+    const shouldShowSubCategoryView =
+        showSubCategoryView &&
+        selectedCategory &&
+        category !== 'all';
 
     return (
         <div className={styles.shopByMainCategory}>
@@ -1522,6 +1682,8 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
             </div>
         </div>
     );
+
+
 };
 
 export default ShopByMainCategory;

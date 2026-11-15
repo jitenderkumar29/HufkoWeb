@@ -419,3 +419,35 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '131', foodId: 'smoothie', title: 'Premium Quality Delicious', subtitle: 'Smoothie', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
   { id: '132', foodId: 'buttermilk', title: 'Premium Quality Delicious', subtitle: 'Buttermilk', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
 ];
+
+export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
+
+  {
+    id: '1',
+    title: 'Fresh & Healthy Eating',
+    subtitle: 'Nutritious meals packed with fresh ingredients',
+    category: 'Healthy Diet',
+    discount: '30% OFF',
+    imgUrl: '/products/HealthyDietHeroBanner1.png',
+    align: 'left'
+  },
+  {
+    id: '2',
+    title: 'Wholesome Goodness',
+    subtitle: 'Fresh salads, protein-rich wraps & healthy smoothies',
+    category: 'Healthy Food',
+    discount: '20% OFF',
+    imgUrl: '/products/HealthyDietHeroBanner2.jpeg',
+    align: 'left'
+  },
+  {
+    id: '3',
+    title: 'Eat Fresh, Live Healthy',
+    subtitle: 'Delicious nutritious choices for everyday wellness',
+    category: 'Fresh & Natural',
+    discount: '25% OFF',
+    imgUrl: '/products/HealthyDietHeroBanner3.jpg',
+    align: 'left'
+  }
+
+]

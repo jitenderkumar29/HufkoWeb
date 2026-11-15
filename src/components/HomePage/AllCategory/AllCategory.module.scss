@@ -103,19 +103,16 @@
   font-weight: 600;
   text-align: center;
   color: $black;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
+
   padding: 0.5rem;
   width: 100%;
-  box-sizing: border-box;
   max-width: 115px;
+  box-sizing: border-box;
 
-  span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  // Exactly 1 line, never wraps, ellipsis when overflow
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media (max-width: 768px) {
     font-size: 0.7rem;
