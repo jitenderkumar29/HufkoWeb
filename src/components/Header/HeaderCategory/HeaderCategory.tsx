@@ -28,7 +28,7 @@ import GroceryProductList from '@/components/Grocery/GroceryProductList/GroceryP
 import { WholesaleCategories, WholesaleCategoriesList, wholesaleCategoriesSubHeader } from '@/app/data/Categorywise/WholesaleCategories';
 import { WholesaleHeroBannerData } from '@/app/data/HeroBannerwise/Wholesale';
 import AllCategoryGrid from '@/components/HomePage/AllCategoryGrid/AllCategoryGrid';
-import { DineoutSpecialItemsList, FoodAllCategoryItemsListData, FoodDineOutSpecialCollections, FoodsCategories, ItemsListFoodDeliveryAll, ItemsListFoodDeliveryAllSelection, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
+import { DietFoodsCategories, DineoutSpecialItemsList, FoodAllCategoryItemsListData, FoodDineOutSpecialCollections, FoodsCategories, ItemsListFoodDeliveryAll, ItemsListFoodDeliveryAllSelection, foodCategoriesSubHeader } from "@/app/data/Categorywise/FoodsCategories";
 import SubHeader, { SubHeaderItem } from '../SubHeader/SubHeader';
 import HufkoGSTInfo from '@/components/HomePage/HufkoGSTInfo/HufkoGSTInfo';
 import WelcomeVideoHufko from '@/components/HomePage/VideoPlayerDesign/WelcomeVideoHufko/WelcomeVideoHufko';
@@ -54,6 +54,10 @@ import AllCategory, { Category as AllCategoryItem, ClickableFoodCategory } from 
 import DownloadAppNew from '@/components/HomePage/DownloadAppNew/DownloadAppNew';
 import FashionStyle from '@/components/Shopping/ItemListDesigns/FashionStyle/FashionStyle';
 import FoodDeliverySelectionItemsList from '@/components/FoodDelivery/FoodDeliverySelectionItemsList/FoodDeliverySelectionItemsList';
+import FoodDeliveryItemsListDiet from '@/components/FoodDelivery/FoodDeliveryItemsListDiet/FoodDeliveryItemsListDiet';
+import {
+  FoodDeliveryItem as DietFoodDeliveryItem,
+} from '@/components/FoodDelivery/FoodDeliveryItemsListDiet/FoodDeliveryItemsListDiet';
 
 interface CategoryItem {
   id: string;
@@ -105,6 +109,7 @@ const foodCategoryMapping: Record<string, string> = {
   'dine_out_sub_header': 'dine_out_food',
   'popular_sub_header': 'popular_food',
   'healthy_diet_sub_header': 'healthy_diet_food',
+  'healthy_diet_food': 'healthy_diet_food',
   'breakfast_sub_header': 'breakfast_food',
   'lunch_sub_header': 'lunch_food',
   'dinner_sub_header': 'dinner_food',
@@ -548,6 +553,21 @@ const HeaderCategory: React.FC = () => {
     });
   };
 
+  // ✅ NEW: Navigate between healthy diet categories (keeps diet flow intact)
+  const handleDietFoodCategoryNavigation = (foodId: string) => {
+    if (!foodId) return;
+
+    setSelectedFoodItemCategory(foodId);
+
+    const params = new URLSearchParams(window.location.search);
+    params.set('category', 'food');
+    params.set('foodCategory', 'healthy_diet_sub_header');
+    params.set('foodItemCategory', foodId);
+
+    router.replace(`?${params.toString()}`, { scroll: false });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   // Handle dineout item click - show restaurant details
   const handleDineoutItemClick = (item: DineOutItemInterface) => {
     console.log('Restaurant clicked:', item.name, 'ID:', item.id);
@@ -805,29 +825,40 @@ const HeaderCategory: React.FC = () => {
       return renderDineoutSpecialCategoryPage();
     }
 
-    // THIRD: If a product-level food category is selected, show the FoodDeliveryItemsList
+    // THIRD: If a product-level food category is selected, show the appropriate list
     if (selectedFoodItemCategory) {
-      return (
-        <div className={styles.foodDeliveryItemsListContainer}>
-          <FoodDeliveryItemsList
-            foodId={selectedFoodItemCategory}
-            navigationCategories={FoodsCategories}
-            onNavigateCategory={handleFoodCategoryNavigation}
-            onBack={handleBackFromFoodItemsList}
-            onItemClick={(item: FoodDeliveryItem) =>
-              console.log('Food item clicked:', item)
-            }
-          />
-          {/* <FoodDeliveryItemsList
-            foodId={selectedFoodItemCategory}
-            onBack={handleBackFromFoodItemsList}
-            onItemClick={(item: FoodDeliveryItem) =>
-              console.log('Food item clicked:', item)
-            }
-          /> */}
-        </div>
-      );
-    }
+  // The diet flow is identified solely by the active food sub-header.
+  // DietFoodsCategories and FoodsCategories share many foodIds
+  // (e.g. "chicken", "salad", "soup", "dessert", ...), so we must NOT
+  // infer the flow from the foodId — only from the sub-header value.
+  const isDiet = selectedFoodCategoryValue === 'healthy_diet_food';
+
+  return (
+    <div className={styles.foodDeliveryItemsListContainer}>
+      {isDiet ? (
+        <FoodDeliveryItemsListDiet
+          foodId={selectedFoodItemCategory}
+          navigationCategories={DietFoodsCategories}
+          onNavigateCategory={handleDietFoodCategoryNavigation}
+          onBack={handleBackFromFoodItemsList}
+          onItemClick={(item: DietFoodDeliveryItem) =>
+            console.log('Diet food item clicked:', item)
+          }
+        />
+      ) : (
+        <FoodDeliveryItemsList
+          foodId={selectedFoodItemCategory}
+          navigationCategories={FoodsCategories}
+          onNavigateCategory={handleFoodCategoryNavigation}
+          onBack={handleBackFromFoodItemsList}
+          onItemClick={(item: FoodDeliveryItem) =>
+            console.log('Food item clicked:', item)
+          }
+        />
+      )}
+    </div>
+  );
+}
 
     if (selectedFoodSelectionCategory) {
       return (

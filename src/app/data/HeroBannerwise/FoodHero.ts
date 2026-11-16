@@ -418,6 +418,8 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '130', foodId: 'mocktail', title: 'Premium Quality Delicious', subtitle: 'Mocktail', category: 'Mocktail', discount: '', imgUrl: '/products/mocktailFoodHeroBanner.png', align: 'left' },
   { id: '131', foodId: 'smoothie', title: 'Premium Quality Delicious', subtitle: 'Smoothie', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
   { id: '132', foodId: 'buttermilk', title: 'Premium Quality Delicious', subtitle: 'Buttermilk', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
+  {  id: '133', foodId: 'healthy-snacks', title: 'Premium Quality Delicious', subtitle: 'Healthy Snacks', category: 'Snacks', discount: '', imgUrl: '/products/healthy_snacks_diet_food.png', align: 'left'},
+  
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
