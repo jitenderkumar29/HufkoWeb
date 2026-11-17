@@ -58,6 +58,7 @@ import FoodDeliveryItemsListDiet from '@/components/FoodDelivery/FoodDeliveryIte
 import {
   FoodDeliveryItem as DietFoodDeliveryItem,
 } from '@/components/FoodDelivery/FoodDeliveryItemsListDiet/FoodDeliveryItemsListDiet';
+import AllCategoryTwo from '@/components/HomePage/AllCategoryTwo/AllCategoryTwo';
 
 interface CategoryItem {
   id: string;
@@ -1092,7 +1093,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={GroceryHeroBannerData} height={360} />
             <div className={styles.categoryGap}>
-              <AllCategory categories={GroceryCategories} />
+              <AllCategoryTwo categories={GroceryCategories} />
             </div>
             <WelcomeVideoHufko
               title=""
@@ -1440,7 +1441,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={FlowerHeroBannerData} height={360} />
             <div className={styles.categoryGap}>
-              <AllCategory categories={FlowersCategories} />
+              <AllCategoryTwo categories={FlowersCategories} />
             </div>
             <WelcomeVideoHufko
               title=""
@@ -1609,7 +1610,7 @@ const HeaderCategory: React.FC = () => {
             />
             <HeroBannerAll banners={CareHeroBannerData} height={360} />
             <div className={styles.categoryGap}>
-              <AllCategory categories={CareCategories} />
+              <AllCategoryTwo categories={CareCategories} />
             </div>
             <WelcomeVideoHufko
               title=""

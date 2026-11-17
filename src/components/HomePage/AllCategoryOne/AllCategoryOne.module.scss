@@ -115,6 +115,33 @@
   }
 }
 
+// .categoryName {
+//   font-size: 16px;
+//   font-weight: 600;
+//   text-align: center;
+//   color: $black;
+//   padding: 0.5rem 0.3rem;
+//   width: 100%;
+//   box-sizing: border-box;
+//   max-width: 120px;
+
+//   /* Maximum 2 lines */
+//   display: -webkit-box;
+//   -webkit-box-orient: vertical;
+//   -webkit-line-clamp: 2;
+//   line-clamp: 2;
+
+//   white-space: normal;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   overflow-wrap: break-word;
+
+//   @media (max-width: 768px) {
+//     font-size: 0.7rem;
+//     max-width: 110px;
+//   }
+// }
+
 .navButton {
   position: absolute;
   top: 50%;

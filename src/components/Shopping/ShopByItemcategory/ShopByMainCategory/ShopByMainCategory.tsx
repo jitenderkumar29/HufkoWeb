@@ -1556,20 +1556,20 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
             case 'healthy_diet_food':
                 return (
                     <>
-                        <div className={styles.videoWrapper}>
-                            <VideoPlayerSlide
-                                src="/videos/DINE_OUT_1.mp4"
-                                poster="/"
-                                aspectRatio="21:9"
-                            />
-                        </div>
-                        <div className={styles.categoryGap}>
-                            <AllCategory categories={DietFoodsCategories} onCategoryClick={handleDietFoodCategoryClick} />
-                        </div>
                         <HeroBannerLeftContent
                             banners={HealthyDietHeroBannerLeftContent}
                             defaultAlign="left"
                         />
+                        <div className={styles.categoryGap}>
+                            <AllCategory categories={DietFoodsCategories} onCategoryClick={handleDietFoodCategoryClick} />
+                        </div>
+                        <div className={styles.videoWrapper}>
+                            <VideoPlayerSlide
+                                src="/videos/DINE_OUT_2.mp4"
+                                poster="/"
+                                aspectRatio="21:9"
+                            />
+                        </div>
                     </>
                 );
 

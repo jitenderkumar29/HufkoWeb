@@ -418,8 +418,13 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '130', foodId: 'mocktail', title: 'Premium Quality Delicious', subtitle: 'Mocktail', category: 'Mocktail', discount: '', imgUrl: '/products/mocktailFoodHeroBanner.png', align: 'left' },
   { id: '131', foodId: 'smoothie', title: 'Premium Quality Delicious', subtitle: 'Smoothie', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
   { id: '132', foodId: 'buttermilk', title: 'Premium Quality Delicious', subtitle: 'Buttermilk', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
-  {  id: '133', foodId: 'healthy-snacks', title: 'Premium Quality Delicious', subtitle: 'Healthy Snacks', category: 'Snacks', discount: '', imgUrl: '/products/healthy_snacks_diet_food.png', align: 'left'},
   
+  //Diet & Healthy Food 
+  { id: '133', foodId: 'healthy-snacks', title: 'Premium Quality Delicious', subtitle: 'Healthy Snacks', category: 'Snacks', discount: '', imgUrl: '/products/healthy_snacks_diet_food.png', align: 'left' },
+  { id: '134', foodId: 'low-calorie', title: 'Premium Quality Delicious', subtitle: 'Low Calorie', category: 'Low Calorie', discount: '', imgUrl: '/products/low_calorie_food_diet1.png', align: 'left' },
+  { id: '135', foodId: 'protein-rich', title: 'Premium Quality Delicious', subtitle: 'Protein Rich', category: 'Protein Rich', discount: '', imgUrl: '/products/protein_food_diet1.png', align: 'left' },
+  { id: '136', foodId: 'veg-meal', title: 'Premium Quality Delicious', subtitle: 'Veg Meal', category: 'Veg Meal', discount: '', imgUrl: '/products/veg_meal_food_HeroBanner.png', align: 'left' },
+
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [

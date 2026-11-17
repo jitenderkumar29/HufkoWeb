@@ -20,6 +20,7 @@ import OrderNowItemsListCard, {
 } from '../FoodDesigns/OrderNowItemsListCard/OrderNowItemsListCard';
 
 import {
+  DietFoodsCategories,
   ItemsListFoodDeliveryAll,
 } from '@/app/data/Categorywise/FoodsCategories';
 
@@ -156,6 +157,20 @@ const FoodDeliveryItemsListDiet: React.FC<FoodDeliveryItemsListProps> = ({
       getTitleForCategory(foodId),
     [foodId, category]
   );
+
+// Look up the display name from DietFoodsCategories by foodId
+const name = useMemo(() => {
+  const match = DietFoodsCategories.find(
+    (cat) => cat.foodId === foodId
+  );
+
+  return (
+    match?.name ??
+    category?.name ??
+    getDietFoodCategoryName(foodId) ??
+    getTitleForCategory(foodId)
+  );
+}, [foodId, category]);
 
   // ---------- Previous / Next Category Navigation ----------
 
@@ -437,16 +452,16 @@ const FoodDeliveryItemsListDiet: React.FC<FoodDeliveryItemsListProps> = ({
 
   return (
     <div className={styles.container}>
-    <div className={styles.containerHero}>
-      {/* Food Diet Hero Banner */}
-      {FOOD_DIET_HERO_BANNER_FOOD_IDS.has(foodId) && (
-        <HeroBannerFood
-          banners={FoodDietHeroBannerLeftContent.filter(
-            (banner) => banner.foodId === foodId
-          )}
-          defaultAlign="left"
-        />
-      )}
+      <div className={styles.containerHero}>
+        {/* Food Diet Hero Banner */}
+        {FOOD_DIET_HERO_BANNER_FOOD_IDS.has(foodId) && (
+          <HeroBannerFood
+            banners={FoodDietHeroBannerLeftContent.filter(
+              (banner) => banner.foodId === foodId
+            )}
+            defaultAlign="left"
+          />
+        )}
       </div>
 
       {/* Previous / Next Category Overlay Navigation — ALWAYS VISIBLE */}
@@ -511,7 +526,7 @@ const FoodDeliveryItemsListDiet: React.FC<FoodDeliveryItemsListProps> = ({
         <OrderNowItemsListCard
           items={filteredRestaurants}
           title={getLocationBasedTitle(
-            `Explore ${categoryName} Restaurants`
+            `Explore ${name} Restaurants`
           )}
           variant="5col"
           showOffers={true}
