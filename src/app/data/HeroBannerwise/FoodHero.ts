@@ -418,12 +418,16 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '130', foodId: 'mocktail', title: 'Premium Quality Delicious', subtitle: 'Mocktail', category: 'Mocktail', discount: '', imgUrl: '/products/mocktailFoodHeroBanner.png', align: 'left' },
   { id: '131', foodId: 'smoothie', title: 'Premium Quality Delicious', subtitle: 'Smoothie', category: 'Smoothie', discount: '', imgUrl: '/products/smoothieFoodHeroBanner.png', align: 'left' },
   { id: '132', foodId: 'buttermilk', title: 'Premium Quality Delicious', subtitle: 'Buttermilk', category: 'Buttermilk', discount: '', imgUrl: '/products/buttermilkFoodHeroBanner.png', align: 'left' },
-  
+
   //Diet & Healthy Food 
   { id: '133', foodId: 'healthy-snacks', title: 'Premium Quality Delicious', subtitle: 'Healthy Snacks', category: 'Snacks', discount: '', imgUrl: '/products/healthy_snacks_diet_food.png', align: 'left' },
   { id: '134', foodId: 'low-calorie', title: 'Premium Quality Delicious', subtitle: 'Low Calorie', category: 'Low Calorie', discount: '', imgUrl: '/products/low_calorie_food_diet1.png', align: 'left' },
   { id: '135', foodId: 'protein-rich', title: 'Premium Quality Delicious', subtitle: 'Protein Rich', category: 'Protein Rich', discount: '', imgUrl: '/products/protein_food_diet1.png', align: 'left' },
   { id: '136', foodId: 'veg-meal', title: 'Premium Quality Delicious', subtitle: 'Veg Meal', category: 'Veg Meal', discount: '', imgUrl: '/products/veg_meal_food_HeroBanner.png', align: 'left' },
+  { id: '137', foodId: 'vegan', title: 'Premium Quality Delicious', subtitle: 'Vegan', category: 'Vegan', discount: '', imgUrl: '/products/veganFoodHeroBanner.png', align: 'left' },
+  { id: '138', foodId: 'grilled_chicken', title: 'Premium Quality Delicious', subtitle: 'Grilled Chicken', category: 'Grilled Chicken', discount: '', imgUrl: '/products/grilled_chicken_dietFoodHeroBanner.png', align: 'left' },
+  { id: '139', foodId: 'steamed_fish', title: 'Premium Quality Delicious', subtitle: 'Steamed Fish', category: 'Steamed Fish', discount: '', imgUrl: '/products/steamed_fish_dietFoodHeroBanner.png', align: 'left' },
+  { id: '140', foodId: 'quinoa_bowl', title: 'Premium Quality Delicious', subtitle: 'Quinoa Bowl', category: 'Quinoa Bowl', discount: '', imgUrl: '/products/quinoa_bowl_dietFoodHeroBanner.png', align: 'left' },
 
 ];
 
