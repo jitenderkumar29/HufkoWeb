@@ -428,6 +428,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '138', foodId: 'grilled_chicken', title: 'Premium Quality Delicious', subtitle: 'Grilled Chicken', category: 'Grilled Chicken', discount: '', imgUrl: '/products/grilled_chicken_dietFoodHeroBanner.png', align: 'left' },
   { id: '139', foodId: 'steamed_fish', title: 'Premium Quality Delicious', subtitle: 'Steamed Fish', category: 'Steamed Fish', discount: '', imgUrl: '/products/steamed_fish_dietFoodHeroBanner.png', align: 'left' },
   { id: '140', foodId: 'quinoa_bowl', title: 'Premium Quality Delicious', subtitle: 'Quinoa Bowl', category: 'Quinoa Bowl', discount: '', imgUrl: '/products/quinoa_bowl_dietFoodHeroBanner.png', align: 'left' },
+  { id: '141', foodId: 'avocado_toast', title: 'Premium Quality Delicious', subtitle: 'Avocado Toast', category: 'Avocado Toast', discount: '', imgUrl: '/products/avocado_toast_dietFoodHeroBanner.png', align: 'left' },
+  { id: '142', foodId: 'green_smoothie', title: 'Premium Quality Delicious', subtitle: 'Green Smoothie', category: 'Green Smoothie', discount: '', imgUrl: '/products/green_smoothie_dietFoodHeroBanner.png', align: 'left' },
+  { id: '143', foodId: 'oatmeal', title: 'Premium Quality Delicious', subtitle: 'Oatmeal', category: 'Oatmeal', discount: '', imgUrl: '/products/oatmeal_dietFoodHeroBanner.png', align: 'left' },
 
 ];
 
