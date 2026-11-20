@@ -431,7 +431,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '141', foodId: 'avocado_toast', title: 'Premium Quality Delicious', subtitle: 'Avocado Toast', category: 'Avocado Toast', discount: '', imgUrl: '/products/avocado_toast_dietFoodHeroBanner.png', align: 'left' },
   { id: '142', foodId: 'green_smoothie', title: 'Premium Quality Delicious', subtitle: 'Green Smoothie', category: 'Green Smoothie', discount: '', imgUrl: '/products/green_smoothie_dietFoodHeroBanner.png', align: 'left' },
   { id: '143', foodId: 'oatmeal', title: 'Premium Quality Delicious', subtitle: 'Oatmeal', category: 'Oatmeal', discount: '', imgUrl: '/products/oatmeal_dietFoodHeroBanner.png', align: 'left' },
-
+  { id: '144', foodId: 'greek_yogurt', title: 'Premium Quality Delicious', subtitle: 'Greek Yogurt', category: 'Greek Yogurt', discount: '', imgUrl: '/products/greek_yogurt_dietFoodHeroBanner.png', align: 'left' },
+  { id: '145', foodId: 'egg_white_omelette', title: 'Premium Quality Delicious', subtitle: 'Egg White', category: 'Egg White', discount: '', imgUrl: '/products/egg_white_omelette_dietFoodHeroBanner.png', align: 'left' },
+  { id: '146', foodId: 'tuna_salad', title: 'Premium Quality Delicious', subtitle: 'Tuna Salad', category: 'Tuna Salad', discount: '', imgUrl: '/products/tuna_salad_dietFoodHeroBanner.png', align: 'left' },
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
