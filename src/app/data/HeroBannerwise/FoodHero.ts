@@ -434,6 +434,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '144', foodId: 'greek_yogurt', title: 'Premium Quality Delicious', subtitle: 'Greek Yogurt', category: 'Greek Yogurt', discount: '', imgUrl: '/products/greek_yogurt_dietFoodHeroBanner.png', align: 'left' },
   { id: '145', foodId: 'egg_white_omelette', title: 'Premium Quality Delicious', subtitle: 'Egg White', category: 'Egg White', discount: '', imgUrl: '/products/egg_white_omelette_dietFoodHeroBanner.png', align: 'left' },
   { id: '146', foodId: 'tuna_salad', title: 'Premium Quality Delicious', subtitle: 'Tuna Salad', category: 'Tuna Salad', discount: '', imgUrl: '/products/tuna_salad_dietFoodHeroBanner.png', align: 'left' },
+  { id: '147', foodId: 'lentil_soup', title: 'Premium Quality Delicious', subtitle: 'Lentil Soup', category: 'Lentil Soup', discount: '', imgUrl: '/products/lentil_soup_dietFoodHeroBanner.png', align: 'left' },
+  { id: '148', foodId: 'cottage_cheese', title: 'Premium Quality Delicious', subtitle: 'Cottage Cheese', category: 'Cottage Cheese', discount: '', imgUrl: '/products/cottage_cheese_dietFoodHeroBanner.png', align: 'left' },
+  { id: '149', foodId: 'sprouts_salad', title: 'Premium Quality Delicious', subtitle: 'Sprouts Salad', category: 'Sprouts Salad', discount: '', imgUrl: '/products/sprouts_salad_dietFoodHeroBanner.png', align: 'left' },
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
