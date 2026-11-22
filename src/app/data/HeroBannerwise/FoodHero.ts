@@ -437,6 +437,7 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '147', foodId: 'lentil_soup', title: 'Premium Quality Delicious', subtitle: 'Lentil Soup', category: 'Lentil Soup', discount: '', imgUrl: '/products/lentil_soup_dietFoodHeroBanner.png', align: 'left' },
   { id: '148', foodId: 'cottage_cheese', title: 'Premium Quality Delicious', subtitle: 'Cottage Cheese', category: 'Cottage Cheese', discount: '', imgUrl: '/products/cottage_cheese_dietFoodHeroBanner.png', align: 'left' },
   { id: '149', foodId: 'sprouts_salad', title: 'Premium Quality Delicious', subtitle: 'Sprouts Salad', category: 'Sprouts Salad', discount: '', imgUrl: '/products/sprouts_salad_dietFoodHeroBanner.png', align: 'left' },
+  { id: '150', foodId: 'brown_rice_bowl', title: 'Premium Quality Delicious', subtitle: 'Brown Rice', category: 'Brown Rice', discount: '', imgUrl: '/products/brown_rice_bowl_dietFoodHeroBanner.png', align: 'left' },
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
