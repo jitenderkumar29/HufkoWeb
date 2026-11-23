@@ -438,6 +438,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '148', foodId: 'cottage_cheese', title: 'Premium Quality Delicious', subtitle: 'Cottage Cheese', category: 'Cottage Cheese', discount: '', imgUrl: '/products/cottage_cheese_dietFoodHeroBanner.png', align: 'left' },
   { id: '149', foodId: 'sprouts_salad', title: 'Premium Quality Delicious', subtitle: 'Sprouts Salad', category: 'Sprouts Salad', discount: '', imgUrl: '/products/sprouts_salad_dietFoodHeroBanner.png', align: 'left' },
   { id: '150', foodId: 'brown_rice_bowl', title: 'Premium Quality Delicious', subtitle: 'Brown Rice', category: 'Brown Rice', discount: '', imgUrl: '/products/brown_rice_bowl_dietFoodHeroBanner.png', align: 'left' },
+  { id: '151', foodId: 'steamed_veggies', title: 'Premium Quality Delicious', subtitle: 'Steamed Veg', category: 'STEAMED_VEG_DIET', discount: '', imgUrl: '/products/steamed_veggies_dietFoodHeroBanner.png', align: 'left' },
+  { id: '152', foodId: 'fruit_bowl', title: 'Premium Quality Delicious', subtitle: 'Fruit Bowl', category: 'FRUIT_BOWL_DIET', discount: '', imgUrl: '/products/fruit_bowl_dietFoodHeroBanner.png', align: 'left' },
+  { id: '153', foodId: 'detox_water', title: 'Premium Quality Delicious', subtitle: 'Detox Water', category: 'DETOX_WATER_DIET', discount: '', imgUrl: '/products/detox_water_dietFoodHeroBanner.png', align: 'left' },
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
