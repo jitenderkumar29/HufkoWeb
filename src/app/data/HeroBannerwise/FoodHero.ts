@@ -441,6 +441,10 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '151', foodId: 'steamed_veggies', title: 'Premium Quality Delicious', subtitle: 'Steamed Veg', category: 'STEAMED_VEG_DIET', discount: '', imgUrl: '/products/steamed_veggies_dietFoodHeroBanner.png', align: 'left' },
   { id: '152', foodId: 'fruit_bowl', title: 'Premium Quality Delicious', subtitle: 'Fruit Bowl', category: 'FRUIT_BOWL_DIET', discount: '', imgUrl: '/products/fruit_bowl_dietFoodHeroBanner.png', align: 'left' },
   { id: '153', foodId: 'detox_water', title: 'Premium Quality Delicious', subtitle: 'Detox Water', category: 'DETOX_WATER_DIET', discount: '', imgUrl: '/products/detox_water_dietFoodHeroBanner.png', align: 'left' },
+  { id: '154', foodId: 'herbal_tea', title: 'Premium Quality Delicious', subtitle: 'Herbal Tea', category: 'HERBAL_TEA_DIET', discount: '', imgUrl: '/products/herbal_tea_dietFoodHeroBanner.png', align: 'left' },
+  { id: '155', foodId: 'protein_bar', title: 'Premium Quality Delicious', subtitle: 'Protein Bar', category: 'PROTEIN_BAR_DIET', discount: '', imgUrl: '/products/protein_bar_dietFoodHeroBanner.png', align: 'left' },
+  { id: '156', foodId: 'boiled_eggs', title: 'Premium Quality Delicious', subtitle: 'Boiled Eggs', category: 'BOILED_EGGS_DIET', discount: '', imgUrl: '/products/boiled_eggs_dietFoodHeroBanner.png', align: 'left' },
+
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
