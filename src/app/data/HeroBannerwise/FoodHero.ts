@@ -444,6 +444,9 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '154', foodId: 'herbal_tea', title: 'Premium Quality Delicious', subtitle: 'Herbal Tea', category: 'HERBAL_TEA_DIET', discount: '', imgUrl: '/products/herbal_tea_dietFoodHeroBanner.png', align: 'left' },
   { id: '155', foodId: 'protein_bar', title: 'Premium Quality Delicious', subtitle: 'Protein Bar', category: 'PROTEIN_BAR_DIET', discount: '', imgUrl: '/products/protein_bar_dietFoodHeroBanner.png', align: 'left' },
   { id: '156', foodId: 'boiled_eggs', title: 'Premium Quality Delicious', subtitle: 'Boiled Eggs', category: 'BOILED_EGGS_DIET', discount: '', imgUrl: '/products/boiled_eggs_dietFoodHeroBanner.png', align: 'left' },
+  { id: '157', foodId: 'hummus_plate', title: 'Premium Quality Delicious', subtitle: 'Hummus Plate', category: 'HUMMUS_PLATE_DIET', discount: '', imgUrl: '/products/hummus_plate_dietFoodHeroBanner.png', align: 'left' },
+  { id: '158', foodId: 'sushi_rolls', title: 'Premium Quality Delicious', subtitle: 'Sushi Rolls', category: 'SUSHI_ROLLS_DIET', discount: '', imgUrl: '/products/sushi_rolls_dietFoodHeroBanner.png', align: 'left' },
+  { id: '159', foodId: 'tofu_stir_fry', title: 'Premium Quality Delicious', subtitle: 'Tofu Stir Fry', category: 'TOFU_STIR_FRY_DIET', discount: '', imgUrl: '/products/tofu_stir_fry_dietFoodHeroBanner.png', align: 'left' },
 
 ];
 
