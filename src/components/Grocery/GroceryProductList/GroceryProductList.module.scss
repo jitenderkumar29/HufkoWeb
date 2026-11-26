@@ -2,9 +2,10 @@
 .widgetContainer {
   margin: 1rem 0;
   width: 100%;
-  max-width: $max-width;
+  // max-width: $max-width;
   margin: 0 auto;
   // margin-top: 1rem;
+  padding: 0 2rem;
 }
 
 .widgetContent {

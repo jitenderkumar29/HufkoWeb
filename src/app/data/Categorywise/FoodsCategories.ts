@@ -117609,7 +117609,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 6143,
-    name: "Classic Cold Coffee",
+    name: "Classic Cold Coffee Kitchen",
     category: "Cold Coffee",
     description: "Refreshing chilled coffee blended with fresh milk and a smooth creamy texture",
     price: 99,
@@ -117627,7 +117627,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6144,
-    name: "Chocolate Cold Coffee",
+    name: "The Urban Spoon",
     category: "Cold Coffee",
     description: "Creamy chilled coffee blended with rich chocolate sauce and milk",
     price: 129,
@@ -117645,7 +117645,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6145,
-    name: "Vanilla Cold Coffee",
+    name: "Fresh Fork Kitchen",
     category: "Cold Coffee",
     description: "Smooth cold coffee infused with sweet vanilla flavour and creamy milk",
     price: 129,
@@ -117663,7 +117663,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6146,
-    name: "Caramel Cold Coffee",
+    name: "Green Garden Cafe",
     category: "Cold Coffee",
     description: "Chilled coffee blended with creamy milk and sweet caramel syrup",
     price: 149,
@@ -117681,7 +117681,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6147,
-    name: "Hazelnut Cold Coffee",
+    name: "Harvest Table Bistro",
     category: "Cold Coffee",
     description: "Rich chilled coffee blended with aromatic hazelnut syrup and milk",
     price: 159,
@@ -117699,7 +117699,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6148,
-    name: "Butterscotch Cold Coffee",
+    name: "The Daily Plate",
     category: "Cold Coffee",
     description: "Creamy cold coffee with delicious butterscotch flavour and crunchy topping",
     price: 149,
@@ -117717,7 +117717,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6149,
-    name: "Oreo Cold Coffee",
+    name: "Olive & Thyme Kitchen",
     category: "Cold Coffee",
     description: "Thick chilled coffee blended with crunchy Oreo biscuit pieces",
     price: 169,
@@ -117735,7 +117735,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6150,
-    name: "KitKat Cold Coffee",
+    name: "The Nourish House",
     category: "Cold Coffee",
     description: "Chocolate cold coffee blended with crispy KitKat pieces and creamy milk",
     price: 179,
@@ -117753,7 +117753,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6151,
-    name: "Brownie Cold Coffee",
+    name: "Golden Ladle Cafe",
     category: "Cold Coffee",
     description: "Rich chilled coffee blended with chocolate brownie chunks",
     price: 189,
@@ -117771,7 +117771,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6152,
-    name: "Mocha Cold Coffee",
+    name: "Flavour Junction",
     category: "Cold Coffee",
     description: "Delicious blend of chilled espresso, chocolate and creamy milk",
     price: 159,
@@ -117789,7 +117789,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6153,
-    name: "White Chocolate Cold Coffee",
+    name: "The Food Studio",
     category: "Cold Coffee",
     description: "Creamy cold coffee blended with sweet white chocolate sauce",
     price: 179,
@@ -117807,7 +117807,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6154,
-    name: "Dark Chocolate Cold Coffee",
+    name: "Urban Feast Kitchen",
     category: "Cold Coffee",
     description: "Bold coffee blended with intense dark chocolate and chilled milk",
     price: 169,
@@ -117825,7 +117825,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6155,
-    name: "Irish Cold Coffee",
+    name: "The Rustic Bowl",
     category: "Cold Coffee",
     description: "Smooth chilled coffee with creamy milk and Irish-inspired flavouring",
     price: 169,
@@ -117843,7 +117843,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6156,
-    name: "Almond Cold Coffee",
+    name: "Saffron Street Cafe",
     category: "Cold Coffee",
     description: "Chilled coffee enriched with almond flavour and creamy milk",
     price: 159,
@@ -117861,7 +117861,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6157,
-    name: "Coconut Cold Coffee",
+    name: "The Wholesome Kitchen",
     category: "Cold Coffee",
     description: "Refreshing cold coffee blended with smooth coconut milk",
     price: 149,
@@ -117879,7 +117879,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6158,
-    name: "Mint Cold Coffee",
+    name: "Maple Leaf Bistro",
     category: "Cold Coffee",
     description: "Refreshing chilled coffee with a cool mint flavour",
     price: 139,
@@ -117897,7 +117897,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6159,
-    name: "Cinnamon Cold Coffee",
+    name: "The Happy Platter",
     category: "Cold Coffee",
     description: "Chilled creamy coffee infused with aromatic cinnamon spice",
     price: 139,
@@ -117915,7 +117915,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6160,
-    name: "Dalgona Cold Coffee",
+    name: "Cedar Spoon Restaurant",
     category: "Cold Coffee",
     description: "Whipped coffee cream served over chilled milk with a smooth finish",
     price: 149,
@@ -117933,7 +117933,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6161,
-    name: "Cold Coffee With Ice Cream",
+    name: "The Good Grain Cafe",
     category: "Cold Coffee",
     description: "Classic chilled coffee topped with a scoop of creamy vanilla ice cream",
     price: 159,
@@ -117951,7 +117951,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6162,
-    name: "Cold Coffee With Whipped Cream",
+    name: "The Fresh Table",
     category: "Cold Coffee",
     description: "Smooth chilled coffee finished with a generous whipped cream topping",
     price: 149,
@@ -117969,7 +117969,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6163,
-    name: "Cold Coffee With Chocolate Chips",
+    name: "Little Leaf Kitchen",
     category: "Cold Coffee",
     description: "Creamy cold coffee topped with crunchy chocolate chips",
     price: 159,
@@ -117987,7 +117987,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6164,
-    name: "Cold Coffee With Brownie",
+    name: "The Culinary Corner",
     category: "Cold Coffee",
     description: "Thick cold coffee served with rich chocolate brownie pieces",
     price: 199,
@@ -118005,7 +118005,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6165,
-    name: "Cold Coffee Frappe",
+    name: "Nature’s Basket Cafe",
     category: "Cold Coffee",
     description: "Icy blended coffee frappe with a rich and frothy texture",
     price: 149,
@@ -118023,7 +118023,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6166,
-    name: "Caramel Coffee Frappe",
+    name: "The Food Garden",
     category: "Cold Coffee",
     description: "Blended iced coffee topped with rich caramel sauce and creamy foam",
     price: 169,
@@ -118041,7 +118041,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6167,
-    name: "Chocolate Coffee Frappe",
+    name: "Spice Route Kitchen",
     category: "Cold Coffee",
     description: "Icy coffee frappe blended with chocolate sauce and topped with chocolate flakes",
     price: 169,
@@ -118059,7 +118059,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6168,
-    name: "Oreo Coffee Frappe",
+    name: "The Cozy Fork",
     category: "Cold Coffee",
     description: "Thick blended coffee frappe loaded with crushed Oreo biscuits",
     price: 179,
@@ -118077,7 +118077,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6169,
-    name: "Belgian Chocolate Cold Coffee",
+    name: "Daily Delight Bistro",
     category: "Cold Coffee",
     description: "Premium chilled coffee blended with rich Belgian chocolate",
     price: 189,
@@ -118095,7 +118095,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6170,
-    name: "Double Chocolate Cold Coffee",
+    name: "The Tasty Pantry",
     category: "Cold Coffee",
     description: "Extra chocolatey cold coffee made with chocolate syrup and chocolate shavings",
     price: 179,
@@ -118113,7 +118113,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6171,
-    name: "Nutella Cold Coffee",
+    name: "Blue Plate Kitchen",
     category: "Cold Coffee",
     description: "Creamy cold coffee blended with rich chocolate hazelnut spread",
     price: 199,
@@ -118131,7 +118131,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6172,
-    name: "Ferrero Rocher Cold Coffee",
+    name: "The Honest Meal",
     category: "Cold Coffee",
     description: "Premium cold coffee blended with chocolate hazelnut flavour and crunchy toppings",
     price: 219,
@@ -118149,7 +118149,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6173,
-    name: "KitKat Chocolate Frappe",
+    name: "Sunrise Cafe & Kitchen",
     category: "Cold Coffee",
     description: "Creamy iced coffee frappe mixed with crispy chocolate wafer pieces",
     price: 189,
@@ -118167,7 +118167,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6174,
-    name: "Oreo Chocolate Cold Coffee",
+    name: "The Kitchen Collective",
     category: "Cold Coffee",
     description: "Chocolate-rich chilled coffee blended with Oreo cookie crumbs",
     price: 179,
@@ -118185,7 +118185,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6175,
-    name: "Mango Cold Coffee",
+    name: "Flavour House",
     category: "Cold Coffee",
     description: "Unique chilled coffee blended with sweet mango flavour and creamy milk",
     price: 149,
@@ -118203,7 +118203,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6176,
-    name: "Strawberry Cold Coffee",
+    name: "The Green Apron",
     category: "Cold Coffee",
     description: "Chilled coffee blended with sweet strawberry flavour and smooth milk",
     price: 149,
@@ -118221,7 +118221,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6177,
-    name: "Banana Cold Coffee",
+    name: "City Spoon Bistro",
     category: "Cold Coffee",
     description: "Creamy chilled coffee blended with ripe banana and fresh milk",
     price: 139,
@@ -118239,7 +118239,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6178,
-    name: "Pistachio Cold Coffee",
+    name: "The Farmhouse Cafe",
     category: "Cold Coffee",
     description: "Premium chilled coffee infused with rich pistachio flavour",
     price: 189,
@@ -118257,7 +118257,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6179,
-    name: "Salted Caramel Cold Coffee",
+    name: "Root & Roast Kitchen",
     category: "Cold Coffee",
     description: "Smooth chilled coffee balanced with sweet caramel and a hint of salt",
     price: 169,
@@ -118275,7 +118275,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6180,
-    name: "Spanish Cold Coffee",
+    name: "The Gourmet Nest",
     category: "Cold Coffee",
     description: "Rich espresso blended with chilled milk and sweet condensed milk",
     price: 169,
@@ -118293,7 +118293,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6181,
-    name: "Vietnamese Iced Coffee",
+    name: "Urban Harvest Bistro",
     category: "Cold Coffee",
     description: "Strong brewed coffee served chilled with sweet condensed milk",
     price: 159,
@@ -118311,7 +118311,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6182,
-    name: "Cold Brew Coffee",
+    name: "The Savoury Spoon",
     category: "Cold Coffee",
     description: "Slow-steeped coffee served over ice with a naturally smooth flavour",
     price: 149,
@@ -118329,7 +118329,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6183,
-    name: "Nitro Cold Coffee",
+    name: "Fresh Roots Cafe",
     category: "Cold Coffee",
     description: "Smooth cold brew infused with nitrogen for a creamy cascading texture",
     price: 189,
@@ -118347,7 +118347,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6184,
-    name: "Iced Americano",
+    name: "The Platter Room",
     category: "Cold Coffee",
     description: "Refreshing espresso poured over ice with a smooth and bold finish",
     price: 109,
@@ -118365,7 +118365,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6185,
-    name: "Iced Vanilla Latte",
+    name: "The Kitchen Story",
     category: "Cold Coffee",
     description: "Chilled espresso mixed with vanilla syrup and cold milk",
     price: 149,
@@ -118383,7 +118383,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6186,
-    name: "Iced Caramel Latte",
+    name: "The Meal Market",
     category: "Cold Coffee",
     description: "Espresso and chilled milk topped with sweet caramel syrup",
     price: 159,
@@ -118401,7 +118401,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6187,
-    name: "Iced Hazelnut Latte",
+    name: "The Corner Bistro",
     category: "Cold Coffee",
     description: "Chilled espresso blended with milk and roasted hazelnut flavour",
     price: 159,
@@ -118419,7 +118419,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6188,
-    name: "Cold Coffee With Jaggery",
+    name: "The Modern Tiffin",
     category: "Cold Coffee",
     description: "Traditional chilled coffee naturally sweetened with jaggery",
     price: 119,
@@ -118437,7 +118437,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6189,
-    name: "Cold Coffee With Honey",
+    name: "The Food Loft",
     category: "Cold Coffee",
     description: "Refreshing chilled coffee naturally sweetened with honey",
     price: 129,
@@ -118455,7 +118455,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6190,
-    name: "Premium Cold Coffee",
+    name: "The Signature Kitchen",
     category: "Cold Coffee",
     description: "Premium chilled coffee prepared with selected roasted beans and fresh cream",
     price: 189,
@@ -118473,7 +118473,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6191,
-    name: "Royal Cold Coffee",
+    name: "The Good Food Company",
     category: "Cold Coffee",
     description: "Rich creamy cold coffee topped with chocolate drizzle and crunchy nuts",
     price: 199,
@@ -118491,7 +118491,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6192,
-    name: "Cold Coffee Supreme Combo",
+    name: "The Village Table",
     category: "Cold Coffee",
     description: "Special cold coffee combo served with a creamy chilled coffee and delicious accompaniments",
     price: 229,
@@ -118509,7 +118509,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6193,
-    name: "Classic Milk Tea",
+    name: "The Urban Spoon",
     category: "Tea",
     description: "Traditional Indian milk tea brewed with aromatic tea leaves and fresh milk",
     price: 25,
@@ -118527,7 +118527,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6194,
-    name: "Masala Chai",
+    name: "Fresh Fork Kitchen",
     category: "Tea",
     description: "Indian tea infused with ginger, cardamom, cloves and aromatic spices",
     price: 30,
@@ -118545,7 +118545,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6195,
-    name: "Adrak Chai",
+    name: "Green Garden Cafe",
     category: "Tea",
     description: "Refreshing Indian milk tea prepared with freshly crushed ginger",
     price: 30,
@@ -118563,7 +118563,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6196,
-    name: "Elaichi Chai",
+    name: "Harvest Table Bistro",
     category: "Tea",
     description: "Fragrant milk tea flavoured with freshly crushed green cardamom",
     price: 30,
@@ -118581,7 +118581,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6197,
-    name: "Tulsi Tea",
+    name: "The Daily Plate",
     category: "Tea",
     description: "Refreshing herbal tea infused with fragrant tulsi leaves",
     price: 35,
@@ -118599,7 +118599,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6198,
-    name: "Lemon Tea",
+    name: "Olive & Thyme Kitchen",
     category: "Tea",
     description: "Light refreshing tea with fresh lemon juice and a balanced flavour",
     price: 30,
@@ -118617,7 +118617,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6199,
-    name: "Black Tea",
+    name: "The Nourish House",
     category: "Tea",
     description: "Classic freshly brewed black tea with a strong aromatic flavour",
     price: 25,
@@ -118635,7 +118635,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6200,
-    name: "Green Tea",
+    name: "Golden Ladle Cafe",
     category: "Tea",
     description: "Light aromatic green tea brewed for a refreshing everyday beverage",
     price: 40,
@@ -118653,7 +118653,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6201,
-    name: "Honey Lemon Tea",
+    name: "Flavour Junction",
     category: "Tea",
     description: "Refreshing lemon tea naturally sweetened with aromatic honey",
     price: 40,
@@ -118671,7 +118671,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6202,
-    name: "Kashmiri Kahwa",
+    name: "The Food Studio",
     category: "Tea",
     description: "Traditional Kashmiri green tea infused with saffron, cinnamon and cardamom",
     price: 60,
@@ -118689,7 +118689,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6203,
-    name: "Saffron Tea",
+    name: "Urban Feast Kitchen",
     category: "Tea",
     description: "Aromatic tea infused with premium saffron strands and gentle spices",
     price: 55,
@@ -118707,7 +118707,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6204,
-    name: "Lemongrass Tea",
+    name: "The Rustic Bowl",
     category: "Tea",
     description: "Fragrant herbal tea brewed with fresh lemongrass for a citrusy aroma",
     price: 40,
@@ -118725,7 +118725,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6205,
-    name: "Peppermint Tea",
+    name: "Saffron Street Cafe",
     category: "Tea",
     description: "Refreshing herbal infusion prepared with aromatic peppermint leaves",
     price: 45,
@@ -118743,7 +118743,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6206,
-    name: "Chamomile Tea",
+    name: "The Wholesome Kitchen",
     category: "Tea",
     description: "Delicate herbal tea made with fragrant chamomile flowers",
     price: 50,
@@ -118761,7 +118761,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6207,
-    name: "Rose Tea",
+    name: "Maple Leaf Bistro",
     category: "Tea",
     description: "Floral tea infused with delicate rose petals and a pleasant aroma",
     price: 45,
@@ -118779,7 +118779,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6208,
-    name: "Jasmine Green Tea",
+    name: "The Happy Platter",
     category: "Tea",
     description: "Delicate green tea scented with fragrant jasmine blossoms",
     price: 55,
@@ -118797,7 +118797,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6209,
-    name: "Darjeeling Tea",
+    name: "Cedar Spoon Restaurant",
     category: "Tea",
     description: "Premium Darjeeling tea brewed with a delicate floral aroma",
     price: 60,
@@ -118815,7 +118815,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6210,
-    name: "Assam Tea",
+    name: "The Good Grain Cafe",
     category: "Tea",
     description: "Strong and full-bodied Assam tea with a rich malty flavour",
     price: 45,
@@ -118833,7 +118833,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6211,
-    name: "Irani Chai",
+    name: "The Fresh Table",
     category: "Tea",
     description: "Traditional rich and creamy Irani tea with a distinctive flavour",
     price: 45,
@@ -118851,7 +118851,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6212,
-    name: "Kulhad Chai",
+    name: "Little Leaf Kitchen",
     category: "Tea",
     description: "Traditional Indian masala tea served in an earthy clay kulhad",
     price: 35,
@@ -118869,7 +118869,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6213,
-    name: "Tandoori Chai",
+    name: "The Culinary Corner",
     category: "Tea",
     description: "Smoky-flavoured milk tea prepared with a traditional tandoor finish",
     price: 40,
@@ -118887,7 +118887,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6214,
-    name: "Cutting Chai",
+    name: "Nature’s Basket Cafe",
     category: "Tea",
     description: "Strong and flavourful Mumbai-style half-cup masala milk tea",
     price: 20,
@@ -118905,7 +118905,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6215,
-    name: "Mumbai Masala Chai",
+    name: "The Food Garden",
     category: "Tea",
     description: "Mumbai-style spicy milk tea brewed with ginger and traditional masala",
     price: 30,
@@ -118923,7 +118923,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6216,
-    name: "Gud Wali Chai",
+    name: "Spice Route Kitchen",
     category: "Tea",
     description: "Traditional Indian milk tea sweetened with natural jaggery",
     price: 35,
@@ -118941,7 +118941,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6217,
-    name: "Lemon Ginger Tea",
+    name: "The Cozy Fork",
     category: "Tea",
     description: "Refreshing herbal tea combining fresh ginger and tangy lemon",
     price: 40,
@@ -118959,7 +118959,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6218,
-    name: "Honey Ginger Tea",
+    name: "Daily Delight Bistro",
     category: "Tea",
     description: "Warm ginger-infused tea naturally sweetened with honey",
     price: 40,
@@ -118977,7 +118977,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6219,
-    name: "Orange Tea",
+    name: "The Tasty Pantry",
     category: "Tea",
     description: "Light aromatic tea infused with refreshing orange flavour",
     price: 45,
@@ -118995,7 +118995,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6220,
-    name: "Apple Cinnamon Tea",
+    name: "Blue Plate Kitchen",
     category: "Tea",
     description: "Fruity herbal tea blended with apple notes and aromatic cinnamon",
     price: 55,
@@ -119013,7 +119013,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6221,
-    name: "Hibiscus Tea",
+    name: "The Honest Meal",
     category: "Tea",
     description: "Beautifully coloured herbal infusion with a refreshing tangy flavour",
     price: 50,
@@ -119031,7 +119031,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6222,
-    name: "Blue Pea Flower Tea",
+    name: "Sunrise Cafe & Kitchen",
     category: "Tea",
     description: "Naturally vibrant blue herbal tea brewed with butterfly pea flowers",
     price: 60,
@@ -119049,7 +119049,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6223,
-    name: "Matcha Green Tea",
+    name: "The Kitchen Collective",
     category: "Tea",
     description: "Japanese-style matcha prepared with finely ground green tea powder",
     price: 99,
@@ -119067,7 +119067,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6224,
-    name: "Matcha Milk Tea",
+    name: "Flavour House",
     category: "Tea",
     description: "Creamy milk tea blended with smooth Japanese matcha powder",
     price: 119,
@@ -119085,7 +119085,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6225,
-    name: "Thai Milk Tea",
+    name: "The Green Apron",
     category: "Tea",
     description: "Popular Thai-style tea blended with creamy milk and aromatic spices",
     price: 89,
@@ -119103,7 +119103,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6226,
-    name: "Hong Kong Milk Tea",
+    name: "City Spoon Bistro",
     category: "Tea",
     description: "Smooth Hong Kong-style milk tea with a rich brewed tea flavour",
     price: 89,
@@ -119121,7 +119121,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6227,
-    name: "Kashmiri Pink Chai",
+    name: "The Farmhouse Cafe",
     category: "Tea",
     description: "Traditional Kashmiri pink tea prepared with milk and aromatic spices",
     price: 60,
@@ -119139,7 +119139,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6228,
-    name: "Butter Tea",
+    name: "Root & Roast Kitchen",
     category: "Tea",
     description: "Traditional Himalayan-style tea prepared with butter and a rich savoury taste",
     price: 65,
@@ -119157,7 +119157,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6229,
-    name: "Rajasthani Masala Chai",
+    name: "The Gourmet Nest",
     category: "Tea",
     description: "Traditional Rajasthani-style milk tea with a bold blend of warming spices",
     price: 35,
@@ -119175,7 +119175,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6230,
-    name: "South Indian Filter Tea",
+    name: "Urban Harvest Bistro",
     category: "Tea",
     description: "Strong aromatic tea prepared in a traditional South Indian style",
     price: 30,
@@ -119193,7 +119193,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6231,
-    name: "Double Masala Chai",
+    name: "The Savoury Spoon",
     category: "Tea",
     description: "Extra flavourful milk tea prepared with a generous blend of aromatic spices",
     price: 40,
@@ -119211,7 +119211,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6232,
-    name: "Strong Ginger Masala Chai",
+    name: "Fresh Roots Cafe",
     category: "Tea",
     description: "Bold milk tea packed with freshly crushed ginger and traditional spices",
     price: 40,
@@ -119229,7 +119229,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6233,
-    name: "Sulaimani Tea",
+    name: "The Platter Room",
     category: "Tea",
     description: "Traditional aromatic black tea with lemon and a subtle spice flavour",
     price: 35,
@@ -119247,7 +119247,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6234,
-    name: "Kesar Elaichi Chai",
+    name: "The Kitchen Story",
     category: "Tea",
     description: "Rich Indian milk tea infused with saffron and fragrant cardamom",
     price: 50,
@@ -119265,7 +119265,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6235,
-    name: "Chocolate Tea",
+    name: "The Meal Market",
     category: "Tea",
     description: "Unique creamy tea blended with rich chocolate flavour",
     price: 55,
@@ -119283,7 +119283,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6236,
-    name: "Vanilla Milk Tea",
+    name: "The Corner Bistro",
     category: "Tea",
     description: "Smooth milk tea infused with sweet and aromatic vanilla flavour",
     price: 50,
@@ -119301,7 +119301,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6237,
-    name: "Rose Milk Tea",
+    name: "The Modern Tiffin",
     category: "Tea",
     description: "Creamy milk tea infused with delicate rose flavour and aroma",
     price: 55,
@@ -119319,7 +119319,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6238,
-    name: "Iced Lemon Tea",
+    name: "The Food Loft",
     category: "Tea",
     description: "Chilled black tea mixed with fresh lemon juice and ice",
     price: 55,
@@ -119337,7 +119337,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6239,
-    name: "Peach Iced Tea",
+    name: "The Signature Kitchen",
     category: "Tea",
     description: "Refreshing chilled tea blended with sweet peach flavour and ice",
     price: 65,
@@ -119355,7 +119355,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6240,
-    name: "Mint Iced Tea",
+    name: "The Good Food Company",
     category: "Tea",
     description: "Cool refreshing iced tea infused with fresh mint leaves and lemon",
     price: 60,
@@ -119373,7 +119373,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6241,
-    name: "Masala Chai Special Combo",
+    name: "The Village Table",
     category: "Tea",
     description: "Hot masala chai served with crispy biscuits and traditional tea-time snacks",
     price: 79,
@@ -119391,7 +119391,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6242,
-    name: "Premium Tea Supreme Combo",
+    name: "The Premium Plate",
     category: "Tea",
     description: "Special tea-time combo featuring freshly brewed premium tea with assorted snacks",
     price: 99,
@@ -119409,7 +119409,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 6243,
-    name: "Classic Vanilla Shake",
+    name: "The Urban Spoon",
     category: "Shake",
     description: "Creamy vanilla milkshake blended with chilled milk and vanilla ice cream",
     price: 99,
@@ -119427,7 +119427,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6244,
-    name: "Chocolate Shake",
+    name: "Fresh Fork Kitchen",
     category: "Shake",
     description: "Rich chocolate milkshake blended with creamy milk and chocolate ice cream",
     price: 119,
@@ -119445,7 +119445,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6245,
-    name: "Strawberry Shake",
+    name: "Green Garden Cafe",
     category: "Shake",
     description: "Refreshing strawberry milkshake blended with fresh milk and strawberry flavour",
     price: 119,
@@ -119463,7 +119463,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6246,
-    name: "Mango Shake",
+    name: "Harvest Table Bistro",
     category: "Shake",
     description: "Thick mango milkshake prepared with sweet mango pulp and chilled milk",
     price: 119,
@@ -119481,7 +119481,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6247,
-    name: "Banana Shake",
+    name: "The Daily Plate",
     category: "Shake",
     description: "Smooth banana milkshake blended with ripe bananas and creamy milk",
     price: 99,
@@ -119499,7 +119499,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6248,
-    name: "Butterscotch Shake",
+    name: "Olive & Thyme Kitchen",
     category: "Shake",
     description: "Creamy butterscotch milkshake topped with crunchy caramel bits",
     price: 139,
@@ -119517,7 +119517,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6249,
-    name: "Oreo Shake",
+    name: "The Nourish House",
     category: "Shake",
     description: "Thick creamy milkshake blended with crunchy Oreo biscuit pieces",
     price: 149,
@@ -119535,7 +119535,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6250,
-    name: "KitKat Shake",
+    name: "Golden Ladle Cafe",
     category: "Shake",
     description: "Chocolate milkshake blended with crispy KitKat wafer pieces",
     price: 159,
@@ -119553,7 +119553,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6251,
-    name: "Brownie Shake",
+    name: "Flavour Junction",
     category: "Shake",
     description: "Rich chocolate milkshake blended with soft brownie chunks",
     price: 169,
@@ -119571,7 +119571,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6252,
-    name: "Black Forest Shake",
+    name: "The Food Studio",
     category: "Shake",
     description: "Chocolate milkshake blended with chocolate cake and cherry flavour",
     price: 179,
@@ -119589,7 +119589,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6253,
-    name: "White Chocolate Shake",
+    name: "Urban Feast Kitchen",
     category: "Shake",
     description: "Smooth milkshake blended with creamy white chocolate and vanilla ice cream",
     price: 169,
@@ -119607,7 +119607,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6254,
-    name: "Dark Chocolate Shake",
+    name: "The Rustic Bowl",
     category: "Shake",
     description: "Rich and thick milkshake prepared with intense dark chocolate",
     price: 159,
@@ -119625,7 +119625,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6255,
-    name: "Cold Coffee Shake",
+    name: "Saffron Street Cafe",
     category: "Shake",
     description: "Creamy coffee milkshake blended with chilled milk and coffee ice cream",
     price: 139,
@@ -119643,7 +119643,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6256,
-    name: "Caramel Shake",
+    name: "The Wholesome Kitchen",
     category: "Shake",
     description: "Thick vanilla milkshake blended with sweet caramel sauce",
     price: 149,
@@ -119661,7 +119661,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6257,
-    name: "Hazelnut Shake",
+    name: "Maple Leaf Bistro",
     category: "Shake",
     description: "Creamy milkshake infused with roasted hazelnut and chocolate flavours",
     price: 169,
@@ -119679,7 +119679,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6258,
-    name: "Pineapple Shake",
+    name: "The Happy Platter",
     category: "Shake",
     description: "Refreshing pineapple milkshake blended with creamy chilled milk",
     price: 119,
@@ -119697,7 +119697,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6259,
-    name: "Blueberry Shake",
+    name: "Cedar Spoon Restaurant",
     category: "Shake",
     description: "Delicious blueberry milkshake blended with fresh milk and creamy ice cream",
     price: 159,
@@ -119715,7 +119715,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6260,
-    name: "Blackcurrant Shake",
+    name: "The Good Grain Cafe",
     category: "Shake",
     description: "Smooth blackcurrant milkshake with a sweet and tangy berry flavour",
     price: 149,
@@ -119733,7 +119733,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6261,
-    name: "Raspberry Shake",
+    name: "The Fresh Table",
     category: "Shake",
     description: "Refreshing raspberry milkshake blended with sweet berries and chilled milk",
     price: 159,
@@ -119751,7 +119751,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6262,
-    name: "Kiwi Shake",
+    name: "Little Leaf Kitchen",
     category: "Shake",
     description: "Sweet and tangy kiwi milkshake blended with smooth creamy milk",
     price: 149,
@@ -119769,7 +119769,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6263,
-    name: "Litchi Shake",
+    name: "The Culinary Corner",
     category: "Shake",
     description: "Refreshing litchi milkshake with a delicate fruity flavour",
     price: 139,
@@ -119787,7 +119787,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6264,
-    name: "Watermelon Shake",
+    name: "Nature’s Basket Cafe",
     category: "Shake",
     description: "Light and refreshing watermelon shake served chilled",
     price: 99,
@@ -119805,7 +119805,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6265,
-    name: "Papaya Shake",
+    name: "The Food Garden",
     category: "Shake",
     description: "Smooth papaya milkshake blended with ripe papaya and chilled milk",
     price: 99,
@@ -119823,7 +119823,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6266,
-    name: "Chikoo Shake",
+    name: "Spice Route Kitchen",
     category: "Shake",
     description: "Creamy chikoo milkshake prepared with fresh sapota fruit and milk",
     price: 119,
@@ -119841,7 +119841,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6267,
-    name: "Custard Apple Shake",
+    name: "The Cozy Fork",
     category: "Shake",
     description: "Seasonal creamy milkshake prepared with sweet custard apple pulp",
     price: 149,
@@ -119859,7 +119859,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6268,
-    name: "Dates Shake",
+    name: "Daily Delight Bistro",
     category: "Shake",
     description: "Naturally sweet dates blended with chilled milk for a rich shake",
     price: 139,
@@ -119877,7 +119877,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6269,
-    name: "Dry Fruit Shake",
+    name: "The Tasty Pantry",
     category: "Shake",
     description: "Rich milkshake loaded with almonds, cashews, pistachios and dates",
     price: 179,
@@ -119895,7 +119895,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6270,
-    name: "Kesar Pista Shake",
+    name: "Blue Plate Kitchen",
     category: "Shake",
     description: "Royal creamy milkshake flavoured with saffron and crushed pistachios",
     price: 179,
@@ -119913,7 +119913,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6271,
-    name: "Rose Shake",
+    name: "The Honest Meal",
     category: "Shake",
     description: "Delicate rose-flavoured milkshake blended with creamy vanilla ice cream",
     price: 119,
@@ -119931,7 +119931,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6272,
-    name: "Paan Shake",
+    name: "Sunrise Cafe & Kitchen",
     category: "Shake",
     description: "Unique Indian-style milkshake infused with sweet paan flavour",
     price: 139,
@@ -119949,7 +119949,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6273,
-    name: "Gulkand Shake",
+    name: "The Kitchen Collective",
     category: "Shake",
     description: "Creamy milkshake blended with aromatic rose petal gulkand",
     price: 149,
@@ -119967,7 +119967,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6274,
-    name: "Kaju Anjeer Shake",
+    name: "Flavour House",
     category: "Shake",
     description: "Premium milkshake blended with cashews and sweet dried figs",
     price: 189,
@@ -119985,7 +119985,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6275,
-    name: "Peanut Butter Shake",
+    name: "The Green Apron",
     category: "Shake",
     description: "Thick milkshake blended with creamy peanut butter and fresh milk",
     price: 159,
@@ -120003,7 +120003,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6276,
-    name: "Oats Banana Shake",
+    name: "City Spoon Bistro",
     category: "Shake",
     description: "Nutritious banana shake blended with oats and creamy milk",
     price: 139,
@@ -120021,7 +120021,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6277,
-    name: "Mango Mastani Shake",
+    name: "The Farmhouse Cafe",
     category: "Shake",
     description: "Rich mango shake topped with vanilla ice cream, nuts and mango pieces",
     price: 189,
@@ -120039,7 +120039,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6278,
-    name: "Chocolate Oreo Shake",
+    name: "Root & Roast Kitchen",
     category: "Shake",
     description: "Thick chocolate milkshake blended with crunchy Oreo cookies",
     price: 169,
@@ -120057,7 +120057,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6279,
-    name: "Nutella Shake",
+    name: "The Gourmet Nest",
     category: "Shake",
     description: "Decadent milkshake blended with chocolate hazelnut spread and ice cream",
     price: 189,
@@ -120075,7 +120075,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6280,
-    name: "Ferrero Rocher Shake",
+    name: "Urban Harvest Bistro",
     category: "Shake",
     description: "Premium chocolate hazelnut shake with crunchy nutty toppings",
     price: 199,
@@ -120093,7 +120093,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6281,
-    name: "Oreo Brownie Shake",
+    name: "The Savoury Spoon",
     category: "Shake",
     description: "Loaded chocolate shake blended with Oreo biscuits and brownie chunks",
     price: 199,
@@ -120111,7 +120111,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6282,
-    name: "Blueberry Cheesecake Shake",
+    name: "Fresh Roots Cafe",
     category: "Shake",
     description: "Creamy cheesecake-inspired shake blended with blueberry flavour",
     price: 189,
@@ -120129,7 +120129,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6283,
-    name: "Red Velvet Shake",
+    name: "The Platter Room",
     category: "Shake",
     description: "Rich red velvet milkshake blended with creamy vanilla and cake flavour",
     price: 179,
@@ -120147,7 +120147,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6284,
-    name: "Pistachio Shake",
+    name: "The Kitchen Story",
     category: "Shake",
     description: "Premium creamy milkshake infused with roasted pistachio flavour",
     price: 179,
@@ -120165,7 +120165,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6285,
-    name: "Saffron Almond Shake",
+    name: "The Meal Market",
     category: "Shake",
     description: "Royal milkshake enriched with saffron, almonds and creamy milk",
     price: 189,
@@ -120183,7 +120183,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6286,
-    name: "Anjeer Shake",
+    name: "The Corner Bistro",
     category: "Shake",
     description: "Smooth and naturally sweet fig milkshake blended with chilled milk",
     price: 159,
@@ -120201,7 +120201,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6287,
-    name: "Avocado Shake",
+    name: "The Modern Tiffin",
     category: "Shake",
     description: "Thick creamy avocado shake blended with chilled milk",
     price: 179,
@@ -120219,7 +120219,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6288,
-    name: "Tender Coconut Shake",
+    name: "The Food Loft",
     category: "Shake",
     description: "Refreshing tender coconut shake blended with creamy coconut milk",
     price: 149,
@@ -120237,7 +120237,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6289,
-    name: "Sattu Shake",
+    name: "The Signature Kitchen",
     category: "Shake",
     description: "Traditional nutritious sattu drink blended with chilled milk and light sweetness",
     price: 89,
@@ -120255,7 +120255,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6290,
-    name: "Protein Banana Shake",
+    name: "The Good Food Company",
     category: "Shake",
     description: "Filling banana shake blended with milk and protein-rich ingredients",
     price: 179,
@@ -120273,7 +120273,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6291,
-    name: "Royal Dry Fruit Shake",
+    name: "The Village Table",
     category: "Shake",
     description: "Premium thick milkshake topped with almonds, cashews, pistachios and dates",
     price: 199,
@@ -120291,7 +120291,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6292,
-    name: "Shake Supreme Combo",
+    name: "The Premium Plate",
     category: "Shake",
     description: "Special shake combo featuring a rich creamy milkshake with delicious accompaniments",
     price: 229,
@@ -120309,7 +120309,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 6293,
-    name: "Fresh Orange Juice",
+    name: "The Urban Spoon",
     category: "Juice",
     description: "Freshly squeezed sweet orange juice served chilled",
     price: 79,
@@ -120327,7 +120327,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6294,
-    name: "Sweet Lime Juice",
+    name: "Fresh Fork Kitchen",
     category: "Juice",
     description: "Refreshing mosambi juice prepared from fresh sweet limes",
     price: 79,
@@ -120345,7 +120345,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6295,
-    name: "Fresh Apple Juice",
+    name: "Green Garden Cafe",
     category: "Juice",
     description: "Naturally sweet apple juice prepared from fresh juicy apples",
     price: 99,
@@ -120363,7 +120363,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6296,
-    name: "Fresh Pomegranate Juice",
+    name: "Harvest Table Bistro",
     category: "Juice",
     description: "Rich ruby-red juice extracted from fresh pomegranate seeds",
     price: 129,
@@ -120381,7 +120381,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6297,
-    name: "Watermelon Juice",
+    name: "The Daily Plate",
     category: "Juice",
     description: "Refreshing watermelon juice prepared with fresh sweet watermelon",
     price: 69,
@@ -120399,7 +120399,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6298,
-    name: "Pineapple Juice",
+    name: "Olive & Thyme Kitchen",
     category: "Juice",
     description: "Tangy and sweet pineapple juice made with fresh pineapple chunks",
     price: 89,
@@ -120417,7 +120417,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6299,
-    name: "Mango Juice",
+    name: "The Nourish House",
     category: "Juice",
     description: "Thick and delicious mango juice prepared with ripe mango pulp",
     price: 99,
@@ -120435,7 +120435,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6300,
-    name: "Grape Juice",
+    name: "Golden Ladle Cafe",
     category: "Juice",
     description: "Fresh grape juice with a naturally sweet and refreshing taste",
     price: 89,
@@ -120453,7 +120453,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6301,
-    name: "Black Grape Juice",
+    name: "Flavour Junction",
     category: "Juice",
     description: "Deep-coloured black grape juice prepared from fresh grapes",
     price: 99,
@@ -120471,7 +120471,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6302,
-    name: "Guava Juice",
+    name: "The Food Studio",
     category: "Juice",
     description: "Thick fresh guava juice with a naturally sweet tropical flavour",
     price: 89,
@@ -120489,7 +120489,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6303,
-    name: "Papaya Juice",
+    name: "Urban Feast Kitchen",
     category: "Juice",
     description: "Smooth papaya juice prepared with ripe fresh papaya",
     price: 79,
@@ -120507,7 +120507,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6304,
-    name: "Muskmelon Juice",
+    name: "The Rustic Bowl",
     category: "Juice",
     description: "Light and refreshing muskmelon juice served chilled",
     price: 79,
@@ -120525,7 +120525,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6305,
-    name: "Kiwi Juice",
+    name: "Saffron Street Cafe",
     category: "Juice",
     description: "Refreshing kiwi juice with a naturally tangy and fruity flavour",
     price: 119,
@@ -120543,7 +120543,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6306,
-    name: "Strawberry Juice",
+    name: "The Wholesome Kitchen",
     category: "Juice",
     description: "Fresh strawberry juice with a sweet and slightly tangy flavour",
     price: 119,
@@ -120561,7 +120561,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6307,
-    name: "Blueberry Juice",
+    name: "Maple Leaf Bistro",
     category: "Juice",
     description: "Delicious blueberry juice with a refreshing berry flavour",
     price: 139,
@@ -120579,7 +120579,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6308,
-    name: "Litchi Juice",
+    name: "The Happy Platter",
     category: "Juice",
     description: "Sweet and aromatic litchi juice prepared from fresh litchi pulp",
     price: 99,
@@ -120597,7 +120597,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6309,
-    name: "Mosambi Mint Juice",
+    name: "Cedar Spoon Restaurant",
     category: "Juice",
     description: "Fresh sweet lime juice blended with cooling mint leaves",
     price: 89,
@@ -120615,7 +120615,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6310,
-    name: "Orange Carrot Juice",
+    name: "The Good Grain Cafe",
     category: "Juice",
     description: "Nutritious blend of fresh oranges and sweet carrots",
     price: 99,
@@ -120633,7 +120633,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6311,
-    name: "Carrot Juice",
+    name: "The Fresh Table",
     category: "Juice",
     description: "Freshly extracted carrot juice with a naturally sweet taste",
     price: 79,
@@ -120651,7 +120651,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6312,
-    name: "Beetroot Juice",
+    name: "Little Leaf Kitchen",
     category: "Juice",
     description: "Fresh beetroot juice prepared with a naturally earthy flavour",
     price: 79,
@@ -120669,7 +120669,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6313,
-    name: "ABC Juice",
+    name: "The Culinary Corner",
     category: "Juice",
     description: "Healthy apple, beetroot and carrot juice freshly blended together",
     price: 109,
@@ -120687,7 +120687,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6314,
-    name: "Pineapple Mint Juice",
+    name: "Nature’s Basket Cafe",
     category: "Juice",
     description: "Sweet pineapple juice blended with fresh mint for a cooling finish",
     price: 99,
@@ -120705,7 +120705,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6315,
-    name: "Mango Orange Juice",
+    name: "The Food Garden",
     category: "Juice",
     description: "Tropical combination of sweet mango pulp and fresh orange juice",
     price: 119,
@@ -120723,7 +120723,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6316,
-    name: "Apple Beetroot Juice",
+    name: "Spice Route Kitchen",
     category: "Juice",
     description: "Fresh apple and beetroot juice with a naturally balanced sweetness",
     price: 109,
@@ -120741,7 +120741,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6317,
-    name: "Cucumber Mint Juice",
+    name: "The Cozy Fork",
     category: "Juice",
     description: "Light cucumber juice blended with fresh mint and a hint of lemon",
     price: 69,
@@ -120759,7 +120759,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6318,
-    name: "Amla Juice",
+    name: "Daily Delight Bistro",
     category: "Juice",
     description: "Fresh amla juice with a distinctive tangy and refreshing flavour",
     price: 69,
@@ -120777,7 +120777,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6319,
-    name: "Aloe Vera Juice",
+    name: "The Tasty Pantry",
     category: "Juice",
     description: "Light aloe vera beverage served chilled with a refreshing taste",
     price: 79,
@@ -120795,7 +120795,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6320,
-    name: "Coconut Water",
+    name: "Blue Plate Kitchen",
     category: "Juice",
     description: "Naturally refreshing tender coconut water served chilled",
     price: 49,
@@ -120813,7 +120813,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6321,
-    name: "Sugarcane Juice",
+    name: "The Honest Meal",
     category: "Juice",
     description: "Freshly extracted sugarcane juice with a naturally sweet flavour",
     price: 49,
@@ -120831,7 +120831,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6322,
-    name: "Sugarcane Lemon Juice",
+    name: "Sunrise Cafe & Kitchen",
     category: "Juice",
     description: "Fresh sugarcane juice mixed with tangy lemon for extra freshness",
     price: 59,
@@ -120849,7 +120849,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6323,
-    name: "Jamun Juice",
+    name: "The Kitchen Collective",
     category: "Juice",
     description: "Tangy seasonal jamun juice prepared from fresh Indian black plums",
     price: 99,
@@ -120867,7 +120867,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6324,
-    name: "Bael Juice",
+    name: "Flavour House",
     category: "Juice",
     description: "Traditional Indian bael fruit juice with a naturally rich flavour",
     price: 79,
@@ -120885,7 +120885,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6325,
-    name: "Kokum Juice",
+    name: "The Green Apron",
     category: "Juice",
     description: "Refreshing kokum fruit drink with a delicious sweet and tangy taste",
     price: 69,
@@ -120903,7 +120903,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6326,
-    name: "Carrot Orange Ginger Juice",
+    name: "City Spoon Bistro",
     category: "Juice",
     description: "Fresh blend of carrot, orange and ginger with a zesty flavour",
     price: 119,
@@ -120921,7 +120921,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6327,
-    name: "Pomegranate Beetroot Juice",
+    name: "The Farmhouse Cafe",
     category: "Juice",
     description: "Rich blend of pomegranate seeds and fresh beetroot juice",
     price: 139,
@@ -120939,7 +120939,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6328,
-    name: "Green Detox Juice",
+    name: "Root & Roast Kitchen",
     category: "Juice",
     description: "Refreshing green blend of cucumber, spinach, apple and lemon",
     price: 119,
@@ -120957,7 +120957,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6329,
-    name: "Spinach Apple Juice",
+    name: "The Gourmet Nest",
     category: "Juice",
     description: "Nutritious green juice blended with fresh spinach and sweet apples",
     price: 109,
@@ -120975,7 +120975,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6330,
-    name: "Celery Cucumber Juice",
+    name: "Urban Harvest Bistro",
     category: "Juice",
     description: "Light and refreshing green juice made with celery and cucumber",
     price: 99,
@@ -120993,7 +120993,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6331,
-    name: "Mixed Fruit Juice",
+    name: "The Savoury Spoon",
     category: "Juice",
     description: "Delicious combination of seasonal fruits freshly blended into one juice",
     price: 109,
@@ -121011,7 +121011,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6332,
-    name: "Tropical Fruit Juice",
+    name: "Fresh Roots Cafe",
     category: "Juice",
     description: "Tropical blend of pineapple, mango and orange with a refreshing taste",
     price: 129,
@@ -121029,7 +121029,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6333,
-    name: "Dragon Fruit Juice",
+    name: "The Platter Room",
     category: "Juice",
     description: "Vibrant dragon fruit juice with a mild sweet and refreshing flavour",
     price: 149,
@@ -121047,7 +121047,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6334,
-    name: "Passion Fruit Juice",
+    name: "The Kitchen Story",
     category: "Juice",
     description: "Tangy passion fruit juice with an aromatic tropical flavour",
     price: 139,
@@ -121065,7 +121065,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6335,
-    name: "Peach Juice",
+    name: "The Meal Market",
     category: "Juice",
     description: "Smooth peach juice prepared with sweet ripe peach pulp",
     price: 119,
@@ -121083,7 +121083,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6336,
-    name: "Pear Juice",
+    name: "The Corner Bistro",
     category: "Juice",
     description: "Naturally sweet pear juice prepared from fresh juicy pears",
     price: 109,
@@ -121101,7 +121101,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6337,
-    name: "Cherry Juice",
+    name: "The Modern Tiffin",
     category: "Juice",
     description: "Sweet and tangy cherry juice made from fresh cherry fruit",
     price: 139,
@@ -121119,7 +121119,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6338,
-    name: "Lemon Mint Juice",
+    name: "The Food Loft",
     category: "Juice",
     description: "Fresh lemon juice blended with cooling mint and a touch of sweetness",
     price: 59,
@@ -121137,7 +121137,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6339,
-    name: "Ginger Lemon Juice",
+    name: "The Signature Kitchen",
     category: "Juice",
     description: "Zesty lemon juice with a refreshing hint of fresh ginger",
     price: 69,
@@ -121155,7 +121155,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6340,
-    name: "Orange Pineapple Juice",
+    name: "The Good Food Company",
     category: "Juice",
     description: "Refreshing tropical juice combining sweet orange and tangy pineapple",
     price: 109,
@@ -121173,7 +121173,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6341,
-    name: "Fresh Juice Special Combo",
+    name: "The Village Table",
     category: "Juice",
     description: "Refreshing seasonal fruit juice served with a delicious light snack",
     price: 149,
@@ -121191,7 +121191,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6342,
-    name: "Juice Supreme Combo",
+    name: "The Premium Plate",
     category: "Juice",
     description: "Premium mixed fruit juice combo prepared with fresh seasonal fruits and tasty accompaniments",
     price: 179,
@@ -121209,7 +121209,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6343,
-    name: "Classic Sweet Lassi",
+    name: "The Urban Spoon",
     category: "Lassi",
     description: "Traditional chilled sweet lassi blended with creamy yogurt and sugar",
     price: 69,
@@ -121227,7 +121227,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6344,
-    name: "Punjabi Thick Lassi",
+    name: "Fresh Fork Kitchen",
     category: "Lassi",
     description: "Rich and thick Punjabi-style lassi topped with a creamy layer",
     price: 89,
@@ -121245,7 +121245,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6345,
-    name: "Rose Lassi",
+    name: "Green Garden Cafe",
     category: "Lassi",
     description: "Refreshing sweet lassi infused with fragrant rose syrup",
     price: 79,
@@ -121263,7 +121263,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6346,
-    name: "Mango Lassi",
+    name: "Harvest Table Bistro",
     category: "Lassi",
     description: "Creamy yogurt drink blended with sweet ripe mango pulp",
     price: 99,
@@ -121281,7 +121281,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6347,
-    name: "Kesar Lassi",
+    name: "The Daily Plate",
     category: "Lassi",
     description: "Royal creamy lassi flavored with aromatic saffron strands",
     price: 109,
@@ -121299,7 +121299,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6348,
-    name: "Strawberry Lassi",
+    name: "Olive & Thyme Kitchen",
     category: "Lassi",
     description: "Sweet and tangy strawberry lassi made with fresh yogurt",
     price: 99,
@@ -121317,7 +121317,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6349,
-    name: "Dry Fruit Lassi",
+    name: "The Nourish House",
     category: "Lassi",
     description: "Rich yogurt lassi loaded with almonds, cashews and pistachios",
     price: 129,
@@ -121335,7 +121335,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6350,
-    name: "Chocolate Lassi",
+    name: "Golden Ladle Cafe",
     category: "Lassi",
     description: "Delicious chilled yogurt lassi blended with rich chocolate",
     price: 109,
@@ -121353,7 +121353,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6351,
-    name: "Banana Lassi",
+    name: "Flavour Junction",
     category: "Lassi",
     description: "Smooth and naturally sweet yogurt lassi blended with banana",
     price: 89,
@@ -121371,7 +121371,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6352,
-    name: "Pineapple Lassi",
+    name: "The Food Studio",
     category: "Lassi",
     description: "Tropical pineapple blended with creamy chilled yogurt",
     price: 99,
@@ -121389,7 +121389,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6353,
-    name: "Plain Salted Lassi",
+    name: "Urban Feast Kitchen",
     category: "Lassi",
     description: "Traditional savory yogurt drink seasoned with salt and roasted cumin",
     price: 59,
@@ -121407,7 +121407,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6354,
-    name: "Masala Lassi",
+    name: "The Rustic Bowl",
     category: "Lassi",
     description: "Refreshing salted lassi flavored with roasted cumin and Indian spices",
     price: 69,
@@ -121425,7 +121425,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6355,
-    name: "Mint Lassi",
+    name: "Saffron Street Cafe",
     category: "Lassi",
     description: "Cool and refreshing yogurt lassi blended with fresh mint leaves",
     price: 69,
@@ -121443,7 +121443,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6356,
-    name: "Jeera Lassi",
+    name: "The Wholesome Kitchen",
     category: "Lassi",
     description: "Traditional savory lassi seasoned with aromatic roasted cumin",
     price: 69,
@@ -121461,7 +121461,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6357,
-    name: "Pista Lassi",
+    name: "Maple Leaf Bistro",
     category: "Lassi",
     description: "Creamy sweet lassi garnished with crunchy pistachio pieces",
     price: 119,
@@ -121479,7 +121479,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6358,
-    name: "Almond Lassi",
+    name: "The Happy Platter",
     category: "Lassi",
     description: "Smooth yogurt lassi enriched with finely ground almonds",
     price: 119,
@@ -121497,7 +121497,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6359,
-    name: "Kesar Badam Lassi",
+    name: "Cedar Spoon Restaurant",
     category: "Lassi",
     description: "Premium creamy lassi with saffron, almonds and a delicate sweet flavor",
     price: 139,
@@ -121515,7 +121515,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6360,
-    name: "Rabri Lassi",
+    name: "The Good Grain Cafe",
     category: "Lassi",
     description: "Indulgent thick lassi topped with rich traditional rabri",
     price: 139,
@@ -121533,7 +121533,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6361,
-    name: "Malai Lassi",
+    name: "The Fresh Table",
     category: "Lassi",
     description: "Traditional creamy lassi topped with a generous layer of fresh malai",
     price: 99,
@@ -121551,7 +121551,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6362,
-    name: "Blueberry Lassi",
+    name: "Little Leaf Kitchen",
     category: "Lassi",
     description: "Fruity chilled yogurt lassi blended with sweet blueberry flavor",
     price: 119,
@@ -121569,7 +121569,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6363,
-    name: "Blackcurrant Lassi",
+    name: "The Culinary Corner",
     category: "Lassi",
     description: "Sweet and tangy blackcurrant lassi blended with creamy yogurt",
     price: 119,
@@ -121587,7 +121587,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6364,
-    name: "Kiwi Lassi",
+    name: "Nature’s Basket Cafe",
     category: "Lassi",
     description: "Refreshing yogurt lassi blended with tangy and sweet kiwi fruit",
     price: 109,
@@ -121605,7 +121605,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6365,
-    name: "Apple Lassi",
+    name: "The Food Garden",
     category: "Lassi",
     description: "Creamy yogurt drink blended with fresh apple and mild sweetness",
     price: 99,
@@ -121623,7 +121623,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6366,
-    name: "Litchi Lassi",
+    name: "Spice Route Kitchen",
     category: "Lassi",
     description: "Delightful sweet lassi blended with juicy litchi flavor",
     price: 109,
@@ -121641,7 +121641,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6367,
-    name: "Pomegranate Lassi",
+    name: "The Cozy Fork",
     category: "Lassi",
     description: "Refreshing yogurt lassi with sweet pomegranate flavor and fresh fruit",
     price: 109,
@@ -121659,7 +121659,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6368,
-    name: "Coconut Lassi",
+    name: "Daily Delight Bistro",
     category: "Lassi",
     description: "Creamy tropical lassi blended with coconut milk and coconut flakes",
     price: 109,
@@ -121677,7 +121677,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6369,
-    name: "Thandai Lassi",
+    name: "The Tasty Pantry",
     category: "Lassi",
     description: "Festive chilled lassi flavored with traditional thandai spices and nuts",
     price: 119,
@@ -121695,7 +121695,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6370,
-    name: "Elaichi Lassi",
+    name: "Blue Plate Kitchen",
     category: "Lassi",
     description: "Sweet creamy lassi infused with fragrant green cardamom",
     price: 79,
@@ -121713,7 +121713,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6371,
-    name: "Saffron Rose Lassi",
+    name: "The Honest Meal",
     category: "Lassi",
     description: "Aromatic sweet lassi combining delicate saffron and rose flavors",
     price: 129,
@@ -121731,7 +121731,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6372,
-    name: "Vanilla Lassi",
+    name: "Sunrise Cafe & Kitchen",
     category: "Lassi",
     description: "Smooth chilled yogurt lassi blended with rich vanilla flavor",
     price: 89,
@@ -121749,7 +121749,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6373,
-    name: "Butterscotch Lassi",
+    name: "The Kitchen Collective",
     category: "Lassi",
     description: "Sweet and creamy lassi blended with buttery butterscotch flavor",
     price: 109,
@@ -121767,7 +121767,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6374,
-    name: "Oreo Lassi",
+    name: "Flavour House",
     category: "Lassi",
     description: "Dessert-style creamy lassi blended with crunchy chocolate cookies",
     price: 119,
@@ -121785,7 +121785,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6375,
-    name: "KitKat Lassi",
+    name: "The Green Apron",
     category: "Lassi",
     description: "Thick chocolate lassi topped with crunchy wafer chocolate pieces",
     price: 129,
@@ -121803,7 +121803,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6376,
-    name: "Caramel Lassi",
+    name: "City Spoon Bistro",
     category: "Lassi",
     description: "Creamy sweet lassi blended with smooth caramel syrup",
     price: 109,
@@ -121821,7 +121821,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6377,
-    name: "Honey Lassi",
+    name: "The Farmhouse Cafe",
     category: "Lassi",
     description: "Naturally sweetened creamy yogurt lassi with fragrant honey",
     price: 89,
@@ -121839,7 +121839,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6378,
-    name: "Jaggery Lassi",
+    name: "Root & Roast Kitchen",
     category: "Lassi",
     description: "Traditional creamy lassi sweetened with earthy jaggery",
     price: 89,
@@ -121857,7 +121857,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6379,
-    name: "Mango Kesar Lassi",
+    name: "The Gourmet Nest",
     category: "Lassi",
     description: "Rich mango lassi enhanced with aromatic saffron and creamy yogurt",
     price: 129,
@@ -121875,7 +121875,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6380,
-    name: "Mango Dry Fruit Lassi",
+    name: "Urban Harvest Bistro",
     category: "Lassi",
     description: "Delicious mango yogurt lassi topped with almonds and pistachios",
     price: 139,
@@ -121893,7 +121893,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6381,
-    name: "Punjabi Matka Lassi",
+    name: "The Savoury Spoon",
     category: "Lassi",
     description: "Traditional thick sweet lassi served in an earthen matka",
     price: 109,
@@ -121911,7 +121911,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6382,
-    name: "Mini Sweet Lassi",
+    name: "Fresh Roots Cafe",
     category: "Lassi",
     description: "Small serving of traditional chilled sweet yogurt lassi",
     price: 39,
@@ -121929,7 +121929,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6383,
-    name: "Family Pack Sweet Lassi",
+    name: "The Platter Room",
     category: "Lassi",
     description: "Large sharing pack of refreshing traditional sweet lassi",
     price: 199,
@@ -121947,7 +121947,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6384,
-    name: "Sweet and Salted Lassi",
+    name: "The Kitchen Story",
     category: "Lassi",
     description: "Balanced yogurt drink combining gentle sweetness with a savory touch",
     price: 69,
@@ -121965,7 +121965,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6385,
-    name: "Spicy Chilli Lassi",
+    name: "The Meal Market",
     category: "Lassi",
     description: "Savory yogurt lassi with green chilli, cumin and fresh herbs",
     price: 79,
@@ -121983,7 +121983,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6386,
-    name: "Cucumber Mint Lassi",
+    name: "The Corner Bistro",
     category: "Lassi",
     description: "Cooling savory lassi blended with cucumber, mint and roasted cumin",
     price: 79,
@@ -122001,7 +122001,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6387,
-    name: "Beetroot Lassi",
+    name: "The Modern Tiffin",
     category: "Lassi",
     description: "Colorful yogurt lassi blended with beetroot and a hint of spices",
     price: 89,
@@ -122019,7 +122019,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6388,
-    name: "Gulkand Lassi",
+    name: "The Food Loft",
     category: "Lassi",
     description: "Rich sweet lassi infused with fragrant rose petal gulkand",
     price: 119,
@@ -122037,7 +122037,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6389,
-    name: "Paan Lassi",
+    name: "The Signature Kitchen",
     category: "Lassi",
     description: "Refreshing sweet lassi infused with aromatic paan and fennel flavors",
     price: 109,
@@ -122055,7 +122055,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6390,
-    name: "Kulfi Lassi",
+    name: "The Good Food Company",
     category: "Lassi",
     description: "Indulgent thick lassi blended with creamy traditional kulfi flavor",
     price: 129,
@@ -122073,7 +122073,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6391,
-    name: "Lassi Supreme",
+    name: "The Village Table",
     category: "Lassi",
     description: "Signature thick sweet lassi topped with rabri, nuts and saffron",
     price: 149,
@@ -122091,7 +122091,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6392,
-    name: "Special Punjabi Lassi Combo",
+    name: "The Premium Plate",
     category: "Lassi",
     description: "Special Punjabi sweet lassi served with a creamy malai topping and dry fruits",
     price: 159,
@@ -122109,7 +122109,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 6393,
-    name: "Plain Masala Chaach",
+    name: "The Urban Spoon",
     category: "Chaach",
     description: "Refreshing traditional buttermilk seasoned with roasted cumin and salt",
     price: 35,
@@ -122127,7 +122127,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6394,
-    name: "Punjabi Masala Chaach",
+    name: "Fresh Fork Kitchen",
     category: "Chaach",
     description: "Punjabi-style chilled buttermilk blended with cumin, black salt and spices",
     price: 45,
@@ -122145,7 +122145,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6395,
-    name: "Jeera Chaach",
+    name: "Green Garden Cafe",
     category: "Chaach",
     description: "Cooling buttermilk flavored with freshly roasted and ground cumin",
     price: 39,
@@ -122163,7 +122163,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6396,
-    name: "Mint Chaach",
+    name: "Harvest Table Bistro",
     category: "Chaach",
     description: "Refreshing chilled buttermilk blended with fresh mint leaves and spices",
     price: 45,
@@ -122181,7 +122181,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6397,
-    name: "Pudina Masala Chaach",
+    name: "The Daily Plate",
     category: "Chaach",
     description: "Traditional spiced buttermilk with mint, roasted cumin and black salt",
     price: 49,
@@ -122199,7 +122199,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6398,
-    name: "Gujarati Chaas",
+    name: "Olive & Thyme Kitchen",
     category: "Chaach",
     description: "Light Gujarati-style chaas with fresh yogurt, salt and roasted cumin",
     price: 39,
@@ -122217,7 +122217,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6399,
-    name: "Rajasthani Masala Chaas",
+    name: "The Nourish House",
     category: "Chaach",
     description: "Traditional Rajasthani buttermilk seasoned with cumin, coriander and spices",
     price: 49,
@@ -122235,7 +122235,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6400,
-    name: "Kadhi Style Chaach",
+    name: "Golden Ladle Cafe",
     category: "Chaach",
     description: "Creamy buttermilk drink flavored with turmeric and traditional Indian spices",
     price: 45,
@@ -122253,7 +122253,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6401,
-    name: "Green Chilli Chaach",
+    name: "Flavour Junction",
     category: "Chaach",
     description: "Savory buttermilk with green chilli, coriander and roasted cumin",
     price: 45,
@@ -122271,7 +122271,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6402,
-    name: "Cucumber Chaach",
+    name: "The Food Studio",
     category: "Chaach",
     description: "Cooling yogurt buttermilk blended with fresh cucumber and mint",
     price: 49,
@@ -122289,7 +122289,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6403,
-    name: "Coriander Chaach",
+    name: "Urban Feast Kitchen",
     category: "Chaach",
     description: "Fresh buttermilk blended with coriander leaves and mild Indian spices",
     price: 45,
@@ -122307,7 +122307,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6404,
-    name: "Ginger Masala Chaach",
+    name: "The Rustic Bowl",
     category: "Chaach",
     description: "Savory buttermilk infused with fresh ginger, cumin and black salt",
     price: 49,
@@ -122325,7 +122325,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6405,
-    name: "Lemon Masala Chaach",
+    name: "Saffron Street Cafe",
     category: "Chaach",
     description: "Tangy chilled buttermilk flavored with lemon, cumin and black salt",
     price: 45,
@@ -122343,7 +122343,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6406,
-    name: "Black Salt Chaach",
+    name: "The Wholesome Kitchen",
     category: "Chaach",
     description: "Classic chilled buttermilk seasoned with tangy black salt",
     price: 35,
@@ -122361,7 +122361,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6407,
-    name: "Hing Jeera Chaach",
+    name: "Maple Leaf Bistro",
     category: "Chaach",
     description: "Traditional spiced buttermilk with aromatic asafoetida and roasted cumin",
     price: 49,
@@ -122379,7 +122379,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6408,
-    name: "Garlic Masala Chaach",
+    name: "The Happy Platter",
     category: "Chaach",
     description: "Savory buttermilk infused with roasted garlic, cumin and coriander",
     price: 55,
@@ -122397,7 +122397,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6409,
-    name: "Roasted Jeera Chaas",
+    name: "Cedar Spoon Restaurant",
     category: "Chaach",
     description: "Classic buttermilk with freshly roasted cumin powder and a pinch of salt",
     price: 39,
@@ -122415,7 +122415,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6410,
-    name: "Kachumber Chaach",
+    name: "The Good Grain Cafe",
     category: "Chaach",
     description: "Refreshing buttermilk with finely chopped cucumber, tomato and coriander",
     price: 59,
@@ -122433,7 +122433,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6411,
-    name: "Dahi Masala Chaach",
+    name: "The Fresh Table",
     category: "Chaach",
     description: "Fresh yogurt-based buttermilk seasoned with a special blend of Indian spices",
     price: 45,
@@ -122451,7 +122451,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6412,
-    name: "Thick Punjabi Chaach",
+    name: "Little Leaf Kitchen",
     category: "Chaach",
     description: "Rich and creamy Punjabi buttermilk blended with cumin and fresh herbs",
     price: 59,
@@ -122469,7 +122469,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6413,
-    name: "Light Gujarati Chaach",
+    name: "The Culinary Corner",
     category: "Chaach",
     description: "Light and refreshing Gujarati buttermilk with mild cumin seasoning",
     price: 35,
@@ -122487,7 +122487,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6414,
-    name: "Dhaniya Pudina Chaach",
+    name: "Nature’s Basket Cafe",
     category: "Chaach",
     description: "Herb-rich buttermilk blended with fresh coriander, mint and roasted cumin",
     price: 49,
@@ -122505,7 +122505,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6415,
-    name: "Green Masala Chaas",
+    name: "The Food Garden",
     category: "Chaach",
     description: "Fresh green herb buttermilk with coriander, mint, green chilli and spices",
     price: 55,
@@ -122523,7 +122523,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6416,
-    name: "Aam Panna Chaach",
+    name: "Spice Route Kitchen",
     category: "Chaach",
     description: "Tangy fusion buttermilk blended with raw mango and roasted cumin",
     price: 59,
@@ -122541,7 +122541,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6417,
-    name: "Sweet Chaach",
+    name: "The Cozy Fork",
     category: "Chaach",
     description: "Mildly sweet chilled buttermilk prepared with fresh yogurt",
     price: 39,
@@ -122559,7 +122559,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6418,
-    name: "Spicy Punjabi Chaas",
+    name: "Daily Delight Bistro",
     category: "Chaach",
     description: "Bold Punjabi buttermilk with green chilli, black salt and roasted spices",
     price: 55,
@@ -122577,7 +122577,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6419,
-    name: "Smoked Jeera Chaach",
+    name: "The Tasty Pantry",
     category: "Chaach",
     description: "Chilled buttermilk infused with roasted cumin and a subtle smoky flavor",
     price: 59,
@@ -122595,7 +122595,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6420,
-    name: "Kashmiri Mint Chaach",
+    name: "Blue Plate Kitchen",
     category: "Chaach",
     description: "Refreshing herb buttermilk with mint and a delicate aromatic spice blend",
     price: 59,
@@ -122613,7 +122613,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6421,
-    name: "Beetroot Masala Chaach",
+    name: "The Honest Meal",
     category: "Chaach",
     description: "Colorful yogurt buttermilk blended with beetroot, cumin and fresh herbs",
     price: 59,
@@ -122631,7 +122631,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6422,
-    name: "Spinach Mint Chaach",
+    name: "Sunrise Cafe & Kitchen",
     category: "Chaach",
     description: "Savory buttermilk blended with spinach, mint and mild spices",
     price: 59,
@@ -122649,7 +122649,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6423,
-    name: "Carrot Masala Chaach",
+    name: "The Kitchen Collective",
     category: "Chaach",
     description: "Fresh yogurt buttermilk with carrot, coriander and roasted cumin",
     price: 55,
@@ -122667,7 +122667,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6424,
-    name: "Lemon Mint Chaas",
+    name: "Flavour House",
     category: "Chaach",
     description: "Zesty chilled buttermilk blended with lemon juice and fresh mint",
     price: 49,
@@ -122685,7 +122685,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6425,
-    name: "Curry Leaves Chaach",
+    name: "The Green Apron",
     category: "Chaach",
     description: "Traditional buttermilk tempered with aromatic curry leaves and cumin",
     price: 49,
@@ -122703,7 +122703,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6426,
-    name: "South Indian Spiced Buttermilk",
+    name: "City Spoon Bistro",
     category: "Chaach",
     description: "Traditional spiced buttermilk with curry leaves, ginger and mustard seeds",
     price: 55,
@@ -122721,7 +122721,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6427,
-    name: "Maharashtrian Chaas",
+    name: "The Farmhouse Cafe",
     category: "Chaach",
     description: "Traditional Maharashtrian buttermilk seasoned with cumin and coriander",
     price: 45,
@@ -122739,7 +122739,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6428,
-    name: "Konkani Masala Chaas",
+    name: "Root & Roast Kitchen",
     category: "Chaach",
     description: "Coastal-style buttermilk with fresh coriander, ginger and green chilli",
     price: 55,
@@ -122757,7 +122757,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6429,
-    name: "Haryanvi Desi Chaach",
+    name: "The Gourmet Nest",
     category: "Chaach",
     description: "Rustic traditional buttermilk made with fresh curd and a pinch of salt",
     price: 39,
@@ -122775,7 +122775,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6430,
-    name: "Matka Masala Chaach",
+    name: "Urban Harvest Bistro",
     category: "Chaach",
     description: "Traditional spiced buttermilk served chilled in an earthen matka",
     price: 59,
@@ -122793,7 +122793,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6431,
-    name: "Desi Ghar Ki Chaach",
+    name: "The Savoury Spoon",
     category: "Chaach",
     description: "Homestyle chilled buttermilk prepared with fresh curd and simple spices",
     price: 35,
@@ -122811,7 +122811,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6432,
-    name: "Village Style Chaach",
+    name: "Fresh Roots Cafe",
     category: "Chaach",
     description: "Rustic village-style buttermilk with a light texture and natural yogurt flavor",
     price: 39,
@@ -122829,7 +122829,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6433,
-    name: "Farm Fresh Chaach",
+    name: "The Platter Room",
     category: "Chaach",
     description: "Freshly prepared chilled buttermilk with a smooth and refreshing taste",
     price: 45,
@@ -122847,7 +122847,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6434,
-    name: "Organic Masala Chaach",
+    name: "The Kitchen Story",
     category: "Chaach",
     description: "Fresh yogurt-based buttermilk seasoned with traditional organic spices",
     price: 59,
@@ -122865,7 +122865,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6435,
-    name: "Protein Rich Chaach",
+    name: "The Meal Market",
     category: "Chaach",
     description: "Thick yogurt-based buttermilk prepared for a satisfying protein-rich drink",
     price: 69,
@@ -122883,7 +122883,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6436,
-    name: "Low Fat Masala Chaach",
+    name: "The Corner Bistro",
     category: "Chaach",
     description: "Light chilled buttermilk seasoned with cumin and black salt",
     price: 45,
@@ -122901,7 +122901,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6437,
-    name: "Mini Masala Chaach",
+    name: "The Modern Tiffin",
     category: "Chaach",
     description: "Small serving of chilled traditional buttermilk with roasted cumin",
     price: 25,
@@ -122919,7 +122919,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6438,
-    name: "Large Punjabi Chaach",
+    name: "The Food Loft",
     category: "Chaach",
     description: "Generous serving of thick Punjabi buttermilk with cumin and herbs",
     price: 79,
@@ -122937,7 +122937,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6439,
-    name: "Family Pack Masala Chaach",
+    name: "The Signature Kitchen",
     category: "Chaach",
     description: "Large sharing pack of refreshing spiced buttermilk for the whole family",
     price: 149,
@@ -122955,7 +122955,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6440,
-    name: "Chaach Tasting Combo",
+    name: "The Good Food Company",
     category: "Chaach",
     description: "Refreshing combo of classic, mint and roasted cumin buttermilk",
     price: 99,
@@ -122973,7 +122973,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6441,
-    name: "Special Masala Chaach",
+    name: "The Village Table",
     category: "Chaach",
     description: "Signature chilled buttermilk with a special blend of cumin, mint and Indian spices",
     price: 69,
@@ -122991,7 +122991,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6442,
-    name: "Chaach Supreme Combo",
+    name: "The Premium Plate",
     category: "Chaach",
     description: "Special chilled masala chaach served with mint, coriander and roasted cumin seasoning",
     price: 89,
@@ -123009,7 +123009,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6443,
-    name: "Classic Virgin Mojito",
+    name: "The Urban Spoon",
     category: "Mocktail",
     description: "Refreshing lime and mint mocktail blended with soda and crushed ice",
     price: 99,
@@ -123027,7 +123027,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6444,
-    name: "Blue Lagoon Mocktail",
+    name: "Fresh Fork Kitchen",
     category: "Mocktail",
     description: "Vibrant blue citrus mocktail with lemonade and crushed ice",
     price: 119,
@@ -123045,7 +123045,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6445,
-    name: "Strawberry Mojito",
+    name: "Green Garden Cafe",
     category: "Mocktail",
     description: "Sweet strawberry mocktail mixed with fresh mint, lime and soda",
     price: 119,
@@ -123063,7 +123063,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6446,
-    name: "Watermelon Cooler",
+    name: "Harvest Table Bistro",
     category: "Mocktail",
     description: "Chilled watermelon mocktail with fresh lime and refreshing mint",
     price: 99,
@@ -123081,7 +123081,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6447,
-    name: "Mango Passion Mocktail",
+    name: "The Daily Plate",
     category: "Mocktail",
     description: "Tropical mango mocktail blended with passion fruit and chilled soda",
     price: 129,
@@ -123099,7 +123099,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6448,
-    name: "Pineapple Punch",
+    name: "Olive & Thyme Kitchen",
     category: "Mocktail",
     description: "Sweet pineapple juice mixed with citrus, soda and crushed ice",
     price: 109,
@@ -123117,7 +123117,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6449,
-    name: "Virgin Pina Colada",
+    name: "The Nourish House",
     category: "Mocktail",
     description: "Creamy tropical pineapple and coconut mocktail served chilled",
     price: 139,
@@ -123135,7 +123135,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6450,
-    name: "Green Apple Mojito",
+    name: "Golden Ladle Cafe",
     category: "Mocktail",
     description: "Tangy green apple mocktail with mint leaves, lime and sparkling soda",
     price: 119,
@@ -123153,7 +123153,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6451,
-    name: "Kiwi Cooler",
+    name: "Flavour Junction",
     category: "Mocktail",
     description: "Refreshing kiwi fruit mocktail blended with lemon and chilled soda",
     price: 129,
@@ -123171,7 +123171,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6452,
-    name: "Orange Sunrise Mocktail",
+    name: "The Food Studio",
     category: "Mocktail",
     description: "Layered orange and grenadine-style fruit mocktail with citrus notes",
     price: 119,
@@ -123189,7 +123189,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6453,
-    name: "Peach Iced Mocktail",
+    name: "Urban Feast Kitchen",
     category: "Mocktail",
     description: "Delicate peach-flavored chilled drink with lemon and sparkling water",
     price: 119,
@@ -123207,7 +123207,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6454,
-    name: "Blueberry Mojito",
+    name: "The Rustic Bowl",
     category: "Mocktail",
     description: "Blueberry fruit mocktail with fresh mint, lime and sparkling soda",
     price: 139,
@@ -123225,7 +123225,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6455,
-    name: "Blackcurrant Cooler",
+    name: "Saffron Street Cafe",
     category: "Mocktail",
     description: "Sweet and tangy blackcurrant mocktail with lemon and crushed ice",
     price: 129,
@@ -123243,7 +123243,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6456,
-    name: "Litchi Lemon Mocktail",
+    name: "The Wholesome Kitchen",
     category: "Mocktail",
     description: "Sweet litchi mocktail balanced with fresh lemon and sparkling soda",
     price: 119,
@@ -123261,7 +123261,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6457,
-    name: "Pomegranate Sparkler",
+    name: "Maple Leaf Bistro",
     category: "Mocktail",
     description: "Ruby-red pomegranate mocktail with citrus and sparkling soda",
     price: 129,
@@ -123279,7 +123279,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6458,
-    name: "Cucumber Mint Cooler",
+    name: "The Happy Platter",
     category: "Mocktail",
     description: "Light cucumber mocktail with fresh mint, lime and chilled soda",
     price: 99,
@@ -123297,7 +123297,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6459,
-    name: "Lemon Mint Sparkler",
+    name: "Cedar Spoon Restaurant",
     category: "Mocktail",
     description: "Zesty lemon and mint drink topped with chilled sparkling water",
     price: 89,
@@ -123315,7 +123315,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6460,
-    name: "Raspberry Lemonade",
+    name: "The Good Grain Cafe",
     category: "Mocktail",
     description: "Sweet raspberry and tangy lemon blended into a refreshing chilled drink",
     price: 119,
@@ -123333,7 +123333,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6461,
-    name: "Cherry Blossom Mocktail",
+    name: "The Fresh Table",
     category: "Mocktail",
     description: "Fruity cherry mocktail with citrus flavor and a sparkling finish",
     price: 129,
@@ -123351,7 +123351,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6462,
-    name: "Passion Fruit Cooler",
+    name: "Little Leaf Kitchen",
     category: "Mocktail",
     description: "Tropical passion fruit mocktail with lime juice and sparkling soda",
     price: 139,
@@ -123369,7 +123369,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6463,
-    name: "Dragon Fruit Mocktail",
+    name: "The Culinary Corner",
     category: "Mocktail",
     description: "Colorful dragon fruit mocktail with fresh lime and chilled soda",
     price: 149,
@@ -123387,7 +123387,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6464,
-    name: "Guava Chilli Mocktail",
+    name: "Nature’s Basket Cafe",
     category: "Mocktail",
     description: "Tangy guava mocktail with a hint of chilli, lime and black salt",
     price: 109,
@@ -123405,7 +123405,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6465,
-    name: "Raw Mango Cooler",
+    name: "The Food Garden",
     category: "Mocktail",
     description: "Tangy raw mango mocktail with mint, roasted cumin and crushed ice",
     price: 99,
@@ -123423,7 +123423,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6466,
-    name: "Kokum Cooler",
+    name: "Spice Route Kitchen",
     category: "Mocktail",
     description: "Traditional kokum-inspired refreshing drink with lime and chilled soda",
     price: 99,
@@ -123441,7 +123441,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6467,
-    name: "Jaljeera Mocktail",
+    name: "The Cozy Fork",
     category: "Mocktail",
     description: "Indian-style tangy jaljeera drink with mint, cumin and lemon",
     price: 79,
@@ -123459,7 +123459,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6468,
-    name: "Masala Lemon Soda",
+    name: "Daily Delight Bistro",
     category: "Mocktail",
     description: "Classic Indian lemon soda with black salt, cumin and crushed ice",
     price: 69,
@@ -123477,7 +123477,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6469,
-    name: "Ginger Lime Fizz",
+    name: "The Tasty Pantry",
     category: "Mocktail",
     description: "Sparkling lime mocktail with fresh ginger and a refreshing citrus finish",
     price: 99,
@@ -123495,7 +123495,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6470,
-    name: "Orange Mint Cooler",
+    name: "Blue Plate Kitchen",
     category: "Mocktail",
     description: "Fresh orange mocktail with mint leaves, lemon and chilled soda",
     price: 99,
@@ -123513,7 +123513,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6471,
-    name: "Apple Cinnamon Mocktail",
+    name: "The Honest Meal",
     category: "Mocktail",
     description: "Sweet apple mocktail with a delicate cinnamon aroma and citrus notes",
     price: 119,
@@ -123531,7 +123531,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6472,
-    name: "Grape Sparkling Mocktail",
+    name: "Sunrise Cafe & Kitchen",
     category: "Mocktail",
     description: "Sweet grape-flavored mocktail topped with sparkling soda and ice",
     price: 109,
@@ -123549,7 +123549,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6473,
-    name: "Cranberry Cooler",
+    name: "The Kitchen Collective",
     category: "Mocktail",
     description: "Cranberry fruit mocktail balanced with lemon and chilled sparkling water",
     price: 129,
@@ -123567,7 +123567,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6474,
-    name: "Rose Lemonade",
+    name: "Flavour House",
     category: "Mocktail",
     description: "Floral rose syrup blended with fresh lemon juice and chilled water",
     price: 99,
@@ -123585,7 +123585,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6475,
-    name: "Hibiscus Cooler",
+    name: "The Green Apron",
     category: "Mocktail",
     description: "Floral hibiscus-infused mocktail with lemon and sparkling soda",
     price: 119,
@@ -123603,7 +123603,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6476,
-    name: "Virgin Mary Mocktail",
+    name: "City Spoon Bistro",
     category: "Mocktail",
     description: "Savory tomato mocktail with lemon, pepper and aromatic spices",
     price: 119,
@@ -123621,7 +123621,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6477,
-    name: "Italian Sunset Mocktail",
+    name: "The Farmhouse Cafe",
     category: "Mocktail",
     description: "Layered citrus and berry mocktail with a beautiful sunset-inspired finish",
     price: 139,
@@ -123639,7 +123639,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6478,
-    name: "Tropical Sunrise",
+    name: "Root & Roast Kitchen",
     category: "Mocktail",
     description: "Colorful tropical blend of orange, pineapple and grenadine-style syrup",
     price: 139,
@@ -123657,7 +123657,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6479,
-    name: "Mojito Blueberry Blast",
+    name: "The Gourmet Nest",
     category: "Mocktail",
     description: "Bold blueberry and mint mocktail with fresh lime and sparkling soda",
     price: 139,
@@ -123675,7 +123675,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6480,
-    name: "Mango Mint Fizz",
+    name: "Urban Harvest Bistro",
     category: "Mocktail",
     description: "Sweet mango and fresh mint blended with lemon and sparkling soda",
     price: 129,
@@ -123693,7 +123693,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6481,
-    name: "Lychee Rose Cooler",
+    name: "The Savoury Spoon",
     category: "Mocktail",
     description: "Sweet litchi and fragrant rose mocktail served with crushed ice",
     price: 139,
@@ -123711,7 +123711,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6482,
-    name: "Peach Passion Fizz",
+    name: "Fresh Roots Cafe",
     category: "Mocktail",
     description: "Peach and passion fruit mocktail with fresh citrus and soda",
     price: 139,
@@ -123729,7 +123729,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6483,
-    name: "Kiwi Strawberry Fizz",
+    name: "The Platter Room",
     category: "Mocktail",
     description: "Fruity kiwi and strawberry mocktail topped with sparkling soda",
     price: 139,
@@ -123747,7 +123747,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6484,
-    name: "Chocolate Mint Mocktail",
+    name: "The Kitchen Story",
     category: "Mocktail",
     description: "Creative dessert-style chilled chocolate drink with refreshing mint",
     price: 129,
@@ -123765,7 +123765,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6485,
-    name: "Vanilla Cream Mocktail",
+    name: "The Meal Market",
     category: "Mocktail",
     description: "Smooth vanilla-flavored chilled mocktail with a creamy texture",
     price: 129,
@@ -123783,7 +123783,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6486,
-    name: "Coconut Lime Cooler",
+    name: "The Corner Bistro",
     category: "Mocktail",
     description: "Tropical coconut water mocktail with lime and fresh mint",
     price: 119,
@@ -123801,7 +123801,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6487,
-    name: "Saffron Lemon Fizz",
+    name: "The Modern Tiffin",
     category: "Mocktail",
     description: "Premium citrus mocktail infused with aromatic saffron and sparkling soda",
     price: 149,
@@ -123819,7 +123819,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6488,
-    name: "Candy Crush Mocktail",
+    name: "The Food Loft",
     category: "Mocktail",
     description: "Colorful sweet fruit mocktail with mixed berry flavors and crushed ice",
     price: 129,
@@ -123837,7 +123837,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6489,
-    name: "Rainbow Fruit Mocktail",
+    name: "The Signature Kitchen",
     category: "Mocktail",
     description: "Layered colorful fruit mocktail with orange, kiwi, berry and citrus flavors",
     price: 149,
@@ -123855,7 +123855,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6490,
-    name: "Exotic Fruit Punch",
+    name: "The Good Food Company",
     category: "Mocktail",
     description: "Refreshing combination of tropical fruit juices with citrus and crushed ice",
     price: 149,
@@ -123873,7 +123873,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6491,
-    name: "Premium Mocktail Platter",
+    name: "The Village Table",
     category: "Mocktail",
     description: "Assorted refreshing mini mocktails featuring mint, citrus and fruity flavors",
     price: 199,
@@ -123891,7 +123891,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6492,
-    name: "Special Mocktail Supreme",
+    name: "The Premium Plate",
     category: "Mocktail",
     description: "Signature tropical mocktail with mixed fruits, mint, citrus and sparkling soda",
     price: 169,
@@ -123909,7 +123909,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6493,
-    name: "Classic Banana Smoothie",
+    name: "The Urban Spoon",
     category: "Smoothie",
     description: "Creamy banana smoothie blended with chilled milk and a touch of honey",
     price: 89,
@@ -123927,7 +123927,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6494,
-    name: "Strawberry Smoothie",
+    name: "Fresh Fork Kitchen",
     category: "Smoothie",
     description: "Fresh strawberries blended with creamy yogurt and chilled milk",
     price: 109,
@@ -123945,7 +123945,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6495,
-    name: "Mango Smoothie",
+    name: "Green Garden Cafe",
     category: "Smoothie",
     description: "Thick tropical smoothie prepared with ripe mangoes and creamy yogurt",
     price: 119,
@@ -123963,7 +123963,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6496,
-    name: "Blueberry Smoothie",
+    name: "Harvest Table Bistro",
     category: "Smoothie",
     description: "Refreshing blueberry smoothie blended with yogurt and chilled milk",
     price: 129,
@@ -123981,7 +123981,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6497,
-    name: "Mixed Berry Smoothie",
+    name: "The Daily Plate",
     category: "Smoothie",
     description: "Delicious blend of strawberries, blueberries and raspberries with yogurt",
     price: 139,
@@ -123999,7 +123999,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6498,
-    name: "Chocolate Banana Smoothie",
+    name: "Olive & Thyme Kitchen",
     category: "Smoothie",
     description: "Rich chocolate and banana smoothie blended with chilled milk",
     price: 119,
@@ -124017,7 +124017,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6499,
-    name: "Pineapple Smoothie",
+    name: "The Nourish House",
     category: "Smoothie",
     description: "Tropical pineapple smoothie blended with yogurt for a refreshing taste",
     price: 109,
@@ -124035,7 +124035,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6500,
-    name: "Kiwi Smoothie",
+    name: "Golden Ladle Cafe",
     category: "Smoothie",
     description: "Tangy kiwi fruit blended with creamy yogurt and a hint of honey",
     price: 119,
@@ -124053,7 +124053,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6501,
-    name: "Apple Cinnamon Smoothie",
+    name: "Flavour Junction",
     category: "Smoothie",
     description: "Fresh apple smoothie blended with yogurt and aromatic cinnamon",
     price: 109,
@@ -124071,7 +124071,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6502,
-    name: "Papaya Smoothie",
+    name: "The Food Studio",
     category: "Smoothie",
     description: "Smooth and naturally sweet papaya blended with chilled yogurt",
     price: 99,
@@ -124089,7 +124089,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6503,
-    name: "Watermelon Smoothie",
+    name: "Urban Feast Kitchen",
     category: "Smoothie",
     description: "Light and refreshing watermelon smoothie with chilled yogurt",
     price: 99,
@@ -124107,7 +124107,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6504,
-    name: "Avocado Smoothie",
+    name: "The Rustic Bowl",
     category: "Smoothie",
     description: "Rich and creamy avocado smoothie blended with milk and honey",
     price: 149,
@@ -124125,7 +124125,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6505,
-    name: "Peach Smoothie",
+    name: "Saffron Street Cafe",
     category: "Smoothie",
     description: "Sweet peach smoothie blended with creamy yogurt and chilled milk",
     price: 119,
@@ -124143,7 +124143,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6506,
-    name: "Litchi Smoothie",
+    name: "The Wholesome Kitchen",
     category: "Smoothie",
     description: "Delicate litchi smoothie blended with yogurt and a touch of honey",
     price: 119,
@@ -124161,7 +124161,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6507,
-    name: "Pomegranate Smoothie",
+    name: "Maple Leaf Bistro",
     category: "Smoothie",
     description: "Fresh pomegranate smoothie blended with creamy yogurt",
     price: 129,
@@ -124179,7 +124179,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6508,
-    name: "Coconut Smoothie",
+    name: "The Happy Platter",
     category: "Smoothie",
     description: "Tropical coconut smoothie blended with coconut milk and creamy yogurt",
     price: 129,
@@ -124197,7 +124197,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6509,
-    name: "Orange Smoothie",
+    name: "Cedar Spoon Restaurant",
     category: "Smoothie",
     description: "Citrusy orange smoothie blended with yogurt for a creamy finish",
     price: 99,
@@ -124215,7 +124215,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6510,
-    name: "Raspberry Smoothie",
+    name: "The Good Grain Cafe",
     category: "Smoothie",
     description: "Tangy raspberry smoothie blended with chilled yogurt and honey",
     price: 139,
@@ -124233,7 +124233,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6511,
-    name: "Blackcurrant Smoothie",
+    name: "The Fresh Table",
     category: "Smoothie",
     description: "Sweet and tangy blackcurrant smoothie with creamy yogurt",
     price: 129,
@@ -124251,7 +124251,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6512,
-    name: "Dragon Fruit Smoothie",
+    name: "Little Leaf Kitchen",
     category: "Smoothie",
     description: "Vibrant dragon fruit smoothie blended with yogurt and chilled milk",
     price: 149,
@@ -124269,7 +124269,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6513,
-    name: "Dates Banana Smoothie",
+    name: "The Culinary Corner",
     category: "Smoothie",
     description: "Naturally sweet smoothie with ripe bananas, dates and chilled milk",
     price: 119,
@@ -124287,7 +124287,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6514,
-    name: "Oats Banana Smoothie",
+    name: "Nature’s Basket Cafe",
     category: "Smoothie",
     description: "Filling banana smoothie blended with rolled oats, milk and honey",
     price: 119,
@@ -124305,7 +124305,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6515,
-    name: "Peanut Butter Banana Smoothie",
+    name: "The Food Garden",
     category: "Smoothie",
     description: "Creamy banana smoothie blended with peanut butter and chilled milk",
     price: 139,
@@ -124323,7 +124323,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6516,
-    name: "Almond Banana Smoothie",
+    name: "Spice Route Kitchen",
     category: "Smoothie",
     description: "Banana smoothie enriched with almonds, milk and a hint of honey",
     price: 139,
@@ -124341,7 +124341,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6517,
-    name: "Pistachio Smoothie",
+    name: "The Cozy Fork",
     category: "Smoothie",
     description: "Rich creamy smoothie blended with pistachios and chilled milk",
     price: 149,
@@ -124359,7 +124359,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6518,
-    name: "Chocolate Smoothie",
+    name: "Daily Delight Bistro",
     category: "Smoothie",
     description: "Decadent chocolate smoothie blended with milk and creamy yogurt",
     price: 119,
@@ -124377,7 +124377,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6519,
-    name: "Oreo Smoothie",
+    name: "The Tasty Pantry",
     category: "Smoothie",
     description: "Thick creamy smoothie blended with chocolate sandwich cookies",
     price: 139,
@@ -124395,7 +124395,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6520,
-    name: "Vanilla Smoothie",
+    name: "Blue Plate Kitchen",
     category: "Smoothie",
     description: "Smooth vanilla-flavored drink blended with chilled milk and yogurt",
     price: 109,
@@ -124413,7 +124413,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6521,
-    name: "Butterscotch Smoothie",
+    name: "The Honest Meal",
     category: "Smoothie",
     description: "Sweet butterscotch smoothie blended with creamy milk and yogurt",
     price: 129,
@@ -124431,7 +124431,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6522,
-    name: "Caramel Smoothie",
+    name: "Sunrise Cafe & Kitchen",
     category: "Smoothie",
     description: "Creamy chilled smoothie blended with smooth caramel flavor",
     price: 129,
@@ -124449,7 +124449,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6523,
-    name: "Coffee Smoothie",
+    name: "The Kitchen Collective",
     category: "Smoothie",
     description: "Chilled coffee smoothie blended with milk, yogurt and a touch of sweetness",
     price: 129,
@@ -124467,7 +124467,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6524,
-    name: "Matcha Smoothie",
+    name: "Flavour House",
     category: "Smoothie",
     description: "Creamy matcha green tea smoothie blended with chilled milk",
     price: 149,
@@ -124485,7 +124485,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6525,
-    name: "Spinach Banana Smoothie",
+    name: "The Green Apron",
     category: "Smoothie",
     description: "Green smoothie combining fresh spinach, banana and chilled yogurt",
     price: 109,
@@ -124503,7 +124503,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6526,
-    name: "Kale Green Smoothie",
+    name: "City Spoon Bistro",
     category: "Smoothie",
     description: "Nutritious green smoothie blended with kale, apple and banana",
     price: 139,
@@ -124521,7 +124521,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6527,
-    name: "Beetroot Berry Smoothie",
+    name: "The Farmhouse Cafe",
     category: "Smoothie",
     description: "Colorful beetroot smoothie blended with mixed berries and yogurt",
     price: 129,
@@ -124539,7 +124539,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6528,
-    name: "Carrot Orange Smoothie",
+    name: "Root & Roast Kitchen",
     category: "Smoothie",
     description: "Fresh carrot and orange smoothie blended with yogurt and honey",
     price: 109,
@@ -124557,7 +124557,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6529,
-    name: "Papaya Banana Smoothie",
+    name: "The Gourmet Nest",
     category: "Smoothie",
     description: "Smooth combination of ripe papaya and banana with creamy yogurt",
     price: 109,
@@ -124575,7 +124575,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6530,
-    name: "Mango Banana Smoothie",
+    name: "Urban Harvest Bistro",
     category: "Smoothie",
     description: "Tropical blend of ripe mango and banana with chilled milk",
     price: 129,
@@ -124593,7 +124593,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6531,
-    name: "Strawberry Banana Smoothie",
+    name: "The Savoury Spoon",
     category: "Smoothie",
     description: "Sweet strawberries and ripe bananas blended into a creamy smoothie",
     price: 119,
@@ -124611,7 +124611,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6532,
-    name: "Pineapple Coconut Smoothie",
+    name: "Fresh Roots Cafe",
     category: "Smoothie",
     description: "Tropical pineapple and coconut smoothie with a rich creamy texture",
     price: 139,
@@ -124629,7 +124629,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6533,
-    name: "Mango Passion Fruit Smoothie",
+    name: "The Platter Room",
     category: "Smoothie",
     description: "Exotic mango and passion fruit smoothie blended with chilled yogurt",
     price: 149,
@@ -124647,7 +124647,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6534,
-    name: "Almond Date Smoothie",
+    name: "The Kitchen Story",
     category: "Smoothie",
     description: "Rich smoothie made with almonds, dates and chilled milk",
     price: 139,
@@ -124665,7 +124665,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6535,
-    name: "Dry Fruit Smoothie",
+    name: "The Meal Market",
     category: "Smoothie",
     description: "Premium creamy smoothie loaded with almonds, cashews and pistachios",
     price: 159,
@@ -124683,7 +124683,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6536,
-    name: "High Protein Banana Smoothie",
+    name: "The Corner Bistro",
     category: "Smoothie",
     description: "Filling banana smoothie blended with milk, yogurt and protein-rich ingredients",
     price: 159,
@@ -124701,7 +124701,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6537,
-    name: "Peanut Butter Chocolate Smoothie",
+    name: "The Modern Tiffin",
     category: "Smoothie",
     description: "Rich chocolate smoothie blended with peanut butter and chilled milk",
     price: 149,
@@ -124719,7 +124719,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6538,
-    name: "Greek Yogurt Berry Smoothie",
+    name: "The Food Loft",
     category: "Smoothie",
     description: "Thick smoothie made with Greek yogurt and a delicious mix of berries",
     price: 149,
@@ -124737,7 +124737,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6539,
-    name: "Chia Seed Smoothie",
+    name: "The Signature Kitchen",
     category: "Smoothie",
     description: "Refreshing fruit smoothie blended with chia seeds and creamy yogurt",
     price: 129,
@@ -124755,7 +124755,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6540,
-    name: "Smoothie Bowl Combo",
+    name: "The Good Food Company",
     category: "Smoothie",
     description: "Thick fruit smoothie bowl topped with fresh banana, berries and crunchy nuts",
     price: 179,
@@ -124773,7 +124773,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6541,
-    name: "Tropical Smoothie Supreme",
+    name: "The Village Table",
     category: "Smoothie",
     description: "Signature tropical smoothie combining mango, pineapple, banana and yogurt",
     price: 169,
@@ -124791,7 +124791,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6542,
-    name: "Special Mixed Fruit Smoothie",
+    name: "The Premium Plate",
     category: "Smoothie",
     description: "Special creamy smoothie blended with seasonal fruits, yogurt and honey",
     price: 159,
@@ -124809,7 +124809,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
 {
     id: 6543,
-    name: "Classic Buttermilk",
+    name: "The Urban Spoon",
     category: "Buttermilk",
     description: "Refreshing traditional buttermilk prepared with fresh yogurt and chilled water",
     price: 35,
@@ -124827,7 +124827,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6544,
-    name: "Masala Buttermilk",
+    name: "Fresh Fork Kitchen",
     category: "Buttermilk",
     description: "Chilled buttermilk seasoned with roasted cumin, black salt and Indian spices",
     price: 39,
@@ -124845,7 +124845,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6545,
-    name: "Jeera Buttermilk",
+    name: "Green Garden Cafe",
     category: "Buttermilk",
     description: "Refreshing yogurt drink flavored with freshly roasted cumin powder",
     price: 39,
@@ -124863,7 +124863,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6546,
-    name: "Mint Buttermilk",
+    name: "Harvest Table Bistro",
     category: "Buttermilk",
     description: "Cooling buttermilk blended with fresh mint leaves and mild spices",
     price: 45,
@@ -124881,7 +124881,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6547,
-    name: "Punjabi Buttermilk",
+    name: "The Daily Plate",
     category: "Buttermilk",
     description: "Traditional Punjabi-style thick buttermilk with roasted cumin and black salt",
     price: 49,
@@ -124899,7 +124899,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6548,
-    name: "Gujarati Chaas Buttermilk",
+    name: "Olive & Thyme Kitchen",
     category: "Buttermilk",
     description: "Light Gujarati-style buttermilk with cumin, coriander and fresh yogurt",
     price: 39,
@@ -124917,7 +124917,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6549,
-    name: "Rajasthani Buttermilk",
+    name: "The Nourish House",
     category: "Buttermilk",
     description: "Rustic Rajasthani buttermilk seasoned with cumin, coriander and traditional spices",
     price: 45,
@@ -124935,7 +124935,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6550,
-    name: "Salted Buttermilk",
+    name: "Golden Ladle Cafe",
     category: "Buttermilk",
     description: "Simple chilled buttermilk seasoned with a pinch of salt",
     price: 29,
@@ -124953,7 +124953,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6551,
-    name: "Black Salt Buttermilk",
+    name: "Flavour Junction",
     category: "Buttermilk",
     description: "Refreshing savory buttermilk flavored with tangy black salt",
     price: 35,
@@ -124971,7 +124971,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6552,
-    name: "Sweet Buttermilk",
+    name: "The Food Studio",
     category: "Buttermilk",
     description: "Mildly sweet chilled yogurt drink with a smooth and creamy texture",
     price: 39,
@@ -124989,7 +124989,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6553,
-    name: "Pudina Masala Buttermilk",
+    name: "Urban Feast Kitchen",
     category: "Buttermilk",
     description: "Fresh buttermilk blended with mint, cumin and aromatic Indian spices",
     price: 49,
@@ -125007,7 +125007,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6554,
-    name: "Coriander Buttermilk",
+    name: "The Rustic Bowl",
     category: "Buttermilk",
     description: "Cooling yogurt drink blended with fresh coriander leaves and roasted cumin",
     price: 45,
@@ -125025,7 +125025,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6555,
-    name: "Ginger Buttermilk",
+    name: "Saffron Street Cafe",
     category: "Buttermilk",
     description: "Savory chilled buttermilk infused with fresh ginger and roasted cumin",
     price: 45,
@@ -125043,7 +125043,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6556,
-    name: "Lemon Buttermilk",
+    name: "The Wholesome Kitchen",
     category: "Buttermilk",
     description: "Tangy chilled buttermilk with fresh lemon juice and a pinch of black salt",
     price: 45,
@@ -125061,7 +125061,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6557,
-    name: "Cucumber Buttermilk",
+    name: "Maple Leaf Bistro",
     category: "Buttermilk",
     description: "Refreshing buttermilk blended with cucumber, mint and light seasoning",
     price: 49,
@@ -125079,7 +125079,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6558,
-    name: "Green Chilli Buttermilk",
+    name: "The Happy Platter",
     category: "Buttermilk",
     description: "Spicy savory buttermilk with green chilli, coriander and roasted cumin",
     price: 45,
@@ -125097,7 +125097,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6559,
-    name: "Garlic Masala Buttermilk",
+    name: "Cedar Spoon Restaurant",
     category: "Buttermilk",
     description: "Savory yogurt drink infused with roasted garlic, cumin and fresh coriander",
     price: 55,
@@ -125115,7 +125115,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6560,
-    name: "Hing Jeera Buttermilk",
+    name: "The Good Grain Cafe",
     category: "Buttermilk",
     description: "Traditional buttermilk seasoned with aromatic asafoetida and roasted cumin",
     price: 49,
@@ -125133,7 +125133,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6561,
-    name: "Roasted Cumin Buttermilk",
+    name: "The Fresh Table",
     category: "Buttermilk",
     description: "Classic chilled yogurt drink with freshly roasted cumin powder",
     price: 39,
@@ -125151,7 +125151,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6562,
-    name: "Curry Leaves Buttermilk",
+    name: "Little Leaf Kitchen",
     category: "Buttermilk",
     description: "South Indian-inspired buttermilk tempered with aromatic curry leaves",
     price: 49,
@@ -125169,7 +125169,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6563,
-    name: "South Indian Spiced Buttermilk",
+    name: "The Culinary Corner",
     category: "Buttermilk",
     description: "Traditional buttermilk with ginger, mustard seeds and fresh curry leaves",
     price: 55,
@@ -125187,7 +125187,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6564,
-    name: "Maharashtrian Taak",
+    name: "Nature’s Basket Cafe",
     category: "Buttermilk",
     description: "Traditional Maharashtrian buttermilk seasoned with coriander and cumin",
     price: 45,
@@ -125205,7 +125205,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6565,
-    name: "Konkani Spiced Buttermilk",
+    name: "The Food Garden",
     category: "Buttermilk",
     description: "Coastal-style buttermilk with ginger, coriander and green chilli",
     price: 55,
@@ -125223,7 +125223,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6566,
-    name: "Haryanvi Desi Buttermilk",
+    name: "Spice Route Kitchen",
     category: "Buttermilk",
     description: "Rustic village-style buttermilk prepared with fresh curd and salt",
     price: 35,
@@ -125241,7 +125241,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6567,
-    name: "Matka Buttermilk",
+    name: "The Cozy Fork",
     category: "Buttermilk",
     description: "Traditional chilled buttermilk served in an earthen matka",
     price: 59,
@@ -125259,7 +125259,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6568,
-    name: "Village Style Buttermilk",
+    name: "Daily Delight Bistro",
     category: "Buttermilk",
     description: "Homestyle traditional buttermilk with a light texture and fresh curd flavor",
     price: 39,
@@ -125277,7 +125277,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6569,
-    name: "Farm Fresh Buttermilk",
+    name: "The Tasty Pantry",
     category: "Buttermilk",
     description: "Freshly prepared chilled buttermilk with a smooth and refreshing taste",
     price: 45,
@@ -125295,7 +125295,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6570,
-    name: "Low Fat Buttermilk",
+    name: "Blue Plate Kitchen",
     category: "Buttermilk",
     description: "Light chilled buttermilk prepared with low-fat yogurt and mild seasoning",
     price: 39,
@@ -125313,7 +125313,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6571,
-    name: "Protein Rich Buttermilk",
+    name: "The Honest Meal",
     category: "Buttermilk",
     description: "Thick yogurt-based buttermilk prepared as a satisfying protein-rich drink",
     price: 69,
@@ -125331,7 +125331,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6572,
-    name: "Organic Buttermilk",
+    name: "Sunrise Cafe & Kitchen",
     category: "Buttermilk",
     description: "Fresh yogurt-based buttermilk with simple seasoning and a natural taste",
     price: 59,
@@ -125349,7 +125349,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6573,
-    name: "Beetroot Buttermilk",
+    name: "The Kitchen Collective",
     category: "Buttermilk",
     description: "Colorful savory buttermilk blended with beetroot and fresh herbs",
     price: 59,
@@ -125367,7 +125367,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6574,
-    name: "Spinach Mint Buttermilk",
+    name: "Flavour House",
     category: "Buttermilk",
     description: "Green herb buttermilk blended with spinach, mint and roasted cumin",
     price: 59,
@@ -125385,7 +125385,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6575,
-    name: "Carrot Masala Buttermilk",
+    name: "The Green Apron",
     category: "Buttermilk",
     description: "Fresh buttermilk blended with carrot, coriander and roasted cumin",
     price: 55,
@@ -125403,7 +125403,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6576,
-    name: "Aam Panna Buttermilk",
+    name: "City Spoon Bistro",
     category: "Buttermilk",
     description: "Tangy fusion drink combining raw mango, yogurt and roasted cumin",
     price: 59,
@@ -125421,7 +125421,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6577,
-    name: "Lemon Mint Buttermilk",
+    name: "The Farmhouse Cafe",
     category: "Buttermilk",
     description: "Zesty chilled yogurt drink blended with lemon juice and fresh mint",
     price: 49,
@@ -125439,7 +125439,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6578,
-    name: "Spicy Masala Buttermilk",
+    name: "Root & Roast Kitchen",
     category: "Buttermilk",
     description: "Bold savory buttermilk with green chilli, black salt and roasted spices",
     price: 49,
@@ -125457,7 +125457,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6579,
-    name: "Smoked Jeera Buttermilk",
+    name: "The Gourmet Nest",
     category: "Buttermilk",
     description: "Chilled yogurt drink with roasted cumin and a subtle smoky flavor",
     price: 59,
@@ -125475,7 +125475,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6580,
-    name: "Sweet and Salted Buttermilk",
+    name: "Urban Harvest Bistro",
     category: "Buttermilk",
     description: "Balanced yogurt drink combining gentle sweetness with a savory touch",
     price: 45,
@@ -125493,7 +125493,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6581,
-    name: "Thick Creamy Buttermilk",
+    name: "The Savoury Spoon",
     category: "Buttermilk",
     description: "Rich and creamy yogurt-based buttermilk with a smooth texture",
     price: 59,
@@ -125511,7 +125511,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6582,
-    name: "Mini Classic Buttermilk",
+    name: "Fresh Roots Cafe",
     category: "Buttermilk",
     description: "Small serving of traditional chilled buttermilk with light seasoning",
     price: 25,
@@ -125529,7 +125529,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6583,
-    name: "Large Punjabi Buttermilk",
+    name: "The Platter Room",
     category: "Buttermilk",
     description: "Generous serving of thick Punjabi buttermilk with cumin and herbs",
     price: 79,
@@ -125547,7 +125547,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6584,
-    name: "Family Pack Buttermilk",
+    name: "The Kitchen Story",
     category: "Buttermilk",
     description: "Large sharing pack of refreshing traditional buttermilk for the whole family",
     price: 149,
@@ -125565,7 +125565,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6585,
-    name: "Buttermilk Tasting Combo",
+    name: "The Meal Market",
     category: "Buttermilk",
     description: "Assorted mini buttermilk servings featuring classic, mint and cumin flavors",
     price: 99,
@@ -125583,7 +125583,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6586,
-    name: "Desi Ghar Ki Buttermilk",
+    name: "The Corner Bistro",
     category: "Buttermilk",
     description: "Homestyle buttermilk prepared with fresh curd and traditional seasoning",
     price: 35,
@@ -125601,7 +125601,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6587,
-    name: "Special Masala Buttermilk",
+    name: "The Modern Tiffin",
     category: "Buttermilk",
     description: "Signature chilled buttermilk with a special blend of cumin, mint and spices",
     price: 69,
@@ -125619,7 +125619,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6588,
-    name: "Kachumber Buttermilk",
+    name: "The Food Loft",
     category: "Buttermilk",
     description: "Savory yogurt drink with cucumber, tomato, coriander and roasted cumin",
     price: 59,
@@ -125637,7 +125637,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6589,
-    name: "Dhaniya Pudina Buttermilk",
+    name: "The Signature Kitchen",
     category: "Buttermilk",
     description: "Herb-rich chilled buttermilk with fresh coriander, mint and cumin",
     price: 49,
@@ -125655,7 +125655,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6590,
-    name: "Buttermilk Supreme",
+    name: "The Good Food Company",
     category: "Buttermilk",
     description: "Premium creamy buttermilk topped with fresh herbs and roasted cumin seasoning",
     price: 79,
@@ -125673,7 +125673,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6591,
-    name: "Traditional Matka Buttermilk Combo",
+    name: "The Village Table",
     category: "Buttermilk",
     description: "Traditional matka buttermilk served with a special roasted cumin seasoning",
     price: 89,
@@ -125691,7 +125691,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6592,
-    name: "Special Buttermilk Combo",
+    name: "The Premium Plate",
     category: "Buttermilk",
     description: "Special refreshing buttermilk served with mint, coriander and cumin seasoning",
     price: 99,
@@ -125709,7 +125709,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 6593,
-    name: "Roasted Makhana",
+    name: "The Urban Spoon",
     category: "Snacks",
     description: "Crispy roasted fox nuts lightly seasoned with Himalayan salt",
     price: 59,
@@ -125727,7 +125727,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6594,
-    name: "Peri Peri Makhana",
+    name: "Fresh Fork Kitchen",
     category: "Snacks",
     description: "Crunchy roasted makhana tossed in spicy peri peri seasoning",
     price: 69,
@@ -125745,7 +125745,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6595,
-    name: "Masala Roasted Chana",
+    name: "Green Garden Cafe",
     category: "Snacks",
     description: "Protein-rich roasted chickpeas with traditional Indian spices",
     price: 49,
@@ -125763,7 +125763,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6596,
-    name: "Jaggery Peanut Chikki",
+    name: "Harvest Table Bistro",
     category: "Snacks",
     description: "Traditional crunchy peanut brittle naturally sweetened with jaggery",
     price: 39,
@@ -125781,7 +125781,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6597,
-    name: "Sprouts Chaat",
+    name: "The Daily Plate",
     category: "Snacks",
     description: "Fresh mixed sprouts tossed with onion, tomato, lemon and spices",
     price: 69,
@@ -125799,7 +125799,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6598,
-    name: "Moong Dal Chilla",
+    name: "Olive & Thyme Kitchen",
     category: "Snacks",
     description: "Light golden pancakes made with protein-rich ground moong dal",
     price: 79,
@@ -125817,7 +125817,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6599,
-    name: "Besan Vegetable Chilla",
+    name: "The Nourish House",
     category: "Snacks",
     description: "Nutritious gram flour pancakes loaded with fresh vegetables",
     price: 89,
@@ -125835,7 +125835,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6600,
-    name: "Steamed Vegetable Momos",
+    name: "Golden Ladle Cafe",
     category: "Snacks",
     description: "Soft steamed dumplings filled with fresh seasonal vegetables",
     price: 89,
@@ -125853,7 +125853,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6601,
-    name: "Grilled Paneer Tikka",
+    name: "Flavour Junction",
     category: "Snacks",
     description: "Marinated paneer cubes grilled with aromatic Indian spices",
     price: 129,
@@ -125871,7 +125871,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6602,
-    name: "Cucumber Hummus Bites",
+    name: "The Food Studio",
     category: "Snacks",
     description: "Fresh cucumber rounds topped with creamy homemade hummus",
     price: 99,
@@ -125889,7 +125889,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6603,
-    name: "Greek Yogurt Fruit Bowl",
+    name: "Urban Feast Kitchen",
     category: "Snacks",
     description: "Creamy Greek yogurt topped with fresh seasonal fruits and seeds",
     price: 119,
@@ -125907,7 +125907,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6604,
-    name: "Fresh Fruit Chaat",
+    name: "The Rustic Bowl",
     category: "Snacks",
     description: "Seasonal fresh fruits tossed with lemon and mild chaat masala",
     price: 79,
@@ -125925,7 +125925,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6605,
-    name: "Apple Peanut Butter Slices",
+    name: "Saffron Street Cafe",
     category: "Snacks",
     description: "Fresh apple slices topped with smooth natural peanut butter",
     price: 89,
@@ -125943,7 +125943,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6606,
-    name: "Banana Oat Cookies",
+    name: "The Wholesome Kitchen",
     category: "Snacks",
     description: "Wholesome baked oat cookies naturally sweetened with ripe bananas",
     price: 69,
@@ -125961,7 +125961,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6607,
-    name: "Ragi Vegetable Cutlet",
+    name: "Maple Leaf Bistro",
     category: "Snacks",
     description: "Crispy shallow-fried cutlets prepared with nutritious ragi and vegetables",
     price: 79,
@@ -125979,7 +125979,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6608,
-    name: "Sweet Potato Wedges",
+    name: "The Happy Platter",
     category: "Snacks",
     description: "Oven-roasted sweet potato wedges seasoned with herbs and spices",
     price: 89,
@@ -125997,7 +125997,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6609,
-    name: "Baked Multigrain Chips",
+    name: "Cedar Spoon Restaurant",
     category: "Snacks",
     description: "Light and crunchy baked chips made with wholesome multigrain flour",
     price: 59,
@@ -126015,7 +126015,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6610,
-    name: "Quinoa Vegetable Patties",
+    name: "The Good Grain Cafe",
     category: "Snacks",
     description: "Healthy quinoa patties mixed with vegetables and fresh herbs",
     price: 119,
@@ -126033,7 +126033,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6611,
-    name: "Steamed Dhokla",
+    name: "The Fresh Table",
     category: "Snacks",
     description: "Soft and fluffy steamed gram flour dhokla with mustard tempering",
     price: 59,
@@ -126051,7 +126051,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6612,
-    name: "Khaman Dhokla",
+    name: "Little Leaf Kitchen",
     category: "Snacks",
     description: "Soft Gujarati khaman topped with fresh coriander and green chillies",
     price: 69,
@@ -126069,7 +126069,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6613,
-    name: "Vegetable Idli",
+    name: "The Culinary Corner",
     category: "Snacks",
     description: "Soft steamed rice and lentil idlis enriched with seasonal vegetables",
     price: 69,
@@ -126087,7 +126087,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6614,
-    name: "Ragi Idli",
+    name: "Nature’s Basket Cafe",
     category: "Snacks",
     description: "Nutritious steamed finger millet idlis served with fresh chutney",
     price: 79,
@@ -126105,7 +126105,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6615,
-    name: "Vegetable Upma",
+    name: "The Food Garden",
     category: "Snacks",
     description: "Light semolina upma cooked with vegetables, curry leaves and spices",
     price: 69,
@@ -126123,7 +126123,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6616,
-    name: "Vegetable Poha",
+    name: "Spice Route Kitchen",
     category: "Snacks",
     description: "Traditional flattened rice cooked with peas, peanuts and fresh coriander",
     price: 59,
@@ -126141,7 +126141,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6617,
-    name: "Masala Corn Cup",
+    name: "The Cozy Fork",
     category: "Snacks",
     description: "Sweet corn kernels tossed with lemon, pepper and aromatic spices",
     price: 49,
@@ -126159,7 +126159,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6618,
-    name: "Grilled Corn on Cob",
+    name: "Daily Delight Bistro",
     category: "Snacks",
     description: "Fresh corn grilled and brushed with lemon and mild spice seasoning",
     price: 59,
@@ -126177,7 +126177,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6619,
-    name: "Chickpea Salad",
+    name: "The Tasty Pantry",
     category: "Snacks",
     description: "Boiled chickpeas mixed with cucumber, tomato, onion and lemon dressing",
     price: 89,
@@ -126195,7 +126195,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6620,
-    name: "Mediterranean Lentil Salad",
+    name: "Blue Plate Kitchen",
     category: "Snacks",
     description: "Nutritious lentils tossed with cucumber, tomatoes and fresh herbs",
     price: 119,
@@ -126213,7 +126213,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6621,
-    name: "Paneer Cucumber Salad",
+    name: "The Honest Meal",
     category: "Snacks",
     description: "Fresh cucumber and protein-rich paneer tossed with herbs and lemon",
     price: 109,
@@ -126231,7 +126231,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6622,
-    name: "Avocado Toast",
+    name: "Sunrise Cafe & Kitchen",
     category: "Snacks",
     description: "Whole wheat toast topped with creamy avocado and black pepper",
     price: 139,
@@ -126249,7 +126249,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6623,
-    name: "Peanut Butter Whole Wheat Toast",
+    name: "The Kitchen Collective",
     category: "Snacks",
     description: "Toasted whole wheat bread spread with natural creamy peanut butter",
     price: 89,
@@ -126267,7 +126267,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6624,
-    name: "Multigrain Vegetable Sandwich",
+    name: "Flavour House",
     category: "Snacks",
     description: "Fresh multigrain sandwich filled with cucumber, tomato and lettuce",
     price: 99,
@@ -126285,7 +126285,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6625,
-    name: "Grilled Paneer Sandwich",
+    name: "The Green Apron",
     category: "Snacks",
     description: "Whole wheat grilled sandwich stuffed with spiced paneer and vegetables",
     price: 119,
@@ -126303,7 +126303,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6626,
-    name: "Oats Vegetable Pancake",
+    name: "City Spoon Bistro",
     category: "Snacks",
     description: "Savory oat pancakes prepared with carrots, capsicum and fresh herbs",
     price: 89,
@@ -126321,7 +126321,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6627,
-    name: "Millet Vegetable Tikki",
+    name: "The Farmhouse Cafe",
     category: "Snacks",
     description: "Golden millet patties blended with fresh vegetables and mild spices",
     price: 79,
@@ -126339,7 +126339,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6628,
-    name: "Baked Falafel",
+    name: "Root & Roast Kitchen",
     category: "Snacks",
     description: "Middle Eastern chickpea and herb balls baked until golden and crisp",
     price: 109,
@@ -126357,7 +126357,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6629,
-    name: "Roasted Pumpkin Seeds",
+    name: "The Gourmet Nest",
     category: "Snacks",
     description: "Crunchy pumpkin seeds lightly roasted with Himalayan salt",
     price: 79,
@@ -126375,7 +126375,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6630,
-    name: "Mixed Seed Energy Bites",
+    name: "Urban Harvest Bistro",
     category: "Snacks",
     description: "Nutritious bite-sized balls made with dates, almonds and mixed seeds",
     price: 99,
@@ -126393,7 +126393,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6631,
-    name: "Almond Date Ladoo",
+    name: "The Savoury Spoon",
     category: "Snacks",
     description: "Naturally sweet energy ladoos prepared with almonds and dates",
     price: 89,
@@ -126411,7 +126411,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6632,
-    name: "Ragi Peanut Ladoo",
+    name: "Fresh Roots Cafe",
     category: "Snacks",
     description: "Wholesome finger millet and roasted peanut ladoos with jaggery",
     price: 69,
@@ -126429,7 +126429,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6633,
-    name: "Trail Mix Nuts",
+    name: "The Platter Room",
     category: "Snacks",
     description: "A wholesome mix of almonds, walnuts, raisins and seeds",
     price: 119,
@@ -126447,7 +126447,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6634,
-    name: "Roasted Almonds",
+    name: "The Kitchen Story",
     category: "Snacks",
     description: "Premium crunchy almonds dry roasted to bring out their natural flavour",
     price: 129,
@@ -126465,7 +126465,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6635,
-    name: "Walnut Raisin Energy Mix",
+    name: "The Meal Market",
     category: "Snacks",
     description: "Naturally sweet and crunchy combination of walnuts and raisins",
     price: 109,
@@ -126483,7 +126483,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6636,
-    name: "Baked Beetroot Chips",
+    name: "The Corner Bistro",
     category: "Snacks",
     description: "Thinly sliced beetroot baked into crunchy naturally colourful chips",
     price: 69,
@@ -126501,7 +126501,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6637,
-    name: "Baked Banana Chips",
+    name: "The Modern Tiffin",
     category: "Snacks",
     description: "Light crispy banana slices baked with a touch of sea salt",
     price: 59,
@@ -126519,7 +126519,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6638,
-    name: "Zucchini Cheese Bites",
+    name: "The Food Loft",
     category: "Snacks",
     description: "Baked zucchini bites blended with herbs and a little cheese",
     price: 119,
@@ -126537,7 +126537,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6639,
-    name: "Broccoli Cheese Bites",
+    name: "The Signature Kitchen",
     category: "Snacks",
     description: "Oven-baked broccoli bites with mild cheese and aromatic herbs",
     price: 129,
@@ -126555,7 +126555,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6640,
-    name: "Spinach Corn Cutlet",
+    name: "The Good Food Company",
     category: "Snacks",
     description: "Golden baked cutlets filled with spinach, sweet corn and mild spices",
     price: 89,
@@ -126573,7 +126573,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6641,
-    name: "Tofu Vegetable Skewers",
+    name: "The Village Table",
     category: "Snacks",
     description: "Grilled tofu and seasonal vegetables seasoned with herbs and pepper",
     price: 139,
@@ -126591,7 +126591,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6642,
-    name: "Healthy Protein Snack Platter",
+    name: "The Urban Spoon",
     category: "SNACKS_DIET",
     description: "A wholesome platter of roasted chickpeas, paneer cubes, nuts and fresh vegetables",
     price: 169,
@@ -126609,7 +126609,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6643,
-    name: "Cucumber Mint Salad",
+    name: "The Urban Spoon",
     category: "Low Calorie",
     description: "Fresh cucumber slices tossed with mint, lemon and black pepper",
     price: 49,
@@ -126627,7 +126627,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6644,
-    name: "Garden Fresh Green Salad",
+    name: "Fresh Fork Kitchen",
     category: "Low Calorie",
     description: "Crisp lettuce, cucumber, carrots and tomatoes with lemon dressing",
     price: 69,
@@ -126645,7 +126645,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6645,
-    name: "Sprouted Moong Salad",
+    name: "Green Garden Cafe",
     category: "Low Calorie",
     description: "Fresh sprouted green gram with onion, tomato, lemon and coriander",
     price: 59,
@@ -126663,7 +126663,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6646,
-    name: "Lemon Vegetable Soup",
+    name: "Harvest Table Bistro",
     category: "Low Calorie",
     description: "Light clear vegetable soup with lemon, herbs and fresh vegetables",
     price: 69,
@@ -126681,7 +126681,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6647,
-    name: "Tomato Basil Soup",
+    name: "The Daily Plate",
     category: "Low Calorie",
     description: "Fresh tomato soup blended with basil and aromatic herbs",
     price: 79,
@@ -126699,7 +126699,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6648,
-    name: "Clear Vegetable Soup",
+    name: "Olive & Thyme Kitchen",
     category: "Low Calorie",
     description: "Light broth with finely chopped carrots, beans, cabbage and herbs",
     price: 59,
@@ -126717,7 +126717,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6649,
-    name: "Spinach Soup",
+    name: "The Nourish House",
     category: "Low Calorie",
     description: "Smooth spinach soup prepared with fresh greens and mild seasoning",
     price: 79,
@@ -126735,7 +126735,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6650,
-    name: "Bottle Gourd Soup",
+    name: "Golden Ladle Cafe",
     category: "Low Calorie",
     description: "Light and comforting lauki soup blended with ginger and black pepper",
     price: 59,
@@ -126753,7 +126753,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6651,
-    name: "Grilled Vegetable Platter",
+    name: "Flavour Junction",
     category: "Low Calorie",
     description: "Seasonal vegetables grilled with herbs, lemon and black pepper",
     price: 119,
@@ -126771,7 +126771,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6652,
-    name: "Steamed Broccoli Bowl",
+    name: "The Food Studio",
     category: "Low Calorie",
     description: "Tender steamed broccoli seasoned with garlic, lemon and herbs",
     price: 99,
@@ -126789,7 +126789,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6653,
-    name: "Cauliflower Rice Bowl",
+    name: "Urban Feast Kitchen",
     category: "Low Calorie",
     description: "Finely grated cauliflower sautéed with herbs and colourful vegetables",
     price: 109,
@@ -126807,7 +126807,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6654,
-    name: "Zucchini Noodles",
+    name: "The Rustic Bowl",
     category: "Low Calorie",
     description: "Fresh zucchini ribbons tossed with garlic, herbs and light seasoning",
     price: 129,
@@ -126825,7 +126825,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6655,
-    name: "Cabbage Stir Fry",
+    name: "Saffron Street Cafe",
     category: "Low Calorie",
     description: "Fresh cabbage stir-fried with carrots, ginger and mild spices",
     price: 69,
@@ -126843,7 +126843,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6656,
-    name: "Steamed Mixed Vegetables",
+    name: "The Wholesome Kitchen",
     category: "Low Calorie",
     description: "A colourful mix of steamed carrots, beans, broccoli and cauliflower",
     price: 89,
@@ -126861,7 +126861,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6657,
-    name: "Grilled Mushroom Salad",
+    name: "Maple Leaf Bistro",
     category: "Low Calorie",
     description: "Grilled mushrooms served with lettuce, cucumber and lemon dressing",
     price: 109,
@@ -126879,7 +126879,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6658,
-    name: "Carrot Cucumber Detox Salad",
+    name: "The Happy Platter",
     category: "Low Calorie",
     description: "Fresh shredded carrots and cucumber with lemon and mint dressing",
     price: 59,
@@ -126897,7 +126897,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6659,
-    name: "Watermelon Feta Salad",
+    name: "Cedar Spoon Restaurant",
     category: "Low Calorie",
     description: "Refreshing watermelon cubes with feta cheese, mint and lime",
     price: 119,
@@ -126915,7 +126915,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6660,
-    name: "Papaya Fruit Bowl",
+    name: "The Good Grain Cafe",
     category: "Low Calorie",
     description: "Fresh ripe papaya cubes served chilled with a touch of lime",
     price: 59,
@@ -126933,7 +126933,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6661,
-    name: "Mixed Seasonal Fruit Bowl",
+    name: "The Fresh Table",
     category: "Low Calorie",
     description: "Fresh seasonal fruits cut into bite-sized pieces and served chilled",
     price: 89,
@@ -126951,7 +126951,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6662,
-    name: "Apple Cinnamon Bowl",
+    name: "Little Leaf Kitchen",
     category: "Low Calorie",
     description: "Fresh apple slices sprinkled with aromatic cinnamon powder",
     price: 79,
@@ -126969,7 +126969,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6663,
-    name: "Pineapple Mint Bowl",
+    name: "The Culinary Corner",
     category: "Low Calorie",
     description: "Fresh pineapple chunks tossed with mint and a squeeze of lime",
     price: 69,
@@ -126987,7 +126987,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6664,
-    name: "Grilled Paneer Salad",
+    name: "Nature’s Basket Cafe",
     category: "Low Calorie",
     description: "Lightly grilled paneer cubes with fresh lettuce and cucumber",
     price: 119,
@@ -127005,7 +127005,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6665,
-    name: "Tofu Garden Salad",
+    name: "The Food Garden",
     category: "Low Calorie",
     description: "Fresh tofu cubes tossed with lettuce, carrots and lemon dressing",
     price: 129,
@@ -127023,7 +127023,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6666,
-    name: "Low Fat Greek Yogurt Bowl",
+    name: "Spice Route Kitchen",
     category: "Low Calorie",
     description: "Low-fat Greek yogurt topped with cucumber, mint and roasted cumin",
     price: 99,
@@ -127041,7 +127041,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6667,
-    name: "Low Fat Vegetable Raita",
+    name: "The Cozy Fork",
     category: "Low Calorie",
     description: "Cooling low-fat yogurt mixed with cucumber and fresh coriander",
     price: 49,
@@ -127059,7 +127059,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6668,
-    name: "Steamed Moong Dal Bowl",
+    name: "Daily Delight Bistro",
     category: "Low Calorie",
     description: "Lightly seasoned cooked moong dal with fresh coriander and lemon",
     price: 79,
@@ -127077,7 +127077,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6669,
-    name: "Masoor Dal Soup",
+    name: "The Tasty Pantry",
     category: "Low Calorie",
     description: "Light red lentil soup with ginger, cumin and fresh coriander",
     price: 79,
@@ -127095,7 +127095,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6670,
-    name: "Oats Vegetable Khichdi",
+    name: "Blue Plate Kitchen",
     category: "Low Calorie",
     description: "Light oats cooked with moong dal and fresh seasonal vegetables",
     price: 89,
@@ -127113,7 +127113,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6671,
-    name: "Moong Dal Vegetable Chilla",
+    name: "The Honest Meal",
     category: "Low Calorie",
     description: "Thin savoury pancakes made from moong dal and fresh vegetables",
     price: 79,
@@ -127131,7 +127131,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6672,
-    name: "Ragi Vegetable Idli",
+    name: "Sunrise Cafe & Kitchen",
     category: "Low Calorie",
     description: "Soft steamed finger millet idlis prepared with grated vegetables",
     price: 79,
@@ -127149,7 +127149,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6673,
-    name: "Vegetable Steamed Dhokla",
+    name: "The Kitchen Collective",
     category: "Low Calorie",
     description: "Soft steamed gram flour dhokla enriched with grated vegetables",
     price: 69,
@@ -127167,7 +127167,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6674,
-    name: "Vegetable Oats Upma",
+    name: "Flavour House",
     category: "Low Calorie",
     description: "Rolled oats cooked with carrots, beans, peas and curry leaves",
     price: 69,
@@ -127185,7 +127185,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6675,
-    name: "Vegetable Poha",
+    name: "The Green Apron",
     category: "Low Calorie",
     description: "Light flattened rice cooked with peas, carrots and fresh coriander",
     price: 59,
@@ -127203,7 +127203,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6676,
-    name: "Grilled Vegetable Sandwich",
+    name: "City Spoon Bistro",
     category: "Low Calorie",
     description: "Whole wheat sandwich filled with cucumber, tomato and lettuce",
     price: 89,
@@ -127221,7 +127221,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6677,
-    name: "Lettuce Paneer Wrap",
+    name: "The Farmhouse Cafe",
     category: "Low Calorie",
     description: "Fresh lettuce wraps filled with grilled paneer and crunchy vegetables",
     price: 109,
@@ -127239,7 +127239,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6678,
-    name: "Whole Wheat Veg Roll",
+    name: "Root & Roast Kitchen",
     category: "Low Calorie",
     description: "Whole wheat roti filled with fresh vegetables and mint yogurt dressing",
     price: 89,
@@ -127257,7 +127257,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6679,
-    name: "Grilled Tofu Wrap",
+    name: "The Gourmet Nest",
     category: "Low Calorie",
     description: "Whole wheat wrap stuffed with grilled tofu, lettuce and fresh vegetables",
     price: 129,
@@ -127275,7 +127275,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6680,
-    name: "Baked Vegetable Cutlet",
+    name: "Urban Harvest Bistro",
     category: "Low Calorie",
     description: "Oven-baked vegetable patties made with carrots, peas and potatoes",
     price: 69,
@@ -127293,7 +127293,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6681,
-    name: "Air Fried Sweet Potato",
+    name: "The Savoury Spoon",
     category: "Low Calorie",
     description: "Crispy sweet potato wedges prepared with minimal oil and herbs",
     price: 89,
@@ -127311,7 +127311,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6682,
-    name: "Roasted Fox Nuts",
+    name: "Fresh Roots Cafe",
     category: "Low Calorie",
     description: "Light roasted makhana seasoned with black pepper and Himalayan salt",
     price: 59,
@@ -127329,7 +127329,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6683,
-    name: "Roasted Chickpeas",
+    name: "The Platter Room",
     category: "Low Calorie",
     description: "Crunchy oven-roasted chickpeas with cumin and mild spices",
     price: 49,
@@ -127347,7 +127347,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6684,
-    name: "Baked Multigrain Crackers",
+    name: "The Kitchen Story",
     category: "Low Calorie",
     description: "Thin crunchy multigrain crackers baked with herbs and light seasoning",
     price: 59,
@@ -127365,7 +127365,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6685,
-    name: "Roasted Pumpkin Seeds",
+    name: "The Meal Market",
     category: "Low Calorie",
     description: "Crunchy pumpkin seeds dry roasted with a touch of sea salt",
     price: 79,
@@ -127383,7 +127383,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6686,
-    name: "Baked Beetroot Chips",
+    name: "The Corner Bistro",
     category: "Low Calorie",
     description: "Thin beetroot slices baked into crispy colourful vegetable chips",
     price: 69,
@@ -127401,7 +127401,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6687,
-    name: "Crispy Roasted Soy Nuts",
+    name: "The Modern Tiffin",
     category: "Low Calorie",
     description: "Protein-rich roasted soy nuts seasoned with mild spices",
     price: 79,
@@ -127419,7 +127419,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6688,
-    name: "Chia Seed Yogurt Bowl",
+    name: "The Food Loft",
     category: "Low Calorie",
     description: "Low-fat yogurt topped with soaked chia seeds and fresh berries",
     price: 119,
@@ -127437,7 +127437,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6689,
-    name: "Berry Smoothie Bowl",
+    name: "The Signature Kitchen",
     category: "Low Calorie",
     description: "A refreshing blend of strawberries, berries and low-fat yogurt",
     price: 129,
@@ -127455,7 +127455,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6690,
-    name: "Cucumber Mint Raita",
+    name: "The Good Food Company",
     category: "Low Calorie",
     description: "Chilled low-fat yogurt mixed with grated cucumber and fresh mint",
     price: 49,
@@ -127473,7 +127473,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6691,
-    name: "Grilled Vegetable Skewers",
+    name: "The Village Table",
     category: "Low Calorie",
     description: "Colourful bell peppers, zucchini and mushrooms grilled with herbs",
     price: 119,
@@ -127491,7 +127491,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6692,
-    name: "Healthy Low Calorie Meal Bowl",
+    name: "The Premium Plate",
     category: "Low Calorie",
     description: "Balanced bowl of steamed vegetables, sprouts, greens and grilled paneer",
     price: 149,
@@ -127509,7 +127509,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6693,
-    name: "North Indian Veg Thali",
+    name: "The Urban Spoon",
     category: "Veg Meal",
     description: "Dal, paneer sabzi, seasonal vegetable, 2 rotis, rice, salad and pickle",
     price: 179,
@@ -127527,7 +127527,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6694,
-    name: "Paneer Butter Masala Meal",
+    name: "Fresh Fork Kitchen",
     category: "Veg Meal",
     description: "Creamy paneer butter masala with jeera rice, roti and salad",
     price: 199,
@@ -127545,7 +127545,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6695,
-    name: "Dal Makhani Rice Combo",
+    name: "Green Garden Cafe",
     category: "Veg Meal",
     description: "Slow-cooked dal makhani with steamed basmati rice and salad",
     price: 169,
@@ -127563,7 +127563,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6696,
-    name: "Rajma Chawal Meal",
+    name: "Harvest Table Bistro",
     category: "Veg Meal",
     description: "Classic Punjabi rajma with steamed rice, onion salad and pickle",
     price: 149,
@@ -127581,7 +127581,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6697,
-    name: "Veg Biryani Combo",
+    name: "The Daily Plate",
     category: "Veg Meal",
     description: "Aromatic vegetable biryani served with raita and salan",
     price: 189,
@@ -127599,7 +127599,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6698,
-    name: "Chole Bhature Meal",
+    name: "Olive & Thyme Kitchen",
     category: "Veg Meal",
     description: "Spicy chickpea curry with two fluffy bhature and onion salad",
     price: 159,
@@ -127617,7 +127617,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6699,
-    name: "South Indian Veg Thali",
+    name: "The Nourish House",
     category: "Veg Meal",
     description: "Sambar, rasam, poriyal, kootu, rice, papad and curd",
     price: 169,
@@ -127635,7 +127635,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6700,
-    name: "Kadhai Paneer Meal",
+    name: "Golden Ladle Cafe",
     category: "Veg Meal",
     description: "Kadhai paneer with tandoori roti, jeera rice and salad",
     price: 199,
@@ -127653,7 +127653,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6701,
-    name: "Mix Veg Curry Rice Combo",
+    name: "Flavour Junction",
     category: "Veg Meal",
     description: "Mixed vegetable curry with steamed rice and salad",
     price: 139,
@@ -127671,7 +127671,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6702,
-    name: "Dal Tadka Rice Bowl",
+    name: "The Food Studio",
     category: "Veg Meal",
     description: "Yellow dal tempered with ghee, cumin and garlic with rice",
     price: 129,
@@ -127689,7 +127689,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6703,
-    name: "Aloo Paratha Meal",
+    name: "Urban Feast Kitchen",
     category: "Veg Meal",
     description: "Two aloo parathas with curd, butter and pickle",
     price: 119,
@@ -127707,7 +127707,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6704,
-    name: "Palak Paneer Meal",
+    name: "The Rustic Bowl",
     category: "Veg Meal",
     description: "Spinach paneer curry with roti, jeera rice and salad",
     price: 189,
@@ -127725,7 +127725,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6705,
-    name: "Veg Pulao Combo",
+    name: "Saffron Street Cafe",
     category: "Veg Meal",
     description: "Fragrant vegetable pulao with raita and salad",
     price: 149,
@@ -127743,7 +127743,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6706,
-    name: "Chana Masala Rice Bowl",
+    name: "The Wholesome Kitchen",
     category: "Veg Meal",
     description: "Spiced chickpea curry served with steamed rice and salad",
     price: 139,
@@ -127761,7 +127761,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6707,
-    name: "Veg Kofta Meal",
+    name: "Maple Leaf Bistro",
     category: "Veg Meal",
     description: "Vegetable koftas in rich tomato gravy with roti and rice",
     price: 199,
@@ -127779,7 +127779,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6708,
-    name: "Curd Rice Meal",
+    name: "The Happy Platter",
     category: "Veg Meal",
     description: "South Indian curd rice with pickle, papad and tempering",
     price: 119,
@@ -127797,7 +127797,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6709,
-    name: "Gujarati Veg Thali",
+    name: "Cedar Spoon Restaurant",
     category: "Veg Meal",
     description: "Dal, kadhi, two sabzis, rotli, rice, farsan and sweet",
     price: 189,
@@ -127815,7 +127815,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6710,
-    name: "Veg Fried Rice Combo",
+    name: "The Good Grain Cafe",
     category: "Veg Meal",
     description: "Wok-tossed vegetable fried rice with Manchurian gravy",
     price: 159,
@@ -127833,7 +127833,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6711,
-    name: "Aloo Gobi Roti Meal",
+    name: "The Fresh Table",
     category: "Veg Meal",
     description: "Aloo gobi sabzi with two rotis, dal and salad",
     price: 149,
@@ -127851,7 +127851,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6712,
-    name: "Bhindi Masala Meal",
+    name: "Little Leaf Kitchen",
     category: "Veg Meal",
     description: "Spiced okra with roti, dal and rice",
     price: 149,
@@ -127869,7 +127869,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6713,
-    name: "Veg Manchurian Rice Bowl",
+    name: "The Culinary Corner",
     category: "Veg Meal",
     description: "Crispy vegetable Manchurian in gravy with fried rice",
     price: 169,
@@ -127887,7 +127887,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6714,
-    name: "Malai Kofta Meal",
+    name: "Nature’s Basket Cafe",
     category: "Veg Meal",
     description: "Paneer koftas in creamy cashew gravy with roti and rice",
     price: 219,
@@ -127905,7 +127905,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6715,
-    name: "Veg Hakka Noodles Combo",
+    name: "The Food Garden",
     category: "Veg Meal",
     description: "Stir-fried noodles with vegetables and hot garlic sauce",
     price: 149,
@@ -127923,7 +127923,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6716,
-    name: "Dum Aloo Meal",
+    name: "Spice Route Kitchen",
     category: "Veg Meal",
     description: "Kashmiri-style dum aloo with roti, rice and salad",
     price: 169,
@@ -127941,7 +127941,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6717,
-    name: "Veg Sandwich Meal",
+    name: "The Cozy Fork",
     category: "Veg Meal",
     description: "Grilled vegetable sandwich with fries and fresh salad",
     price: 139,
@@ -127959,7 +127959,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6718,
-    name: "Sambar Rice Meal",
+    name: "Daily Delight Bistro",
     category: "Veg Meal",
     description: "South Indian sambar rice with papad, pickle and ghee",
     price: 129,
@@ -127977,7 +127977,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6719,
-    name: "Paneer Tikka Rice Meal",
+    name: "The Tasty Pantry",
     category: "Veg Meal",
     description: "Tandoori paneer tikka with jeera rice and mint chutney",
     price: 199,
@@ -127995,7 +127995,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6720,
-    name: "Veg Kadhi Chawal",
+    name: "Blue Plate Kitchen",
     category: "Veg Meal",
     description: "Gujarati kadhi with steamed rice and papad",
     price: 119,
@@ -128013,7 +128013,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6721,
-    name: "Mix Dal Rice Bowl",
+    name: "The Honest Meal",
     category: "Veg Meal",
     description: "Five-lentil dal with steamed rice, ghee and papad",
     price: 129,
@@ -128031,7 +128031,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6722,
-    name: "Paneer Paratha Meal",
+    name: "Sunrise Cafe & Kitchen",
     category: "Veg Meal",
     description: "Two stuffed paneer parathas with curd, butter and pickle",
     price: 149,
@@ -128049,7 +128049,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6723,
-    name: "Veg Noodles Manchurian",
+    name: "The Kitchen Collective",
     category: "Veg Meal",
     description: "Hakka noodles with crispy veg Manchurian balls in gravy",
     price: 169,
@@ -128067,7 +128067,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6724,
-    name: "Baingan Bharta Meal",
+    name: "Flavour House",
     category: "Veg Meal",
     description: "Smoky baingan bharta with roti, dal and rice",
     price: 159,
@@ -128085,7 +128085,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6725,
-    name: "Pav Bhaji Meal",
+    name: "The Green Apron",
     category: "Veg Meal",
     description: "Mumbai-style pav bhaji with buttered pav and chopped onions",
     price: 139,
@@ -128103,7 +128103,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6726,
-    name: "Veg Pulao with Paneer",
+    name: "City Spoon Bistro",
     category: "Veg Meal",
     description: "Fragrant veg pulao topped with grilled paneer cubes",
     price: 179,
@@ -128121,7 +128121,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6727,
-    name: "Methi Thepla Meal",
+    name: "The Farmhouse Cafe",
     category: "Veg Meal",
     description: "Gujarati methi theplas with curd, pickle and chundo",
     price: 129,
@@ -128139,7 +128139,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6728,
-    name: "Paneer Lababdar Meal",
+    name: "Root & Roast Kitchen",
     category: "Veg Meal",
     description: "Rich paneer lababdar with tandoori roti, rice and salad",
     price: 209,
@@ -128157,7 +128157,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6729,
-    name: "Veg Momos Meal",
+    name: "The Gourmet Nest",
     category: "Veg Meal",
     description: "Steamed vegetable momos with spicy red chutney and clear soup",
     price: 129,
@@ -128175,7 +128175,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6730,
-    name: "Aloo Matar Meal",
+    name: "Urban Harvest Bistro",
     category: "Veg Meal",
     description: "Potato and pea curry with roti, rice and salad",
     price: 139,
@@ -128193,7 +128193,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6731,
-    name: "Veg Hakka Noodles",
+    name: "The Savoury Spoon",
     category: "Veg Meal",
     description: "Wok-tossed hakka noodles loaded with fresh vegetables",
     price: 129,
@@ -128211,7 +128211,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6732,
-    name: "Paneer Makhani Meal",
+    name: "Fresh Roots Cafe",
     category: "Veg Meal",
     description: "Creamy paneer makhani with butter naan, jeera rice and salad",
     price: 219,
@@ -128229,7 +128229,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6733,
-    name: "Veg Cutlet Rice Meal",
+    name: "The Platter Room",
     category: "Veg Meal",
     description: "Vegetable cutlets served with rice, dal and salad",
     price: 139,
@@ -128247,7 +128247,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6734,
-    name: "Kaju Curry Rice Meal",
+    name: "The Kitchen Story",
     category: "Veg Meal",
     description: "Rich cashew curry with roti, jeera rice and salad",
     price: 199,
@@ -128265,7 +128265,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6735,
-    name: "Veg Hakka Noodles Combo",
+    name: "The Meal Market",
     category: "Veg Meal",
     description: "Noodles with veg Manchurian and hot garlic sauce",
     price: 159,
@@ -128283,7 +128283,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6736,
-    name: "Punjabi Veg Thali",
+    name: "The Corner Bistro",
     category: "Veg Meal",
     description: "Dal makhani, paneer, sabzi, 2 rotis, rice, salad and sweet",
     price: 209,
@@ -128301,7 +128301,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6737,
-    name: "Veg Fried Rice",
+    name: "The Modern Tiffin",
     category: "Veg Meal",
     description: "Classic veg fried rice with soy sauce and spring onions",
     price: 119,
@@ -128319,7 +128319,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6738,
-    name: "Paneer Bhurji Rice Meal",
+    name: "The Food Loft",
     category: "Veg Meal",
     description: "Spiced paneer bhurji with jeera rice, roti and salad",
     price: 179,
@@ -128337,7 +128337,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6739,
-    name: "Veg Pulao Rice Bowl",
+    name: "The Signature Kitchen",
     category: "Veg Meal",
     description: "Light veg pulao with mixed vegetables and whole spices",
     price: 129,
@@ -128355,7 +128355,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6740,
-    name: "Veg Manchurian Dry Meal",
+    name: "The Good Food Company",
     category: "Veg Meal",
     description: "Crispy dry veg Manchurian with fried rice",
     price: 149,
@@ -128373,7 +128373,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6741,
-    name: "Aloo Poori Meal",
+    name: "The Village Table",
     category: "Veg Meal",
     description: "Spicy potato curry with two fluffy pooris and pickle",
     price: 129,
@@ -128391,7 +128391,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6742,
-    name: "Veg Deluxe Thali",
+    name: "The Premium Plate",
     category: "Veg Meal",
     description: "Dal, two sabzis, paneer, 3 rotis, rice, raita, salad and sweet",
     price: 229,
@@ -128409,7 +128409,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6743,
-    name: "Grilled Chicken Breast Bowl",
+    name: "The Urban Spoon",
     category: "Protein Rich",
     description: "Tender grilled chicken breast with quinoa, broccoli and olive oil",
     price: 199,
@@ -128427,7 +128427,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6744,
-    name: "Paneer Tikka Protein Bowl",
+    name: "Fresh Fork Kitchen",
     category: "Protein Rich",
     description: "Tandoori paneer cubes with brown rice, chickpeas and salad",
     price: 189,
@@ -128445,7 +128445,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6745,
-    name: "Egg White Omelette Platter",
+    name: "Green Garden Cafe",
     category: "Protein Rich",
     description: "Fluffy egg white omelette with spinach, mushrooms and whole wheat toast",
     price: 149,
@@ -128463,7 +128463,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6746,
-    name: "Grilled Salmon Quinoa Bowl",
+    name: "Harvest Table Bistro",
     category: "Protein Rich",
     description: "Omega-rich grilled salmon with quinoa, asparagus and lemon",
     price: 299,
@@ -128481,7 +128481,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6747,
-    name: "Tofu Bhurji Protein Bowl",
+    name: "The Daily Plate",
     category: "Protein Rich",
     description: "Scrambled tofu with turmeric, onions and multigrain roti",
     price: 159,
@@ -128499,7 +128499,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6748,
-    name: "Sprouted Moong Protein Salad",
+    name: "Olive & Thyme Kitchen",
     category: "Protein Rich",
     description: "Sprouted moong, chickpeas, cucumber, tomato and lemon dressing",
     price: 129,
@@ -128517,7 +128517,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6749,
-    name: "Greek Yogurt Protein Bowl",
+    name: "The Nourish House",
     category: "Protein Rich",
     description: "Thick Greek yogurt topped with berries, almonds and honey",
     price: 149,
@@ -128535,7 +128535,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6750,
-    name: "Chicken Tikka Protein Plate",
+    name: "Golden Ladle Cafe",
     category: "Protein Rich",
     description: "Char-grilled chicken tikka with mint chutney and salad",
     price: 229,
@@ -128553,7 +128553,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6751,
-    name: "Chickpea Quinoa Power Bowl",
+    name: "Flavour Junction",
     category: "Protein Rich",
     description: "Quinoa, roasted chickpeas, sweet potato and tahini dressing",
     price: 179,
@@ -128571,7 +128571,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6752,
-    name: "Boiled Eggs & Avocado Toast",
+    name: "The Food Studio",
     category: "Protein Rich",
     description: "Two boiled eggs with smashed avocado on multigrain bread",
     price: 139,
@@ -128589,7 +128589,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6753,
-    name: "Rajma Protein Rice Bowl",
+    name: "Urban Feast Kitchen",
     category: "Protein Rich",
     description: "Kidney beans cooked in tomato masala served with brown rice",
     price: 169,
@@ -128607,7 +128607,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6754,
-    name: "Tuna Salad Protein Bowl",
+    name: "The Rustic Bowl",
     category: "Protein Rich",
     description: "Tuna chunks with lettuce, cherry tomatoes, olives and olive oil",
     price: 199,
@@ -128625,7 +128625,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6755,
-    name: "Soya Chunk Curry Bowl",
+    name: "Saffron Street Cafe",
     category: "Protein Rich",
     description: "Soya chunks simmered in spiced tomato-onion gravy with roti",
     price: 149,
@@ -128643,7 +128643,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6756,
-    name: "Cottage Cheese Berry Bowl",
+    name: "The Wholesome Kitchen",
     category: "Protein Rich",
     description: "Low-fat cottage cheese topped with seasonal berries and honey",
     price: 139,
@@ -128661,7 +128661,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6757,
-    name: "Chicken Caesar Protein Salad",
+    name: "Maple Leaf Bistro",
     category: "Protein Rich",
     description: "Grilled chicken, romaine lettuce, parmesan and Caesar dressing",
     price: 219,
@@ -128679,7 +128679,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6758,
-    name: "Lentil Protein Soup",
+    name: "The Happy Platter",
     category: "Protein Rich",
     description: "Hearty lentil soup with carrots, celery and fresh herbs",
     price: 99,
@@ -128697,7 +128697,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6759,
-    name: "Peanut Butter Protein Smoothie",
+    name: "Cedar Spoon Restaurant",
     category: "Protein Rich",
     description: "Banana, peanut butter, oats and almond milk blended smooth",
     price: 119,
@@ -128715,7 +128715,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6760,
-    name: "Paneer Bhurji Protein Wrap",
+    name: "The Good Grain Cafe",
     category: "Protein Rich",
     description: "Spiced paneer bhurji wrapped in whole wheat roti with salad",
     price: 159,
@@ -128733,7 +128733,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6761,
-    name: "Grilled Fish Quinoa Bowl",
+    name: "The Fresh Table",
     category: "Protein Rich",
     description: "Grilled white fish with quinoa, broccoli and lemon butter",
     price: 269,
@@ -128751,7 +128751,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6762,
-    name: "Black Bean Protein Burrito",
+    name: "Little Leaf Kitchen",
     category: "Protein Rich",
     description: "Black beans, brown rice, corn and salsa wrapped in whole wheat tortilla",
     price: 169,
@@ -128769,7 +128769,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6763,
-    name: "Egg Bhurji Protein Bowl",
+    name: "The Culinary Corner",
     category: "Protein Rich",
     description: "Spiced scrambled eggs with onions, tomatoes and multigrain toast",
     price: 129,
@@ -128787,7 +128787,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6764,
-    name: "Chicken & Veg Stir Fry",
+    name: "Nature’s Basket Cafe",
     category: "Protein Rich",
     description: "Wok-tossed chicken strips with bell peppers and broccoli in soy sauce",
     price: 199,
@@ -128805,7 +128805,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6765,
-    name: "Chana Chaat Protein Bowl",
+    name: "The Food Garden",
     category: "Protein Rich",
     description: "Roasted chickpeas with cucumber, tomato, onion and tangy spices",
     price: 129,
@@ -128823,7 +128823,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6766,
-    name: "Tofu Protein Sandwich",
+    name: "Spice Route Kitchen",
     category: "Protein Rich",
     description: "Grilled tofu, avocado and sprouts in multigrain bread",
     price: 149,
@@ -128841,7 +128841,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6767,
-    name: "Chicken Protein Soup",
+    name: "The Cozy Fork",
     category: "Protein Rich",
     description: "Clear chicken broth with shredded chicken and vegetables",
     price: 129,
@@ -128859,7 +128859,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6768,
-    name: "Peanut Chikki Protein Bites",
+    name: "Daily Delight Bistro",
     category: "Protein Rich",
     description: "Crunchy peanut and jaggery chikki packed with plant protein",
     price: 69,
@@ -128877,7 +128877,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6769,
-    name: "Paneer Protein Wrap",
+    name: "The Tasty Pantry",
     category: "Protein Rich",
     description: "Grilled paneer with lettuce, tomato and mint yogurt in whole wheat wrap",
     price: 169,
@@ -128895,7 +128895,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6770,
-    name: "Egg & Chicken Protein Salad",
+    name: "Blue Plate Kitchen",
     category: "Protein Rich",
     description: "Boiled eggs and grilled chicken with mixed greens and olive oil",
     price: 219,
@@ -128913,7 +128913,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6771,
-    name: "Quinoa Khichdi Protein Bowl",
+    name: "The Honest Meal",
     category: "Protein Rich",
     description: "Quinoa cooked with moong dal, vegetables and mild spices",
     price: 149,
@@ -128931,7 +128931,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6772,
-    name: "Tuna Avocado Protein Wrap",
+    name: "Sunrise Cafe & Kitchen",
     category: "Protein Rich",
     description: "Tuna mixed with avocado and Greek yogurt in whole wheat wrap",
     price: 189,
@@ -128949,7 +128949,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6773,
-    name: "Tempeh Protein Stir Fry",
+    name: "The Kitchen Collective",
     category: "Protein Rich",
     description: "Tempeh, broccoli, bell peppers and sesame oil stir fry",
     price: 179,
@@ -128967,7 +128967,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6774,
-    name: "Chicken Shorba Protein Soup",
+    name: "Flavour House",
     category: "Protein Rich",
     description: "Aromatic Indian chicken shorba with ginger, garlic and herbs",
     price: 149,
@@ -128985,7 +128985,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6775,
-    name: "Greek Yogurt Berry Smoothie",
+    name: "The Green Apron",
     category: "Protein Rich",
     description: "Greek yogurt blended with mixed berries, honey and chia seeds",
     price: 139,
@@ -129003,7 +129003,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6776,
-    name: "Tandoori Chicken Platter",
+    name: "City Spoon Bistro",
     category: "Protein Rich",
     description: "Whole tandoori chicken leg with mint chutney and salad",
     price: 249,
@@ -129021,7 +129021,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6777,
-    name: "Moong Dal Chilla Protein Plate",
+    name: "The Farmhouse Cafe",
     category: "Protein Rich",
     description: "Moong dal chillas with paneer stuffing and mint chutney",
     price: 139,
@@ -129039,7 +129039,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6778,
-    name: "Soya Protein Smoothie",
+    name: "Root & Roast Kitchen",
     category: "Protein Rich",
     description: "Soy milk, banana, oats and cocoa powder blended into a smoothie",
     price: 119,
@@ -129057,7 +129057,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6779,
-    name: "Chicken Quinoa Salad",
+    name: "The Gourmet Nest",
     category: "Protein Rich",
     description: "Grilled chicken, quinoa, cucumber and cherry tomatoes with lemon dressing",
     price: 219,
@@ -129075,7 +129075,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6780,
-    name: "Paneer & Chickpea Bowl",
+    name: "Urban Harvest Bistro",
     category: "Protein Rich",
     description: "Grilled paneer and chickpeas with brown rice and veggies",
     price: 189,
@@ -129093,7 +129093,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6781,
-    name: "Egg White Protein Pancakes",
+    name: "The Savoury Spoon",
     category: "Protein Rich",
     description: "Fluffy pancakes made with egg whites, oats and banana",
     price: 129,
@@ -129111,7 +129111,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6782,
-    name: "Rajma Chawal Protein Bowl",
+    name: "Fresh Roots Cafe",
     category: "Protein Rich",
     description: "Kidney beans curry served with steamed rice and salad",
     price: 149,
@@ -129129,7 +129129,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6783,
-    name: "Tofu Protein Scramble",
+    name: "The Platter Room",
     category: "Protein Rich",
     description: "Crumbled tofu with turmeric, peppers, onion and toast",
     price: 149,
@@ -129147,7 +129147,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6784,
-    name: "Chicken & Avocado Protein Bowl",
+    name: "The Kitchen Story",
     category: "Protein Rich",
     description: "Grilled chicken, avocado, spinach and cherry tomatoes",
     price: 229,
@@ -129165,7 +129165,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6785,
-    name: "Chia Seed Protein Pudding",
+    name: "The Meal Market",
     category: "Protein Rich",
     description: "Chia seeds soaked in almond milk with protein powder and berries",
     price: 129,
@@ -129183,7 +129183,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6786,
-    name: "Grilled Chicken Pesto Pasta",
+    name: "The Corner Bistro",
     category: "Protein Rich",
     description: "Whole wheat pasta tossed in pesto with grilled chicken",
     price: 219,
@@ -129201,7 +129201,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6787,
-    name: "Soya Granules Pulao",
+    name: "The Modern Tiffin",
     category: "Protein Rich",
     description: "Basmati rice cooked with soya granules, peas and spices",
     price: 159,
@@ -129219,7 +129219,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6788,
-    name: "Tuna & Quinoa Protein Bowl",
+    name: "The Food Loft",
     category: "Protein Rich",
     description: "Flaked tuna, quinoa, cucumber and olive oil dressing",
     price: 209,
@@ -129237,7 +129237,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6789,
-    name: "Paneer & Sprouts Salad",
+    name: "The Signature Kitchen",
     category: "Protein Rich",
     description: "Paneer cubes with mixed sprouts, lemon and chaat masala",
     price: 159,
@@ -129255,7 +129255,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6790,
-    name: "Chicken Biryani Protein Bowl",
+    name: "The Good Food Company",
     category: "Protein Rich",
     description: "Basmati rice cooked with chicken, saffron and spices",
     price: 249,
@@ -129273,7 +129273,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6791,
-    name: "Peanut Butter Protein Toast",
+    name: "The Village Table",
     category: "Protein Rich",
     description: "Whole wheat toast with peanut butter, banana slices and chia",
     price: 99,
@@ -129291,7 +129291,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6792,
-    name: "Chicken & Veg Soup",
+    name: "The Premium Plate",
     category: "Protein Rich",
     description: "Warm chicken and vegetable soup with herbs and pepper",
     price: 139,
@@ -129309,7 +129309,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6793,
-    name: "Classic Grilled Chicken Breast",
+    name: "The Urban Spoon",
     category: "Grilled Chicken",
     description: "Tender chicken breast grilled with herbs, garlic and black pepper",
     price: 199,
@@ -129327,7 +129327,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6794,
-    name: "Peri Peri Grilled Chicken",
+    name: "Fresh Fork Kitchen",
     category: "Grilled Chicken",
     description: "Juicy grilled chicken coated with spicy peri peri seasoning",
     price: 229,
@@ -129345,7 +129345,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6795,
-    name: "Lemon Herb Grilled Chicken",
+    name: "Green Garden Cafe",
     category: "Grilled Chicken",
     description: "Grilled chicken marinated in fresh lemon, herbs and olive oil",
     price: 219,
@@ -129363,7 +129363,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6796,
-    name: "Tandoori Grilled Chicken",
+    name: "Harvest Table Bistro",
     category: "Grilled Chicken",
     description: "Traditional tandoori chicken grilled with yogurt and Indian spices",
     price: 249,
@@ -129381,7 +129381,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6797,
-    name: "Garlic Butter Grilled Chicken",
+    name: "The Daily Plate",
     category: "Grilled Chicken",
     description: "Grilled chicken brushed with garlic butter and aromatic herbs",
     price: 239,
@@ -129399,7 +129399,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6798,
-    name: "Smoky BBQ Grilled Chicken",
+    name: "Olive & Thyme Kitchen",
     category: "Grilled Chicken",
     description: "Smoky grilled chicken glazed with tangy barbecue sauce",
     price: 259,
@@ -129417,7 +129417,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6799,
-    name: "Grilled Chicken Salad Bowl",
+    name: "The Nourish House",
     category: "Grilled Chicken",
     description: "Fresh lettuce, cucumber, tomatoes and grilled chicken with light dressing",
     price: 199,
@@ -129435,7 +129435,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6800,
-    name: "Mediterranean Grilled Chicken",
+    name: "Golden Ladle Cafe",
     category: "Grilled Chicken",
     description: "Mediterranean-style chicken with olive oil, oregano and roasted vegetables",
     price: 279,
@@ -129453,7 +129453,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6801,
-    name: "Spicy Chilli Grilled Chicken",
+    name: "Flavour Junction",
     category: "Grilled Chicken",
     description: "Grilled chicken tossed in spicy red chilli and garlic marinade",
     price: 229,
@@ -129471,7 +129471,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6802,
-    name: "Honey Mustard Grilled Chicken",
+    name: "The Food Studio",
     category: "Grilled Chicken",
     description: "Tender grilled chicken coated with a light honey mustard glaze",
     price: 249,
@@ -129489,7 +129489,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6803,
-    name: "Black Pepper Grilled Chicken",
+    name: "Urban Feast Kitchen",
     category: "Grilled Chicken",
     description: "Juicy chicken grilled with crushed black pepper and fresh herbs",
     price: 219,
@@ -129507,7 +129507,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6804,
-    name: "Grilled Chicken Quinoa Bowl",
+    name: "The Rustic Bowl",
     category: "Grilled Chicken",
     description: "Protein-rich grilled chicken served with quinoa and fresh vegetables",
     price: 289,
@@ -129525,7 +129525,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6805,
-    name: "Cajun Grilled Chicken",
+    name: "Saffron Street Cafe",
     category: "Grilled Chicken",
     description: "Grilled chicken seasoned with smoky Cajun spices and herbs",
     price: 239,
@@ -129543,7 +129543,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6806,
-    name: "Tandoori Chicken Breast",
+    name: "The Wholesome Kitchen",
     category: "Grilled Chicken",
     description: "Boneless chicken breast marinated in yogurt and tandoori masala",
     price: 229,
@@ -129561,7 +129561,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6807,
-    name: "Grilled Chicken Wrap",
+    name: "Maple Leaf Bistro",
     category: "Grilled Chicken",
     description: "Whole wheat wrap filled with grilled chicken and crunchy vegetables",
     price: 179,
@@ -129579,7 +129579,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6808,
-    name: "Grilled Chicken Sandwich",
+    name: "The Happy Platter",
     category: "Grilled Chicken",
     description: "Whole grain sandwich with grilled chicken, lettuce and fresh tomatoes",
     price: 169,
@@ -129597,7 +129597,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6809,
-    name: "Thai Herb Grilled Chicken",
+    name: "Cedar Spoon Restaurant",
     category: "Grilled Chicken",
     description: "Grilled chicken infused with Thai herbs, lime and aromatic spices",
     price: 259,
@@ -129615,7 +129615,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6810,
-    name: "Rosemary Grilled Chicken",
+    name: "The Good Grain Cafe",
     category: "Grilled Chicken",
     description: "Herb-marinated chicken grilled with rosemary and garlic",
     price: 249,
@@ -129633,7 +129633,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6811,
-    name: "Grilled Chicken with Brown Rice",
+    name: "The Fresh Table",
     category: "Grilled Chicken",
     description: "Lean grilled chicken served with wholesome brown rice and vegetables",
     price: 269,
@@ -129651,7 +129651,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6812,
-    name: "Achari Grilled Chicken",
+    name: "Little Leaf Kitchen",
     category: "Grilled Chicken",
     description: "Chicken grilled with tangy Indian pickle spices and mustard oil",
     price: 239,
@@ -129669,7 +129669,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6813,
-    name: "Grilled Chicken Fajita Bowl",
+    name: "The Culinary Corner",
     category: "Grilled Chicken",
     description: "Grilled chicken with sautéed peppers, onions and Mexican spices",
     price: 279,
@@ -129687,7 +129687,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6814,
-    name: "Chimichurri Grilled Chicken",
+    name: "Nature’s Basket Cafe",
     category: "Grilled Chicken",
     description: "Grilled chicken topped with fresh parsley, garlic and herb chimichurri",
     price: 269,
@@ -129705,7 +129705,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6815,
-    name: "Grilled Chicken Caesar Salad",
+    name: "The Food Garden",
     category: "Grilled Chicken",
     description: "Classic Caesar salad topped with grilled chicken and parmesan",
     price: 229,
@@ -129723,7 +129723,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6816,
-    name: "Green Chutney Grilled Chicken",
+    name: "Spice Route Kitchen",
     category: "Grilled Chicken",
     description: "Indian-style grilled chicken marinated in mint and coriander chutney",
     price: 219,
@@ -129741,7 +129741,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6817,
-    name: "Korean Gochujang Grilled Chicken",
+    name: "The Cozy Fork",
     category: "Grilled Chicken",
     description: "Grilled chicken coated in a sweet and spicy Korean chilli glaze",
     price: 269,
@@ -129759,7 +129759,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6818,
-    name: "Grilled Chicken Pesto Bowl",
+    name: "Daily Delight Bistro",
     category: "Grilled Chicken",
     description: "Grilled chicken served with basil pesto, cherry tomatoes and greens",
     price: 289,
@@ -129777,7 +129777,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6819,
-    name: "Smoky Paprika Grilled Chicken",
+    name: "The Tasty Pantry",
     category: "Grilled Chicken",
     description: "Chicken breast grilled with smoked paprika, garlic and herbs",
     price: 239,
@@ -129795,7 +129795,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6820,
-    name: "Grilled Chicken Hummus Bowl",
+    name: "Blue Plate Kitchen",
     category: "Grilled Chicken",
     description: "Tender grilled chicken with creamy hummus, cucumber and pita",
     price: 279,
@@ -129813,7 +129813,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6821,
-    name: "Malai Grilled Chicken",
+    name: "The Honest Meal",
     category: "Grilled Chicken",
     description: "Soft chicken grilled with creamy yogurt, cheese and mild spices",
     price: 259,
@@ -129831,7 +129831,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6822,
-    name: "Grilled Chicken Lettuce Wraps",
+    name: "Sunrise Cafe & Kitchen",
     category: "Grilled Chicken",
     description: "Seasoned grilled chicken wrapped in crisp lettuce leaves",
     price: 189,
@@ -129849,7 +129849,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6823,
-    name: "Tandoori Chicken Tikka",
+    name: "The Kitchen Collective",
     category: "Grilled Chicken",
     description: "Boneless chicken tikka grilled with yogurt and aromatic spices",
     price: 229,
@@ -129867,7 +129867,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6824,
-    name: "Grilled Chicken and Sweet Potato",
+    name: "Flavour House",
     category: "Grilled Chicken",
     description: "Lean grilled chicken served with roasted sweet potato wedges",
     price: 269,
@@ -129885,7 +129885,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6825,
-    name: "Mediterranean Chicken Skewers",
+    name: "The Green Apron",
     category: "Grilled Chicken",
     description: "Chicken pieces grilled on skewers with lemon and Mediterranean herbs",
     price: 239,
@@ -129903,7 +129903,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6826,
-    name: "Grilled Chicken Burrito Bowl",
+    name: "City Spoon Bistro",
     category: "Grilled Chicken",
     description: "Grilled chicken with rice, black beans, corn and fresh salsa",
     price: 279,
@@ -129921,7 +129921,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6827,
-    name: "Mint Yogurt Grilled Chicken",
+    name: "The Farmhouse Cafe",
     category: "Grilled Chicken",
     description: "Herb-grilled chicken served with refreshing mint yogurt dip",
     price: 229,
@@ -129939,7 +129939,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6828,
-    name: "Grilled Chicken Stir Fry",
+    name: "Root & Roast Kitchen",
     category: "Grilled Chicken",
     description: "Grilled chicken tossed with broccoli, bell peppers and light seasoning",
     price: 249,
@@ -129957,7 +129957,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6829,
-    name: "Schezwan Grilled Chicken",
+    name: "The Gourmet Nest",
     category: "Grilled Chicken",
     description: "Grilled chicken tossed in bold Schezwan chilli and garlic sauce",
     price: 239,
@@ -129975,7 +129975,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6830,
-    name: "Grilled Chicken Avocado Salad",
+    name: "Urban Harvest Bistro",
     category: "Grilled Chicken",
     description: "Grilled chicken with fresh avocado, lettuce, cucumber and lime dressing",
     price: 299,
@@ -129993,7 +129993,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6831,
-    name: "Indian Masala Grilled Chicken",
+    name: "The Savoury Spoon",
     category: "Grilled Chicken",
     description: "Chicken grilled with coriander, cumin, turmeric and garam masala",
     price: 229,
@@ -130011,7 +130011,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6832,
-    name: "Grilled Chicken and Broccoli Bowl",
+    name: "Fresh Roots Cafe",
     category: "Grilled Chicken",
     description: "Grilled chicken breast served with steamed broccoli and garlic",
     price: 259,
@@ -130029,7 +130029,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6833,
-    name: "Tandoori Grilled Chicken Wings",
+    name: "The Platter Room",
     category: "Grilled Chicken",
     description: "Juicy chicken wings grilled with spicy tandoori marinade",
     price: 219,
@@ -130047,7 +130047,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6834,
-    name: "Lemon Pepper Chicken Skewers",
+    name: "The Kitchen Story",
     category: "Grilled Chicken",
     description: "Grilled chicken skewers seasoned with lemon zest and cracked pepper",
     price: 239,
@@ -130065,7 +130065,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6835,
-    name: "Grilled Chicken Pasta",
+    name: "The Meal Market",
     category: "Grilled Chicken",
     description: "Whole wheat pasta tossed with grilled chicken and light herb sauce",
     price: 269,
@@ -130083,7 +130083,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6836,
-    name: "Grilled Chicken Tikka Salad",
+    name: "The Corner Bistro",
     category: "Grilled Chicken",
     description: "Spiced grilled chicken tikka served over fresh greens and cucumber",
     price: 219,
@@ -130101,7 +130101,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6837,
-    name: "Orange Glazed Grilled Chicken",
+    name: "The Modern Tiffin",
     category: "Grilled Chicken",
     description: "Grilled chicken finished with a tangy orange and ginger glaze",
     price: 249,
@@ -130119,7 +130119,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6838,
-    name: "Grilled Chicken Millet Bowl",
+    name: "The Food Loft",
     category: "Grilled Chicken",
     description: "Grilled chicken paired with nutritious millet, greens and vegetables",
     price: 279,
@@ -130137,7 +130137,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6839,
-    name: "Smoked Tandoori Chicken Leg",
+    name: "The Signature Kitchen",
     category: "Grilled Chicken",
     description: "Whole chicken leg grilled with smoky tandoori spices and herbs",
     price: 249,
@@ -130155,7 +130155,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6840,
-    name: "Grilled Chicken Stuffed Bell Peppers",
+    name: "The Good Food Company",
     category: "Grilled Chicken",
     description: "Bell peppers filled with seasoned grilled chicken and vegetables",
     price: 239,
@@ -130173,7 +130173,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6841,
-    name: "Grilled Chicken Greek Bowl",
+    name: "The Village Table",
     category: "Grilled Chicken",
     description: "Greek-style chicken with cucumber, tomatoes, olives and feta",
     price: 289,
@@ -130191,7 +130191,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6842,
-    name: "Classic Herb Grilled Chicken Platter",
+    name: "The Premium Plate",
     category: "Grilled Chicken",
     description: "Herb-marinated grilled chicken served with roasted vegetables and dip",
     price: 299,
@@ -130209,7 +130209,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 6843,
-    name: "Classic Steamed Fish",
+    name: "The Urban Spoon",
     category: "Steamed Fish",
     description: "Fresh fish fillet gently steamed with ginger, garlic and herbs",
     price: 199,
@@ -130227,7 +130227,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6844,
-    name: "Lemon Herb Steamed Fish",
+    name: "Fresh Fork Kitchen",
     category: "Steamed Fish",
     description: "Delicate steamed fish seasoned with lemon juice and fresh herbs",
     price: 219,
@@ -130245,7 +130245,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6845,
-    name: "Ginger Garlic Steamed Fish",
+    name: "Green Garden Cafe",
     category: "Steamed Fish",
     description: "Fresh fish steamed with aromatic ginger, garlic and spring onions",
     price: 229,
@@ -130263,7 +130263,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6846,
-    name: "Thai Lime Steamed Fish",
+    name: "Harvest Table Bistro",
     category: "Steamed Fish",
     description: "Thai-style steamed fish with lime, coriander, chilli and garlic",
     price: 259,
@@ -130281,7 +130281,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6847,
-    name: "Chinese Soy Steamed Fish",
+    name: "The Daily Plate",
     category: "Steamed Fish",
     description: "Tender fish steamed with light soy sauce, ginger and spring onions",
     price: 239,
@@ -130299,7 +130299,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6848,
-    name: "Coriander Steamed Fish",
+    name: "Olive & Thyme Kitchen",
     category: "Steamed Fish",
     description: "Fish fillet steamed with fresh coriander, green chilli and lemon",
     price: 199,
@@ -130317,7 +130317,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6849,
-    name: "Mustard Steamed Fish",
+    name: "The Nourish House",
     category: "Steamed Fish",
     description: "Bengali-style fish steamed with mustard paste and green chillies",
     price: 249,
@@ -130335,7 +130335,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6850,
-    name: "Steamed Fish with Vegetables",
+    name: "Golden Ladle Cafe",
     category: "Steamed Fish",
     description: "Healthy fish fillet steamed with broccoli, carrots and beans",
     price: 259,
@@ -130353,7 +130353,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6851,
-    name: "Lemongrass Steamed Fish",
+    name: "Flavour Junction",
     category: "Steamed Fish",
     description: "Fish steamed with fragrant lemongrass, ginger and lime leaves",
     price: 269,
@@ -130371,7 +130371,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6852,
-    name: "Chilli Garlic Steamed Fish",
+    name: "The Food Studio",
     category: "Steamed Fish",
     description: "Steamed fish infused with garlic, red chilli and fresh herbs",
     price: 229,
@@ -130389,7 +130389,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6853,
-    name: "Mediterranean Steamed Fish",
+    name: "Urban Feast Kitchen",
     category: "Steamed Fish",
     description: "Fish steamed with olive oil, oregano, lemon and Mediterranean herbs",
     price: 279,
@@ -130407,7 +130407,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6854,
-    name: "Steamed Fish Protein Bowl",
+    name: "The Rustic Bowl",
     category: "Steamed Fish",
     description: "Protein-rich steamed fish served with brown rice and fresh vegetables",
     price: 289,
@@ -130425,7 +130425,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6855,
-    name: "Ginger Lemon Steamed Fish",
+    name: "Saffron Street Cafe",
     category: "Steamed Fish",
     description: "Light steamed fish with fresh ginger, lemon zest and black pepper",
     price: 219,
@@ -130443,7 +130443,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6856,
-    name: "Coconut Steamed Fish",
+    name: "The Wholesome Kitchen",
     category: "Steamed Fish",
     description: "Fish gently steamed with coconut milk, curry leaves and mild spices",
     price: 249,
@@ -130461,7 +130461,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6857,
-    name: "Steamed Fish with Brown Rice",
+    name: "Maple Leaf Bistro",
     category: "Steamed Fish",
     description: "Healthy steamed fish served with nutritious brown rice and herbs",
     price: 269,
@@ -130479,7 +130479,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6858,
-    name: "Pepper Garlic Steamed Fish",
+    name: "The Happy Platter",
     category: "Steamed Fish",
     description: "Tender fish steamed with crushed black pepper and roasted garlic",
     price: 229,
@@ -130497,7 +130497,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6859,
-    name: "Bengali Bhapa Fish",
+    name: "Cedar Spoon Restaurant",
     category: "Steamed Fish",
     description: "Traditional Bengali fish steamed with mustard, green chilli and turmeric",
     price: 259,
@@ -130515,7 +130515,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6860,
-    name: "Thai Basil Steamed Fish",
+    name: "The Good Grain Cafe",
     category: "Steamed Fish",
     description: "Fish steamed with Thai basil, lime, ginger and aromatic seasoning",
     price: 269,
@@ -130533,7 +130533,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6861,
-    name: "Steamed Fish Lettuce Bowl",
+    name: "The Fresh Table",
     category: "Steamed Fish",
     description: "Light steamed fish served over crisp lettuce, cucumber and carrots",
     price: 219,
@@ -130551,7 +130551,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6862,
-    name: "Miso Ginger Steamed Fish",
+    name: "Little Leaf Kitchen",
     category: "Steamed Fish",
     description: "Japanese-inspired fish steamed with miso, ginger and sesame",
     price: 289,
@@ -130569,7 +130569,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6863,
-    name: "Steamed Fish with Quinoa",
+    name: "The Culinary Corner",
     category: "Steamed Fish",
     description: "Lean steamed fish paired with quinoa, greens and lemon dressing",
     price: 299,
@@ -130587,7 +130587,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6864,
-    name: "Green Chilli Steamed Fish",
+    name: "Nature’s Basket Cafe",
     category: "Steamed Fish",
     description: "Fresh fish steamed with green chillies, coriander and ginger",
     price: 219,
@@ -130605,7 +130605,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6865,
-    name: "Steamed Fish with Broccoli",
+    name: "The Food Garden",
     category: "Steamed Fish",
     description: "Soft fish fillet steamed with broccoli, garlic and lemon",
     price: 249,
@@ -130623,7 +130623,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6866,
-    name: "Schezwan Steamed Fish",
+    name: "Spice Route Kitchen",
     category: "Steamed Fish",
     description: "Steamed fish topped with a light and spicy Schezwan garlic sauce",
     price: 249,
@@ -130641,7 +130641,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6867,
-    name: "Steamed Fish with Millet",
+    name: "The Cozy Fork",
     category: "Steamed Fish",
     description: "Protein-rich steamed fish served with healthy millet and vegetables",
     price: 279,
@@ -130659,7 +130659,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6868,
-    name: "Curry Leaf Steamed Fish",
+    name: "Daily Delight Bistro",
     category: "Steamed Fish",
     description: "South Indian fish steamed with curry leaves, ginger and mild spices",
     price: 239,
@@ -130677,7 +130677,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6869,
-    name: "Steamed Fish with Sweet Corn",
+    name: "The Tasty Pantry",
     category: "Steamed Fish",
     description: "Delicate steamed fish accompanied by sweet corn and fresh herbs",
     price: 229,
@@ -130695,7 +130695,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6870,
-    name: "Chinese Black Bean Steamed Fish",
+    name: "Blue Plate Kitchen",
     category: "Steamed Fish",
     description: "Steamed fish with fermented black bean sauce, garlic and ginger",
     price: 269,
@@ -130713,7 +130713,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6871,
-    name: "Steamed Fish with Spinach",
+    name: "The Honest Meal",
     category: "Steamed Fish",
     description: "Fresh fish steamed with tender spinach, garlic and lemon",
     price: 239,
@@ -130731,7 +130731,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6872,
-    name: "Korean Soy Steamed Fish",
+    name: "Sunrise Cafe & Kitchen",
     category: "Steamed Fish",
     description: "Korean-inspired steamed fish with soy, garlic and sesame seeds",
     price: 269,
@@ -130749,7 +130749,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6873,
-    name: "Steamed Fish Coconut Curry",
+    name: "The Kitchen Collective",
     category: "Steamed Fish",
     description: "Steamed fish served with a light coconut milk and turmeric curry",
     price: 259,
@@ -130767,7 +130767,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6874,
-    name: "Steamed Fish Tomato Salsa",
+    name: "Flavour House",
     category: "Steamed Fish",
     description: "Lightly steamed fish served with fresh tomato, coriander and lime salsa",
     price: 239,
@@ -130785,7 +130785,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6875,
-    name: "Steamed Fish with Asparagus",
+    name: "The Green Apron",
     category: "Steamed Fish",
     description: "Tender fish steamed with fresh asparagus and lemon herb seasoning",
     price: 299,
@@ -130803,7 +130803,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6876,
-    name: "Amritsari Masala Steamed Fish",
+    name: "City Spoon Bistro",
     category: "Steamed Fish",
     description: "Punjabi-inspired fish steamed with ajwain, coriander and traditional spices",
     price: 249,
@@ -130821,7 +130821,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6877,
-    name: "Steamed Fish with Cauliflower Rice",
+    name: "The Farmhouse Cafe",
     category: "Steamed Fish",
     description: "Low-carb steamed fish served with seasoned cauliflower rice",
     price: 259,
@@ -130839,7 +130839,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6878,
-    name: "Steamed Fish with Green Beans",
+    name: "Root & Roast Kitchen",
     category: "Steamed Fish",
     description: "Fresh fish steamed with crisp green beans, garlic and herbs",
     price: 229,
@@ -130857,7 +130857,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6879,
-    name: "Steamed Fish with Sesame Ginger Sauce",
+    name: "The Gourmet Nest",
     category: "Steamed Fish",
     description: "Asian steamed fish topped with fragrant sesame and ginger sauce",
     price: 259,
@@ -130875,7 +130875,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6880,
-    name: "Steamed Fish with Pumpkin",
+    name: "Urban Harvest Bistro",
     category: "Steamed Fish",
     description: "Soft steamed fish served with mildly seasoned pumpkin and herbs",
     price: 229,
@@ -130893,7 +130893,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6881,
-    name: "Steamed Fish with Quinoa Salad",
+    name: "The Savoury Spoon",
     category: "Steamed Fish",
     description: "Steamed fish accompanied by quinoa, cucumber, tomatoes and lemon",
     price: 299,
@@ -130911,7 +130911,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6882,
-    name: "Garlic Chive Steamed Fish",
+    name: "Fresh Roots Cafe",
     category: "Steamed Fish",
     description: "Fish gently steamed with garlic chives, ginger and light seasoning",
     price: 239,
@@ -130929,7 +130929,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6883,
-    name: "Steamed Fish with Red Rice",
+    name: "The Platter Room",
     category: "Steamed Fish",
     description: "Healthy steamed fish served with nutritious red rice and vegetables",
     price: 279,
@@ -130947,7 +130947,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6884,
-    name: "Steamed Fish with Bell Peppers",
+    name: "The Kitchen Story",
     category: "Steamed Fish",
     description: "Steamed fish served with colourful bell peppers and garlic herbs",
     price: 249,
@@ -130965,7 +130965,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6885,
-    name: "Steamed Fish with Garlic Spinach",
+    name: "The Meal Market",
     category: "Steamed Fish",
     description: "Tender fish served with lightly steamed spinach and garlic",
     price: 249,
@@ -130983,7 +130983,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6886,
-    name: "Steamed Fish with Mint Chutney",
+    name: "The Corner Bistro",
     category: "Steamed Fish",
     description: "Lightly steamed fish paired with fresh mint and coriander chutney",
     price: 219,
@@ -131001,7 +131001,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6887,
-    name: "Steamed Fish with Zucchini",
+    name: "The Modern Tiffin",
     category: "Steamed Fish",
     description: "Fresh fish steamed with zucchini, lemon and aromatic herbs",
     price: 259,
@@ -131019,7 +131019,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6888,
-    name: "Steamed Fish with Vegetable Medley",
+    name: "The Food Loft",
     category: "Steamed Fish",
     description: "Protein-rich steamed fish served with carrots, beans and broccoli",
     price: 269,
@@ -131037,7 +131037,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6889,
-    name: "Steamed Fish with Lemon Butter",
+    name: "The Signature Kitchen",
     category: "Steamed Fish",
     description: "Delicate steamed fish finished with lemon, herbs and a light butter sauce",
     price: 269,
@@ -131055,7 +131055,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6890,
-    name: "Steamed Fish and Lentil Bowl",
+    name: "The Good Food Company",
     category: "Steamed Fish",
     description: "Steamed fish served with protein-rich lentils and fresh coriander",
     price: 279,
@@ -131073,7 +131073,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6891,
-    name: "Steamed Fish Asian Greens Bowl",
+    name: "The Village Table",
     category: "Steamed Fish",
     description: "Steamed fish with bok choy, spinach, broccoli and ginger dressing",
     price: 289,
@@ -131091,7 +131091,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6892,
-    name: "Premium Steamed Fish Platter",
+    name: "The Premium Plate",
     category: "Steamed Fish",
     description: "Premium steamed fish fillet served with healthy vegetables and lemon herb dressing",
     price: 319,
@@ -131109,7 +131109,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6893,
-    name: "Classic Vegetable Quinoa Bowl",
+    name: "The Urban Spoon",
     category: "Quinoa Bowl",
     description: "Fluffy quinoa tossed with fresh cucumber, carrots, bell peppers and herbs",
     price: 179,
@@ -131127,7 +131127,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6894,
-    name: "Grilled Chicken Quinoa Bowl",
+    name: "Fresh Fork Kitchen",
     category: "Quinoa Bowl",
     description: "Protein-rich quinoa topped with grilled chicken, broccoli and fresh greens",
     price: 289,
@@ -131145,7 +131145,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6895,
-    name: "Mediterranean Quinoa Bowl",
+    name: "Green Garden Cafe",
     category: "Quinoa Bowl",
     description: "Quinoa with olives, cherry tomatoes, cucumber, feta and lemon dressing",
     price: 249,
@@ -131163,7 +131163,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6896,
-    name: "Avocado Quinoa Power Bowl",
+    name: "Harvest Table Bistro",
     category: "Quinoa Bowl",
     description: "Nutritious quinoa topped with creamy avocado, cucumber and pumpkin seeds",
     price: 269,
@@ -131181,7 +131181,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6897,
-    name: "Paneer Quinoa Protein Bowl",
+    name: "The Daily Plate",
     category: "Quinoa Bowl",
     description: "Quinoa served with grilled paneer, capsicum and aromatic Indian spices",
     price: 239,
@@ -131199,7 +131199,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6898,
-    name: "Mexican Black Bean Quinoa Bowl",
+    name: "Olive & Thyme Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa with black beans, sweet corn, salsa and Mexican seasoning",
     price: 229,
@@ -131217,7 +131217,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6899,
-    name: "Thai Peanut Quinoa Bowl",
+    name: "The Nourish House",
     category: "Quinoa Bowl",
     description: "Quinoa with crunchy vegetables, peanuts and tangy Thai peanut dressing",
     price: 249,
@@ -131235,7 +131235,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6900,
-    name: "Roasted Vegetable Quinoa Bowl",
+    name: "Golden Ladle Cafe",
     category: "Quinoa Bowl",
     description: "Wholesome quinoa mixed with roasted zucchini, carrots and bell peppers",
     price: 199,
@@ -131253,7 +131253,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6901,
-    name: "Chickpea Quinoa Power Bowl",
+    name: "Flavour Junction",
     category: "Quinoa Bowl",
     description: "Quinoa and protein-rich chickpeas with cucumber and lemon herb dressing",
     price: 219,
@@ -131271,7 +131271,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6902,
-    name: "Spicy Peri Peri Quinoa Bowl",
+    name: "The Food Studio",
     category: "Quinoa Bowl",
     description: "Quinoa tossed with grilled vegetables and spicy peri peri seasoning",
     price: 229,
@@ -131289,7 +131289,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6903,
-    name: "Egg and Quinoa Breakfast Bowl",
+    name: "Urban Feast Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa topped with boiled eggs, spinach and black pepper seasoning",
     price: 199,
@@ -131307,7 +131307,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6904,
-    name: "Salmon Quinoa Bowl",
+    name: "The Rustic Bowl",
     category: "Quinoa Bowl",
     description: "Quinoa topped with tender salmon, steamed broccoli and lemon dressing",
     price: 349,
@@ -131325,7 +131325,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6905,
-    name: "Spinach Mushroom Quinoa Bowl",
+    name: "Saffron Street Cafe",
     category: "Quinoa Bowl",
     description: "Quinoa with sautéed mushrooms, fresh spinach and garlic herbs",
     price: 219,
@@ -131343,7 +131343,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6906,
-    name: "Indian Masala Quinoa Bowl",
+    name: "The Wholesome Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa cooked with Indian spices, peas, carrots and fresh coriander",
     price: 189,
@@ -131361,7 +131361,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6907,
-    name: "Broccoli Almond Quinoa Bowl",
+    name: "Maple Leaf Bistro",
     category: "Quinoa Bowl",
     description: "Quinoa with steamed broccoli, toasted almonds and lemon dressing",
     price: 239,
@@ -131379,7 +131379,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6908,
-    name: "Greek Quinoa Bowl",
+    name: "The Happy Platter",
     category: "Quinoa Bowl",
     description: "Quinoa with feta cheese, olives, tomatoes, cucumber and oregano",
     price: 259,
@@ -131397,7 +131397,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6909,
-    name: "Tofu Teriyaki Quinoa Bowl",
+    name: "Cedar Spoon Restaurant",
     category: "Quinoa Bowl",
     description: "Quinoa topped with tofu, broccoli and lightly glazed teriyaki sauce",
     price: 249,
@@ -131415,7 +131415,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6910,
-    name: "Cajun Chicken Quinoa Bowl",
+    name: "The Good Grain Cafe",
     category: "Quinoa Bowl",
     description: "Cajun-spiced grilled chicken served over quinoa with fresh vegetables",
     price: 289,
@@ -131433,7 +131433,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6911,
-    name: "Sweet Potato Quinoa Bowl",
+    name: "The Fresh Table",
     category: "Quinoa Bowl",
     description: "Quinoa served with roasted sweet potato, spinach and pumpkin seeds",
     price: 219,
@@ -131451,7 +131451,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6912,
-    name: "Pesto Quinoa Bowl",
+    name: "Little Leaf Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa mixed with basil pesto, cherry tomatoes and roasted zucchini",
     price: 249,
@@ -131469,7 +131469,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6913,
-    name: "Korean Gochujang Quinoa Bowl",
+    name: "The Culinary Corner",
     category: "Quinoa Bowl",
     description: "Quinoa with tofu, crunchy vegetables and sweet spicy Korean gochujang sauce",
     price: 259,
@@ -131487,7 +131487,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6914,
-    name: "Paneer Tikka Quinoa Bowl",
+    name: "Nature’s Basket Cafe",
     category: "Quinoa Bowl",
     description: "Grilled paneer tikka with quinoa, onions, peppers and mint dressing",
     price: 259,
@@ -131505,7 +131505,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6915,
-    name: "Mango Avocado Quinoa Bowl",
+    name: "The Food Garden",
     category: "Quinoa Bowl",
     description: "Fresh quinoa with ripe mango, avocado, cucumber and lime dressing",
     price: 269,
@@ -131523,7 +131523,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6916,
-    name: "Lentil Quinoa Protein Bowl",
+    name: "Spice Route Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa and cooked lentils with carrots, greens and coriander",
     price: 219,
@@ -131541,7 +131541,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6917,
-    name: "Moroccan Chickpea Quinoa Bowl",
+    name: "The Cozy Fork",
     category: "Quinoa Bowl",
     description: "Quinoa with spiced chickpeas, roasted carrots and fresh mint",
     price: 239,
@@ -131559,7 +131559,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6918,
-    name: "Tandoori Chicken Quinoa Bowl",
+    name: "Daily Delight Bistro",
     category: "Quinoa Bowl",
     description: "Tandoori grilled chicken with quinoa, onion salad and mint yogurt",
     price: 299,
@@ -131577,7 +131577,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6919,
-    name: "Beetroot Quinoa Bowl",
+    name: "The Tasty Pantry",
     category: "Quinoa Bowl",
     description: "Quinoa with roasted beetroot, carrots, feta and fresh herbs",
     price: 229,
@@ -131595,7 +131595,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6920,
-    name: "Asian Sesame Quinoa Bowl",
+    name: "Blue Plate Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa with edamame, carrots, cabbage and sesame ginger dressing",
     price: 249,
@@ -131613,7 +131613,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6921,
-    name: "Grilled Fish Quinoa Bowl",
+    name: "The Honest Meal",
     category: "Quinoa Bowl",
     description: "Grilled fish fillet served with quinoa, steamed greens and lemon",
     price: 319,
@@ -131631,7 +131631,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6922,
-    name: "Corn and Edamame Quinoa Bowl",
+    name: "Sunrise Cafe & Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa mixed with sweet corn, edamame, peppers and lime",
     price: 229,
@@ -131649,7 +131649,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6923,
-    name: "Greek Chicken Quinoa Bowl",
+    name: "The Kitchen Collective",
     category: "Quinoa Bowl",
     description: "Grilled chicken, quinoa, cucumber, tomatoes and Greek yogurt dressing",
     price: 299,
@@ -131667,7 +131667,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6924,
-    name: "Pumpkin Seed Quinoa Bowl",
+    name: "Flavour House",
     category: "Quinoa Bowl",
     description: "Quinoa topped with roasted pumpkin, pumpkin seeds and fresh spinach",
     price: 229,
@@ -131685,7 +131685,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6925,
-    name: "Lemon Coriander Quinoa Bowl",
+    name: "The Green Apron",
     category: "Quinoa Bowl",
     description: "Light quinoa bowl with fresh coriander, lemon and crunchy vegetables",
     price: 189,
@@ -131703,7 +131703,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6926,
-    name: "Smoky BBQ Chicken Quinoa Bowl",
+    name: "City Spoon Bistro",
     category: "Quinoa Bowl",
     description: "Grilled chicken with quinoa, roasted corn and smoky barbecue dressing",
     price: 289,
@@ -131721,7 +131721,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6927,
-    name: "Cauliflower Quinoa Bowl",
+    name: "The Farmhouse Cafe",
     category: "Quinoa Bowl",
     description: "Quinoa with roasted cauliflower, garlic and fresh parsley",
     price: 199,
@@ -131739,7 +131739,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6928,
-    name: "Hummus Quinoa Bowl",
+    name: "Root & Roast Kitchen",
     category: "Quinoa Bowl",
     description: "Quinoa served with creamy hummus, cucumber, tomatoes and parsley",
     price: 239,
@@ -131757,7 +131757,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6929,
-    name: "Low Carb Quinoa Vegetable Bowl",
+    name: "The Gourmet Nest",
     category: "Quinoa Bowl",
     description: "Balanced quinoa serving with zucchini, broccoli and fresh greens",
     price: 219,
@@ -131775,7 +131775,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6930,
-    name: "Coconut Curry Quinoa Bowl",
+    name: "Urban Harvest Bistro",
     category: "Quinoa Bowl",
     description: "Quinoa with vegetables in a light coconut curry sauce",
     price: 239,
@@ -131793,7 +131793,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6931,
-    name: "Cottage Cheese Quinoa Bowl",
+    name: "The Savoury Spoon",
     category: "Quinoa Bowl",
     description: "Quinoa topped with fresh cottage cheese, tomatoes and cucumber",
     price: 229,
@@ -131811,7 +131811,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6932,
-    name: "Roasted Garlic Quinoa Bowl",
+    name: "Fresh Roots Cafe",
     category: "Quinoa Bowl",
     description: "Fluffy quinoa with roasted garlic, zucchini and fresh parsley",
     price: 199,
@@ -131829,7 +131829,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6933,
-    name: "Edamame Tofu Quinoa Bowl",
+    name: "The Platter Room",
     category: "Quinoa Bowl",
     description: "Plant-based protein bowl with quinoa, tofu, edamame and sesame",
     price: 269,
@@ -131847,7 +131847,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6934,
-    name: "Spicy Indian Chickpea Quinoa Bowl",
+    name: "The Kitchen Story",
     category: "Quinoa Bowl",
     description: "Quinoa with masala chickpeas, onions, tomatoes and coriander",
     price: 219,
@@ -131865,7 +131865,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6935,
-    name: "Turkey Quinoa Protein Bowl",
+    name: "The Meal Market",
     category: "Quinoa Bowl",
     description: "Lean turkey pieces served over quinoa with steamed greens",
     price: 319,
@@ -131883,7 +131883,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6936,
-    name: "Roasted Corn Quinoa Bowl",
+    name: "The Corner Bistro",
     category: "Quinoa Bowl",
     description: "Quinoa tossed with roasted sweet corn, peppers and coriander",
     price: 199,
@@ -131901,7 +131901,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6937,
-    name: "Thai Coconut Quinoa Bowl",
+    name: "The Modern Tiffin",
     category: "Quinoa Bowl",
     description: "Quinoa with vegetables, coconut milk, lime and Thai herbs",
     price: 249,
@@ -131919,7 +131919,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6938,
-    name: "Grilled Prawn Quinoa Bowl",
+    name: "The Food Loft",
     category: "Quinoa Bowl",
     description: "Grilled prawns with quinoa, fresh greens and lemon garlic dressing",
     price: 329,
@@ -131937,7 +131937,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6939,
-    name: "Rainbow Quinoa Salad Bowl",
+    name: "The Signature Kitchen",
     category: "Quinoa Bowl",
     description: "Colourful quinoa salad with beetroot, carrots, cabbage and cucumber",
     price: 219,
@@ -131955,7 +131955,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6940,
-    name: "Smoky Tandoori Paneer Quinoa Bowl",
+    name: "The Good Food Company",
     category: "Quinoa Bowl",
     description: "Smoky paneer tikka with quinoa, grilled peppers and mint chutney",
     price: 269,
@@ -131973,7 +131973,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6941,
-    name: "Premium Quinoa Superfood Bowl",
+    name: "The Village Table",
     category: "Quinoa Bowl",
     description: "Quinoa with avocado, kale, berries, nuts and nutritious seeds",
     price: 299,
@@ -131991,7 +131991,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6942,
-    name: "Ultimate Protein Quinoa Bowl",
+    name: "The Premium Plate",
     category: "Quinoa Bowl",
     description: "High-protein quinoa bowl with grilled chicken, chickpeas, egg and broccoli",
     price: 329,
@@ -132009,7 +132009,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6943,
-    name: "Classic Avocado Toast",
+    name: "The Urban Spoon",
     category: "Avocado Toast",
     description: "Creamy mashed avocado spread over toasted whole grain bread with olive oil and sea salt",
     price: 149,
@@ -132027,7 +132027,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6944,
-    name: "Avocado Tomato Toast",
+    name: "Fresh Fork Kitchen",
     category: "Avocado Toast",
     description: "Fresh avocado mash topped with juicy cherry tomatoes and cracked black pepper",
     price: 169,
@@ -132045,7 +132045,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6945,
-    name: "Avocado Egg Toast",
+    name: "Green Garden Cafe",
     category: "Avocado Toast",
     description: "Whole grain toast topped with avocado spread and a perfectly poached egg",
     price: 199,
@@ -132063,7 +132063,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6946,
-    name: "Avocado Feta Toast",
+    name: "Harvest Table Bistro",
     category: "Avocado Toast",
     description: "Sourdough bread with creamy avocado, crumbled feta cheese and fresh herbs",
     price: 189,
@@ -132081,7 +132081,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6947,
-    name: "Avocado Mushroom Toast",
+    name: "The Daily Plate",
     category: "Avocado Toast",
     description: "Toasted multigrain bread with avocado and sautéed garlic mushrooms",
     price: 179,
@@ -132099,7 +132099,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6948,
-    name: "Avocado Spinach Toast",
+    name: "Olive & Thyme Kitchen",
     category: "Avocado Toast",
     description: "Fresh avocado spread topped with baby spinach and lemon seasoning",
     price: 159,
@@ -132117,7 +132117,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6949,
-    name: "Avocado Hummus Toast",
+    name: "The Nourish House",
     category: "Avocado Toast",
     description: "Whole wheat toast layered with hummus and fresh avocado slices",
     price: 169,
@@ -132135,7 +132135,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6950,
-    name: "Avocado Pesto Toast",
+    name: "Golden Ladle Cafe",
     category: "Avocado Toast",
     description: "Sourdough toast with avocado mash and fresh basil pesto",
     price: 189,
@@ -132153,7 +132153,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6951,
-    name: "Avocado Corn Toast",
+    name: "Flavour Junction",
     category: "Avocado Toast",
     description: "Avocado spread topped with sweet corn, lime juice and coriander",
     price: 159,
@@ -132171,7 +132171,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6952,
-    name: "Avocado Cottage Cheese Toast",
+    name: "The Food Studio",
     category: "Avocado Toast",
     description: "Whole grain toast topped with avocado and fresh cottage cheese",
     price: 199,
@@ -132189,7 +132189,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6953,
-    name: "Spicy Avocado Toast",
+    name: "Urban Feast Kitchen",
     category: "Avocado Toast",
     description: "Creamy avocado toast seasoned with chilli flakes and spicy paprika",
     price: 159,
@@ -132207,7 +132207,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6954,
-    name: "Avocado Cucumber Toast",
+    name: "The Rustic Bowl",
     category: "Avocado Toast",
     description: "Avocado spread topped with crisp cucumber ribbons and fresh dill",
     price: 149,
@@ -132225,7 +132225,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6955,
-    name: "Avocado Beetroot Toast",
+    name: "Saffron Street Cafe",
     category: "Avocado Toast",
     description: "Multigrain toast with avocado and roasted beetroot slices",
     price: 169,
@@ -132243,7 +132243,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6956,
-    name: "Avocado Greek Toast",
+    name: "The Wholesome Kitchen",
     category: "Avocado Toast",
     description: "Sourdough topped with avocado, olives, feta and Greek herbs",
     price: 219,
@@ -132261,7 +132261,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6957,
-    name: "Avocado Smoked Chicken Toast",
+    name: "Maple Leaf Bistro",
     category: "Avocado Toast",
     description: "Avocado toast topped with tender smoked chicken breast",
     price: 249,
@@ -132279,7 +132279,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6958,
-    name: "Avocado Salmon Toast",
+    name: "The Happy Platter",
     category: "Avocado Toast",
     description: "Whole grain toast with avocado and smoked salmon slices",
     price: 299,
@@ -132297,7 +132297,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6959,
-    name: "Avocado Tofu Toast",
+    name: "Cedar Spoon Restaurant",
     category: "Avocado Toast",
     description: "Vegan multigrain toast topped with avocado and grilled tofu",
     price: 199,
@@ -132315,7 +132315,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6960,
-    name: "Avocado Jalapeno Toast",
+    name: "The Good Grain Cafe",
     category: "Avocado Toast",
     description: "Avocado spread topped with jalapeno peppers and lime seasoning",
     price: 169,
@@ -132333,7 +132333,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6961,
-    name: "Avocado Onion Toast",
+    name: "The Fresh Table",
     category: "Avocado Toast",
     description: "Avocado mash topped with caramelized onions and toasted sesame",
     price: 159,
@@ -132351,7 +132351,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6962,
-    name: "Avocado Broccoli Toast",
+    name: "Little Leaf Kitchen",
     category: "Avocado Toast",
     description: "Toasted whole wheat bread with avocado and steamed broccoli florets",
     price: 179,
@@ -132369,7 +132369,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6963,
-    name: "Avocado Walnut Toast",
+    name: "The Culinary Corner",
     category: "Avocado Toast",
     description: "Creamy avocado spread topped with crunchy walnuts and honey",
     price: 189,
@@ -132387,7 +132387,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6964,
-    name: "Avocado Almond Toast",
+    name: "Nature’s Basket Cafe",
     category: "Avocado Toast",
     description: "Whole grain toast topped with avocado mash and sliced almonds",
     price: 179,
@@ -132405,7 +132405,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6965,
-    name: "Avocado Chia Toast",
+    name: "The Food Garden",
     category: "Avocado Toast",
     description: "Avocado toast garnished with chia seeds and lemon zest",
     price: 169,
@@ -132423,7 +132423,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6966,
-    name: "Avocado Flaxseed Toast",
+    name: "Spice Route Kitchen",
     category: "Avocado Toast",
     description: "Multigrain toast with avocado and nutritious ground flaxseeds",
     price: 159,
@@ -132441,7 +132441,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6967,
-    name: "Avocado Pumpkin Seed Toast",
+    name: "The Cozy Fork",
     category: "Avocado Toast",
     description: "Creamy avocado toast sprinkled with roasted pumpkin seeds",
     price: 179,
@@ -132459,7 +132459,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6968,
-    name: "Avocado Chilli Cheese Toast",
+    name: "Daily Delight Bistro",
     category: "Avocado Toast",
     description: "Avocado mash with melted mozzarella and spicy chilli flakes",
     price: 199,
@@ -132477,7 +132477,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6969,
-    name: "Avocado Mozzarella Toast",
+    name: "The Tasty Pantry",
     category: "Avocado Toast",
     description: "Sourdough bread topped with avocado and fresh mozzarella cheese",
     price: 209,
@@ -132495,7 +132495,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6970,
-    name: "Avocado Ricotta Toast",
+    name: "Blue Plate Kitchen",
     category: "Avocado Toast",
     description: "Rustic toast with creamy ricotta cheese and fresh avocado",
     price: 199,
@@ -132513,7 +132513,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6971,
-    name: "Avocado Red Pepper Toast",
+    name: "The Honest Meal",
     category: "Avocado Toast",
     description: "Avocado toast topped with roasted red bell peppers and herbs",
     price: 179,
@@ -132531,7 +132531,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6972,
-    name: "Avocado Carrot Toast",
+    name: "Sunrise Cafe & Kitchen",
     category: "Avocado Toast",
     description: "Whole grain toast with avocado and freshly grated carrot",
     price: 149,
@@ -132549,7 +132549,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6973,
-    name: "Avocado Zucchini Toast",
+    name: "The Kitchen Collective",
     category: "Avocado Toast",
     description: "Avocado spread topped with grilled zucchini and fresh basil",
     price: 179,
@@ -132567,7 +132567,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6974,
-    name: "Avocado Sweet Potato Toast",
+    name: "Flavour House",
     category: "Avocado Toast",
     description: "Avocado spread with roasted sweet potato slices on multigrain bread",
     price: 189,
@@ -132585,7 +132585,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6975,
-    name: "Avocado Apple Toast",
+    name: "The Green Apron",
     category: "Avocado Toast",
     description: "Creamy avocado topped with crisp apple slices and cinnamon",
     price: 169,
@@ -132603,7 +132603,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6976,
-    name: "Avocado Pomegranate Toast",
+    name: "City Spoon Bistro",
     category: "Avocado Toast",
     description: "Avocado toast garnished with fresh pomegranate seeds and mint",
     price: 179,
@@ -132621,7 +132621,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6977,
-    name: "Avocado Mango Toast",
+    name: "The Farmhouse Cafe",
     category: "Avocado Toast",
     description: "Avocado spread topped with ripe mango cubes and lime juice",
     price: 189,
@@ -132639,7 +132639,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6978,
-    name: "Avocado Pineapple Toast",
+    name: "Root & Roast Kitchen",
     category: "Avocado Toast",
     description: "Fresh avocado toast topped with juicy pineapple and coriander",
     price: 169,
@@ -132657,7 +132657,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6979,
-    name: "Avocado Strawberry Toast",
+    name: "The Gourmet Nest",
     category: "Avocado Toast",
     description: "Creamy avocado toast with fresh strawberry slices and balsamic glaze",
     price: 199,
@@ -132675,7 +132675,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6980,
-    name: "Avocado Edamame Toast",
+    name: "Urban Harvest Bistro",
     category: "Avocado Toast",
     description: "Multigrain toast with avocado and protein-rich edamame beans",
     price: 199,
@@ -132693,7 +132693,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6981,
-    name: "Avocado Chickpea Toast",
+    name: "The Savoury Spoon",
     category: "Avocado Toast",
     description: "Avocado mash topped with roasted chickpeas and smoked paprika",
     price: 179,
@@ -132711,7 +132711,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6982,
-    name: "Avocado Lentil Toast",
+    name: "Fresh Roots Cafe",
     category: "Avocado Toast",
     description: "Whole grain toast topped with avocado and seasoned lentils",
     price: 189,
@@ -132729,7 +132729,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6983,
-    name: "Avocado Rajma Toast",
+    name: "The Platter Room",
     category: "Avocado Toast",
     description: "Avocado spread topped with spiced kidney beans and fresh coriander",
     price: 169,
@@ -132747,7 +132747,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6984,
-    name: "Avocado Paneer Tikka Toast",
+    name: "The Kitchen Story",
     category: "Avocado Toast",
     description: "Avocado toast topped with grilled paneer tikka and Indian spices",
     price: 219,
@@ -132765,7 +132765,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6985,
-    name: "Avocado Tandoori Chicken Toast",
+    name: "The Meal Market",
     category: "Avocado Toast",
     description: "Whole grain toast topped with avocado and smoky tandoori chicken",
     price: 249,
@@ -132783,7 +132783,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6986,
-    name: "Avocado Peri Peri Chicken Toast",
+    name: "The Corner Bistro",
     category: "Avocado Toast",
     description: "Avocado spread topped with spicy peri peri grilled chicken",
     price: 239,
@@ -132801,7 +132801,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6987,
-    name: "Avocado Turkey Toast",
+    name: "The Modern Tiffin",
     category: "Avocado Toast",
     description: "Multigrain toast with avocado spread and lean roasted turkey",
     price: 259,
@@ -132819,7 +132819,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6988,
-    name: "Avocado Tuna Toast",
+    name: "The Food Loft",
     category: "Avocado Toast",
     description: "Avocado toast topped with tuna salad and fresh lemon",
     price: 249,
@@ -132837,7 +132837,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6989,
-    name: "Avocado Prawn Toast",
+    name: "The Signature Kitchen",
     category: "Avocado Toast",
     description: "Creamy avocado toast topped with grilled prawns and garlic seasoning",
     price: 279,
@@ -132855,7 +132855,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6990,
-    name: "Avocado BBQ Chicken Toast",
+    name: "The Good Food Company",
     category: "Avocado Toast",
     description: "Whole grain toast with avocado and smoky barbecue chicken",
     price: 249,
@@ -132873,7 +132873,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6991,
-    name: "Avocado Egg White Toast",
+    name: "The Village Table",
     category: "Avocado Toast",
     description: "Avocado spread topped with fluffy egg whites and herbs",
     price: 189,
@@ -132891,7 +132891,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6992,
-    name: "Avocado Scrambled Egg Toast",
+    name: "The Premium Plate",
     category: "Avocado Toast",
     description: "Creamy avocado toast topped with soft scrambled eggs",
     price: 199,
@@ -132909,7 +132909,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6993,
-    name: "Classic Green Detox Smoothie",
+    name: "The Urban Spoon",
     category: "Green Smoothie",
     description: "Fresh spinach, cucumber, green apple and lemon blended into a refreshing detox smoothie",
     price: 129,
@@ -132927,7 +132927,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6994,
-    name: "Spinach Banana Smoothie",
+    name: "Fresh Fork Kitchen",
     category: "Green Smoothie",
     description: "Creamy banana blended with fresh spinach and almond milk",
     price: 139,
@@ -132945,7 +132945,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6995,
-    name: "Avocado Green Smoothie",
+    name: "Green Garden Cafe",
     category: "Green Smoothie",
     description: "Avocado, spinach and coconut milk blended into a rich nutritious smoothie",
     price: 179,
@@ -132963,7 +132963,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6996,
-    name: "Kale Apple Smoothie",
+    name: "Harvest Table Bistro",
     category: "Green Smoothie",
     description: "Fresh kale, green apple and lemon blended with chilled water",
     price: 149,
@@ -132981,7 +132981,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6997,
-    name: "Cucumber Mint Smoothie",
+    name: "The Daily Plate",
     category: "Green Smoothie",
     description: "Refreshing cucumber, mint leaves and lime blended into a cooling drink",
     price: 119,
@@ -132999,7 +132999,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6998,
-    name: "Pineapple Spinach Smoothie",
+    name: "Olive & Thyme Kitchen",
     category: "Green Smoothie",
     description: "Sweet pineapple blended with spinach and coconut water",
     price: 149,
@@ -133017,7 +133017,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 6999,
-    name: "Mango Green Smoothie",
+    name: "The Nourish House",
     category: "Green Smoothie",
     description: "Ripe mango blended with spinach and unsweetened almond milk",
     price: 159,
@@ -133035,7 +133035,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7000,
-    name: "Kiwi Spinach Smoothie",
+    name: "Golden Ladle Cafe",
     category: "Green Smoothie",
     description: "Tangy kiwi fruit blended with baby spinach and fresh lime",
     price: 169,
@@ -133053,7 +133053,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7001,
-    name: "Green Protein Smoothie",
+    name: "Flavour Junction",
     category: "Green Smoothie",
     description: "Spinach, banana, Greek yogurt and plant protein blended together",
     price: 199,
@@ -133071,7 +133071,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7002,
-    name: "Coconut Green Smoothie",
+    name: "The Food Studio",
     category: "Green Smoothie",
     description: "Spinach, banana and creamy coconut milk blended into a tropical drink",
     price: 159,
@@ -133089,7 +133089,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7003,
-    name: "Broccoli Green Smoothie",
+    name: "Urban Feast Kitchen",
     category: "Green Smoothie",
     description: "Broccoli, spinach, green apple and lemon blended into a nutrient-rich drink",
     price: 149,
@@ -133107,7 +133107,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7004,
-    name: "Celery Apple Smoothie",
+    name: "The Rustic Bowl",
     category: "Green Smoothie",
     description: "Celery stalks, green apples and cucumber blended with fresh lime",
     price: 139,
@@ -133125,7 +133125,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7005,
-    name: "Lemon Ginger Green Smoothie",
+    name: "Saffron Street Cafe",
     category: "Green Smoothie",
     description: "Spinach, lemon, fresh ginger and green apple blended for a refreshing drink",
     price: 129,
@@ -133143,7 +133143,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7006,
-    name: "Matcha Green Smoothie",
+    name: "The Wholesome Kitchen",
     category: "Green Smoothie",
     description: "Premium matcha green tea blended with banana and almond milk",
     price: 179,
@@ -133161,7 +133161,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7007,
-    name: "Green Chia Smoothie",
+    name: "Maple Leaf Bistro",
     category: "Green Smoothie",
     description: "Spinach, banana, chia seeds and almond milk blended until creamy",
     price: 169,
@@ -133179,7 +133179,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7008,
-    name: "Green Flaxseed Smoothie",
+    name: "The Happy Platter",
     category: "Green Smoothie",
     description: "Spinach, banana and ground flaxseed blended with oat milk",
     price: 159,
@@ -133197,7 +133197,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7009,
-    name: "Green Almond Smoothie",
+    name: "Cedar Spoon Restaurant",
     category: "Green Smoothie",
     description: "Spinach, almond butter, banana and almond milk blended smoothly",
     price: 179,
@@ -133215,7 +133215,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7010,
-    name: "Green Peanut Butter Smoothie",
+    name: "The Good Grain Cafe",
     category: "Green Smoothie",
     description: "Spinach, peanut butter, banana and oat milk blended into a filling smoothie",
     price: 189,
@@ -133233,7 +133233,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7011,
-    name: "Green Oats Smoothie",
+    name: "The Fresh Table",
     category: "Green Smoothie",
     description: "Spinach, rolled oats, banana and almond milk blended into a breakfast smoothie",
     price: 169,
@@ -133251,7 +133251,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7012,
-    name: "Green Yogurt Smoothie",
+    name: "Little Leaf Kitchen",
     category: "Green Smoothie",
     description: "Spinach, Greek yogurt, green apple and honey blended into a creamy drink",
     price: 159,
@@ -133269,7 +133269,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7013,
-    name: "Green Pear Smoothie",
+    name: "The Culinary Corner",
     category: "Green Smoothie",
     description: "Fresh pear, spinach and cucumber blended with chilled coconut water",
     price: 149,
@@ -133287,7 +133287,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7014,
-    name: "Green Grapes Smoothie",
+    name: "Nature’s Basket Cafe",
     category: "Green Smoothie",
     description: "Sweet green grapes blended with spinach and fresh lime",
     price: 159,
@@ -133305,7 +133305,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7015,
-    name: "Green Melon Smoothie",
+    name: "The Food Garden",
     category: "Green Smoothie",
     description: "Honeydew melon, cucumber and mint blended into a refreshing smoothie",
     price: 139,
@@ -133323,7 +133323,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7016,
-    name: "Green Papaya Smoothie",
+    name: "Spice Route Kitchen",
     category: "Green Smoothie",
     description: "Green papaya, spinach and lime blended with coconut water",
     price: 149,
@@ -133341,7 +133341,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7017,
-    name: "Green Orange Smoothie",
+    name: "The Cozy Fork",
     category: "Green Smoothie",
     description: "Spinach, fresh orange juice and banana blended into a citrus smoothie",
     price: 149,
@@ -133359,7 +133359,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7018,
-    name: "Green Lemon Smoothie",
+    name: "Daily Delight Bistro",
     category: "Green Smoothie",
     description: "Spinach, cucumber, lemon and green apple blended with fresh water",
     price: 129,
@@ -133377,7 +133377,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7019,
-    name: "Green Coconut Water Smoothie",
+    name: "The Tasty Pantry",
     category: "Green Smoothie",
     description: "Spinach, banana and fresh coconut water blended into a light smoothie",
     price: 149,
@@ -133395,7 +133395,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7020,
-    name: "Green Almond Milk Smoothie",
+    name: "Blue Plate Kitchen",
     category: "Green Smoothie",
     description: "Baby spinach, green apple and unsweetened almond milk blended together",
     price: 159,
@@ -133413,7 +133413,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7021,
-    name: "Green Soy Milk Smoothie",
+    name: "The Honest Meal",
     category: "Green Smoothie",
     description: "Spinach, banana and soy milk blended into a protein-rich green drink",
     price: 169,
@@ -133431,7 +133431,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7022,
-    name: "Green Cashew Smoothie",
+    name: "Sunrise Cafe & Kitchen",
     category: "Green Smoothie",
     description: "Spinach, cashews, banana and oat milk blended into a creamy smoothie",
     price: 189,
@@ -133449,7 +133449,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7023,
-    name: "Green Pistachio Smoothie",
+    name: "The Kitchen Collective",
     category: "Green Smoothie",
     description: "Spinach, pistachios, banana and almond milk blended smoothly",
     price: 199,
@@ -133467,7 +133467,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7024,
-    name: "Green Sunflower Seed Smoothie",
+    name: "Flavour House",
     category: "Green Smoothie",
     description: "Spinach, sunflower seeds, banana and oat milk blended together",
     price: 179,
@@ -133485,7 +133485,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7025,
-    name: "Green Hemp Protein Smoothie",
+    name: "The Green Apron",
     category: "Green Smoothie",
     description: "Spinach, hemp protein, banana and almond milk blended for a nutritious drink",
     price: 219,
@@ -133503,7 +133503,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7026,
-    name: "Green Pea Protein Smoothie",
+    name: "City Spoon Bistro",
     category: "Green Smoothie",
     description: "Spinach, pea protein, green apple and almond milk blended together",
     price: 199,
@@ -133521,7 +133521,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7027,
-    name: "Green Spirulina Smoothie",
+    name: "The Farmhouse Cafe",
     category: "Green Smoothie",
     description: "Spinach, spirulina, pineapple and coconut water blended into a superfood drink",
     price: 189,
@@ -133539,7 +133539,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7028,
-    name: "Green Wheatgrass Smoothie",
+    name: "Root & Roast Kitchen",
     category: "Green Smoothie",
     description: "Wheatgrass, green apple, cucumber and lemon blended into a refreshing drink",
     price: 159,
@@ -133557,7 +133557,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7029,
-    name: "Green Moringa Smoothie",
+    name: "The Gourmet Nest",
     category: "Green Smoothie",
     description: "Spinach, moringa powder, banana and coconut milk blended together",
     price: 179,
@@ -133575,7 +133575,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7030,
-    name: "Green Turmeric Smoothie",
+    name: "Urban Harvest Bistro",
     category: "Green Smoothie",
     description: "Spinach, turmeric, ginger, banana and almond milk blended together",
     price: 159,
@@ -133593,7 +133593,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7031,
-    name: "Green Ginger Smoothie",
+    name: "The Savoury Spoon",
     category: "Green Smoothie",
     description: "Spinach, cucumber, ginger and green apple blended with lime",
     price: 139,
@@ -133611,7 +133611,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7032,
-    name: "Green Basil Smoothie",
+    name: "Fresh Roots Cafe",
     category: "Green Smoothie",
     description: "Fresh basil, spinach, pineapple and coconut water blended into a herbal drink",
     price: 149,
@@ -133629,7 +133629,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7033,
-    name: "Green Mint Smoothie",
+    name: "The Platter Room",
     category: "Green Smoothie",
     description: "Spinach, mint leaves, cucumber and green apple blended with chilled water",
     price: 129,
@@ -133647,7 +133647,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7034,
-    name: "Green Pineapple Ginger Smoothie",
+    name: "The Kitchen Story",
     category: "Green Smoothie",
     description: "Pineapple, spinach, ginger and coconut water blended with fresh lime",
     price: 159,
@@ -133665,7 +133665,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7035,
-    name: "Green Berry Smoothie",
+    name: "The Meal Market",
     category: "Green Smoothie",
     description: "Spinach, strawberries, blueberries and banana blended with almond milk",
     price: 179,
@@ -133683,7 +133683,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7036,
-    name: "Green Blueberry Smoothie",
+    name: "The Corner Bistro",
     category: "Green Smoothie",
     description: "Baby spinach, blueberries, banana and Greek yogurt blended smoothly",
     price: 189,
@@ -133701,7 +133701,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7037,
-    name: "Green Strawberry Smoothie",
+    name: "The Modern Tiffin",
     category: "Green Smoothie",
     description: "Spinach, fresh strawberries, banana and oat milk blended together",
     price: 169,
@@ -133719,7 +133719,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7038,
-    name: "Green Raspberry Smoothie",
+    name: "The Food Loft",
     category: "Green Smoothie",
     description: "Spinach, raspberries, green apple and almond milk blended into a fruity drink",
     price: 179,
@@ -133737,7 +133737,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7039,
-    name: "Green Peach Smoothie",
+    name: "The Signature Kitchen",
     category: "Green Smoothie",
     description: "Fresh peach, baby spinach and banana blended with almond milk",
     price: 169,
@@ -133755,7 +133755,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7040,
-    name: "Green Coconut Mango Smoothie",
+    name: "The Good Food Company",
     category: "Green Smoothie",
     description: "Mango, spinach and coconut milk blended into a tropical green smoothie",
     price: 179,
@@ -133773,7 +133773,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7041,
-    name: "Green Date Smoothie",
+    name: "The Village Table",
     category: "Green Smoothie",
     description: "Spinach, dates, banana and almond milk blended into a naturally sweet drink",
     price: 169,
@@ -133791,7 +133791,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7042,
-    name: "Ultimate Superfood Green Smoothie",
+    name: "The Premium Plate",
     category: "Green Smoothie",
     description: "Spinach, kale, avocado, chia seeds, banana and almond milk blended into a superfood smoothie",
     price: 229,
@@ -133809,7 +133809,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7043,
-    name: "Classic Honey Oatmeal",
+    name: "The Urban Spoon",
     category: "Oatmeal",
     description: "Creamy rolled oats cooked with milk and naturally sweetened with honey",
     price: 99,
@@ -133827,7 +133827,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7044,
-    name: "Banana Honey Oatmeal",
+    name: "Fresh Fork Kitchen",
     category: "Oatmeal",
     description: "Warm oatmeal topped with sliced bananas, honey and cinnamon",
     price: 119,
@@ -133845,7 +133845,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7045,
-    name: "Apple Cinnamon Oatmeal",
+    name: "Green Garden Cafe",
     category: "Oatmeal",
     description: "Oats cooked with apples, cinnamon and a touch of maple syrup",
     price: 129,
@@ -133863,7 +133863,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7046,
-    name: "Berry Oatmeal Bowl",
+    name: "Harvest Table Bistro",
     category: "Oatmeal",
     description: "Creamy oats topped with strawberries, blueberries and raspberries",
     price: 159,
@@ -133881,7 +133881,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7047,
-    name: "Chocolate Oatmeal",
+    name: "The Daily Plate",
     category: "Oatmeal",
     description: "Warm oats blended with cocoa powder, dark chocolate and milk",
     price: 139,
@@ -133899,7 +133899,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7048,
-    name: "Peanut Butter Oatmeal",
+    name: "Olive & Thyme Kitchen",
     category: "Oatmeal",
     description: "Creamy oats topped with peanut butter and roasted peanuts",
     price: 149,
@@ -133917,7 +133917,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7049,
-    name: "Almond Oatmeal",
+    name: "The Nourish House",
     category: "Oatmeal",
     description: "Oatmeal topped with sliced almonds, almond milk and honey",
     price: 139,
@@ -133935,7 +133935,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7050,
-    name: "Walnut Maple Oatmeal",
+    name: "Golden Ladle Cafe",
     category: "Oatmeal",
     description: "Warm rolled oats topped with crunchy walnuts and maple syrup",
     price: 149,
@@ -133953,7 +133953,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7051,
-    name: "Mango Oatmeal",
+    name: "Flavour Junction",
     category: "Oatmeal",
     description: "Creamy oatmeal topped with fresh mango chunks and chia seeds",
     price: 149,
@@ -133971,7 +133971,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7052,
-    name: "Strawberry Oatmeal",
+    name: "The Food Studio",
     category: "Oatmeal",
     description: "Milk oatmeal topped with fresh strawberries and honey",
     price: 139,
@@ -133989,7 +133989,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7053,
-    name: "Blueberry Oatmeal",
+    name: "Urban Feast Kitchen",
     category: "Oatmeal",
     description: "Warm oats with fresh blueberries, Greek yogurt and honey",
     price: 159,
@@ -134007,7 +134007,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7054,
-    name: "Raspberry Oatmeal",
+    name: "The Rustic Bowl",
     category: "Oatmeal",
     description: "Creamy oats topped with fresh raspberries and chia seeds",
     price: 159,
@@ -134025,7 +134025,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7055,
-    name: "Mixed Nuts Oatmeal",
+    name: "Saffron Street Cafe",
     category: "Oatmeal",
     description: "Oats topped with almonds, walnuts, cashews and pistachios",
     price: 179,
@@ -134043,7 +134043,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7056,
-    name: "Coconut Oatmeal",
+    name: "The Wholesome Kitchen",
     category: "Oatmeal",
     description: "Oatmeal cooked in coconut milk with shredded coconut",
     price: 139,
@@ -134061,7 +134061,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7057,
-    name: "Dates Oatmeal",
+    name: "Maple Leaf Bistro",
     category: "Oatmeal",
     description: "Creamy oats sweetened with chopped dates and topped with almonds",
     price: 139,
@@ -134079,7 +134079,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7058,
-    name: "Raisin Oatmeal",
+    name: "The Happy Platter",
     category: "Oatmeal",
     description: "Classic oatmeal topped with raisins, cinnamon and honey",
     price: 119,
@@ -134097,7 +134097,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7059,
-    name: "Pumpkin Spice Oatmeal",
+    name: "Cedar Spoon Restaurant",
     category: "Oatmeal",
     description: "Oats cooked with pumpkin puree, cinnamon and nutmeg",
     price: 149,
@@ -134115,7 +134115,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7060,
-    name: "Vanilla Oatmeal",
+    name: "The Good Grain Cafe",
     category: "Oatmeal",
     description: "Creamy rolled oats infused with vanilla and topped with fresh berries",
     price: 129,
@@ -134133,7 +134133,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7061,
-    name: "Cocoa Banana Oatmeal",
+    name: "The Fresh Table",
     category: "Oatmeal",
     description: "Chocolate oats topped with banana slices and cocoa nibs",
     price: 149,
@@ -134151,7 +134151,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7062,
-    name: "Carrot Cake Oatmeal",
+    name: "Little Leaf Kitchen",
     category: "Oatmeal",
     description: "Oats with grated carrot, cinnamon, raisins and cream cheese topping",
     price: 159,
@@ -134169,7 +134169,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7063,
-    name: "Apple Walnut Oatmeal",
+    name: "The Culinary Corner",
     category: "Oatmeal",
     description: "Warm oats topped with caramelized apples and crunchy walnuts",
     price: 159,
@@ -134187,7 +134187,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7064,
-    name: "Pistachio Oatmeal",
+    name: "Nature’s Basket Cafe",
     category: "Oatmeal",
     description: "Creamy oats topped with pistachios, honey and cardamom",
     price: 169,
@@ -134205,7 +134205,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7065,
-    name: "Chia Seed Oatmeal",
+    name: "The Food Garden",
     category: "Oatmeal",
     description: "Oatmeal enriched with chia seeds, banana and almond milk",
     price: 149,
@@ -134223,7 +134223,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7066,
-    name: "Flaxseed Oatmeal",
+    name: "Spice Route Kitchen",
     category: "Oatmeal",
     description: "Warm oats topped with ground flaxseed, honey and sliced banana",
     price: 139,
@@ -134241,7 +134241,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7067,
-    name: "Quinoa Oatmeal",
+    name: "The Cozy Fork",
     category: "Oatmeal",
     description: "A nutritious blend of rolled oats and quinoa topped with fresh fruits",
     price: 169,
@@ -134259,7 +134259,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7068,
-    name: "Greek Yogurt Oatmeal",
+    name: "Daily Delight Bistro",
     category: "Oatmeal",
     description: "Creamy oats topped with Greek yogurt, berries and honey",
     price: 159,
@@ -134277,7 +134277,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7069,
-    name: "High Protein Oatmeal",
+    name: "The Tasty Pantry",
     category: "Oatmeal",
     description: "Oats blended with protein powder, milk and almond butter",
     price: 199,
@@ -134295,7 +134295,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7070,
-    name: "Vegan Almond Oatmeal",
+    name: "Blue Plate Kitchen",
     category: "Oatmeal",
     description: "Plant-based oatmeal cooked with almond milk and topped with fresh fruit",
     price: 139,
@@ -134313,7 +134313,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7071,
-    name: "Coconut Banana Oatmeal",
+    name: "The Honest Meal",
     category: "Oatmeal",
     description: "Oats topped with banana, coconut flakes and coconut milk",
     price: 149,
@@ -134331,7 +134331,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7072,
-    name: "Dark Chocolate Oatmeal",
+    name: "Sunrise Cafe & Kitchen",
     category: "Oatmeal",
     description: "Rich oatmeal topped with dark chocolate chips and roasted almonds",
     price: 169,
@@ -134349,7 +134349,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7073,
-    name: "Mocha Oatmeal",
+    name: "The Kitchen Collective",
     category: "Oatmeal",
     description: "Oats blended with coffee, cocoa and milk for a breakfast mocha bowl",
     price: 159,
@@ -134367,7 +134367,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7074,
-    name: "Salted Caramel Oatmeal",
+    name: "Flavour House",
     category: "Oatmeal",
     description: "Creamy oats topped with salted caramel, pecans and banana",
     price: 169,
@@ -134385,7 +134385,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7075,
-    name: "Honey Almond Oatmeal",
+    name: "The Green Apron",
     category: "Oatmeal",
     description: "Oats topped with toasted almonds, honey and a pinch of cinnamon",
     price: 149,
@@ -134403,7 +134403,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7076,
-    name: "Pecan Maple Oatmeal",
+    name: "City Spoon Bistro",
     category: "Oatmeal",
     description: "Warm oatmeal topped with pecans, maple syrup and cinnamon",
     price: 169,
@@ -134421,7 +134421,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7077,
-    name: "Orange Cranberry Oatmeal",
+    name: "The Farmhouse Cafe",
     category: "Oatmeal",
     description: "Oatmeal topped with dried cranberries, orange zest and honey",
     price: 149,
@@ -134439,7 +134439,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7078,
-    name: "Cherry Almond Oatmeal",
+    name: "Root & Roast Kitchen",
     category: "Oatmeal",
     description: "Creamy oats topped with cherries and toasted almonds",
     price: 159,
@@ -134457,7 +134457,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7079,
-    name: "Peach Oatmeal",
+    name: "The Gourmet Nest",
     category: "Oatmeal",
     description: "Warm oats topped with fresh peach slices and cinnamon",
     price: 139,
@@ -134475,7 +134475,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7080,
-    name: "Pineapple Coconut Oatmeal",
+    name: "Urban Harvest Bistro",
     category: "Oatmeal",
     description: "Oats topped with pineapple chunks and toasted coconut flakes",
     price: 149,
@@ -134493,7 +134493,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7081,
-    name: "Kiwi Oatmeal",
+    name: "The Savoury Spoon",
     category: "Oatmeal",
     description: "Creamy oatmeal topped with fresh kiwi and chia seeds",
     price: 149,
@@ -134511,7 +134511,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7082,
-    name: "Mixed Fruit Oatmeal",
+    name: "Fresh Roots Cafe",
     category: "Oatmeal",
     description: "Oats topped with banana, apple, strawberries and seasonal fruits",
     price: 169,
@@ -134529,7 +134529,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7083,
-    name: "Green Apple Oatmeal",
+    name: "The Platter Room",
     category: "Oatmeal",
     description: "Oats topped with green apple, cinnamon and roasted pumpkin seeds",
     price: 139,
@@ -134547,7 +134547,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7084,
-    name: "Banana Chia Protein Oatmeal",
+    name: "The Kitchen Story",
     category: "Oatmeal",
     description: "Protein-rich oats topped with banana, chia seeds and Greek yogurt",
     price: 189,
@@ -134565,7 +134565,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7085,
-    name: "Oatmeal with Scrambled Eggs",
+    name: "The Meal Market",
     category: "Oatmeal",
     description: "Savory oats served with fluffy scrambled eggs and black pepper",
     price: 179,
@@ -134583,7 +134583,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7086,
-    name: "Savory Vegetable Oatmeal",
+    name: "The Corner Bistro",
     category: "Oatmeal",
     description: "Oats cooked with carrots, peas, beans and fresh herbs",
     price: 129,
@@ -134601,7 +134601,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7087,
-    name: "Masala Oatmeal",
+    name: "The Modern Tiffin",
     category: "Oatmeal",
     description: "Indian-style savory oats with vegetables, turmeric and mild spices",
     price: 119,
@@ -134619,7 +134619,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7088,
-    name: "Paneer Masala Oatmeal",
+    name: "The Food Loft",
     category: "Oatmeal",
     description: "Savory oatmeal topped with paneer cubes and Indian masala seasoning",
     price: 169,
@@ -134637,7 +134637,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7089,
-    name: "Spinach Oatmeal",
+    name: "The Signature Kitchen",
     category: "Oatmeal",
     description: "Savory oats blended with spinach, garlic and black pepper",
     price: 129,
@@ -134655,7 +134655,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7090,
-    name: "Mushroom Oatmeal",
+    name: "The Good Food Company",
     category: "Oatmeal",
     description: "Savory oatmeal with sautéed mushrooms, herbs and garlic",
     price: 149,
@@ -134673,7 +134673,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7091,
-    name: "Mediterranean Oatmeal",
+    name: "The Village Table",
     category: "Oatmeal",
     description: "Savory oats with olives, tomatoes, feta cheese and oregano",
     price: 179,
@@ -134691,7 +134691,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7092,
-    name: "Ultimate Superfood Oatmeal",
+    name: "The Premium Plate",
     category: "Oatmeal",
     description: "Premium oats topped with berries, chia seeds, almonds, walnuts and banana",
     price: 219,
@@ -134709,7 +134709,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 7093,
-    name: "Classic Greek Yogurt",
+    name: "The Urban Spoon",
     category: "Greek Yogurt",
     description: "Thick and creamy plain Greek yogurt with a naturally rich taste",
     price: 99,
@@ -134727,7 +134727,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7094,
-    name: "Honey Greek Yogurt",
+    name: "Fresh Fork Kitchen",
     category: "Greek Yogurt",
     description: "Creamy Greek yogurt sweetened naturally with honey",
     price: 119,
@@ -134745,7 +134745,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7095,
-    name: "Strawberry Greek Yogurt",
+    name: "Green Garden Cafe",
     category: "Greek Yogurt",
     description: "Smooth Greek yogurt blended with fresh strawberry puree",
     price: 129,
@@ -134763,7 +134763,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7096,
-    name: "Blueberry Greek Yogurt",
+    name: "Harvest Table Bistro",
     category: "Greek Yogurt",
     description: "Creamy yogurt topped with juicy blueberries",
     price: 139,
@@ -134781,7 +134781,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7097,
-    name: "Banana Greek Yogurt",
+    name: "The Daily Plate",
     category: "Greek Yogurt",
     description: "Protein-rich Greek yogurt with fresh banana slices",
     price: 119,
@@ -134799,7 +134799,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7098,
-    name: "Mango Greek Yogurt",
+    name: "Olive & Thyme Kitchen",
     category: "Greek Yogurt",
     description: "Thick Greek yogurt with sweet mango pulp",
     price: 139,
@@ -134817,7 +134817,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7099,
-    name: "Mixed Berry Greek Yogurt",
+    name: "The Nourish House",
     category: "Greek Yogurt",
     description: "Greek yogurt mixed with strawberries, blueberries and raspberries",
     price: 149,
@@ -134835,7 +134835,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7100,
-    name: "Apple Cinnamon Greek Yogurt",
+    name: "Golden Ladle Cafe",
     category: "Greek Yogurt",
     description: "Creamy Greek yogurt with diced apples and cinnamon",
     price: 129,
@@ -134853,7 +134853,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7101,
-    name: "Chocolate Greek Yogurt",
+    name: "Flavour Junction",
     category: "Greek Yogurt",
     description: "Creamy Greek yogurt blended with rich cocoa",
     price: 139,
@@ -134871,7 +134871,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7102,
-    name: "Peanut Butter Greek Yogurt",
+    name: "The Food Studio",
     category: "Greek Yogurt",
     description: "Greek yogurt blended with creamy peanut butter",
     price: 149,
@@ -134889,7 +134889,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7103,
-    name: "Almond Greek Yogurt",
+    name: "Urban Feast Kitchen",
     category: "Greek Yogurt",
     description: "Greek yogurt topped with crunchy roasted almonds",
     price: 149,
@@ -134907,7 +134907,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7104,
-    name: "Walnut Greek Yogurt",
+    name: "The Rustic Bowl",
     category: "Greek Yogurt",
     description: "Creamy yogurt topped with crunchy walnuts",
     price: 159,
@@ -134925,7 +134925,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7105,
-    name: "Pistachio Greek Yogurt",
+    name: "Saffron Street Cafe",
     category: "Greek Yogurt",
     description: "Greek yogurt with crushed pistachios and a creamy texture",
     price: 169,
@@ -134943,7 +134943,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7106,
-    name: "Granola Greek Yogurt Bowl",
+    name: "The Wholesome Kitchen",
     category: "Greek Yogurt",
     description: "Greek yogurt topped with crunchy granola and fresh fruit",
     price: 169,
@@ -134961,7 +134961,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7107,
-    name: "Greek Yogurt with Chia Seeds",
+    name: "Maple Leaf Bistro",
     category: "Greek Yogurt",
     description: "Protein-rich yogurt topped with nutrient-dense chia seeds",
     price: 139,
@@ -134979,7 +134979,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7108,
-    name: "Flaxseed Greek Yogurt",
+    name: "The Happy Platter",
     category: "Greek Yogurt",
     description: "Greek yogurt enriched with freshly ground flaxseeds",
     price: 129,
@@ -134997,7 +134997,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7109,
-    name: "Pumpkin Seed Greek Yogurt",
+    name: "Cedar Spoon Restaurant",
     category: "Greek Yogurt",
     description: "Creamy yogurt topped with roasted pumpkin seeds",
     price: 149,
@@ -135015,7 +135015,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7110,
-    name: "Coconut Greek Yogurt",
+    name: "The Good Grain Cafe",
     category: "Greek Yogurt",
     description: "Creamy Greek yogurt with fresh coconut flakes",
     price: 139,
@@ -135033,7 +135033,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7111,
-    name: "Vanilla Greek Yogurt",
+    name: "The Fresh Table",
     category: "Greek Yogurt",
     description: "Smooth Greek yogurt infused with natural vanilla",
     price: 119,
@@ -135051,7 +135051,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7112,
-    name: "Raspberry Greek Yogurt",
+    name: "Little Leaf Kitchen",
     category: "Greek Yogurt",
     description: "Creamy yogurt mixed with fresh raspberry puree",
     price: 139,
@@ -135069,7 +135069,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7113,
-    name: "Peach Greek Yogurt",
+    name: "The Culinary Corner",
     category: "Greek Yogurt",
     description: "Thick yogurt with juicy peach chunks",
     price: 129,
@@ -135087,7 +135087,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7114,
-    name: "Pomegranate Greek Yogurt",
+    name: "Nature’s Basket Cafe",
     category: "Greek Yogurt",
     description: "Greek yogurt topped with fresh pomegranate seeds",
     price: 149,
@@ -135105,7 +135105,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7115,
-    name: "Kiwi Greek Yogurt",
+    name: "The Food Garden",
     category: "Greek Yogurt",
     description: "Creamy yogurt with tangy fresh kiwi pieces",
     price: 139,
@@ -135123,7 +135123,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7116,
-    name: "Papaya Greek Yogurt",
+    name: "Spice Route Kitchen",
     category: "Greek Yogurt",
     description: "Fresh papaya cubes served with thick Greek yogurt",
     price: 119,
@@ -135141,7 +135141,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7117,
-    name: "Date and Honey Greek Yogurt",
+    name: "The Cozy Fork",
     category: "Greek Yogurt",
     description: "Greek yogurt sweetened with dates and natural honey",
     price: 139,
@@ -135159,7 +135159,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7118,
-    name: "Dark Chocolate Greek Yogurt",
+    name: "Daily Delight Bistro",
     category: "Greek Yogurt",
     description: "Greek yogurt blended with dark chocolate shavings",
     price: 159,
@@ -135177,7 +135177,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7119,
-    name: "Oats Greek Yogurt Bowl",
+    name: "The Tasty Pantry",
     category: "Greek Yogurt",
     description: "Greek yogurt mixed with rolled oats and fresh fruits",
     price: 149,
@@ -135195,7 +135195,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7120,
-    name: "Muesli Greek Yogurt Bowl",
+    name: "Blue Plate Kitchen",
     category: "Greek Yogurt",
     description: "Greek yogurt topped with crunchy muesli and fresh berries",
     price: 169,
@@ -135213,7 +135213,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7121,
-    name: "Greek Yogurt Fruit Salad",
+    name: "The Honest Meal",
     category: "Greek Yogurt",
     description: "Fresh seasonal fruits served with creamy Greek yogurt",
     price: 159,
@@ -135231,7 +135231,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7122,
-    name: "Greek Yogurt Smoothie Bowl",
+    name: "Sunrise Cafe & Kitchen",
     category: "Greek Yogurt",
     description: "Thick smoothie bowl made with Greek yogurt and fresh fruits",
     price: 179,
@@ -135249,7 +135249,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7123,
-    name: "Greek Yogurt with Roasted Seeds",
+    name: "The Kitchen Collective",
     category: "Greek Yogurt",
     description: "Creamy yogurt topped with a blend of roasted nutritious seeds",
     price: 149,
@@ -135267,7 +135267,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7124,
-    name: "Greek Yogurt with Fresh Dates",
+    name: "Flavour House",
     category: "Greek Yogurt",
     description: "Creamy Greek yogurt served with naturally sweet fresh dates",
     price: 139,
@@ -135285,7 +135285,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7125,
-    name: "Greek Yogurt with Raisins",
+    name: "The Green Apron",
     category: "Greek Yogurt",
     description: "Thick yogurt with sweet raisins and a creamy texture",
     price: 119,
@@ -135303,7 +135303,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7126,
-    name: "Greek Yogurt with Cashews",
+    name: "City Spoon Bistro",
     category: "Greek Yogurt",
     description: "Creamy yogurt topped with roasted cashew nuts",
     price: 159,
@@ -135321,7 +135321,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7127,
-    name: "Greek Yogurt with Sunflower Seeds",
+    name: "The Farmhouse Cafe",
     category: "Greek Yogurt",
     description: "Greek yogurt topped with crunchy sunflower seeds",
     price: 129,
@@ -135339,7 +135339,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7128,
-    name: "Greek Yogurt with Honey Granola",
+    name: "Root & Roast Kitchen",
     category: "Greek Yogurt",
     description: "Greek yogurt layered with honey-coated crunchy granola",
     price: 159,
@@ -135357,7 +135357,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7129,
-    name: "Greek Yogurt with Strawberries and Almonds",
+    name: "The Gourmet Nest",
     category: "Greek Yogurt",
     description: "Fresh strawberries and sliced almonds over creamy yogurt",
     price: 169,
@@ -135375,7 +135375,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7130,
-    name: "Greek Yogurt with Banana and Walnuts",
+    name: "Urban Harvest Bistro",
     category: "Greek Yogurt",
     description: "Greek yogurt topped with banana slices and walnuts",
     price: 159,
@@ -135393,7 +135393,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7131,
-    name: "Greek Yogurt with Blueberries and Chia",
+    name: "The Savoury Spoon",
     category: "Greek Yogurt",
     description: "Blueberries and chia seeds served over protein-rich yogurt",
     price: 169,
@@ -135411,7 +135411,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7132,
-    name: "Greek Yogurt with Mango and Coconut",
+    name: "Fresh Roots Cafe",
     category: "Greek Yogurt",
     description: "Sweet mango chunks combined with creamy yogurt and coconut",
     price: 159,
@@ -135429,7 +135429,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7133,
-    name: "Greek Yogurt with Apple and Granola",
+    name: "The Platter Room",
     category: "Greek Yogurt",
     description: "Fresh apple cubes and crunchy granola with creamy yogurt",
     price: 149,
@@ -135447,7 +135447,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7134,
-    name: "Greek Yogurt with Mixed Nuts",
+    name: "The Kitchen Story",
     category: "Greek Yogurt",
     description: "Creamy yogurt topped with almonds, walnuts and cashews",
     price: 169,
@@ -135465,7 +135465,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7135,
-    name: "Greek Yogurt with Quinoa",
+    name: "The Meal Market",
     category: "Greek Yogurt",
     description: "Protein-rich Greek yogurt combined with cooked quinoa",
     price: 179,
@@ -135483,7 +135483,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7136,
-    name: "Greek Yogurt with Protein Powder",
+    name: "The Corner Bistro",
     category: "Greek Yogurt",
     description: "High-protein Greek yogurt blended with protein powder",
     price: 199,
@@ -135501,7 +135501,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7137,
-    name: "Greek Yogurt Protein Bowl",
+    name: "The Modern Tiffin",
     category: "Greek Yogurt",
     description: "Greek yogurt bowl packed with nuts, seeds and protein-rich toppings",
     price: 189,
@@ -135519,7 +135519,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7138,
-    name: "Greek Yogurt Breakfast Bowl",
+    name: "The Food Loft",
     category: "Greek Yogurt",
     description: "Greek yogurt served with oats, berries and honey",
     price: 179,
@@ -135537,7 +135537,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7139,
-    name: "Greek Yogurt with Cucumber",
+    name: "The Signature Kitchen",
     category: "Greek Yogurt",
     description: "Refreshing Greek yogurt mixed with cucumber and fresh herbs",
     price: 119,
@@ -135555,7 +135555,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7140,
-    name: "Greek Yogurt Raita",
+    name: "The Good Food Company",
     category: "Greek Yogurt",
     description: "Traditional Indian raita prepared with thick Greek yogurt",
     price: 99,
@@ -135573,7 +135573,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7141,
-    name: "Greek Yogurt Mint Dip",
+    name: "The Village Table",
     category: "Greek Yogurt",
     description: "Refreshing Greek yogurt dip blended with mint and herbs",
     price: 109,
@@ -135591,7 +135591,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7142,
-    name: "Ultimate Greek Yogurt Superfood Bowl",
+    name: "The Premium Plate",
     category: "Greek Yogurt",
     description: "Premium Greek yogurt with berries, chia seeds, nuts and granola",
     price: 229,
@@ -135609,7 +135609,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7143,
-    name: "Classic Egg White Omelette",
+    name: "The Urban Spoon",
     category: "Egg White",
     description: "Fluffy egg white omelette seasoned with herbs and black pepper",
     price: 129,
@@ -135627,7 +135627,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7144,
-    name: "Spinach Egg White Omelette",
+    name: "Fresh Fork Kitchen",
     category: "Egg White",
     description: "Egg whites cooked with fresh spinach and herbs",
     price: 149,
@@ -135645,7 +135645,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7145,
-    name: "Mushroom Egg White Omelette",
+    name: "Green Garden Cafe",
     category: "Egg White",
     description: "Light egg white omelette with sautéed mushrooms",
     price: 159,
@@ -135663,7 +135663,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7146,
-    name: "Tomato Egg White Omelette",
+    name: "Harvest Table Bistro",
     category: "Egg White",
     description: "Egg whites blended with juicy tomatoes and seasoning",
     price: 139,
@@ -135681,7 +135681,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7147,
-    name: "Cheese Egg White Omelette",
+    name: "The Daily Plate",
     category: "Egg White",
     description: "Protein-rich egg whites with light cheese filling",
     price: 179,
@@ -135699,7 +135699,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7148,
-    name: "Masala Egg White Omelette",
+    name: "Olive & Thyme Kitchen",
     category: "Egg White",
     description: "Indian-style egg white omelette with onions and green chillies",
     price: 139,
@@ -135717,7 +135717,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7149,
-    name: "Broccoli Egg White Omelette",
+    name: "The Nourish House",
     category: "Egg White",
     description: "Egg whites with fresh broccoli and aromatic herbs",
     price: 169,
@@ -135735,7 +135735,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7150,
-    name: "Egg White Scramble",
+    name: "Golden Ladle Cafe",
     category: "Egg White",
     description: "Soft scrambled egg whites with fresh herbs and pepper",
     price: 149,
@@ -135753,7 +135753,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7151,
-    name: "Garlic Egg White Scramble",
+    name: "Flavour Junction",
     category: "Egg White",
     description: "Scrambled egg whites infused with roasted garlic",
     price: 159,
@@ -135771,7 +135771,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7152,
-    name: "Mexican Egg White Scramble",
+    name: "The Food Studio",
     category: "Egg White",
     description: "Egg whites scrambled with bell peppers, salsa and spices",
     price: 179,
@@ -135789,7 +135789,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7153,
-    name: "Egg White Breakfast Bowl",
+    name: "Urban Feast Kitchen",
     category: "Egg White",
     description: "Egg whites served with vegetables and whole grain toast",
     price: 199,
@@ -135807,7 +135807,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7154,
-    name: "Egg White Avocado Bowl",
+    name: "The Rustic Bowl",
     category: "Egg White",
     description: "Egg whites paired with creamy avocado and fresh greens",
     price: 229,
@@ -135825,7 +135825,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7155,
-    name: "Egg White Quinoa Bowl",
+    name: "Saffron Street Cafe",
     category: "Egg White",
     description: "Egg whites served over quinoa with colourful vegetables",
     price: 249,
@@ -135843,7 +135843,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7156,
-    name: "Egg White Chicken Bowl",
+    name: "The Wholesome Kitchen",
     category: "Egg White",
     description: "Egg whites with grilled chicken and steamed vegetables",
     price: 279,
@@ -135861,7 +135861,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7157,
-    name: "Egg White Veggie Bowl",
+    name: "Maple Leaf Bistro",
     category: "Egg White",
     description: "Egg whites with roasted seasonal vegetables",
     price: 189,
@@ -135879,7 +135879,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7158,
-    name: "Egg White Cottage Cheese Bowl",
+    name: "The Happy Platter",
     category: "Egg White",
     description: "Egg whites with cottage cheese and sautéed vegetables",
     price: 229,
@@ -135897,7 +135897,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7159,
-    name: "Egg White Sandwich",
+    name: "Cedar Spoon Restaurant",
     category: "Egg White",
     description: "Egg white filling with lettuce and tomatoes in whole wheat bread",
     price: 169,
@@ -135915,7 +135915,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7160,
-    name: "Egg White Wrap",
+    name: "The Good Grain Cafe",
     category: "Egg White",
     description: "Egg whites wrapped with vegetables in a whole wheat tortilla",
     price: 179,
@@ -135933,7 +135933,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7161,
-    name: "Egg White Protein Toast",
+    name: "The Fresh Table",
     category: "Egg White",
     description: "Whole grain toast topped with fluffy egg whites",
     price: 159,
@@ -135951,7 +135951,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7162,
-    name: "Egg White Pancakes",
+    name: "Little Leaf Kitchen",
     category: "Egg White",
     description: "Light pancakes prepared with egg whites and oats",
     price: 189,
@@ -135969,7 +135969,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7163,
-    name: "Egg White Oats Pancakes",
+    name: "The Culinary Corner",
     category: "Egg White",
     description: "Protein-packed pancakes made with oats and egg whites",
     price: 199,
@@ -135987,7 +135987,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7164,
-    name: "Egg White Muffins",
+    name: "Nature’s Basket Cafe",
     category: "Egg White",
     description: "Baked egg white muffins with spinach and peppers",
     price: 169,
@@ -136005,7 +136005,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7165,
-    name: "Egg White Frittata",
+    name: "The Food Garden",
     category: "Egg White",
     description: "Oven-baked egg whites with vegetables and herbs",
     price: 189,
@@ -136023,7 +136023,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7166,
-    name: "Egg White Shakshuka",
+    name: "Spice Route Kitchen",
     category: "Egg White",
     description: "Egg whites cooked in a spicy tomato and pepper sauce",
     price: 199,
@@ -136041,7 +136041,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7167,
-    name: "Egg White Dosa",
+    name: "The Cozy Fork",
     category: "Egg White",
     description: "Crispy dosa topped with seasoned egg whites",
     price: 179,
@@ -136059,7 +136059,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7168,
-    name: "Egg White Idli Bowl",
+    name: "Daily Delight Bistro",
     category: "Egg White",
     description: "Steamed idlis served with a side of egg white scramble",
     price: 169,
@@ -136077,7 +136077,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7169,
-    name: "Egg White Poha Bowl",
+    name: "The Tasty Pantry",
     category: "Egg White",
     description: "Light poha mixed with scrambled egg whites and vegetables",
     price: 159,
@@ -136095,7 +136095,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7170,
-    name: "Egg White Upma",
+    name: "Blue Plate Kitchen",
     category: "Egg White",
     description: "Vegetable upma served with protein-rich egg whites",
     price: 169,
@@ -136113,7 +136113,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7171,
-    name: "Egg White Salad",
+    name: "The Honest Meal",
     category: "Egg White",
     description: "Fresh salad with egg whites, cucumber and leafy greens",
     price: 179,
@@ -136131,7 +136131,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7172,
-    name: "Egg White Caesar Salad",
+    name: "Sunrise Cafe & Kitchen",
     category: "Egg White",
     description: "Egg whites with lettuce, croutons and light Caesar dressing",
     price: 199,
@@ -136149,7 +136149,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7173,
-    name: "Egg White Greek Salad",
+    name: "The Kitchen Collective",
     category: "Egg White",
     description: "Egg whites with cucumber, tomatoes, olives and feta",
     price: 219,
@@ -136167,7 +136167,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7174,
-    name: "Egg White Tikka",
+    name: "Flavour House",
     category: "Egg White",
     description: "Grilled egg white cubes marinated in Indian spices",
     price: 199,
@@ -136185,7 +136185,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7175,
-    name: "Egg White Kebabs",
+    name: "The Green Apron",
     category: "Egg White",
     description: "Herb-seasoned egg white kebabs grilled to perfection",
     price: 219,
@@ -136203,7 +136203,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7176,
-    name: "Egg White Stuffed Peppers",
+    name: "City Spoon Bistro",
     category: "Egg White",
     description: "Bell peppers stuffed with seasoned egg whites and herbs",
     price: 199,
@@ -136221,7 +136221,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7177,
-    name: "Egg White Zucchini Bowl",
+    name: "The Farmhouse Cafe",
     category: "Egg White",
     description: "Egg whites with grilled zucchini and fresh herbs",
     price: 189,
@@ -136239,7 +136239,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7178,
-    name: "Egg White Bell Pepper Scramble",
+    name: "Root & Roast Kitchen",
     category: "Egg White",
     description: "Scrambled egg whites with colourful bell peppers",
     price: 159,
@@ -136257,7 +136257,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7179,
-    name: "Egg White Spring Onion Omelette",
+    name: "The Gourmet Nest",
     category: "Egg White",
     description: "Egg white omelette with spring onions and mild seasoning",
     price: 149,
@@ -136275,7 +136275,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7180,
-    name: "Egg White Jalapeño Omelette",
+    name: "Urban Harvest Bistro",
     category: "Egg White",
     description: "Spicy egg white omelette with jalapeños and herbs",
     price: 159,
@@ -136293,7 +136293,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7181,
-    name: "Egg White Salsa Bowl",
+    name: "The Savoury Spoon",
     category: "Egg White",
     description: "Egg whites topped with fresh tomato salsa and coriander",
     price: 189,
@@ -136311,7 +136311,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7182,
-    name: "Egg White Hummus Toast",
+    name: "Fresh Roots Cafe",
     category: "Egg White",
     description: "Whole grain toast topped with hummus and egg whites",
     price: 199,
@@ -136329,7 +136329,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7183,
-    name: "Egg White Pita Pocket",
+    name: "The Platter Room",
     category: "Egg White",
     description: "Whole wheat pita filled with egg whites and crunchy vegetables",
     price: 189,
@@ -136347,7 +136347,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7184,
-    name: "Egg White Protein Burrito",
+    name: "The Kitchen Story",
     category: "Egg White",
     description: "Egg whites, beans and vegetables wrapped in a whole wheat tortilla",
     price: 219,
@@ -136365,7 +136365,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7185,
-    name: "Egg White Fried Rice",
+    name: "The Meal Market",
     category: "Egg White",
     description: "Light brown rice tossed with egg whites and vegetables",
     price: 199,
@@ -136383,7 +136383,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7186,
-    name: "Egg White Stir Fry",
+    name: "The Corner Bistro",
     category: "Egg White",
     description: "Egg whites stir-fried with broccoli, carrots and peppers",
     price: 189,
@@ -136401,7 +136401,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7187,
-    name: "Egg White Protein Pasta",
+    name: "The Modern Tiffin",
     category: "Egg White",
     description: "Whole wheat pasta with egg whites and fresh vegetables",
     price: 249,
@@ -136419,7 +136419,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7188,
-    name: "Egg White Pesto Bowl",
+    name: "The Food Loft",
     category: "Egg White",
     description: "Egg whites with whole grain pasta and fresh basil pesto",
     price: 259,
@@ -136437,7 +136437,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7189,
-    name: "Egg White Protein Burger",
+    name: "The Signature Kitchen",
     category: "Egg White",
     description: "Protein-rich egg white patty with lettuce and whole wheat bun",
     price: 229,
@@ -136455,7 +136455,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7190,
-    name: "Egg White Breakfast Burrito",
+    name: "The Good Food Company",
     category: "Egg White",
     description: "Egg whites, beans, vegetables and salsa in a breakfast wrap",
     price: 219,
@@ -136473,7 +136473,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7191,
-    name: "Egg White Power Plate",
+    name: "The Village Table",
     category: "Egg White",
     description: "Egg whites with sweet potato, greens and roasted vegetables",
     price: 249,
@@ -136491,7 +136491,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7192,
-    name: "Ultimate Egg White Superfood Bowl",
+    name: "The Premium Plate",
     category: "Egg White",
     description: "Egg whites with quinoa, avocado, spinach, seeds and fresh vegetables",
     price: 279,
@@ -136509,7 +136509,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 7193,
-    name: "Classic Tuna Salad",
+    name: "The Urban Spoon",
     category: "Tuna Salad",
     description: "Fresh tuna mixed with crisp lettuce, cucumber and light dressing",
     price: 199,
@@ -136527,7 +136527,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7194,
-    name: "Mediterranean Tuna Salad",
+    name: "Fresh Fork Kitchen",
     category: "Tuna Salad",
     description: "Tuna with olives, cherry tomatoes, cucumber and Mediterranean herbs",
     price: 229,
@@ -136545,7 +136545,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7195,
-    name: "Tuna Avocado Salad",
+    name: "Green Garden Cafe",
     category: "Tuna Salad",
     description: "Protein-rich tuna with creamy avocado and fresh leafy greens",
     price: 249,
@@ -136563,7 +136563,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7196,
-    name: "Tuna Greek Salad",
+    name: "Harvest Table Bistro",
     category: "Tuna Salad",
     description: "Tuna with feta cheese, olives, cucumber and tomatoes",
     price: 239,
@@ -136581,7 +136581,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7197,
-    name: "Tuna Caesar Salad",
+    name: "The Daily Plate",
     category: "Tuna Salad",
     description: "Tuna served with romaine lettuce and light Caesar dressing",
     price: 229,
@@ -136599,7 +136599,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7198,
-    name: "Tuna Garden Salad",
+    name: "Olive & Thyme Kitchen",
     category: "Tuna Salad",
     description: "Tuna with mixed garden vegetables and fresh salad greens",
     price: 189,
@@ -136617,7 +136617,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7199,
-    name: "Tuna Spinach Salad",
+    name: "The Nourish House",
     category: "Tuna Salad",
     description: "Fresh spinach leaves topped with tuna and lemon dressing",
     price: 199,
@@ -136635,7 +136635,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7200,
-    name: "Tuna Quinoa Salad",
+    name: "Golden Ladle Cafe",
     category: "Tuna Salad",
     description: "Tuna combined with quinoa, vegetables and lemon vinaigrette",
     price: 259,
@@ -136653,7 +136653,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7201,
-    name: "Tuna Corn Salad",
+    name: "Flavour Junction",
     category: "Tuna Salad",
     description: "Tuna with sweet corn, cucumber and fresh herbs",
     price: 189,
@@ -136671,7 +136671,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7202,
-    name: "Tuna Chickpea Salad",
+    name: "The Food Studio",
     category: "Tuna Salad",
     description: "Tuna and chickpeas with tomatoes, onions and fresh coriander",
     price: 219,
@@ -136689,7 +136689,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7203,
-    name: "Tuna Cucumber Salad",
+    name: "Urban Feast Kitchen",
     category: "Tuna Salad",
     description: "Light tuna salad with crunchy cucumber and lemon seasoning",
     price: 179,
@@ -136707,7 +136707,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7204,
-    name: "Tuna Tomato Salad",
+    name: "The Rustic Bowl",
     category: "Tuna Salad",
     description: "Tuna with fresh tomatoes, onions and basil dressing",
     price: 189,
@@ -136725,7 +136725,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7205,
-    name: "Tuna Broccoli Salad",
+    name: "Saffron Street Cafe",
     category: "Tuna Salad",
     description: "Tuna with steamed broccoli and a light garlic dressing",
     price: 219,
@@ -136743,7 +136743,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7206,
-    name: "Tuna Bell Pepper Salad",
+    name: "The Wholesome Kitchen",
     category: "Tuna Salad",
     description: "Tuna with colourful bell peppers and crunchy greens",
     price: 199,
@@ -136761,7 +136761,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7207,
-    name: "Tuna Apple Salad",
+    name: "Maple Leaf Bistro",
     category: "Tuna Salad",
     description: "Tuna with fresh apple slices, greens and light yogurt dressing",
     price: 209,
@@ -136779,7 +136779,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7208,
-    name: "Tuna Mango Salad",
+    name: "The Happy Platter",
     category: "Tuna Salad",
     description: "Tuna with ripe mango, leafy greens and citrus dressing",
     price: 229,
@@ -136797,7 +136797,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7209,
-    name: "Tuna Pineapple Salad",
+    name: "Cedar Spoon Restaurant",
     category: "Tuna Salad",
     description: "Tuna with pineapple chunks, cucumber and tropical herbs",
     price: 219,
@@ -136815,7 +136815,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7210,
-    name: "Tuna Beetroot Salad",
+    name: "The Good Grain Cafe",
     category: "Tuna Salad",
     description: "Tuna with roasted beetroot, greens and balsamic dressing",
     price: 219,
@@ -136833,7 +136833,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7211,
-    name: "Tuna Carrot Salad",
+    name: "The Fresh Table",
     category: "Tuna Salad",
     description: "Tuna with shredded carrots, cucumber and fresh lemon",
     price: 179,
@@ -136851,7 +136851,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7212,
-    name: "Tuna Kale Salad",
+    name: "Little Leaf Kitchen",
     category: "Tuna Salad",
     description: "Tuna served with kale, seeds and light lemon dressing",
     price: 229,
@@ -136869,7 +136869,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7213,
-    name: "Tuna Arugula Salad",
+    name: "The Culinary Corner",
     category: "Tuna Salad",
     description: "Tuna with peppery arugula leaves and citrus vinaigrette",
     price: 239,
@@ -136887,7 +136887,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7214,
-    name: "Tuna Red Cabbage Salad",
+    name: "Nature’s Basket Cafe",
     category: "Tuna Salad",
     description: "Tuna with crunchy red cabbage and sesame dressing",
     price: 199,
@@ -136905,7 +136905,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7215,
-    name: "Tuna Edamame Salad",
+    name: "The Food Garden",
     category: "Tuna Salad",
     description: "Tuna with edamame, cucumber and Asian-inspired dressing",
     price: 249,
@@ -136923,7 +136923,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7216,
-    name: "Tuna Sesame Salad",
+    name: "Spice Route Kitchen",
     category: "Tuna Salad",
     description: "Tuna with fresh greens, toasted sesame seeds and ginger dressing",
     price: 219,
@@ -136941,7 +136941,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7217,
-    name: "Tuna Asian Slaw Salad",
+    name: "The Cozy Fork",
     category: "Tuna Salad",
     description: "Tuna with cabbage, carrots and a light Asian dressing",
     price: 199,
@@ -136959,7 +136959,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7218,
-    name: "Tuna Noodle Salad",
+    name: "Daily Delight Bistro",
     category: "Tuna Salad",
     description: "Tuna with whole wheat noodles, vegetables and herbs",
     price: 239,
@@ -136977,7 +136977,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7219,
-    name: "Tuna Pasta Salad",
+    name: "The Tasty Pantry",
     category: "Tuna Salad",
     description: "Tuna with whole wheat pasta, cherry tomatoes and basil",
     price: 249,
@@ -136995,7 +136995,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7220,
-    name: "Tuna Brown Rice Salad",
+    name: "Blue Plate Kitchen",
     category: "Tuna Salad",
     description: "Tuna with brown rice, vegetables and lemon dressing",
     price: 239,
@@ -137013,7 +137013,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7221,
-    name: "Tuna Lentil Salad",
+    name: "The Honest Meal",
     category: "Tuna Salad",
     description: "Tuna with protein-rich lentils, tomatoes and herbs",
     price: 229,
@@ -137031,7 +137031,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7222,
-    name: "Tuna White Bean Salad",
+    name: "Sunrise Cafe & Kitchen",
     category: "Tuna Salad",
     description: "Tuna with white beans, onions and fresh parsley",
     price: 229,
@@ -137049,7 +137049,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7223,
-    name: "Tuna Kidney Bean Salad",
+    name: "The Kitchen Collective",
     category: "Tuna Salad",
     description: "Tuna with kidney beans, peppers and coriander",
     price: 219,
@@ -137067,7 +137067,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7224,
-    name: "Tuna Sprouts Salad",
+    name: "Flavour House",
     category: "Tuna Salad",
     description: "Tuna with fresh mixed sprouts, cucumber and lemon",
     price: 199,
@@ -137085,7 +137085,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7225,
-    name: "Tuna Pumpkin Seed Salad",
+    name: "The Green Apron",
     category: "Tuna Salad",
     description: "Tuna with leafy greens and roasted pumpkin seeds",
     price: 219,
@@ -137103,7 +137103,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7226,
-    name: "Tuna Walnut Salad",
+    name: "City Spoon Bistro",
     category: "Tuna Salad",
     description: "Tuna with walnuts, fresh greens and apple vinaigrette",
     price: 239,
@@ -137121,7 +137121,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7227,
-    name: "Tuna Almond Salad",
+    name: "The Farmhouse Cafe",
     category: "Tuna Salad",
     description: "Tuna with toasted almonds, greens and citrus dressing",
     price: 229,
@@ -137139,7 +137139,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7228,
-    name: "Tuna Pomegranate Salad",
+    name: "Root & Roast Kitchen",
     category: "Tuna Salad",
     description: "Tuna with pomegranate seeds, greens and tangy dressing",
     price: 239,
@@ -137157,7 +137157,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7229,
-    name: "Tuna Orange Salad",
+    name: "The Gourmet Nest",
     category: "Tuna Salad",
     description: "Tuna with fresh orange segments and citrus vinaigrette",
     price: 219,
@@ -137175,7 +137175,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7230,
-    name: "Tuna Strawberry Salad",
+    name: "Urban Harvest Bistro",
     category: "Tuna Salad",
     description: "Tuna with fresh strawberries, spinach and balsamic dressing",
     price: 249,
@@ -137193,7 +137193,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7231,
-    name: "Tuna Low Calorie Salad",
+    name: "The Savoury Spoon",
     category: "Tuna Salad",
     description: "Lean tuna with cucumber, lettuce and low-calorie dressing",
     price: 179,
@@ -137211,7 +137211,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7232,
-    name: "Tuna High Protein Salad",
+    name: "Fresh Roots Cafe",
     category: "Tuna Salad",
     description: "Double tuna portion with mixed greens and protein-rich toppings",
     price: 269,
@@ -137229,7 +137229,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7233,
-    name: "Tuna Keto Salad",
+    name: "The Platter Room",
     category: "Tuna Salad",
     description: "Tuna with avocado, leafy greens and keto-friendly dressing",
     price: 249,
@@ -137247,7 +137247,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7234,
-    name: "Tuna Detox Salad",
+    name: "The Kitchen Story",
     category: "Tuna Salad",
     description: "Tuna with cucumber, celery, greens and fresh lemon",
     price: 199,
@@ -137265,7 +137265,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7235,
-    name: "Tuna Superfood Salad",
+    name: "The Meal Market",
     category: "Tuna Salad",
     description: "Tuna with quinoa, kale, avocado and mixed seeds",
     price: 279,
@@ -137283,7 +137283,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7236,
-    name: "Tuna Protein Power Salad",
+    name: "The Corner Bistro",
     category: "Tuna Salad",
     description: "Tuna with chickpeas, quinoa and fresh vegetables",
     price: 259,
@@ -137301,7 +137301,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7237,
-    name: "Tuna Rainbow Salad",
+    name: "The Modern Tiffin",
     category: "Tuna Salad",
     description: "Tuna with colourful vegetables, beetroot, carrots and greens",
     price: 229,
@@ -137319,7 +137319,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7238,
-    name: "Tuna Fresh Herb Salad",
+    name: "The Food Loft",
     category: "Tuna Salad",
     description: "Tuna with fresh coriander, parsley, mint and crunchy vegetables",
     price: 199,
@@ -137337,7 +137337,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7239,
-    name: "Tuna Lemon Pepper Salad",
+    name: "The Signature Kitchen",
     category: "Tuna Salad",
     description: "Tuna with fresh greens and zesty lemon pepper seasoning",
     price: 199,
@@ -137355,7 +137355,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7240,
-    name: "Tuna Spicy Salad",
+    name: "The Good Food Company",
     category: "Tuna Salad",
     description: "Tuna with spicy chilli dressing, vegetables and fresh greens",
     price: 209,
@@ -137373,7 +137373,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7241,
-    name: "Tuna Yogurt Salad",
+    name: "The Village Table",
     category: "Tuna Salad",
     description: "Tuna mixed with Greek yogurt, cucumber and fresh dill",
     price: 219,
@@ -137391,7 +137391,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7242,
-    name: "Ultimate Tuna Superfood Salad",
+    name: "The Premium Plate",
     category: "Tuna Salad",
     description: "Premium tuna with avocado, quinoa, greens, seeds and fresh vegetables",
     price: 299,
@@ -137409,7 +137409,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 7243,
-    name: "Classic Red Lentil Soup",
+    name: "The Urban Spoon",
     category: "Lentil Soup",
     description: "A comforting red lentil soup prepared with fresh vegetables, aromatic spices, and herbs.",
     price: 149,
@@ -137427,7 +137427,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7244,
-    name: "Green Lentil Vegetable Soup",
+    name: "Fresh Fork Kitchen",
     category: "Lentil Soup",
     description: "Nutritious green lentils simmered with carrots, celery, tomatoes, and fresh herbs.",
     price: 169,
@@ -137445,7 +137445,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7245,
-    name: "Mediterranean Lentil Soup",
+    name: "Green Garden Cafe",
     category: "Lentil Soup",
     description: "Mediterranean-style lentil soup with tomatoes, garlic, olive oil, and fresh parsley.",
     price: 189,
@@ -137463,7 +137463,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7246,
-    name: "Indian Masala Lentil Soup",
+    name: "Harvest Table Bistro",
     category: "Lentil Soup",
     description: "A wholesome lentil soup seasoned with turmeric, cumin, coriander, and Indian spices.",
     price: 159,
@@ -137481,7 +137481,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7247,
-    name: "Lentil Spinach Soup",
+    name: "The Daily Plate",
     category: "Lentil Soup",
     description: "Protein-rich lentils combined with fresh spinach and mild aromatic seasoning.",
     price: 179,
@@ -137499,7 +137499,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7248,
-    name: "Lentil Tomato Soup",
+    name: "Olive & Thyme Kitchen",
     category: "Lentil Soup",
     description: "A flavorful lentil soup with ripe tomatoes, garlic, basil, and black pepper.",
     price: 149,
@@ -137517,7 +137517,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7249,
-    name: "Lentil Carrot Soup",
+    name: "The Nourish House",
     category: "Lentil Soup",
     description: "Creamy lentils and sweet carrots blended into a nourishing vegetable soup.",
     price: 159,
@@ -137535,7 +137535,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7250,
-    name: "Lentil Pumpkin Soup",
+    name: "Golden Ladle Cafe",
     category: "Lentil Soup",
     description: "A comforting blend of pumpkin, lentils, ginger, and mild spices.",
     price: 179,
@@ -137553,7 +137553,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7251,
-    name: "Lentil Mushroom Soup",
+    name: "Flavour Junction",
     category: "Lentil Soup",
     description: "Earthy mushrooms and lentils cooked with garlic and fresh herbs.",
     price: 199,
@@ -137571,7 +137571,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7252,
-    name: "Lentil Broccoli Soup",
+    name: "The Food Studio",
     category: "Lentil Soup",
     description: "Green lentils and broccoli prepared with light seasoning for a healthy meal.",
     price: 189,
@@ -137589,7 +137589,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7253,
-    name: "Lentil Sweet Corn Soup",
+    name: "Urban Feast Kitchen",
     category: "Lentil Soup",
     description: "Lentils and sweet corn in a lightly seasoned vegetable broth.",
     price: 169,
@@ -137607,7 +137607,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7254,
-    name: "Lentil Cabbage Soup",
+    name: "The Rustic Bowl",
     category: "Lentil Soup",
     description: "A light lentil and cabbage soup with carrots and fresh vegetable stock.",
     price: 149,
@@ -137625,7 +137625,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7255,
-    name: "Lentil Zucchini Soup",
+    name: "Saffron Street Cafe",
     category: "Lentil Soup",
     description: "Fresh zucchini cooked with lentils, herbs, and a light vegetable broth.",
     price: 179,
@@ -137643,7 +137643,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7256,
-    name: "Lentil Beetroot Soup",
+    name: "The Wholesome Kitchen",
     category: "Lentil Soup",
     description: "Lentils and beetroot blended with ginger and herbs for a vibrant nutritious soup.",
     price: 189,
@@ -137661,7 +137661,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7257,
-    name: "Lentil Cauliflower Soup",
+    name: "Maple Leaf Bistro",
     category: "Lentil Soup",
     description: "Tender cauliflower and lentils cooked with garlic and subtle spices.",
     price: 169,
@@ -137679,7 +137679,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7258,
-    name: "Lentil Celery Soup",
+    name: "The Happy Platter",
     category: "Lentil Soup",
     description: "A refreshing lentil soup with celery, carrots, and fresh herbs.",
     price: 159,
@@ -137697,7 +137697,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7259,
-    name: "Lentil Garlic Soup",
+    name: "Cedar Spoon Restaurant",
     category: "Lentil Soup",
     description: "A hearty lentil soup enhanced with roasted garlic and fresh herbs.",
     price: 169,
@@ -137715,7 +137715,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7260,
-    name: "Lentil Ginger Soup",
+    name: "The Good Grain Cafe",
     category: "Lentil Soup",
     description: "Warm lentils simmered with fresh ginger, turmeric, and mild spices.",
     price: 159,
@@ -137733,7 +137733,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7261,
-    name: "Lentil Lemon Soup",
+    name: "The Fresh Table",
     category: "Lentil Soup",
     description: "A bright lentil soup finished with fresh lemon juice and aromatic herbs.",
     price: 179,
@@ -137751,7 +137751,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7262,
-    name: "Lentil Mint Soup",
+    name: "Little Leaf Kitchen",
     category: "Lentil Soup",
     description: "Fresh mint blended with lentils and vegetables for a refreshing soup.",
     price: 169,
@@ -137769,7 +137769,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7263,
-    name: "Lentil Coriander Soup",
+    name: "The Culinary Corner",
     category: "Lentil Soup",
     description: "A wholesome lentil soup topped with fresh coriander and roasted cumin.",
     price: 149,
@@ -137787,7 +137787,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7264,
-    name: "Lentil Turmeric Soup",
+    name: "Nature’s Basket Cafe",
     category: "Lentil Soup",
     description: "Golden lentils cooked with turmeric, ginger, and black pepper.",
     price: 159,
@@ -137805,7 +137805,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7265,
-    name: "Lentil Chili Soup",
+    name: "The Food Garden",
     category: "Lentil Soup",
     description: "A spicy lentil soup with red chili, tomatoes, and warming spices.",
     price: 169,
@@ -137823,7 +137823,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7266,
-    name: "Lentil Sweet Potato Soup",
+    name: "Spice Route Kitchen",
     category: "Lentil Soup",
     description: "Sweet potatoes and lentils cooked together with ginger and vegetable stock.",
     price: 189,
@@ -137841,7 +137841,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7267,
-    name: "Lentil Bell Pepper Soup",
+    name: "The Cozy Fork",
     category: "Lentil Soup",
     description: "Lentils simmered with colorful bell peppers, tomatoes, and herbs.",
     price: 179,
@@ -137859,7 +137859,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7268,
-    name: "Lentil Kale Soup",
+    name: "Daily Delight Bistro",
     category: "Lentil Soup",
     description: "Nutritious lentils and kale with carrots, onions, and vegetable broth.",
     price: 199,
@@ -137877,7 +137877,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7269,
-    name: "Lentil Quinoa Soup",
+    name: "The Tasty Pantry",
     category: "Lentil Soup",
     description: "Protein-packed lentils and quinoa with fresh vegetables and herbs.",
     price: 219,
@@ -137895,7 +137895,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7270,
-    name: "Lentil Brown Rice Soup",
+    name: "Blue Plate Kitchen",
     category: "Lentil Soup",
     description: "A hearty combination of lentils, brown rice, vegetables, and herbs.",
     price: 189,
@@ -137913,7 +137913,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7271,
-    name: "Lentil Chickpea Soup",
+    name: "The Honest Meal",
     category: "Lentil Soup",
     description: "Lentils and chickpeas cooked with tomatoes and Mediterranean herbs.",
     price: 199,
@@ -137931,7 +137931,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7272,
-    name: "Lentil White Bean Soup",
+    name: "Sunrise Cafe & Kitchen",
     category: "Lentil Soup",
     description: "A protein-rich soup made with lentils, white beans, and seasonal vegetables.",
     price: 209,
@@ -137949,7 +137949,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7273,
-    name: "Lentil Kidney Bean Soup",
+    name: "The Kitchen Collective",
     category: "Lentil Soup",
     description: "A filling lentil and kidney bean soup with tomatoes and mild spices.",
     price: 199,
@@ -137967,7 +137967,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7274,
-    name: "Lentil Edamame Soup",
+    name: "Flavour House",
     category: "Lentil Soup",
     description: "Green lentils and edamame with ginger, scallions, and light seasoning.",
     price: 219,
@@ -137985,7 +137985,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7275,
-    name: "Lentil Coconut Soup",
+    name: "The Green Apron",
     category: "Lentil Soup",
     description: "Creamy lentils with coconut milk, ginger, and aromatic spices.",
     price: 199,
@@ -138003,7 +138003,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7276,
-    name: "Lentil Thai Curry Soup",
+    name: "City Spoon Bistro",
     category: "Lentil Soup",
     description: "Lentils cooked in a light Thai-inspired broth with curry spices and vegetables.",
     price: 219,
@@ -138021,7 +138021,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7277,
-    name: "Lentil Moroccan Soup",
+    name: "The Farmhouse Cafe",
     category: "Lentil Soup",
     description: "Moroccan-inspired lentils with cumin, paprika, tomatoes, and fresh herbs.",
     price: 209,
@@ -138039,7 +138039,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7278,
-    name: "Lentil Turkish Soup",
+    name: "Root & Roast Kitchen",
     category: "Lentil Soup",
     description: "Traditional Turkish-style red lentil soup with mint and lemon.",
     price: 189,
@@ -138057,7 +138057,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7279,
-    name: "Lentil Italian Herb Soup",
+    name: "The Gourmet Nest",
     category: "Lentil Soup",
     description: "Lentils with tomatoes, basil, oregano, rosemary, and Italian herbs.",
     price: 189,
@@ -138075,7 +138075,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7280,
-    name: "Lentil French Vegetable Soup",
+    name: "Urban Harvest Bistro",
     category: "Lentil Soup",
     description: "French-style vegetable soup with lentils, onions, carrots, and herbs.",
     price: 199,
@@ -138093,7 +138093,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7281,
-    name: "Lentil Roasted Vegetable Soup",
+    name: "The Savoury Spoon",
     category: "Lentil Soup",
     description: "Roasted seasonal vegetables combined with lentils and aromatic broth.",
     price: 209,
@@ -138111,7 +138111,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7282,
-    name: "Lentil Fresh Herb Soup",
+    name: "Fresh Roots Cafe",
     category: "Lentil Soup",
     description: "A nourishing lentil soup finished with parsley, coriander, dill, and mint.",
     price: 179,
@@ -138129,7 +138129,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7283,
-    name: "Lentil Cumin Soup",
+    name: "The Platter Room",
     category: "Lentil Soup",
     description: "Classic lentil soup enhanced with roasted cumin and fresh ginger.",
     price: 149,
@@ -138147,7 +138147,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7284,
-    name: "Lentil Black Pepper Soup",
+    name: "The Kitchen Story",
     category: "Lentil Soup",
     description: "A savory lentil soup seasoned with freshly ground black pepper and herbs.",
     price: 159,
@@ -138165,7 +138165,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7285,
-    name: "Lentil Low Calorie Soup",
+    name: "The Meal Market",
     category: "Lentil Soup",
     description: "A light lentil soup prepared with fresh vegetables and minimal oil.",
     price: 139,
@@ -138183,7 +138183,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7286,
-    name: "Lentil High Protein Soup",
+    name: "The Corner Bistro",
     category: "Lentil Soup",
     description: "A protein-focused soup with lentils, chickpeas, and nutritious vegetables.",
     price: 219,
@@ -138201,7 +138201,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7287,
-    name: "Lentil Detox Vegetable Soup",
+    name: "The Modern Tiffin",
     category: "Lentil Soup",
     description: "A vegetable-rich lentil soup with spinach, celery, carrots, and fresh herbs.",
     price: 169,
@@ -138219,7 +138219,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7288,
-    name: "Lentil Superfood Soup",
+    name: "The Food Loft",
     category: "Lentil Soup",
     description: "Lentils, quinoa, kale, spinach, and colorful vegetables in a nutrient-rich broth.",
     price: 239,
@@ -138237,7 +138237,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7289,
-    name: "Lentil Rainbow Vegetable Soup",
+    name: "The Signature Kitchen",
     category: "Lentil Soup",
     description: "A colorful lentil soup featuring carrots, peppers, zucchini, broccoli, and tomatoes.",
     price: 199,
@@ -138255,7 +138255,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7290,
-    name: "Lentil Protein Power Soup",
+    name: "The Good Food Company",
     category: "Lentil Soup",
     description: "A hearty protein-rich lentil soup with beans, quinoa, and fresh vegetables.",
     price: 229,
@@ -138273,7 +138273,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7291,
-    name: "Lentil Spicy Tomato Soup",
+    name: "The Village Table",
     category: "Lentil Soup",
     description: "Red lentils and tomatoes with chili flakes, garlic, and aromatic spices.",
     price: 169,
@@ -138291,7 +138291,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7292,
-    name: "Ultimate Lentil Wellness Soup",
+    name: "The Premium Plate",
     category: "Lentil Soup",
     description: "A balanced lentil soup with seasonal vegetables, quinoa, spinach, and fresh herbs.",
     price: 249,
@@ -138310,7 +138310,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   ,
   {
     id: 7293,
-    name: "Classic Cottage Cheese Bowl",
+    name: "The Urban Spoon",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese served with cucumber, tomatoes, and lightly seasoned herbs.",
     price: 149,
@@ -138328,7 +138328,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7294,
-    name: "Cottage Cheese Spinach Bowl",
+    name: "Fresh Fork Kitchen",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese combined with spinach, garlic, and nutritious vegetables.",
     price: 179,
@@ -138346,7 +138346,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7295,
-    name: "Cottage Cheese Avocado Salad",
+    name: "Green Garden Cafe",
     category: "Cottage Cheese",
     description: "Creamy cottage cheese with avocado, fresh greens, cherry tomatoes, and lemon dressing.",
     price: 219,
@@ -138364,7 +138364,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7296,
-    name: "Indian Masala Cottage Cheese",
+    name: "Harvest Table Bistro",
     category: "Cottage Cheese",
     description: "Cottage cheese tossed with Indian spices, onions, tomatoes, and fresh coriander.",
     price: 189,
@@ -138382,7 +138382,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7297,
-    name: "Cottage Cheese Grilled Sandwich",
+    name: "The Daily Plate",
     category: "Cottage Cheese",
     description: "Whole-grain grilled sandwich filled with cottage cheese, vegetables, and herbs.",
     price: 169,
@@ -138400,7 +138400,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7298,
-    name: "Cottage Cheese Tomato Salad",
+    name: "Olive & Thyme Kitchen",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese paired with juicy tomatoes, basil, and olive oil.",
     price: 159,
@@ -138418,7 +138418,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7299,
-    name: "Cottage Cheese Cucumber Bowl",
+    name: "The Nourish House",
     category: "Cottage Cheese",
     description: "Light cottage cheese bowl with cucumber, mint, lemon, and fresh herbs.",
     price: 149,
@@ -138436,7 +138436,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7300,
-    name: "Cottage Cheese Mushroom Bowl",
+    name: "Golden Ladle Cafe",
     category: "Cottage Cheese",
     description: "Cottage cheese and sautéed mushrooms seasoned with garlic and black pepper.",
     price: 199,
@@ -138454,7 +138454,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7301,
-    name: "Cottage Cheese Broccoli Bowl",
+    name: "Flavour Junction",
     category: "Cottage Cheese",
     description: "Protein-rich cottage cheese served with steamed broccoli and light seasoning.",
     price: 189,
@@ -138472,7 +138472,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7302,
-    name: "Cottage Cheese Bell Pepper Bowl",
+    name: "The Food Studio",
     category: "Cottage Cheese",
     description: "Cottage cheese with colorful bell peppers, onions, and aromatic spices.",
     price: 179,
@@ -138490,7 +138490,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7303,
-    name: "Cottage Cheese Corn Salad",
+    name: "Urban Feast Kitchen",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with sweet corn, cucumber, and a light lemon dressing.",
     price: 169,
@@ -138508,7 +138508,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7304,
-    name: "Cottage Cheese Carrot Bowl",
+    name: "The Rustic Bowl",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese served with grated carrots and nutritious greens.",
     price: 159,
@@ -138526,7 +138526,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7305,
-    name: "Cottage Cheese Beetroot Salad",
+    name: "Saffron Street Cafe",
     category: "Cottage Cheese",
     description: "Cottage cheese with roasted beetroot, walnuts, and fresh leafy greens.",
     price: 199,
@@ -138544,7 +138544,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7306,
-    name: "Cottage Cheese Cauliflower Bowl",
+    name: "The Wholesome Kitchen",
     category: "Cottage Cheese",
     description: "Cottage cheese with roasted cauliflower and a mild herb seasoning.",
     price: 179,
@@ -138562,7 +138562,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7307,
-    name: "Cottage Cheese Zucchini Bowl",
+    name: "Maple Leaf Bistro",
     category: "Cottage Cheese",
     description: "Cottage cheese combined with grilled zucchini, herbs, and fresh lemon.",
     price: 189,
@@ -138580,7 +138580,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7308,
-    name: "Cottage Cheese Pumpkin Bowl",
+    name: "The Happy Platter",
     category: "Cottage Cheese",
     description: "Cottage cheese served with roasted pumpkin, spinach, and pumpkin seeds.",
     price: 199,
@@ -138598,7 +138598,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7309,
-    name: "Cottage Cheese Kale Salad",
+    name: "Cedar Spoon Restaurant",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with kale, cherry tomatoes, and a healthy vinaigrette.",
     price: 219,
@@ -138616,7 +138616,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7310,
-    name: "Cottage Cheese Quinoa Bowl",
+    name: "The Good Grain Cafe",
     category: "Cottage Cheese",
     description: "Protein-packed cottage cheese with quinoa, vegetables, and fresh herbs.",
     price: 229,
@@ -138634,7 +138634,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7311,
-    name: "Cottage Cheese Brown Rice Bowl",
+    name: "The Fresh Table",
     category: "Cottage Cheese",
     description: "Cottage cheese served with brown rice, steamed vegetables, and light spices.",
     price: 219,
@@ -138652,7 +138652,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7312,
-    name: "Cottage Cheese Chickpea Bowl",
+    name: "Little Leaf Kitchen",
     category: "Cottage Cheese",
     description: "Cottage cheese and chickpeas with cucumber, tomatoes, and fresh herbs.",
     price: 219,
@@ -138670,7 +138670,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7313,
-    name: "Cottage Cheese Lentil Bowl",
+    name: "The Culinary Corner",
     category: "Cottage Cheese",
     description: "Cottage cheese paired with lentils, vegetables, and nutritious whole grains.",
     price: 229,
@@ -138688,7 +138688,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7314,
-    name: "Cottage Cheese Kidney Bean Bowl",
+    name: "Nature’s Basket Cafe",
     category: "Cottage Cheese",
     description: "Cottage cheese and kidney beans served with vegetables and fresh coriander.",
     price: 219,
@@ -138706,7 +138706,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7315,
-    name: "Cottage Cheese Edamame Bowl",
+    name: "The Food Garden",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese and edamame with greens and sesame dressing.",
     price: 239,
@@ -138724,7 +138724,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7316,
-    name: "Cottage Cheese Greek Salad",
+    name: "Spice Route Kitchen",
     category: "Cottage Cheese",
     description: "Cottage cheese with olives, cucumber, tomatoes, lettuce, and Mediterranean herbs.",
     price: 219,
@@ -138742,7 +138742,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7317,
-    name: "Cottage Cheese Mediterranean Bowl",
+    name: "The Cozy Fork",
     category: "Cottage Cheese",
     description: "Cottage cheese, olives, roasted vegetables, chickpeas, and lemon dressing.",
     price: 239,
@@ -138760,7 +138760,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7318,
-    name: "Cottage Cheese Asian Salad",
+    name: "Daily Delight Bistro",
     category: "Cottage Cheese",
     description: "Cottage cheese with cabbage, carrots, cucumber, sesame, and light Asian dressing.",
     price: 199,
@@ -138778,7 +138778,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7319,
-    name: "Cottage Cheese Rainbow Salad",
+    name: "The Tasty Pantry",
     category: "Cottage Cheese",
     description: "Colorful cottage cheese salad with peppers, carrots, beetroot, and greens.",
     price: 219,
@@ -138796,7 +138796,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7320,
-    name: "Cottage Cheese Fresh Herb Salad",
+    name: "Blue Plate Kitchen",
     category: "Cottage Cheese",
     description: "Cottage cheese tossed with parsley, coriander, mint, and fresh garden vegetables.",
     price: 179,
@@ -138814,7 +138814,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7321,
-    name: "Cottage Cheese Lemon Pepper Bowl",
+    name: "The Honest Meal",
     category: "Cottage Cheese",
     description: "Cottage cheese seasoned with fresh lemon, cracked pepper, and vegetables.",
     price: 169,
@@ -138832,7 +138832,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7322,
-    name: "Cottage Cheese Mint Bowl",
+    name: "Sunrise Cafe & Kitchen",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with mint chutney, cucumber, and lightly seasoned greens.",
     price: 179,
@@ -138850,7 +138850,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7323,
-    name: "Cottage Cheese Coriander Bowl",
+    name: "The Kitchen Collective",
     category: "Cottage Cheese",
     description: "Cottage cheese with fresh coriander, lime, tomatoes, and aromatic seasoning.",
     price: 159,
@@ -138868,7 +138868,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7324,
-    name: "Cottage Cheese Turmeric Bowl",
+    name: "Flavour House",
     category: "Cottage Cheese",
     description: "Cottage cheese with turmeric, ginger, black pepper, and nutritious vegetables.",
     price: 179,
@@ -138886,7 +138886,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7325,
-    name: "Cottage Cheese Chili Bowl",
+    name: "The Green Apron",
     category: "Cottage Cheese",
     description: "Cottage cheese tossed with chili, peppers, onions, and a spicy seasoning blend.",
     price: 189,
@@ -138904,7 +138904,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7326,
-    name: "Cottage Cheese Sweet Potato Bowl",
+    name: "City Spoon Bistro",
     category: "Cottage Cheese",
     description: "Cottage cheese with roasted sweet potatoes, greens, and nutritious seeds.",
     price: 219,
@@ -138922,7 +138922,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7327,
-    name: "Cottage Cheese Roasted Vegetable Bowl",
+    name: "The Farmhouse Cafe",
     category: "Cottage Cheese",
     description: "Cottage cheese served with roasted seasonal vegetables and fresh herbs.",
     price: 229,
@@ -138940,7 +138940,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7328,
-    name: "Cottage Cheese Fresh Garden Bowl",
+    name: "Root & Roast Kitchen",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with garden vegetables, lettuce, cucumber, and herbs.",
     price: 189,
@@ -138958,7 +138958,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7329,
-    name: "Cottage Cheese Protein Power Bowl",
+    name: "The Gourmet Nest",
     category: "Cottage Cheese",
     description: "High-protein cottage cheese with quinoa, chickpeas, broccoli, and seeds.",
     price: 249,
@@ -138976,7 +138976,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7330,
-    name: "Cottage Cheese Low Calorie Bowl",
+    name: "Urban Harvest Bistro",
     category: "Cottage Cheese",
     description: "A light cottage cheese bowl with fresh vegetables and minimal dressing.",
     price: 149,
@@ -138994,7 +138994,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7331,
-    name: "Cottage Cheese Keto Bowl",
+    name: "The Savoury Spoon",
     category: "Cottage Cheese",
     description: "Cottage cheese with avocado, leafy greens, cucumber, and healthy fats.",
     price: 229,
@@ -139012,7 +139012,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7332,
-    name: "Cottage Cheese Detox Bowl",
+    name: "Fresh Roots Cafe",
     category: "Cottage Cheese",
     description: "Cottage cheese with cucumber, celery, spinach, lemon, and fresh herbs.",
     price: 179,
@@ -139030,7 +139030,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7333,
-    name: "Cottage Cheese Superfood Bowl",
+    name: "The Platter Room",
     category: "Cottage Cheese",
     description: "Cottage cheese with quinoa, kale, avocado, berries, and nutritious seeds.",
     price: 259,
@@ -139048,7 +139048,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7334,
-    name: "Cottage Cheese Walnut Salad",
+    name: "The Kitchen Story",
     category: "Cottage Cheese",
     description: "Cottage cheese with walnuts, apples, lettuce, and a light honey dressing.",
     price: 219,
@@ -139066,7 +139066,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7335,
-    name: "Cottage Cheese Almond Salad",
+    name: "The Meal Market",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with almonds, mixed greens, and citrus dressing.",
     price: 229,
@@ -139084,7 +139084,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7336,
-    name: "Cottage Cheese Pomegranate Bowl",
+    name: "The Corner Bistro",
     category: "Cottage Cheese",
     description: "Cottage cheese with pomegranate seeds, fresh greens, and light herbs.",
     price: 209,
@@ -139102,7 +139102,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7337,
-    name: "Cottage Cheese Mango Salad",
+    name: "The Modern Tiffin",
     category: "Cottage Cheese",
     description: "Cottage cheese with fresh mango, cucumber, mint, and a refreshing dressing.",
     price: 219,
@@ -139120,7 +139120,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7338,
-    name: "Cottage Cheese Apple Salad",
+    name: "The Food Loft",
     category: "Cottage Cheese",
     description: "Cottage cheese with crisp apples, walnuts, celery, and fresh greens.",
     price: 199,
@@ -139138,7 +139138,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7339,
-    name: "Cottage Cheese Strawberry Salad",
+    name: "The Signature Kitchen",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with strawberries, greens, almonds, and citrus dressing.",
     price: 229,
@@ -139156,7 +139156,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7340,
-    name: "Cottage Cheese Fresh Lemon Bowl",
+    name: "The Good Food Company",
     category: "Cottage Cheese",
     description: "Fresh cottage cheese with lemon, cucumber, herbs, and crunchy vegetables.",
     price: 169,
@@ -139174,7 +139174,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7341,
-    name: "Cottage Cheese Spicy Protein Bowl",
+    name: "The Village Table",
     category: "Cottage Cheese",
     description: "Cottage cheese with spicy vegetables, chickpeas, and protein-rich grains.",
     price: 239,
@@ -139192,7 +139192,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7342,
-    name: "Ultimate Cottage Cheese Wellness Bowl",
+    name: "The Premium Plate",
     category: "Cottage Cheese",
     description: "A balanced cottage cheese bowl with quinoa, avocado, spinach, vegetables, and seeds.",
     price: 269,
@@ -139210,7 +139210,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 7343,
-    name: "Classic Mixed Sprouts Salad",
+    name: "The Urban Spoon",
     category: "Sprouts Salad",
     description: "Fresh mixed sprouts with cucumber, tomatoes, onions, lemon juice, and herbs.",
     price: 129,
@@ -139228,7 +139228,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7344,
-    name: "Moong Sprouts Salad",
+    name: "Fresh Fork Kitchen",
     category: "Sprouts Salad",
     description: "Fresh moong sprouts tossed with carrots, cucumber, lemon, and fresh coriander.",
     price: 139,
@@ -139246,7 +139246,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7345,
-    name: "Chana Sprouts Salad",
+    name: "Green Garden Cafe",
     category: "Sprouts Salad",
     description: "Protein-rich chickpea sprouts with onions, tomatoes, green chilies, and lemon.",
     price: 149,
@@ -139264,7 +139264,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7346,
-    name: "Mixed Bean Sprouts Salad",
+    name: "Harvest Table Bistro",
     category: "Sprouts Salad",
     description: "A nutritious mix of bean sprouts, kidney beans, chickpeas, and fresh vegetables.",
     price: 169,
@@ -139282,7 +139282,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7347,
-    name: "Sprouts Cucumber Salad",
+    name: "The Daily Plate",
     category: "Sprouts Salad",
     description: "Crunchy sprouts with fresh cucumber, mint, lemon, and light seasoning.",
     price: 129,
@@ -139300,7 +139300,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7348,
-    name: "Sprouts Tomato Salad",
+    name: "Olive & Thyme Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts with juicy tomatoes, coriander, black pepper, and lemon dressing.",
     price: 139,
@@ -139318,7 +139318,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7349,
-    name: "Sprouts Carrot Salad",
+    name: "The Nourish House",
     category: "Sprouts Salad",
     description: "Fresh sprouts combined with grated carrots, cucumber, and lemon dressing.",
     price: 139,
@@ -139336,7 +139336,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7350,
-    name: "Sprouts Beetroot Salad",
+    name: "Golden Ladle Cafe",
     category: "Sprouts Salad",
     description: "Sprouts with roasted beetroot, carrots, fresh herbs, and citrus dressing.",
     price: 159,
@@ -139354,7 +139354,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7351,
-    name: "Sprouts Spinach Salad",
+    name: "Flavour Junction",
     category: "Sprouts Salad",
     description: "Fresh sprouts mixed with baby spinach, tomatoes, and light herb dressing.",
     price: 159,
@@ -139372,7 +139372,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7352,
-    name: "Sprouts Broccoli Salad",
+    name: "The Food Studio",
     category: "Sprouts Salad",
     description: "Nutritious sprouts with steamed broccoli, cucumber, and fresh lemon.",
     price: 169,
@@ -139390,7 +139390,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7353,
-    name: "Sprouts Sweet Corn Salad",
+    name: "Urban Feast Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts and sweet corn with tomatoes, onions, and lemon seasoning.",
     price: 149,
@@ -139408,7 +139408,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7354,
-    name: "Sprouts Cabbage Salad",
+    name: "The Rustic Bowl",
     category: "Sprouts Salad",
     description: "Crispy cabbage and fresh sprouts with carrots and light lemon dressing.",
     price: 129,
@@ -139426,7 +139426,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7355,
-    name: "Sprouts Bell Pepper Salad",
+    name: "Saffron Street Cafe",
     category: "Sprouts Salad",
     description: "Fresh sprouts tossed with colorful bell peppers, cucumber, and herbs.",
     price: 159,
@@ -139444,7 +139444,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7356,
-    name: "Sprouts Cauliflower Salad",
+    name: "The Wholesome Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts and cauliflower with mild spices and coriander dressing.",
     price: 149,
@@ -139462,7 +139462,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7357,
-    name: "Sprouts Zucchini Salad",
+    name: "Maple Leaf Bistro",
     category: "Sprouts Salad",
     description: "Fresh sprouts with grilled zucchini, mint, and lemon herb dressing.",
     price: 169,
@@ -139480,7 +139480,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7358,
-    name: "Sprouts Celery Salad",
+    name: "The Happy Platter",
     category: "Sprouts Salad",
     description: "Fresh sprouts with celery, cucumber, parsley, and refreshing lemon dressing.",
     price: 139,
@@ -139498,7 +139498,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7359,
-    name: "Sprouts Garlic Herb Salad",
+    name: "Cedar Spoon Restaurant",
     category: "Sprouts Salad",
     description: "Fresh sprouts with roasted garlic, herbs, tomatoes, and olive oil.",
     price: 159,
@@ -139516,7 +139516,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7360,
-    name: "Sprouts Ginger Salad",
+    name: "The Good Grain Cafe",
     category: "Sprouts Salad",
     description: "Fresh sprouts with ginger, cucumber, carrots, and aromatic seasoning.",
     price: 149,
@@ -139534,7 +139534,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7361,
-    name: "Sprouts Lemon Salad",
+    name: "The Fresh Table",
     category: "Sprouts Salad",
     description: "Fresh mixed sprouts with lemon juice, cucumber, and garden herbs.",
     price: 129,
@@ -139552,7 +139552,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7362,
-    name: "Sprouts Mint Salad",
+    name: "Little Leaf Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts tossed with mint, cucumber, coriander, and lemon.",
     price: 139,
@@ -139570,7 +139570,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7363,
-    name: "Sprouts Coriander Salad",
+    name: "The Culinary Corner",
     category: "Sprouts Salad",
     description: "Fresh sprouts with coriander, tomatoes, onions, and roasted cumin.",
     price: 139,
@@ -139588,7 +139588,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7364,
-    name: "Sprouts Turmeric Salad",
+    name: "Nature’s Basket Cafe",
     category: "Sprouts Salad",
     description: "Fresh sprouts with turmeric seasoning, ginger, lemon, and vegetables.",
     price: 149,
@@ -139606,7 +139606,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7365,
-    name: "Spicy Sprouts Salad",
+    name: "The Food Garden",
     category: "Sprouts Salad",
     description: "Mixed sprouts with green chilies, onions, tomatoes, and spicy lemon dressing.",
     price: 149,
@@ -139624,7 +139624,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7366,
-    name: "Sprouts Sweet Potato Salad",
+    name: "Spice Route Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts with roasted sweet potato, herbs, and crunchy vegetables.",
     price: 179,
@@ -139642,7 +139642,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7367,
-    name: "Sprouts Pumpkin Salad",
+    name: "The Cozy Fork",
     category: "Sprouts Salad",
     description: "Sprouts with roasted pumpkin, leafy greens, and pumpkin seeds.",
     price: 179,
@@ -139660,7 +139660,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7368,
-    name: "Sprouts Kale Salad",
+    name: "Daily Delight Bistro",
     category: "Sprouts Salad",
     description: "Mixed sprouts with kale, cucumber, cherry tomatoes, and light vinaigrette.",
     price: 189,
@@ -139678,7 +139678,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7369,
-    name: "Sprouts Quinoa Salad",
+    name: "The Tasty Pantry",
     category: "Sprouts Salad",
     description: "Sprouts and quinoa with colorful vegetables and lemon herb dressing.",
     price: 219,
@@ -139696,7 +139696,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7370,
-    name: "Sprouts Brown Rice Salad",
+    name: "Blue Plate Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts with brown rice, vegetables, and light herb dressing.",
     price: 199,
@@ -139714,7 +139714,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7371,
-    name: "Sprouts Chickpea Salad",
+    name: "The Honest Meal",
     category: "Sprouts Salad",
     description: "Mixed sprouts and chickpeas with fresh cucumber, tomatoes, and herbs.",
     price: 189,
@@ -139732,7 +139732,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7372,
-    name: "Sprouts White Bean Salad",
+    name: "Sunrise Cafe & Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts with white beans, vegetables, and Mediterranean herbs.",
     price: 199,
@@ -139750,7 +139750,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7373,
-    name: "Sprouts Kidney Bean Salad",
+    name: "The Kitchen Collective",
     category: "Sprouts Salad",
     description: "Sprouts and kidney beans with onions, tomatoes, and fresh coriander.",
     price: 199,
@@ -139768,7 +139768,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7374,
-    name: "Sprouts Edamame Salad",
+    name: "Flavour House",
     category: "Sprouts Salad",
     description: "Sprouts and edamame with greens, sesame seeds, and fresh Asian dressing.",
     price: 219,
@@ -139786,7 +139786,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7375,
-    name: "Sprouts Coconut Salad",
+    name: "The Green Apron",
     category: "Sprouts Salad",
     description: "Fresh sprouts with grated coconut, cucumber, coriander, and lime.",
     price: 159,
@@ -139804,7 +139804,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7376,
-    name: "Sprouts Asian Salad",
+    name: "City Spoon Bistro",
     category: "Sprouts Salad",
     description: "Fresh sprouts with cabbage, carrots, sesame, and light Asian dressing.",
     price: 189,
@@ -139822,7 +139822,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7377,
-    name: "Sprouts Mediterranean Salad",
+    name: "The Farmhouse Cafe",
     category: "Sprouts Salad",
     description: "Sprouts with olives, cucumber, tomatoes, chickpeas, and Mediterranean herbs.",
     price: 219,
@@ -139840,7 +139840,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7378,
-    name: "Sprouts Greek Salad",
+    name: "Root & Roast Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts with cucumber, tomatoes, olives, lettuce, and Greek herbs.",
     price: 209,
@@ -139858,7 +139858,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7379,
-    name: "Sprouts Rainbow Salad",
+    name: "The Gourmet Nest",
     category: "Sprouts Salad",
     description: "Colorful sprouts with carrots, beetroot, bell peppers, cucumber, and tomatoes.",
     price: 189,
@@ -139876,7 +139876,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7380,
-    name: "Sprouts Fresh Herb Salad",
+    name: "Urban Harvest Bistro",
     category: "Sprouts Salad",
     description: "Fresh sprouts with parsley, mint, coriander, and seasonal vegetables.",
     price: 159,
@@ -139894,7 +139894,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7381,
-    name: "Sprouts Walnut Salad",
+    name: "The Savoury Spoon",
     category: "Sprouts Salad",
     description: "Fresh sprouts with walnuts, apples, greens, and light citrus dressing.",
     price: 199,
@@ -139912,7 +139912,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7382,
-    name: "Sprouts Almond Salad",
+    name: "Fresh Roots Cafe",
     category: "Sprouts Salad",
     description: "Fresh sprouts with almonds, cucumber, carrots, and lemon herb dressing.",
     price: 199,
@@ -139930,7 +139930,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7383,
-    name: "Sprouts Pomegranate Salad",
+    name: "The Platter Room",
     category: "Sprouts Salad",
     description: "Fresh sprouts with pomegranate seeds, cucumber, mint, and lemon.",
     price: 189,
@@ -139948,7 +139948,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7384,
-    name: "Sprouts Apple Salad",
+    name: "The Kitchen Story",
     category: "Sprouts Salad",
     description: "Fresh sprouts with crisp apples, celery, walnuts, and light dressing.",
     price: 179,
@@ -139966,7 +139966,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7385,
-    name: "Sprouts Mango Salad",
+    name: "The Meal Market",
     category: "Sprouts Salad",
     description: "Fresh sprouts with mango, cucumber, mint, and a refreshing lime dressing.",
     price: 189,
@@ -139984,7 +139984,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7386,
-    name: "Sprouts Strawberry Salad",
+    name: "The Corner Bistro",
     category: "Sprouts Salad",
     description: "Fresh sprouts with strawberries, greens, almonds, and citrus dressing.",
     price: 209,
@@ -140002,7 +140002,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7387,
-    name: "Sprouts Low Calorie Salad",
+    name: "The Modern Tiffin",
     category: "Sprouts Salad",
     description: "A light mixed sprouts salad with cucumber, lettuce, lemon, and minimal dressing.",
     price: 119,
@@ -140020,7 +140020,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7388,
-    name: "Sprouts High Protein Salad",
+    name: "The Food Loft",
     category: "Sprouts Salad",
     description: "A protein-rich mix of sprouts, chickpeas, edamame, and fresh vegetables.",
     price: 219,
@@ -140038,7 +140038,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7389,
-    name: "Sprouts Detox Salad",
+    name: "The Signature Kitchen",
     category: "Sprouts Salad",
     description: "Fresh sprouts with spinach, cucumber, celery, lemon, and garden herbs.",
     price: 149,
@@ -140056,7 +140056,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7390,
-    name: "Sprouts Superfood Salad",
+    name: "The Good Food Company",
     category: "Sprouts Salad",
     description: "Sprouts with quinoa, kale, spinach, avocado, and nutritious seeds.",
     price: 239,
@@ -140074,7 +140074,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7391,
-    name: "Sprouts Protein Power Salad",
+    name: "The Village Table",
     category: "Sprouts Salad",
     description: "A hearty sprouts salad with chickpeas, beans, quinoa, and fresh vegetables.",
     price: 229,
@@ -140092,7 +140092,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7392,
-    name: "Ultimate Sprouts Wellness Salad",
+    name: "The Premium Plate",
     category: "Sprouts Salad",
     description: "A balanced sprouts salad with quinoa, chickpeas, greens, colorful vegetables, and seeds.",
     price: 249,
@@ -140110,7 +140110,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7393,
-    name: "Classic Brown Rice Vegetable Bowl",
+    name: "The Urban Spoon",
     category: "Brown Rice",
     description: "Nutritious brown rice served with fresh seasonal vegetables and light herbs.",
     price: 189,
@@ -140128,7 +140128,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7394,
-    name: "Brown Rice Chickpea Power Bowl",
+    name: "Fresh Fork Kitchen",
     category: "Brown Rice",
     description: "Brown rice combined with protein-rich chickpeas, vegetables and fresh coriander.",
     price: 219,
@@ -140146,7 +140146,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7395,
-    name: "Brown Rice Grilled Chicken Bowl",
+    name: "Green Garden Cafe",
     category: "Brown Rice",
     description: "Whole-grain brown rice topped with juicy grilled chicken and fresh greens.",
     price: 279,
@@ -140164,7 +140164,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7396,
-    name: "Brown Rice Paneer Bowl",
+    name: "Harvest Table Bistro",
     category: "Brown Rice",
     description: "Brown rice served with grilled paneer cubes, peppers and aromatic spices.",
     price: 249,
@@ -140182,7 +140182,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7397,
-    name: "Brown Rice Dal Bowl",
+    name: "The Daily Plate",
     category: "Brown Rice",
     description: "Wholesome brown rice paired with nourishing yellow lentils and mild spices.",
     price: 179,
@@ -140200,7 +140200,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7398,
-    name: "Brown Rice Rajma Bowl",
+    name: "Olive & Thyme Kitchen",
     category: "Brown Rice",
     description: "Brown rice served with kidney beans in a light tomato gravy.",
     price: 199,
@@ -140218,7 +140218,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7399,
-    name: "Brown Rice Tofu Bowl",
+    name: "The Nourish House",
     category: "Brown Rice",
     description: "Brown rice topped with marinated tofu, broccoli and crunchy vegetables.",
     price: 239,
@@ -140236,7 +140236,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7400,
-    name: "Brown Rice Broccoli Bowl",
+    name: "Golden Ladle Cafe",
     category: "Brown Rice",
     description: "Nutritious brown rice with steamed broccoli, garlic and sesame seasoning.",
     price: 199,
@@ -140254,7 +140254,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7401,
-    name: "Brown Rice Mexican Bean Bowl",
+    name: "Flavour Junction",
     category: "Brown Rice",
     description: "Brown rice with black beans, sweet corn, salsa and fresh lime.",
     price: 229,
@@ -140272,7 +140272,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7402,
-    name: "Brown Rice Egg Bowl",
+    name: "The Food Studio",
     category: "Brown Rice",
     description: "Brown rice topped with boiled eggs, vegetables and pepper seasoning.",
     price: 219,
@@ -140290,7 +140290,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7403,
-    name: "Brown Rice Mushroom Bowl",
+    name: "Urban Feast Kitchen",
     category: "Brown Rice",
     description: "Whole-grain brown rice with sautéed mushrooms and fresh herbs.",
     price: 219,
@@ -140308,7 +140308,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7404,
-    name: "Brown Rice Spinach Bowl",
+    name: "The Rustic Bowl",
     category: "Brown Rice",
     description: "Brown rice served with fresh spinach, garlic and roasted vegetables.",
     price: 189,
@@ -140326,7 +140326,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7405,
-    name: "Brown Rice Quinoa Bowl",
+    name: "Saffron Street Cafe",
     category: "Brown Rice",
     description: "Brown rice and quinoa blended with colourful vegetables and lemon dressing.",
     price: 249,
@@ -140344,7 +140344,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7406,
-    name: "Brown Rice Salmon Bowl",
+    name: "The Wholesome Kitchen",
     category: "Brown Rice",
     description: "Brown rice topped with grilled salmon, vegetables and lemon herbs.",
     price: 349,
@@ -140362,7 +140362,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7407,
-    name: "Brown Rice Sweet Potato Bowl",
+    name: "Maple Leaf Bistro",
     category: "Brown Rice",
     description: "Brown rice with roasted sweet potatoes, greens and pumpkin seeds.",
     price: 219,
@@ -140380,7 +140380,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7408,
-    name: "Brown Rice Mediterranean Bowl",
+    name: "The Happy Platter",
     category: "Brown Rice",
     description: "Brown rice with olives, cucumber, tomatoes, chickpeas and herbs.",
     price: 239,
@@ -140398,7 +140398,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7409,
-    name: "Brown Rice Vegetable Stir Fry",
+    name: "Cedar Spoon Restaurant",
     category: "Brown Rice",
     description: "Brown rice with stir-fried carrots, peppers, beans and light soy sauce.",
     price: 199,
@@ -140416,7 +140416,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7410,
-    name: "Brown Rice Chicken Teriyaki Bowl",
+    name: "The Good Grain Cafe",
     category: "Brown Rice",
     description: "Brown rice with grilled chicken, vegetables and light teriyaki sauce.",
     price: 289,
@@ -140434,7 +140434,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7411,
-    name: "Brown Rice Avocado Bowl",
+    name: "The Fresh Table",
     category: "Brown Rice",
     description: "Brown rice with creamy avocado, fresh greens and lemon dressing.",
     price: 259,
@@ -140452,7 +140452,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7412,
-    name: "Brown Rice Lentil Bowl",
+    name: "Little Leaf Kitchen",
     category: "Brown Rice",
     description: "Brown rice and lentils served with roasted vegetables and cumin.",
     price: 199,
@@ -140470,7 +140470,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7413,
-    name: "Brown Rice Beetroot Bowl",
+    name: "The Culinary Corner",
     category: "Brown Rice",
     description: "Brown rice with roasted beetroot, fresh greens and crunchy seeds.",
     price: 209,
@@ -140488,7 +140488,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7414,
-    name: "Brown Rice Cauliflower Bowl",
+    name: "Nature’s Basket Cafe",
     category: "Brown Rice",
     description: "Brown rice paired with roasted cauliflower and mild spices.",
     price: 189,
@@ -140506,7 +140506,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7415,
-    name: "Brown Rice Thai Curry Bowl",
+    name: "The Food Garden",
     category: "Brown Rice",
     description: "Brown rice with mild Thai vegetable curry and coconut milk.",
     price: 249,
@@ -140524,7 +140524,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7416,
-    name: "Brown Rice Fish Curry Bowl",
+    name: "Spice Route Kitchen",
     category: "Brown Rice",
     description: "Brown rice served with lightly spiced fish curry and fresh herbs.",
     price: 299,
@@ -140542,7 +140542,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7417,
-    name: "Brown Rice Mixed Sprouts Bowl",
+    name: "The Cozy Fork",
     category: "Brown Rice",
     description: "Brown rice with mixed sprouts, cucumbers, tomatoes and lemon.",
     price: 199,
@@ -140560,7 +140560,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7418,
-    name: "Brown Rice Zucchini Bowl",
+    name: "Daily Delight Bistro",
     category: "Brown Rice",
     description: "Brown rice with grilled zucchini, peppers and fresh basil.",
     price: 209,
@@ -140578,7 +140578,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7419,
-    name: "Brown Rice Peanut Bowl",
+    name: "The Tasty Pantry",
     category: "Brown Rice",
     description: "Brown rice with roasted peanuts, vegetables and tangy dressing.",
     price: 219,
@@ -140596,7 +140596,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7420,
-    name: "Brown Rice Greek Bowl",
+    name: "Blue Plate Kitchen",
     category: "Brown Rice",
     description: "Brown rice with cucumber, tomato, olives, feta and oregano.",
     price: 259,
@@ -140614,7 +140614,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7421,
-    name: "Brown Rice Low Calorie Bowl",
+    name: "The Honest Meal",
     category: "Brown Rice",
     description: "Light brown rice portion with steamed vegetables and lemon seasoning.",
     price: 179,
@@ -140632,7 +140632,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7422,
-    name: "Brown Rice High Protein Bowl",
+    name: "Sunrise Cafe & Kitchen",
     category: "Brown Rice",
     description: "Brown rice with paneer, chickpeas, broccoli and protein-rich toppings.",
     price: 279,
@@ -140650,7 +140650,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7423,
-    name: "Brown Rice Pesto Bowl",
+    name: "The Kitchen Collective",
     category: "Brown Rice",
     description: "Brown rice with basil pesto, cherry tomatoes and grilled vegetables.",
     price: 249,
@@ -140668,7 +140668,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7424,
-    name: "Brown Rice Hummus Bowl",
+    name: "Flavour House",
     category: "Brown Rice",
     description: "Brown rice served with creamy hummus, vegetables and roasted chickpeas.",
     price: 229,
@@ -140686,7 +140686,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7425,
-    name: "Brown Rice Edamame Bowl",
+    name: "The Green Apron",
     category: "Brown Rice",
     description: "Brown rice with edamame beans, carrots, cucumber and sesame.",
     price: 239,
@@ -140704,7 +140704,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7426,
-    name: "Brown Rice Tandoori Chicken Bowl",
+    name: "City Spoon Bistro",
     category: "Brown Rice",
     description: "Brown rice topped with tandoori chicken, onions and fresh salad.",
     price: 289,
@@ -140722,7 +140722,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7427,
-    name: "Brown Rice Paneer Tikka Bowl",
+    name: "The Farmhouse Cafe",
     category: "Brown Rice",
     description: "Brown rice with smoky paneer tikka, peppers and mint chutney.",
     price: 259,
@@ -140740,7 +140740,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7428,
-    name: "Brown Rice Coconut Bowl",
+    name: "Root & Roast Kitchen",
     category: "Brown Rice",
     description: "Brown rice with coconut, vegetables and mild South Indian spices.",
     price: 219,
@@ -140758,7 +140758,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7429,
-    name: "Brown Rice Pumpkin Bowl",
+    name: "The Gourmet Nest",
     category: "Brown Rice",
     description: "Brown rice with roasted pumpkin, spinach and toasted seeds.",
     price: 209,
@@ -140776,7 +140776,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7430,
-    name: "Brown Rice Kale Bowl",
+    name: "Urban Harvest Bistro",
     category: "Brown Rice",
     description: "Brown rice with fresh kale, roasted vegetables and citrus dressing.",
     price: 229,
@@ -140794,7 +140794,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7431,
-    name: "Brown Rice Garlic Bowl",
+    name: "The Savoury Spoon",
     category: "Brown Rice",
     description: "Brown rice with garlic sautéed vegetables and aromatic herbs.",
     price: 189,
@@ -140812,7 +140812,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7432,
-    name: "Brown Rice Lemon Herb Bowl",
+    name: "Fresh Roots Cafe",
     category: "Brown Rice",
     description: "Brown rice with fresh lemon, herbs, vegetables and light seasoning.",
     price: 199,
@@ -140830,7 +140830,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7433,
-    name: "Brown Rice Spicy Chickpea Bowl",
+    name: "The Platter Room",
     category: "Brown Rice",
     description: "Brown rice with spicy chickpeas, fresh onions and coriander.",
     price: 219,
@@ -140848,7 +140848,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7434,
-    name: "Brown Rice Shrimp Bowl",
+    name: "The Kitchen Story",
     category: "Brown Rice",
     description: "Brown rice with grilled shrimp, vegetables and garlic lemon sauce.",
     price: 329,
@@ -140866,7 +140866,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7435,
-    name: "Brown Rice Turkey Bowl",
+    name: "The Meal Market",
     category: "Brown Rice",
     description: "Brown rice served with lean turkey, grilled vegetables and herbs.",
     price: 299,
@@ -140884,7 +140884,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7436,
-    name: "Brown Rice Fresh Garden Bowl",
+    name: "The Corner Bistro",
     category: "Brown Rice",
     description: "Brown rice with cucumber, carrots, lettuce, tomatoes and fresh herbs.",
     price: 189,
@@ -140902,7 +140902,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7437,
-    name: "Brown Rice Corn Bowl",
+    name: "The Modern Tiffin",
     category: "Brown Rice",
     description: "Brown rice with sweet corn, bell peppers and mild herbs.",
     price: 199,
@@ -140920,7 +140920,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7438,
-    name: "Brown Rice Cucumber Bowl",
+    name: "The Food Loft",
     category: "Brown Rice",
     description: "Brown rice with fresh cucumber, yogurt dressing and mint.",
     price: 189,
@@ -140938,7 +140938,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7439,
-    name: "Brown Rice Walnut Bowl",
+    name: "The Signature Kitchen",
     category: "Brown Rice",
     description: "Brown rice topped with walnuts, roasted vegetables and light dressing.",
     price: 249,
@@ -140956,7 +140956,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7440,
-    name: "Brown Rice Pomegranate Bowl",
+    name: "The Good Food Company",
     category: "Brown Rice",
     description: "Brown rice with pomegranate seeds, greens and crunchy almonds.",
     price: 239,
@@ -140974,7 +140974,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7441,
-    name: "Brown Rice Detox Bowl",
+    name: "The Village Table",
     category: "Brown Rice",
     description: "Brown rice with fresh greens, cucumber, broccoli and lemon dressing.",
     price: 199,
@@ -140992,7 +140992,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7442,
-    name: "Brown Rice Ultimate Superfood Bowl",
+    name: "The Premium Plate",
     category: "Brown Rice",
     description: "Brown rice with quinoa, chickpeas, avocado, broccoli, seeds and fresh greens.",
     price: 299,
@@ -141010,7 +141010,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 7443,
-    name: "Classic Steamed Vegetable Bowl",
+    name: "The Urban Spoon",
     category: "Steamed Veg",
     description: "Freshly steamed seasonal vegetables served with light herbs and natural seasoning.",
     price: 149,
@@ -141028,7 +141028,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7444,
-    name: "Steamed Broccoli Bowl",
+    name: "Fresh Fork Kitchen",
     category: "Steamed Veg",
     description: "Tender steamed broccoli florets with lemon and fresh black pepper.",
     price: 169,
@@ -141046,7 +141046,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7445,
-    name: "Steamed Carrot Bowl",
+    name: "Green Garden Cafe",
     category: "Steamed Veg",
     description: "Soft steamed carrots prepared with herbs and a touch of lemon.",
     price: 139,
@@ -141064,7 +141064,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7446,
-    name: "Steamed Cauliflower Bowl",
+    name: "Harvest Table Bistro",
     category: "Steamed Veg",
     description: "Fresh cauliflower florets steamed to perfection with mild seasoning.",
     price: 149,
@@ -141082,7 +141082,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7447,
-    name: "Steamed Green Beans Bowl",
+    name: "The Daily Plate",
     category: "Steamed Veg",
     description: "Fresh green beans steamed with garlic and aromatic herbs.",
     price: 159,
@@ -141100,7 +141100,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7448,
-    name: "Steamed Spinach Bowl",
+    name: "Olive & Thyme Kitchen",
     category: "Steamed Veg",
     description: "Nutritious steamed spinach with garlic and a light lemon dressing.",
     price: 139,
@@ -141118,7 +141118,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7449,
-    name: "Steamed Mixed Vegetable Bowl",
+    name: "The Nourish House",
     category: "Steamed Veg",
     description: "A colourful combination of carrots, beans, broccoli and cauliflower.",
     price: 179,
@@ -141136,7 +141136,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7450,
-    name: "Steamed Zucchini Bowl",
+    name: "Golden Ladle Cafe",
     category: "Steamed Veg",
     description: "Fresh zucchini slices steamed with herbs and cracked black pepper.",
     price: 159,
@@ -141154,7 +141154,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7451,
-    name: "Steamed Cabbage Bowl",
+    name: "Flavour Junction",
     category: "Steamed Veg",
     description: "Lightly steamed cabbage with herbs and a mild seasoning blend.",
     price: 129,
@@ -141172,7 +141172,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7452,
-    name: "Steamed Bell Pepper Bowl",
+    name: "The Food Studio",
     category: "Steamed Veg",
     description: "Steamed red, yellow and green bell peppers with fresh herbs.",
     price: 169,
@@ -141190,7 +141190,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7453,
-    name: "Steamed Mushroom Bowl",
+    name: "Urban Feast Kitchen",
     category: "Steamed Veg",
     description: "Tender mushrooms steamed with garlic, herbs and black pepper.",
     price: 179,
@@ -141208,7 +141208,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7454,
-    name: "Steamed Sweet Potato Bowl",
+    name: "The Rustic Bowl",
     category: "Steamed Veg",
     description: "Soft steamed sweet potatoes served with fresh herbs and light seasoning.",
     price: 159,
@@ -141226,7 +141226,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7455,
-    name: "Steamed Asparagus Bowl",
+    name: "Saffron Street Cafe",
     category: "Steamed Veg",
     description: "Fresh asparagus steamed with lemon zest and aromatic herbs.",
     price: 219,
@@ -141244,7 +141244,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7456,
-    name: "Steamed Pumpkin Bowl",
+    name: "The Wholesome Kitchen",
     category: "Steamed Veg",
     description: "Tender pumpkin pieces steamed with mild spices and fresh coriander.",
     price: 149,
@@ -141262,7 +141262,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7457,
-    name: "Steamed Beetroot Bowl",
+    name: "Maple Leaf Bistro",
     category: "Steamed Veg",
     description: "Steamed beetroot cubes with lemon, herbs and a light pepper seasoning.",
     price: 159,
@@ -141280,7 +141280,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7458,
-    name: "Steamed Corn Bowl",
+    name: "The Happy Platter",
     category: "Steamed Veg",
     description: "Sweet corn kernels steamed with fresh lime and mild herbs.",
     price: 149,
@@ -141298,7 +141298,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7459,
-    name: "Steamed Edamame Bowl",
+    name: "Cedar Spoon Restaurant",
     category: "Steamed Veg",
     description: "Steamed edamame beans with sea salt and light sesame seasoning.",
     price: 199,
@@ -141316,7 +141316,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7460,
-    name: "Steamed Bok Choy Bowl",
+    name: "The Good Grain Cafe",
     category: "Steamed Veg",
     description: "Steamed bok choy with garlic, ginger and light soy seasoning.",
     price: 179,
@@ -141334,7 +141334,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7461,
-    name: "Steamed Brussels Sprouts Bowl",
+    name: "The Fresh Table",
     category: "Steamed Veg",
     description: "Steamed Brussels sprouts with lemon and fresh cracked pepper.",
     price: 199,
@@ -141352,7 +141352,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7462,
-    name: "Steamed Peas Bowl",
+    name: "Little Leaf Kitchen",
     category: "Steamed Veg",
     description: "Fresh green peas steamed with mint and mild herbs.",
     price: 139,
@@ -141370,7 +141370,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7463,
-    name: "Steamed Radish Bowl",
+    name: "The Culinary Corner",
     category: "Steamed Veg",
     description: "Fresh radish steamed with herbs and a refreshing lemon dressing.",
     price: 129,
@@ -141388,7 +141388,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7464,
-    name: "Steamed Turnip Bowl",
+    name: "Nature’s Basket Cafe",
     category: "Steamed Veg",
     description: "Soft steamed turnips seasoned with herbs and fresh black pepper.",
     price: 139,
@@ -141406,7 +141406,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7465,
-    name: "Steamed Celery Bowl",
+    name: "The Food Garden",
     category: "Steamed Veg",
     description: "Fresh celery steamed with herbs and lemon seasoning.",
     price: 129,
@@ -141424,7 +141424,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7466,
-    name: "Steamed Artichoke Bowl",
+    name: "Spice Route Kitchen",
     category: "Steamed Veg",
     description: "Tender steamed artichoke hearts with lemon herb dressing.",
     price: 229,
@@ -141442,7 +141442,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7467,
-    name: "Steamed Asparagus and Broccoli Bowl",
+    name: "The Cozy Fork",
     category: "Steamed Veg",
     description: "A combination of steamed asparagus and broccoli with lemon herbs.",
     price: 219,
@@ -141460,7 +141460,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7468,
-    name: "Steamed Vegetable Medley",
+    name: "Daily Delight Bistro",
     category: "Steamed Veg",
     description: "Broccoli, carrots, zucchini, beans and peppers lightly steamed.",
     price: 189,
@@ -141478,7 +141478,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7469,
-    name: "Steamed Vegetable Protein Bowl",
+    name: "The Tasty Pantry",
     category: "Steamed Veg",
     description: "Steamed vegetables paired with tofu and protein-rich edamame beans.",
     price: 249,
@@ -141496,7 +141496,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7470,
-    name: "Steamed Vegetable Detox Bowl",
+    name: "Blue Plate Kitchen",
     category: "Steamed Veg",
     description: "A light mix of broccoli, spinach, carrots and zucchini with lemon.",
     price: 179,
@@ -141514,7 +141514,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7471,
-    name: "Steamed Vegetable Garlic Bowl",
+    name: "The Honest Meal",
     category: "Steamed Veg",
     description: "Fresh steamed vegetables tossed with garlic and light herbs.",
     price: 169,
@@ -141532,7 +141532,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7472,
-    name: "Steamed Vegetable Lemon Bowl",
+    name: "Sunrise Cafe & Kitchen",
     category: "Steamed Veg",
     description: "Steamed seasonal vegetables with lemon juice and fresh coriander.",
     price: 159,
@@ -141550,7 +141550,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7473,
-    name: "Steamed Vegetable Sesame Bowl",
+    name: "The Kitchen Collective",
     category: "Steamed Veg",
     description: "Steamed vegetables with toasted sesame seeds and mild Asian seasoning.",
     price: 189,
@@ -141568,7 +141568,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7474,
-    name: "Steamed Vegetable Mint Bowl",
+    name: "Flavour House",
     category: "Steamed Veg",
     description: "Steamed vegetables served with fresh mint and coriander seasoning.",
     price: 159,
@@ -141586,7 +141586,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7475,
-    name: "Steamed Vegetable Herb Bowl",
+    name: "The Green Apron",
     category: "Steamed Veg",
     description: "Seasonal steamed vegetables with fresh rosemary, thyme and parsley.",
     price: 199,
@@ -141604,7 +141604,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7476,
-    name: "Steamed Vegetable Spicy Bowl",
+    name: "City Spoon Bistro",
     category: "Steamed Veg",
     description: "Steamed vegetables with a mild chilli and pepper seasoning blend.",
     price: 169,
@@ -141622,7 +141622,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7477,
-    name: "Steamed Vegetable Curry Bowl",
+    name: "The Farmhouse Cafe",
     category: "Steamed Veg",
     description: "Steamed vegetables served with a light curry sauce and fresh herbs.",
     price: 199,
@@ -141640,7 +141640,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7478,
-    name: "Steamed Vegetable Yogurt Bowl",
+    name: "Root & Roast Kitchen",
     category: "Steamed Veg",
     description: "Steamed vegetables topped with a light yogurt and mint dressing.",
     price: 189,
@@ -141658,7 +141658,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7479,
-    name: "Steamed Vegetable Paneer Bowl",
+    name: "The Gourmet Nest",
     category: "Steamed Veg",
     description: "Steamed vegetables with paneer cubes and light Indian seasoning.",
     price: 229,
@@ -141676,7 +141676,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7480,
-    name: "Steamed Vegetable Tofu Bowl",
+    name: "Urban Harvest Bistro",
     category: "Steamed Veg",
     description: "Steamed seasonal vegetables combined with soft tofu and ginger.",
     price: 219,
@@ -141694,7 +141694,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7481,
-    name: "Steamed Vegetable Chickpea Bowl",
+    name: "The Savoury Spoon",
     category: "Steamed Veg",
     description: "Steamed vegetables with chickpeas, herbs and fresh lemon.",
     price: 199,
@@ -141712,7 +141712,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7482,
-    name: "Steamed Vegetable Quinoa Bowl",
+    name: "Fresh Roots Cafe",
     category: "Steamed Veg",
     description: "Steamed vegetables paired with quinoa and fresh herb dressing.",
     price: 249,
@@ -141730,7 +141730,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7483,
-    name: "Steamed Vegetable Brown Rice Bowl",
+    name: "The Platter Room",
     category: "Steamed Veg",
     description: "Steamed vegetables served with wholesome brown rice.",
     price: 229,
@@ -141748,7 +141748,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7484,
-    name: "Steamed Vegetable Oats Bowl",
+    name: "The Kitchen Story",
     category: "Steamed Veg",
     description: "Steamed vegetables combined with savoury oats and mild herbs.",
     price: 179,
@@ -141766,7 +141766,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7485,
-    name: "Steamed Vegetable Low Calorie Bowl",
+    name: "The Meal Market",
     category: "Steamed Veg",
     description: "Light steamed vegetables with no heavy sauces or added fats.",
     price: 149,
@@ -141784,7 +141784,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7486,
-    name: "Steamed Vegetable High Protein Bowl",
+    name: "The Corner Bistro",
     category: "Steamed Veg",
     description: "Steamed broccoli, edamame, peas and tofu for a protein-rich meal.",
     price: 269,
@@ -141802,7 +141802,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7487,
-    name: "Steamed Vegetable Rainbow Bowl",
+    name: "The Modern Tiffin",
     category: "Steamed Veg",
     description: "A vibrant mix of colourful steamed vegetables with fresh herbs.",
     price: 199,
@@ -141820,7 +141820,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7488,
-    name: "Steamed Vegetable Superfood Bowl",
+    name: "The Food Loft",
     category: "Steamed Veg",
     description: "Steamed vegetables with quinoa, seeds and nutrient-rich greens.",
     price: 279,
@@ -141838,7 +141838,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7489,
-    name: "Steamed Vegetable Fresh Herb Bowl",
+    name: "The Signature Kitchen",
     category: "Steamed Veg",
     description: "Fresh steamed vegetables with parsley, coriander and mint.",
     price: 179,
@@ -141856,7 +141856,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7490,
-    name: "Steamed Vegetable Ginger Bowl",
+    name: "The Good Food Company",
     category: "Steamed Veg",
     description: "Steamed vegetables with fresh ginger and a light Asian dressing.",
     price: 189,
@@ -141874,7 +141874,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7491,
-    name: "Steamed Vegetable Ultimate Wellness Bowl",
+    name: "The Village Table",
     category: "Steamed Veg",
     description: "A nutritious combination of broccoli, spinach, carrots, beans and cauliflower.",
     price: 219,
@@ -141892,7 +141892,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7492,
-    name: "Steamed Vegetable Premium Bowl",
+    name: "The Premium Plate",
     category: "Steamed Veg",
     description: "Premium steamed seasonal vegetables with herbs, lemon and seed topping.",
     price: 249,
@@ -141910,7 +141910,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7493,
-    name: "Classic Fresh Fruit Bowl",
+    name: "The Urban Spoon",
     category: "Fruit Bowl",
     description: "A refreshing bowl of seasonal fresh fruits served with natural sweetness.",
     price: 149,
@@ -141928,7 +141928,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7494,
-    name: "Apple and Banana Fruit Bowl",
+    name: "Fresh Fork Kitchen",
     category: "Fruit Bowl",
     description: "Fresh apple slices and ripe bananas served in a nutritious fruit bowl.",
     price: 129,
@@ -141946,7 +141946,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7495,
-    name: "Tropical Mango Fruit Bowl",
+    name: "Green Garden Cafe",
     category: "Fruit Bowl",
     description: "Sweet mango chunks combined with pineapple and fresh papaya.",
     price: 179,
@@ -141964,7 +141964,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7496,
-    name: "Watermelon Summer Bowl",
+    name: "Harvest Table Bistro",
     category: "Fruit Bowl",
     description: "Juicy watermelon cubes served with mint and fresh lime.",
     price: 119,
@@ -141982,7 +141982,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7497,
-    name: "Pineapple Delight Fruit Bowl",
+    name: "The Daily Plate",
     category: "Fruit Bowl",
     description: "Fresh pineapple chunks with apple, grapes and orange segments.",
     price: 159,
@@ -142000,7 +142000,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7498,
-    name: "Mixed Berry Fruit Bowl",
+    name: "Olive & Thyme Kitchen",
     category: "Fruit Bowl",
     description: "Strawberries, blueberries, raspberries and blackberries served fresh.",
     price: 249,
@@ -142018,7 +142018,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7499,
-    name: "Papaya Wellness Fruit Bowl",
+    name: "The Nourish House",
     category: "Fruit Bowl",
     description: "Fresh papaya cubes served with banana and a hint of lemon.",
     price: 139,
@@ -142036,7 +142036,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7500,
-    name: "Kiwi Green Fruit Bowl",
+    name: "Golden Ladle Cafe",
     category: "Fruit Bowl",
     description: "Fresh kiwi slices combined with green grapes and apple.",
     price: 199,
@@ -142054,7 +142054,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7501,
-    name: "Orange Citrus Fruit Bowl",
+    name: "Flavour Junction",
     category: "Fruit Bowl",
     description: "Fresh orange segments, sweet lime and juicy grapefruit.",
     price: 149,
@@ -142072,7 +142072,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7502,
-    name: "Grape and Apple Fruit Bowl",
+    name: "The Food Studio",
     category: "Fruit Bowl",
     description: "Crunchy apple slices mixed with fresh red and green grapes.",
     price: 159,
@@ -142090,7 +142090,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7503,
-    name: "Pomegranate Fruit Bowl",
+    name: "Urban Feast Kitchen",
     category: "Fruit Bowl",
     description: "Fresh pomegranate arils served with apple and orange slices.",
     price: 179,
@@ -142108,7 +142108,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7504,
-    name: "Dragon Fruit Bowl",
+    name: "The Rustic Bowl",
     category: "Fruit Bowl",
     description: "Fresh dragon fruit combined with kiwi and tropical fruits.",
     price: 249,
@@ -142126,7 +142126,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7505,
-    name: "Guava Fresh Fruit Bowl",
+    name: "Saffron Street Cafe",
     category: "Fruit Bowl",
     description: "Fresh guava slices served with apple and seasonal fruits.",
     price: 139,
@@ -142144,7 +142144,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7506,
-    name: "Pear and Apple Fruit Bowl",
+    name: "The Wholesome Kitchen",
     category: "Fruit Bowl",
     description: "Fresh pear and apple slices with grapes and a light citrus dressing.",
     price: 159,
@@ -142162,7 +142162,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7507,
-    name: "Peach Delight Fruit Bowl",
+    name: "Maple Leaf Bistro",
     category: "Fruit Bowl",
     description: "Sweet peaches served with strawberries and fresh blueberries.",
     price: 219,
@@ -142180,7 +142180,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7508,
-    name: "Strawberry Banana Bowl",
+    name: "The Happy Platter",
     category: "Fruit Bowl",
     description: "Sweet strawberries and ripe banana slices served fresh.",
     price: 179,
@@ -142198,7 +142198,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7509,
-    name: "Melon Medley Fruit Bowl",
+    name: "Cedar Spoon Restaurant",
     category: "Fruit Bowl",
     description: "Honeydew, cantaloupe and watermelon served chilled.",
     price: 149,
@@ -142216,7 +142216,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7510,
-    name: "Tropical Papaya Mango Bowl",
+    name: "The Good Grain Cafe",
     category: "Fruit Bowl",
     description: "Papaya and mango mixed with pineapple and fresh lime.",
     price: 189,
@@ -142234,7 +142234,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7511,
-    name: "Apple Cinnamon Fruit Bowl",
+    name: "The Fresh Table",
     category: "Fruit Bowl",
     description: "Fresh apple chunks with cinnamon and banana slices.",
     price: 159,
@@ -142252,7 +142252,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7512,
-    name: "Fruit Bowl with Chia Seeds",
+    name: "Little Leaf Kitchen",
     category: "Fruit Bowl",
     description: "Fresh seasonal fruits topped with chia seeds for extra nutrition.",
     price: 199,
@@ -142270,7 +142270,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7513,
-    name: "Fruit Bowl with Almonds",
+    name: "The Culinary Corner",
     category: "Fruit Bowl",
     description: "Seasonal fruits topped with crunchy almonds and fresh mint.",
     price: 219,
@@ -142288,7 +142288,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7514,
-    name: "Fruit Bowl with Walnuts",
+    name: "Nature’s Basket Cafe",
     category: "Fruit Bowl",
     description: "Fresh fruits combined with walnuts and a light honey drizzle.",
     price: 229,
@@ -142306,7 +142306,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7515,
-    name: "Fruit Bowl with Coconut",
+    name: "The Food Garden",
     category: "Fruit Bowl",
     description: "Fresh tropical fruits topped with shredded coconut.",
     price: 179,
@@ -142324,7 +142324,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7516,
-    name: "Fruit Bowl with Greek Yogurt",
+    name: "Spice Route Kitchen",
     category: "Fruit Bowl",
     description: "Fresh fruits served with creamy Greek yogurt and honey.",
     price: 229,
@@ -142342,7 +142342,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7517,
-    name: "Fruit Bowl with Cottage Cheese",
+    name: "The Cozy Fork",
     category: "Fruit Bowl",
     description: "Fresh fruits combined with cottage cheese for a protein-rich snack.",
     price: 249,
@@ -142360,7 +142360,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7518,
-    name: "Fruit Bowl with Oats",
+    name: "Daily Delight Bistro",
     category: "Fruit Bowl",
     description: "Fresh fruits mixed with rolled oats and a light yogurt dressing.",
     price: 199,
@@ -142378,7 +142378,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7519,
-    name: "Fruit Bowl with Honey",
+    name: "The Tasty Pantry",
     category: "Fruit Bowl",
     description: "Fresh seasonal fruits finished with a light honey drizzle.",
     price: 169,
@@ -142396,7 +142396,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7520,
-    name: "Fruit Bowl with Mint",
+    name: "Blue Plate Kitchen",
     category: "Fruit Bowl",
     description: "Fresh fruits served with aromatic mint leaves and lime.",
     price: 159,
@@ -142414,7 +142414,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7521,
-    name: "Fruit Bowl with Lemon Dressing",
+    name: "The Honest Meal",
     category: "Fruit Bowl",
     description: "Fresh fruit assortment with a refreshing citrus dressing.",
     price: 169,
@@ -142432,7 +142432,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7522,
-    name: "Fruit Bowl with Pumpkin Seeds",
+    name: "Sunrise Cafe & Kitchen",
     category: "Fruit Bowl",
     description: "Fresh fruits topped with crunchy pumpkin seeds.",
     price: 199,
@@ -142450,7 +142450,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7523,
-    name: "Fruit Bowl with Sunflower Seeds",
+    name: "The Kitchen Collective",
     category: "Fruit Bowl",
     description: "Seasonal fruits with roasted sunflower seeds and fresh herbs.",
     price: 189,
@@ -142468,7 +142468,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7524,
-    name: "Fruit Bowl with Flax Seeds",
+    name: "Flavour House",
     category: "Fruit Bowl",
     description: "Fresh fruits topped with ground flax seeds and light honey.",
     price: 189,
@@ -142486,7 +142486,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7525,
-    name: "Fruit Bowl with Granola",
+    name: "The Green Apron",
     category: "Fruit Bowl",
     description: "Fresh fruits topped with crunchy granola and creamy yogurt.",
     price: 229,
@@ -142504,7 +142504,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7526,
-    name: "Fruit Bowl with Raisins",
+    name: "City Spoon Bistro",
     category: "Fruit Bowl",
     description: "Fresh apple, banana and grapes with sweet raisins.",
     price: 169,
@@ -142522,7 +142522,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7527,
-    name: "Fruit Bowl with Dates",
+    name: "The Farmhouse Cafe",
     category: "Fruit Bowl",
     description: "Fresh fruits combined with naturally sweet dates.",
     price: 179,
@@ -142540,7 +142540,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7528,
-    name: "Fruit Bowl with Dark Chocolate",
+    name: "Root & Roast Kitchen",
     category: "Fruit Bowl",
     description: "Fresh strawberries, bananas and apples with dark chocolate shavings.",
     price: 229,
@@ -142558,7 +142558,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7529,
-    name: "Fruit Bowl with Peanut Butter",
+    name: "The Gourmet Nest",
     category: "Fruit Bowl",
     description: "Fresh banana, apple and strawberries served with peanut butter.",
     price: 219,
@@ -142576,7 +142576,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7530,
-    name: "Fruit Bowl with Cashews",
+    name: "Urban Harvest Bistro",
     category: "Fruit Bowl",
     description: "Fresh fruits topped with cashew nuts and a light citrus dressing.",
     price: 219,
@@ -142594,7 +142594,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7531,
-    name: "Fruit Bowl with Pistachios",
+    name: "The Savoury Spoon",
     category: "Fruit Bowl",
     description: "Seasonal fruits topped with crunchy pistachios.",
     price: 239,
@@ -142612,7 +142612,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7532,
-    name: "Fruit Bowl with Mixed Nuts",
+    name: "Fresh Roots Cafe",
     category: "Fruit Bowl",
     description: "Fresh fruits topped with almonds, walnuts, cashews and pistachios.",
     price: 249,
@@ -142630,7 +142630,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7533,
-    name: "Fruit Bowl with Yogurt Dressing",
+    name: "The Platter Room",
     category: "Fruit Bowl",
     description: "Fresh fruits with a smooth and refreshing yogurt dressing.",
     price: 199,
@@ -142648,7 +142648,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7534,
-    name: "Fruit Bowl with Coconut Yogurt",
+    name: "The Kitchen Story",
     category: "Fruit Bowl",
     description: "Tropical fruits served with creamy coconut yogurt.",
     price: 229,
@@ -142666,7 +142666,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7535,
-    name: "Fruit Bowl with Almond Milk",
+    name: "The Meal Market",
     category: "Fruit Bowl",
     description: "Fresh seasonal fruits served with chilled almond milk.",
     price: 199,
@@ -142684,7 +142684,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7536,
-    name: "Fruit Bowl with Soy Yogurt",
+    name: "The Corner Bistro",
     category: "Fruit Bowl",
     description: "Fresh fruits paired with creamy plant-based soy yogurt.",
     price: 219,
@@ -142702,7 +142702,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7537,
-    name: "Fruit Bowl with Protein Yogurt",
+    name: "The Modern Tiffin",
     category: "Fruit Bowl",
     description: "Fresh fruits mixed with high-protein yogurt for a nutritious snack.",
     price: 249,
@@ -142720,7 +142720,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7538,
-    name: "Fruit Bowl with Quinoa",
+    name: "The Food Loft",
     category: "Fruit Bowl",
     description: "Fresh fruits served with cooked quinoa and light honey dressing.",
     price: 229,
@@ -142738,7 +142738,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7539,
-    name: "Fruit Bowl with Fresh Basil",
+    name: "The Signature Kitchen",
     category: "Fruit Bowl",
     description: "Fresh seasonal fruits enhanced with aromatic basil leaves.",
     price: 179,
@@ -142756,7 +142756,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7540,
-    name: "Fruit Bowl with Ginger",
+    name: "The Good Food Company",
     category: "Fruit Bowl",
     description: "Fresh fruits with a subtle ginger flavour and citrus dressing.",
     price: 169,
@@ -142774,7 +142774,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7541,
-    name: "Fruit Bowl Rainbow Mix",
+    name: "The Village Table",
     category: "Fruit Bowl",
     description: "A colourful assortment of seasonal fruits arranged in a vibrant bowl.",
     price: 219,
@@ -142792,7 +142792,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7542,
-    name: "Fruit Bowl Ultimate Superfood",
+    name: "The Premium Plate",
     category: "Fruit Bowl",
     description: "Fresh berries, mango, kiwi, banana, chia seeds, almonds and yogurt.",
     price: 299,
@@ -142810,7 +142810,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7543,
-    name: "Classic Lemon Detox Water",
+    name: "The Urban Spoon",
     category: "Detox Water",
     description: "Refreshing detox water infused with fresh lemon slices for a light citrus flavor.",
     price: 79,
@@ -142828,7 +142828,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7544,
-    name: "Cucumber Mint Detox Water",
+    name: "Fresh Fork Kitchen",
     category: "Detox Water",
     description: "Cool cucumber slices blended with fresh mint leaves in infused water.",
     price: 89,
@@ -142846,7 +142846,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7545,
-    name: "Lemon Ginger Detox Water",
+    name: "Green Garden Cafe",
     category: "Detox Water",
     description: "Zesty lemon and fresh ginger infused water with a refreshing taste.",
     price: 99,
@@ -142864,7 +142864,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7546,
-    name: "Orange Detox Water",
+    name: "Harvest Table Bistro",
     category: "Detox Water",
     description: "Fresh orange slices infused in chilled water for a natural citrus aroma.",
     price: 89,
@@ -142882,7 +142882,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7547,
-    name: "Apple Cinnamon Detox Water",
+    name: "The Daily Plate",
     category: "Detox Water",
     description: "Apple slices and cinnamon sticks infused in refreshing water.",
     price: 109,
@@ -142900,7 +142900,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7548,
-    name: "Strawberry Lemon Detox Water",
+    name: "Olive & Thyme Kitchen",
     category: "Detox Water",
     description: "Sweet strawberries and fresh lemon slices infused in chilled water.",
     price: 119,
@@ -142918,7 +142918,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7549,
-    name: "Watermelon Mint Detox Water",
+    name: "The Nourish House",
     category: "Detox Water",
     description: "Juicy watermelon cubes infused with refreshing mint leaves.",
     price: 99,
@@ -142936,7 +142936,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7550,
-    name: "Pineapple Detox Water",
+    name: "Golden Ladle Cafe",
     category: "Detox Water",
     description: "Fresh pineapple chunks infused in naturally flavored chilled water.",
     price: 109,
@@ -142954,7 +142954,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7551,
-    name: "Blueberry Lemon Detox Water",
+    name: "Flavour Junction",
     category: "Detox Water",
     description: "Blueberries and lemon slices infused for a fruity refreshing drink.",
     price: 129,
@@ -142972,7 +142972,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7552,
-    name: "Kiwi Cucumber Detox Water",
+    name: "The Food Studio",
     category: "Detox Water",
     description: "Kiwi slices and cucumber infused in refreshing chilled water.",
     price: 119,
@@ -142990,7 +142990,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7553,
-    name: "Grapefruit Detox Water",
+    name: "Urban Feast Kitchen",
     category: "Detox Water",
     description: "Fresh grapefruit slices infused in water with a tangy citrus flavor.",
     price: 109,
@@ -143008,7 +143008,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7554,
-    name: "Lemon Basil Detox Water",
+    name: "The Rustic Bowl",
     category: "Detox Water",
     description: "Fresh lemon and aromatic basil leaves infused in chilled water.",
     price: 99,
@@ -143026,7 +143026,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7555,
-    name: "Mango Mint Detox Water",
+    name: "Saffron Street Cafe",
     category: "Detox Water",
     description: "Ripe mango slices and mint leaves infused in refreshing water.",
     price: 119,
@@ -143044,7 +143044,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7556,
-    name: "Lemon Mint Detox Water",
+    name: "The Wholesome Kitchen",
     category: "Detox Water",
     description: "Classic combination of fresh lemon and mint infused water.",
     price: 89,
@@ -143062,7 +143062,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7557,
-    name: "Coconut Lemon Detox Water",
+    name: "Maple Leaf Bistro",
     category: "Detox Water",
     description: "Coconut water with fresh lemon slices for a tropical refreshment.",
     price: 129,
@@ -143080,7 +143080,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7558,
-    name: "Pomegranate Detox Water",
+    name: "The Happy Platter",
     category: "Detox Water",
     description: "Pomegranate seeds infused in chilled water with a fruity flavor.",
     price: 119,
@@ -143098,7 +143098,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7559,
-    name: "Peach Ginger Detox Water",
+    name: "Cedar Spoon Restaurant",
     category: "Detox Water",
     description: "Fresh peach slices and ginger infused in light refreshing water.",
     price: 119,
@@ -143116,7 +143116,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7560,
-    name: "Apple Lemon Detox Water",
+    name: "The Good Grain Cafe",
     category: "Detox Water",
     description: "Fresh apple slices and lemon infused in naturally flavored water.",
     price: 99,
@@ -143134,7 +143134,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7561,
-    name: "Cucumber Lemon Detox Water",
+    name: "The Fresh Table",
     category: "Detox Water",
     description: "Cucumber and lemon slices infused in chilled water.",
     price: 89,
@@ -143152,7 +143152,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7562,
-    name: "Rose Lemon Detox Water",
+    name: "Little Leaf Kitchen",
     category: "Detox Water",
     description: "Lemon slices infused with fragrant rose petals in refreshing water.",
     price: 109,
@@ -143170,7 +143170,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7563,
-    name: "Orange Ginger Detox Water",
+    name: "The Culinary Corner",
     category: "Detox Water",
     description: "Orange slices and fresh ginger infused in chilled water.",
     price: 99,
@@ -143188,7 +143188,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7564,
-    name: "Berry Mix Detox Water",
+    name: "Nature’s Basket Cafe",
     category: "Detox Water",
     description: "Mixed strawberries, blueberries and raspberries infused in water.",
     price: 139,
@@ -143206,7 +143206,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7565,
-    name: "Watermelon Lemon Detox Water",
+    name: "The Food Garden",
     category: "Detox Water",
     description: "Watermelon cubes and lemon slices infused in cool water.",
     price: 99,
@@ -143224,7 +143224,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7566,
-    name: "Pineapple Mint Detox Water",
+    name: "Spice Route Kitchen",
     category: "Detox Water",
     description: "Pineapple chunks and mint leaves infused in refreshing water.",
     price: 109,
@@ -143242,7 +143242,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7567,
-    name: "Kiwi Lemon Detox Water",
+    name: "The Cozy Fork",
     category: "Detox Water",
     description: "Kiwi and lemon slices infused in naturally flavored chilled water.",
     price: 119,
@@ -143260,7 +143260,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7568,
-    name: "Cinnamon Lemon Detox Water",
+    name: "Daily Delight Bistro",
     category: "Detox Water",
     description: "Lemon slices and cinnamon sticks infused in refreshing water.",
     price: 99,
@@ -143278,7 +143278,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7569,
-    name: "Mint Lime Detox Water",
+    name: "The Tasty Pantry",
     category: "Detox Water",
     description: "Fresh lime slices and mint leaves infused in chilled water.",
     price: 89,
@@ -143296,7 +143296,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7570,
-    name: "Lime Ginger Detox Water",
+    name: "Blue Plate Kitchen",
     category: "Detox Water",
     description: "Fresh lime and ginger infused water with a refreshing spicy note.",
     price: 99,
@@ -143314,7 +143314,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7571,
-    name: "Lemon Honey Detox Water",
+    name: "The Honest Meal",
     category: "Detox Water",
     description: "Lemon-infused water with a touch of natural honey.",
     price: 109,
@@ -143332,7 +143332,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7572,
-    name: "Cucumber Basil Detox Water",
+    name: "Sunrise Cafe & Kitchen",
     category: "Detox Water",
     description: "Cucumber slices and fresh basil infused in cool water.",
     price: 99,
@@ -143350,7 +143350,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7573,
-    name: "Mango Lemon Detox Water",
+    name: "The Kitchen Collective",
     category: "Detox Water",
     description: "Fresh mango slices and lemon infused in chilled water.",
     price: 119,
@@ -143368,7 +143368,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7574,
-    name: "Apple Mint Detox Water",
+    name: "Flavour House",
     category: "Detox Water",
     description: "Apple slices and mint leaves infused in refreshing water.",
     price: 99,
@@ -143386,7 +143386,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7575,
-    name: "Lemon Cucumber Basil Detox Water",
+    name: "The Green Apron",
     category: "Detox Water",
     description: "A refreshing blend of lemon, cucumber and basil infused water.",
     price: 109,
@@ -143404,7 +143404,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7576,
-    name: "Orange Mint Detox Water",
+    name: "City Spoon Bistro",
     category: "Detox Water",
     description: "Orange slices with fresh mint infused in chilled water.",
     price: 99,
@@ -143422,7 +143422,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7577,
-    name: "Strawberry Mint Detox Water",
+    name: "The Farmhouse Cafe",
     category: "Detox Water",
     description: "Fresh strawberry slices and mint leaves infused in water.",
     price: 119,
@@ -143440,7 +143440,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7578,
-    name: "Pomegranate Lemon Detox Water",
+    name: "Root & Roast Kitchen",
     category: "Detox Water",
     description: "Pomegranate seeds and lemon slices infused in refreshing water.",
     price: 119,
@@ -143458,7 +143458,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7579,
-    name: "Guava Lemon Detox Water",
+    name: "The Gourmet Nest",
     category: "Detox Water",
     description: "Fresh guava slices and lemon infused in chilled water.",
     price: 109,
@@ -143476,7 +143476,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7580,
-    name: "Papaya Mint Detox Water",
+    name: "Urban Harvest Bistro",
     category: "Detox Water",
     description: "Papaya cubes and fresh mint infused in naturally flavored water.",
     price: 99,
@@ -143494,7 +143494,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7581,
-    name: "Lemon Rosemary Detox Water",
+    name: "The Savoury Spoon",
     category: "Detox Water",
     description: "Fresh lemon slices and aromatic rosemary infused in chilled water.",
     price: 109,
@@ -143512,7 +143512,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7582,
-    name: "Pear Ginger Detox Water",
+    name: "Fresh Roots Cafe",
     category: "Detox Water",
     description: "Pear slices and ginger infused in refreshing chilled water.",
     price: 109,
@@ -143530,7 +143530,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7583,
-    name: "Mixed Citrus Detox Water",
+    name: "The Platter Room",
     category: "Detox Water",
     description: "Orange, lemon and lime slices infused in cool refreshing water.",
     price: 119,
@@ -143548,7 +143548,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7584,
-    name: "Lemon Turmeric Detox Water",
+    name: "The Kitchen Story",
     category: "Detox Water",
     description: "Fresh lemon infused water with a mild turmeric flavor.",
     price: 99,
@@ -143566,7 +143566,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7585,
-    name: "Cucumber Ginger Detox Water",
+    name: "The Meal Market",
     category: "Detox Water",
     description: "Cucumber slices and ginger infused in cool refreshing water.",
     price: 99,
@@ -143584,7 +143584,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7586,
-    name: "Lemon Lavender Detox Water",
+    name: "The Corner Bistro",
     category: "Detox Water",
     description: "Fresh lemon slices infused with aromatic lavender in chilled water.",
     price: 119,
@@ -143602,7 +143602,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7587,
-    name: "Melon Mint Detox Water",
+    name: "The Modern Tiffin",
     category: "Detox Water",
     description: "Fresh melon cubes and mint leaves infused in chilled water.",
     price: 99,
@@ -143620,7 +143620,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7588,
-    name: "Chia Lemon Detox Water",
+    name: "The Food Loft",
     category: "Detox Water",
     description: "Lemon-infused water with soaked chia seeds for added texture.",
     price: 119,
@@ -143638,7 +143638,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7589,
-    name: "Chia Mint Detox Water",
+    name: "The Signature Kitchen",
     category: "Detox Water",
     description: "Soaked chia seeds and fresh mint infused in refreshing water.",
     price: 119,
@@ -143656,7 +143656,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7590,
-    name: "Tropical Detox Water",
+    name: "The Good Food Company",
     category: "Detox Water",
     description: "Pineapple, mango and orange slices infused in tropical flavored water.",
     price: 129,
@@ -143674,7 +143674,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7591,
-    name: "Rainbow Fruit Detox Water",
+    name: "The Village Table",
     category: "Detox Water",
     description: "A colorful infusion of assorted fresh fruits in chilled water.",
     price: 139,
@@ -143692,7 +143692,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7592,
-    name: "Ultimate Wellness Detox Water",
+    name: "The Premium Plate",
     category: "Detox Water",
     description: "A refreshing blend of lemon, cucumber, mint, ginger and fresh fruit.",
     price: 149,
@@ -146410,7 +146410,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
    {
     id: 7743,
-    name: "Classic Creamy Hummus Plate",
+    name: "The Urban Spoon",
     category: "Hummus Plate",
     description: "Smooth traditional chickpea hummus drizzled with extra virgin olive oil and served with warm pita bread.",
     price: 149,
@@ -146428,7 +146428,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7744,
-    name: "Roasted Garlic Hummus Plate",
+    name: "Fresh Fork Kitchen",
     category: "Hummus Plate",
     description: "Creamy chickpea hummus blended with roasted garlic, olive oil and fresh herbs.",
     price: 169,
@@ -146446,7 +146446,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7745,
-    name: "Classic Hummus Pita Plate",
+    name: "Green Garden Cafe",
     category: "Hummus Plate",
     description: "Freshly prepared hummus served with toasted whole wheat pita wedges and cucumber slices.",
     price: 179,
@@ -146464,7 +146464,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7746,
-    name: "Spicy Harissa Hummus Plate",
+    name: "Harvest Table Bistro",
     category: "Hummus Plate",
     description: "Silky hummus infused with spicy harissa paste, paprika and a touch of lemon.",
     price: 189,
@@ -146482,7 +146482,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7747,
-    name: "Roasted Red Pepper Hummus Plate",
+    name: "The Daily Plate",
     category: "Hummus Plate",
     description: "Creamy hummus blended with roasted red peppers and topped with fresh parsley.",
     price: 179,
@@ -146500,7 +146500,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7748,
-    name: "Beetroot Hummus Plate",
+    name: "Olive & Thyme Kitchen",
     category: "Hummus Plate",
     description: "Vibrant beetroot hummus served with crunchy carrots, cucumber and toasted seeds.",
     price: 189,
@@ -146518,7 +146518,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7749,
-    name: "Avocado Hummus Plate",
+    name: "The Nourish House",
     category: "Hummus Plate",
     description: "A creamy combination of chickpea hummus and ripe avocado topped with lemon and herbs.",
     price: 219,
@@ -146536,7 +146536,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7750,
-    name: "Lemon Herb Hummus Plate",
+    name: "Golden Ladle Cafe",
     category: "Hummus Plate",
     description: "Fresh lemon-infused hummus topped with chopped parsley, mint and extra virgin olive oil.",
     price: 159,
@@ -146554,7 +146554,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7751,
-    name: "Pesto Hummus Plate",
+    name: "Flavour Junction",
     category: "Hummus Plate",
     description: "Smooth chickpea hummus swirled with fresh basil pesto and served with toasted bread.",
     price: 199,
@@ -146572,7 +146572,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7752,
-    name: "Black Olive Hummus Plate",
+    name: "The Food Studio",
     category: "Hummus Plate",
     description: "Classic hummus topped with sliced black olives, olive oil and aromatic Mediterranean herbs.",
     price: 189,
@@ -146590,7 +146590,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7753,
-    name: "Sun-Dried Tomato Hummus Plate",
+    name: "Urban Feast Kitchen",
     category: "Hummus Plate",
     description: "Rich chickpea hummus blended with sun-dried tomatoes and topped with fresh basil.",
     price: 199,
@@ -146608,7 +146608,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7754,
-    name: "Cumin Spiced Hummus Plate",
+    name: "The Rustic Bowl",
     category: "Hummus Plate",
     description: "Traditional hummus seasoned with roasted cumin, coriander and a squeeze of fresh lemon.",
     price: 159,
@@ -146626,7 +146626,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7755,
-    name: "Za'atar Hummus Plate",
+    name: "Saffron Street Cafe",
     category: "Hummus Plate",
     description: "Creamy hummus finished with aromatic za'atar seasoning, sesame seeds and olive oil.",
     price: 189,
@@ -146644,7 +146644,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7756,
-    name: "Chilli Garlic Hummus Plate",
+    name: "The Wholesome Kitchen",
     category: "Hummus Plate",
     description: "Smooth hummus with roasted garlic, red chilli flakes and a drizzle of olive oil.",
     price: 169,
@@ -146662,7 +146662,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7757,
-    name: "Tandoori Hummus Plate",
+    name: "Maple Leaf Bistro",
     category: "Hummus Plate",
     description: "A fusion hummus plate seasoned with smoky tandoori spices and served with fresh vegetables.",
     price: 189,
@@ -146680,7 +146680,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7758,
-    name: "Peri Peri Hummus Plate",
+    name: "The Happy Platter",
     category: "Hummus Plate",
     description: "Creamy chickpea hummus topped with fiery peri peri seasoning and fresh coriander.",
     price: 179,
@@ -146698,7 +146698,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7759,
-    name: "Spinach Hummus Plate",
+    name: "Cedar Spoon Restaurant",
     category: "Hummus Plate",
     description: "Fresh spinach blended into creamy hummus and served with crunchy vegetable sticks.",
     price: 179,
@@ -146716,7 +146716,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7760,
-    name: "Caramelized Onion Hummus Plate",
+    name: "The Good Grain Cafe",
     category: "Hummus Plate",
     description: "Silky hummus topped with slowly caramelized onions, herbs and extra virgin olive oil.",
     price: 189,
@@ -146734,7 +146734,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7761,
-    name: "Mushroom Hummus Plate",
+    name: "The Fresh Table",
     category: "Hummus Plate",
     description: "Classic hummus topped with sautéed mushrooms, cracked black pepper and fresh parsley.",
     price: 209,
@@ -146752,7 +146752,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7762,
-    name: "Grilled Vegetable Hummus Plate",
+    name: "Little Leaf Kitchen",
     category: "Hummus Plate",
     description: "Creamy hummus served with grilled zucchini, bell peppers, carrots and seasonal vegetables.",
     price: 219,
@@ -146770,7 +146770,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7763,
-    name: "Cucumber Carrot Hummus Plate",
+    name: "The Culinary Corner",
     category: "Hummus Plate",
     description: "Fresh hummus accompanied by crisp cucumber and carrot sticks for a light snack.",
     price: 149,
@@ -146788,7 +146788,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7764,
-    name: "Hummus Falafel Plate",
+    name: "Nature’s Basket Cafe",
     category: "Hummus Plate",
     description: "Creamy hummus paired with crisp falafel balls, fresh salad and tahini dressing.",
     price: 229,
@@ -146806,7 +146806,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7765,
-    name: "Hummus Quinoa Bowl Plate",
+    name: "The Food Garden",
     category: "Hummus Plate",
     description: "A wholesome plate of creamy hummus, cooked quinoa, cucumber, tomatoes and herbs.",
     price: 239,
@@ -146824,7 +146824,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7766,
-    name: "Hummus Chickpea Salad Plate",
+    name: "Spice Route Kitchen",
     category: "Hummus Plate",
     description: "Protein-rich chickpea salad served alongside smooth hummus and fresh lemon dressing.",
     price: 219,
@@ -146842,7 +146842,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7767,
-    name: "Hummus Garden Salad Plate",
+    name: "The Cozy Fork",
     category: "Hummus Plate",
     description: "Fresh garden greens, tomatoes, cucumber and olives served with a generous hummus dip.",
     price: 199,
@@ -146860,7 +146860,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7768,
-    name: "Hummus Greek Salad Plate",
+    name: "Daily Delight Bistro",
     category: "Hummus Plate",
     description: "Mediterranean hummus served with Greek salad, feta cheese, olives and cucumber.",
     price: 229,
@@ -146878,7 +146878,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7769,
-    name: "Hummus Beetroot Salad Plate",
+    name: "The Tasty Pantry",
     category: "Hummus Plate",
     description: "A colorful combination of beetroot hummus, fresh beetroot slices, greens and toasted seeds.",
     price: 209,
@@ -146896,7 +146896,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7770,
-    name: "Hummus Avocado Toast Plate",
+    name: "Blue Plate Kitchen",
     category: "Hummus Plate",
     description: "Toasted whole grain bread topped with creamy hummus, avocado slices and chilli flakes.",
     price: 219,
@@ -146914,7 +146914,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7771,
-    name: "Hummus Whole Wheat Pita Plate",
+    name: "The Honest Meal",
     category: "Hummus Plate",
     description: "Traditional hummus served with whole wheat pita bread, lettuce and fresh tomato salad.",
     price: 189,
@@ -146932,7 +146932,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7772,
-    name: "Hummus Sweet Corn Plate",
+    name: "Sunrise Cafe & Kitchen",
     category: "Hummus Plate",
     description: "Creamy hummus topped with sweet corn kernels, paprika and fresh coriander.",
     price: 179,
@@ -146950,7 +146950,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7773,
-    name: "Hummus Broccoli Plate",
+    name: "The Kitchen Collective",
     category: "Hummus Plate",
     description: "Smooth hummus served with steamed broccoli florets, lemon and cracked black pepper.",
     price: 189,
@@ -146968,7 +146968,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7774,
-    name: "Hummus Edamame Plate",
+    name: "Flavour House",
     category: "Hummus Plate",
     description: "A protein-focused plate of creamy hummus, tender edamame beans and fresh vegetables.",
     price: 229,
@@ -146986,7 +146986,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7775,
-    name: "Hummus Sprouts Plate",
+    name: "The Green Apron",
     category: "Hummus Plate",
     description: "Fresh hummus paired with crunchy mixed sprouts, cucumber, tomatoes and lemon dressing.",
     price: 179,
@@ -147004,7 +147004,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7776,
-    name: "Hummus Paneer Tikka Plate",
+    name: "City Spoon Bistro",
     category: "Hummus Plate",
     description: "A fusion platter of creamy hummus, grilled paneer tikka and fresh crunchy salad.",
     price: 249,
@@ -147022,7 +147022,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7777,
-    name: "Hummus Roasted Cauliflower Plate",
+    name: "The Farmhouse Cafe",
     category: "Hummus Plate",
     description: "Creamy hummus topped with roasted cauliflower florets, cumin and fresh parsley.",
     price: 199,
@@ -147040,7 +147040,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7778,
-    name: "Hummus Roasted Pumpkin Plate",
+    name: "Root & Roast Kitchen",
     category: "Hummus Plate",
     description: "Smooth hummus served with roasted pumpkin cubes, pumpkin seeds and aromatic herbs.",
     price: 199,
@@ -147058,7 +147058,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7779,
-    name: "Hummus Zucchini Plate",
+    name: "The Gourmet Nest",
     category: "Hummus Plate",
     description: "Classic chickpea hummus accompanied by grilled zucchini ribbons and fresh herbs.",
     price: 189,
@@ -147076,7 +147076,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7780,
-    name: "Hummus Asparagus Plate",
+    name: "Urban Harvest Bistro",
     category: "Hummus Plate",
     description: "Silky hummus served with tender grilled asparagus, lemon zest and black pepper.",
     price: 229,
@@ -147094,7 +147094,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7781,
-    name: "Hummus Kale Salad Plate",
+    name: "The Savoury Spoon",
     category: "Hummus Plate",
     description: "Fresh kale leaves tossed with lemon dressing and served with a generous hummus portion.",
     price: 209,
@@ -147112,7 +147112,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7782,
-    name: "Hummus Quinoa Falafel Plate",
+    name: "Fresh Roots Cafe",
     category: "Hummus Plate",
     description: "A hearty Mediterranean platter with hummus, quinoa, baked falafel and fresh vegetables.",
     price: 259,
@@ -147130,7 +147130,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7783,
-    name: "Hummus Lentil Salad Plate",
+    name: "The Platter Room",
     category: "Hummus Plate",
     description: "Creamy hummus served with seasoned lentils, fresh greens and a light lemon dressing.",
     price: 219,
@@ -147148,7 +147148,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7784,
-    name: "Hummus Mediterranean Mezze Plate",
+    name: "The Kitchen Story",
     category: "Hummus Plate",
     description: "A premium mezze platter featuring hummus, olives, pita, cucumber, tomatoes and pickled vegetables.",
     price: 279,
@@ -147166,7 +147166,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7785,
-    name: "Hummus Tahini Sesame Plate",
+    name: "The Meal Market",
     category: "Hummus Plate",
     description: "Classic hummus enriched with tahini and topped with toasted sesame seeds and olive oil.",
     price: 179,
@@ -147184,7 +147184,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7786,
-    name: "Hummus Pomegranate Plate",
+    name: "The Corner Bistro",
     category: "Hummus Plate",
     description: "Creamy hummus topped with juicy pomegranate seeds, mint leaves and toasted nuts.",
     price: 199,
@@ -147202,7 +147202,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7787,
-    name: "Hummus Walnut Herb Plate",
+    name: "The Modern Tiffin",
     category: "Hummus Plate",
     description: "Traditional hummus garnished with crunchy walnuts, parsley and a drizzle of olive oil.",
     price: 209,
@@ -147220,7 +147220,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7788,
-    name: "Hummus Cucumber Mint Plate",
+    name: "The Food Loft",
     category: "Hummus Plate",
     description: "Refreshing hummus served with cucumber ribbons, mint leaves and a light lemon dressing.",
     price: 169,
@@ -147238,7 +147238,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7789,
-    name: "Hummus Tomato Basil Plate",
+    name: "The Signature Kitchen",
     category: "Hummus Plate",
     description: "Creamy hummus topped with fresh cherry tomatoes, basil leaves and cracked black pepper.",
     price: 179,
@@ -147256,7 +147256,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7790,
-    name: "Hummus Stuffed Pita Plate",
+    name: "The Good Food Company",
     category: "Hummus Plate",
     description: "Warm whole wheat pita pockets filled with creamy hummus, lettuce and fresh vegetables.",
     price: 199,
@@ -147274,7 +147274,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7791,
-    name: "Ultimate Protein Hummus Plate",
+    name: "The Village Table",
     category: "Hummus Plate",
     description: "A satisfying protein-rich platter of hummus, chickpeas, edamame, quinoa and fresh greens.",
     price: 269,
@@ -147292,7 +147292,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7792,
-    name: "Ultimate Mediterranean Hummus Platter",
+    name: "The Premium Plate",
     category: "Hummus Plate",
     description: "A premium Mediterranean platter with creamy hummus, falafel, pita bread, olives, grilled vegetables and tahini.",
     price: 299,
@@ -147310,7 +147310,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7793,
-    name: "Classic Cucumber Sushi Roll",
+    name: "The Urban Spoon",
     category: "Sushi Rolls",
     description: "Fresh cucumber wrapped with seasoned sushi rice and crisp nori for a light Japanese classic.",
     price: 149,
@@ -147328,7 +147328,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7794,
-    name: "Avocado Sushi Roll",
+    name: "Fresh Fork Kitchen",
     category: "Sushi Rolls",
     description: "Creamy avocado slices rolled with sushi rice and nori, finished with toasted sesame seeds.",
     price: 189,
@@ -147346,7 +147346,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7795,
-    name: "Carrot Cucumber Sushi Roll",
+    name: "Green Garden Cafe",
     category: "Sushi Rolls",
     description: "Crunchy carrot and cucumber rolled in seasoned rice and nori for a refreshing bite.",
     price: 159,
@@ -147364,7 +147364,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7796,
-    name: "Avocado Cucumber Sushi Roll",
+    name: "Harvest Table Bistro",
     category: "Sushi Rolls",
     description: "A fresh combination of avocado and cucumber wrapped in sushi rice and nori.",
     price: 199,
@@ -147382,7 +147382,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7797,
-    name: "Sweet Potato Sushi Roll",
+    name: "The Daily Plate",
     category: "Sushi Rolls",
     description: "Roasted sweet potato with sushi rice and nori, offering a naturally sweet and savory flavor.",
     price: 179,
@@ -147400,7 +147400,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7798,
-    name: "Mango Avocado Sushi Roll",
+    name: "Olive & Thyme Kitchen",
     category: "Sushi Rolls",
     description: "Ripe mango and creamy avocado rolled together with seasoned sushi rice and nori.",
     price: 219,
@@ -147418,7 +147418,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7799,
-    name: "Asparagus Sushi Roll",
+    name: "The Nourish House",
     category: "Sushi Rolls",
     description: "Tender asparagus spears wrapped with sushi rice and nori, finished with sesame.",
     price: 189,
@@ -147436,7 +147436,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7800,
-    name: "Rainbow Vegetable Sushi Roll",
+    name: "Golden Ladle Cafe",
     category: "Sushi Rolls",
     description: "Colorful cucumber, carrot, avocado and bell pepper wrapped in sushi rice and nori.",
     price: 219,
@@ -147454,7 +147454,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7801,
-    name: "Spinach Avocado Sushi Roll",
+    name: "Flavour Junction",
     category: "Sushi Rolls",
     description: "Fresh spinach leaves and avocado wrapped in seasoned rice with a light sesame topping.",
     price: 199,
@@ -147472,7 +147472,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7802,
-    name: "Bell Pepper Sushi Roll",
+    name: "The Food Studio",
     category: "Sushi Rolls",
     description: "Crunchy red and yellow bell peppers rolled with sushi rice and crisp seaweed.",
     price: 169,
@@ -147490,7 +147490,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7803,
-    name: "Mushroom Sushi Roll",
+    name: "Urban Feast Kitchen",
     category: "Sushi Rolls",
     description: "Seasoned mushrooms rolled with sushi rice and nori for a savory Japanese-inspired bite.",
     price: 189,
@@ -147508,7 +147508,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7804,
-    name: "Shiitake Mushroom Sushi Roll",
+    name: "The Rustic Bowl",
     category: "Sushi Rolls",
     description: "Savory shiitake mushrooms combined with sushi rice, nori and a hint of soy seasoning.",
     price: 219,
@@ -147526,7 +147526,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7805,
-    name: "Tofu Avocado Sushi Roll",
+    name: "Saffron Street Cafe",
     category: "Sushi Rolls",
     description: "Soft tofu and avocado rolled with sushi rice and nori for a plant-based combination.",
     price: 219,
@@ -147544,7 +147544,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7806,
-    name: "Crispy Tofu Sushi Roll",
+    name: "The Wholesome Kitchen",
     category: "Sushi Rolls",
     description: "Lightly crisped tofu with cucumber and sushi rice wrapped in nori.",
     price: 219,
@@ -147562,7 +147562,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7807,
-    name: "Edamame Sushi Roll",
+    name: "Maple Leaf Bistro",
     category: "Sushi Rolls",
     description: "Tender edamame beans and fresh cucumber rolled with sushi rice and seaweed.",
     price: 199,
@@ -147580,7 +147580,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7808,
-    name: "Kimchi Vegetable Sushi Roll",
+    name: "The Happy Platter",
     category: "Sushi Rolls",
     description: "A fusion roll filled with crunchy vegetables and tangy kimchi wrapped in sushi rice.",
     price: 209,
@@ -147598,7 +147598,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7809,
-    name: "Spicy Tofu Sushi Roll",
+    name: "Cedar Spoon Restaurant",
     category: "Sushi Rolls",
     description: "Tofu tossed in a mildly spicy sauce with cucumber and sushi rice inside nori.",
     price: 219,
@@ -147616,7 +147616,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7810,
-    name: "Grilled Zucchini Sushi Roll",
+    name: "The Good Grain Cafe",
     category: "Sushi Rolls",
     description: "Grilled zucchini strips and fresh greens rolled with seasoned rice and nori.",
     price: 189,
@@ -147634,7 +147634,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7811,
-    name: "Pumpkin Tempura Sushi Roll",
+    name: "The Fresh Table",
     category: "Sushi Rolls",
     description: "Crisp pumpkin tempura paired with cucumber and sushi rice in a seaweed wrap.",
     price: 219,
@@ -147652,7 +147652,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7812,
-    name: "Mango Cucumber Sushi Roll",
+    name: "Little Leaf Kitchen",
     category: "Sushi Rolls",
     description: "Sweet mango and crunchy cucumber rolled together with sushi rice and nori.",
     price: 199,
@@ -147670,7 +147670,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7813,
-    name: "Pineapple Avocado Sushi Roll",
+    name: "The Culinary Corner",
     category: "Sushi Rolls",
     description: "Juicy pineapple and creamy avocado rolled with seasoned rice for a tropical fusion flavor.",
     price: 219,
@@ -147688,7 +147688,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7814,
-    name: "Sesame Spinach Sushi Roll",
+    name: "Nature’s Basket Cafe",
     category: "Sushi Rolls",
     description: "Fresh spinach and toasted sesame seeds wrapped in sushi rice and nori.",
     price: 179,
@@ -147706,7 +147706,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7815,
-    name: "Broccoli Avocado Sushi Roll",
+    name: "The Food Garden",
     category: "Sushi Rolls",
     description: "Tender broccoli and creamy avocado rolled with sushi rice and crisp nori.",
     price: 209,
@@ -147724,7 +147724,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7816,
-    name: "Rainbow Avocado Sushi Roll",
+    name: "Spice Route Kitchen",
     category: "Sushi Rolls",
     description: "A colorful roll layered with avocado, carrot, cucumber and bell pepper over sushi rice.",
     price: 229,
@@ -147742,7 +147742,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7817,
-    name: "Sesame Tofu Sushi Roll",
+    name: "The Cozy Fork",
     category: "Sushi Rolls",
     description: "Marinated tofu and cucumber rolled in seasoned rice and topped with toasted sesame.",
     price: 219,
@@ -147760,7 +147760,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7818,
-    name: "Chickpea Salad Sushi Roll",
+    name: "Daily Delight Bistro",
     category: "Sushi Rolls",
     description: "Seasoned chickpeas, cucumber and fresh greens wrapped with sushi rice and nori.",
     price: 199,
@@ -147778,7 +147778,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7819,
-    name: "Quinoa Vegetable Sushi Roll",
+    name: "The Tasty Pantry",
     category: "Sushi Rolls",
     description: "A fusion roll featuring quinoa, cucumber, carrot and avocado wrapped in nori.",
     price: 219,
@@ -147796,7 +147796,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7820,
-    name: "Brown Rice Avocado Sushi Roll",
+    name: "Blue Plate Kitchen",
     category: "Sushi Rolls",
     description: "Nutty brown rice wrapped around avocado and cucumber for a wholesome sushi option.",
     price: 219,
@@ -147814,7 +147814,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7821,
-    name: "Brown Rice Tofu Sushi Roll",
+    name: "The Honest Meal",
     category: "Sushi Rolls",
     description: "Brown rice, marinated tofu and crisp vegetables wrapped in nori for a filling plant-based roll.",
     price: 239,
@@ -147832,7 +147832,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7822,
-    name: "Nori Wrapped Vegetable Sushi Roll",
+    name: "Sunrise Cafe & Kitchen",
     category: "Sushi Rolls",
     description: "Fresh seasonal vegetables and seasoned rice tightly wrapped in crisp nori sheets.",
     price: 179,
@@ -147850,7 +147850,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7823,
-    name: "Spicy Avocado Sushi Roll",
+    name: "The Kitchen Collective",
     category: "Sushi Rolls",
     description: "Creamy avocado with a gentle chilli dressing rolled with rice and nori.",
     price: 199,
@@ -147868,7 +147868,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7824,
-    name: "Wasabi Cucumber Sushi Roll",
+    name: "Flavour House",
     category: "Sushi Rolls",
     description: "Crisp cucumber rolled with seasoned sushi rice and a light wasabi finish.",
     price: 169,
@@ -147886,7 +147886,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7825,
-    name: "Sesame Carrot Sushi Roll",
+    name: "The Green Apron",
     category: "Sushi Rolls",
     description: "Shredded carrot and toasted sesame seeds rolled in seasoned sushi rice and nori.",
     price: 159,
@@ -147904,7 +147904,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7826,
-    name: "Grilled Paneer Sushi Roll",
+    name: "City Spoon Bistro",
     category: "Sushi Rolls",
     description: "Grilled paneer strips, cucumber and rice wrapped in nori with a mild sesame dressing.",
     price: 229,
@@ -147922,7 +147922,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7827,
-    name: "Teriyaki Tofu Sushi Roll",
+    name: "The Farmhouse Cafe",
     category: "Sushi Rolls",
     description: "Tofu glazed with a light teriyaki-style sauce and rolled with cucumber and sushi rice.",
     price: 229,
@@ -147940,7 +147940,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7828,
-    name: "Grilled Vegetable Sushi Roll",
+    name: "Root & Roast Kitchen",
     category: "Sushi Rolls",
     description: "Grilled zucchini, peppers and carrots rolled with sushi rice and nori.",
     price: 199,
@@ -147958,7 +147958,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7829,
-    name: "Cauliflower Rice Sushi Roll",
+    name: "The Gourmet Nest",
     category: "Sushi Rolls",
     description: "A lighter sushi-style roll using cauliflower rice with avocado and cucumber in nori.",
     price: 219,
@@ -147976,7 +147976,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7830,
-    name: "Brown Rice Rainbow Sushi Roll",
+    name: "Urban Harvest Bistro",
     category: "Sushi Rolls",
     description: "Brown rice rolled with colorful vegetables, avocado and nori for a wholesome meal.",
     price: 229,
@@ -147994,7 +147994,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7831,
-    name: "Salmon Avocado Sushi Roll",
+    name: "The Savoury Spoon",
     category: "Sushi Rolls",
     description: "Fresh salmon and creamy avocado rolled with seasoned sushi rice and nori.",
     price: 299,
@@ -148012,7 +148012,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7832,
-    name: "Smoked Salmon Cucumber Sushi Roll",
+    name: "Fresh Roots Cafe",
     category: "Sushi Rolls",
     description: "Smoked salmon and crunchy cucumber wrapped in sushi rice with a touch of sesame.",
     price: 319,
@@ -148030,7 +148030,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7833,
-    name: "Tuna Cucumber Sushi Roll",
+    name: "The Platter Room",
     category: "Sushi Rolls",
     description: "Seasoned tuna and fresh cucumber rolled with sushi rice and crisp nori.",
     price: 289,
@@ -148048,7 +148048,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7834,
-    name: "Spicy Tuna Sushi Roll",
+    name: "The Kitchen Story",
     category: "Sushi Rolls",
     description: "Tuna mixed with a mild spicy dressing and rolled with seasoned rice and nori.",
     price: 299,
@@ -148066,7 +148066,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7835,
-    name: "Prawn Avocado Sushi Roll",
+    name: "The Meal Market",
     category: "Sushi Rolls",
     description: "Tender cooked prawns paired with avocado and cucumber in a classic nori roll.",
     price: 309,
@@ -148084,7 +148084,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7836,
-    name: "California Crab Sushi Roll",
+    name: "The Corner Bistro",
     category: "Sushi Rolls",
     description: "Crab-style filling with avocado and cucumber wrapped in sushi rice and nori.",
     price: 289,
@@ -148102,7 +148102,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7837,
-    name: "Grilled Salmon Sushi Roll",
+    name: "The Modern Tiffin",
     category: "Sushi Rolls",
     description: "Grilled salmon flakes rolled with cucumber and sushi rice for a flavorful seafood option.",
     price: 329,
@@ -148120,7 +148120,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7838,
-    name: "Ebi Tempura Sushi Roll",
+    name: "The Food Loft",
     category: "Sushi Rolls",
     description: "Crispy cooked prawn tempura rolled with cucumber, sushi rice and nori.",
     price: 319,
@@ -148138,7 +148138,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7839,
-    name: "Chicken Teriyaki Sushi Roll",
+    name: "The Signature Kitchen",
     category: "Sushi Rolls",
     description: "Tender teriyaki-style chicken with cucumber and rice wrapped in crisp nori.",
     price: 279,
@@ -148156,7 +148156,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7840,
-    name: "Grilled Chicken Avocado Sushi Roll",
+    name: "The Good Food Company",
     category: "Sushi Rolls",
     description: "Grilled chicken strips and creamy avocado rolled with sushi rice and nori.",
     price: 299,
@@ -148174,7 +148174,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7841,
-    name: "Spicy Salmon Rainbow Sushi Roll",
+    name: "The Village Table",
     category: "Sushi Rolls",
     description: "Salmon with avocado and colorful vegetable toppings rolled in seasoned sushi rice.",
     price: 349,
@@ -148192,7 +148192,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7842,
-    name: "Ultimate Mixed Sushi Platter",
+    name: "The Premium Plate",
     category: "Sushi Rolls",
     description: "A premium assortment of vegetable, tofu, salmon and tuna sushi rolls served with ginger and wasabi.",
     price: 399,
@@ -148210,7 +148210,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7843,
-    name: "Classic Vegetable Tofu Stir Fry",
+    name: "The Urban Spoon",
     category: "Tofu Stir Fry",
     description: "Golden tofu cubes tossed with fresh broccoli, carrots, bell peppers and a light savory sauce.",
     price: 189,
@@ -148228,7 +148228,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7844,
-    name: "Garlic Ginger Tofu Stir Fry",
+    name: "Fresh Fork Kitchen",
     category: "Tofu Stir Fry",
     description: "Crisp tofu sautéed with fresh garlic, ginger and colorful vegetables in a light soy-based sauce.",
     price: 199,
@@ -148246,7 +148246,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7845,
-    name: "Broccoli Tofu Stir Fry",
+    name: "Green Garden Cafe",
     category: "Tofu Stir Fry",
     description: "Tender broccoli florets and golden tofu tossed with garlic, sesame and a mild seasoning.",
     price: 209,
@@ -148264,7 +148264,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7846,
-    name: "Spicy Chilli Tofu Stir Fry",
+    name: "Harvest Table Bistro",
     category: "Tofu Stir Fry",
     description: "Tofu cubes tossed with red chillies, peppers, onions and a spicy Asian-inspired sauce.",
     price: 199,
@@ -148282,7 +148282,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7847,
-    name: "Teriyaki Tofu Stir Fry",
+    name: "The Daily Plate",
     category: "Tofu Stir Fry",
     description: "Pan-seared tofu glazed with teriyaki-style sauce and served with crisp seasonal vegetables.",
     price: 229,
@@ -148300,7 +148300,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7848,
-    name: "Sesame Tofu Stir Fry",
+    name: "Olive & Thyme Kitchen",
     category: "Tofu Stir Fry",
     description: "Golden tofu tossed with toasted sesame seeds, crunchy vegetables and a light sesame dressing.",
     price: 209,
@@ -148318,7 +148318,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7849,
-    name: "Thai Basil Tofu Stir Fry",
+    name: "The Nourish House",
     category: "Tofu Stir Fry",
     description: "Tofu stir-fried with fragrant Thai basil, garlic, peppers and a savory sauce.",
     price: 219,
@@ -148336,7 +148336,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7850,
-    name: "Mushroom Tofu Stir Fry",
+    name: "Golden Ladle Cafe",
     category: "Tofu Stir Fry",
     description: "Soft tofu and sautéed mushrooms tossed with spring onions, garlic and cracked black pepper.",
     price: 219,
@@ -148354,7 +148354,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7851,
-    name: "Sweet Chilli Tofu Stir Fry",
+    name: "Flavour Junction",
     category: "Tofu Stir Fry",
     description: "Golden tofu coated in a balanced sweet chilli sauce with crunchy bell peppers and onions.",
     price: 209,
@@ -148372,7 +148372,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7852,
-    name: "Lemon Pepper Tofu Stir Fry",
+    name: "The Food Studio",
     category: "Tofu Stir Fry",
     description: "Tofu and fresh vegetables tossed with lemon juice, cracked pepper and aromatic herbs.",
     price: 199,
@@ -148390,7 +148390,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7853,
-    name: "Tofu Bell Pepper Stir Fry",
+    name: "Urban Feast Kitchen",
     category: "Tofu Stir Fry",
     description: "Tofu cubes stir-fried with red, yellow and green bell peppers in a light savory sauce.",
     price: 189,
@@ -148408,7 +148408,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7854,
-    name: "Zucchini Tofu Stir Fry",
+    name: "The Rustic Bowl",
     category: "Tofu Stir Fry",
     description: "Tender zucchini and golden tofu sautéed with garlic, herbs and a touch of black pepper.",
     price: 199,
@@ -148426,7 +148426,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7855,
-    name: "Baby Corn Tofu Stir Fry",
+    name: "Saffron Street Cafe",
     category: "Tofu Stir Fry",
     description: "Golden tofu and tender baby corn tossed with spring onions and a mild Asian sauce.",
     price: 209,
@@ -148444,7 +148444,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7856,
-    name: "Thai Red Curry Tofu Stir Fry",
+    name: "The Wholesome Kitchen",
     category: "Tofu Stir Fry",
     description: "Tofu and vegetables tossed in a fragrant Thai red curry-inspired sauce.",
     price: 239,
@@ -148462,7 +148462,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7857,
-    name: "Thai Green Curry Tofu Stir Fry",
+    name: "Maple Leaf Bistro",
     category: "Tofu Stir Fry",
     description: "Tofu cubes and crisp vegetables tossed with aromatic Thai green curry seasoning.",
     price: 239,
@@ -148480,7 +148480,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7858,
-    name: "Peanut Sauce Tofu Stir Fry",
+    name: "The Happy Platter",
     category: "Tofu Stir Fry",
     description: "Tofu and vegetables coated with creamy peanut sauce and finished with toasted sesame.",
     price: 229,
@@ -148498,7 +148498,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7859,
-    name: "Coconut Tofu Stir Fry",
+    name: "Cedar Spoon Restaurant",
     category: "Tofu Stir Fry",
     description: "Tofu and seasonal vegetables sautéed with a mild coconut sauce and fresh coriander.",
     price: 219,
@@ -148516,7 +148516,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7860,
-    name: "Schezwan Tofu Stir Fry",
+    name: "The Good Grain Cafe",
     category: "Tofu Stir Fry",
     description: "Tofu tossed with spicy Schezwan sauce, crunchy vegetables and fresh spring onions.",
     price: 209,
@@ -148534,7 +148534,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7861,
-    name: "Black Pepper Tofu Stir Fry",
+    name: "The Fresh Table",
     category: "Tofu Stir Fry",
     description: "Crisp tofu tossed with black pepper, onions, peppers and a light savory glaze.",
     price: 199,
@@ -148552,7 +148552,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7862,
-    name: "Orange Sesame Tofu Stir Fry",
+    name: "Little Leaf Kitchen",
     category: "Tofu Stir Fry",
     description: "Golden tofu coated in a citrus-orange sauce with sesame seeds and colorful vegetables.",
     price: 229,
@@ -148570,7 +148570,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7863,
-    name: "Pineapple Tofu Stir Fry",
+    name: "The Culinary Corner",
     category: "Tofu Stir Fry",
     description: "Tofu, pineapple chunks and bell peppers tossed in a tangy sweet-and-sour sauce.",
     price: 219,
@@ -148588,7 +148588,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7864,
-    name: "Cashew Tofu Stir Fry",
+    name: "Nature’s Basket Cafe",
     category: "Tofu Stir Fry",
     description: "Golden tofu and crunchy cashews stir-fried with broccoli, carrots and a light sauce.",
     price: 249,
@@ -148606,7 +148606,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7865,
-    name: "Edamame Tofu Stir Fry",
+    name: "The Food Garden",
     category: "Tofu Stir Fry",
     description: "Protein-rich tofu and edamame beans tossed with garlic, sesame and fresh vegetables.",
     price: 239,
@@ -148624,7 +148624,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7866,
-    name: "Quinoa Tofu Stir Fry",
+    name: "Spice Route Kitchen",
     category: "Tofu Stir Fry",
     description: "Golden tofu and colorful vegetables served with fluffy quinoa and a light ginger dressing.",
     price: 249,
@@ -148642,7 +148642,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7867,
-    name: "Brown Rice Tofu Stir Fry",
+    name: "The Cozy Fork",
     category: "Tofu Stir Fry",
     description: "Tofu and fresh vegetables served over nutty brown rice with a mild garlic soy dressing.",
     price: 239,
@@ -148660,7 +148660,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7868,
-    name: "Cauliflower Rice Tofu Stir Fry",
+    name: "Daily Delight Bistro",
     category: "Tofu Stir Fry",
     description: "Tofu and crisp vegetables tossed with cauliflower rice for a lighter stir-fry meal.",
     price: 229,
@@ -148678,7 +148678,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7869,
-    name: "Noodle Tofu Stir Fry",
+    name: "The Tasty Pantry",
     category: "Tofu Stir Fry",
     description: "Tofu cubes and crunchy vegetables tossed with noodles in a light Asian-style sauce.",
     price: 229,
@@ -148696,7 +148696,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7870,
-    name: "Whole Wheat Noodle Tofu Stir Fry",
+    name: "Blue Plate Kitchen",
     category: "Tofu Stir Fry",
     description: "Whole wheat noodles tossed with golden tofu, broccoli, carrots and ginger sauce.",
     price: 249,
@@ -148714,7 +148714,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7871,
-    name: "Spinach Tofu Stir Fry",
+    name: "The Honest Meal",
     category: "Tofu Stir Fry",
     description: "Tofu and fresh spinach leaves sautéed with garlic, sesame and mild spices.",
     price: 199,
@@ -148732,7 +148732,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7872,
-    name: "Kale Tofu Stir Fry",
+    name: "Sunrise Cafe & Kitchen",
     category: "Tofu Stir Fry",
     description: "Golden tofu tossed with kale, garlic and fresh lemon for a wholesome vegetable meal.",
     price: 219,
@@ -148750,7 +148750,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7873,
-    name: "Asparagus Tofu Stir Fry",
+    name: "The Kitchen Collective",
     category: "Tofu Stir Fry",
     description: "Tender asparagus and golden tofu sautéed with lemon, garlic and cracked pepper.",
     price: 239,
@@ -148768,7 +148768,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7874,
-    name: "Bean Sprout Tofu Stir Fry",
+    name: "Flavour House",
     category: "Tofu Stir Fry",
     description: "Tofu and crunchy bean sprouts tossed with spring onions and a light ginger sauce.",
     price: 189,
@@ -148786,7 +148786,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7875,
-    name: "Cabbage Tofu Stir Fry",
+    name: "The Green Apron",
     category: "Tofu Stir Fry",
     description: "Shredded cabbage and tofu sautéed with carrots, garlic and a light seasoning.",
     price: 179,
@@ -148804,7 +148804,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7876,
-    name: "Eggplant Tofu Stir Fry",
+    name: "City Spoon Bistro",
     category: "Tofu Stir Fry",
     description: "Tender eggplant and tofu tossed with garlic, ginger and a savory Asian-inspired glaze.",
     price: 209,
@@ -148822,7 +148822,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7877,
-    name: "Pumpkin Tofu Stir Fry",
+    name: "The Farmhouse Cafe",
     category: "Tofu Stir Fry",
     description: "Roasted pumpkin cubes and tofu tossed with herbs, sesame and a gentle spice blend.",
     price: 209,
@@ -148840,7 +148840,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7878,
-    name: "Carrot Snow Pea Tofu Stir Fry",
+    name: "Root & Roast Kitchen",
     category: "Tofu Stir Fry",
     description: "Tofu tossed with sweet carrots and crisp snow peas in a light ginger garlic sauce.",
     price: 199,
@@ -148858,7 +148858,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7879,
-    name: "Water Chestnut Tofu Stir Fry",
+    name: "The Gourmet Nest",
     category: "Tofu Stir Fry",
     description: "Golden tofu and crunchy water chestnuts tossed with peppers and spring onions.",
     price: 219,
@@ -148876,7 +148876,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7880,
-    name: "Lemongrass Tofu Stir Fry",
+    name: "Urban Harvest Bistro",
     category: "Tofu Stir Fry",
     description: "Tofu and fresh vegetables tossed with fragrant lemongrass, lime and ginger.",
     price: 219,
@@ -148894,7 +148894,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7881,
-    name: "Bok Choy Tofu Stir Fry",
+    name: "The Savoury Spoon",
     category: "Tofu Stir Fry",
     description: "Tender bok choy and golden tofu sautéed with garlic, ginger and sesame oil.",
     price: 229,
@@ -148912,7 +148912,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7882,
-    name: "Water Spinach Tofu Stir Fry",
+    name: "Fresh Roots Cafe",
     category: "Tofu Stir Fry",
     description: "Tofu cubes stir-fried with tender water spinach, garlic and a light savory sauce.",
     price: 209,
@@ -148930,7 +148930,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7883,
-    name: "Chilli Basil Tofu Stir Fry",
+    name: "The Platter Room",
     category: "Tofu Stir Fry",
     description: "Tofu tossed with fresh basil, red chilli, garlic and crisp vegetables.",
     price: 219,
@@ -148948,7 +148948,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7884,
-    name: "Miso Glazed Tofu Stir Fry",
+    name: "The Kitchen Story",
     category: "Tofu Stir Fry",
     description: "Golden tofu glazed with savory miso-style seasoning and tossed with fresh vegetables.",
     price: 239,
@@ -148966,7 +148966,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7885,
-    name: "Smoky Paprika Tofu Stir Fry",
+    name: "The Meal Market",
     category: "Tofu Stir Fry",
     description: "Tofu and vegetables tossed with smoky paprika, garlic and fresh herbs.",
     price: 209,
@@ -148984,7 +148984,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7886,
-    name: "Cumin Coriander Tofu Stir Fry",
+    name: "The Corner Bistro",
     category: "Tofu Stir Fry",
     description: "Tofu cubes sautéed with cumin, coriander, peppers and fresh cilantro.",
     price: 199,
@@ -149002,7 +149002,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7887,
-    name: "Tandoori Tofu Stir Fry",
+    name: "The Modern Tiffin",
     category: "Tofu Stir Fry",
     description: "Tofu and colorful vegetables tossed with smoky tandoori spices and fresh lemon.",
     price: 219,
@@ -149020,7 +149020,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7888,
-    name: "Peri Peri Tofu Stir Fry",
+    name: "The Food Loft",
     category: "Tofu Stir Fry",
     description: "Golden tofu tossed with peri peri seasoning, bell peppers and fresh coriander.",
     price: 209,
@@ -149038,7 +149038,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7889,
-    name: "Mint Coriander Tofu Stir Fry",
+    name: "The Signature Kitchen",
     category: "Tofu Stir Fry",
     description: "Tofu sautéed with fresh mint, coriander, green chillies and seasonal vegetables.",
     price: 199,
@@ -149056,7 +149056,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7890,
-    name: "High Protein Tofu Stir Fry Bowl",
+    name: "The Good Food Company",
     category: "Tofu Stir Fry",
     description: "A filling bowl of tofu, edamame, broccoli and quinoa tossed in a light ginger sauce.",
     price: 269,
@@ -149074,7 +149074,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7891,
-    name: "Rainbow Vegetable Tofu Stir Fry",
+    name: "The Village Table",
     category: "Tofu Stir Fry",
     description: "A colorful mix of tofu, broccoli, carrots, peppers, zucchini and cabbage in a light sauce.",
     price: 249,
@@ -149092,7 +149092,7 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
   },
   {
     id: 7892,
-    name: "Ultimate Asian Tofu Stir Fry Platter",
+    name: "The Premium Plate",
     category: "Tofu Stir Fry",
     description: "A premium platter of golden tofu, broccoli, mushrooms, edamame and colorful vegetables with sesame ginger dressing.",
     price: 299,
@@ -149107,8 +149107,1807 @@ export const ItemsListFoodDeliveryAll: RestaurantItemFoodInterface[] = [
     isOffer: true,
     foodCategories: ["Tofu Stir Fry", "tofu-stir-fry"],
     location: "Sector 29 Gurugram"
-  }
-
+  },
+  {
+    id: 7893,
+    name: "The Chia Bowl Cafe",
+    category: "Chia Pudding",
+    description: "Freshly prepared classic chia pudding with almond milk, honey and seasonal fruits.",
+    price: 149,
+    isVeg: true,
+    rating: 4.8,
+    calories: 220,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7893.JPG",
+    protein: "7g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Raj Nagar"
+  },
+  {
+    id: 7894,
+    name: "Pure Spoon Kitchen",
+    category: "Chia Pudding",
+    description: "Creamy vanilla chia pudding topped with fresh strawberries and blueberries.",
+    price: 169,
+    isVeg: true,
+    rating: 4.9,
+    calories: 235,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7894.JPG",
+    protein: "8g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Crossings Republik"
+  },
+  {
+    id: 7895,
+    name: "Green Spoon Bistro",
+    category: "Chia Pudding",
+    description: "Coconut chia pudding topped with mango cubes and toasted coconut flakes.",
+    price: 179,
+    isVeg: true,
+    rating: 4.8,
+    calories: 245,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7895.JPG",
+    protein: "7g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Kaushambi"
+  },
+  {
+    id: 7896,
+    name: "Fresh Harvest Cafe",
+    category: "Chia Pudding",
+    description: "Chocolate chia pudding prepared with cocoa and topped with banana slices.",
+    price: 189,
+    isVeg: true,
+    rating: 4.9,
+    calories: 265,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7896.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Rajendra Nagar"
+  },
+  {
+    id: 7897,
+    name: "Urban Wellness Kitchen",
+    category: "Chia Pudding",
+    description: "Almond milk chia pudding topped with crunchy almonds, walnuts and dates.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 280,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Protein Rich", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7897.JPG",
+    protein: "9g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Mohan Nagar"
+  },
+  {
+    id: 7898,
+    name: "Nature's Spoon Cafe",
+    category: "Chia Pudding",
+    description: "Strawberry chia pudding layered with fresh berries and creamy plant-based milk.",
+    price: 179,
+    isVeg: true,
+    rating: 4.9,
+    calories: 230,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7898.JPG",
+    protein: "7g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Shalimar Garden"
+  },
+  {
+    id: 7899,
+    name: "Daily Harvest Kitchen",
+    category: "Chia Pudding",
+    description: "Blueberry chia pudding with almond milk, fresh blueberries and toasted seeds.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 240,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7899.JPG",
+    protein: "8g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Vijay Nagar"
+  },
+  {
+    id: 7900,
+    name: "The Healthy Spoon",
+    category: "Chia Pudding",
+    description: "Banana chia pudding topped with sliced bananas, cinnamon and crunchy nuts.",
+    price: 159,
+    isVeg: true,
+    rating: 4.7,
+    calories: 250,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7900.JPG",
+    protein: "8g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Nehru Nagar"
+  },
+  {
+    id: 7901,
+    name: "Bloom Wellness Cafe",
+    category: "Chia Pudding",
+    description: "Mango chia pudding layered with fresh mango puree and coconut milk.",
+    price: 189,
+    isVeg: true,
+    rating: 4.9,
+    calories: 255,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7901.JPG",
+    protein: "7g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Shastri Nagar"
+  },
+  {
+    id: 7902,
+    name: "Wholesome Bites Kitchen",
+    category: "Chia Pudding",
+    description: "Peanut butter chia pudding topped with roasted peanuts and banana.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 295,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Protein Rich", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7902.JPG",
+    protein: "11g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Kavi Nagar"
+  },
+  {
+    id: 7903,
+    name: "Berry Bliss Cafe",
+    category: "Chia Pudding",
+    description: "Mixed berry chia pudding topped with raspberries, strawberries and blueberries.",
+    price: 209,
+    isVeg: true,
+    rating: 4.9,
+    calories: 250,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7903.JPG",
+    protein: "8g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Patel Nagar"
+  },
+  {
+    id: 7904,
+    name: "NutriNest Kitchen",
+    category: "Chia Pudding",
+    description: "Apple cinnamon chia pudding with fresh apple pieces and a hint of cinnamon.",
+    price: 179,
+    isVeg: true,
+    rating: 4.8,
+    calories: 235,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7904.JPG",
+    protein: "7g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Indirapuram"
+  },
+  {
+    id: 7905,
+    name: "Vitality Food Studio",
+    category: "Chia Pudding",
+    description: "Matcha chia pudding blended with almond milk and topped with pistachios.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 260,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Japanese Fusion", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7905.JPG",
+    protein: "9g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Vasundhara"
+  },
+  {
+    id: 7906,
+    name: "The Nourish Cafe",
+    category: "Chia Pudding",
+    description: "Coffee chia pudding topped with cocoa nibs and roasted almonds.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 255,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7906.JPG",
+    protein: "8g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Vaishali"
+  },
+  {
+    id: 7907,
+    name: "Fit Fork Kitchen",
+    category: "Chia Pudding",
+    description: "High-protein chia pudding topped with Greek yogurt, berries and pumpkin seeds.",
+    price: 229,
+    isVeg: true,
+    rating: 4.9,
+    calories: 285,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7907.JPG",
+    protein: "15g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Noida Sector 18"
+  },
+  {
+    id: 7908,
+    name: "Sunrise Breakfast Cafe",
+    category: "Chia Pudding",
+    description: "Overnight chia pudding topped with fresh papaya, banana and sunflower seeds.",
+    price: 169,
+    isVeg: true,
+    rating: 4.7,
+    calories: 225,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7908.JPG",
+    protein: "7g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Noida Sector 62"
+  },
+  {
+    id: 7909,
+    name: "Green Leaf Kitchen",
+    category: "Chia Pudding",
+    description: "Coconut lime chia pudding topped with toasted coconut and fresh lime zest.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 240,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7909.JPG",
+    protein: "7g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Noida Sector 50"
+  },
+  {
+    id: 7910,
+    name: "Urban Greens Cafe",
+    category: "Chia Pudding",
+    description: "Pistachio chia pudding topped with crushed pistachios and fresh seasonal fruit.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 275,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Gourmet", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7910.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Noida Sector 76"
+  },
+  {
+    id: 7911,
+    name: "The Protein Pantry",
+    category: "Chia Pudding",
+    description: "Chocolate protein chia pudding topped with almonds and cacao nibs.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 310,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7911.JPG",
+    protein: "18g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Noida Sector 137"
+  },
+  {
+    id: 7912,
+    name: "Simply Fresh Kitchen",
+    category: "Chia Pudding",
+    description: "Pomegranate chia pudding topped with juicy pomegranate seeds and mint.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 230,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7912.JPG",
+    protein: "7g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Noida Sector 104"
+  },
+  {
+    id: 7913,
+    name: "Oat & Seed Cafe",
+    category: "Chia Pudding",
+    description: "Oat milk chia pudding topped with crunchy oats, almonds and fresh berries.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 260,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7913.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Greater Noida West"
+  },
+  {
+    id: 7914,
+    name: "The Daily Detox Kitchen",
+    category: "Chia Pudding",
+    description: "Kiwi chia pudding with fresh kiwi slices, lemon zest and coconut milk.",
+    price: 189,
+    isVeg: true,
+    rating: 4.7,
+    calories: 220,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7914.JPG",
+    protein: "6g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Greater Noida"
+  },
+  {
+    id: 7915,
+    name: "Avocado & Almond Cafe",
+    category: "Chia Pudding",
+    description: "Almond butter chia pudding topped with sliced almonds and fresh banana.",
+    price: 209,
+    isVeg: true,
+    rating: 4.9,
+    calories: 285,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Protein Rich", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7915.JPG",
+    protein: "10g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Saket"
+  },
+  {
+    id: 7916,
+    name: "Berry Garden Kitchen",
+    category: "Chia Pudding",
+    description: "Raspberry chia pudding topped with fresh raspberries and toasted coconut.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 235,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7916.JPG",
+    protein: "7g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Malviya Nagar"
+  },
+  {
+    id: 7917,
+    name: "The Mindful Meal Cafe",
+    category: "Chia Pudding",
+    description: "Date and walnut chia pudding prepared with creamy almond milk.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 275,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7917.JPG",
+    protein: "8g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Hauz Khas"
+  },
+  {
+    id: 7918,
+    name: "Superfood Station",
+    category: "Chia Pudding",
+    description: "A superfood chia pudding topped with goji berries, pumpkin seeds and blueberries.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 270,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Superfood", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7918.JPG",
+    protein: "10g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Connaught Place"
+  },
+  {
+    id: 7919,
+    name: "Morning Fuel Kitchen",
+    category: "Chia Pudding",
+    description: "Peanut cocoa chia pudding topped with banana and roasted peanuts.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 295,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7919.JPG",
+    protein: "11g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Lajpat Nagar"
+  },
+  {
+    id: 7920,
+    name: "Coco Berry Kitchen",
+    category: "Chia Pudding",
+    description: "Coconut berry chia pudding topped with strawberries and blueberries.",
+    price: 209,
+    isVeg: true,
+    rating: 4.9,
+    calories: 255,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7920.JPG",
+    protein: "7g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Defence Colony"
+  },
+  {
+    id: 7921,
+    name: "The Balanced Plate Cafe",
+    category: "Chia Pudding",
+    description: "A balanced chia pudding bowl with Greek yogurt, banana and mixed seeds.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 285,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7921.JPG",
+    protein: "14g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Greater Kailash"
+  },
+  {
+    id: 7922,
+    name: "Sunshine Smoothie Kitchen",
+    category: "Chia Pudding",
+    description: "Pineapple chia pudding with coconut milk and fresh pineapple pieces.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 235,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Tropical", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7922.JPG",
+    protein: "6g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Karol Bagh"
+  },
+  {
+    id: 7923,
+    name: "Nutty Bowl Cafe",
+    category: "Chia Pudding",
+    description: "Hazelnut chia pudding topped with chopped hazelnuts and cocoa nibs.",
+    price: 219,
+    isVeg: true,
+    rating: 4.8,
+    calories: 290,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7923.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Rajouri Garden"
+  },
+  {
+    id: 7924,
+    name: "Vegan Roots Kitchen",
+    category: "Chia Pudding",
+    description: "Dairy-free vanilla chia pudding with coconut milk and fresh seasonal fruit.",
+    price: 179,
+    isVeg: true,
+    rating: 4.8,
+    calories: 225,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7924.JPG",
+    protein: "6g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Pitampura"
+  },
+  {
+    id: 7925,
+    name: "Fresh Start Bistro",
+    category: "Chia Pudding",
+    description: "Peach chia pudding topped with fresh peach slices and crunchy almonds.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 245,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7925.JPG",
+    protein: "8g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Rohini"
+  },
+  {
+    id: 7926,
+    name: "Fit Life Food Corner",
+    category: "Chia Pudding",
+    description: "Protein chia pudding topped with banana, peanut butter and roasted seeds.",
+    price: 229,
+    isVeg: true,
+    rating: 4.9,
+    calories: 310,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7926.JPG",
+    protein: "17g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Dwarka"
+  },
+  {
+    id: 7927,
+    name: "The Fruitful Kitchen",
+    category: "Chia Pudding",
+    description: "Mixed fruit chia pudding topped with kiwi, mango, apple and pomegranate.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 245,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Fruit Bowls", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7927.JPG",
+    protein: "7g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Janakpuri"
+  },
+  {
+    id: 7928,
+    name: "Almond Grove Cafe",
+    category: "Chia Pudding",
+    description: "Creamy almond chia pudding topped with toasted almonds and a drizzle of honey.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 265,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7928.JPG",
+    protein: "9g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Vasant Kunj"
+  },
+  {
+    id: 7929,
+    name: "The Clean Eating Kitchen",
+    category: "Chia Pudding",
+    description: "Low-sugar chia pudding made with unsweetened almond milk and fresh berries.",
+    price: 199,
+    isVeg: true,
+    rating: 4.9,
+    calories: 195,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Low Sugar", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7929.JPG",
+    protein: "7g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Green Park"
+  },
+  {
+    id: 7930,
+    name: "Golden Spoon Wellness Cafe",
+    category: "Chia Pudding",
+    description: "Turmeric coconut chia pudding with banana, almonds and a touch of cinnamon.",
+    price: 209,
+    isVeg: true,
+    rating: 4.8,
+    calories: 255,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Wellness", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7930.JPG",
+    protein: "8g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Chanakyapuri"
+  },
+  {
+    id: 7931,
+    name: "The Chia Kitchen",
+    category: "Chia Pudding",
+    description: "Classic overnight chia pudding topped with crunchy granola and fresh strawberries.",
+    price: 179,
+    isVeg: true,
+    rating: 4.8,
+    calories: 255,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7931.JPG",
+    protein: "8g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Lodhi Colony"
+  },
+  {
+    id: 7932,
+    name: "Blueberry Fields Cafe",
+    category: "Chia Pudding",
+    description: "Blueberry vanilla chia pudding with fresh berries and a light almond topping.",
+    price: 199,
+    isVeg: true,
+    rating: 4.9,
+    calories: 240,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7932.JPG",
+    protein: "8g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Mehrauli"
+  },
+  {
+    id: 7933,
+    name: "Cinnamon Leaf Kitchen",
+    category: "Chia Pudding",
+    description: "Apple pie-inspired chia pudding with cinnamon, apple pieces and toasted walnuts.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 270,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7933.JPG",
+    protein: "8g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Chhatarpur"
+  },
+  {
+    id: 7934,
+    name: "Tropical Spoon Cafe",
+    category: "Chia Pudding",
+    description: "Tropical chia pudding topped with mango, pineapple, coconut and passion fruit.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 265,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Tropical", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7934.JPG",
+    protein: "7g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Vasant Vihar"
+  },
+  {
+    id: 7935,
+    name: "The Super Bowl Kitchen",
+    category: "Chia Pudding",
+    description: "Superfood chia pudding topped with flaxseeds, pumpkin seeds and fresh blueberries.",
+    price: 229,
+    isVeg: true,
+    rating: 4.9,
+    calories: 275,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Superfood", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7935.JPG",
+    protein: "10g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Greater Kailash 2"
+  },
+  {
+    id: 7936,
+    name: "Cacao Corner Cafe",
+    category: "Chia Pudding",
+    description: "Rich cacao chia pudding topped with dark chocolate shavings and roasted hazelnuts.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 290,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Chocolate Desserts", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7936.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Golf Course Road"
+  },
+  {
+    id: 7937,
+    name: "The Morning Spoon",
+    category: "Chia Pudding",
+    description: "A breakfast chia pudding bowl with oats, banana, almonds and fresh strawberries.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 265,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7937.JPG",
+    protein: "9g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "DLF Phase 1"
+  },
+  {
+    id: 7938,
+    name: "Purely Plant Kitchen",
+    category: "Chia Pudding",
+    description: "Plant-based chia pudding with oat milk, fresh berries and crunchy pumpkin seeds.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 245,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegan", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7938.JPG",
+    protein: "8g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "DLF Phase 2"
+  },
+  {
+    id: 7939,
+    name: "The Wellness Pantry",
+    category: "Chia Pudding",
+    description: "A wholesome chia pudding with Greek yogurt, honey, walnuts and seasonal fruit.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 285,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7939.JPG",
+    protein: "13g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "DLF Phase 3"
+  },
+  {
+    id: 7940,
+    name: "Fresh Fuel Bistro",
+    category: "Chia Pudding",
+    description: "A refreshing chia pudding topped with kiwi, strawberries and toasted coconut.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 235,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Breakfast", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7940.JPG",
+    protein: "7g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Sushant Lok"
+  },
+  {
+    id: 7941,
+    name: "Nourish & Glow Cafe",
+    category: "Chia Pudding",
+    description: "A premium chia pudding bowl with mango, blueberries, almonds and coconut flakes.",
+    price: 249,
+    isVeg: true,
+    rating: 5.0,
+    calories: 290,
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy", "Gourmet", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7941.JPG",
+    protein: "10g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Sector 56 Gurugram"
+  },
+  {
+    id: 7942,
+    name: "The Ultimate Wellness Kitchen",
+    category: "Chia Pudding",
+    description: "A premium chia pudding platter with mixed berries, Greek yogurt, granola, nuts and fresh fruit.",
+    price: 269,
+    isVeg: true,
+    rating: 5.0,
+    calories: 330,
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy", "Gourmet", "CHIA_PUDDING_DIET"],
+    imageUrl: "/products/chia_pudding_7942.JPG",
+    protein: "15g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Chia Pudding", "chia-pudding"],
+    location: "Sector 29 Gurugram"
+  },
+   {
+    id: 7943,
+    name: "Millet House Cafe",
+    category: "Millet Bowl",
+    description: "A wholesome foxtail millet bowl with roasted vegetables, cucumber and lemon herb dressing.",
+    price: 179,
+    isVeg: true,
+    rating: 4.8,
+    calories: 290,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7943.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Raj Nagar"
+  },
+  {
+    id: 7944,
+    name: "The Millet Kitchen",
+    category: "Millet Bowl",
+    description: "Barnyard millet served with sautéed vegetables, fresh herbs and a light yogurt dressing.",
+    price: 189,
+    isVeg: true,
+    rating: 4.9,
+    calories: 310,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7944.JPG",
+    protein: "10g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Crossings Republik"
+  },
+  {
+    id: 7945,
+    name: "Grain & Greens Cafe",
+    category: "Millet Bowl",
+    description: "Pearl millet bowl with roasted carrots, broccoli, bell peppers and coriander dressing.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 320,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Whole Grain", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7945.JPG",
+    protein: "11g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Kaushambi"
+  },
+  {
+    id: 7946,
+    name: "Nutri Grain Kitchen",
+    category: "Millet Bowl",
+    description: "A nutritious foxtail millet bowl topped with chickpeas, cucumber, tomatoes and mint dressing.",
+    price: 209,
+    isVeg: true,
+    rating: 4.9,
+    calories: 340,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Protein Rich", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7946.JPG",
+    protein: "14g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Rajendra Nagar"
+  },
+  {
+    id: 7947,
+    name: "Earth Bowl Bistro",
+    category: "Millet Bowl",
+    description: "A wholesome millet bowl with avocado, roasted pumpkin, spinach and toasted seeds.",
+    price: 229,
+    isVeg: true,
+    rating: 4.8,
+    calories: 355,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Gourmet", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7947.JPG",
+    protein: "12g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Mohan Nagar"
+  },
+  {
+    id: 7948,
+    name: "Wholesome Grain Cafe",
+    category: "Millet Bowl",
+    description: "Little millet served with sautéed mushrooms, broccoli and garlic herb seasoning.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 305,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Whole Grain", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7948.JPG",
+    protein: "11g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Shalimar Garden"
+  },
+  {
+    id: 7949,
+    name: "Fresh Grain Kitchen",
+    category: "Millet Bowl",
+    description: "A colorful millet bowl with grilled zucchini, peppers, carrots and lemon dressing.",
+    price: 189,
+    isVeg: true,
+    rating: 4.7,
+    calories: 295,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegetarian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7949.JPG",
+    protein: "9g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Vijay Nagar"
+  },
+  {
+    id: 7950,
+    name: "The Balanced Bowl Cafe",
+    category: "Millet Bowl",
+    description: "A balanced millet bowl with paneer cubes, spinach, sweet corn and fresh coriander.",
+    price: 229,
+    isVeg: true,
+    rating: 4.9,
+    calories: 385,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7950.JPG",
+    protein: "18g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Nehru Nagar"
+  },
+  {
+    id: 7951,
+    name: "Green Millet Bistro",
+    category: "Millet Bowl",
+    description: "Foxtail millet with fresh kale, broccoli, cucumber and a light lemon dressing.",
+    price: 209,
+    isVeg: true,
+    rating: 4.8,
+    calories: 285,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Green Vegetables", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7951.JPG",
+    protein: "10g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Shastri Nagar"
+  },
+  {
+    id: 7952,
+    name: "Millet & More Kitchen",
+    category: "Millet Bowl",
+    description: "Pearl millet bowl with roasted sweet potato, chickpeas and creamy tahini dressing.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 365,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Mediterranean", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7952.JPG",
+    protein: "13g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Kavi Nagar"
+  },
+  {
+    id: 7953,
+    name: "Harvest Bowl Cafe",
+    category: "Millet Bowl",
+    description: "A seasonal millet bowl with roasted vegetables, green peas and fresh coriander.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 315,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Seasonal", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7953.JPG",
+    protein: "10g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Patel Nagar"
+  },
+  {
+    id: 7954,
+    name: "Millet Magic Kitchen",
+    category: "Millet Bowl",
+    description: "A savory millet bowl with black chickpeas, cucumber, tomatoes and roasted cumin.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 335,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7954.JPG",
+    protein: "13g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Indirapuram"
+  },
+  {
+    id: 7955,
+    name: "The Millet Table",
+    category: "Millet Bowl",
+    description: "Barnyard millet bowl with grilled paneer, bell peppers and mint yogurt dressing.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 390,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7955.JPG",
+    protein: "19g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Vasundhara"
+  },
+  {
+    id: 7956,
+    name: "Pure Harvest Cafe",
+    category: "Millet Bowl",
+    description: "Little millet with sautéed spinach, mushrooms, garlic and toasted sesame seeds.",
+    price: 209,
+    isVeg: true,
+    rating: 4.8,
+    calories: 300,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegetarian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7956.JPG",
+    protein: "12g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Vaishali"
+  },
+  {
+    id: 7957,
+    name: "Daily Grain Kitchen",
+    category: "Millet Bowl",
+    description: "A wholesome millet bowl with roasted cauliflower, carrots and spiced yogurt.",
+    price: 199,
+    isVeg: true,
+    rating: 4.7,
+    calories: 310,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7957.JPG",
+    protein: "11g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Noida Sector 18"
+  },
+  {
+    id: 7958,
+    name: "Protein Grain Cafe",
+    category: "Millet Bowl",
+    description: "A protein-rich millet bowl with tofu, edamame, broccoli and sesame ginger dressing.",
+    price: 249,
+    isVeg: true,
+    rating: 4.9,
+    calories: 390,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Protein Rich", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7958.JPG",
+    protein: "22g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Noida Sector 62"
+  },
+  {
+    id: 7959,
+    name: "The Nourish Bowl",
+    category: "Millet Bowl",
+    description: "Foxtail millet with avocado, cherry tomatoes, cucumber and fresh herb dressing.",
+    price: 229,
+    isVeg: true,
+    rating: 4.9,
+    calories: 345,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Gourmet", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7959.JPG",
+    protein: "10g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Noida Sector 50"
+  },
+  {
+    id: 7960,
+    name: "Urban Millet Kitchen",
+    category: "Millet Bowl",
+    description: "A spicy millet bowl with roasted peppers, onions, corn and fresh coriander.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 325,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7960.JPG",
+    protein: "10g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Noida Sector 76"
+  },
+  {
+    id: 7961,
+    name: "Grain Garden Cafe",
+    category: "Millet Bowl",
+    description: "A fresh millet bowl with green peas, carrots, beans and a mild herb seasoning.",
+    price: 179,
+    isVeg: true,
+    rating: 4.7,
+    calories: 290,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegetarian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7961.JPG",
+    protein: "9g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Noida Sector 137"
+  },
+  {
+    id: 7962,
+    name: "Healthy Harvest Bistro",
+    category: "Millet Bowl",
+    description: "A Mediterranean-inspired millet bowl with olives, cucumber, tomatoes and feta cheese.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 360,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Mediterranean", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7962.JPG",
+    protein: "13g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Noida Sector 104"
+  },
+  {
+    id: 7963,
+    name: "The Whole Grain Cafe",
+    category: "Millet Bowl",
+    description: "A nutritious millet bowl with roasted beetroot, spinach, walnuts and lemon dressing.",
+    price: 219,
+    isVeg: true,
+    rating: 4.8,
+    calories: 340,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Whole Grain", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7963.JPG",
+    protein: "11g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Greater Noida West"
+  },
+  {
+    id: 7964,
+    name: "Millet Protein Kitchen",
+    category: "Millet Bowl",
+    description: "A filling millet bowl with grilled paneer, chickpeas, broccoli and mint dressing.",
+    price: 259,
+    isVeg: true,
+    rating: 4.9,
+    calories: 410,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7964.JPG",
+    protein: "22g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Greater Noida"
+  },
+  {
+    id: 7965,
+    name: "Simply Millet Cafe",
+    category: "Millet Bowl",
+    description: "A light barnyard millet bowl with steamed vegetables and fresh lemon coriander dressing.",
+    price: 179,
+    isVeg: true,
+    rating: 4.7,
+    calories: 275,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Low Calorie", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7965.JPG",
+    protein: "8g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Saket"
+  },
+  {
+    id: 7966,
+    name: "The Superfood Kitchen",
+    category: "Millet Bowl",
+    description: "A superfood millet bowl with quinoa, chickpeas, kale, avocado and pumpkin seeds.",
+    price: 269,
+    isVeg: true,
+    rating: 5.0,
+    calories: 395,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Superfood", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7966.JPG",
+    protein: "17g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Malviya Nagar"
+  },
+  {
+    id: 7967,
+    name: "Fresh Roots Kitchen",
+    category: "Millet Bowl",
+    description: "A colorful millet bowl with roasted pumpkin, sweet corn, spinach and toasted seeds.",
+    price: 209,
+    isVeg: true,
+    rating: 4.8,
+    calories: 330,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Seasonal", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7967.JPG",
+    protein: "10g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Hauz Khas"
+  },
+  {
+    id: 7968,
+    name: "Millet Wellness Cafe",
+    category: "Millet Bowl",
+    description: "A wholesome millet bowl with sprouted moong, cucumber, tomatoes and mint chutney.",
+    price: 189,
+    isVeg: true,
+    rating: 4.8,
+    calories: 315,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7968.JPG",
+    protein: "13g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Connaught Place"
+  },
+  {
+    id: 7969,
+    name: "The Grain Studio",
+    category: "Millet Bowl",
+    description: "A flavorful millet bowl with roasted eggplant, tomatoes, chickpeas and tahini dressing.",
+    price: 219,
+    isVeg: true,
+    rating: 4.8,
+    calories: 355,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Mediterranean", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7969.JPG",
+    protein: "13g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Lajpat Nagar"
+  },
+  {
+    id: 7970,
+    name: "Nourish Nature Cafe",
+    category: "Millet Bowl",
+    description: "A wholesome millet bowl with grilled tofu, carrots, broccoli and sesame dressing.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 365,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Plant Based", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7970.JPG",
+    protein: "19g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Defence Colony"
+  },
+  {
+    id: 7971,
+    name: "The Indian Grain Bowl",
+    category: "Millet Bowl",
+    description: "A traditional-style millet bowl with rajma, cucumber, onion and fresh coriander.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 355,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7971.JPG",
+    protein: "15g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Greater Kailash"
+  },
+  {
+    id: 7972,
+    name: "Millet Street Kitchen",
+    category: "Millet Bowl",
+    description: "A fusion millet bowl with spicy black beans, corn, avocado and tomato salsa.",
+    price: 229,
+    isVeg: true,
+    rating: 4.8,
+    calories: 370,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Mexican Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7972.JPG",
+    protein: "14g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Karol Bagh"
+  },
+  {
+    id: 7973,
+    name: "The Green Grain Cafe",
+    category: "Millet Bowl",
+    description: "A green millet bowl with broccoli, asparagus, spinach and lemon herb dressing.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 305,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Green Vegetables", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7973.JPG",
+    protein: "12g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Rajouri Garden"
+  },
+  {
+    id: 7974,
+    name: "Millet Bowl Express",
+    category: "Millet Bowl",
+    description: "A quick and wholesome millet bowl with mixed vegetables, chickpeas and mild spices.",
+    price: 179,
+    isVeg: true,
+    rating: 4.7,
+    calories: 320,
+    deliveryTime: "20-25 mins",
+    cuisines: ["Healthy", "Indian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7974.JPG",
+    protein: "12g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Pitampura"
+  },
+  {
+    id: 7975,
+    name: "The Organic Grain Kitchen",
+    category: "Millet Bowl",
+    description: "An organic-style millet bowl with roasted vegetables, green peas and fresh herbs.",
+    price: 219,
+    isVeg: true,
+    rating: 4.8,
+    calories: 325,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Organic Style", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7975.JPG",
+    protein: "11g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Rohini"
+  },
+  {
+    id: 7976,
+    name: "The Protein Bowl Bistro",
+    category: "Millet Bowl",
+    description: "A high-protein millet bowl with grilled tofu, edamame, chickpeas and crunchy vegetables.",
+    price: 269,
+    isVeg: true,
+    rating: 5.0,
+    calories: 420,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7976.JPG",
+    protein: "24g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Dwarka"
+  },
+  {
+    id: 7977,
+    name: "Roots & Grains Cafe",
+    category: "Millet Bowl",
+    description: "A rustic millet bowl with roasted beetroot, sweet potato, spinach and walnuts.",
+    price: 229,
+    isVeg: true,
+    rating: 4.8,
+    calories: 365,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Whole Grain", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7977.JPG",
+    protein: "11g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Janakpuri"
+  },
+  {
+    id: 7978,
+    name: "Millet Fusion Kitchen",
+    category: "Millet Bowl",
+    description: "A fusion millet bowl with grilled vegetables, paneer and spicy coriander dressing.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 390,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7978.JPG",
+    protein: "18g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Vasant Kunj"
+  },
+  {
+    id: 7979,
+    name: "The Light Plate Cafe",
+    category: "Millet Bowl",
+    description: "A light millet bowl with cucumber, steamed broccoli, carrots and lemon pepper dressing.",
+    price: 179,
+    isVeg: true,
+    rating: 4.7,
+    calories: 265,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Low Calorie", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7979.JPG",
+    protein: "9g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Green Park"
+  },
+  {
+    id: 7980,
+    name: "Millet Roots Bistro",
+    category: "Millet Bowl",
+    description: "A wholesome millet bowl with roasted cauliflower, chickpeas and creamy mint dressing.",
+    price: 209,
+    isVeg: true,
+    rating: 4.8,
+    calories: 350,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegetarian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7980.JPG",
+    protein: "14g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Chanakyapuri"
+  },
+  {
+    id: 7981,
+    name: "The Super Grain Cafe",
+    category: "Millet Bowl",
+    description: "A nutrient-packed millet bowl with quinoa, sprouts, avocado and roasted pumpkin seeds.",
+    price: 249,
+    isVeg: true,
+    rating: 4.9,
+    calories: 375,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Superfood", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7981.JPG",
+    protein: "16g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Lodhi Colony"
+  },
+  {
+    id: 7982,
+    name: "Millet Mood Kitchen",
+    category: "Millet Bowl",
+    description: "A flavorful millet bowl with roasted peppers, sweet corn, black beans and lime dressing.",
+    price: 219,
+    isVeg: true,
+    rating: 4.8,
+    calories: 360,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Mexican Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7982.JPG",
+    protein: "14g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Mehrauli"
+  },
+  {
+    id: 7983,
+    name: "The Wholesome Grain Bistro",
+    category: "Millet Bowl",
+    description: "A wholesome millet bowl with lentils, roasted carrots, spinach and cumin dressing.",
+    price: 209,
+    isVeg: true,
+    rating: 4.8,
+    calories: 355,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Protein Rich", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7983.JPG",
+    protein: "15g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Chhatarpur"
+  },
+  {
+    id: 7984,
+    name: "Millet Garden Kitchen",
+    category: "Millet Bowl",
+    description: "A garden-style millet bowl with cucumber, tomatoes, olives, lettuce and herb dressing.",
+    price: 219,
+    isVeg: true,
+    rating: 4.9,
+    calories: 315,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Mediterranean", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7984.JPG",
+    protein: "10g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Vasant Vihar"
+  },
+  {
+    id: 7985,
+    name: "The Millet Pantry",
+    category: "Millet Bowl",
+    description: "A savory millet bowl with kidney beans, roasted corn, tomato salsa and fresh coriander.",
+    price: 199,
+    isVeg: true,
+    rating: 4.8,
+    calories: 350,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Indian Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7985.JPG",
+    protein: "14g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Greater Kailash 2"
+  },
+  {
+    id: 7986,
+    name: "Grain Craft Cafe",
+    category: "Millet Bowl",
+    description: "A gourmet millet bowl with grilled asparagus, mushrooms, spinach and garlic herb dressing.",
+    price: 249,
+    isVeg: true,
+    rating: 4.9,
+    calories: 335,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Gourmet", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7986.JPG",
+    protein: "13g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Golf Course Road"
+  },
+  {
+    id: 7987,
+    name: "The Fresh Grain Table",
+    category: "Millet Bowl",
+    description: "A fresh millet bowl with steamed edamame, broccoli, carrots and sesame ginger dressing.",
+    price: 239,
+    isVeg: true,
+    rating: 4.9,
+    calories: 345,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Asian Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7987.JPG",
+    protein: "17g",
+    offer: "10% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "DLF Phase 1"
+  },
+  {
+    id: 7988,
+    name: "Millet Meal Studio",
+    category: "Millet Bowl",
+    description: "A hearty millet bowl with grilled paneer, roasted vegetables and coriander yogurt sauce.",
+    price: 249,
+    isVeg: true,
+    rating: 4.9,
+    calories: 405,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "High Protein", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7988.JPG",
+    protein: "20g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "DLF Phase 2"
+  },
+  {
+    id: 7989,
+    name: "Pure Grain Bistro",
+    category: "Millet Bowl",
+    description: "A simple millet bowl with steamed seasonal vegetables, fresh herbs and lemon dressing.",
+    price: 179,
+    isVeg: true,
+    rating: 4.7,
+    calories: 275,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Vegetarian", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7989.JPG",
+    protein: "9g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "DLF Phase 3"
+  },
+  {
+    id: 7990,
+    name: "Millet Superfood Kitchen",
+    category: "Millet Bowl",
+    description: "A premium millet bowl with tofu, chickpeas, avocado, edamame and fresh greens.",
+    price: 279,
+    isVeg: true,
+    rating: 5.0,
+    calories: 425,
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy", "Superfood", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7990.JPG",
+    protein: "23g",
+    offer: "20% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Sushant Lok"
+  },
+  {
+    id: 7991,
+    name: "The Rainbow Grain Cafe",
+    category: "Millet Bowl",
+    description: "A colorful millet bowl with broccoli, carrots, purple cabbage, peppers and sesame dressing.",
+    price: 229,
+    isVeg: true,
+    rating: 4.9,
+    calories: 335,
+    deliveryTime: "25-30 mins",
+    cuisines: ["Healthy", "Asian Fusion", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7991.JPG",
+    protein: "12g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Sector 56 Gurugram"
+  },
+  {
+    id: 7992,
+    name: "The Ultimate Millet Bowl Kitchen",
+    category: "Millet Bowl",
+    description: "A premium millet platter with foxtail millet, grilled paneer, chickpeas, roasted vegetables, avocado and mint dressing.",
+    price: 299,
+    isVeg: true,
+    rating: 5.0,
+    calories: 455,
+    deliveryTime: "30-35 mins",
+    cuisines: ["Healthy", "Gourmet", "MILLET_BOWL_DIET"],
+    imageUrl: "/products/millet_bowl_7992.JPG",
+    protein: "22g",
+    offer: "15% OFF",
+    isOffer: true,
+    foodCategories: ["Millet Bowl", "millet-bowl"],
+    location: "Sector 29 Gurugram"
+  }  
 
 
 
