@@ -1573,6 +1573,111 @@ const ShopByMainCategory: React.FC<ShopByMainCategoryProps> = ({
                     </>
                 );
 
+            case 'flower_festival':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Festival
+                    </div>
+                );
+
+            case 'flower_global':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Global
+                    </div>
+                );
+
+            case 'flower_birthday':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Birthday
+                    </div>
+                );
+
+            case 'flower_occasions':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Occasions
+                    </div>
+                );
+
+            case 'flower_anniversary':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Anniversary
+                    </div>
+                );
+
+            case 'flower_flowers':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Collection
+                    </div>
+                );
+
+            case 'flower_cakes':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Cakes
+                    </div>
+                );
+
+            case 'flower_personalised':
+                return (
+                    <div className={styles.categoryGap}>
+                        Personalised Gifts
+                    </div>
+                );
+
+            case 'flower_plants':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Plants
+                    </div>
+                );
+
+            case 'flower_chocolates':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Chocolates
+                    </div>
+                );
+
+            case 'flower_lifestyle':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Lifestyle
+                    </div>
+                );
+
+            case 'flower_hatke':
+                return (
+                    <div className={styles.categoryGap}>
+                        Hatke Gifts
+                    </div>
+                );
+
+            case 'flower_luxe':
+                return (
+                    <div className={styles.categoryGap}>
+                        LUXE Collection
+                    </div>
+                );
+
+            case 'flower_hampers':
+                return (
+                    <div className={styles.categoryGap}>
+                        Flower Hampers
+                    </div>
+                );
+
+            case 'flower_balloons':
+                return (
+                    <div className={styles.categoryGap}>
+                        Balloons
+                    </div>
+                );
+
             case 'all':
             default:
                 return (

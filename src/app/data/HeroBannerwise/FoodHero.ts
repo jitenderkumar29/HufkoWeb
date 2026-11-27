@@ -447,8 +447,10 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '157', foodId: 'hummus_plate', title: 'Premium Quality Delicious', subtitle: 'Hummus Plate', category: 'HUMMUS_PLATE_DIET', discount: '', imgUrl: '/products/hummus_plate_dietFoodHeroBanner.png', align: 'left' },
   { id: '158', foodId: 'sushi_rolls', title: 'Premium Quality Delicious', subtitle: 'Sushi Rolls', category: 'SUSHI_ROLLS_DIET', discount: '', imgUrl: '/products/sushi_rolls_dietFoodHeroBanner.png', align: 'left' },
   { id: '159', foodId: 'tofu_stir_fry', title: 'Premium Quality Delicious', subtitle: 'Tofu Stir Fry', category: 'TOFU_STIR_FRY_DIET', discount: '', imgUrl: '/products/tofu_stir_fry_dietFoodHeroBanner.png', align: 'left' },
-{ id: '160', foodId: 'chia_pudding', title: 'Premium Quality Delicious', subtitle: 'Chia Pudding', category: 'CHIA_PUDDING_DIET', discount: '', imgUrl: '/products/chia_pudding_dietFoodHeroBanner.png', align: 'left' },
-{ id: '161', foodId: 'millet_bowl', title: 'Premium Quality Delicious', subtitle: 'Millet Bowl', category: 'MILLET_BOWL_DIET', discount: '', imgUrl: '/products/millet_bowl_dietFoodHeroBanner.png', align: 'left' },
+  { id: '160', foodId: 'chia_pudding', title: 'Premium Quality Delicious', subtitle: 'Chia Pudding', category: 'CHIA_PUDDING_DIET', discount: '', imgUrl: '/products/chia_pudding_dietFoodHeroBanner.png', align: 'left' },
+  { id: '161', foodId: 'millet_bowl', title: 'Premium Quality Delicious', subtitle: 'Millet Bowl', category: 'MILLET_BOWL_DIET', discount: '', imgUrl: '/products/millet_bowl_dietFoodHeroBanner.png', align: 'left' },
+  { id: '162', foodId: 'steamed_momos', title: 'Premium Quality Delicious', subtitle: 'Steamed Momos', category: 'STEAMED_MOMOS_DIET', discount: '', imgUrl: '/products/steamed_momos_dietFoodHeroBanner.png', align: 'left' },
+{ id: '163', foodId: 'whole_wheat_wrap', title: 'Premium Quality Delicious', subtitle: 'Whole Wheat Wrap', category: 'WHOLE_WHEAT_WRAP_DIET', discount: '', imgUrl: '/products/whole_wheat_wrap_dietFoodHeroBanner.png', align: 'left' },
 
 ];
 

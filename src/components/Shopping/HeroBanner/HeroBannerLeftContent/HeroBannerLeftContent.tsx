@@ -1,8 +1,10 @@
+
 import React from 'react';
 import styles from './HeroBannerLeftContent.module.scss';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+
 // @ts-ignore
 import 'swiper/css';
 // @ts-ignore
@@ -14,7 +16,7 @@ import 'swiper/css/pagination';
 
 export interface BannerItemContent {
   id: string;
-  foodId?: string;        // 👈 added
+  foodId?: string;
   title: string;
   subtitle: string;
   category: string;
@@ -27,18 +29,23 @@ export interface BannerItemContent {
 interface HeroBannerLeftContentProps {
   banners: BannerItemContent[];
   defaultAlign?: 'left' | 'right';
+  height?: number | string;
 }
 
-const HeroBannerLeftContent: React.FC<HeroBannerLeftContentProps> = ({ 
-  banners, 
-  defaultAlign = 'left' 
+const HeroBannerLeftContent: React.FC<HeroBannerLeftContentProps> = ({
+  banners,
+  defaultAlign = 'left',
+  height = 365,
 }) => {
   const swiperRef = React.useRef<SwiperRef>(null);
 
   if (banners.length === 0) return null;
 
   return (
-    <div className={styles.heroBanner}>
+    <div
+      className={styles.heroBanner}
+      style={{ height: typeof height === 'number' ? `${height}px` : height }}
+    >
       <Swiper
         ref={swiperRef}
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
@@ -68,10 +75,13 @@ const HeroBannerLeftContent: React.FC<HeroBannerLeftContentProps> = ({
       >
         {banners.map((banner) => {
           const align = banner.align || defaultAlign;
+
           return (
             <SwiperSlide key={banner.id} className={styles.swiperSlide}>
               <div
-                className={`${styles.bannerItem} ${align === 'right' ? styles.rightAlign : styles.leftAlign}`}
+                className={`${styles.bannerItem} ${
+                  align === 'right' ? styles.rightAlign : styles.leftAlign
+                }`}
                 style={{ backgroundImage: `url(${banner.imgUrl})` }}
               >
                 <a
@@ -80,11 +90,21 @@ const HeroBannerLeftContent: React.FC<HeroBannerLeftContentProps> = ({
                   onClick={(e) => !banner.href && e.preventDefault()}
                 >
                   <div className={styles.bannerContent}>
-                    <div className={styles.discountBadge}>{banner.discount}</div>
-                    {/* <div className={styles.saleText}>SALE</div> */}
-                    <div className={styles.category}>{banner.category}</div>
-                    <div className={styles.subtitle}>{banner.subtitle}</div>
-                    <div className={styles.offText}>{banner.title}</div>
+                    <div className={styles.discountBadge}>
+                      {banner.discount}
+                    </div>
+
+                    <div className={styles.category}>
+                      {banner.category}
+                    </div>
+
+                    <div className={styles.subtitle}>
+                      {banner.subtitle}
+                    </div>
+
+                    <div className={styles.offText}>
+                      {banner.title}
+                    </div>
                   </div>
                 </a>
               </div>
@@ -102,6 +122,7 @@ const HeroBannerLeftContent: React.FC<HeroBannerLeftContentProps> = ({
           >
             <FaChevronLeft />
           </button>
+
           <button
             className={styles.nextButton}
             aria-label="Next Slide"

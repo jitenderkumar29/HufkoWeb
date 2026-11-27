@@ -193,6 +193,14 @@ const HeaderCategory: React.FC = () => {
   const [selectedElectronicsSubCategory, setSelectedElectronicsSubCategory] = useState<string>('all');
   const [selectedHomeDecorSubCategory, setSelectedHomeDecorSubCategory] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  // Flower states
+  const [selectedFlowerCategory, setSelectedFlowerCategory] =
+    useState<string>("all");
+  const [selectedFlowerProductCategory, setSelectedFlowerProductCategory] =
+    useState<string | null>(null);
+
+  const [selectedFlowerSubHeaderItem, setSelectedFlowerSubHeaderItem] =
+    useState<SubHeaderItem | null>(null);
   const [selectedSubHeaderItem, setSelectedSubHeaderItem] = useState<SubHeaderItem | null>(null);
 
   // Food states
@@ -211,6 +219,7 @@ const HeaderCategory: React.FC = () => {
 
   // Active tab state
   const [activeTab, setActiveTab] = useState<string>('home');
+  const flowerParam = searchParams?.get("flowerCategory") || null;
 
   // All categories including home
   const allCategories: CategoryItem[] = [
@@ -311,8 +320,21 @@ const HeaderCategory: React.FC = () => {
     } else {
       setSelectedHomeDecorSubCategory('all');
     }
+
+    if (flowerParam) {
+      setSelectedFlowerCategory(flowerParam);
+
+      const flowerItem = flowerCategoriesSubHeader.find(
+        (item) => item.id === flowerParam
+      );
+
+      setSelectedFlowerSubHeaderItem(flowerItem || null);
+    } else {
+      setSelectedFlowerCategory("all");
+      setSelectedFlowerSubHeaderItem(null);
+    }
   }, [categoryParam, foodParam, foodItemParam, dineoutParam, shoppingParam, electronicsParam, homeDecorParam,
-    foodSelectionParam,]);
+    foodSelectionParam, flowerParam]);
 
   // Reset all categories to home
   const resetToHome = () => {
@@ -715,6 +737,50 @@ const HeaderCategory: React.FC = () => {
     return baseTitle;
   };
 
+  // Handle flower subcategory selection
+  const handleFlowerSubCategorySelect = (item: SubHeaderItem) => {
+    const categoryId =
+      item.id || item.name.toLowerCase().replace(/\s+/g, "_");
+
+    setSelectedFlowerCategory(categoryId);
+    setSelectedFlowerSubHeaderItem(item);
+
+    const params = new URLSearchParams(window.location.search);
+
+    params.set("category", "flower");
+    params.set("flowerCategory", categoryId);
+
+    router.replace(`?${params.toString()}`, { scroll: false });
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Handle flower category click
+  const handleFlowerCategoryClick = (category: {
+    name: string;
+    imageUrl: string;
+    url: string;
+  }) => {
+    if (!category?.name) return;
+
+    setSelectedFlowerProductCategory(category.name);
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  // Handle back from flower category
+  const handleBackFromFlowerCategory = () => {
+    setSelectedFlowerProductCategory(null);
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   // Render Restaurant Details
   const renderRestaurantDetails = () => {
     if (!selectedRestaurantId) return null;
@@ -828,38 +894,38 @@ const HeaderCategory: React.FC = () => {
 
     // THIRD: If a product-level food category is selected, show the appropriate list
     if (selectedFoodItemCategory) {
-  // The diet flow is identified solely by the active food sub-header.
-  // DietFoodsCategories and FoodsCategories share many foodIds
-  // (e.g. "chicken", "salad", "soup", "dessert", ...), so we must NOT
-  // infer the flow from the foodId — only from the sub-header value.
-  const isDiet = selectedFoodCategoryValue === 'healthy_diet_food';
+      // The diet flow is identified solely by the active food sub-header.
+      // DietFoodsCategories and FoodsCategories share many foodIds
+      // (e.g. "chicken", "salad", "soup", "dessert", ...), so we must NOT
+      // infer the flow from the foodId — only from the sub-header value.
+      const isDiet = selectedFoodCategoryValue === 'healthy_diet_food';
 
-  return (
-    <div className={styles.foodDeliveryItemsListContainer}>
-      {isDiet ? (
-        <FoodDeliveryItemsListDiet
-          foodId={selectedFoodItemCategory}
-          navigationCategories={DietFoodsCategories}
-          onNavigateCategory={handleDietFoodCategoryNavigation}
-          onBack={handleBackFromFoodItemsList}
-          onItemClick={(item: DietFoodDeliveryItem) =>
-            console.log('Diet food item clicked:', item)
-          }
-        />
-      ) : (
-        <FoodDeliveryItemsList
-          foodId={selectedFoodItemCategory}
-          navigationCategories={FoodsCategories}
-          onNavigateCategory={handleFoodCategoryNavigation}
-          onBack={handleBackFromFoodItemsList}
-          onItemClick={(item: FoodDeliveryItem) =>
-            console.log('Food item clicked:', item)
-          }
-        />
-      )}
-    </div>
-  );
-}
+      return (
+        <div className={styles.foodDeliveryItemsListContainer}>
+          {isDiet ? (
+            <FoodDeliveryItemsListDiet
+              foodId={selectedFoodItemCategory}
+              navigationCategories={DietFoodsCategories}
+              onNavigateCategory={handleDietFoodCategoryNavigation}
+              onBack={handleBackFromFoodItemsList}
+              onItemClick={(item: DietFoodDeliveryItem) =>
+                console.log('Diet food item clicked:', item)
+              }
+            />
+          ) : (
+            <FoodDeliveryItemsList
+              foodId={selectedFoodItemCategory}
+              navigationCategories={FoodsCategories}
+              onNavigateCategory={handleFoodCategoryNavigation}
+              onBack={handleBackFromFoodItemsList}
+              onItemClick={(item: FoodDeliveryItem) =>
+                console.log('Food item clicked:', item)
+              }
+            />
+          )}
+        </div>
+      );
+    }
 
     if (selectedFoodSelectionCategory) {
       return (
@@ -879,24 +945,27 @@ const HeaderCategory: React.FC = () => {
             <HeroBannerLeftContent
               banners={FoodHeroBannerLeftContent}
               defaultAlign="left"
+              height={410}
             />
             <div className={styles.categoryGap}>
               <AllCategory categories={FoodsCategories} onCategoryClick={handleFoodCategoryClick} />
             </div>
-            <WelcomeVideoHufko
-              title="Premium food delivery app"
-              titleHighlight="World's #1"
-              subtitle="Enjoy fast online ordering on the Hufko app"
-              videoSrc="/videos/delivery_by_hufko.mp4"
-              logoSrc="/icons/logo_video.png"
-              appStoreLink="/"
-              playStoreLink="/"
-              className="custom-hero"
-              showLogo={false}
-              showAppStore={true}
-              showPlayStore={true}
-              muted={true}
-            />
+            <div className={styles.welcomeVideoGap}>
+              <WelcomeVideoHufko
+                title="Premium food delivery app"
+                titleHighlight="World's #1"
+                subtitle="Enjoy fast online ordering on the Hufko app"
+                videoSrc="/videos/delivery_by_hufko.mp4"
+                logoSrc="/icons/logo_video.png"
+                appStoreLink="/"
+                playStoreLink="/"
+                className="custom-hero"
+                showLogo={false}
+                showAppStore={true}
+                showPlayStore={true}
+                muted={true}
+              />
+            </div>
             <div className={styles.dineOutCard}>
               <FoodDineOutCard
                 items={FoodDineOutSpecialCollections}
@@ -1435,168 +1504,214 @@ const HeaderCategory: React.FC = () => {
         {activeTab === "flower" && (
           <div className={styles.allCategory}>
             <SubHeader
+              key={`flower-${selectedFlowerCategory}`}
+              items={flowerCategoriesSubHeader}
+              defaultActive={selectedFlowerCategory}
+              onSelect={(item) => {
+                setSelectedFlowerProductCategory(null);
+                handleFlowerSubCategorySelect(item);
+              }}
+            />
+            {/* <SubHeader
               items={flowerCategoriesSubHeader}
               defaultActive="All"
               onSelect={(item) => console.log(item.name)}
-            />
-            <HeroBannerAll banners={FlowerHeroBannerData} height={360} />
-            <div className={styles.categoryGap}>
-              <AllCategoryTwo categories={FlowersCategories} />
-            </div>
-            <WelcomeVideoHufko
-              title=""
-              titleHighlight=""
-              subtitle=""
-              videoSrc="/videos/flower.mp4"
-              logoSrc="/icons/logo_video.png"
-              appStoreLink="/"
-              playStoreLink="/"
-              className="custom-hero"
-              showLogo={false}
-              showAppStore={false}
-              showPlayStore={false}
-              muted={true}
-            />
-            <HeroBannerHalfSlide
-              banners={slidesHalfFlower}
-              itemsPerView={{
-                mobile: 1,
-                tablet: 2,
-                laptop: 3,
-                desktop: 4.5
-              }}
-              autoScrollInterval={10000}
-              showArrows={true}
-              height={250}
-              backgroundColor="#f5f5f5"
-              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-            />
-            <div className={styles.headingContent}>
-              <h2 className={styles.heading}>Shop By Occasions & Relations
-                <br />
-                <p className={styles.subHeading}>Surprise Your Loved Ones</p>
-              </h2>
-            </div>
-            <HeroBannerHalfSlide
-              banners={slidesHalfFlowerShopByOccasionsRelations}
-              itemsPerView={{
-                mobile: 1,
-                tablet: 2,
-                laptop: 3,
-                desktop: 4
-              }}
-              autoScrollInterval={10000}
-              showArrows={true}
-              height={400}
-              backgroundColor="#f5f5f5"
-              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-            />
-            <ProductCategoryCardHalfDynamic
-              categories={categoriesDataCardHalfDynamic}
-              backgroundColor="#E7EDEF"
-              onLinkClick={(link, category) => {
-                console.log('Link clicked:', link.title, 'from', category.title);
-              }}
-            />
-            <div className={styles.headingContent}>
-              <h2 className={styles.heading}>Bouquets For Them
-                <br />
-                <p className={styles.subHeading}>Order flower baskets and more online</p>
-              </h2>
-            </div>
-            <HeroBannerHalfSlide
-              banners={slidesHalfFlowerBouquetsForThem}
-              itemsPerView={{
-                mobile: 1,
-                tablet: 2,
-                laptop: 3,
-                desktop: 2
-              }}
-              autoScrollInterval={10000}
-              showArrows={true}
-              height={370}
-              backgroundColor="#f5f5f5"
-              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-            />
-            <HeroBannerHalfSlide
-              banners={slidesHalfFlowerGift}
-              itemsPerView={{
-                mobile: 1,
-                tablet: 2,
-                laptop: 3,
-                desktop: 1.6
-              }}
-              autoScrollInterval={10000}
-              showArrows={true}
-              height={370}
-              backgroundColor="#f5f5f5"
-              onBannerClick={(banner) => console.log('Banner clicked:', banner)}
-            />
-            <CategoryListCard
-              categories={categoriesInternationalFlowerDeliveryData}
-              title="International Flower Delivery"
-              itemsPerView={{
-                mobile: 2,
-                tablet: 3,
-                desktop: 5
-              }}
-              subTitle="Deliver fresh flowers worldwide"
-              rows={1}
-              cardHeight={200}
-              imageWidth={170}
-              imageHeight={170}
-              backgroundColor="#f5f5f5"
-              viewAllText="View All"
-              viewAllUrl="/international"
-              onCategoryClick={(category) => console.log('Category clicked:', category.title)}
-              onViewAllClick={() => console.log('View all clicked')}
-            />
-            <FranchiseHufkoSlide
-              badgeText="World's Largest Instant Delivery App Platform"
-              badgeIcon={<Shield size={16} />}
-              heading="Own a World's Largest #1"
-              highlightText="Flowers & Gifts Franchise"
-              description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
-              franchiseCategory="flower_beverage"
-              detailsPagePath="/franchise-details"
-              stats={[
-                { value: '3,00,000+', label: 'Franchise Partners', icon: Users },
-                { value: '3 billion+', label: 'Min. Investment', icon: IndianRupee },
-                { value: '0', label: 'Royalty Fee - 2 Years', icon: Clock },
-              ]}
-              buttons={[
-                { label: 'Order Now', variant: 'primary', icon: <ArrowRight size={20} /> },
-                { label: 'More', variant: 'secondary', icon: <ArrowRight size={20} /> },
-              ]}
-              images={[
-                { src: "/products/Flowers_and_Gifts_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
-                { src: "/products/Flowers_and_Gifts_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
-                { src: "/products/Flowers_and_Gifts_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
-                { src: "/products/Flowers_and_Gifts_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
-              ]}
-              badges={[
-                { text: '4.9/5 Rating', position: 'top-right', backgroundColor: '#ec2024', color: '#ffffff' },
-                { text: '✓ FSSAI Certified', position: 'bottom-left', backgroundColor: '#ffffff', color: '#055346' },
-              ]}
-              backgroundColor="#055346"
-              gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
-              overlayOpacity={0.35}
-              className="custom-class"
-              showWave={true}
-              waveColor="white"
-              onButtonClick={(index) => console.log(`Button ${index} clicked`)}
-              onBadgeClick={(badge) => console.log('Badge clicked:', badge)}
-            >
-              <span style={{ color: '#ffffff' }}> - Start with Hufko</span>
-            </FranchiseHufkoSlide>
-            <CustomerTestimonial
-              testimonials={customerTestimonialDataFlower}
-              title="Customer Testimonial"
-              viewAllText="View All"
-              viewAllUrl="/reviews"
-              backgroundColor="#f5f5f5"
-              onViewAllClick={() => console.log('View all clicked')}
-            />
+            /> */}
+
+            {selectedFlowerCategory === "all" &&
+              isShoppingCategorySelected("all") && (
+                <>
+                  <HeroBannerAll banners={FlowerHeroBannerData} height={360} />
+
+                  <div className={styles.categoryGap}>
+                    <AllCategoryTwo categories={FlowersCategories} />
+                  </div>
+
+                  <WelcomeVideoHufko
+                    title=""
+                    titleHighlight=""
+                    subtitle=""
+                    videoSrc="/videos/flower.mp4"
+                    logoSrc="/icons/logo_video.png"
+                    appStoreLink="/"
+                    playStoreLink="/"
+                    className="custom-hero"
+                    showLogo={false}
+                    showAppStore={false}
+                    showPlayStore={false}
+                    muted={true}
+                  />
+
+                  <HeroBannerHalfSlide
+                    banners={slidesHalfFlower}
+                    itemsPerView={{
+                      mobile: 1,
+                      tablet: 2,
+                      laptop: 3,
+                      desktop: 4.5,
+                    }}
+                    autoScrollInterval={10000}
+                    showArrows={true}
+                    height={250}
+                    backgroundColor="#f5f5f5"
+                    onBannerClick={(banner) => console.log("Banner clicked:", banner)}
+                  />
+
+                  <div className={styles.headingContent}>
+                    <h2 className={styles.heading}>
+                      Shop By Occasions & Relations
+                      <br />
+                      <p className={styles.subHeading}>
+                        Surprise Your Loved Ones
+                      </p>
+                    </h2>
+                  </div>
+
+                  <HeroBannerHalfSlide
+                    banners={slidesHalfFlowerShopByOccasionsRelations}
+                    itemsPerView={{
+                      mobile: 1,
+                      tablet: 2,
+                      laptop: 3,
+                      desktop: 4,
+                    }}
+                    autoScrollInterval={10000}
+                    showArrows={true}
+                    height={400}
+                    backgroundColor="#f5f5f5"
+                    onBannerClick={(banner) => console.log("Banner clicked:", banner)}
+                  />
+
+                  <ProductCategoryCardHalfDynamic
+                    categories={categoriesDataCardHalfDynamic}
+                    backgroundColor="#E7EDEF"
+                    onLinkClick={(link, category) => {
+                      console.log("Link clicked:", link.title, "from", category.title);
+                    }}
+                  />
+
+                  <div className={styles.headingContent}>
+                    <h2 className={styles.heading}>
+                      Bouquets For Them
+                      <br />
+                      <p className={styles.subHeading}>
+                        Order flower baskets and more online
+                      </p>
+                    </h2>
+                  </div>
+
+                  <HeroBannerHalfSlide
+                    banners={slidesHalfFlowerBouquetsForThem}
+                    itemsPerView={{
+                      mobile: 1,
+                      tablet: 2,
+                      laptop: 3,
+                      desktop: 2,
+                    }}
+                    autoScrollInterval={10000}
+                    showArrows={true}
+                    height={370}
+                    backgroundColor="#f5f5f5"
+                    onBannerClick={(banner) => console.log("Banner clicked:", banner)}
+                  />
+
+                  <HeroBannerHalfSlide
+                    banners={slidesHalfFlowerGift}
+                    itemsPerView={{
+                      mobile: 1,
+                      tablet: 2,
+                      laptop: 3,
+                      desktop: 1.6,
+                    }}
+                    autoScrollInterval={10000}
+                    showArrows={true}
+                    height={370}
+                    backgroundColor="#f5f5f5"
+                    onBannerClick={(banner) => console.log("Banner clicked:", banner)}
+                  />
+
+                  <CategoryListCard
+                    categories={categoriesInternationalFlowerDeliveryData}
+                    title="International Flower Delivery"
+                    itemsPerView={{
+                      mobile: 2,
+                      tablet: 3,
+                      desktop: 5,
+                    }}
+                    subTitle="Deliver fresh flowers worldwide"
+                    rows={1}
+                    cardHeight={200}
+                    imageWidth={170}
+                    imageHeight={170}
+                    backgroundColor="#f5f5f5"
+                    viewAllText="View All"
+                    viewAllUrl="/international"
+                    onCategoryClick={(category) =>
+                      console.log("Category clicked:", category.title)
+                    }
+                    onViewAllClick={() => console.log("View all clicked")}
+                  />
+
+                  <FranchiseHufkoSlide
+                    badgeText="World's Largest Instant Delivery App Platform"
+                    badgeIcon={<Shield size={16} />}
+                    heading="Own a World's Largest #1"
+                    highlightText="Flowers & Gifts Franchise"
+                    description="Join Hufko and own a supermarket franchise that runs on a system designed for every Indian city, strong returns, and real on-ground support from day one."
+                    franchiseCategory="flower_beverage"
+                    detailsPagePath="/franchise-details"
+                    stats={[
+                      { value: "3,00,000+", label: "Franchise Partners", icon: Users },
+                      { value: "3 billion+", label: "Min. Investment", icon: IndianRupee },
+                      { value: "0", label: "Royalty Fee - 2 Years", icon: Clock },
+                    ]}
+                    buttons={[
+                      { label: "Order Now", variant: "primary", icon: <ArrowRight size={20} /> },
+                      { label: "More", variant: "secondary", icon: <ArrowRight size={20} /> },
+                    ]}
+                    images={[
+                      { src: "/products/Flowers_and_Gifts_Franchise1.png", alt: "Hypermarket", width: 3000, height: 1800 },
+                      { src: "/products/Flowers_and_Gifts_Franchise2.png", alt: "HUFKO Store", width: 3000, height: 1800 },
+                      { src: "/products/Flowers_and_Gifts_Franchise3.png", alt: "Premium Restaurant", width: 3000, height: 2000 },
+                      { src: "/products/Flowers_and_Gifts_Franchise4.png", alt: "Pharmaceutical", width: 3000, height: 2000 },
+                    ]}
+                    badges={[
+                      { text: "4.9/5 Rating", position: "top-right", backgroundColor: "#ec2024", color: "#ffffff" },
+                      { text: "✓ FSSAI Certified", position: "bottom-left", backgroundColor: "#ffffff", color: "#055346" },
+                    ]}
+                    backgroundColor="#055346"
+                    gradient="linear-gradient(135deg, #055346 0%, #076b58 50%, #055346 100%)"
+                    overlayOpacity={0.35}
+                    className="custom-class"
+                    showWave={true}
+                    waveColor="white"
+                    onButtonClick={(index) => console.log(`Button ${index} clicked`)}
+                    onBadgeClick={(badge) => console.log("Badge clicked:", badge)}
+                  >
+                    <span style={{ color: "#ffffff" }}> - Start with Hufko</span>
+                  </FranchiseHufkoSlide>
+
+                  <CustomerTestimonial
+                    testimonials={customerTestimonialDataFlower}
+                    title="Customer Testimonial"
+                    viewAllText="View All"
+                    viewAllUrl="/reviews"
+                    backgroundColor="#f5f5f5"
+                    onViewAllClick={() => console.log("View all clicked")}
+                  />
+                </>
+              )}
+            {selectedFlowerCategory !== "all" && (
+              <div className={styles.electronicsSubCategory}>
+                <ShopByMainCategory
+                  key={selectedFlowerCategory}
+                  category={selectedFlowerSubHeaderItem?.category || selectedFlowerCategory}
+                  selectedItem={selectedFlowerSubHeaderItem}
+                  subHeaderItem={selectedFlowerSubHeaderItem}
+                />
+              </div>
+            )}
+
           </div>
         )}
 
