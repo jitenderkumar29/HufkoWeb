@@ -450,8 +450,10 @@ export const FoodDietHeroBannerLeftContent: BannerItemContent[] = [
   { id: '160', foodId: 'chia_pudding', title: 'Premium Quality Delicious', subtitle: 'Chia Pudding', category: 'CHIA_PUDDING_DIET', discount: '', imgUrl: '/products/chia_pudding_dietFoodHeroBanner.png', align: 'left' },
   { id: '161', foodId: 'millet_bowl', title: 'Premium Quality Delicious', subtitle: 'Millet Bowl', category: 'MILLET_BOWL_DIET', discount: '', imgUrl: '/products/millet_bowl_dietFoodHeroBanner.png', align: 'left' },
   { id: '162', foodId: 'steamed_momos', title: 'Premium Quality Delicious', subtitle: 'Steamed Momos', category: 'STEAMED_MOMOS_DIET', discount: '', imgUrl: '/products/steamed_momos_dietFoodHeroBanner.png', align: 'left' },
-{ id: '163', foodId: 'whole_wheat_wrap', title: 'Premium Quality Delicious', subtitle: 'Whole Wheat Wrap', category: 'WHOLE_WHEAT_WRAP_DIET', discount: '', imgUrl: '/products/whole_wheat_wrap_dietFoodHeroBanner.png', align: 'left' },
-
+  { id: '163', foodId: 'whole_wheat_wrap', title: 'Premium Quality Delicious', subtitle: 'Whole Wheat Wrap', category: 'WHOLE_WHEAT_WRAP_DIET', discount: '', imgUrl: '/products/whole_wheat_wrap_dietFoodHeroBanner.png', align: 'left' },
+  { id: '164', foodId: 'multigrain_sandwich', title: 'Premium Quality Delicious', subtitle: 'Multigrain Sandwich', category: 'MULTIGRAIN_SANDWICH_DIET', discount: '', imgUrl: '/products/multigrain_sandwich_dietFoodHeroBanner.png', align: 'left' },
+  { id: '165', foodId: 'soya_chaap', title: 'Premium Quality Delicious', subtitle: 'Soya Chaap', category: 'SOYA_CHAAP_DIET', discount: '', imgUrl: '/products/soya_chaap_dietFoodHeroBanner.png', align: 'left' },
+  { id: '166', foodId: 'idli_sambar', title: 'Premium Quality Delicious', subtitle: 'Idli & Sambar', category: 'IDLI_SAMBAR_DIET', discount: '', imgUrl: '/products/idli_sambar_dietFoodHeroBanner.png', align: 'left' },
 ];
 
 export const HealthyDietHeroBannerLeftContent: BannerItemContent[] = [
